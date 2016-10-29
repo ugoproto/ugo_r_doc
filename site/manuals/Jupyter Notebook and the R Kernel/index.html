@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Jupyter Notebook and the R Kernel - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../../faviconfire.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Jupyter Notebook and the R Kernel";
+    var mkdocs_page_input_path = "manuals\Jupyter Notebook and the R Kernel.md";
+    var mkdocs_page_url = "/manuals/Jupyter Notebook and the R Kernel/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Jupyter Notebook and the R Kernel</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#distribution">Distribution</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#implementing-the-r-kernel-or-irkernel">Implementing the R Kernel (or irkernel)</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Jupyter Notebook and the R Kernel</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/ugoproto/ugo_r_doc" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="jupyter-notebook">Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permanent link">&para;</a></h3>
+<p><a href="http://jupyter.org/">Jupyter.org (official website)</a></p>
+<h4 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h4>
+<p>On Windows, use the Anaconda distribution. The stack includes the Jupyter (IPython) Notebook, the Cloud (online resources), the Navigator (home screen), the prompt (shell), the QTConsole, and the Spyder IDE.</p>
+<p>On Linux, the Jupyter Stack can easily be installed through the bash with <code>pip</code>. Launch Jupyter Notebook (<code>jupyter notebook</code>) or any tools through the bash or in the GUI.</p>
+<p>Anaconda2 has Python 2 by default (root) and Anaconda3, no surprise, has Python 3!</p>
+<p>However, other kernels can be installed on any distribution (another Python version, R, bash, etc.).</p>
+<h4 id="implementing-the-r-kernel-or-irkernel">Implementing the R Kernel (or irkernel)<a class="headerlink" href="#implementing-the-r-kernel-or-irkernel" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Start R (admin or sudo mode).</li>
+<li>Enter the commands:</li>
+</ul>
+<pre><code class="r">install.packages(c('repr','pbdZMQ', 'devtools')) # reprisalready on CRAN
+
+devtools::install_github('IRkernel/IRdisplay')
+
+devtools::install_github('IRkernel/IRkernel')
+
+IRkernel::installspec()
+</code></pre>
+
+<ul>
+<li>Configure Jupyter in R: <code>IRkernel::installspec(user = FALSE)</code>.</li>
+<li>Start Jupyter Notebook.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/" class="btn btn-neutral float-right" title="Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../An%20Introduction%20to%20R/" class="btn btn-neutral" title="An Introduction to R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/ugoproto/ugo_r_doc" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../An%20Introduction%20to%20R/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

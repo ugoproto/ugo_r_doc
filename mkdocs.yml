@@ -1,0 +1,31 @@
+site_name: ugo_r_doc
+#site_url: 
+repo_url: https://github.com/ugoproto/ugo_r_doc
+site_description: R documentation
+site_author: Ugo Spark
+site_favicon: faviconfire.ico
+copyright: null
+#google_analytics: ['UA-36723568-3', 'mkdocs.org']
+remote_branch: master
+remote_name: ugo_r_doc
+pages:
+    - Home: 'index.md'
+    - An Introduction to R: 'manuals/An Introduction to R.md'
+    - Jupyter Notebook and the R Kernel: 'manuals/Jupyter Notebook and the R Kernel.md'
+    - Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques: 'manuals/Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques.md'
+
+theme: readthedocs
+# Other themes:
+    # readthedocs
+    # mkdocs
+
+markdown_extensions:
+  - wikilinks # internal links with [[bracketed]]
+  - smarty # additional characters
+#  - subscript
+#  - superscript
+  - nl2br # new line to break
+  - toc:
+       title: Content
+       permalink: True
+       baselevel: 3
