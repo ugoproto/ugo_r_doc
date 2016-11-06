@@ -19,6 +19,11 @@ theme: readthedocs
     # readthedocs
     # mkdocs
 
+# Build PDF & ePub
+formats: 
+    - pdf
+    - epub
+
 markdown_extensions:
     - wikilinks # internal links with [[bracketed]]
     - smarty # additional characters
