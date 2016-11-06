@@ -20,8 +20,8 @@ theme: readthedocs
     # mkdocs
 
 # Build PDF & ePub
-formats: 
-    - pdf
+#formats: 
+#    - pdf
 
 markdown_extensions:
     - wikilinks # internal links with [[bracketed]]
