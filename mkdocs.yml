@@ -20,12 +20,12 @@ theme: readthedocs
     # mkdocs
 
 markdown_extensions:
-  - wikilinks # internal links with [[bracketed]]
-  - smarty # additional characters
-#  - subscript
-#  - superscript
-  - nl2br # new line to break
-  - toc:
-       title: Content
-       permalink: True
-       baselevel: 3
+    - wikilinks # internal links with [[bracketed]]
+    - smarty # additional characters
+#    - subscript
+#    - superscript
+    - nl2br # new line to break
+    - toc:
+        title: Content
+        permalink: True
+        baselevel: 3

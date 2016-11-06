@@ -2,7 +2,7 @@
 
 **Foreword**
 
-From Springer, 2014. Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.*
+Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.* From Springer, 2014.
 
 -----
 
