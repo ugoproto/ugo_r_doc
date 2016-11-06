@@ -1,16 +1,16 @@
-# Le logiciel R, maîtriser le langage, effectuer des analyses (bio)statistiques
+# Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques
 
-Springer, 2014.
+**Foreword**
 
-Collected notes, leads, and ideas on what R can do. *REF: reference to the book.*
+From Springer, 2014. Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.*
 
-**Table of Content**
+-----
 
 [TOC]
 
-## A, Presentation
+-----
 
-Pierre Lafaye de Micheaux.
+## A, Presentation
 
 **GUI**
 
@@ -131,7 +131,7 @@ list(1:3) # list
 
 **Data Frame**
 
-<sub>table, tabular<\sub>
+<sub>table, tabular</sub>
 
 - `data.frame(name = c(), name = c(), name = c(), etc)`; each column is a vector with a name.
 
@@ -148,7 +148,7 @@ list(1:3) # list
 
 **Class and mode**
 
-<sub>type, data, variable, object<\sub>
+<sub>type, data, variable, object</sub>
 
 - `mode()`.
 - `class()`; mode != class.
@@ -156,7 +156,7 @@ list(1:3) # list
 
 ## Chapter 2, Import-Export and Producing Data
 
-<sub>import, export, i/o<\sub>
+<sub>import, export, i/o</sub>
 
 **Input data from files**
 
@@ -218,7 +218,7 @@ Sys.time() - tmps
 
 **Produce by repetition**
 
-<sub>repeat<\sub>
+<sub>repeat</sub>
 
 ```r
 rep(1:4, reach = 2, len = 10)
@@ -320,7 +320,7 @@ x + y
 
 **Dimension functions**
 
-<sub>number, row, column, dimension<\sub>
+<sub>number, row, column, dimension</sub>
 
 - `dim(df)`.
 - `nrow(df)`.
@@ -334,7 +334,7 @@ x + y
 
 **Merge functions**
 
-<sub>combine<\sub>
+<sub>combine</sub>
 
 - `cbind()`.
 - `rbind()`.
@@ -377,7 +377,7 @@ merge(x, y)
 
 **Apply functions and family**
 
-<sub>excel, wrangle<\sub>
+<sub>excel, wrangle</sub>
 
 Among the most useful function for 'wrangling' data. Excel-like power. When and how to use them.
 
@@ -433,7 +433,7 @@ sweep(u, MARGIN = 2, STATS = c(2, 2, 3, 3), FUN = "/")
 
 **Stack functions**
 
-<sub>stack, unstack<\sub>
+<sub>stack, unstack</sub>
 
 ```r
 u
@@ -474,7 +474,7 @@ w
 
 **Aggregation functions**
 
-<sub>aggregate<\sub>
+<sub>aggregate</sub>
 
 ```r
 w
@@ -662,7 +662,7 @@ dQuote("bla bla bla")
 
 **Text**
 
-<sub>wrangle, text, string, character, natural language processing, nlp<\sub>
+<sub>wrangle, text, string, character, natural language processing, nlp</sub>
 
 - `format()`; and arguments:
 	- `digits`.
@@ -694,7 +694,7 @@ dQuote("bla bla bla")
 
 **Date and time**
 
-<sub>convert, extract<\sub>
+<sub>convert, extract</sub>
 
 - `Sys.time()`.
 - `date()`.
@@ -816,7 +816,7 @@ utilisateur     système      écoulé
 
 **Binary and decimal**
 
-<sub>convert<\sub>
+<sub>convert</sub>
 
 - `bin2dec()`.
 - `dec2bin()`.
@@ -1017,7 +1017,7 @@ plot(1,1); locate area to be annotated with `text()`.
 
 **Graphic parameters and graphic windows**
 
-<sub>margin, border, box, square, space, height, width, color, text, title, label, mark, font, police, character, language, size, length, size, tick, coordinate, x, y, log, scale, axis, axes, format, alignment, point<\sub>
+<sub>margin, border, box, square, space, height, width, color, text, title, label, mark, font, police, character, language, size, length, size, tick, coordinate, x, y, log, scale, axis, axes, format, alignment, point</sub>
 
 **Advanced graphic package**
 
@@ -1123,8 +1123,8 @@ Very time consuming!
 - Use a multi-core architecture with the `parallel` package.
 - [HighPerformanceComputing list of packages](https://www.rdocumentation.org/taskviews/HighPerformanceComputing?).
 	- Use the `Rmpi` package and the MPI protocol (OpenMPI or mpich2 software).
-	- [Build a cluster or a collection of workstations in parallel; the `snow` package](www.divms.uiowa.edu/<\sub>luke/R/cluster/cluster.html).
-	- [`snow` or Simple Network of Workstation](www.sfu.ca/<\sub>sblay/R/snow.html).
+	- [Build a cluster or a collection of workstations in parallel; the `snow` package](www.divms.uiowa.edu/</sub>luke/R/cluster/cluster.html).
+	- [`snow` or Simple Network of Workstation](www.sfu.ca/</sub>sblay/R/snow.html).
 	- [Developing parallel programs using snowfall](cran.r-project.org/web/packages/snowfall/vignettes/snowfall.pdf).
 
 **Try parallel computing with a Monte Carlo with the `parallel` package**
@@ -1188,7 +1188,7 @@ out <- clusterCall(cl, Sys.getpid))
 
 ## Chapter 7, Session Management
 
-<sub>work, session, save, object, instruction, graphic, create, package<\sub>
+<sub>work, session, save, object, instruction, graphic, create, package</sub>
 
 **Environment**
 
@@ -1456,7 +1456,7 @@ attr(,"class")
 
 **Integral calculus**
 
-<sub>integration<\sub>
+<sub>integration</sub>
 
 ```r
 myf <- function(x) { exp(-x^2 / 2) / sqrt(2  *pi) }
@@ -1467,7 +1467,7 @@ integrate(myf, lower = -Inf, upper = Inf)$value
 
 **Differential calculus**
 
-<sub>derivative<\sub>
+<sub>derivative</sub>
 
 ```r
 D(expression(sin(cos(x + y^2))), "x")
@@ -1488,14 +1488,14 @@ attr(,"gradient")
 
 **Optimisation**
 
-<sub>linear, programming, constraints, min-max<\sub>
+<sub>linear, programming, constraints, min-max</sub>
 
 ```r
 # compute a 1-variable min, max (y <sub>x)
 
 optimize(function(x) { cos(x^2) }, lower = 0, upper = 2, maximum = FALSE)
 
-source('<\sub>/.active-rstudio-document', echo = TRUE)
+source('</sub>/.active-rstudio-document', echo = TRUE)
 ```
 
 - `nlm()`; compute a 2-variable min, max (z <sub>x + y).
@@ -1576,7 +1576,7 @@ Consult keywords 'arithmetics' and 'random numbers', where ordering data is comm
 
 **Table, proportion table**
 
-<sub>tabular, comparison, 2-dimensional, 2, two, dimensions<\sub>
+<sub>tabular, comparison, 2-dimensional, 2, two, dimensions</sub>
 
 - `table(var1, var2)`; 2-dimensional view; cross table.
 - `as.table(var)`; convert.
@@ -1755,7 +1755,7 @@ mean(runif(10000))
 - `predict(model, data.frame(LWT = prediction), interval = "prediction")`
 - and many more.
 
-<sub>prediction, result, extraction, residual<\sub>
+<sub>prediction, result, extraction, residual</sub>
 
 *REF: p.498-499*
 
@@ -1779,7 +1779,7 @@ hist(residuals(model), main = "Histogram")
 
 **Correlation**
 
-<sub>test, explanatory variable interaction, colinearity,  best subset<\sub>
+<sub>test, explanatory variable interaction, colinearity,  best subset</sub>
 
 - `pairs(newdata, lower.panel = panel.smooth, upper.panel = add.cor)`.
 
@@ -1803,13 +1803,13 @@ hist(residuals(model), main = "Histogram")
 
 ## Chapter 13, Elementary Variance Analysis
 
-<sub>anova, repeated measure, between, within, inspection, hypothesis, comparison, factor, table, parameter, repeated<\sub>
+<sub>anova, repeated measure, between, within, inspection, hypothesis, comparison, factor, table, parameter, repeated</sub>
 
 *REF: p.542-571*
 
 ## Appendix, Installing the R Software and Packages
 
-<sub>installation, package<\sub>
+<sub>installation, package</sub>
 
 `install.packages('package')`.
 

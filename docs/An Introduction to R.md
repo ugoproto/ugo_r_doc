@@ -1,16 +1,20 @@
 # An Introduction to R
 
-Collected notes, leads, and ideas on what R can do; more at:
+**Foreword**
+
+Notes, leads, and ideas on what R can do. More at:
 
 - [www.statmethods.net (Quick-R, searchable R guide)](http://www.statmethods.net/)
 - [R-intro](https://cran.r-project.org/doc/manuals/R-intro.html)
 - [cran.r-project.org/manuals (series of official manuals)](https://cran.r-project.org/manuals.html)
 
-**Table of Content**
+-----
 
 [TOC]
 
-## 1, Introduction and preliminaries
+-----
+
+## 1, Introduction and Preliminaries
 
 - Run R (CLI).
 	- Quit with `q()`.
@@ -28,7 +32,7 @@ Collected notes, leads, and ideas on what R can do; more at:
 - `rm(x, y, ink, ...)`; remove stored objects.
 - All commands entered or run are recorded in a file with `.Rhistory` extension.
 
-## 2, Simple manipulations; numbers and vectors
+## 2, Simple Manipulations; Numbers and Vectors
 
 **Create a vector**
 
@@ -228,7 +232,7 @@ x
 - `as.character()`.
 -  and many more.
 
-## 3, Objects, their modes and attributes
+## 3, Objects, their Modes and Attributes
 
 **Object type**
 
@@ -286,7 +290,7 @@ unclass(obj)
 [1]  1 NA 17
 ```
 
-## 4, Ordered and unordered factors
+## 4, Ordered and Unordered Factors
 
 ```r
 state <- c("tas","qld","sa","sa","sa","vic","nt","act","qld","nsw","wa","nsw","nsw","vic","vic","vic","nsw","qld","qld","vic","nt","wa","wa","qld","sa", "tas","nsw", "nsw", "wa","act")
@@ -405,7 +409,7 @@ Levels: small medium large
 
 - `as.factor()`.
 
-## 5, Arrays and matrices
+## 5, Arrays and Matrices
 
 **Dimension**
 
@@ -698,7 +702,7 @@ Also:
 - `as.array()`.
 - `as.matrix()`.
 
-## 6, Lists and data frames
+## 6, Lists and Data Frames
 
 **Crate a list**
 
@@ -943,7 +947,7 @@ accountants + acc
 - `attach()`; attach an object to .GlobalEnv.
 - `detach()`.
 
-## 7, Reading/writing data from/to files (input/output)
+## 7, Reading/Writing Data from/to Files (Input/Output)
 
 A lot more can be found on I/O: depending on the file type, the data format, the desired R object, many commands are available. Depending on a file format, look for the dedicated package on CRAN.
 
@@ -1081,7 +1085,7 @@ read.delim("clipboard", fileEncoding="UTF-16")
 - `xemacs(file= )`; idem.
 - `xedit(file=)`; idem.
 
-## 8, Probability distributions
+## 8, Probability Distributions
 
 **Distribution**
 
@@ -1187,7 +1191,7 @@ ks.test(cars$speed[40], "pnorm", mean = mean(cars$speed), sd = sqrt(var(cars$spe
 - `plot(ecdf(B), do.points=FALSE, verticals=TRUE, add=TRUE)`
 - `ks.test(A,B); maximal vertical distance between the two ecdf`
 
-## 9, Grouping, loops and conditional execution
+## 9, Grouping, Loops and Conditional Execution
 
 - `&`; AND.
 - `&&`; AND; evaluates left to right, examining only the first element of each vector.
@@ -1207,7 +1211,7 @@ ks.test(cars$speed[40], "pnorm", mean = mean(cars$speed), sd = sqrt(var(cars$spe
 - `break`; break out of a for, while or repeat loop; control is transferred to the first statement outside the inner-most loop.
 - `next`; halt the processing of the current iteration and advance the looping index.
 
-## 10, Writing you own functions
+## 10, Writing you own Functions
 
 **Simple custom function**
 
@@ -1567,7 +1571,7 @@ Nonparametric local regression function.
 - `rpart` package.
 - `tree` package.
 
-## 12, Graphical procedures
+## 12, Graphical Procedures
 
 [www.statmethods.net/advgraphs](http://www.statmethods.net/advgraphs/)
 
@@ -1757,6 +1761,6 @@ Find out about packages:
 
 [www.omegahat.org](http://www.omegahat.org/)
 
-## 14, OS facilities
+## 14, OS Facilities
 
 Manage files with Linux or Windows or RStudio.

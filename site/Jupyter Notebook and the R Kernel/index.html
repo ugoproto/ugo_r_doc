@@ -11,28 +11,28 @@
   <title>Jupyter Notebook and the R Kernel - ugo_r_doc</title>
   
 
-  <link rel="shortcut icon" href="../../faviconfire.ico">
+  <link rel="shortcut icon" href="../faviconfire.ico">
   
 
   
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
 
   
   <script>
     // Current page data
     var mkdocs_page_name = "Jupyter Notebook and the R Kernel";
-    var mkdocs_page_input_path = "manuals\Jupyter Notebook and the R Kernel.md";
-    var mkdocs_page_url = "/manuals/Jupyter Notebook and the R Kernel/";
+    var mkdocs_page_input_path = "Jupyter Notebook and the R Kernel.md";
+    var mkdocs_page_url = "/Jupyter Notebook and the R Kernel/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
 
   
 </head>
@@ -44,9 +44,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> ugo_r_doc</a>
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
@@ -57,7 +57,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../..">Home</a>
+        <a class="" href="..">Home</a>
         
     </li>
 <li>
@@ -103,7 +103,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">ugo_r_doc</a>
+        <a href="..">ugo_r_doc</a>
       </nav>
 
       
@@ -111,7 +111,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+    <li><a href="..">Docs</a> &raquo;</li>
     
       
     
@@ -130,12 +130,32 @@
             <div class="section">
               
                 <h3 id="jupyter-notebook">Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permanent link">&para;</a></h3>
-<p><a href="http://jupyter.org/">Jupyter.org (official website)</a></p>
+<p><strong>Foreword</strong></p>
+<p>Notes.</p>
+<hr />
+<div class="toc"><span class="toctitle">Content</span><ul>
+<li><a href="#jupyter-notebook">Jupyter Notebook</a><ul>
+<li><a href="#distribution">Distribution</a></li>
+<li><a href="#implementing-the-r-kernel-or-irkernel">Implementing the R Kernel (or irkernel)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
 <h4 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h4>
-<p>On Windows, use the Anaconda distribution. The stack includes the Jupyter (IPython) Notebook, the Cloud (online resources), the Navigator (home screen), the prompt (shell), the QTConsole, and the Spyder IDE.</p>
-<p>On Linux, the Jupyter Stack can easily be installed through the bash with <code>pip</code>. Launch Jupyter Notebook (<code>jupyter notebook</code>) or any tools through the bash or in the GUI.</p>
-<p>Anaconda2 has Python 2 by default (root) and Anaconda3, no surprise, has Python 3!</p>
-<p>However, other kernels can be installed on any distribution (another Python version, R, bash, etc.).</p>
+<ul>
+<li><a href="http://jupyter.org/">Jupyter.org (Official Website)</a></li>
+<li>On Windows, use the Anaconda distribution.<ul>
+<li>The stack includes the Jupyter (IPython) Notebook, the Cloud (online resources), the Navigator (home screen), the prompt (shell), the QTConsole, and the Spyder IDE.</li>
+</ul>
+</li>
+<li>On Linux, the Jupyter Stack can easily be installed through the bash with <code>pip</code>. <ul>
+<li>Launch Jupyter Notebook (<code>jupyter notebook</code>) or any tools through the bash or in the GUI.</li>
+</ul>
+</li>
+<li>Anaconda2 has Python 2 by default (root) and Anaconda3, no surprise, has Python 3!</li>
+<li>However, other kernels can be installed on any distribution (another Python version, R, bash, etc.).</li>
+</ul>
 <h4 id="implementing-the-r-kernel-or-irkernel">Implementing the R Kernel (or irkernel)<a class="headerlink" href="#implementing-the-r-kernel-or-irkernel" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Start R (admin or sudo mode).</li>
