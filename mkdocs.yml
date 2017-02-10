@@ -1,6 +1,6 @@
 site_name: ugo_r_doc
-site_url: https://ugoproto.github.io/ugo_r_doc/
-repo_url: https://github.com/ugoproto/ugo_r_doc/
+#site_url: https://ugoproto.github.io/ugo_r_doc/
+#repo_url: https://github.com/ugoproto/ugo_r_doc/
 site_description: A R documentation website.
 site_author: Ugo Spark
 site_favicon: faviconfire.ico
