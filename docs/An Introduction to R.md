@@ -7,7 +7,7 @@ Notes, leads, and ideas on what R can do. More at:
 - [www.statmethods.net (Quick-R, searchable R guide)](http://www.statmethods.net/)
 - [R-intro](https://cran.r-project.org/doc/manuals/R-intro.html)
 - [cran.r-project.org/manuals (series of official manuals)](https://cran.r-project.org/manuals.html)
-- [link]('Jupyter Notebook and the R Kernel.md')
+- [link](Jupyter Notebook and the R Kernel.md)
 
 -----
 
