@@ -30,6 +30,6 @@ markdown_extensions:
     - superscript
     - nl2br # need a new line to break
     - toc:
-        title: Content
+        title: CONTENT
         permalink: True
         baselevel: 3
