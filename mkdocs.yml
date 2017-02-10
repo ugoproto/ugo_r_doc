@@ -15,16 +15,20 @@ theme: readthedocs
     # readthedocs
     # mkdocs
 
-# Build PDF & ePub
-formats: 
-    - pdf
+# Build PDF & ePub (only on Readthedocs)
+#formats: 
+#    - pdf
+
+# Interlinks
+# [link](to_other_page.md)
+# [link](../relative/page.md)
 
 markdown_extensions:
     - wikilinks # internal links with [[bracketed]]
     - smarty # additional characters
     - subscript
     - superscript
-    - nl2br # new line to break
+    - nl2br # need a new line to break
     - toc:
         title: Content
         permalink: True
