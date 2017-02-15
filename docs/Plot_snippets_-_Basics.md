@@ -239,7 +239,7 @@ One plot.
 plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-6-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-6-1.png)
 
 A grid of plots.
 
@@ -255,7 +255,7 @@ plot(mpg, hp, ylab = 'horsepower', xlab = 'miles per gallon')
 boxplot(mpg ~ cyl, xlab = 'mile per gallon', ylab = 'number of cylinders', horizontal = TRUE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-7-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-7-1.png)
 
 ``` r
 par(mfrow = c(1, 1))
@@ -271,7 +271,7 @@ plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
 boxplot(mpg ~ cyl, ylab = 'mile per gallon', xlab = 'number of cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-8-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-8-1.png)
 
 ``` r
 # view
@@ -290,7 +290,7 @@ hist(mpg)
 hist(disp)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-9-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-9-1.png)
 
 ``` r
 layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE),  widths = c(3,1), heights = c(1,2))
@@ -300,14 +300,14 @@ hist(mpg)
 hist(disp)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-10-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-10-1.png)
 
 ``` r
 nf <- layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE), widths = lcm(12), heights = lcm(6))
 layout.show(nf)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-11-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-11-1.png)
 
 ``` r
 plot(mpg, xlab = 'observations', ylab = 'miles per gallon')
@@ -315,7 +315,7 @@ plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
 boxplot(mpg ~ cyl, ylab = 'mile per gallon', xlab = 'number of cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-11-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-11-2.png)
 
 Gridview with additional packages.
 
@@ -327,7 +327,7 @@ library(vcd)
 mplot(A, B, C)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-14-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-14-1.png)
 
 See the `lattice` and `latticeExtra` packages for built-in
 facet/gridview. `ggplot2` as well.
@@ -344,7 +344,7 @@ abline(lm(mpg ~ hp))
 title('Title')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-15-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-15-1.png)
 
 ``` r
 plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
@@ -354,7 +354,7 @@ abline(v = c(50, 150))
 abline(v = seq(200, 300, 50), lty = 2, col = 'blue')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-16-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-16-1.png)
 
 **Add a legend**
 
@@ -365,7 +365,7 @@ boxplot(mpg ~ cyl, main = 'Title',
 legend('topright', inset = 0.05, title = 'number of cylinders', c('4','6','8'), fill = terrain.colors(3), horiz = TRUE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-17-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-17-1.png)
 
 **Save**
 
@@ -412,7 +412,7 @@ text(100, 10, 'text 1') # x and y coordinate
 mtext('text 2', 4, line = 0.5) # pos = 1 (bottom), 2 (left), 3 (top), 4 (right); line (margin)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-20-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-20-1.png)
 
 With `locator()`, use the mouse; with 1 for 1 click, 2 for... Find the
 coordinates to be entered in the code. For example (after two clicks):
@@ -435,7 +435,7 @@ plot(hp, mpg,
 text(hp, mpg, row.names(mtcars), cex = 0.7, pos = 4, col = 'red')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-22-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-22-1.png)
 
 **Enrich the plot, add symbols**
 
@@ -449,7 +449,7 @@ symbols(250, 20, squares = 1, add = TRUE, inches = 0.1, fg = 'red')
 symbols(250, 25, circles = 1, add = TRUE, inches = 0.1, fg = 'red')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-23-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-23-1.png)
 
 ``` r
 #rectangles
@@ -498,7 +498,7 @@ plot(hp, mpg,
      col = 'green')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-24-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-24-1.png)
 
 ``` r
 # reverse
@@ -529,7 +529,7 @@ boxplot(mtcars$mpg, axes = FALSE)
 mtext('Enhanced Scatterplot', side = 3, outer = TRUE, line = -3)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-25-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-25-1.png)
 
 ``` r
 # reverse
@@ -553,7 +553,7 @@ for (i in 1:length(opts)) {
 }
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-26-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-26-1.png)
 
 ``` r
 # reverse
@@ -577,7 +577,7 @@ for (i in 1:length(opts)) {
 }
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-27-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-27-1.png)
 
 ``` r
 # reverse
@@ -599,7 +599,7 @@ axis(1, at = c(100, 200, 300), labels = NULL, pos = 15, lty = 'dashed', col = 'g
 axis(4, at = c(20, 30), labels = c('bt', 'up'), pos = 125, lty = 'dashed', col = 'blue', las = 2, tck = -0.05)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-28-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-28-1.png)
 
 ``` r
 # reverse
@@ -618,7 +618,7 @@ plot(mpg,
 lines(mpg[1:10], type = 'l', col = 'green')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-29-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-29-1.png)
 
 ### Univariate Plots
 
@@ -628,7 +628,7 @@ lines(mpg[1:10], type = 'l', col = 'green')
 plot(mpg, main = 'Title', xlab = 'observations', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-30-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-30-1.png)
 
 **Plot; categorical**
 
@@ -636,7 +636,7 @@ plot(mpg, main = 'Title', xlab = 'observations', ylab = 'miles per gallon')
 plot(cyl, main = 'Title', xlab = 'observations', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-31-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-31-1.png)
 
 **QQnorm; continuous**
 
@@ -644,7 +644,7 @@ plot(cyl, main = 'Title', xlab = 'observations', ylab = 'cylinders')
 qqnorm(mpg, main = 'Title', xlab = 'observations', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-32-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-32-1.png)
 
 **QQnorm; categorical**
 
@@ -652,7 +652,7 @@ qqnorm(mpg, main = 'Title', xlab = 'observations', ylab = 'cylinders')
 qqnorm(cyl, main = 'Title', xlab = 'observations', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-33-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-33-1.png)
 
 **Stripchart; continuous**
 
@@ -660,7 +660,7 @@ qqnorm(cyl, main = 'Title', xlab = 'observations', ylab = 'cylinders')
 stripchart(mpg, main = 'Title', xlab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-34-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-34-1.png)
 
 **Stripchart; categorical**
 
@@ -668,7 +668,7 @@ stripchart(mpg, main = 'Title', xlab = 'miles per gallon')
 stripchart(cyl, main = 'Title', xlab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-35-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-35-1.png)
 
 **Barplot (vertical); continuous**
 
@@ -676,7 +676,7 @@ stripchart(cyl, main = 'Title', xlab = 'cylinders')
 barplot(mpg[1:10], main = 'Title', xlab = 'observations', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-36-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-36-1.png)
 
 **Barplot (horizontal); categorical**
 
@@ -684,7 +684,7 @@ barplot(mpg[1:10], main = 'Title', xlab = 'observations', ylab = 'miles per gall
 barplot(cyl[1:10], main = 'Title', horiz = TRUE, xlab = 'cylinders', ylab = 'observations')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-37-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-37-1.png)
 
 **Barplots options**
 
@@ -703,7 +703,7 @@ counts
 barplot(counts, main = 'Title', horiz = TRUE, xlab = 'count', names.arg = c('4 Cyl', '6 Cyl', '8 Cyl'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-38-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-38-1.png)
 
 ``` r
 counts <- table(vs, gear)
@@ -719,7 +719,7 @@ counts
 barplot(counts, main = 'Title', xlab = 'gearbox', col = c('darkblue', 'red'), legend = rownames(counts)) 
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-39-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-39-1.png)
 
 ``` r
 counts <- table(vs, gear)
@@ -735,7 +735,7 @@ counts
 barplot(counts, main = 'Title', xlab='gearbox', col = c('darkblue', 'red'), legend =  rownames(counts), beside = TRUE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-40-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-40-1.png)
 
 Group with `aggregate()`.
 
@@ -765,7 +765,7 @@ counts <- table(mtcars$gear)
 barplot(counts, main = 'Car Distribution', horiz = TRUE, names.arg = c('3 Gears', '4 Gears', '5   Gears'), cex.names = 0.8)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-42-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-42-1.png)
 
 ``` r
 # reverse
@@ -783,7 +783,7 @@ barplot(iris$Petal.Length)
 barplot(table(iris$Species, iris$Sepal.Length), col = brewer.pal(3, 'Set1'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-43-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-43-1.png)
 
 ``` r
 par(mfrow = c(1, 1))
@@ -799,7 +799,7 @@ Avoid!
 dotchart(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'observations')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-44-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-44-1.png)
 
 **Dotchart; categorical**
 
@@ -807,7 +807,7 @@ dotchart(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'observations')
 dotchart(cyl, main = 'Title', xlab = 'cylinders', ylab = 'observations')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-45-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-45-1.png)
 
 **Dotchart options**
 
@@ -815,7 +815,7 @@ dotchart(cyl, main = 'Title', xlab = 'cylinders', ylab = 'observations')
 dotchart(mpg,labels = row.names(mtcars), cex = 0.7, main = 'Title', xlab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-46-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-46-1.png)
 
 ``` r
 # sort by mpg
@@ -830,7 +830,7 @@ x$color[x$cyl == 8] <- 'darkgreen'
 dotchart(x$mpg, labels = row.names(x), cex = 0.7, groups = x$cyl, main = 'Title',  xlab = 'miles per gallon', gcolor = 'black', color = x$color)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-47-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-47-1.png)
 
 More with the `hmisc` package and `panel.dotplot()` and in the `lattice`
 package section.
@@ -841,7 +841,7 @@ package section.
 boxplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'observations')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-48-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-48-1.png)
 
 **Stem; continuous**
 
@@ -871,7 +871,7 @@ stem(mpg)
 hist(mpg, main = 'Title', xlab = 'miles per gallon - bins', ylab = 'count')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-50-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-50-1.png)
 
 **Histogram; categorical**
 
@@ -879,7 +879,7 @@ hist(mpg, main = 'Title', xlab = 'miles per gallon - bins', ylab = 'count')
 hist(cyl, main = 'Title', xlab = 'cylinders - bins', ylab = 'count')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-51-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-51-1.png)
 
 **Histogram options**
 
@@ -887,7 +887,7 @@ hist(cyl, main = 'Title', xlab = 'cylinders - bins', ylab = 'count')
 hist(mpg, breaks = 12, col = 'red')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-52-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-52-1.png)
 
 ``` r
 x <- mpg
@@ -901,7 +901,7 @@ yfit <- yfit*diff(h$mids[1:2])*length(x)
 lines(xfit, yfit, col = 'blue', lwd = 2)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-53-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-53-1.png)
 
 Colors.
 
@@ -918,7 +918,7 @@ hist(VADeaths, breaks = 10, col = brewer.pal(8, 'Greys'), main = '8, Greys')
 hist(VADeaths, breaks = 10, col = brewer.pal(8, 'Greens'), main = '8, Greens')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-54-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-54-1.png)
 
 ``` r
 par(mfrow = c(1, 1))
@@ -930,7 +930,7 @@ par(mfrow = c(1, 1))
 plot(density(mpg), main = 'Title')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-55-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-55-1.png)
 
 ``` r
 plot(density(mpg), main = 'Title')
@@ -938,7 +938,7 @@ plot(density(mpg), main = 'Title')
 polygon(density(mpg), col = 'red', border = 'blue') 
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-56-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-56-1.png)
 
 ``` r
 d1 <- density(mtcars$mpg)
@@ -949,7 +949,7 @@ lines(density(mtcars$mpg, d1$bw/2), col = 'green')
 lines(density(mtcars$mpg, d1$bw/5), col = 'blue')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-57-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-57-1.png)
 
 ### Bivariate (Multivariate) Plots
 
@@ -959,7 +959,7 @@ lines(density(mtcars$mpg, d1$bw/5), col = 'blue')
 plot(mpg, hp, main = 'Title', xlab = 'miles per gallon', ylab = 'horsepowers')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-58-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-58-1.png)
 
 **Plot, continuous/categorical**
 
@@ -967,7 +967,7 @@ plot(mpg, hp, main = 'Title', xlab = 'miles per gallon', ylab = 'horsepowers')
 plot(mpg, cyl, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-59-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-59-1.png)
 
 **Plot options**
 
@@ -978,7 +978,7 @@ abline(lm(mpg ~ wt), col = 'red') # regression
 lines(lowess(wt, mpg), col = 'blue') # lowess line
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-60-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-60-1.png)
 
 **SmoothScatter; continuous/continuous**
 
@@ -986,7 +986,7 @@ lines(lowess(wt, mpg), col = 'blue') # lowess line
 smoothScatter(mpg, hp, main = 'Title', xlab = 'miles per gallon', ylab = 'horsepowers')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-61-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-61-1.png)
 
 **Sunflowerplot; categorical/categorical**
 
@@ -997,7 +997,7 @@ observations = cross, star, etc.
 sunflowerplot(gear, cyl, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-62-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-62-1.png)
 
 **Boxplot**
 
@@ -1005,7 +1005,7 @@ sunflowerplot(gear, cyl, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
 boxplot(mpg ~ cyl, main = 'Title',   xlab = 'cylinders', ylab = 'miles per gallon') 
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-63-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-63-1.png)
 
 Colors.
 
@@ -1018,7 +1018,7 @@ boxplot(iris$Sepal.Length, col = 'red')
 boxplot(iris$Sepal.Length ~ iris$Species, col = topo.colors(3))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-64-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-64-1.png)
 
 ``` r
 par(mfrow = c(1, 1))
@@ -1033,7 +1033,7 @@ PimaV <- select(Pima.tr2, glu:age)
 boxplot(scale(PimaV), pch = 16, outcol = 'red')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-65-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-65-1.png)
 
 **Boxplot options**
 
@@ -1047,7 +1047,7 @@ boxplot(four, six, eight, main = 'Title', ylab = 'miles per gallon')
 axis(1, at = c(1, 2, 3), labels = c('4 Cyl', '6 Cyl', '8 Cyl'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-66-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-66-1.png)
 
 **Dotchart**
 
@@ -1066,7 +1066,7 @@ counts
 dotchart(counts, main = 'Title', xlab = 'count', ylab = 'cylinders/gearbox')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-67-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-67-1.png)
 
 ``` r
 counts <- table(cyl, gear)
@@ -1083,7 +1083,7 @@ counts
 dotchart(counts, main = 'Title', xlab = 'count', ylab = 'gearbox/cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-68-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-68-1.png)
 
 **Barplot with its options**
 
@@ -1108,7 +1108,7 @@ legend('topleft', inset = .04, title = 'gearbox',
    c('3','4','5'), fill = terrain.colors(3), horiz = TRUE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-69-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-69-1.png)
 
 ``` r
 counts <- table(gear, cyl)
@@ -1125,7 +1125,7 @@ counts
 barplot(counts, main = 'Title', xlab = 'cylinders', ylab = 'count', ylim = c(0, 25), col = terrain.colors(3), legend = rownames(counts))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-70-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-70-1.png)
 
 ``` r
 counts <- table(gear, cyl)
@@ -1142,7 +1142,7 @@ counts
 barplot(counts, main = 'Title', xlab = 'cylinders', ylab = 'count', ylim = c(0, 20), col = terrain.colors(3), legend = rownames(counts), beside = TRUE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-71-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-71-1.png)
 
 **Spineplot**
 
@@ -1155,7 +1155,7 @@ gear2 <- as.factor(gear)
 spineplot(gear2, cyl2, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-72-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-72-1.png)
 
 Count = blocks; continuous.
 
@@ -1163,7 +1163,7 @@ Count = blocks; continuous.
 spineplot(mpg, cyl2, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-73-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-73-1.png)
 
 **Mosaicplot**
 
@@ -1184,7 +1184,7 @@ counts
 mosaicplot(counts, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-74-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-74-1.png)
 
 ### Multivariate Plots
 
@@ -1194,7 +1194,7 @@ mosaicplot(counts, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
 pairs( ~mpg + disp + hp)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-75-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-75-1.png)
 
 **Coplot**
 
@@ -1202,7 +1202,7 @@ pairs( ~mpg + disp + hp)
 coplot(mpg ~ hp | wt)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-76-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-76-1.png)
 
 **Correlograms**
 
@@ -1212,7 +1212,7 @@ library(corrgram)
 corrgram(mtcars, order = TRUE, lower.panel = panel.shade, upper.panel=panel.pie, text.panel = panel.txt, main = 'Car Milage Data in PC2/PC1 Order')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-77-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-77-1.png)
 
 **Plot a dataset with colors**
 
@@ -1222,7 +1222,7 @@ library(RColorBrewer)
 plot(iris, col = brewer.pal(3, 'Set1'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-78-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-78-1.png)
 
 **Stars**
 
@@ -1243,7 +1243,7 @@ mtcars[1:4, c(1, 4, 6)]
 stars(mtcars[1:4, c(1, 4, 6)])
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-79-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-79-1.png)
 
 **Trivariate plots**
 
@@ -1263,7 +1263,7 @@ Add packages: `zoo` and `xts`.
 plot(AirPassengers, type = 'l')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-80-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-80-1.png)
 
 **Change the `type =`**
 
@@ -1276,35 +1276,35 @@ plot(y1, type = 'p', main = 'p vs l')
 plot(y1, type = 'l')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-81-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-81-1.png)
 
 ``` r
 plot(y1, type = 'l', main = 'l vs h')
 plot(y1, type = 'h')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-81-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-81-2.png)
 
 ``` r
 plot(y1, type = 'l', lty = 3, main = 'l 3 vs o')
 plot(y1, type = 'o')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-81-3.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-81-3.png)
 
 ``` r
 plot(y1, type = 'b', main = 'b vs c')
 plot(y1, type = 'c')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-81-4.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-81-4.png)
 
 ``` r
 plot(y1, type = 's', main = 's vs S')
 plot(y1, type = 'S')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-81-5.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-81-5.png)
 
 ``` r
 # reverse
@@ -1332,7 +1332,7 @@ box(col = 'gray')
 lines(x = c(20, 20, 40, 40), y = c(7, min(y2), min(y2), 7), lwd = 3, col = 'gray')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-82-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-82-1.png)
 
 ``` r
 # reverse
@@ -1359,7 +1359,7 @@ text(47, 1.5, srt = 90, adj = 0, labels = 'Tag a', cex = 0.8)
 text(92, 1.5, srt = 90, adj = 0, labels = 'Tag alpha', cex = 0.8)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-83-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-83-1.png)
 
 **A comprehensive example**
 
@@ -1407,7 +1407,7 @@ legend(xrange[1], yrange[2], 1:ntrees, cex = 0.8, col = colors,
    pch = plotchar, lty = linetype, title = 'Tree')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-85-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-85-1.png)
 
 **Change `lty =`**
 
@@ -1446,7 +1446,7 @@ plot(mpg ~ hp)
 abline(regr)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-86-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-86-1.png)
 
 ``` r
 par(mfrow = c(2, 2))
@@ -1455,7 +1455,7 @@ par(mfrow = c(2, 2))
 plot(regr)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-86-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-86-2.png)
 
 ``` r
 # reverse
@@ -1476,7 +1476,7 @@ library(lattice)
 show.settings()
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-88-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-88-1.png)
 
 ``` r
 # Save the default theme
@@ -1487,7 +1487,7 @@ trellis.par.set(canonical.theme(color = FALSE))
 show.settings()
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-88-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-88-2.png)
 
 ### Documentation
 
@@ -1541,14 +1541,14 @@ library(lattice)
 barchart(Class ~ Freq | Sex + Age, data = as.data.frame(Titanic), groups = Survived, stack = TRUE, layout = c(4, 1), auto.key = list(title = 'Survived', columns = 2))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-91-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-91-1.png)
 
 ``` r
 # free x-axis
 barchart(Class ~ Freq | Sex + Age, data = as.data.frame(Titanic), groups = Survived, stack = TRUE, layout = c(4, 1), auto.key = list(title = 'Survived', columns = 2), scales = list(x = 'free'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-91-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-91-2.png)
 
 ``` r
 # or
@@ -1557,7 +1557,7 @@ bc.titanic <- barchart(Class ~ Freq | Sex + Age, data = as.data.frame(Titanic), 
 bc.titanic
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-91-3.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-91-3.png)
 
 ``` r
 # add bg grid
@@ -1567,7 +1567,7 @@ update(bc.titanic, panel = function(...) {
 })
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-91-4.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-91-4.png)
 
 ``` r
 # remove lines
@@ -1576,14 +1576,14 @@ update(bc.titanic, panel = function(...) {
 })
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-91-5.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-91-5.png)
 
 ``` r
 # or
 update(bc.titanic, border = 'transparent')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-91-6.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-91-6.png)
 
 ``` r
 Titanic1 <- as.data.frame(as.table(Titanic[, , 'Adult' ,]))
@@ -1612,7 +1612,7 @@ Titanic1
 barchart(Class ~ Freq | Sex, Titanic1, groups = Survived, stack = TRUE, auto.key = list(title = 'Survived', columns = 2))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-92-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-92-1.png)
 
 ``` r
 Titanic2 <- reshape(Titanic1, direction = 'wide', v.names = 'Freq', idvar = c('Class', 'Sex'), timevar = 'Survived')
@@ -1622,7 +1622,7 @@ names(Titanic2) <- c('Class', 'Sex', 'Dead', 'Alive')
 barchart(Class ~ Dead + Alive | Sex, Titanic2, stack = TRUE, auto.key = list(columns = 2))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-92-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-92-2.png)
 
 ### Uni-, Bi-, Multivariate Plots
 
@@ -1635,20 +1635,20 @@ Like `barplot()`.
 barchart(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-93-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-93-1.png)
 
 ``` r
 # y ~ x
 barchart(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', horizontal = FALSE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-94-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-94-1.png)
 
 ``` r
 barchart(VADeaths, groups = FALSE, layout = c(1, 4), aspect = 0.7, reference =FALSE, main = 'Title', xlab = 'rate per 100')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-95-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-95-1.png)
 
 ``` r
 data(postdoc, package = 'latticeExtra')
@@ -1656,7 +1656,7 @@ data(postdoc, package = 'latticeExtra')
 barchart(prop.table(postdoc, margin = 1), xlab = 'Proportion', auto.key = list(adj = 1))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-96-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-96-1.png)
 
 **Change `layout = c(x, y, page)`**
 
@@ -1664,13 +1664,13 @@ barchart(prop.table(postdoc, margin = 1), xlab = 'Proportion', auto.key = list(a
 barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'horsepowers', ylab = 'cylinders - miles per gallon', layout = c(1,3))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-97-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-97-1.png)
 
 ``` r
 barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'cylinders - horsepowers', ylab = 'miles per gallon', layout = c(3,1))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-98-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-98-1.png)
 
 **Change `aspect = 1`**
 
@@ -1680,7 +1680,7 @@ barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'cylinders - horsepowers
 barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-99-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-99-1.png)
 
 **Colors**
 
@@ -1688,7 +1688,7 @@ barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'horsepowers', ylab = 'm
 barchart(mpg ~ hp, group = cyl, auto.key = list(space = 'right'), main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-100-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-100-1.png)
 
 -   `shingle()`; control the ranges.
 -   `equal.count()`; grid.
@@ -1701,37 +1701,37 @@ Like `dotchart()`.
 dotplot(mpg, main = 'Title', xlab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-101-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-101-1.png)
 
 ``` r
 dotplot(factor(cyl) ~ mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-102-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-102-1.png)
 
 ``` r
 dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'gearbox - miles per gallon', ylab = 'cylinders', layout = c(3,1))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-103-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-103-1.png)
 
 ``` r
 dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), aspect = 0.3)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-104-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-104-1.png)
 
 ``` r
 dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), aspect = 0.3, origin = 0)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-105-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-105-1.png)
 
 ``` r
 dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), aspect = 0.3, origin = 0, type = c('p', 'h'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-106-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-106-1.png)
 
 Set `auto.key`.
 
@@ -1753,7 +1753,7 @@ Use `auto.key`.
 dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), groups = vs, auto.key = list(space = 'right'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-108-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-108-1.png)
 
 ``` r
 trellis.par.set(old.pars)
@@ -1765,7 +1765,7 @@ trellis.par.set(superpose.symbol = list(pch = c(1,3), col = 1))
 dotplot(variety ~ yield | site, barley, layout = c(1, 6), aspect = c(0.7), groups = year, auto.key = list(space = 'right'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-109-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-109-1.png)
 
 ``` r
 trellis.par.set(old.pars)
@@ -1777,7 +1777,7 @@ Vertical.
 dotplot(mpg ~ factor(cyl) | factor(gear), main = 'Title', xlab = 'cylinders', ylab = 'gearbox - miles per gallon', layout = c(1,3), aspect = 0.3)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-110-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-110-1.png)
 
 ``` r
 library(readr)
@@ -1787,13 +1787,13 @@ density$Density <- as.numeric(density$Density)
 dotplot(reorder(MetropolitanArea, Density) ~ Density, density, type = c('p', 'h'), main = 'Title', xlab = 'Population Density (pop / sq.mi)')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-111-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-111-1.png)
 
 ``` r
 dotplot(reorder(MetropolitanArea, Density) ~ Density | Region, density, type = c('p', 'h'), strip = FALSE, strip.left = TRUE, layout = c(1, 3), scales = list(y = list(relation = 'free')), main = 'Title', xlab = 'Population Density (pop / sq.mi)')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-112-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-112-1.png)
 
 **Stripplot**
 
@@ -1803,31 +1803,31 @@ Like `stripchart()`.
 stripplot(mpg, main = 'Title', xlab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-113-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-113-1.png)
 
 ``` r
 stripplot(factor(cyl) ~ mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-114-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-114-1.png)
 
 ``` r
 stripplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'gearbox - miles per gallon', ylab = 'cylinders', layout = c(1,3))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-115-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-115-1.png)
 
 ``` r
 stripplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'gearbox - miles per gallon', ylab = 'cylinders', layout = c(1,3), groups = vs, auto.key = list(space = 'right'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-116-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-116-1.png)
 
 ``` r
 stripplot(mpg ~ factor(cyl) | factor(gear), main = 'Title', xlab = 'cylinders', ylab = 'gearbox - miles per gallon', layout = c(1,3))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-117-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-117-1.png)
 
 **Histogram**
 
@@ -1837,13 +1837,13 @@ Like `hist()`.
 histogram(mpg, main = 'Title', xlab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-118-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-118-1.png)
 
 ``` r
 histogram(~mpg | factor(cyl), layout = c(1, 3), main = 'Title', xlab = 'miles per gallon', ylab = 'density')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-119-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-119-1.png)
 
 **Densityplot**
 
@@ -1853,13 +1853,13 @@ Like `plot.density()`.
 densityplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'density')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-120-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-120-1.png)
 
 ``` r
 densityplot(~mpg | factor(cyl), layout = c(1, 3), main = 'Title', xlab = 'miles per gallon', ylab = 'density')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-121-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-121-1.png)
 
 **ECDFplot**
 
@@ -1869,7 +1869,7 @@ library(latticeExtra)
 ecdfplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = '')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-122-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-122-1.png)
 
 **BWplot**
 
@@ -1879,25 +1879,25 @@ Like `boxplot`.
 bwplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'density')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-123-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-123-1.png)
 
 ``` r
 bwplot(factor(cyl) ~ mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-124-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-124-1.png)
 
 ``` r
 bwplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-125-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-125-1.png)
 
 ``` r
 bwplot(mpg ~ factor(cyl) | factor(gear), main = 'Title', xlab = 'gearbox - cylinders', ylab = 'miles per gallon', layout = c(3,1))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-126-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-126-1.png)
 
 **QQmath**
 
@@ -1907,7 +1907,7 @@ Like `qqnorm()`.
 qqmath(mpg, main = 'Title', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-127-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-127-1.png)
 
 **XYplot**
 
@@ -1917,13 +1917,13 @@ Like `plot()`.
 xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'horsepower', ylab = 'cylinders - miles per gallon', layout = c(1,3))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-128-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-128-1.png)
 
 ``` r
 xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-129-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-129-1.png)
 
 **XYplot options**
 
@@ -1931,13 +1931,13 @@ xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers'
 xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-130-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-130-1.png)
 
 ``` r
 xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1, scales = list(y = list(at = seq(10, 30, 10))))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-131-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-131-1.png)
 
 ``` r
 meanmpg <- mean(mpg)
@@ -1949,7 +1949,7 @@ xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers'
 })
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-132-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-132-1.png)
 
 ``` r
 xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1, panel = function(x, y, ...) {
@@ -1958,7 +1958,7 @@ xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers'
 })
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-133-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-133-1.png)
 
 -   `panel.points()`.
 -   `panel.lines()`.
@@ -1992,91 +1992,91 @@ data(SeatacWeather, package = 'latticeExtra')
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'l', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-134-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-134-1.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'p', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-1.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'l', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-2.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'o', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-3.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-3.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'r', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-4.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-4.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'g', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-5.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-5.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 's', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-6.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-6.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'S', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-7.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-7.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'h', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-8.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-8.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'a', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-9.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-9.png)
 
 ``` r
 xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'smooth', lty = 1, col = 'black')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-135-10.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-135-10.png)
 
 ``` r
 xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-136-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-136-1.png)
 
 ``` r
 xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', type = 'o')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-136-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-136-2.png)
 
 ``` r
 xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', type = 'o', pch = 16, lty = 'dashed')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-136-3.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-136-3.png)
 
 ``` r
 xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-137-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-137-1.png)
 
 ``` r
 data(USAge.df, package = 'latticeExtra')
@@ -2084,13 +2084,13 @@ data(USAge.df, package = 'latticeExtra')
 xyplot(Population ~ Age | factor(Year), USAge.df, groups = Sex, type = c('l', 'g'), auto.key = list(points = FALSE, lines = TRUE, columns = 2), aspect = 'xy', ylab = 'Population (millions)', subset = Year %in% seq(1905, 1975, by = 10))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-138-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-138-1.png)
 
 ``` r
 xyplot(Population ~ Year | factor(Age), USAge.df, groups = Sex, type = 'l', strip = FALSE, strip.left = TRUE, layout = c(1, 3), ylab = 'Population (millions)', auto.key = list(lines = TRUE, points = FALSE, columns = 2), subset = Age %in% c(0, 10, 20))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-139-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-139-1.png)
 
 ``` r
 data(USCancerRates, package = 'latticeExtra')
@@ -2104,7 +2104,7 @@ xyplot(rate.male ~ rate.female | state, USCancerRates, aspect = 'iso', pch = '.'
   ylab = 'b')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-140-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-140-1.png)
 
 ``` r
 data(biocAccess, package = 'latticeExtra')
@@ -2114,20 +2114,20 @@ baxy <- xyplot(log10(counts) ~ hour | month + weekday, biocAccess, type = c('p',
 baxy
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-141-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-141-1.png)
 
 ``` r
 library(latticeExtra)
 useOuterStrips(baxy)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-141-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-141-2.png)
 
 ``` r
 xyplot(sunspot.year, aspect = 'xy', strip = FALSE, strip.left = TRUE, cut = list(number = 4, overlap = 0.05))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-142-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-142-1.png)
 
 ``` r
 data(biocAccess, package = 'latticeExtra')
@@ -2137,7 +2137,7 @@ ssd <- stl(ts(biocAccess$counts[1:(24 * 30 *2)], frequency = 24), 'periodic')
 xyplot(ssd, main = 'Title', xlab = 'Time (Days)')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-143-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-143-1.png)
 
 **Splom**
 
@@ -2145,7 +2145,7 @@ xyplot(ssd, main = 'Title', xlab = 'Time (Days)')
 splom(mtcars[c(1, 3, 6)], groups = cyl, data = mtcars, panel = panel.superpose, key = list(title = 'Three Cylinder Options', columns = 3, points = list(text = list(c('4 Cylinder', '6 Cylinder', '8 Cylinder')))))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-144-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-144-1.png)
 
 ``` r
 trellis.par.set(superpose.symbol = list(pch = c(1,3, 22), col = 1, alpha = 0.5))
@@ -2153,7 +2153,7 @@ trellis.par.set(superpose.symbol = list(pch = c(1,3, 22), col = 1, alpha = 0.5))
 splom(~data.frame(mpg, disp, hp, drat, wt, qsec), data = mtcars, groups = cyl, pscales = 0, varnames = c('miles\nper\ngallon', 'displacement\n(cu.in(', 'horsepower', 'rear\naxle\nratio', 'weight', '1/4\nmile\ntime'), auto.key = list(columns = 3, title = 'Title'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-145-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-145-1.png)
 
 ``` r
 trellis.par.set(old.pars)
@@ -2163,13 +2163,13 @@ trellis.par.set(old.pars)
 splom(USArrests)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-146-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-146-1.png)
 
 ``` r
 splom(~USArrests[c(3,1,2,4)] | state.region, pscales = 0, type = c('g', 'p', 'smooth'))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-147-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-147-1.png)
 
 **Parallel plot**
 
@@ -2179,32 +2179,32 @@ For multivariate continuous data.
 parallelplot(~iris[1:4])
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-148-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-148-1.png)
 
 ``` r
 parallelplot(~iris[1:4], horizontal.axis = FALSE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-148-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-148-2.png)
 
 ``` r
 parallelplot(~iris[1:4], scales = list(x = list(rot = 90)))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-148-3.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-148-3.png)
 
 ``` r
 parallelplot(~iris[1:4] | Species, iris)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-148-4.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-148-4.png)
 
 ``` r
 parallelplot(~iris[1:4], iris, groups = Species,
              horizontal.axis = FALSE, scales = list(x = list(rot = 90)))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-148-5.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-148-5.png)
 
 **Trivariate plots**
 
@@ -2240,7 +2240,7 @@ colfill <- c(2:(2 + length(levels(cyl.f))))
 legend(25, 0.19, levels(cyl.f), fill = colfill) 
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-150-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-150-1.png)
 
 ### The `car` Package (scatter)
 
@@ -2254,7 +2254,7 @@ library(car)
 scatterplot(mpg ~ wt | cyl, data = mtcars,    xlab = 'weight', ylab = 'miles per gallon', labels = row.names(mtcars)) 
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-152-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-152-1.png)
 
 **Splom**
 
@@ -2262,7 +2262,7 @@ scatterplot(mpg ~ wt | cyl, data = mtcars,    xlab = 'weight', ylab = 'miles per
 scatterplotMatrix( ~mpg + disp + drat + wt | cyl, data = mtcars, main = 'Title')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-153-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-153-1.png)
 
 `scatterplotMatrix == spm`.
 
@@ -2270,7 +2270,7 @@ scatterplotMatrix( ~mpg + disp + drat + wt | cyl, data = mtcars, main = 'Title')
 spm( ~mpg + disp + drat + wt | cyl, data = mtcars, main = 'Title')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-154-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-154-1.png)
 
 ### The `vioplot` Package (boxplot)
 
@@ -2290,7 +2290,7 @@ vioplot(x1, x2, x3, names = c('4 cyl', '6 cyl', '8 cyl'), col = 'green')
 title('Title')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-156-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-156-1.png)
 
 ### The `vcd` Package (count, correlation, mosaic)
 
@@ -2318,7 +2318,7 @@ counts
 mosaic(counts, shade = TRUE, legend = TRUE) 
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-158-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-158-1.png)
 
 **Correlation**
 
@@ -2337,7 +2337,7 @@ counts
 assoc(counts, shade = TRUE)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-159-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-159-1.png)
 
 **Mosaic**
 
@@ -2350,7 +2350,7 @@ library(vcd); library(grid)
 doubledecker(xtabs(Freq~ Dept + Gender + Accept, data = ucb), gp = gpar(fill = c('grey90', 'steelblue')))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-160-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-160-1.png)
 
 ``` r
 data(Fertility, package = 'AER')
@@ -2358,19 +2358,19 @@ data(Fertility, package = 'AER')
 doubledecker(morekids ~ age, data = Fertility, gp = gpar(fill = c('grey90', 'green')), spacing = spacing_equal(0))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-161-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-161-1.png)
 
 ``` r
 doubledecker(morekids ~ gender1 + gender2, data = Fertility, gp = gpar(fill = c('grey90', 'green')))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-162-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-162-1.png)
 
 ``` r
 doubledecker(morekids ~ age + gender1 + gender2, data = Fertility, gp = gpar(fill = c('grey90', 'green')), spacing = spacing_dimequal(c(0.1, 0, 0, 0)))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-163-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-163-1.png)
 
 ### The `hexbin` Package (scatter)
 
@@ -2388,20 +2388,20 @@ data(NHANES)
 plot(Serum.Iron ~ Transferin, NHANES, main = 'Title', xlab = 'Transferin', ylab = 'Iron')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-165-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-165-1.png)
 
 ``` r
 # with
 hexbinplot(Serum.Iron ~ Transferin, NHANES, main = 'Title', xlab = 'Transferin', ylab = 'Iron')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-165-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-165-2.png)
 
 ``` r
 hexbinplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-166-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-166-1.png)
 
 ``` r
 x <- rnorm(1000)
@@ -2411,7 +2411,7 @@ bin <- hexbin(x, y, xbins = 50)
 plot(bin, main = 'Title') 
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-167-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-167-1.png)
 
 ``` r
 x <- rnorm(1000)
@@ -2420,7 +2420,7 @@ y <- rnorm(1000)
 plot(x, y, main = 'Title', col =  rgb(0, 100, 0, 50, maxColorValue = 255), pch = 16)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-168-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-168-1.png)
 
 ``` r
 data(Diamonds, package = 'Stat2Data')
@@ -2432,7 +2432,7 @@ library(RColorBrewer)
 plot(a)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-169-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-169-1.png)
 
 Colors.
 
@@ -2442,7 +2442,7 @@ rf <- colorRampPalette(rev(brewer.pal(12, 'Set3')))
 hexbinplot(Diamonds$PricePerCt ~ Diamonds$Carat, colramp = rf)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-170-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-170-1.png)
 
 **Mix `lattice` and `hexbin`**
 
@@ -2452,13 +2452,13 @@ data(gvhd10, package = 'latticeExtra')
 xyplot(asinh(SSC.H) ~ asinh(FL2.H), gvhd10, aspect = 1, panel = panel.hexbinplot, .aspect.ratio = 1, trans = sqrt)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-171-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-171-1.png)
 
 ``` r
 xyplot(asinh(SSC.H) ~ asinh(FL2.H) | Days, gvhd10, aspect = 1, panel = panel.hexbinplot, .aspect.ratio = 1, trans =sqrt)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-172-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-172-1.png)
 
 ### The `car` Package (scatter)
 
@@ -2473,7 +2473,7 @@ scatterplotMatrix(~mpg + disp + drat + wt | cyl, data = mtcars,
    main = 'Three Cylinder Options')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-174-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-174-1.png)
 
 ### The `scatterplot3d` Package
 
@@ -2487,13 +2487,13 @@ library(scatterplot3d)
 scatterplot3d(wt, disp, mpg, main = 'Title')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-176-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-176-1.png)
 
 ``` r
 scatterplot3d(wt, disp, mpg, pch = 16, highlight.3d = TRUE, type = 'h', main = 'Title')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-177-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-177-1.png)
 
 ``` r
 s3d <- scatterplot3d(wt, disp, mpg, pch = 16, highlight.3d = TRUE, type = 'h', main = '   Title')
@@ -2503,7 +2503,7 @@ fit <- lm(mpg ~ wt + disp)
 s3d$plane3d(fit)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-178-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-178-1.png)
 
 ### The `rgl` Package (interactive)
 
@@ -2550,7 +2550,7 @@ ai <- agnes(iris[subset, 1:4])
 plot(ai, label = cS)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-182-1.png)![](img/Code___Plot_Chunk_Options/unnamed-chunk-182-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-182-1.png)![](img/Plot_snippets_-_Basics/unnamed-chunk-182-2.png)
 
 ### The `extracat` Package (splom)
 
@@ -2571,7 +2571,7 @@ data(CHAIN, package = 'mi')
 visna(CHAIN, sort = 'b')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-184-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-184-1.png)
 
 ``` r
 summary(CHAIN)
@@ -2606,7 +2606,7 @@ names(oly12a) <- abbreviate(names(oly12), 3)
 visna(oly12a, sort = 'b')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-184-2.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-184-2.png)
 
 ``` r
 # example 3
@@ -2617,7 +2617,7 @@ freetrade <- within(freetrade, land1 <- reorder(country, tariff, function(x) sum
 fluctile(xtabs(is.na(tariff) ~ land1 + year, data = freetrade))
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-184-3.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-184-3.png)
 
     ## viewport[base]
 
@@ -2628,7 +2628,7 @@ data(Pima.tr2, package = 'MASS')
 visna(Pima.tr2, sort = 'b')
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-184-4.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-184-4.png)
 
 ### The `ash` Package (density)
 
@@ -2644,7 +2644,7 @@ plot(ash1(bin1(mtcars$mpg, nbin = 50)), type = 'l')
 
     ## [1] "ash estimate nonzero outside interval ab"
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-186-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-186-1.png)
 
 ### The `KernSmooth` Package (density)
 
@@ -2662,7 +2662,7 @@ with(mtcars, {
   lines(ks1, col = 'red', lty = 5, lwd = 2)})
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-188-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-188-1.png)
 
 ### The `crorplot` Package (correlation)
 
@@ -2679,7 +2679,7 @@ correlations <- cor(mtcars)
 corrplot(correlations)
 ```
 
-![](img/Code___Plot_Chunk_Options/unnamed-chunk-190-1.png)
+![](img/Plot_snippets_-_Basics/unnamed-chunk-190-1.png)
 
 A Peek at Mapping
 -----------------
