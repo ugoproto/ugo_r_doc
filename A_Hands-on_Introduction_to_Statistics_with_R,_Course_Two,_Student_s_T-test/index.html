@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Statistics with R, Course Two, Student's t-test - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Statistics with R, Course Two, Student's t-test";
+    var mkdocs_page_input_path = "A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test.md";
+    var mkdocs_page_url = "/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Statistics with R, Course Two, Student's t-test</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-independent-t-tests">2, Independent t-tests</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>A Hands-on Introduction to Statistics with R &raquo;</li>
+        
+      
+    
+    <li>Statistics with R, Course Two, Student's t-test</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#introduction-to-t-tests">1, Introduction to t-tests</a></li>
+<li><a href="#independent-t-tests">2, Independent t-tests</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets and results.</li>
+</ul>
+<hr />
+<h4 id="1-introduction-to-t-tests">1, Introduction to t-tests<a class="headerlink" href="#1-introduction-to-t-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Test p-values for significance with z-tests, t-tests.</li>
+<li>Single sample t-test: group of people from a particular geographic<br />
+    region perform on a well-known test of intelligence. In particular,<br />
+    you are interested in finding out whether or not this group scores<br />
+    significantly higher than the overall population on an IQ test. This<br />
+    is a form of Null Hypothesis Significance Testing (NHST), where the<br />
+    null hypothesis is that there&rsquo;s no difference between this group and<br />
+    the overall population.</li>
+<li>Dependent t-test: single group of voters to rate their likelihood of<br />
+    voting for the candidate before the speech and again after the<br />
+    speech; understand if voters from a particular neighborhood are<br />
+    likely to vote differently when compared to the overall<br />
+    voting population.</li>
+<li>Independent t-test: significant difference in preferences between<br />
+    these two groups; compare liberals and convervatives.</li>
+<li>t-distribution, observed value, expected value, standard error.</li>
+</ul>
+<p><strong>Generate density plots of different t-distributions</strong></p>
+<pre><code class="r"># Generate a vector of 100 values between -4 and 4
+x &lt;- seq(-4, 4, length = 100)
+
+# Simulate the t-distribution
+y_1 &lt;- dt(x, 4)
+y_2 &lt;- dt(x, 6)
+y_3 &lt;- dt(x, 8)
+y_4 &lt;- dt(x, 10)
+y_5 &lt;- dt(x, 12)
+
+# Plot the t-distributions
+plot(x, y_1, type = 'l', lwd = 2, xlab = 'T value', ylab = 'Density', main = 'Comparison of t-distributions')
+
+lines(x, y_2, col = 'red')
+#lines(x, y_3, col = 'orange')
+#lines(x, y_4, col = 'green')
+#lines(x, y_5, col = 'blue')
+
+# Add a legend
+legend('topright', c('df = 4', 'df = 6', 'df = 8', 'df = 10', 'df = 12'), title = 'T distributions', col = c('black', 'red', 'orange', 'green', 'blue'), lty = 1)
+</code></pre>
+
+<p><strong>The working memory dataset</strong></p>
+<p>Conduct a dependent (or paired) t-test on the &ldquo;working memory&rdquo; dataset.<br />
+This dataset consists of the intelligence scores for subjects before and<br />
+after training, as well as for a control group. Our goal is to assess<br />
+whether intelligence training results in significantly different<br />
+intelligence scores for the individuals.</p>
+<p>The observations of individuals before and after training are two<br />
+samples from the same group at different points in time, which calls for<br />
+a dependent t-test. This will test whether or not the difference in mean<br />
+intelligence scores before and after training are significant.</p>
+<pre><code class="r">library(XLConnectJars)
+library(XLConnect)
+
+# Read in the data set and assign to the object
+wm &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'wm', header = TRUE, startCol = 1, startRow = 1)
+
+# This will print the data set in the console
+head(wm)
+</code></pre>
+
+<pre><code class="r"># Create a subset for the data that contains information on those subject who trained
+wm_t &lt;- subset(wm, wm$train == 1)
+
+ # Summary statistics 
+describe(wm_t)
+
+# Create a boxplot with pre- and post-training groups 
+boxplot(wm_t$pre, wm_t$post, main = &quot;Boxplot&quot;, xlab = &quot;Pre and Post Training&quot;, ylab = &quot;Intelligence Score&quot;, col = c(&quot;red&quot;, &quot;green&quot;))
+</code></pre>
+
+<p><strong>Performing dependent t-tests manually in R (1)</strong></p>
+<p>Conducting a dependent t-test, also known as a paired t-test, requires<br />
+the following steps:</p>
+<ul>
+<li>Define null and alternative hypotheses</li>
+<li>Decide significance level <em>α</em></li>
+<li>Compute observed t-value</li>
+<li>Find critical value</li>
+<li>Compare observed value to critical value</li>
+</ul>
+<p>We&rsquo;re performing a Null Hypothesis Significance Test (NHST), so our null<br />
+hypothesis is that there&rsquo;s no effect (i.e. training has no impact on<br />
+intelligence scores). The alternative hypothesis is that training<br />
+results in signficantly different intelligence scores. We&rsquo;ll use a<br />
+significance level of 0.05, which is very common in statistics.</p>
+<p>Compute the observed t-value.</p>
+<pre><code class="r"># Define the sample size
+n &lt;- dim(wm_t)[1]
+
+# Calculate the degrees of freedom
+df &lt;- n - 1
+
+ # Find the critical t-value
+t_crit &lt;- abs(qt(0.025, df))
+
+# Calculate the mean of the difference in scores. The differences are already in the dataset under the column 'gain'.
+mean_diff &lt;- sum(wm_t$gain)/n
+
+# Calculate the standard deviation
+xdt &lt;- sum(wm_t$gain^2)
+xdt2 &lt;- xdt/n
+sd_diff2 &lt;- sqrt((xdt - xdt2)/(n - 1))
+sd_diff &lt;- sqrt((sum(wm_t$gain^2) - ((sum(wm_t$gain))^2/n))/(n - 1))
+sd_diff2
+sd_diff
+</code></pre>
+
+<p><strong>Performing dependent t-tests manually in R (2)</strong></p>
+<p>Now that we&rsquo;ve determined our null and alternative hypotheses, decided<br />
+on a significance level, and computed our observed t-value, all that<br />
+remains is to calculate the critical value for this test and compare it<br />
+to our observed t-value. This will tell us whether we have sufficient<br />
+evidence to reject our null hypothesis. We&rsquo;ll even go one step further<br />
+and compute an effect size with Cohen&rsquo;s d!</p>
+<p>The critical value is the point on the relevant t-distribution that<br />
+determines whether the value we observed is extreme enough to warrant<br />
+rejecting the null hypothesis. Recall that a t-distribution is defined<br />
+by its degrees of freedom, which in turn is equal to the sample size<br />
+minus 1. In this example, we have 80 subjects so the relevant<br />
+t-distribution has 79 degrees of freedom.</p>
+<p>We&rsquo;re performing a two-tailed t-test in this situation since we care<br />
+about detecting a significant effect in either the positive or negative<br />
+direction. In other words, we want to know if training significantly<br />
+increases or decreases intelligence, however, given that our observed<br />
+t-value is positive (14.49) the right-hand is the only relevant value<br />
+here.</p>
+<p>Furthermore, since our desired significance level (i.e. alpha) is 0.05,<br />
+our critical value is the point on our t-distribution at which 0.025<br />
+(0.05 / 2) of its total area of 1 is to the right and thus 0.975 (1 -<br />
+0.025) of its total area is to the left.</p>
+<p>This point is called the 0.975 quantile and is computed for a<br />
+t-distrbution.</p>
+<pre><code class="r"># The variables from the previous exercise are still preloaded, type ls() in the console to see them
+n &lt;- dim(wm_t)[1]
+df &lt;- n - 1
+t_crit &lt;- abs(qt(0.025, df))
+mean_diff &lt;- sum(wm_t$gain)/n
+sd_diff &lt;- sqrt((sum(wm_t$gain^2) - ((sum(wm_t$gain))^2/n))/(n - 1))
+
+# Calculate the t-value for this test
+t_value &lt;- mean_diff/(sd_diff/sqrt(n))
+
+# Check whether or not the mean difference is statistically significant
+t_value
+t_crit
+
+# Calculate the confidence interval
+conf_upper &lt;- mean_diff + t_crit * (sd_diff/sqrt(n))
+conf_lower &lt;- mean_diff - t_crit * (sd_diff/sqrt(n))
+conf_upper
+conf_lower
+
+# Calculate Cohen's d
+cohens_d &lt;- mean_diff/sd_diff
+cohens_d
+</code></pre>
+
+<p><strong>Letting R do all the dirty work: Dependent t-tests</strong></p>
+<p>The <code>CohensD</code> function (not showns).</p>
+<p>Cohen&rsquo;s d Determine that the difference pre- and post-training is<br />
+statistically significant; and the effect size, meaning the effect of<br />
+training on intelligence gains particularly strong or not.</p>
+<p>Cohen&rsquo;s d is unbiased by sample size. Cohen&rsquo;s d provides a standardized<br />
+difference between two means. Cohen&rsquo;s d is calculated by subtracting one<br />
+group mean from the other, then dividing by the pooled standard<br />
+deviation.</p>
+<pre><code class="r"># Conduct a paired t-test using the t.test function
+t.test(wm_t$post, wm_t$pre, paired = TRUE)
+
+# Calculate Cohen's d
+cohensD(wm_t$post, wm_t$pre, method = 'paired')
+</code></pre>
+
+<h4 id="2-independent-t-tests">2, Independent t-tests<a class="headerlink" href="#2-independent-t-tests" title="Permanent link">&para;</a></h4>
+<p>An independent t-test is appropriate when you want to compare the the<br />
+means for two independent groups.</p>
+<p><strong>Preliminary statistics</strong></p>
+<p>For independent t-tests you will revisit the working memory dataset from<br />
+the previous chapter. In this dataset, subjects were randomly assigned<br />
+to four different training groups that trained for 8, 12, 17 and 19<br />
+days.</p>
+<pre><code class="r"># Read in the data set and assign to the object
+wm_t &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'wm_t', header = TRUE, startCol = 1, startRow = 1)
+
+# This will print the data set in the console
+head(wm_t)
+</code></pre>
+
+<p>Add statistical functions.</p>
+<pre><code class="r"># Load the psych(ology) package
+library(psych)
+</code></pre>
+
+<p>Levene&rsquo;s test for homogeneity of variance.</p>
+<pre><code class="r"># Create subsets for each training time
+wm_t08 &lt;- subset(wm_t, cond == 't08')
+wm_t12 &lt;- subset(wm_t, cond == 't12')
+wm_t17 &lt;- subset(wm_t, cond == 't17')
+wm_t19 &lt;- subset(wm_t, cond == 't19')
+
+# Summary statistics of the change in training scores before and after exercise
+describe(wm_t08)
+describe(wm_t12)
+describe(wm_t17)
+describe(wm_t19)
+
+# Create a boxplot of the different training times
+ggplot(wm_t, aes(x = cond, y = gain, fill = cond)) + geom_boxplot()
+
+# Levene's test
+leveneTest(wm_t$gain ~ wm_t$cond)
+</code></pre>
+
+<p><strong>Conducting an independent t-test manually (1)</strong></p>
+<p>Perform an independent t-test the same way we did for the dependent<br />
+t-test in the previous chapter. Continuing with the working memory<br />
+example, our null hypothesis is that the difference in intelligence<br />
+score gain between the group that trained for 8 days and the group that<br />
+trained for 19 days is equal to zero. If our observed t-value is<br />
+sufficiently large, we can reject the null in favor of the alternative<br />
+hypothesis, which would imply a significant difference in intelligence<br />
+gain between the two training groups.</p>
+<p>Calculation of the observed t-value for an independent t-test is similar<br />
+to the dependent t-test, but involves slightly different formulas.</p>
+<pre><code class="r"># Calculate mean difference by subtracting the gain for t08 by the gain for t19
+mean_t08 &lt;- mean(wm_t08$gain)
+mean_t19 &lt;- mean(wm_t19$gain)
+mean_diff &lt;- (mean_t19 - mean_t08)
+
+# Calculate degrees of freedom
+n_t08 &lt;- dim(wm_t08)[1]
+n_t19 &lt;- dim(wm_t19)[1]
+df &lt;- n_t08 + n_t19 - 2
+
+# Calculate the pooled standard error
+var_t08 &lt;- (sum((wm_t08$gain - mean_t08)^2))/(n_t08 - 1)
+var_t19 &lt;- (sum((wm_t19$gain - mean_t19)^2))/(n_t19 - 1)
+se_pooled &lt;- sqrt((var_t08/n_t08) + (var_t19/n_t19))
+</code></pre>
+
+<p><strong>Conducting an independent t-test manually (2)</strong></p>
+<p>Compute the observed t-value. Then we will determine the p-value using<br />
+the relevant t-distribution. If you recall, in the last chapter we<br />
+calculated the critical value. The p-value is simply an alternative<br />
+approach to hypothesis testing and determining the significance of your<br />
+results. It&rsquo;s good to practice both! Finally, we will finish by<br />
+calculating effect size via Cohen&rsquo;s d.</p>
+<pre><code class="r"># All variables from the previous exercises are preloaded in your workspace
+# Type ls() to see them
+# Calculate the t-value
+t_value &lt;- mean_diff/se_pooled
+
+# Calculate p-value
+#two-tail test, 0.05/2 = 0.025
+p_value &lt;- 2*(1-pt(t_value,df = df))
+
+# Calculate Cohen's d
+sd_t08 &lt;- sd(wm_t08$gain)
+sd_t19 &lt;- sd(wm_t19$gain)
+pooled_sd &lt;- (sd_t08 + sd_t19) / 2
+cohens_d &lt;- mean_diff/pooled_sd
+</code></pre>
+
+<p><strong>Letting R do all the dirty work: Independent t-tests</strong></p>
+<pre><code class="r"># Conduct an independent t-test 
+t.test(wm_t19$gain, wm_t08$gain,var.equal = TRUE)
+
+# Calculate Cohen's d
+cohensD(wm_t19$gain, wm_t08$gain, method = 'pooled')
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/" class="btn btn-neutral float-right" title="Statistics with R, Course Three, Analysis of Variance">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/" class="btn btn-neutral" title="Statistics with R, Course One, Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

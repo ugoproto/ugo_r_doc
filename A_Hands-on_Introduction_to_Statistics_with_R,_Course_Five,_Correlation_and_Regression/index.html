@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Statistics with R, Course Five, Correlation and Regression - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Statistics with R, Course Five, Correlation and Regression";
+    var mkdocs_page_input_path = "A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression.md";
+    var mkdocs_page_url = "/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Statistics with R, Course Five, Correlation and Regression</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-an-introduction-to-linear-regression-models">2, An introduction to Linear Regression Models</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-linear-regression-models-continued">3, Linear Regression Models continued</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>A Hands-on Introduction to Statistics with R &raquo;</li>
+        
+      
+    
+    <li>Statistics with R, Course Five, Correlation and Regression</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#an-introduction-to-correlation">1, An introduction to Correlation</a></li>
+<li><a href="#an-introduction-to-linear-regression-models">2, An introduction to Linear Regression Models</a></li>
+<li><a href="#linear-regression-models-continued">3, Linear Regression Models continued</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets only.</li>
+</ul>
+<hr />
+<h4 id="1-an-introduction-to-correlation">1, An introduction to Correlation<a class="headerlink" href="#1-an-introduction-to-correlation" title="Permanent link">&para;</a></h4>
+<p><strong>Manual computation of correlation coefficients - Part 1</strong></p>
+<pre><code class="r">library(XLConnectJars)
+library(XLConnect)
+
+# Read in the data set and assign to the object
+PE &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'PE', header = TRUE, startCol = 1, startRow = 1)
+
+# Check it out
+str(PE)
+</code></pre>
+
+<pre><code class="r"># Take a quick peek at both vectors
+A &lt;- PE$activeyears
+B &lt;- PE$endurance
+
+# Save the differences of each vector element with the mean in a new variable
+diff_A &lt;- A - mean(A)
+diff_B &lt;- B - mean(B)
+
+# Do the summation of the elements of the vectors and divide by N-1 in order to acquire the covariance between the two vectors
+cov &lt;- sum(diff_A*diff_B) / (length(A) - 1)
+cov
+</code></pre>
+
+<p><strong>Manual computation of correlation coefficients - Part 2</strong></p>
+<pre><code class="r"># Square the differences that were found in the previous step
+sq_diff_A &lt;- diff_A^2
+sq_diff_B &lt;- diff_B^2
+
+# Take the sum of the elements, divide them by N-1 and consequently take the square root to acquire the sample standard deviations
+sd_A &lt;- sqrt(sum(sq_diff_A)/(length(A) - 1))
+sd_B &lt;- sqrt(sum(sq_diff_B)/(length(B) - 1))
+sd_A
+sd_B
+</code></pre>
+
+<p><strong>Manual computation of correlation coefficients - part 3</strong></p>
+<pre><code class="r"># Combine all the pieces of the puzzle
+correlation &lt;- cov/(sd_A*sd_B)
+correlation
+
+# Check the validity of your result with the cor() command
+cor(A,B)
+</code></pre>
+
+<p><strong>Creating scatterplots</strong></p>
+<pre><code class="r">library(psych)
+
+# Summary statistics
+describe(PE)
+
+# Scatter plots
+par(mfrow = c(1, 3))
+
+plot(PE$age ~ PE$activeyears)
+plot(PE$endurance ~ PE$activeyears)
+plot(PE$endurance ~ PE$age)
+
+par(mfrow = c(1, 1))
+</code></pre>
+
+<p><strong>Correlation matrix</strong></p>
+<pre><code class="r"># Correlation Analysis 
+round(cor(PE[2:4], use = 'pairwise.complete.obs', method = 'pearson'), 2)  
+# Do some correlation tests. If the null hypothesis of no correlation can be rejected on a significance level of 5%, then the relationship between variables is  significantly different from zero at the 95% confidence level
+
+cor.test(PE$age, PE$activeyears)
+cor.test(PE$age, PE$endurance)
+cor.test(PE$endurance, PE$activeyears)
+</code></pre>
+
+<p>CAUTION:</p>
+<ul>
+<li>The magnitude of a correlation depends upon many factors,<br />
+    including sampling.</li>
+<li>The magnitude of a correlation is also influenced by measurement of<br />
+    X &amp; Y.</li>
+<li>The correlation coefficient is a sample statistic, just like<br />
+    the mean.</li>
+</ul>
+<p><strong>Non-representative data samples</strong></p>
+<pre><code class="r"># Summary statistics entire dataset
+describe(impact)
+
+# Calculate correlation coefficient 
+entirecorr &lt;- round(cor(impact$vismem2, impact$vermem2),2)
+
+# Summary statistics subsets
+describeBy(impact, group = impact$condition)
+
+# Create 2 subsets: control and concussed
+control &lt;- subset(impact, impact$condition == 'control')
+concussed &lt;- subset(impact, impact$condition == 'concussed')
+
+# Calculate correlation coefficients for each subset
+controlcorr &lt;- round(cor(control$vismem2, control$vermem2),2)
+concussedcorr &lt;- round(cor(concussed$vismem2, concussed$vermem2),2)
+
+# Display all values at the same time
+correlations &lt;- cbind(entirecorr, controlcorr, concussedcorr)
+correlations
+</code></pre>
+
+<h4 id="2-an-introduction-to-linear-regression-models">2, An introduction to Linear Regression Models<a class="headerlink" href="#2-an-introduction-to-linear-regression-models" title="Permanent link">&para;</a></h4>
+<p><strong>Impact experiment</strong></p>
+<pre><code class="r"># Create a correlation matrix for the dataset (9-14 are the '2' variables only)
+correlations &lt;- cor(PE[9:14,])
+
+# Create the scatterplot matrix for the dataset
+library(corrplot)
+
+corrplot(correlations)
+</code></pre>
+
+<p><strong>Manual computation of a simple linear regression</strong></p>
+<pre><code class="r"># Calculate the required means, standard deviations and correlation coefficient
+mean_ay &lt;- mean(PE$activeyears)
+mean_e &lt;- mean(PE$endurance)
+sd_ay &lt;- sd(PE$activeyears)
+sd_e &lt;- sd(PE$endurance)
+r &lt;- cor(PE$activeyears, PE$endurance)
+
+# Calculate the slope
+B_1 &lt;- r * (sd_e)/(sd_ay)
+
+# Calculate the intercept
+B_0 &lt;- mean_e - B_1 * mean_ay
+
+# Plot of ic2 against sym2
+plot(PE$activeyear, PE$endurance, main = 'Scatterplot', ylab = 'Endurance', xlab = 'Active Years')
+
+# Add the regression line
+abline(B_0, B_1, col = 'red')
+</code></pre>
+
+<p><strong>Executing a simple linear regression using R</strong></p>
+<pre><code class="r"># Construct the regression model
+model_1 &lt;- lm(PE$endurance ~ PE$activeyear)
+
+# Look at the results of the regression by using the summary function
+summary(model_1)
+
+# Extract the predicted values
+predicted &lt;- fitted(model_1)
+
+# Create a scatter plot of Impulse Control against Symptom Score
+plot(PE$endurance ~ PE$activeyear, main = 'Scatterplot', ylab = 'Endurance', xlab = 'Active Years')
+
+# Add a regression line
+abline(model_1, col = 'red')
+abline(lm(predicted ~ PE$activeyears), col = 'green', lty = 2)
+</code></pre>
+
+<p><strong>Executing a multiple regression in R</strong></p>
+<pre><code class="r"># Multiple Regression
+model_2 &lt;- lm(PE$endurance ~ PE$activeyear + PE$age)
+
+# Examine the results of the regression
+summary(model_2)
+
+# Extract the predicted values
+predicted &lt;- fitted(model_2)
+
+# Plotting predicted scores against observed scores
+plot(predicted ~ PE$activeyears, main = 'Scatterplot', ylab = 'Endurance', xlab = 'Active Years')
+abline(lm(predicted ~ PE$activeyears), col = 'green')
+</code></pre>
+
+<h4 id="3-linear-regression-models-continued">3, Linear Regression Models continued<a class="headerlink" href="#3-linear-regression-models-continued" title="Permanent link">&para;</a></h4>
+<p><strong>Calculating the sum of squared residuals</strong></p>
+<pre><code class="r"># Create a linear regression with `ic2` and `vismem2` as regressors
+model_1 &lt;- lm(PE$endurance ~ PE$activeyear + PE$age)
+
+# Extract the predicted values
+predicted_1 &lt;- fitted(model_1)
+
+# Calculate the squared deviation of the predicted values from the observed values 
+deviation_1 &lt;- (predicted_1 - PE$endurance)^2
+
+# Sum the squared deviations
+SSR_1 &lt;- sum(deviation_1)
+SSR_1
+</code></pre>
+
+<p><strong>Standardized linear regression</strong></p>
+<pre><code class="r"># Create a standardized simple linear regression
+model_1_z &lt;- lm(scale(PE$endurance) ~ scale(PE$activeyear))
+
+# Look at the output of this regression model
+summary(model_1_z)
+
+# Extract the R-Squared value for this regression
+r_square_1 &lt;- summary(model_1_z)$r.squared
+r_square_1
+
+# Calculate the correlation coefficient
+corr_coef_1 &lt;- sqrt(r_square_1)
+corr_coef_1
+
+# Create a standardized multiple linear regression
+model_2_z &lt;- lm(scale(PE$endurance) ~ scale(PE$activeyear) + scale(PE$age))
+
+# Look at the output of this regression model
+summary(model_2_z)
+
+# Extract the R-Squared value for this regression
+r_square_2 &lt;- summary(model_2_z)$r.squared
+r_square_2
+
+# Calculate the correlation coefficient
+corr_coef_2 &lt;- sqrt(r_square_2)
+corr_coef_2
+</code></pre>
+
+<p>Assumptions of linear regression:</p>
+<ul>
+<li>Normal distribution for Y.</li>
+<li>Linear relationship between X and Y.</li>
+<li>Homoscedasticity.</li>
+<li>Reliability of X and Y.</li>
+<li>Validity of X and Y.</li>
+<li>Random and representative sampling.</li>
+</ul>
+<p>Check it out with Anscombe&rsquo;s quartet plots.</p>
+<p><strong>Plotting residuals</strong></p>
+<pre><code class="r"># Extract the residuals from the model
+residual &lt;- resid(model_2)
+
+# Draw a histogram of the residuals
+hist(residual)
+
+# Extract the predicted symptom scores from the model
+predicted &lt;- fitted(model_2)
+
+# Plot the residuals against the predicted symptom scores
+plot(residual ~ predicted, main = 'Scatterplot', ylab = 'Model 2 Residuals', xlab = 'Model 2 Predicted Scores')
+abline(lm(residual ~ predicted), col = 'red')
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/" class="btn btn-neutral float-right" title="Statistics with R, Course Six, Multiple Regression">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/" class="btn btn-neutral" title="Statistics with R, Course Four, Repeated Measures ANOVA"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

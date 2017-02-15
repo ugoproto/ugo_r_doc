@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Working with the RStudio IDE - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Working with the RStudio IDE";
+    var mkdocs_page_input_path = "Working_with_RStudio_IDE.md";
+    var mkdocs_page_url = "/Working_with_RStudio_IDE/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Working with the RStudio IDE</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#1-orientation">1, Orientation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#2-programming">2, Programming</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-project">3, Project</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#working-with-rstudio-ide-part-2">Working with RStudio IDE (Part 2)</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-packages">1, Packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-version-control">2, Version Control</a></li>
+                
+                    <li><a class="toctree-l4" href="#3-reporting">3, Reporting</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Working with the RStudio IDE</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#working-with-rstudio-ide-part-1">Working with RStudio IDE<br />
+    (Part 1)</a><ul>
+<li><a href="#orientation">1, Orientation</a></li>
+<li><a href="#programming">2, Programming</a></li>
+<li><a href="#project">3, Project</a></li>
+</ul>
+</li>
+<li><a href="#working-with-rstudio-ide-part-2">Working with RStudio IDE<br />
+    (Part 2)</a><ul>
+<li><a href="#packages">1, Packages</a></li>
+<li><a href="#version-control">2, Version Control</a></li>
+<li><a href="#reporting">3, Reporting</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+</ul>
+<hr />
+<h3 id="working-with-rstudio-ide-part-1">Working with RStudio IDE (Part 1)<a class="headerlink" href="#working-with-rstudio-ide-part-1" title="Permanent link">&para;</a></h3>
+<p><strong>HELP</strong></p>
+<ul>
+<li>Alt+Shift+k or Tools/Keyboard Shortcuts Help.</li>
+</ul>
+<h4 id="1-orientation">1, Orientation<a class="headerlink" href="#1-orientation" title="Permanent link">&para;</a></h4>
+<p><strong>Commands</strong></p>
+<ul>
+<li>Ctrl+Up; command history.</li>
+<li>Tab; completion for all.</li>
+<li>Ctrl+L; clear the console.</li>
+<li>Tools/Global Options&hellip; set Up RStudio.</li>
+<li><code>view(dataframe)</code>; open a spreadsheet, show in new window, sort the<br />
+    rows, search, filter the rows.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">df &lt;- data.frame(colA = c(1, 2), colB = c(3, 6))
+df
+</code></pre>
+
+<pre><code>##   colA colB
+## 1    1    3
+## 2    2    6
+</code></pre>
+<pre><code class="r">View(df) # in a new window
+</code></pre>
+
+<p><img alt="" src="../img/Working_with_RStudio_IDE/Viewdf.png" /></p>
+<p><strong>IDE panes</strong></p>
+<ul>
+<li>Environment pane; load, save, remove objects, read a dataset,<br />
+    import dataset.</li>
+<li>History pane; idem, clear all or one item at the time, copy the<br />
+    command in the console pane, reload a command with Shift+Enter and<br />
+    run it.</li>
+<li>File pane; working directories, files, add a new folder, rename</li>
+<li><code>getwd()</code>; get working directory.</li>
+<li><code>setwd()</code>; set working directory.</li>
+<li>Plot pane; save (extension, size, resolution).</li>
+<li>Package pane; update.</li>
+<li>Help pane; pages.</li>
+<li>Viewer pane; more than plots!</li>
+</ul>
+<h4 id="2-programming">2, Programming<a class="headerlink" href="#2-programming" title="Permanent link">&para;</a></h4>
+<p><strong>Scripting</strong></p>
+<ul>
+<li>Ctrl+Shift+m; pipe or <code>%&gt;%</code>.</li>
+<li>Alt+-; <code>&lt;-</code>.</li>
+<li>Ctrl+Shift+C; add/delete a <code>#</code> for commenting.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">%&gt;% 
+
+&lt;- 
+
+# comment
+</code></pre>
+
+<p><strong>Code</strong></p>
+<ul>
+<li>
+<p>Ctrl+Alt+i; new chunk.</p>
+</li>
+<li>
+<p>Convert into a function.</p>
+</li>
+<li>
+<p>Type code,</p>
+</li>
+<li>Highlight it,</li>
+<li>Code/Extract Function to create a function:</li>
+</ul>
+<p>This:</p>
+<pre><code class="r">rnorm(10, 0, 1)
+</code></pre>
+
+<p>Becomes:</p>
+<pre><code class="r">rnorm &lt;- function() {
+  rnorm(10, 0, 1)
+}
+</code></pre>
+
+<ul>
+<li>Ctrl+Alt+click; multiple cursors for typing!</li>
+<li>Switch between Default, Vim and Emacs modes with<br />
+    Tools/Global Options/Code/Keybindings.</li>
+<li>Shift+Alt+g; go to line.</li>
+<li>Ctrl+f: find/replace in the current document.</li>
+<li>Alt+o, Alt+Shift+o; fold/unfold the code.</li>
+<li>Ctrl+p; jump between symbols like (), {}, [].</li>
+<li>Ctrl+Shift+Enter; run and source the code.</li>
+<li>Ctrl+Enter; run and source the code.</li>
+<li>Ctrl+Shift+F10; restart, refresh the R session.</li>
+</ul>
+<p><strong>Error handling</strong></p>
+<p>RStudio traces back the error origin.</p>
+<p>Toggle the show/hide traceback in the console when there is an error or<br />
+rerun with the bug, watch the right pane for traceback.</p>
+<p>Investigate, highlight the next line of code, click in the traceback<br />
+window, click the dropdown menu in the Global Environment (upper-right).<br />
+Stop, continue in the debugger mode, press c, press q.</p>
+<p>Add/remove breakpoints, where the line numbers are.</p>
+<ul>
+<li><code>debugonce</code>; automatically call the debugger when the function is<br />
+    called, but only once.</li>
+<li><code>debug</code>, <code>undebug</code>; automatically call the debugger when the<br />
+    function is called.</li>
+</ul>
+<p>Add <code>options(error=browser)</code> or <code>options(error=NULL)</code> at the beginning<br />
+of the script; R automatically open the debugger mode.</p>
+<ul>
+<li>n; next line.</li>
+<li>step-into icon.</li>
+<li>Shift+F4; step into.</li>
+<li>Shift+F6; execute the remainder of the bug.</li>
+</ul>
+<h4 id="3-project">3, Project<a class="headerlink" href="#3-project" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create a project with a folder and all the files (Global<br />
+    Environment, History, etc.): New Directory, Existing Directory,<br />
+    Version Control&hellip; Empty Project, R Package (project), Shiny<br />
+    Web Application.</li>
+<li>Create a Git repository with the new project</li>
+</ul>
+<p><strong>Commands</strong></p>
+<ul>
+<li>Ctrl+Shift+f; find in files.</li>
+<li>Ctrl+F9, F10; go backwards/forwards.</li>
+</ul>
+<p><strong>Packrat</strong></p>
+<p>Packrat is a dependency management system for R. Use one version of a<br />
+package for one project, another version of a package for another<br />
+project. Associate a project with its own set of packages.</p>
+<ul>
+<li>rstudio.github.io/packrat/</li>
+<li>Activate Packrat when creating a project or<br />
+    Tools/Project Options/Packrat.</li>
+<li>The library is virtually separate from R library.</li>
+<li>Perfect for collaborating with GitHub</li>
+</ul>
+<hr />
+<h3 id="working-with-rstudio-ide-part-2">Working with RStudio IDE (Part 2)<a class="headerlink" href="#working-with-rstudio-ide-part-2" title="Permanent link">&para;</a></h3>
+<h4 id="1-packages">1, Packages<a class="headerlink" href="#1-packages" title="Permanent link">&para;</a></h4>
+<p><strong>Introduction to R packages</strong></p>
+<p>Anything that can be automated, should be automated. Do as little as<br />
+possible by hand. Do as much as possible with functions.</p>
+<p>Process:</p>
+<ul>
+<li>Writing R functions.</li>
+<li>Documenting functions.</li>
+<li>Writing tests.</li>
+<li>Checking compatibility.</li>
+<li>Building the package for sharing and using.</li>
+</ul>
+<p>See the book: <a href="../r-pkgs.had.co.nz">R Packages</a>.</p>
+<p><strong>Create a new R package</strong></p>
+<p>Create a new directory with new files, folders, and meta-information.</p>
+<p><strong>To update or not to update</strong></p>
+<p>RStudio generates the NAMESPACE content for you automatically.</p>
+<p>Read r-pkgs.had.co.nz/description.html</p>
+<p><strong>Import &amp; load source files</strong></p>
+<p>Move existing functions from an existing project into the new package.<br />
+The function are moves to a new folder in the project.</p>
+<p>Test created functions all in once with the Load All command in the<br />
+Build Tab.</p>
+<p>Simulations:</p>
+<ul>
+<li>Ctrl+Shift+L</li>
+<li>Ctrl+Shift+F10; restart a R session.</li>
+</ul>
+<p><strong>Packages documentation</strong></p>
+<p>Create a help page (.Rd file). Written in HTML.</p>
+<p>Use the <code>roxigen</code> <a href="http://roxygen.org/">package</a> to document.</p>
+<p>Tools/Project Optons/Build Tools/Generate documentation. Generate the<br />
+doc, add comments.</p>
+<p>First, create a doc skeleton above the function:</p>
+<ul>
+<li>Ctrl+Alt+Shift+R</li>
+</ul>
+<!-- -->
+
+<pre><code class="text">#' Title
+#'
+#' @param x 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+cEnter &lt;- function(x) {
+  x - mean(x)
+}
+</code></pre>
+
+<p>Fill in the blanks.</p>
+<p><strong>Package documentation (2)</strong></p>
+<p>Title of the help page. Text on how to use.</p>
+<p>The 4 tags (<code>@</code>) help organizing the doc: <code>@export</code> (tells R that this<br />
+function should be made available to people who load your package. ),<br />
+<code>@params</code>, <code>@return</code>, and <code>@examples</code>. There are many more advanced<br />
+tags.</p>
+<p>Highlight a section and test it, run it.</p>
+<p><strong>Package documentation (3)</strong></p>
+<p>Build Tab/build the package.</p>
+<ul>
+<li>Ctrl+Shift+d</li>
+</ul>
+<p>Compile all. Load all. Open the help page with <code>?function</code>.</p>
+<p>Learn the <code>roxigen</code> workflow to ease the work.</p>
+<p><strong>Test your package</strong></p>
+<p>With the <code>testthat</code> (and <code>devtools</code>) package.</p>
+<p>Install both packages. Run <code>devtools::use_testthat()</code> and a now<br />
+directory with subdir appears in the package. This is where we save<br />
+tests.</p>
+<p><strong>Test your package (2)</strong></p>
+<p>Ready. Write tests. Open a new R script and save it to the tests<br />
+directory. Create a <code>context</code> function. Add <code>test_that</code> functions with<br />
+arguments.</p>
+<pre><code class="text">context(&quot;cEnter&quot;)
+
+test_that(&quot;cEnter handles integers&quot;, {
+  expect_equal(cEnter(1:3), -1:1)
+  expect_equal(cEnter(-(1:3)), 1:-1)
+})
+
+context(&quot;scale&quot;)
+
+test_that(&quot;scale handles integers&quot;, {
+  expect_equal(scale(1:3), 1:3)
+  expect_equal(scale(-(1:3)), -(1:3))
+})
+
+context(&quot;standardize&quot;)
+
+test_that(&quot;standardize handles integers&quot;, {
+  expect_equal(standardize(1:3), -1:1)
+  expect_equal(standardize(-(1:3)), 1:-1)
+})
+</code></pre>
+
+<p><strong>Test your package (3)</strong></p>
+<p>Run the tests.</p>
+<ul>
+<li>Ctl+Shift+T</li>
+</ul>
+<p>Get a summary (pass or not pass). Test and retest the package.</p>
+<p>Read r-pkgs.had.co.nz/tests.html</p>
+<p><strong>Time to test your package</strong></p>
+<p>Run the test with Build Tab/Test package.</p>
+<p><strong>Check your package</strong></p>
+<p>Upload the package to GitHub. Recreate the package structure in the<br />
+repo. Download and install the package with <code>install_github()</code> from the<br />
+<code>devtools</code> package. Test the package on GitHub to complete the tests.<br />
+Type <code>R CMD check</code> in the terminal. Or Build Tab/Check icon.</p>
+<ul>
+<li>Ctrl+Shift+E</li>
+</ul>
+<p><strong>Build your package</strong></p>
+<p>A package is a tarball or package bundle.</p>
+<p>Build Tab/Build &amp; Reload. Install and load the package.</p>
+<ul>
+<li>Ctrl+Shift+B</li>
+</ul>
+<p>Build and reload will overwrite the existing package. Run<br />
+<code>devtools::dev_mode()</code> creates a separate library for development.<br />
+Running the command again cancels it.</p>
+<p>Two formats: source package or binary package (more compresses and<br />
+optimized).</p>
+<p>Read r-pkgs.had.co.nz/package.html#package</p>
+<p><strong>Wrap-up</strong></p>
+<p>Get www.rstudio.com/resources/cheatsheets/</p>
+<h4 id="2-version-control">2, Version Control<a class="headerlink" href="#2-version-control" title="Permanent link">&para;</a></h4>
+<p><strong>Introduction to Git</strong></p>
+<p>Use Git to work in team. Even on R scripts, reports and packages.</p>
+<p>Install Git.</p>
+<p>In RStudio, Tools/Global Options/Git/SVN + Tools/Project Options/Select<br />
+VCS, restart RStudio. RStudio has now a Git pane and a Git icon.</p>
+<p><strong>Stage &amp; commit</strong></p>
+<p>The Git Tab is a directory. The real life (local) version of the<br />
+project. The official version of the project as recorded with Git.</p>
+<p>The two versions are different. View the differences. When you commit,<br />
+you add thing from the real to the official version.</p>
+<p>Green highlighting indicates something you&rsquo;ve added to the official<br />
+version, while red highlighting indicates lines you have removed.</p>
+<p><strong>.gitignore</strong></p>
+<p>Inside the project, ther is a .gignore file. Add file that are excluded<br />
+from the offcial version. The file can be accessed from the Git pane.</p>
+<p><strong>Git icons</strong></p>
+<p>Add, (cancel), commit, (cancel). The icons will changed.</p>
+<p><strong>Commit history</strong></p>
+<p>History viewer: each commitment. HEAD commit and parent commit. Master<br />
+branch or another.</p>
+<p><strong>Undo commited changes: checkout</strong></p>
+<p>Checkout command. Go back to a previous commit. The commit stays in the<br />
+history (not deleted).</p>
+<p>Run it in the shell: Tools/shell.</p>
+<p><code>git checkout sha# nameofthefile</code> and Git will reverse the commit. The<br />
+file is in the stage area as before the commit.</p>
+<p><strong>Undo uncommited changes</strong></p>
+<p>The file is in the stage area, ready to commit. Cancel the addition.</p>
+<p>In the Change window, click on the Revert button.</p>
+<p>Or, click on Discard chunk.</p>
+<p>Or, Ctlr+Z to undo.</p>
+<p>Then, Save the file.</p>
+<p><strong>Introduction to GitHub</strong></p>
+<p>Centralize, host, track issues, track metrics.</p>
+<p>Install a R package From GitHub with <code>install_github</code> from the the<br />
+<code>devtools</code> packages.</p>
+<p><strong>Pull &amp; Push</strong></p>
+<p>Local and GitHub</p>
+<p><strong>Wrap-up</strong></p>
+<p>Go to help.github.com</p>
+<p>Go to stackoverflow.com</p>
+<h4 id="3-reporting">3, Reporting<a class="headerlink" href="#3-reporting" title="Permanent link">&para;</a></h4>
+<p><strong>Tools for reporting</strong></p>
+<p>R Markdown and Shiny (over the web).</p>
+<p><strong>Introduction to R Markdown</strong></p>
+<p>Text and code.</p>
+<p>Web link: <code>&lt;http://www&gt;</code></p>
+<p><strong>R Markdown in RStudio</strong></p>
+<p>Report (HTML, PDF, Word) or presentation(slide).</p>
+<p>Create a template. Load in new templates. The <code>rticles</code> package has<br />
+templates for academic journals.</p>
+<p>The outline (name the chunks).</p>
+<p>Help/Markdown Quick Reference</p>
+<p>Add a code chunk wih Ctl+Alt+I</p>
+<p><strong>Rendering R Markdown</strong></p>
+<p>Knit or preview. For pdf, need LaTeX (install).</p>
+<p>Adding <code>runtime: shiny</code> generates a Shiny report. Launch the interactive<br />
+app.</p>
+<p>Publish reports online.</p>
+<p><strong>Compile notebook</strong></p>
+<p>File/Compile Notebook for R script. The script becomes a report (Word,<br />
+PDF, HTML).</p>
+<p><strong>RStudio&rsquo;s LaTex editor</strong></p>
+<p>Install LaTeX from www.latex-project.org</p>
+<p>Open a .tex file in RStudio. RStudio has limited options to edit LaTeX;<br />
+enough to write and compile.</p>
+<p>The preview window is linked to the source window. If we click on a<br />
+character in the source window, press Ctrl+click: the corresponding<br />
+character is highlighted in the preview window. Vice-versa.</p>
+<p>Tools/Global options/Sweave to change the LaTeX options.</p>
+<p><strong>Shiny</strong></p>
+<p>The server is online.</p>
+<p>shiny.rstudio.com</p>
+<p>When we create a Shiny app, we create two files: ui.R and server.R</p>
+<p>Run App (the app) or Ctrl+Shift+Enter</p>
+<p><strong>Publish Shiny apps</strong></p>
+<p>Need an account and the <code>shinyapps</code> package.</p>
+<p><code>devtools::install_github("rstudio/shinyapps")</code></p>
+<p>Deploy the local app online. Unique URL. Monitor usage, view logs,<br />
+archive or delete the app. Max 5 apps at a time for free. Paid account.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../IO_snippets___Cleaning/" class="btn btn-neutral float-right" title="I/O snippets & Cleaning">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/" class="btn btn-neutral" title="Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../IO_snippets___Cleaning/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

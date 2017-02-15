@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Reading Data into R with readr - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Reading Data into R with readr";
+    var mkdocs_page_input_path = "Reading_Data_into_R_with_readr.md";
+    var mkdocs_page_url = "/Reading_Data_into_R_with_readr/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Reading Data into R with readr</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-parsing-data-with-readr">2, Parsing Data with readr</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Reading Data into R with readr</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#importing-data-with-readr">1, Importing data with <code>readr</code></a></li>
+<li><a href="#parsing-data-with-readr">2, Parsing Data with <code>readr</code></a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets and results.</li>
+</ul>
+<hr />
+<h4 id="1-importing-data-with-readr">1, Importing data with <code>readr</code><a class="headerlink" href="#1-importing-data-with-readr" title="Permanent link">&para;</a></h4>
+<p><strong>Reading a .csv file</strong></p>
+<p>Your first task will be to master the use of the <code>read_csv()</code> function.<br />
+There are many arguments available, but the only required argument is<br />
+<code>file</code>, a path to a CSV file on your computer (or the web).</p>
+<p>One big advantage that <code>read_csv()</code> has over <code>read.csv()</code> is that it<br />
+doesn&rsquo;t convert strings into factors by default.</p>
+<p><code>read_csv()</code> recognizes 8 different data types (integer, logical, etc.)<br />
+and leaves anything else as characters. That means you don&rsquo;t have to set<br />
+<code>stringsAsFactors = FALSE</code> every time you import a CSV file with<br />
+character strings!</p>
+<pre><code class="r">#install.packages('readr')
+library(readr)
+
+getwd()
+</code></pre>
+
+<pre><code>## [1] "D:/Admin_Hugues/Documents/Rprojects/Data Wrangling"
+</code></pre>
+<pre><code class="r">setwd(&quot;D:/Admin_Hugues/Documents/Rprojects/Data Wrangling&quot;)
+</code></pre>
+
+<p>Import .csv (only &lsquo;,&rsquo;).</p>
+<pre><code class="r"># Import chickwts.csv: cwts
+cwts &lt;- read_csv('chickwts.csv')
+
+# View the head of cwts
+head(cwts)
+</code></pre>
+
+<pre><code>## # A tibble: 6 × 2
+##   weight      feed
+##    &lt;int&gt;     &lt;chr&gt;
+## 1    179 horsebean
+## 2    160 horsebean
+## 3    136 horsebean
+## 4    227 horsebean
+## 5    217 horsebean
+## 6    168 horsebean
+</code></pre>
+<p><strong>Reading a (.txt) .tsv file</strong></p>
+<p>Skipping columns with <code>col_skip()</code>.</p>
+<p>Code only:</p>
+<ul>
+<li>Setting the column type.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">cols(
+  weight = col_integer(),
+  feed = col_character()
+)
+</code></pre>
+
+<ul>
+<li>Setting the column names.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">col_names = c('name', 'state', 'phone')
+</code></pre>
+
+<ul>
+<li>Removing NA.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">na = c('NA', 'null')
+</code></pre>
+
+<p>In practice.</p>
+<pre><code class="r"># Import data
+salaries &lt;- read_tsv('Salaries.txt', col_names = FALSE, col_types = cols(
+  X2 = col_skip(),
+  X3 = col_skip(), 
+  X4 = col_skip()
+))
+
+# View first six rows of salaries
+head(salaries)
+</code></pre>
+
+<pre><code>## # A tibble: 6 × 3
+##          X1    X5     X6
+##       &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;
+## 1      Prof  Male 139750
+## 2      Prof  Male 173200
+## 3  AsstProf  Male  79750
+## 4      Prof  Male 115000
+## 5      Prof  Male 141500
+## 6 AssocProf  Male  97000
+</code></pre>
+<p><strong>Reading a European .csv</strong></p>
+<p>In most of Europe, commas (rather than periods) are used as decimal<br />
+points.</p>
+<pre><code class="r"># Import data with read_csv2(): trees
+trees &lt;- read_csv2('trees.csv')
+
+# View dimensions and head of trees
+dim(trees)
+</code></pre>
+
+<pre><code>## [1] 9 3
+</code></pre>
+<pre><code class="r">head(trees)
+</code></pre>
+
+<pre><code>## # A tibble: 6 × 3
+##   Girth Height Volume
+##   &lt;dbl&gt;  &lt;int&gt;  &lt;dbl&gt;
+## 1    83     70    103
+## 2    86     65    103
+## 3    88     63    102
+## 4   105     72    164
+## 5   107     81    188
+## 6   108     83    197
+</code></pre>
+<p><strong>Read a fixed-width file</strong></p>
+<p>Files containing columns of data that are separated by whitespace and<br />
+all line up on one side.</p>
+<p>Code only:</p>
+<pre><code class="r"># Import names.txt: names
+names &lt;- read_table('names.txt', col_names = c('name', 'state', 'phone'), na = c('NA', 'null'))
+</code></pre>
+
+<p><strong>Reading a text file</strong></p>
+<p>Import ordinary text files.</p>
+<pre><code class="r"># vector of character strings. 
+# Import as a character vector, one item per line: tweets
+tweets &lt;- read_lines('tweets.txt')
+tweets
+</code></pre>
+
+<pre><code>## [1] "carrots  can be eat by most people"                                                                                          
+## [2] "On predisents day we honor the big US man himself: Aberham Liclon.   Tall, skinny, dry, and cruncy - he was america's carrot"
+## [3] "knock knoc who is there? yup: carosot   ( joke )"                                                                            
+## [4] "it is 2016 time for a carot emoji   please!"                                                                                 
+## [5] "when life give you lemnos ,  have a carrot"                                                                                  
+## [6] "If you squent your eyes real hard a football  look like  a dry brown carrot   Honestly"
+</code></pre>
+<pre><code class="r"># returns a length 1 vector of the entire file, with line breaks represented as \n
+# Import as a length 1 vector: tweets_all
+tweets_all &lt;- read_file('tweets.txt')
+tweets_all
+</code></pre>
+
+<pre><code>## [1] "carrots  can be eat by most people\r\nOn predisents day we honor the big US man himself: Aberham Liclon.   Tall, skinny, dry, and cruncy - he was america's carrot\r\nknock knoc who is there? yup: carosot   ( joke )\r\nit is 2016 time for a carot emoji   please!\r\nwhen life give you lemnos ,  have a carrot\r\nIf you squent your eyes real hard a football  look like  a dry brown carrot   Honestly"
+</code></pre>
+<p><strong>Writing .csv and .tsv files</strong></p>
+<p>Code only:</p>
+<pre><code class="r"># Save cwts as chickwts.csv
+write_csv(cwts, &quot;chickwts.csv&quot;)
+
+# Append cwts2 to chickwts.csv
+write_csv(cwts2, &quot;chickwts.csv&quot;, append = TRUE)
+</code></pre>
+
+<p><strong>Writing .rds files</strong></p>
+<p>If the R object you&rsquo;re working with has metadata associated with it,<br />
+saving to a CSV will cause that information to be lost.</p>
+<p>Exports an entire R object (metadata and all).</p>
+<p>Code only:</p>
+<pre><code class="r"># Save trees as trees.rds
+write_rds(trees, 'trees.rds')
+
+# Import trees.rds: trees2
+trees2 &lt;- read_rds('trees.rds')
+
+# Check whether trees and trees2 are the same
+identical(trees, trees2)
+</code></pre>
+
+<h4 id="2-parsing-data-with-readr">2, Parsing Data with <code>readr</code><a class="headerlink" href="#2-parsing-data-with-readr" title="Permanent link">&para;</a></h4>
+<p><strong>Coercing columns to different data types</strong></p>
+<p><code>readr</code> functions are quite good at guessing the correct data type for<br />
+each column in a dataset. Of course, they aren&rsquo;t perfect, so sometimes<br />
+you will need to change the type of a column after importing.</p>
+<p>Code only:</p>
+<pre><code class="r"># Convert all columns to double
+trees2 &lt;- type_convert(trees, col_types = cols(Girth = 'd', Height = 'd', Volume = 'd'))
+</code></pre>
+
+<p><strong>Coercing character columns into factors</strong></p>
+<p><code>readr</code> import functions is that they don&rsquo;t automatically convert<br />
+strings into factors like <code>read.csv</code> does.</p>
+<p>Code only:</p>
+<pre><code class="r"># Parse the title column
+salaries$title &lt;- parse_factor(salaries$title, levels = c('Prof', 'AsstProf', 'AssocProf'))
+
+# Parse the gender column
+salaries$gender &lt;- parse_factor(salaries$gender, levels = c('Male', 'Female'))
+</code></pre>
+
+<p><strong>Creating Date objects</strong></p>
+<p>The <code>readr</code> import functions can automatically recognize dates in<br />
+standard ISO 8601 format (YYYY-MM-DD) and parse columns accordingly. If<br />
+you want to import a dataset with dates in other formats, you can use<br />
+<code>parse_date</code>.</p>
+<p>Code only:</p>
+<pre><code class="r"># Change type of date column
+weather$date &lt;- parse_date(weather$date, format = '%m/%d/%Y')
+</code></pre>
+
+<p><strong>Parsing number formats</strong></p>
+<p>The <code>readr</code> importing functions can sometimes run into trouble parsing a<br />
+column as numbers when it contains non-numeric symbols in addition to<br />
+numerals.</p>
+<p>Code only:</p>
+<pre><code class="r"># Parse amount column as a number
+debt$amount &lt;- parse_number(debt$amount)
+</code></pre>
+
+<p><strong>Viewing metadata before importing</strong></p>
+<p>In some cases, it may be easier to get an idea of how <code>readr</code> plans to<br />
+parse a dataset before you actually import it. When you see the planned<br />
+column specification, you might decide to change the type of one or more<br />
+columns, for example.</p>
+<ul>
+<li><code>spec_csv</code> for .csv and .tsv files.</li>
+<li><code>spec_delim</code> for .txt files (among others).</li>
+</ul>
+<!-- -->
+
+<pre><code class="r"># Specifications of chickwts
+spec_csv('chickwts.csv')
+</code></pre>
+
+<pre><code>## cols(
+##   weight = col_integer(),
+##   feed = col_character()
+## )
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Data_Wrangling/" class="btn btn-neutral float-right" title="Data Wrangling">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../IO_snippets___Cleaning/" class="btn btn-neutral" title="I/O snippets & Cleaning"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../IO_snippets___Cleaning/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Data_Wrangling/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Plot Snippets - ggplot2 - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Plot Snippets - ggplot2";
+    var mkdocs_page_input_path = "Plot_snippets_-_ggplot2.md";
+    var mkdocs_page_url = "/Plot_snippets_-_ggplot2/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Plot Snippets - ggplot2</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#dataset">Dataset</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-ggplot2-package">The ggplot2 Package</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#section-1">SECTION 1</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#1-introduction">1, Introduction</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#2-data">2, Data</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-aesthetics">3, Aesthetics</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#4-geometries">4, Geometries</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#5-qplot-and-wrap-up">5, qplot and wrap-up</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#section-2">SECTION 2</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#1-statistics">1, Statistics</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#2-coordinates-and-facets">2, Coordinates and Facets</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-themes">3, Themes</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#4-best-practices">4, Best Practices</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#5-case-study">5, Case Study</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#section-3">SECTION 3</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#section-4-cheat-list">SECTION 4 - Cheat List</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plot Snippets &raquo;</li>
+        
+      
+    
+    <li>Plot Snippets - ggplot2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#dataset">Dataset</a></li>
+<li><a href="#the-ggplot2-package">The <code>ggplot2</code> Package</a></li>
+<li><a href="#section-1">SECTION 1</a></li>
+<li><a href="#introduction">1, Introduction</a></li>
+<li><a href="#data">2, Data</a></li>
+<li><a href="#aesthetics">3, Aesthetics</a></li>
+<li><a href="#geometries">4, Geometries</a></li>
+<li><a href="#qplot-and-wrap-up">5, qplot and wrap-up</a></li>
+<li><a href="#section-2">SECTION 2</a></li>
+<li><a href="#statistics">1, Statistics</a></li>
+<li><a href="#coordinates-and-facets">2, Coordinates and Facets</a></li>
+<li><a href="#themes">3, Themes</a></li>
+<li><a href="#best-practices">4, Best Practices</a></li>
+<li><a href="#case-study">5, Case Study</a></li>
+<li><a href="#section-3">SECTION 3</a></li>
+<li><a href="#section-4---cheat-list">SECTION 4 - Cheat List</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Code snippets and results.</li>
+</ul>
+<hr />
+<h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://docs.ggplot2.org/current/">ggplot2</a></li>
+<li><a href="https://github.com/jrnold/ggthemes">ggthemes</a></li>
+<li><a href="http://r4stats.com/examples/graphics-ggplot2/">r4stats</a></li>
+</ul>
+<h4 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h4>
+<p>For most examples, we use the <code>mtcars</code>, <code>diamonds</code>, <code>iris</code>,<br />
+<code>ChickWeight</code>, <code>recess</code>, <code>fish</code>, <code>Vocab</code>, <code>Titanic</code>, <code>mamsleep</code>,<br />
+<code>barley</code>, <code>adult</code> datasets.</p>
+<h4 id="the-ggplot2-package">The <code>ggplot2</code> Package<a class="headerlink" href="#the-ggplot2-package" title="Permanent link">&para;</a></h4>
+<pre><code class="r">library(ggplot2)
+</code></pre>
+
+<p>Import additional packages.</p>
+<pre><code class="r">library(digest)
+library(grid)
+library(gtable)
+library(MASS)
+library(plyr)
+library(reshape2)
+library(scales)
+library(stats)
+library(tidyr)
+</code></pre>
+
+<p>For this project, import additional packages.</p>
+<pre><code class="r">library(ggthemes)
+library(RColorBrewer)
+library(gridExtra)
+library(GGally)
+library(car)
+library(Hmisc)
+library(dplyr)
+</code></pre>
+
+<p>Suggested additional packages&hellip;</p>
+<h4 id="section-1">SECTION 1<a class="headerlink" href="#section-1" title="Permanent link">&para;</a></h4>
+<h4 id="1-introduction">1, Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h4>
+<p><strong>Exploring <code>ggplot2</code>, part 1</strong></p>
+<pre><code class="r"># basic plot
+ggplot(mtcars, aes(x = cyl, y = mpg)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-17-1.png" /></p>
+<p><strong>Exploring <code>ggplot2</code>, part 2</strong></p>
+<pre><code class="r"># cyl is a factor
+ggplot(mtcars, aes(x = factor(cyl), y = mpg)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-18-1.png" /></p>
+<p><strong>Exploring <code>ggplot2</code>, part 3</strong></p>
+<pre><code class="r"># scatter plot
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-19-1.png" /></p>
+<pre><code class="r"># add color
+ggplot(mtcars, aes(x = wt, y = mpg, col = disp)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-20-1.png" /></p>
+<pre><code class="r"># change size
+ggplot(mtcars, aes(x = wt, y = mpg, size = disp)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-21-1.png" /></p>
+<p><strong>Exploring <code>ggplot2</code>, part 4</strong></p>
+<pre><code class="r"># Add geom_point() with +
+ggplot(diamonds, aes(x = Carat, y = PricePerCt)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-22-1.png" /></p>
+<pre><code class="r"># Add geom_point() and geom_smooth() with +
+ggplot(diamonds, aes(x = Carat, y = PricePerCt)) +
+  geom_point() + geom_smooth()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-23-1.png" /></p>
+<p><strong>Exploring <code>ggplot2</code>, part 5</strong></p>
+<pre><code class="r"># only the smooth line
+ggplot(diamonds, aes(x = Carat, y = PricePerCt)) +
+  geom_smooth()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-24-1.png" /></p>
+<pre><code class="r"># change col
+ggplot(diamonds, aes(x = Carat, y = PricePerCt, col = Clarity)) + 
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-25-1.png" /></p>
+<pre><code class="r"># change the alpha
+ggplot(diamonds, aes(x = Carat, y = PricePerCt, col = Clarity)) +
+  geom_point(alpha = 0.4)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-26-1.png" /></p>
+<p><strong>Exploring <code>ggplot2</code>, part 6</strong></p>
+<pre><code class="r"># 2 facets for comparison
+library(gridExtra)
+
+data(father.son, package = 'UsingR')
+
+a &lt;- ggplot(father.son, aes(fheight, sheight)) +
+  geom_point() +
+  geom_smooth(method = 'lm', colour = 'red') +
+  geom_abline(slope = 1, intercept = 0)
+
+b &lt;- ggplot(father.son, aes(fheight, sheight)) +
+  geom_point() +
+  geom_smooth(method = 'lm', colour = 'red', se = FALSE) +
+  stat_smooth()
+
+grid.arrange(a, b, nrow = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-27-1.png" /></p>
+<pre><code class="r"># load more data
+data(oly12, package = 'VGAMdata')
+
+# 2 facets for comparison
+ggplot(oly12, aes(Height, Weight)) +
+  geom_point(size = 1) +
+  facet_wrap(~Sex, ncol = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-28-1.png" /></p>
+<pre><code class="r"># create a new variable inside de data frame
+oly12S &lt;- within(oly12, oly12$Sport &lt;- abbreviate(oly12$Sport, 12))
+
+# multiple facets or splom
+ggplot(oly12S, aes(Height, Weight)) +
+  geom_point(size = 1) +
+  facet_wrap(~Sport) +
+  ggtitle('Weight and Height by Sport') 
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-29-1.png" /></p>
+<p><strong>Understanding the grammar, part 1</strong></p>
+<pre><code class="r"># create the object containing the data and aes layers
+dia_plot &lt;- ggplot(diamonds, aes(x = Carat, y = PricePerCt))
+
+# add a geom layer
+dia_plot + 
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-30-1.png" /></p>
+<pre><code class="r"># add the same geom layer, but with aes() inside
+dia_plot +
+  geom_point(aes(col = Clarity))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-31-1.png" /></p>
+<p><strong>Understanding the grammar, part 2</strong></p>
+<pre><code class="r">set.seed(1)
+
+# create the object containing the data and aes layers
+dia_plot &lt;- ggplot(diamonds, aes(x = Carat, y = PricePerCt))
+
+# add geom_point() with alpha set to 0.2
+dia_plot &lt;- dia_plot +
+  geom_point(alpha = 0.2)
+
+dia_plot
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-32-1.png" /></p>
+<pre><code class="r"># plot dia_plot with additional geom_smooth() with se set to FALSE
+dia_plot +
+  geom_smooth(se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-33-1.png" /></p>
+<h4 id="2-data">2, Data<a class="headerlink" href="#2-data" title="Permanent link">&para;</a></h4>
+<p><strong>Base package and <code>ggplot2</code>, part 1 - plot</strong></p>
+<pre><code class="r"># basic plot
+plot(mtcars$wt, mtcars$mpg, col = mtcars$cyl)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-34-1.png" /></p>
+<pre><code class="r"># change cyl inside mtcars to a factor
+mtcars$cyl &lt;- as.factor(mtcars$cyl)
+
+# make the same plot as in the first instruction
+plot(mtcars$wt, mtcars$mpg, col = mtcars$cyl)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-35-1.png" /></p>
+<p><strong>Base package and <code>ggplot2</code>, part 2 - lm</strong></p>
+<p>transfer to other</p>
+<pre><code class="r"># Basic plot
+mtcars$cyl &lt;- as.factor(mtcars$cyl)
+plot(mtcars$wt, mtcars$mpg, col = mtcars$cyl)
+
+# use lm() to calculate a linear model and save it as carModel
+carModel &lt;- lm(mpg ~ wt, data = mtcars)
+
+# Call abline() with carModel as first argument and lty as second
+abline(carModel, lty = 2)
+
+# plot each subset efficiently with lapply
+lapply(mtcars$cyl, function(x) {
+  abline(lm(mpg ~ wt, mtcars, subset = (cyl == x)), col = x)
+  })
+</code></pre>
+
+<pre><code>## [[1]]
+## NULL
+## 
+## [[2]]
+## NULL
+## 
+## [[3]]
+## NULL
+## 
+## [[4]]
+## NULL
+## 
+## [[5]]
+## NULL
+## 
+## [[6]]
+## NULL
+## 
+## [[7]]
+## NULL
+## 
+## [[8]]
+## NULL
+## 
+## [[9]]
+## NULL
+## 
+## [[10]]
+## NULL
+## 
+## [[11]]
+## NULL
+## 
+## [[12]]
+## NULL
+## 
+## [[13]]
+## NULL
+## 
+## [[14]]
+## NULL
+## 
+## [[15]]
+## NULL
+## 
+## [[16]]
+## NULL
+## 
+## [[17]]
+## NULL
+## 
+## [[18]]
+## NULL
+## 
+## [[19]]
+## NULL
+## 
+## [[20]]
+## NULL
+## 
+## [[21]]
+## NULL
+## 
+## [[22]]
+## NULL
+## 
+## [[23]]
+## NULL
+## 
+## [[24]]
+## NULL
+## 
+## [[25]]
+## NULL
+## 
+## [[26]]
+## NULL
+## 
+## [[27]]
+## NULL
+## 
+## [[28]]
+## NULL
+## 
+## [[29]]
+## NULL
+## 
+## [[30]]
+## NULL
+## 
+## [[31]]
+## NULL
+## 
+## [[32]]
+## NULL
+</code></pre>
+<pre><code class="r"># draw the legend of the plot
+legend(x = 5, y = 33, legend = levels(mtcars$cyl), col = 1:3, pch = 1, bty = 'n')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-36-1.png" /></p>
+<p><strong>Base package and <code>ggplot2</code>, part 3</strong></p>
+<pre><code class="r"># scatter plot
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) + 
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-37-1.png" /></p>
+<pre><code class="r"># include the lines of the linear models, per cyl
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-38-1.png" /></p>
+<pre><code class="r"># include a lm for the entire dataset in its whole
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE) +
+  geom_smooth(aes(group = 1), method = 'lm', se = FALSE, linetype = 2)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-39-1.png" /></p>
+<p><strong>Variables to visuals, part 1</strong></p>
+<pre><code class="r">iris.tidy &lt;- iris %&gt;%
+  gather(key, Value, -Species) %&gt;%
+  separate(key, c('Part', 'Measure'), '\\.')
+
+# create 2 facets
+ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
+  geom_jitter() + facet_grid(. ~ Measure)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-40-1.png" /></p>
+<p><strong>Variables to visuals, part 2</strong></p>
+<pre><code class="r"># Add a new column, Flower, to iris that contains unique ids
+iris$Flower &lt;- 1:nrow(iris)
+
+iris.wide &lt;- iris %&gt;%
+  gather(key, value, -Species, -Flower) %&gt;%
+  separate(key, c('Part', 'Measure'), '\\.') %&gt;%
+  spread(Measure, value)
+
+# create 3 facets
+ggplot(iris.wide, aes(x = Length, y = Width, col = Part)) + 
+  geom_jitter() +
+  facet_grid(. ~ Species)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-41-1.png" /></p>
+<h4 id="3-aesthetics">3, Aesthetics<a class="headerlink" href="#3-aesthetics" title="Permanent link">&para;</a></h4>
+<p><strong>All about aesthetics, part 1</strong></p>
+<pre><code class="r"># map cyl to y
+ggplot(mtcars, aes(x = mpg, y = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-42-1.png" /></p>
+<pre><code class="r"># map cyl to x
+ggplot(mtcars, aes(y = mpg, x = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-43-1.png" /></p>
+<pre><code class="r"># map cyl to col
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-44-1.png" /></p>
+<pre><code class="r"># change shape and size of the points
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point(shape = 1, size = 4)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-45-1.png" /></p>
+<p><strong>All about aesthetics, part 2</strong></p>
+<pre><code class="r"># map cyl to fill
+ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-46-1.png" /></p>
+<pre><code class="r"># Change shape, size and alpha of the points in the above plot
+ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_point(shape = 16, size = 6, alpha = 0.6)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-47-1.png" /></p>
+<p><strong>All about aesthetics, part 3</strong></p>
+<pre><code class="r"># map cyl to size
+ggplot(mtcars, aes(x = wt, y = mpg, size = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-48-1.png" /></p>
+<pre><code class="r"># map cyl to alpha
+ggplot(mtcars, aes(x = wt, y = mpg, alpha = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-49-1.png" /></p>
+<pre><code class="r"># map cyl to shape 
+ggplot(mtcars, aes(x = wt, y = mpg, shape = cyl, label = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-50-1.png" /></p>
+<pre><code class="r"># map cyl to labels
+ggplot(mtcars, aes(x = wt, y = mpg, label = cyl)) +
+  geom_text()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-51-1.png" /></p>
+<p><strong>All about attributes, part 1</strong></p>
+<pre><code class="r"># define a hexadecimal color
+my_color &lt;- '#123456'
+
+# set the color aesthetic 
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-52-1.png" /></p>
+<pre><code class="r"># set the color aesthetic and attribute 
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point(col = my_color)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-53-1.png" /></p>
+<pre><code class="r"># set the fill aesthetic and color, size and shape attributes
+ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_point(size = 10, shape = 23, col = my_color)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-54-1.png" /></p>
+<p><strong>All about attributes, part 2</strong></p>
+<pre><code class="r"># draw points with alpha 0.5
+ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_point(alpha = 0.5)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-55-1.png" /></p>
+<pre><code class="r"># raw points with shape 24 and color yellow
+ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_point(shape = 24, col = 'yellow')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-56-1.png" /></p>
+<pre><code class="r"># draw text with label x, color red and size 10
+ggplot(mtcars, aes(x = wt, y = mpg, fill = cyl)) +
+  geom_text(label = 'x', col = 'red', size = 10)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-57-1.png" /></p>
+<p><strong>Going all out</strong></p>
+<pre><code class="r"># Map mpg onto x, qsec onto y and factor(cyl) onto col
+ggplot(mtcars, aes(x = mpg, y = qsec, col = factor(cyl))) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-58-1.png" /></p>
+<pre><code class="r"># Add mapping: factor(am) onto shape
+ggplot(mtcars, aes(x = mpg, y = qsec, col = factor(cyl), shape = factor(am))) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-59-1.png" /></p>
+<pre><code class="r"># Add mapping: (hp/wt) onto size
+ggplot(mtcars, aes(x = mpg, y = qsec, col = factor(cyl), shape = factor(am), size = hp/wt)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-60-1.png" /></p>
+<pre><code class="r"># Add mapping: rownames(mtcars) onto label
+ggplot(mtcars, aes(x = mpg, y = qsec, col = factor(cyl), shape = factor(am), size = hp/wt)) +
+  geom_text(aes(label = rownames(mtcars)))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-61-1.png" /></p>
+<p><strong>Position</strong></p>
+<pre><code class="r"># base layers
+cyl.am &lt;- ggplot(mtcars, aes(x = factor(cyl), fill = factor(am)))
+
+# add geom (position = 'stack'' by default)
+cyl.am + 
+  geom_bar(position = 'stack')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-62-1.png" /></p>
+<pre><code class="r"># show proportion
+cyl.am + 
+  geom_bar(position = 'fill')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-63-1.png" /></p>
+<pre><code class="r"># dodging
+cyl.am + 
+  geom_bar(position = 'dodge')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-64-1.png" /></p>
+<pre><code class="r"># clean up the axes with scale_ functions
+val = c('#E41A1C', '#377EB8')
+lab = c('Manual', 'Automatic')
+
+cyl.am + geom_bar(position = 'dodge', ) +
+  scale_x_discrete('Cylinders') +
+  scale_y_continuous('Number') +
+  scale_fill_manual('Transmission', values = val, labels = lab)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-65-1.png" /></p>
+<p><strong>Setting a dummy aesthetic</strong></p>
+<pre><code class="r"># add a new column called group
+mtcars$group &lt;- 0
+
+# create jittered plot of mtcars: mpg onto x, group onto y
+ggplot(mtcars, aes(x = mpg, y = group)) +   geom_jitter()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-66-1.png" /></p>
+<pre><code class="r"># change the y aesthetic limits
+ggplot(mtcars, aes(x = mpg, y = group)) +
+  geom_jitter() +
+  scale_y_continuous(limits = c(-2, 2))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-67-1.png" /></p>
+<p><strong>Overplotting 1 - Point shape and transparency</strong></p>
+<pre><code class="r"># basic scatter plot: wt on x-axis and mpg on y-axis; map cyl to col
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point(size = 4)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-68-1.png" /></p>
+<pre><code class="r"># hollow circles - an improvement
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point(size = 4, shape = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-69-1.png" /></p>
+<pre><code class="r"># add transparency - very nice
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+  geom_point(size = 4, shape = 1, alpha = 0.6)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-70-1.png" /></p>
+<p><strong>Overplotting 2 - alpha with large datasets</strong></p>
+<pre><code class="r"># scatter plot: carat (x), price (y), clarity (col)
+ggplot(diamonds, aes(x = Carat, y = PricePerCt, col = Clarity)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-71-1.png" /></p>
+<pre><code class="r"># adjust for overplotting
+ggplot(diamonds, aes(x = Carat, y = PricePerCt, col = Clarity)) +
+  geom_point(alpha = 0.5)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-72-1.png" /></p>
+<pre><code class="r"># scatter plot: clarity (x), carat (y), price (col)
+ggplot(diamonds, aes(x = Clarity, y = Carat, col = PricePerCt)) +
+  geom_point(alpha = 0.5)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-73-1.png" /></p>
+<pre><code class="r"># dot plot with jittering
+ggplot(diamonds, aes(x = Clarity, y = Carat, col = PricePerCt)) +
+  geom_point(alpha = 0.5, position = 'jitter')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-74-1.png" /></p>
+<h4 id="4-geometries">4, Geometries<a class="headerlink" href="#4-geometries" title="Permanent link">&para;</a></h4>
+<p><strong>Scatter plots and jittering (1)</strong></p>
+<pre><code class="r"># plot the cyl on the x-axis and wt on the y-axis
+ggplot(mtcars, aes(x = cyl, y = wt)) +
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-75-1.png" /></p>
+<pre><code class="r"># Use geom_jitter() instead of geom_point()
+ggplot(mtcars, aes(x = cyl, y = wt)) +
+  geom_jitter()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-76-1.png" /></p>
+<pre><code class="r"># Define the position object using position_jitter(): posn.j
+posn.j &lt;-  position_jitter(0.1)
+
+# Use posn.j in geom_point()
+ggplot(mtcars, aes(x = cyl, y = wt)) +
+  geom_point(position = posn.j)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-77-1.png" /></p>
+<p><strong>Scatter plots and jittering (2)</strong></p>
+<pre><code class="r"># scatter plot of vocabulary (y) against education (x). Use geom_point()
+ggplot(Vocab, aes(x = education, y = vocabulary)) + 
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-78-1.png" /></p>
+<pre><code class="r"># use geom_jitter() instead of geom_point()
+ggplot(Vocab, aes(x = education, y = vocabulary)) +
+  geom_jitter()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-79-1.png" /></p>
+<pre><code class="r"># set alpha to a very low 0.2
+ggplot(Vocab, aes(x = education, y = vocabulary)) +
+  geom_jitter(alpha = 0.2)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-80-1.png" /></p>
+<pre><code class="r"># set the shape to 1
+ggplot(Vocab, aes(x = education, y = vocabulary)) +
+  geom_jitter(alpha = 0.2, shape = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-81-1.png" /></p>
+<p><strong>Histograms</strong></p>
+<pre><code class="r"># univariate histogram
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-82-1.png" /></p>
+<pre><code class="r"># change the bin width to 1
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-83-1.png" /></p>
+<pre><code class="r"># change the y aesthetic to density
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(aes(y = ..density..), binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-84-1.png" /></p>
+<pre><code class="r"># custom color code
+myBlue &lt;- '#377EB8'
+
+# Change the fill color to myBlue
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(aes(y = ..density..), binwidth = 1, fill = myBlue)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-85-1.png" /></p>
+<p><strong>Position</strong></p>
+<pre><code class="r">mtcars$am &lt;- as.factor(mtcars$am)
+
+# bar plot of cyl, filled according to am
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-86-1.png" /></p>
+<pre><code class="r"># change the position argument to stack
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position = 'stack')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-87-1.png" /></p>
+<pre><code class="r"># change the position argument to fill
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position = 'fill')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-88-1.png" /></p>
+<pre><code class="r"># change the position argument to dodge
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position = 'dodge')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-89-1.png" /></p>
+<p><strong>Overlapping bar plots</strong></p>
+<pre><code class="r"># bar plot of cyl, filled according to am
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-90-1.png" /></p>
+<pre><code class="r"># change the position argument to 'dodge'
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position = 'dodge')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-91-1.png" /></p>
+<pre><code class="r"># define posn_d with position_dodge()
+posn_d &lt;- position_dodge(0.2)
+
+# change the position argument to posn_d
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position = posn_d)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-92-1.png" /></p>
+<pre><code class="r"># use posn_d as position and adjust alpha to 0.6
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar(position = posn_d, alpha = 0.6)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-93-1.png" /></p>
+<p><strong>Overlapping histograms</strong></p>
+<pre><code class="r"># histogram, add coloring defined by cyl 
+ggplot(mtcars, aes(mpg, fill = cyl)) +
+  geom_histogram(binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-94-1.png" /></p>
+<pre><code class="r"># change position to identity 
+ggplot(mtcars, aes(mpg, fill = cyl)) +
+  geom_histogram(binwidth = 1, position = 'identity')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-95-1.png" /></p>
+<pre><code class="r"># change geom to freqpoly (position is identity by default) 
+ggplot(mtcars, aes(mpg, col = cyl)) +
+  geom_freqpoly(binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-96-1.png" /></p>
+<p><strong>Facets or splom histograms</strong></p>
+<pre><code class="r"># load the package
+library(reshape2)
+
+# load new data
+data(uniranks, package = 'GDAdata')
+
+# name the variables
+names(uniranks)[c(5, 6, 8, 8, 10, 11, 13)] &lt;- c('AvTeach', 'NSSTeach', 'SpendperSt', 'StudentStaffR', 'Careers', 'VAddScore', 'NSSFeedb')
+
+# reshape the data frame
+ur2 &lt;- melt(uniranks[, c(3, 5:13)], id.vars = 'UniGroup', variable.name = 'uniV', value.name = 'uniX')
+</code></pre>
+
+<pre><code class="r"># Splom
+ggplot(ur2, aes(uniX)) +
+  geom_histogram() +
+  xlab('') +
+  ylab('') +
+  facet_grid(UniGroup ~ uniV, scales = 'free_x')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-98-1.png" /></p>
+<pre><code class="r">library(ggplot2)
+library(gridExtra)
+data(Pima.tr2, package = 'MASS')
+
+h1 &lt;- ggplot(Pima.tr2, aes(glu)) + geom_histogram()
+h2 &lt;- ggplot(Pima.tr2, aes(bp)) + geom_histogram()
+h3 &lt;- ggplot(Pima.tr2, aes(skin)) + geom_histogram()
+h4 &lt;- ggplot(Pima.tr2, aes(bmi)) + geom_histogram()
+h5 &lt;- ggplot(Pima.tr2, aes(ped)) + geom_histogram()
+h6 &lt;- ggplot(Pima.tr2, aes(age)) + geom_histogram()
+
+grid.arrange(h1, h2, h3, h4, h5, h6, nrow = 2)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-99-1.png" /></p>
+<p><strong>Bar plots with color ramp, part 1</strong></p>
+<pre><code class="r"># Example of how to use a brewed color palette
+ggplot(mtcars, aes(x = cyl, fill = am)) +
+  geom_bar() + 
+  scale_fill_brewer(palette = 'Set1')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-100-1.png" /></p>
+<pre><code class="r">Vocab$education &lt;- as.factor(Vocab$education)
+Vocab$vocabulary &lt;- as.factor(Vocab$vocabulary)
+
+# Plot education on x and vocabulary on fill
+# Use the default brewed color palette
+ggplot(Vocab, aes(x = education, fill = vocabulary)) + geom_bar(position = 'fill') + scale_fill_brewer(palette = 'Set3')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-101-1.png" /></p>
+<p><strong>Bar plots with color ramp, part 2</strong></p>
+<pre><code class="r"># Definition of a set of blue colors
+blues &lt;- brewer.pal(9, 'Blues')
+
+# Make a color range using colorRampPalette() and the set of blues
+blue_range &lt;- colorRampPalette(blues)
+
+# Use blue_range to adjust the color of the bars, use scale_fill_manual()
+ggplot(Vocab, aes(x = education, fill = vocabulary)) + 
+  geom_bar(position = 'fill') +
+  scale_fill_manual(values = blue_range(11))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-102-1.png" /></p>
+<p><strong>Overlapping histograms (2)</strong></p>
+<pre><code class="r"># histogram
+ggplot(mtcars, aes(mpg)) + geom_histogram(binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-103-1.png" /></p>
+<pre><code class="r"># expand the histogram to fill using am
+ggplot(mtcars, aes(mpg, fill = am)) +
+  geom_histogram(binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-104-1.png" /></p>
+<pre><code class="r"># change the position argument to 'dodge'
+ggplot(mtcars, aes(mpg, fill = am)) +
+  geom_histogram(position = 'dodge', binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-105-1.png" /></p>
+<pre><code class="r"># change the position argument to 'fill'
+ggplot(mtcars, aes(mpg, fill = am)) +
+  geom_histogram(position = 'fill', binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-106-1.png" /></p>
+<pre><code class="r"># change the position argument to 'identity' and set alpha to 0.4
+ggplot(mtcars, aes(mpg, fill = am)) +
+  geom_histogram(position = 'identity', binwidth = 1, alpha = 0.4)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-107-1.png" /></p>
+<pre><code class="r"># change fill to cyl
+ggplot(mtcars, aes(mpg, fill = cyl)) +
+  geom_histogram(position = 'identity', binwidth = 1, alpha = 0.4)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-108-1.png" /></p>
+<p><strong>Line plots</strong></p>
+<pre><code class="r"># plot unemploy as a function of date using a line plot
+ggplot(economics, aes(x = date, y = unemploy)) +
+  geom_line()  
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-109-1.png" /></p>
+<pre><code class="r"># adjust plot to represent the fraction of total population that is unemployed
+ggplot(economics, aes(x = date, y = unemploy/pop)) +
+  geom_line()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-110-1.png" /></p>
+<p><strong>Periods of recession</strong></p>
+<pre><code class="r"># draw the recess periods
+ggplot(economics, aes(x = date, y = unemploy/pop)) +
+  geom_line() +
+  geom_rect(data = recess, inherit.aes = FALSE, aes(xmin = begin, xmax = end, ymin = -Inf, ymax = +Inf), fill = 'red', alpha = 0.2)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-111-1.png" /></p>
+<p><strong>Multiple time series, part 1</strong></p>
+<pre><code class="r"># use gather to go from fish to fish.tidy.
+fish.tidy &lt;- gather(fish, Species, Capture, -Year)
+</code></pre>
+
+<p><strong>Multiple time series, part 2</strong></p>
+<pre><code class="r"># plot
+ggplot(fish.tidy, aes(x = Year, y = Capture, col = Species)) +
+  geom_line()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-113-1.png" /></p>
+<h4 id="5-qplot-and-wrap-up">5, qplot and wrap-up<a class="headerlink" href="#5-qplot-and-wrap-up" title="Permanent link">&para;</a></h4>
+<p><strong>Using <code>qplot</code></strong></p>
+<pre><code class="r"># the old way
+plot(mpg ~ wt, data = mtcars)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-114-1.png" /></p>
+<pre><code class="r"># using ggplot
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point(shape = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-115-1.png" /></p>
+<pre><code class="r"># Using qplot
+qplot(wt, mpg, data = mtcars)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-116-1.png" /></p>
+<p><strong>Using aesthetics</strong></p>
+<pre><code class="r"># Categorical: cyl
+qplot(wt, mpg, data = mtcars, size = cyl)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-117-1.png" /></p>
+<pre><code class="r"># gear
+qplot(wt, mpg, data = mtcars, size = gear)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-118-1.png" /></p>
+<pre><code class="r"># Continuous: hp
+qplot(wt, mpg, data = mtcars, col = hp)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-119-1.png" /></p>
+<pre><code class="r"># qsec
+qplot(wt, mpg, data = mtcars, size = qsec)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-120-1.png" /></p>
+<p><strong>Choosing geoms, part 1</strong></p>
+<pre><code class="r"># qplot() with x only
+qplot(factor(cyl), data = mtcars)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-121-1.png" /></p>
+<pre><code class="r"># qplot() with x and y
+qplot(factor(cyl), factor(vs), data = mtcars)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-122-1.png" /></p>
+<pre><code class="r"># qplot() with geom set to jitter manually
+qplot(factor(cyl), factor(vs), data = mtcars, geom = 'jitter')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-123-1.png" /></p>
+<p><strong>Choosing geoms, part 2 - dotplot</strong></p>
+<pre><code class="r"># make a dot plot with ggplot
+ggplot(mtcars, aes(cyl, wt, fill = am)) + 
+  geom_dotplot(stackdir = 'center', binaxis = 'y')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-124-1.png" /></p>
+<pre><code class="r"># qplot with geom 'dotplot', binaxis = 'y' and stackdir = 'center'
+qplot(as.numeric(cyl), wt, data = mtcars, fill = am, geom = 'dotplot', stackdir = 'center', binaxis = 'y')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-125-1.png" /></p>
+<p><strong>Chicken weight</strong></p>
+<pre><code class="r"># base
+ggplot(ChickWeight, aes(x = Time, y = weight)) +
+  geom_line(aes(group = Chick))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-126-1.png" /></p>
+<pre><code class="r"># color
+ggplot(ChickWeight, aes(x = Time, y = weight, col = Diet)) +
+  geom_line(aes(group = Chick))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-127-1.png" /></p>
+<pre><code class="r"># lines
+ggplot(ChickWeight, aes(x = Time, y = weight, col = Diet)) +
+  geom_line(aes(group = Chick), alpha = 0.3) +
+  geom_smooth(lwd = 2, se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-128-1.png" /></p>
+<p><strong>Titanic</strong></p>
+<pre><code class="r"># Use ggplot() for the first instruction
+ggplot(titanic, aes(x = factor(Pclass), fill = factor(Sex))) +
+  geom_bar(position = 'dodge')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-129-1.png" /></p>
+<pre><code class="r"># Use ggplot() for the second instruction
+ggplot(titanic, aes(x = factor(Pclass), fill = factor(Sex))) +
+  geom_bar(position = 'dodge') +
+  facet_grid('. ~ Survived')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-130-1.png" /></p>
+<pre><code class="r"># position jitter
+posn.j &lt;- position_jitter(0.5, 0)
+
+# Use ggplot() for the last instruction
+ggplot(titanic, aes(x = factor(Pclass), y = Age, col = factor(Sex))) +
+  geom_jitter(size = 3, alpha = 0.5, position = posn.j) +
+  facet_grid('. ~ Survived')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-131-1.png" /></p>
+<h4 id="section-2">SECTION 2<a class="headerlink" href="#section-2" title="Permanent link">&para;</a></h4>
+<h4 id="1-statistics">1, Statistics<a class="headerlink" href="#1-statistics" title="Permanent link">&para;</a></h4>
+<p><strong>Smoothing</strong></p>
+<pre><code class="r"># scatter plot with LOESS smooth with a CI ribbon
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-132-1.png" /></p>
+<pre><code class="r"># scatter plot with LOESS smooth without CI
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-133-1.png" /></p>
+<pre><code class="r"># scatter plot with an OLS linear model
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = 'lm')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-134-1.png" /></p>
+<pre><code class="r"># scatter plot with an OLS linear model without points
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_smooth(method = 'lm', se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-135-1.png" /></p>
+<p><strong>Grouping variables</strong></p>
+<pre><code class="r"># cyl as a factor variable
+ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl))) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-136-1.png" /></p>
+<pre><code class="r"># set the group aesthetic
+ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl), group = 1)) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = F)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-137-1.png" /></p>
+<pre><code class="r"># add a second smooth layer in which the group aesthetic is set
+ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl))) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = FALSE) +
+  stat_smooth(method = 'lm', se = FALSE, aes(group = 1))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-138-1.png" /></p>
+<p><strong>Modifying <code>stat_smooth</code></strong></p>
+<pre><code class="r"># change the LOESS span
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(se = FALSE, span = 0.7, method = 'auto')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-139-1.png" /></p>
+<pre><code class="r"># method = 'auto' is by default
+</code></pre>
+
+<pre><code class="r"># set the model to the default LOESS and use a span of 0.7
+ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl))) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = FALSE) +
+  stat_smooth(method = 'auto', se = FALSE, aes(group = 1), col = 'black', span = 0.7)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-140-1.png" /></p>
+<pre><code class="r"># set col to 'All', inside the aes layer
+ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl))) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = FALSE) +
+  stat_smooth(method = 'auto', se = FALSE, aes(group = 1, col = 'All cyl'), span = 0.7)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-141-1.png" /></p>
+<pre><code class="r"># add `scale_color_manual` to change the colors
+myColors &lt;- c(brewer.pal(3, 'Dark2'), 'black')
+
+ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl))) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = FALSE) +
+  stat_smooth(method = 'auto', se = FALSE, aes(group = 1, col = 'All cyl'), span = 0.7) +
+  scale_color_manual('Cylinders', values = myColors)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-142-1.png" /></p>
+<p><strong>Modifying <code>stat_smooth</code> (2)</strong></p>
+<pre><code class="r"># jittered scatter plot, add a linear model (lm) smooth
+ggplot(Vocab, aes(x = education, y = vocabulary)) +
+  geom_jitter(alpha = 0.2) +
+  stat_smooth(method = 'lm', se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-143-1.png" /></p>
+<pre><code class="r"># only lm, colored by year
+ggplot(Vocab, aes(x = education, y = vocabulary, col = factor(year))) +
+  stat_smooth(method = 'lm', se = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-144-1.png" /></p>
+<pre><code class="r"># set a color brewer palette
+ggplot(Vocab, aes(x = education, y = vocabulary, col = factor(year))) + 
+  stat_smooth(method = 'lm', se = FALSE) +
+  scale_color_brewer('Accent')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-145-1.png" /></p>
+<pre><code class="r"># change col and group, specify alpha, size and geom, and add scale_color_gradient
+ggplot(Vocab, aes(x = education, y = vocabulary, col = year, group = factor(year))) + 
+  stat_smooth(method = 'lm', se = FALSE, alpha = 0.6, size = 2, geom = 'path') +
+  scale_color_brewer('Blues') +
+  scale_color_gradientn(colors = brewer.pal(9, 'YlOrRd'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-146-1.png" /></p>
+<p><strong>Quantiles</strong></p>
+<pre><code class="r"># use stat_quantile instead of stat_smooth
+ggplot(Vocab, aes(x = education, y = vocabulary, col = year, group = factor(year))) +  stat_quantile(alpha = 0.6, size = 2) + 
+  scale_color_gradientn(colors = brewer.pal(9,'YlOrRd'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-147-1.png" /></p>
+<pre><code class="r"># set quantile to 0.5
+ggplot(Vocab, aes(x = education, y = vocabulary, col = year, group = factor(year))) + 
+  stat_quantile(alpha = 0.6, size = 2, quantiles = c(0.5)) + 
+  scale_color_gradientn(colors = brewer.pal(9,'YlOrRd'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-148-1.png" /></p>
+<p><strong>Sum</strong></p>
+<pre><code class="r"># plot with linear and loess model
+p &lt;- ggplot(Vocab, aes(x = education, y = vocabulary)) + 
+  stat_smooth(method = 'loess', aes(col = 'red'), se = F) + 
+  stat_smooth(method = 'lm', aes(col = 'blue'), se = F) + 
+  scale_color_discrete('Model', labels = c('red' = 'LOESS', 'blue' = 'lm'))
+
+p
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-149-1.png" /></p>
+<pre><code class="r"># add stat_sum (by overall proportion)
+p + 
+  stat_sum()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-150-1.png" /></p>
+<pre><code class="r">#aes(group = 1)
+</code></pre>
+
+<pre><code class="r"># set size range
+p + 
+  stat_sum() + 
+  scale_size(range = c(1,10))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-151-1.png" /></p>
+<pre><code class="r"># proportional within years of education; set group aesthetic
+p + 
+  stat_sum(aes(group = education))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-152-1.png" /></p>
+<pre><code class="r"># set the n
+p + 
+  stat_sum(aes(group = education, size = ..n..))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-153-1.png" /></p>
+<p><strong>Preparations</strong></p>
+<pre><code class="r"># convert cyl and am to factors
+mtcars$cyl &lt;- as.factor(mtcars$cyl)
+mtcars$am &lt;- as.factor(mtcars$am)
+
+# define positions
+posn.d &lt;- position_dodge(width = 0.1)
+posn.jd &lt;- position_jitterdodge(jitter.width = 0.1, dodge.width = 0.2)
+posn.j &lt;- position_jitter(width = 0.2)
+
+# base layers
+wt.cyl.am &lt;- ggplot(mtcars, aes(x = cyl, y = wt, col = am, group = am, fill = am))
+</code></pre>
+
+<p><strong>Plotting variations</strong></p>
+<pre><code class="r"># base layer
+wt.cyl.am &lt;- ggplot(mtcars, aes(x = cyl,  y = wt, col = am, fill = am, group = am))
+</code></pre>
+
+<pre><code class="r"># jittered, dodged scatter plot with transparent points
+wt.cyl.am + 
+  geom_point(position = posn.jd, alpha = 0.6)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-156-1.png" /></p>
+<pre><code class="r"># mean and sd
+wt.cyl.am +
+  geom_point(position = posn.jd, alpha = 0.6) + stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), position = posn.d)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-157-1.png" /></p>
+<pre><code class="r"># mean and 95% CI
+wt.cyl.am + 
+  geom_point(position = posn.jd, alpha = 0.6) + 
+  stat_summary(fun.data = mean_cl_normal, position = posn.d)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-158-1.png" /></p>
+<pre><code class="r"># mean and SD with T-tipped error bars
+wt.cyl.am + 
+  geom_point(position = posn.jd, alpha = 0.6) + 
+  stat_summary(geom = 'point', fun.y = mean, position = posn.d) + 
+  stat_summary(geom = 'errorbar', fun.data = mean_sdl, fun.args = list(mult = 1), width = 0.1, position = posn.d)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-159-1.png" /></p>
+<h4 id="2-coordinates-and-facets">2, Coordinates and Facets<a class="headerlink" href="#2-coordinates-and-facets" title="Permanent link">&para;</a></h4>
+<p><strong>Zooming In</strong></p>
+<pre><code class="r"># basic
+p &lt;- ggplot(mtcars, aes(x = wt, y = hp, col = am)) + 
+  geom_point() + 
+  geom_smooth()
+</code></pre>
+
+<pre><code class="r"># add scale_x_continuous
+p + 
+  scale_x_continuous(limits = c(3, 6), expand = c(0,0))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-161-1.png" /></p>
+<pre><code class="r"># zoom in
+p + 
+  coord_cartesian(xlim = c(3, 6))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-162-1.png" /></p>
+<p><strong>Aspect Ratio</strong></p>
+<pre><code class="r"># scatter plot
+base.plot &lt;- ggplot(iris, aes(y = Sepal.Width, x = Sepal.Length, col = Species)) + 
+  geom_jitter() + 
+  geom_smooth(method = 'lm', se = FALSE)
+</code></pre>
+
+<pre><code class="r"># default aspect ratio
+# fix aspect ratio (1:1)
+base.plot + 
+  coord_equal()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-164-1.png" /></p>
+<pre><code class="r">base.plot + 
+  coord_fixed()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-164-2.png" /></p>
+<p><strong>Pie Charts</strong></p>
+<pre><code class="r"># stacked bar plot
+thin.bar &lt;- ggplot(mtcars, aes(x = 1, fill = cyl)) + 
+  geom_bar()
+
+thin.bar
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-165-1.png" /></p>
+<pre><code class="r"># convert thin.bar to pie chart
+thin.bar + 
+  coord_polar(theta = 'y')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-166-1.png" /></p>
+<pre><code class="r"># create stacked bar plot
+wide.bar &lt;- ggplot(mtcars, aes(x = 1, fill = cyl)) + 
+  geom_bar(width = 1)
+
+wide.bar
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-167-1.png" /></p>
+<pre><code class="r"># Convert wide.bar to pie chart
+wide.bar + coord_polar(theta = 'y')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-168-1.png" /></p>
+<p><strong>Facets: the basics</strong></p>
+<pre><code class="r"># scatter plot
+p &lt;- ggplot(mtcars, aes(x = wt, y = mpg)) + geom_point()
+</code></pre>
+
+<pre><code class="r"># separate rows according am
+# facet_grid(rows ~ cols)
+p + 
+  facet_grid(am ~ .)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-170-1.png" /></p>
+<pre><code class="r"># separate columns according to cyl
+# facet_grid(rows ~ cols)
+p + facet_grid(. ~ cyl)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-171-1.png" /></p>
+<pre><code class="r"># separate by both columns and rows 
+# facet_grid(rows ~ cols)
+p + 
+  facet_grid(am ~ cyl)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-172-1.png" /></p>
+<p><strong>Many variables</strong></p>
+<pre><code class="r"># create the `cyl_am` col and `myCol` vector
+mtcars$cyl_am &lt;- paste(mtcars$cyl, mtcars$am, sep = '_')
+
+myCol &lt;- rbind(brewer.pal(9, 'Blues')[c(3,6,8)],
+               brewer.pal(9, 'Reds')[c(3,6,8)])
+</code></pre>
+
+<pre><code class="r"># scatter plot, add color scale
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl_am)) + 
+  geom_point() + 
+  scale_color_manual(values = myCol)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-174-1.png" /></p>
+<pre><code class="r"># facet according on rows and columns
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl_am)) +
+  geom_point() + 
+  scale_color_manual(values = myCol) + 
+  facet_grid(gear ~ vs)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-175-1.png" /></p>
+<pre><code class="r"># add more variables
+ggplot(mtcars, aes(x = wt, y = mpg, col = cyl_am, size = disp)) + 
+  geom_point() + 
+  scale_color_manual(values = myCol) + 
+  facet_grid(gear ~ vs)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-176-1.png" /></p>
+<p><strong>Dropping levels</strong></p>
+<pre><code class="r"># scatter plot
+ggplot(mamsleep, aes(x = time, y = name, col = sleep)) + 
+  geom_point()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-177-1.png" /></p>
+<pre><code class="r"># facet rows according to `vore`
+ggplot(mamsleep, aes(x = time, y = name, col = sleep)) + 
+  geom_point() + 
+  facet_grid(vore ~ .)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-178-1.png" /></p>
+<pre><code class="r"># specify scale and space arguments to free up rows
+ggplot(mamsleep, aes(x = time, y = name, col = sleep)) + 
+  geom_point() + 
+  facet_grid(vore ~ ., scale = 'free_y', space = 'free_y')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-179-1.png" /></p>
+<h4 id="3-themes">3, Themes<a class="headerlink" href="#3-themes" title="Permanent link">&para;</a></h4>
+<p><strong>Rectangles</strong></p>
+<pre><code class="r"># separate columns according to cyl
+# facet_grid(rows ~ cols)
+mtcars$cyl &lt;- c(6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8, 8, 8, 8, 4, 4, 4, 8, 6, 8, 4)
+
+mtcars$Cylinders &lt;- factor(mtcars$cyl)
+
+z &lt;- ggplot(mtcars, aes(x = wt, y = mpg, col = Cylinders)) + 
+  geom_point(size = 2, alpha = 0.7) + 
+  facet_grid(. ~ cyl) + 
+  labs(x = 'Weight (lb/1000)', y = 'Miles/(US) gallon') + 
+  geom_smooth(method = 'lm', se = FALSE) +
+  theme_base() +
+  scale_colour_economist()
+z
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-180-1.png" /></p>
+<pre><code class="r"># change the plot background color to myPink (#FEE0D2)
+myPink &lt;- '#FEE0D2'
+
+z + 
+  theme(plot.background = element_rect(fill = myPink))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-181-1.png" /></p>
+<pre><code class="r"># adjust the border to be a black line of size 3
+z + 
+  theme(plot.background = element_rect(fill = myPink, color = 'black', size = 3))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-182-1.png" /></p>
+<pre><code class="r"># adjust the border to be a black line of size 3
+z + 
+  theme(plot.background = element_rect(color = 'black', size = 3))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-183-1.png" /></p>
+<pre><code class="r"># set panel.background, legend.key, legend.background and strip.background to element_blank()
+z + 
+  theme(plot.background = element_rect(fill = myPink, color = 'black', size = 3), panel.background = element_blank(), legend.key = element_blank(), legend.background = element_blank(), strip.background = element_blank())
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-184-1.png" /></p>
+<p><strong>Lines</strong></p>
+<pre><code class="r"># Extend z with theme() and three arguments
+z +
+    theme(panel.grid = element_blank(), axis.line = element_line(color = 'black'), axis.ticks = element_line(color = 'black'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-185-1.png" /></p>
+<p><strong>Text</strong></p>
+<pre><code class="r"># extend z with theme() function and four arguments
+myRed &lt;- '#99000D'
+
+z +
+    theme(strip.text = element_text(size = 16, color = myRed), axis.title.x = element_text(color = myRed, hjust = 0, face = 'italic'), axis.title.y = element_text(color = myRed, hjust = 0, face = 'italic'), axis.text = element_text(color = 'black'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-186-1.png" /></p>
+<p><strong>Legends</strong></p>
+<pre><code class="r"># move legend by position
+z + 
+  theme(legend.position = c(0.85, 0.85))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-187-1.png" /></p>
+<pre><code class="r"># change direction
+z + 
+  theme(legend.direction = 'horizontal')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-188-1.png" /></p>
+<pre><code class="r"># change location by name
+z + 
+  theme(legend.position = 'bottom')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-189-1.png" /></p>
+<pre><code class="r"># remove legend entirely
+z + 
+  theme(legend.position = 'none')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-190-1.png" /></p>
+<p><strong>Positions</strong></p>
+<pre><code class="r"># increase spacing between facets
+z + 
+  theme(panel.margin.x = unit(2, 'cm'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-191-1.png" /></p>
+<pre><code class="r"># add code to remove any excess plot margin space
+z + 
+  theme(panel.margin.x = unit(2, 'cm'), plot.margin = unit(c(0,0,0,0), 'cm'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-192-1.png" /></p>
+<p><strong>Update Themestheme update</strong></p>
+<pre><code class="r"># theme layer saved as an object, theme_pink
+theme_pink &lt;- theme(panel.background = element_blank(), legend.key = element_blank(), legend.background = element_blank(), strip.background = element_blank(), plot.background = element_rect(fill = myPink, color = 'black', size = 3), panel.grid = element_blank(), axis.line = element_line(color = 'black'), axis.ticks = element_line(color = 'black'), strip.text = element_text(size = 16, color = myRed), axis.title.y = element_text(color = myRed, hjust = 0, face = 'italic'), axis.title.x = element_text(color = myRed, hjust = 0, face = 'italic'), axis.text = element_text(color = 'black'), legend.position = 'none')
+</code></pre>
+
+<pre><code class="r">z2 &lt;- z
+
+# apply theme_pink to z2
+z2 + 
+  theme_pink
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-194-1.png" /></p>
+<pre><code class="r"># change code so that old theme is saved as old
+old &lt;- theme_update(panel.background = element_blank(), legend.key = element_blank(), legend.background = element_blank(), strip.background = element_blank(), plot.background = element_rect(fill = myPink, color = 'black', size = 3), panel.grid = element_blank(),axis.line = element_line(color = 'black'), axis.ticks = element_line(color = 'black'), strip.text = element_text(size = 16, color = myRed), axis.title.y = element_text(color = myRed, hjust = 0, face = 'italic'), axis.title.x = element_text(color = myRed, hjust = 0, face = 'italic'), axis.text = element_text(color = 'black'), legend.position = 'none')
+</code></pre>
+
+<pre><code class="r"># display the plot z2
+theme_set(theme_pink)
+
+z2 + 
+  theme_pink
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-196-1.png" /></p>
+<pre><code class="r"># restore the old plot
+theme_set(old)
+
+z2
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-197-1.png" /></p>
+<p><strong>Exploring ggthemes</strong></p>
+<pre><code class="r"># apply theme_tufte
+# set the theme with theme_set
+theme_set(theme_tufte())
+
+# or apply it in the ggplot command
+z2 + 
+  theme_tufte()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-198-1.png" /></p>
+<pre><code class="r"># apply theme_tufte, modified
+# set the theme with theme_set
+theme_set(theme_tufte() + 
+  theme(legend.position = c(0.9, 0.9), axis.title = element_text(face = 'italic', size = 12),  legend.title = element_text(face = 'italic', size = 12)))
+
+# or apply it in the ggplot command
+z2 + 
+  theme_tufte() +
+  theme(legend.position = c(0.9, 0.9),        axis.title = element_text(face = 'italic', size = 12), legend.title = element_text(face = 'italic', size = 12))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-199-1.png" /></p>
+<pre><code class="r"># apply theme_igray
+# set the theme with `theme_set`
+theme_set(theme_igray())
+
+# or apply it in the ggplot command
+z2 + 
+  theme_igray()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-200-1.png" /></p>
+<pre><code class="r"># apply `theme_igray`, modified
+# set the theme with `theme_set`
+theme_set(theme_igray() + 
+  theme(legend.position = c(0.9, 0.9), legend.key = element_blank(), legend.background = element_rect(fill = 'grey90')))
+
+z2 + 
+  # Or apply it in the ggplot command
+  theme_igray() +
+  theme(legend.position = c(0.9, 0.9),
+        legend.key = element_blank(),
+        legend.background = element_rect(fill = 'grey90'))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-201-1.png" /></p>
+<h4 id="4-best-practices">4, Best Practices<a class="headerlink" href="#4-best-practices" title="Permanent link">&para;</a></h4>
+<p><strong>Bar Plots (1)</strong></p>
+<pre><code class="r"># base layers
+m &lt;- ggplot(mtcars, aes(x = cyl, y = wt))
+</code></pre>
+
+<pre><code class="r"># dynamite plot
+m + 
+  stat_summary(fun.y = mean, geom = 'bar', fill = 'skyblue') + stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), geom = 'errorbar', width = 0.1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-203-1.png" /></p>
+<p><strong>Bar Plots (2)</strong></p>
+<pre><code class="r"># base layers
+m &lt;- ggplot(mtcars, aes(x = cyl,y = wt, col = am, fill = am))
+</code></pre>
+
+<pre><code class="r"># dynamite plot
+m + 
+  stat_summary(fun.y = mean, geom = 'bar') + stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), geom = 'errorbar', width = 0.1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-205-1.png" /></p>
+<pre><code class="r"># set position dodge in each `stat` function
+m + 
+  stat_summary(fun.y = mean, geom = 'bar', position = 'dodge') + stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), geom = 'errorbar', width = 0.1, position = 'dodge')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-206-1.png" /></p>
+<pre><code class="r"># set your dodge `posn` manually
+posn.d &lt;- position_dodge(0.9)
+</code></pre>
+
+<pre><code class="r"># redraw dynamite plot
+m + 
+  stat_summary(fun.y = mean, geom = 'bar', position = posn.d) +  stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), geom = 'errorbar', width = 0.1, position = posn.d)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-208-1.png" /></p>
+<p><strong>Bar Plots (3)</strong></p>
+<pre><code class="r"># base layers
+mtcars.cyl &lt;- mtcars %&gt;% group_by(cyl) %&gt;% summarise(wt.avg = mean(wt))
+mtcars.cyl
+</code></pre>
+
+<pre><code>## # A tibble: 3 × 2
+##     cyl   wt.avg
+##   &lt;dbl&gt;    &lt;dbl&gt;
+## 1     4 2.285727
+## 2     6 3.117143
+## 3     8 3.999214
+</code></pre>
+<pre><code class="r">m &lt;- ggplot(mtcars.cyl, aes(x = cyl, y = wt.avg))
+m
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-209-1.png" /></p>
+<pre><code class="r"># draw bar plot
+m + 
+  geom_bar(stat = 'identity', fill = 'skyblue')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-210-1.png" /></p>
+<p><strong>Pie Charts (1)</strong></p>
+<pre><code class="r"># bar chart to pie chart
+ggplot(mtcars, aes(x = cyl, fill = am)) + geom_bar(position = 'fill')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-211-1.png" /></p>
+<pre><code class="r">ggplot(mtcars, aes(x = cyl, fill = am)) + geom_bar(position = 'fill') + facet_grid(. ~ cyl)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-212-1.png" /></p>
+<pre><code class="r">ggplot(mtcars, aes(x = factor(1), fill = am)) + geom_bar(position = 'fill') + facet_grid(. ~ cyl)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-213-1.png" /></p>
+<pre><code class="r">ggplot(mtcars, aes(x = factor(1), fill = am)) + geom_bar(position = 'fill') + facet_grid(. ~ cyl) + coord_polar(theta = 'y')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-214-1.png" /></p>
+<pre><code class="r">ggplot(mtcars, aes(x = factor(1), fill = am)) + geom_bar(position = 'fill', width = 1) + facet_grid(. ~ cyl) + coord_polar(theta = 'y')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-215-1.png" /></p>
+<p><strong>Parallel coordinate plot</strong></p>
+<pre><code class="r"># parallel coordinates plot using `GGally`
+# all columns except `am` (`am` column is the 9th)
+group_by_am &lt;- 9
+my_names_am &lt;- (1:11)[-group_by_am]
+</code></pre>
+
+<pre><code class="r"># parallel plot; each variable plotted as a z-score transformation
+ggparcoord(mtcars, columns = my_names_am, groupColumn = group_by_am, alpha = 0.8)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-217-1.png" /></p>
+<pre><code class="r"># scaled between 0-1 and most discriminating variable first
+ggparcoord(mtcars, columns = my_names_am, groupColumn = group_by_am, alpha = 0.8, scale = 'uniminmax', order = 'anyClass')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-218-1.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species') # xlab, ylab, scale_x_discrete, them
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-1.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', scale = 'uniminmax')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-2.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', scale = 'globalminmax')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-3.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', mapping = aes(size = 1))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-4.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', alphaLines = 0.3)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-5.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', scale = 'center')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-6.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', scaleSummary = 'median', missing = 'exclude')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-7.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', order = 'allClass') # or custom filter
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-8.png" /></p>
+<pre><code class="r">ggparcoord(iris, columns = 1:4, groupColumn = 'Species', scale = 'std')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-9.png" /></p>
+<p><strong>Splom</strong></p>
+<pre><code class="r">library(dplyr)
+
+data(Pima.tr2, package = 'MASS')
+PimaV &lt;- select(Pima.tr2, glu:age)
+
+ggpairs(PimaV, diag = list(continuous = 'density'), axisLabels = 'show')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-220-1.png" /></p>
+<p><strong>Heat Maps</strong></p>
+<pre><code class="r"># create color palette
+myColors &lt;- brewer.pal(9, 'Reds')
+</code></pre>
+
+<pre><code class="r"># heat map
+ggplot(barley, aes(x = year, y = variety, fill = yield)) + 
+  geom_tile()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-222-1.png" /></p>
+<pre><code class="r"># add facet_wrap(~ variable); not like facet_grid(. ~ variable)
+ggplot(barley, aes(x = year, y = variety, fill = yield)) + 
+  geom_tile() + 
+  facet_wrap( ~ site, ncol = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-223-1.png" /></p>
+<pre><code class="r"># 
+ggplot(barley, aes(x = year, y = variety, fill = yield)) + geom_tile() + facet_wrap( ~ site, ncol = 1) + 
+  scale_fill_gradientn(colors = myColors)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-224-1.png" /></p>
+<p><strong>Heat Maps Alternatives (1)</strong></p>
+<pre><code class="r"># line plots
+ggplot(barley, aes(x = year, y = yield, col = variety, group = variety)) + geom_line() + 
+  facet_wrap(facets = ~ site, nrow = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-225-1.png" /></p>
+<p><strong>Heat Maps Alternatives (2)</strong></p>
+<pre><code class="r"># overlapping ribbon plot
+ggplot(barley, aes(x = year, y = yield, col = site, group = site, fill = site)) + geom_line() + 
+  stat_summary(fun.y = mean, geom = 'line') + 
+  stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), geom = 'ribbon', col = NA, alpha = 0.1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-226-1.png" /></p>
+<h4 id="5-case-study">5, Case Study<a class="headerlink" href="#5-case-study" title="Permanent link">&para;</a></h4>
+<p><strong>Sort and order</strong></p>
+<pre><code class="r"># reorder
+data(Cars93, package = 'MASS')
+
+Cars93 &lt;- within(Cars93, TypeWt &lt;- reorder(Type, Weight, mean))
+
+Cars93 &lt;- within(Cars93, Type1 &lt;- factor(Type, levels = c('Small', 'Sporty', 'Compact', 'Midsize', 'Large', 'Van')))
+
+with(Cars93, table(TypeWt, Type1))
+</code></pre>
+
+<pre><code>##          Type1
+## TypeWt    Small Sporty Compact Midsize Large Van
+##   Small      21      0       0       0     0   0
+##   Sporty      0     14       0       0     0   0
+##   Compact     0      0      16       0     0   0
+##   Midsize     0      0       0      22     0   0
+##   Large       0      0       0       0    11   0
+##   Van         0      0       0       0     0   9
+</code></pre>
+<pre><code class="r">ggplot(Cars93, aes(TypeWt, 100/MPG.city)) + 
+  geom_boxplot() + 
+  ylab('Gallons per 100 miles') + 
+  xlab('Car type')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-227-1.png" /></p>
+<pre><code class="r">Cars93 &lt;- within(Cars93, {
+  levels(Type1) &lt;- c('Small', 'Large', 'Midsize', 'Small', 'Sporty', 'Large')
+})
+
+ggplot(Cars93, aes(TypeWt, 100/MPG.city)) + 
+  geom_boxplot() + 
+  ylab('Gallons per 100 miles') + 
+  xlab('Car type')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-227-2.png" /></p>
+<p><strong>Ensemble plots</strong></p>
+<pre><code class="r">library(gridExtra)
+
+data(Fertility, package = 'AER')
+
+p0 &lt;- ggplot(Fertility) + geom_histogram(binwidth = 1) + ylab('')
+p1 &lt;- p0 + aes(x = age)
+p2 &lt;- p0 + aes(x = work) + xlab('Weeks worked in 1979')
+
+k &lt;- ggplot(Fertility) + 
+  geom_bar() + ylab('') + 
+  ylim(0, 250000)
+
+p3 &lt;- k + aes(x = morekids) + 
+  xlab('has more children')
+p4 &lt;- k + aes(x = gender1) + 
+  xlab('first child')
+p5 &lt;- k + aes(x = gender2) + 
+  xlab('second child')
+p6 &lt;- k + aes(x = afam) + 
+  xlab('African-American')
+p7 &lt;- k + aes(x = hispanic) + 
+  xlab('Hispanic')
+p8 &lt;- k + aes(x = other) + 
+  xlab('other race')
+
+grid.arrange(arrangeGrob(p1, p2, ncol = 2, widths = c(3, 3)), arrangeGrob(p3, p4, p5, p6, p7, p8, ncol = 6), nrow = 2, heights = c(1.25, 1))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-228-1.png" /></p>
+<p><strong>Exploring Data</strong></p>
+<pre><code class="r"># histogram
+ggplot(adult, aes(x = SRAGE_P)) + 
+  geom_histogram()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-229-1.png" /></p>
+<pre><code class="r"># histogram
+ggplot(adult, aes(x = BMI_P)) + 
+  geom_histogram()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-230-1.png" /></p>
+<pre><code class="r"># color, default binwidth
+ggplot(adult,aes(x = SRAGE_P, fill = factor(RBMI))) + 
+  geom_histogram(binwidth = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-231-1.png" /></p>
+<p><strong>Data Cleaning</strong></p>
+<pre><code class="r"># remove individual aboves 84
+adult &lt;- adult[adult$SRAGE_P &lt;= 84, ] 
+
+# remove individuals with a BMI below 16 and above or equal to 52
+adult &lt;- adult[adult$BMI_P &gt;= 16 &amp; adult$BMI_P &lt; 52, ]
+
+# relabel race
+adult$RACEHPR2 &lt;- factor(adult$RACEHPR2, labels = c('Latino', 'Asian', 'African American', 'White'))
+
+# relabel the BMI categories variable
+adult$RBMI &lt;- factor(adult$RBMI, labels = c('Under-weight', 'Normal-weight', 'Over-weight', 'Obese'))
+</code></pre>
+
+<p><strong>Multiple Histograms</strong></p>
+<pre><code class="r"># color palette BMI_fill
+BMI_fill &lt;- scale_fill_brewer('BMI Category', palette = 'Reds')
+</code></pre>
+
+<pre><code class="r"># histogram, add BMI_fill and customizations
+ggplot(adult, aes(x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(binwidth = 1) + 
+  BMI_fill + facet_grid(RBMI ~ .) + 
+  theme_classic()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-234-1.png" /></p>
+<p><strong>Alternatives</strong></p>
+<pre><code class="r"># count histogram
+ggplot(adult, aes(x = SRAGE_P, fill = factor(RBMI))) + 
+  geom_histogram(binwidth = 1) +
+  BMI_fill
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-235-1.png" /></p>
+<pre><code class="r"># density histogram
+ggplot(adult, aes(x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(aes(y = ..density..), binwidth = 1) +
+  BMI_fill
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-236-1.png" /></p>
+<pre><code class="r"># faceted count histogram
+ggplot(adult, aes(x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(binwidth = 1) +
+  BMI_fill + facet_grid(RBMI ~ .)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-237-1.png" /></p>
+<pre><code class="r"># faceted density histogram
+ggplot(adult, aes(x = SRAGE_P, fill= factor(RBMI))) + 
+  geom_histogram(aes(y = ..density..), binwidth = 1) +
+  BMI_fill + facet_grid(RBMI ~ .)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-238-1.png" /></p>
+<pre><code class="r"># density histogram with `position = 'fill'`
+ggplot(adult, aes (x = SRAGE_P, fill = factor(RBMI))) + 
+  geom_histogram(aes(y = ..density..), binwidth = 1, position = 'fill') +
+  BMI_fill
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-239-1.png" /></p>
+<pre><code class="r"># accurate histogram
+ggplot(adult, aes(x = SRAGE_P, fill = factor(RBMI))) + 
+  geom_histogram(aes(y = ..count../sum(..count..)), binwidth = 1, position = 'fill') +
+  BMI_fill
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-240-1.png" /></p>
+<p><strong>Do Things Manually</strong></p>
+<pre><code class="r"># an attempt to facet the accurate frequency histogram from before (failed)
+ggplot(adult, aes(x = SRAGE_P, fill = factor(RBMI))) + 
+  geom_histogram(aes(y = ..count../sum(..count..)), binwidth = 1, position = 'fill') +
+  BMI_fill +
+  facet_grid(RBMI ~ .)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-241-1.png" /></p>
+<pre><code class="r"># create DF with `table()`
+DF &lt;- table(adult$RBMI, adult$SRAGE_P)
+
+# use apply on DF to get frequency of each group
+DF_freq &lt;- apply(DF, 2, function(x) x/sum(x))
+
+# melt on DF to create DF_melted
+DF_melted &lt;- melt(DF_freq)
+
+# change names of DF_melted
+names(DF_melted) &lt;- c('FILL', 'X', 'value')
+</code></pre>
+
+<pre><code class="r"># add code to make this a faceted plot
+ggplot(DF_melted, aes(x = X, y = value, fill = FILL)) +
+  geom_bar(stat = 'identity', position = 'stack') +
+  BMI_fill + 
+  facet_grid(FILL ~ .)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-243-1.png" /></p>
+<p><strong>Merimeko/Mosaic Plot</strong></p>
+<pre><code class="r"># The initial contingency table
+DF &lt;- as.data.frame.matrix(table(adult$SRAGE_P, adult$RBMI))
+
+# Add the columns groupsSum, xmax and xmin. Remove groupSum again.
+DF$groupSum &lt;- rowSums(DF)
+DF$xmax &lt;- cumsum(DF$groupSum)
+DF$xmin &lt;- DF$xmax - DF$groupSum
+# The groupSum column needs to be removed, don't remove this line
+DF$groupSum &lt;- NULL
+
+# Copy row names to variable X
+DF$X &lt;- row.names(DF)
+
+# Melt the dataset
+DF_melted &lt;- melt(DF, id.vars = c('X', 'xmin', 'xmax'), variable.name = 'FILL')
+
+# dplyr call to calculate ymin and ymax - don't change
+DF_melted &lt;- DF_melted %&gt;% 
+  group_by(X) %&gt;% 
+  mutate(ymax = cumsum(value/sum(value)),
+         ymin = ymax - value/sum(value))
+
+# Plot rectangles - don't change.
+ggplot(DF_melted, aes(ymin = ymin, 
+                 ymax = ymax,
+                 xmin = xmin, 
+                 xmax = xmax, 
+                 fill = FILL)) + 
+  geom_rect(colour = 'white') +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  BMI_fill +
+  theme_tufte()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-244-1.png" /></p>
+<p><strong>Adding statistics</strong></p>
+<pre><code class="r"># perform chi.sq test (`RBMI` and `SRAGE_P`)
+results &lt;- chisq.test(table(adult$RBMI, adult$SRAGE_P))
+
+# melt results$residuals and store as resid
+resid &lt;- melt(results$residuals)
+
+# change names of resid
+names(resid) &lt;- c('FILL', 'X', 'residual')
+
+# merge the two datasets
+DF_all &lt;- merge(DF_melted, resid)
+</code></pre>
+
+<pre><code class="r"># update plot command
+ggplot(DF_all, aes(ymin = ymin, ymax = ymax, xmin = xmin, xmax = xmax, fill = residual)) +
+  geom_rect() +
+  scale_fill_gradient2() +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_tufte()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-246-1.png" /></p>
+<p><strong>Adding text</strong></p>
+<pre><code class="r"># position for labels on x axis
+DF_all$xtext &lt;- DF_all$xmin + (DF_all$xmax - DF_all$xmin) / 2
+
+# position for labels on y axis
+index &lt;- DF_all$xmax == max(DF_all$xmax)
+DF_all$ytext &lt;- DF_all$ymin[index] + (DF_all$ymax[index] - DF_all$ymin[index])/2
+</code></pre>
+
+<pre><code class="r"># plot
+ggplot(DF_all, aes(ymin = ymin, ymax = ymax, xmin = xmin, xmax = xmax, fill = residual)) + 
+  geom_rect(col = 'white') +
+  # geom_text for ages (i.e. the x axis)
+  geom_text(aes(x = xtext, label = X), y = 1, size = 3, angle = 90, hjust = 1, show.legend = FALSE) +
+  # geom_text for BMI (i.e. the fill axis)
+  geom_text(aes(x = max(xmax), y = ytext, label = FILL), size = 3, hjust = 1, show.legend  = FALSE) +
+  scale_fill_gradient2() +
+  theme_tufte() +
+  theme(legend.position = 'bottom')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-248-1.png" /></p>
+<p><strong>Generalizations</strong></p>
+<pre><code class="r"># script generalized into a function
+mosaicGG &lt;- function(data, X, FILL) {
+  # Proportions in raw data
+  DF &lt;- as.data.frame.matrix(table(data[[X]], data[[FILL]]))
+  DF$groupSum &lt;- rowSums(DF)
+  DF$xmax &lt;- cumsum(DF$groupSum)
+  DF$xmin &lt;- DF$xmax - DF$groupSum
+  DF$X &lt;- row.names(DF)
+  DF$groupSum &lt;- NULL
+  DF_melted &lt;- melt(DF, id = c('X', 'xmin', 'xmax'), variable.name = 'FILL')
+
+  DF_melted &lt;- DF_melted %&gt;% 
+    group_by(X) %&gt;% 
+    mutate(ymax = cumsum(value/sum(value)),
+           ymin = ymax - value/sum(value))
+
+  # Chi-sq test
+  results &lt;- chisq.test(table(data[[FILL]], data[[X]])) # fill and then x
+  resid &lt;- melt(results$residuals)
+  names(resid) &lt;- c('FILL', 'X', 'residual')
+  # Merge data
+  DF_all &lt;- merge(DF_melted, resid)
+   # Positions for labels
+  DF_all$xtext &lt;- DF_all$xmin + (DF_all$xmax - DF_all$xmin)/2
+  index &lt;- DF_all$xmax == max(DF_all$xmax)
+  DF_all$ytext &lt;- DF_all$ymin[index] + (DF_all$ymax[index] - DF_all$ymin[index])/2
+
+  # plot
+  g &lt;- ggplot(DF_all, aes(ymin = ymin,  ymax = ymax, xmin = xmin, 
+                          xmax = xmax, fill = residual)) + 
+    geom_rect(col = 'white') +
+    geom_text(aes(x = xtext, label = X), y = 1, size = 3, angle = 90, hjust = 1, show.legend = FALSE) + geom_text(aes(x = max(xmax),  y = ytext, label = FILL), size = 3, hjust = 1, show.legend = FALSE) +
+    scale_fill_gradient2('Residuals') +
+    scale_x_continuous('Individuals', expand = c(0,0)) +
+    scale_y_continuous('Proportion', expand = c(0,0)) +
+    theme_tufte() +
+    theme(legend.position = 'bottom')
+  print(g)
+}
+</code></pre>
+
+<pre><code class="r"># BMI described by age (in x)
+mosaicGG(adult, 'SRAGE_P','RBMI')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-250-1.png" /></p>
+<pre><code class="r"># poverty described by age (in x)
+mosaicGG(adult, 'SRAGE_P', 'POVLL')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-251-1.png" /></p>
+<pre><code class="r"># `am` described by `cyl` (in x)
+mosaicGG(mtcars, 'cyl', 'am')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-252-1.png" /></p>
+<pre><code class="r"># `Vocab` described by education
+mosaicGG(Vocab, 'education', 'vocabulary')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-253-1.png" /></p>
+<h4 id="section-3">SECTION 3<a class="headerlink" href="#section-3" title="Permanent link">&para;</a></h4>
+<h4 id="section-4-cheat-list">SECTION 4 - Cheat List<a class="headerlink" href="#section-4-cheat-list" title="Permanent link">&para;</a></h4>
+<p>ggplot(data, aes(x = , y = ), col = , fill = , size = , labels = , alpha<br />
+= , shape = , line = , position = &lsquo;jitter&rsquo;)</p>
+<pre><code>+ geom_point()
+
++ geom_point(aes(), col = , position = posn.j)
+
++ geom_jitter()
+
++ facet_grid(. ~ x) # y ~ x
+
++ scale_x_continous('Sepal Length', limits = c(2, 8), breaks = seq(2, 8, 3))
+
++ scale_color_discrete('Species', labels = c('a', 'b', 'c'))
+
++ labs(x = , y = , col = )
+</code></pre>
+<p>posn.j &lt;- position_jitter(width = 0.1)</p>
+<p><strong>Data</strong></p>
+<ul>
+<li><code>diamonds</code>, prices of 50,000 round cut diamonds.</li>
+<li><code>economics</code>, economics_long, US economic time series.</li>
+<li><code>faithfuld</code>, 2d density estimate of Old Faithful data.</li>
+<li><code>luv_colours</code>, colors().</li>
+<li><code>midwest</code>, midwest demographics.</li>
+<li><code>mpg</code>, fuel economy data from 1999 and 2008 for 38 popular models<br />
+    of car.</li>
+<li><code>msleep</code>, an updated and expanded version of the mammals<br />
+    sleep dataset.</li>
+<li><code>presidential</code>, terms of 11 presidents from Eisenhower to Obama.</li>
+<li><code>seals</code>, vector field of seal movements.</li>
+<li><code>txhousing</code>, Housing sales in TX.</li>
+</ul>
+<p><strong>Aesthetics</strong></p>
+<ul>
+<li>x-axis.</li>
+<li>y-asix.</li>
+<li>color.</li>
+<li>fill.</li>
+<li>size (points, lines).</li>
+<li>labels.</li>
+<li>alpha.</li>
+<li>shape (points).</li>
+<li>linetype (lines).</li>
+<li><code>aes</code>, Define aesth.etic mappings.</li>
+<li><code>aes_</code> (aes_q, aes_string), Define aesthetic mappings from<br />
+    strings, or quoted calls and formulas.</li>
+<li><code>aes_all</code>, Given a character vector, create a set of<br />
+    identity mappings.</li>
+<li><code>aes_auto</code>, Automatic aesthetic mapping.</li>
+<li><code>aes_colour_fill_alpha</code> (color, colour, fill), Colour related<br />
+    aesthetics: colour, fill and alpha.</li>
+<li><code>aes_group_order</code> (group), Aesthetics: group.<br />
+    aes_linetype_size_shape (linetype, shape, size), Differentiation<br />
+    related aesthetics: linetype, size, shape.</li>
+<li><code>aes_position</code> (x, xend, xmax, xmin, y, yend, ymax, ymin), Position<br />
+    related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend.</li>
+</ul>
+<p><strong>Position</strong></p>
+<ul>
+<li><code>position_dodge</code>, Adjust position by dodging overlaps to the side.</li>
+<li><code>position_fill</code> (position_stack), Stack overlapping objects on top<br />
+    of one another.</li>
+<li><code>position_identity</code>, Don&rsquo;t adjust position</li>
+<li><code>position_nudge</code>, Nudge points.</li>
+<li><code>position_jitter</code>, Jitter points to avoid overplotting.</li>
+<li><code>position_jitterdodge</code>, Adjust position by simultaneously dodging<br />
+    and jittering.</li>
+</ul>
+<p><strong>Scales</strong></p>
+<ul>
+<li><code>expand_limits</code>, Expand the plot limits with data.</li>
+<li><code>guides</code>, Set guides for each scale.</li>
+<li><code>guide_legend</code>, Legend guide.</li>
+<li><code>guide_colourbar</code> (guide_colorbar), Continuous colour bar guide.</li>
+<li><code>lims</code> (xlim, ylim), Convenience functions to set the axis limits.</li>
+<li><code>scale_alpha</code> (scale_alpha_continuous, scale_alpha_discrete),<br />
+    Alpha scales.</li>
+<li><code>scale_colour_brewer</code> (scale_color_brewer,<br />
+    scale_color_distiller, scale_colour_distiller,<br />
+    scale_fill_brewer, scale_fill_distiller), Sequential, diverging<br />
+    and qualitative colour scales from colorbrewer.org</li>
+<li><code>scale_colour_gradient</code> (scale_color_continuous,<br />
+    scale_color_gradient, scale_color_gradient2,<br />
+    scale_color_gradientn, scale_colour_continuous,<br />
+    scale_colour_date, scale_colour_datetime,<br />
+    scale_colour_gradient2, scale_colour_gradientn,<br />
+    scale_fill_continuous, scale_fill_date, scale_fill_datetime,<br />
+    scale_fill_gradient,<br />
+    scale_fill_gradient2, scale_fill_gradientn).</li>
+<li><code>scale_colour_grey</code> (scale_color_grey, scale_fill_grey),<br />
+    Sequential grey colour scale.</li>
+<li><code>scale_colour_hue</code> (scale_color_discrete, scale_color_hue,<br />
+    scale_colour_discrete, scale_fill_discrete, scale_fill_hue),<br />
+    Qualitative colour scale with evenly spaced hues.</li>
+<li><code>scale_identity</code> (scale_alpha_identity, scale_color_identity,<br />
+    scale_colour_identity, scale_fill_identity,<br />
+    scale_linetype_identity, scale_shape_identity,<br />
+    scale_size_identity), Use values without scaling.</li>
+<li><code>scale_manual</code> (scale_alpha_manual, scale_color_manual,<br />
+    scale_colour_manual, scale_fill_manual, scale_linetype_manual,<br />
+    scale_shape_manual, scale_size_manual), Create your own<br />
+    discrete scale.</li>
+<li><code>scale_linetype</code> (scale_linetype_continuous,<br />
+    scale_linetype_discrete), Scale for line patterns.</li>
+<li><code>scale_shape</code> (scale_shape_continuous, scale_shape_discrete),<br />
+    Scale for shapes, aka glyphs.</li>
+<li><code>scale_size</code> (scale_radius, scale_size_area,<br />
+    scale_size_continuous, scale_size_date, scale_size_datetime,<br />
+    scale_size_discrete), Scale size (area or radius).</li>
+<li><code>scale_x_discrete</code> (scale_y_discrete), Discrete position.</li>
+<li><code>labs</code> (ggtitle, xlab, ylab), Change axis labels and legend titles.</li>
+<li><code>update_labels</code>, Update axis/legend labels.</li>
+</ul>
+<p><strong>Geometries</strong></p>
+<ul>
+<li>point.</li>
+<li>line.</li>
+<li>histogram.</li>
+<li>bar.</li>
+<li>boxplot.</li>
+<li><code>geom_abline</code> (geom_hline, geom_vline), Lines: horizontal,<br />
+    vertical, and specified by slope and intercept.</li>
+<li><code>geom_bar</code> (stat_count), Bars, rectangles with bases on x-axis</li>
+<li><code>geom_bin2d</code> (stat_bin2d, stat_bin_2d), Add heatmap of 2d<br />
+    bin counts.</li>
+<li><code>geom_blank</code>, Blank, draws nothing.</li>
+<li><code>geom_boxplot</code> (stat_boxplot), Box and whiskers plot.</li>
+<li><code>geom_contour</code> (stat_contour), Display contours of a 3d surface<br />
+    in 2d.</li>
+<li><code>geom_count</code>(stat_sum), Count the number of observations at<br />
+    each location.</li>
+<li><code>geom_crossbar</code> (geom_errorbar, geom_linerange, geom_pointrange),<br />
+    Vertical intervals: lines, crossbars &amp; errorbars.</li>
+<li><code>geom_density</code> (stat_density), Display a smooth density estimate.</li>
+<li><code>geom_density_2d</code> (geom_density2d, stat_density2d,<br />
+    stat_density_2d), Contours from a 2d density estimate.</li>
+<li><code>geom_dotplot</code>, Dot plot</li>
+<li><code>geom_errorbarh</code>, Horizontal error bars.</li>
+<li><code>geom_freqpoly</code> (geom_histogram, stat_bin), Histograms and<br />
+    frequency polygons.</li>
+<li><code>geom_hex</code> (stat_bin_hex, stat_binhex), Hexagon binning.</li>
+<li><code>geom_jitter</code>, Points, jittered to reduce overplotting.</li>
+<li><code>geom_label</code> (geom_text), Textual annotations.</li>
+<li><code>geom_map</code>, Polygons from a reference map.</li>
+<li><code>geom_path</code> (geom_line, geom_step), Connect observations.</li>
+<li><code>geom_point</code>, Points, as for a scatterplot.</li>
+<li><code>geom_polygon</code>, Polygon, a filled path.</li>
+<li><code>geom_quantile</code> (stat_quantile), Add quantile lines from a<br />
+    quantile regression.</li>
+<li><code>geom_raster</code> (geom_rect, geom_tile), Draw rectangles.</li>
+<li><code>geom_ribbon</code> (geom_area), Ribbons and area plots.</li>
+<li><code>geom_rug</code>, Marginal rug plots.</li>
+<li><code>geom_segment</code> (geom_curve), Line segments and curves.</li>
+<li><code>geom_smooth</code> (stat_smooth), Add a smoothed conditional mean.</li>
+<li><code>geom_violin</code> (stat_ydensity), Violin plot.</li>
+</ul>
+<p><strong>Facets</strong></p>
+<ul>
+<li>columns.</li>
+<li>rows.</li>
+<li><code>facet_grid</code>, Lay out panels in a grid.</li>
+<li><code>facet_null</code>, Facet specification: a single panel.</li>
+<li><code>facet_wrap</code>, Wrap a 1d ribbon of panels into 2d.</li>
+<li><code>labeller</code>, Generic labeller function for facets.</li>
+<li><code>label_bquote</code>, Backquoted labeller.</li>
+</ul>
+<p><strong>Annotation</strong></p>
+<ul>
+<li><code>annotate</code>, Create an annotation layer.</li>
+<li><code>annotation_custom</code>, Annotation: Custom grob.</li>
+<li><code>annotation_logticks</code>, Annotation: log tick marks.</li>
+<li><code>annotation_map</code>, Annotation: maps.</li>
+<li><code>annotation_raster</code>, Annotation: High-performance<br />
+    rectangular tiling.</li>
+<li><code>borders</code>, Create a layer of map borders.</li>
+</ul>
+<p><strong>Fortify</strong></p>
+<ul>
+<li><code>fortify</code>, Fortify a model with data.</li>
+<li><code>fortify-multcomp</code> (fortify.cld, fortify.confint.glht, fortify.glht,<br />
+    fortify.summary.glht), Fortify methods for objects produced by.</li>
+<li><code>fortify.lm</code>, Supplement the data fitted to a linear model with<br />
+    model fit statistics.</li>
+<li><code>fortify.map</code>, Fortify method for map objects.</li>
+<li><code>fortify.sp</code> (fortify.Line, fortify.Lines, fortify.Polygon,<br />
+    fortify.Polygons, fortify.SpatialLinesDataFrame,<br />
+    fortify.SpatialPolygons, fortify.SpatialPolygonsDataFrame), Fortify<br />
+    method for classes from the sp package.</li>
+<li><code>map_data</code>, Create a data frame of map data.</li>
+</ul>
+<p><strong>Statistics</strong></p>
+<ul>
+<li>binning.</li>
+<li>smoothing.</li>
+<li>descriptive.</li>
+<li>inferential.</li>
+<li><code>stat_ecdf</code>, Empirical Cumulative Density Function.</li>
+<li><code>stat_ellipse</code>, Plot data ellipses.</li>
+<li><code>stat_function</code>, Superimpose a function.</li>
+<li><code>stat_identity</code>, Identity statistic.</li>
+<li><code>stat_qq</code> (geom_qq), Calculation for quantile-quantile plot.</li>
+<li><code>stat_summary_2d</code> (stat_summary2d, stat_summary_hex), Bin and<br />
+    summarise in 2d (rectangle &amp; hexagons)</li>
+<li><code>stat_unique</code>, Remove duplicates.</li>
+<li>Coordinates.</li>
+<li>cartesian.</li>
+<li>fixes.</li>
+<li>polar.</li>
+<li>limites.</li>
+<li><code>coord_cartesian</code>, Cartesian coordinates.</li>
+<li><code>coord_fixed</code> (coord_equal), Cartesian coordinates with fixed<br />
+    relationship between x and y scales.</li>
+<li><code>coord_flip</code>, Flipped cartesian coordinates.</li>
+<li><code>coord_map</code> (coord_quickmap), Map projections.</li>
+<li><code>coord_polar</code>, Polar coordinates.</li>
+<li><code>coord_trans</code>, Transformed cartesian coordinate system.</li>
+</ul>
+<p><strong>Themes</strong></p>
+<ul>
+<li><code>theme_bw</code></li>
+<li><code>theme_grey</code></li>
+<li><code>theme_classic</code></li>
+<li><code>theme_minimal</code></li>
+<li><code>ggthemes</code></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Plot_snippets_-_Colours/" class="btn btn-neutral float-right" title="Plot Snippets - Colours">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Plot_snippets_-_Basics/" class="btn btn-neutral" title="Plot Snippets for Exploratory (and some Explanatory) Analyses"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Plot_snippets_-_Basics/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Plot_snippets_-_Colours/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
