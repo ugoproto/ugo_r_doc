@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Plot Snippets for Exploratory (and some Explanatory) Analyses - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Plot Snippets for Exploratory (and some Explanatory) Analyses";
+    var mkdocs_page_input_path = "Plot_snippets_-_Basics.md";
+    var mkdocs_page_url = "/Plot_snippets_-_Basics/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#data-type-dataset">Data Type &amp; Dataset</a></li>
+                
+                    <li><a class="toctree-l4" href="#data-types">Data Types</a></li>
+                
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#dataset">Dataset</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-basic-package">The Basic Package</a></li>
+                
+                    <li><a class="toctree-l4" href="#basic-plots-options-parameters">Basic Plots, Options &amp; Parameters</a></li>
+                
+                    <li><a class="toctree-l4" href="#univariate-plots">Univariate Plots</a></li>
+                
+                    <li><a class="toctree-l4" href="#bivariate-multivariate-plots">Bivariate (Multivariate) Plots</a></li>
+                
+                    <li><a class="toctree-l4" href="#multivariate-plots">Multivariate Plots</a></li>
+                
+                    <li><a class="toctree-l4" href="#times-series">Times Series</a></li>
+                
+                    <li><a class="toctree-l4" href="#regressions-and-residual-plots">Regressions and Residual Plots</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-lattice-and-latticeextra-packages">The lattice and latticeExtra Packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#coloring">Coloring</a></li>
+                
+                    <li><a class="toctree-l4" href="#documentation">Documentation</a></li>
+                
+                    <li><a class="toctree-l4" href="#a-note-on-reordering-the-levels-factors">A note on reordering the levels (factors)</a></li>
+                
+                    <li><a class="toctree-l4" href="#uni-bi-multivariate-plots">Uni-, Bi-, Multivariate Plots</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#additional-packages">Additional Packages</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-sm-package-density">The sm Package (density)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-car-package-scatter">The car Package (scatter)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-vioplot-package-boxplot">The vioplot Package (boxplot)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-vcd-package-count-correlation-mosaic">The vcd Package (count, correlation, mosaic)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-hexbin-package-scatter">The hexbin Package (scatter)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-car-package-scatter_1">The car Package (scatter)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-scatterplot3d-package">The scatterplot3d Package</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-rgl-package-interactive">The rgl Package (interactive)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-cluster-package-dendrogram">The cluster Package (dendrogram)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-extracat-package-splom">The extracat Package (splom)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-ash-package-density">The ash Package (density)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-kernsmooth-package-density">The KernSmooth Package (density)</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-crorplot-package-correlation">The crorplot Package (correlation)</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#a-peek-at-mapping">A Peek at Mapping</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plot Snippets &raquo;</li>
+        
+      
+    
+    <li>Plot Snippets for Exploratory (and some Explanatory) Analyses</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#plotting-packages">Plotting Packages</a></li>
+<li><a href="#data-type-dataset">Data Type &amp; Dataset</a><ul>
+<li><a href="#data-types">Data Types</a></li>
+<li><a href="#functions">Functions</a></li>
+<li><a href="#dataset">Dataset</a></li>
+</ul>
+</li>
+<li><a href="#the-basic-package">The Basic Package</a><ul>
+<li><a href="#basic-plots-options-parameters">Basic Plots, Options &amp;<br />
+    Parameters</a></li>
+<li><a href="#univariate-plots">Univariate Plots</a></li>
+<li><a href="#bivariate-multivariate-plots">Bivariate (Multivariate) Plots</a></li>
+<li><a href="#multivariate-plots">Multivariate Plots</a></li>
+<li><a href="#times-series">Times Series</a></li>
+<li><a href="#regressions-and-residual-plots">Regressions and Residual<br />
+    Plots</a></li>
+</ul>
+</li>
+<li><a href="#the-lattice-and-latticeextra-packages">The <code>lattice</code> and <code>latticeExtra</code><br />
+    Packages</a><ul>
+<li><a href="#coloring">Coloring</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#a-note-on-reordering-the-levels-factors">A note on reordering the<br />
+    levels (factors)</a></li>
+<li><a href="#uni--bi--multivariate-plots">Uni-, Bi-, Multivariate Plots</a></li>
+</ul>
+</li>
+<li><a href="#additional-packages">Additional Packages</a><ul>
+<li><a href="#the-sm-package-density">The <code>sm</code> Package (density)</a></li>
+<li><a href="#the-car-package-scatter">The <code>car</code> Package (scatter)</a></li>
+<li><a href="#the-vioplot-package-boxplot">The <code>vioplot</code> Package (boxplot)</a></li>
+<li><a href="#the-vcd-package-count-correlation-mosaic">The <code>vcd</code> Package (count,<br />
+    correlation, mosaic)</a></li>
+<li><a href="#the-hexbin-package-scatter">The <code>hexbin</code> Package (scatter)</a></li>
+<li><a href="#the-car-package-scatter-1">The <code>car</code> Package (scatter)</a></li>
+<li><a href="#the-scatterplot3d-package">The <code>scatterplot3d</code> Package</a></li>
+<li><a href="#the-rgl-package-interactive">The <code>rgl</code> Package (interactive)</a></li>
+<li><a href="#the-cluster-package-dendrogram">The <code>cluster</code><br />
+    Package (dendrogram)</a></li>
+<li><a href="#the-extracat-package-splom">The <code>extracat</code> Package (splom)</a></li>
+<li><a href="#the-ash-package-density">The <code>ash</code> Package (density)</a></li>
+<li><a href="#the-kernsmooth-package-density">The <code>KernSmooth</code><br />
+    Package (density)</a></li>
+<li><a href="#the-crorplot-package-correlation">The <code>crorplot</code><br />
+    Package (correlation)</a></li>
+</ul>
+</li>
+<li><a href="#a-peek-at-mapping">A Peek at Mapping</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Code snippets and results.</li>
+<li>Some data might necessitate more specialized packages.</li>
+<li>For explaining data, presenting results, reporting and publishing,<br />
+    we can generate prettier graphics with <code>ggvis</code> or <code>ggplot2</code>, and<br />
+    interactive packages such as <code>shiny</code>.</li>
+</ul>
+<hr />
+<h4 id="plotting-packages">Plotting Packages<a class="headerlink" href="#plotting-packages" title="Permanent link">&para;</a></h4>
+<p>Packages used in bold.</p>
+<p>Graphics:</p>
+<ul>
+<li><code>maps</code> for grids and mapping.</li>
+<li><code>diagram</code> for flow charts.</li>
+<li><code>plotrix</code> for ternary, polar plots.</li>
+<li><code>gplots</code>.</li>
+<li><code>pixmap</code>, <code>png</code>, <code>rtiff</code>, <code>ReadImages</code>, <code>EBImage</code>, <code>RImageJ</code>.</li>
+<li><strong><code>leaflet</code></strong>.</li>
+</ul>
+<p>Grid:</p>
+<ul>
+<li><strong><code>vcd</code></strong> for mosaic, ternary plots.</li>
+<li><code>grImport</code> for vectors.</li>
+<li><code>ggplot2</code> and extensions.</li>
+<li><strong><code>lattice</code></strong> and <strong><code>latticeExtra</code></strong>.</li>
+<li><code>gridBase</code>.</li>
+</ul>
+<p>grDevices:</p>
+<ul>
+<li><code>JavaGD</code>.</li>
+<li><code>Cairo</code>.</li>
+<li><code>tikzDevice</code>.</li>
+</ul>
+<p>Interactive:</p>
+<ul>
+<li><strong><code>rgl</code></strong>.</li>
+<li><code>ggvis</code>.</li>
+<li><code>iplots</code>.</li>
+<li><code>rggobi</code>.</li>
+</ul>
+<p>Others:</p>
+<ul>
+<li><strong><code>ash</code></strong> for density plots.</li>
+<li><strong><code>cluster</code></strong> for dendrograms.</li>
+<li><code>copula</code> for multivariate analyses.</li>
+<li><strong><code>corrplot</code></strong> for correlations.</li>
+<li><code>compositions</code> for geometries, ternary plots.</li>
+<li><strong><code>extracat</code></strong> for missing values.</li>
+<li><code>soiltexture</code> for ternary plots and more.</li>
+<li><strong><code>KernSmooth</code></strong> for histograms-density plots.</li>
+<li><code>openair</code> for polar, circular plots.</li>
+<li><strong><code>sm</code></strong> for density plots.</li>
+<li><strong><code>car</code></strong> for scatter plots.</li>
+<li><strong><code>vioplot</code></strong> for boxplots.</li>
+<li><strong><code>vcd</code></strong> for mosaic plots and multivariate analyses.</li>
+<li><strong><code>hexbin</code></strong> for scatter plots.</li>
+<li><strong><code>scatterplot3d</code></strong> for 3D scatter plots.</li>
+<li><strong><code>cluster</code></strong> for dendrograms.</li>
+<li><code>shiny</code> for interactive plots.</li>
+<li><code>ggvis</code>.</li>
+</ul>
+<h4 id="data-type-dataset">Data Type &amp; Dataset<a class="headerlink" href="#data-type-dataset" title="Permanent link">&para;</a></h4>
+<h5 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h5>
+<ul>
+<li>continuous vs categorical (or discrete).</li>
+<li>continuous: float, x-y-z, 3D, map coordinates, trianguar, lat-long,<br />
+    polar, degree-distance, angle-vector.</li>
+<li>categorical: integer, binary, dichotomic, dummy, factor,<br />
+    ordinal (ordered).</li>
+</ul>
+<p>Continuous variable characteristics:</p>
+<ul>
+<li>asymmetry.</li>
+<li>outliers.</li>
+<li>multimodality.</li>
+<li>gaps, missing values.</li>
+<li>heaping, redundance.</li>
+<li>rounding, integer.</li>
+<li>impossibilities, anomalies.</li>
+<li>errors.</li>
+<li>&hellip;</li>
+</ul>
+<p>Categorical variable characteristics:</p>
+<ul>
+<li>unexpected pattern of results.</li>
+<li>uneven distribution.</li>
+<li>extra categories.</li>
+<li>unbalanced experiments.</li>
+<li>large numbers of categories.</li>
+<li>NA, errors, missings&hellip;</li>
+<li>nominal: no fixed order.</li>
+<li>ordinal: fixed order (scale of 1 to 5).</li>
+<li>discrete: counts, integers.</li>
+<li>dependencies, correlation, associations.</li>
+<li>causal relationships, outliers, groups, clusters, gaps, barriers,<br />
+    conditional relationship.</li>
+<li>&hellip;</li>
+</ul>
+<p>Univariate main plots:</p>
+<ul>
+<li>histogram.</li>
+<li>density.</li>
+<li>qqmath chart.</li>
+<li>box &amp; whickers chart.</li>
+<li>bar chart.</li>
+<li>dot.</li>
+</ul>
+<p>Bivariate main plots:</p>
+<ul>
+<li>xy chart.</li>
+<li>qq chart.</li>
+</ul>
+<p>Trivariate main plots:</p>
+<ul>
+<li>cloud.</li>
+<li>wireframe.</li>
+<li>countour.</li>
+<li>level.</li>
+</ul>
+<p>Multivariate main plots:</p>
+<ul>
+<li>sploms.</li>
+<li>parallel charts (coordinate).</li>
+</ul>
+<p>Specialized plots:</p>
+<ul>
+<li>frequencies, crosstabs: bar charts, mosaic plots, association plots.</li>
+<li>correlations: sploms, pairs, correlograms.</li>
+<li>t-tests, non-parrametric tests of group differences: box plot,<br />
+    density plot.</li>
+<li>regression: scatter plot.</li>
+<li>ANOVA: box plots, line plots.</li>
+</ul>
+<h5 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h5>
+<p><strong>Create a new variable</strong></p>
+<pre><code class="r">iris2 &lt;- within(iris, area &lt;- Petal.Width*Petal.Length)
+head(iris2, 3)
+</code></pre>
+
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species area
+## 1          5.1         3.5          1.4         0.2  setosa 0.28
+## 2          4.9         3.0          1.4         0.2  setosa 0.28
+## 3          4.7         3.2          1.3         0.2  setosa 0.26
+</code></pre>
+<pre><code class="r">area &lt;- with(iris, area &lt;- Petal.Width*Petal.Length)
+head(area, 3)
+</code></pre>
+
+<pre><code>## [1] 0.28 0.28 0.26
+</code></pre>
+<h5 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h5>
+<p>For most examples, we use the <code>mtcars</code> dataset.</p>
+<p>Prepare the dataset.</p>
+<pre><code class="r">attach(mtcars)
+</code></pre>
+
+<p>Get data attached to a package (an example).</p>
+<pre><code class="r">data(gvhd10, package = 'latticeExtra')
+</code></pre>
+
+<h4 id="the-basic-package">The Basic Package<a class="headerlink" href="#the-basic-package" title="Permanent link">&para;</a></h4>
+<h5 id="basic-plots-options-parameters">Basic Plots, Options &amp; Parameters<a class="headerlink" href="#basic-plots-options-parameters" title="Permanent link">&para;</a></h5>
+<p><strong>Standardize the parameters (an example)</strong></p>
+<pre><code class="r"># color and tick mark text orientation
+par(col = 'black', las = 1)
+</code></pre>
+
+<p><strong>Grid and layout</strong></p>
+<p>One plot.</p>
+<pre><code class="r">plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-6-1.png" /></p>
+<p>A grid of plots.</p>
+<pre><code class="r">par(mfrow = c(2, 1))
+
+plot(mpg, hp, ylab = 'horsepower', xlab = 'miles per gallon')
+boxplot(mpg ~ cyl, xlab = 'mile per gallon', ylab = 'number of cylinders', horizontal = TRUE)
+
+par(mfrow = c(1, 2))
+
+plot(mpg, hp, ylab = 'horsepower', xlab = 'miles per gallon')
+boxplot(mpg ~ cyl, xlab = 'mile per gallon', ylab = 'number of cylinders', horizontal = TRUE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-7-1.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<p>Other grids.</p>
+<pre><code class="r">layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))
+
+plot(mpg, xlab = 'observations', ylab = 'miles per gallon')
+plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
+boxplot(mpg ~ cyl, ylab = 'mile per gallon', xlab = 'number of cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-8-1.png" /></p>
+<pre><code class="r"># view
+matrix(c(1,2,1,3), 2, 2, byrow = TRUE)
+</code></pre>
+
+<pre><code>##      [,1] [,2]
+## [1,]    1    2
+## [2,]    1    3
+</code></pre>
+<pre><code class="r">layout(matrix(c(1,2,1,3), 2, 2, byrow = TRUE))
+
+hist(wt)
+hist(mpg)
+hist(disp)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-9-1.png" /></p>
+<pre><code class="r">layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE),  widths = c(3,1), heights = c(1,2))
+
+hist(wt)
+hist(mpg)
+hist(disp)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-10-1.png" /></p>
+<pre><code class="r">nf &lt;- layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE), widths = lcm(12), heights = lcm(6))
+layout.show(nf)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-11-1.png" /></p>
+<pre><code class="r">plot(mpg, xlab = 'observations', ylab = 'miles per gallon')
+plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
+boxplot(mpg ~ cyl, ylab = 'mile per gallon', xlab = 'number of cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-11-2.png" /></p>
+<p>Gridview with additional packages.</p>
+<pre><code class="r">library(vcd)
+</code></pre>
+
+<pre><code class="r">mplot(A, B, C)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-14-1.png" /></p>
+<p>See the <code>lattice</code> and <code>latticeExtra</code> packages for built-in<br />
+facet/gridview. <code>ggplot2</code> as well.</p>
+<p><strong>Plot and add ablines</strong></p>
+<pre><code class="r">plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
+
+# abline(h = yvalues, v = xvalues)
+abline(lm(mpg ~ hp))
+
+# main = 'Title' or...
+title('Title')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-15-1.png" /></p>
+<pre><code class="r">plot(hp, mpg, xlab = 'horsepower', ylab = 'miles per gallon')
+
+abline(h = c(20, 25))
+abline(v = c(50, 150))
+abline(v = seq(200, 300, 50), lty = 2, col = 'blue')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-16-1.png" /></p>
+<p><strong>Add a legend</strong></p>
+<pre><code class="r">boxplot(mpg ~ cyl, main = 'Title',
+   yaxt = 'n', xlab = 'mile per gallon', horizontal = TRUE, col = terrain.colors(3))
+
+legend('topright', inset = 0.05, title = 'number of cylinders', c('4','6','8'), fill = terrain.colors(3), horiz = TRUE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-17-1.png" /></p>
+<p><strong>Save</strong></p>
+<pre><code class="r">mygraph &lt;- plot(hp, mpg, main = 'Title', xlab = 'horsepower', ylab = 'miles per gallon')
+
+pdf('mygraph.pdf')
+png('mygraph.png')
+jpeg('mygraph.jpg')
+bmp('mygraph.bmp')
+postscript('mygraph.ps')
+</code></pre>
+
+<p><strong>View in a new window</strong></p>
+<p>Typing the function will open a new window to render the plot.</p>
+<ul>
+<li><code>windows()</code> for Windows.</li>
+<li><code>X11()</code> for Linux.</li>
+<li><code>quartz()</code> for OS X.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r"># open the new windows
+windows()
+
+plot(hp, mpg, main = 'Title', xlab = 'horsepower', ylab = 'miles per gallon')
+</code></pre>
+
+<p><strong>Enrich the plot, add text</strong></p>
+<pre><code class="r">plot(hp, mpg,
+     main = 'Title', col.main = 'blue',
+     sub = 'figure 1', col.sub = 'blue',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon',
+     col.lab = 'red', cex.lab = 0.9,
+     xlim = c(50, 350),
+     ylim = c(0, 40))
+
+text(100, 10, 'text 1') # x and y coordinate
+mtext('text 2', 4, line = 0.5) # pos = 1 (bottom), 2 (left), 3 (top), 4 (right); line (margin)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-20-1.png" /></p>
+<p>With <code>locator()</code>, use the mouse; with 1 for 1 click, 2 for&hellip; Find the<br />
+coordinates to be entered in the code. For example (after two clicks):</p>
+<pre><code class="text">&gt; locator(2)
+$x
+[1] 212.5308 293.7854
+
+$y
+[1] 33.34040 31.87281
+</code></pre>
+
+<pre><code class="r">plot(hp, mpg,
+     main = 'Title',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon')
+
+text(hp, mpg, row.names(mtcars), cex = 0.7, pos = 4, col = 'red')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-22-1.png" /></p>
+<p><strong>Enrich the plot, add symbols</strong></p>
+<pre><code class="r">plot(hp, mpg,
+     main = 'Title',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon')
+
+symbols(250, 20, squares = 1, add = TRUE, inches = 0.1, fg = 'red')
+symbols(250, 25, circles = 1, add = TRUE, inches = 0.1, fg = 'red')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-23-1.png" /></p>
+<pre><code class="r">#rectangles
+#stars
+#thermometers
+#boxplots
+</code></pre>
+
+<p><strong>Combine plots; change <code>pch =</code> &amp; <code>col =</code></strong></p>
+<pre><code class="r">par(mfrow = c(2,2))
+
+# 1
+plot(hp, mpg,
+     main = 'P1',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon',
+     pch = 1,
+     col = 'black')
+
+# 2
+plot(hp, mpg,
+     main = 'P2',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon',
+     pch = 3,
+     col = 'blue',
+     cex = 0.5)
+
+# 3
+plot(hp, mpg,
+     main = 'P3',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon',
+     pch = 5,
+     col = 'red',
+     cex = 2)
+
+# 4
+plot(hp, mpg,
+     main = 'P4',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon',
+     pch = 7,
+     col = 'green')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-24-1.png" /></p>
+<pre><code class="r"># reverse
+par(mfrow = c(1,1))
+</code></pre>
+
+<p><strong>Change <code>col =</code></strong></p>
+<p><img alt="" src="../col.png" /></p>
+<p><strong>Change <code>pch =</code></strong></p>
+<p><img alt="" src="../pch.png" /></p>
+<pre><code class="r">par(fig = c(0,0.8,0,0.8))
+
+plot(mtcars$wt, mtcars$mpg, xlab = 'Car Weight',   ylab = 'miles Per Gallon')
+
+par(fig = c(0,0.8,0.55,1), new = TRUE)
+
+boxplot(mtcars$wt, horizontal = TRUE, axes = FALSE)
+
+par(fig = c(0.65,1,0,0.8), new = TRUE)
+
+boxplot(mtcars$mpg, axes = FALSE)
+
+mtext('Enhanced Scatterplot', side = 3, outer = TRUE, line = -3)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-25-1.png" /></p>
+<pre><code class="r"># reverse
+par(mfrow = c(1,1))
+</code></pre>
+
+<p><strong>Change <code>type =</code>; without dots</strong></p>
+<pre><code class="r">x &lt;- c(1:5); y &lt;- x
+
+par(pch = 22, col = 'red') # plotting symbol and color
+
+par(mfrow = c(2,4)) # all plots on one page
+opts = c('p','l','o','b','c','s','S','h')
+
+for (i in 1:length(opts)) {
+  heading = paste('type =',opts[i])
+  plot(x, y, type = 'n', main = heading)
+  lines(x, y, type = opts[i])
+}
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-26-1.png" /></p>
+<pre><code class="r"># reverse
+par(mfrow = c(1,1), col = 'black')
+</code></pre>
+
+<p><strong>Change <code>type =</code>; with dots</strong></p>
+<pre><code class="r">x &lt;- c(1:5); y &lt;- x
+
+par(pch = 22, col = 'blue') # plotting symbol and color
+
+par(mfrow = c(2,4)) # all plots on one page
+opts = c('p','l','o','b','c','s','S','h')
+
+for (i in 1:length(opts)) {
+  heading = paste('type =',opts[i])
+  plot(x, y, main = heading)
+  lines(x, y, type = opts[i])
+}
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-27-1.png" /></p>
+<pre><code class="r"># reverse
+par(mfrow = c(1,1), col = 'black')
+</code></pre>
+
+<p><strong>Add or modify the axes</strong></p>
+<pre><code class="r">plot(hp, mpg,
+     main = 'Title',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon',
+     xaxt = 'n',
+     yaxt = 'n')
+
+axis(1, at = c(100, 200, 300), labels = NULL, pos = 15, lty = 'dashed', col = 'green', las = 2, tck = -0.05)
+
+axis(4, at = c(20, 30), labels = c('bt', 'up'), pos = 125, lty = 'dashed', col = 'blue', las = 2, tck = -0.05)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-28-1.png" /></p>
+<pre><code class="r"># reverse
+par(las = 1)
+</code></pre>
+
+<p><strong>Add layers to the first plot</strong></p>
+<pre><code class="r">plot(mpg,
+     main = 'Title',
+     xlab = 'horsepower', 
+     ylab = 'miles per gallon')
+
+# add lines
+lines(mpg[1:10], type = 'l', col = 'green')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-29-1.png" /></p>
+<h5 id="univariate-plots">Univariate Plots<a class="headerlink" href="#univariate-plots" title="Permanent link">&para;</a></h5>
+<p><strong>Plot; continuous</strong></p>
+<pre><code class="r">plot(mpg, main = 'Title', xlab = 'observations', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-30-1.png" /></p>
+<p><strong>Plot; categorical</strong></p>
+<pre><code class="r">plot(cyl, main = 'Title', xlab = 'observations', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-31-1.png" /></p>
+<p><strong>QQnorm; continuous</strong></p>
+<pre><code class="r">qqnorm(mpg, main = 'Title', xlab = 'observations', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-32-1.png" /></p>
+<p><strong>QQnorm; categorical</strong></p>
+<pre><code class="r">qqnorm(cyl, main = 'Title', xlab = 'observations', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-33-1.png" /></p>
+<p><strong>Stripchart; continuous</strong></p>
+<pre><code class="r">stripchart(mpg, main = 'Title', xlab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-34-1.png" /></p>
+<p><strong>Stripchart; categorical</strong></p>
+<pre><code class="r">stripchart(cyl, main = 'Title', xlab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-35-1.png" /></p>
+<p><strong>Barplot (vertical); continuous</strong></p>
+<pre><code class="r">barplot(mpg[1:10], main = 'Title', xlab = 'observations', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-36-1.png" /></p>
+<p><strong>Barplot (horizontal); categorical</strong></p>
+<pre><code class="r">barplot(cyl[1:10], main = 'Title', horiz = TRUE, xlab = 'cylinders', ylab = 'observations')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-37-1.png" /></p>
+<p><strong>Barplots options</strong></p>
+<p>Group with <code>table()</code>.</p>
+<pre><code class="r">counts &lt;- table(cyl)
+counts
+</code></pre>
+
+<pre><code>## cyl
+##  4  6  8 
+## 11  7 14
+</code></pre>
+<pre><code class="r">barplot(counts, main = 'Title', horiz = TRUE, xlab = 'count', names.arg = c('4 Cyl', '6 Cyl', '8 Cyl'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-38-1.png" /></p>
+<pre><code class="r">counts &lt;- table(vs, gear)
+counts
+</code></pre>
+
+<pre><code>##    gear
+## vs   3  4  5
+##   0 12  2  4
+##   1  3 10  1
+</code></pre>
+<pre><code class="r">barplot(counts, main = 'Title', xlab = 'gearbox', col = c('darkblue', 'red'), legend = rownames(counts)) 
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-39-1.png" /></p>
+<pre><code class="r">counts &lt;- table(vs, gear)
+counts
+</code></pre>
+
+<pre><code>##    gear
+## vs   3  4  5
+##   0 12  2  4
+##   1  3 10  1
+</code></pre>
+<pre><code class="r">barplot(counts, main = 'Title', xlab='gearbox', col = c('darkblue', 'red'), legend =  rownames(counts), beside = TRUE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-40-1.png" /></p>
+<p>Group with <code>aggregate()</code>.</p>
+<pre><code class="r">aggregate(mtcars, by = list(cyl, vs), FUN = mean, na.rm = TRUE)
+</code></pre>
+
+<pre><code>##   Group.1 Group.2      mpg cyl   disp       hp     drat       wt     qsec
+## 1       4       0 26.00000   4 120.30  91.0000 4.430000 2.140000 16.70000
+## 2       6       0 20.56667   6 155.00 131.6667 3.806667 2.755000 16.32667
+## 3       8       0 15.10000   8 353.10 209.2143 3.229286 3.999214 16.77214
+## 4       4       1 26.73000   4 103.62  81.8000 4.035000 2.300300 19.38100
+## 5       6       1 19.12500   6 204.55 115.2500 3.420000 3.388750 19.21500
+##   vs        am     gear     carb
+## 1  0 1.0000000 5.000000 2.000000
+## 2  0 1.0000000 4.333333 4.666667
+## 3  0 0.1428571 3.285714 3.500000
+## 4  1 0.7000000 4.000000 1.500000
+## 5  1 0.0000000 3.500000 2.500000
+</code></pre>
+<pre><code class="r">par(las = 2) # make label text perpendicular to axis
+
+par(mar = c(5, 8, 4, 2)) # increase y-axis margin.
+
+counts &lt;- table(mtcars$gear)
+barplot(counts, main = 'Car Distribution', horiz = TRUE, names.arg = c('3 Gears', '4 Gears', '5   Gears'), cex.names = 0.8)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-42-1.png" /></p>
+<pre><code class="r"># reverse
+par(las = 1)
+</code></pre>
+
+<p>Colors.</p>
+<pre><code class="r">library(RColorBrewer)
+
+par(mfrow = c(2, 1))
+
+barplot(iris$Petal.Length)
+barplot(table(iris$Species, iris$Sepal.Length), col = brewer.pal(3, 'Set1'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-43-1.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<p><strong>Pie Chart</strong></p>
+<p>Avoid!</p>
+<p><strong>Dotchart; continuous</strong></p>
+<pre><code class="r">dotchart(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'observations')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-44-1.png" /></p>
+<p><strong>Dotchart; categorical</strong></p>
+<pre><code class="r">dotchart(cyl, main = 'Title', xlab = 'cylinders', ylab = 'observations')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-45-1.png" /></p>
+<p><strong>Dotchart options</strong></p>
+<pre><code class="r">dotchart(mpg,labels = row.names(mtcars), cex = 0.7, main = 'Title', xlab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-46-1.png" /></p>
+<pre><code class="r"># sort by mpg
+x &lt;- mtcars[order(mpg),]
+
+# must be factors
+x$cyl &lt;- factor(x$cyl)
+x$color[x$cyl == 4] &lt;- 'red'
+x$color[x$cyl == 6] &lt;- 'blue'
+x$color[x$cyl == 8] &lt;- 'darkgreen'
+
+dotchart(x$mpg, labels = row.names(x), cex = 0.7, groups = x$cyl, main = 'Title',  xlab = 'miles per gallon', gcolor = 'black', color = x$color)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-47-1.png" /></p>
+<p>More with the <code>hmisc</code> package and <code>panel.dotplot()</code> and in the <code>lattice</code><br />
+package section.</p>
+<p><strong>Boxplot; continuous</strong></p>
+<pre><code class="r">boxplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'observations')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-48-1.png" /></p>
+<p><strong>Stem; continuous</strong></p>
+<pre><code class="r">stem(mpg)
+</code></pre>
+
+<pre><code>## 
+##   The decimal point is at the |
+## 
+##   10 | 44
+##   12 | 3
+##   14 | 3702258
+##   16 | 438
+##   18 | 17227
+##   20 | 00445
+##   22 | 88
+##   24 | 4
+##   26 | 03
+##   28 | 
+##   30 | 44
+##   32 | 49
+</code></pre>
+<p><strong>Histogram; continuous</strong></p>
+<pre><code class="r">hist(mpg, main = 'Title', xlab = 'miles per gallon - bins', ylab = 'count')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-50-1.png" /></p>
+<p><strong>Histogram; categorical</strong></p>
+<pre><code class="r">hist(cyl, main = 'Title', xlab = 'cylinders - bins', ylab = 'count')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-51-1.png" /></p>
+<p><strong>Histogram options</strong></p>
+<pre><code class="r">hist(mpg, breaks = 12, col = 'red')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-52-1.png" /></p>
+<pre><code class="r">x &lt;- mpg
+
+h &lt;- hist(x, breaks = 10, main = 'Title', xlab = 'miles per gallon')
+
+xfit &lt;- seq(min(x), max(x),length = 40)
+yfit &lt;- dnorm(xfit, mean = mean(x), sd = sd(x))
+yfit &lt;- yfit*diff(h$mids[1:2])*length(x)
+
+lines(xfit, yfit, col = 'blue', lwd = 2)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-53-1.png" /></p>
+<p>Colors.</p>
+<pre><code class="r">library(RColorBrewer)
+
+par(mfrow = c(2, 3))
+
+hist(VADeaths, breaks = 10, col = brewer.pal(3, 'Set3'), main = '3, Set3')
+hist(VADeaths, breaks = 4, col = brewer.pal(3, 'Set2'), main = '3, Set2')
+hist(VADeaths, breaks = 8, col = brewer.pal(3, 'Set1'), main = '3, Set1')
+hist(VADeaths, breaks = 2, col = brewer.pal(8, 'Set3'), main = '8, Set3')
+hist(VADeaths, breaks = 10, col = brewer.pal(8, 'Greys'), main = '8, Greys')
+hist(VADeaths, breaks = 10, col = brewer.pal(8, 'Greens'), main = '8, Greens')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-54-1.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<p><strong>Density Plot; continuous</strong></p>
+<pre><code class="r">plot(density(mpg), main = 'Title')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-55-1.png" /></p>
+<pre><code class="r">plot(density(mpg), main = 'Title')
+
+polygon(density(mpg), col = 'red', border = 'blue') 
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-56-1.png" /></p>
+<pre><code class="r">d1 &lt;- density(mtcars$mpg)
+plot(d1)
+rug(mtcars$mpg)
+
+lines(density(mtcars$mpg, d1$bw/2), col = 'green')
+lines(density(mtcars$mpg, d1$bw/5), col = 'blue')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-57-1.png" /></p>
+<h5 id="bivariate-multivariate-plots">Bivariate (Multivariate) Plots<a class="headerlink" href="#bivariate-multivariate-plots" title="Permanent link">&para;</a></h5>
+<p><strong>Plot, continuous/continuous</strong></p>
+<pre><code class="r">plot(mpg, hp, main = 'Title', xlab = 'miles per gallon', ylab = 'horsepowers')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-58-1.png" /></p>
+<p><strong>Plot, continuous/categorical</strong></p>
+<pre><code class="r">plot(mpg, cyl, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-59-1.png" /></p>
+<p><strong>Plot options</strong></p>
+<pre><code class="r">plot(wt, mpg, main = 'Title', xlab = 'weight', ylab = 'miles per gallon ')
+
+abline(lm(mpg ~ wt), col = 'red') # regression
+lines(lowess(wt, mpg), col = 'blue') # lowess line
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-60-1.png" /></p>
+<p><strong>SmoothScatter; continuous/continuous</strong></p>
+<pre><code class="r">smoothScatter(mpg, hp, main = 'Title', xlab = 'miles per gallon', ylab = 'horsepowers')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-61-1.png" /></p>
+<p><strong>Sunflowerplot; categorical/categorical</strong></p>
+<p>Special symbols at each location: one observation = one dot; more<br />
+observations = cross, star, etc.</p>
+<pre><code class="r">sunflowerplot(gear, cyl, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-62-1.png" /></p>
+<p><strong>Boxplot</strong></p>
+<pre><code class="r">boxplot(mpg ~ cyl, main = 'Title',   xlab = 'cylinders', ylab = 'miles per gallon') 
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-63-1.png" /></p>
+<p>Colors.</p>
+<pre><code class="r">library(RColorBrewer)
+
+par(mfrow = c(1, 2))
+
+boxplot(iris$Sepal.Length, col = 'red')
+boxplot(iris$Sepal.Length ~ iris$Species, col = topo.colors(3))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-64-1.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<pre><code class="r">library(dplyr)
+
+data(Pima.tr2, package = 'MASS')
+
+PimaV &lt;- select(Pima.tr2, glu:age)
+boxplot(scale(PimaV), pch = 16, outcol = 'red')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-65-1.png" /></p>
+<p><strong>Boxplot options</strong></p>
+<pre><code class="r">four &lt;- subset(mpg, cyl == 4)
+six &lt;- subset(mpg, cyl == 6)
+eight &lt;- subset(mpg, cyl == 8)
+
+boxplot(four, six, eight, main = 'Title', ylab = 'miles per gallon')
+
+axis(1, at = c(1, 2, 3), labels = c('4 Cyl', '6 Cyl', '8 Cyl'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-66-1.png" /></p>
+<p><strong>Dotchart</strong></p>
+<pre><code class="r">counts &lt;- table(gear, cyl)
+counts
+</code></pre>
+
+<pre><code>##     cyl
+## gear  4  6  8
+##    3  1  2 12
+##    4  8  4  0
+##    5  2  1  2
+</code></pre>
+<pre><code class="r">dotchart(counts, main = 'Title', xlab = 'count', ylab = 'cylinders/gearbox')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-67-1.png" /></p>
+<pre><code class="r">counts &lt;- table(cyl, gear)
+counts
+</code></pre>
+
+<pre><code>##    gear
+## cyl  3  4  5
+##   4  1  8  2
+##   6  2  4  1
+##   8 12  0  2
+</code></pre>
+<pre><code class="r">dotchart(counts, main = 'Title', xlab = 'count', ylab = 'gearbox/cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-68-1.png" /></p>
+<p><strong>Barplot with its options</strong></p>
+<p>Vertical or horizontal. The legend as well can be horizontal or<br />
+vertical.</p>
+<pre><code class="r">counts &lt;- table(gear, cyl)
+counts
+</code></pre>
+
+<pre><code>##     cyl
+## gear  4  6  8
+##    3  1  2 12
+##    4  8  4  0
+##    5  2  1  2
+</code></pre>
+<pre><code class="r">barplot(counts, main = 'Title', xlab = 'cylinders', ylab = 'count', ylim = c(0, 20), col = terrain.colors(3))
+
+legend('topleft', inset = .04, title = 'gearbox',
+   c('3','4','5'), fill = terrain.colors(3), horiz = TRUE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-69-1.png" /></p>
+<pre><code class="r">counts &lt;- table(gear, cyl)
+counts
+</code></pre>
+
+<pre><code>##     cyl
+## gear  4  6  8
+##    3  1  2 12
+##    4  8  4  0
+##    5  2  1  2
+</code></pre>
+<pre><code class="r">barplot(counts, main = 'Title', xlab = 'cylinders', ylab = 'count', ylim = c(0, 25), col = terrain.colors(3), legend = rownames(counts))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-70-1.png" /></p>
+<pre><code class="r">counts &lt;- table(gear, cyl)
+counts
+</code></pre>
+
+<pre><code>##     cyl
+## gear  4  6  8
+##    3  1  2 12
+##    4  8  4  0
+##    5  2  1  2
+</code></pre>
+<pre><code class="r">barplot(counts, main = 'Title', xlab = 'cylinders', ylab = 'count', ylim = c(0, 20), col = terrain.colors(3), legend = rownames(counts), beside = TRUE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-71-1.png" /></p>
+<p><strong>Spineplot</strong></p>
+<p>&lsquo;Count&rsquo; = blocks; categorical (with factors).</p>
+<pre><code class="r">cyl2 &lt;- as.factor(cyl) # mandatory for the y
+gear2 &lt;- as.factor(gear)
+
+spineplot(gear2, cyl2, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-72-1.png" /></p>
+<p>Count = blocks; continuous.</p>
+<pre><code class="r">spineplot(mpg, cyl2, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-73-1.png" /></p>
+<p><strong>Mosaicplot</strong></p>
+<p>Count = blocks.</p>
+<pre><code class="r">counts &lt;- table(gear, cyl)
+counts
+</code></pre>
+
+<pre><code>##     cyl
+## gear  4  6  8
+##    3  1  2 12
+##    4  8  4  0
+##    5  2  1  2
+</code></pre>
+<pre><code class="r">mosaicplot(counts, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-74-1.png" /></p>
+<h5 id="multivariate-plots">Multivariate Plots<a class="headerlink" href="#multivariate-plots" title="Permanent link">&para;</a></h5>
+<p><strong>Pairs</strong></p>
+<pre><code class="r">pairs( ~mpg + disp + hp)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-75-1.png" /></p>
+<p><strong>Coplot</strong></p>
+<pre><code class="r">coplot(mpg ~ hp | wt)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-76-1.png" /></p>
+<p><strong>Correlograms</strong></p>
+<pre><code class="r">library(corrgram)
+
+corrgram(mtcars, order = TRUE, lower.panel = panel.shade, upper.panel=panel.pie, text.panel = panel.txt, main = 'Car Milage Data in PC2/PC1 Order')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-77-1.png" /></p>
+<p><strong>Plot a dataset with colors</strong></p>
+<pre><code class="r">library(RColorBrewer)
+
+plot(iris, col = brewer.pal(3, 'Set1'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-78-1.png" /></p>
+<p><strong>Stars</strong></p>
+<p>The star branches are explanatory; be careful with the interpretation!<br />
+Well-advised for visual and pattern exploration.</p>
+<pre><code class="r">mtcars[1:4, c(1, 4, 6)]
+</code></pre>
+
+<pre><code>##                 mpg  hp    wt
+## Mazda RX4      21.0 110 2.620
+## Mazda RX4 Wag  21.0 110 2.875
+## Datsun 710     22.8  93 2.320
+## Hornet 4 Drive 21.4 110 3.215
+</code></pre>
+<pre><code class="r">stars(mtcars[1:4, c(1, 4, 6)])
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-79-1.png" /></p>
+<p><strong>Trivariate plots</strong></p>
+<ul>
+<li><code>image()</code>.</li>
+<li><code>contour()</code>.</li>
+<li><code>filled.contour()</code>.</li>
+<li><code>persp()</code>.</li>
+<li><code>symbols()</code>.</li>
+</ul>
+<h5 id="times-series">Times Series<a class="headerlink" href="#times-series" title="Permanent link">&para;</a></h5>
+<p>Add packages: <code>zoo</code> and <code>xts</code>.</p>
+<p><strong>Basics</strong></p>
+<pre><code class="r">plot(AirPassengers, type = 'l')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-80-1.png" /></p>
+<p><strong>Change the <code>type =</code></strong></p>
+<pre><code class="r">y1 &lt;- rnorm(100)
+
+par(mfrow = c(2, 1))
+
+plot(y1, type = 'p', main = 'p vs l')
+plot(y1, type = 'l')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-81-1.png" /></p>
+<pre><code class="r">plot(y1, type = 'l', main = 'l vs h')
+plot(y1, type = 'h')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-81-2.png" /></p>
+<pre><code class="r">plot(y1, type = 'l', lty = 3, main = 'l 3 vs o')
+plot(y1, type = 'o')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-81-3.png" /></p>
+<pre><code class="r">plot(y1, type = 'b', main = 'b vs c')
+plot(y1, type = 'c')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-81-4.png" /></p>
+<pre><code class="r">plot(y1, type = 's', main = 's vs S')
+plot(y1, type = 'S')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-81-5.png" /></p>
+<pre><code class="r"># reverse
+par(mfrow = c(1, 1))
+</code></pre>
+
+<p><strong>Add a box</strong></p>
+<pre><code class="r">y1 &lt;- rnorm(100)
+y2 &lt;- rnorm(100)
+
+par(mfrow = (c(2, 1)))
+
+plot(y1, type = 'l', axes = FALSE, xlab = '', ylab = '', main = '')
+
+box(col = 'gray')
+
+lines(x = c(20, 20, 40, 40), y = c(-7, max(y1), max(y1), -7), lwd = 3, col = 'gray')
+
+plot(y2, type = 'l', axes = FALSE, xlab = '', ylab = '', main = '')
+
+box(col = 'gray')
+
+lines(x = c(20, 20, 40, 40), y = c(7, min(y2), min(y2), 7), lwd = 3, col = 'gray')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-82-1.png" /></p>
+<pre><code class="r"># reverse
+par(mfrow = c(1,1))
+</code></pre>
+
+<p><strong>Add lines and text within the plot</strong></p>
+<pre><code class="r">y1 &lt;- rnorm(100)
+
+# x goes from 0 to 100
+# xaxt = 'n' remove the x ticks
+plot(y1, type = 'l', lwd = 2, lty = 'longdash', main = 'Title', ylab = 'y', xlab = 'time', xaxt = 'n')
+
+abline(h = 0, lty = 'longdash')
+
+abline(v = 20, lty = 'longdash')
+abline(v = 50, lty = 'longdash')
+abline(v = 95, lty = 'longdash')
+
+text(17, 1.5, srt = 90, adj = 0, labels = 'Tag 1', cex = 0.8)
+text(47, 1.5, srt = 90, adj = 0, labels = 'Tag a', cex = 0.8)
+text(92, 1.5, srt = 90, adj = 0, labels = 'Tag alpha', cex = 0.8)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-83-1.png" /></p>
+<p><strong>A comprehensive example</strong></p>
+<pre><code class="r"># new data
+head(Orange)
+</code></pre>
+
+<pre><code>##   Tree  age circumference
+## 1    1  118            30
+## 2    1  484            58
+## 3    1  664            87
+## 4    1 1004           115
+## 5    1 1231           120
+## 6    1 1372           142
+</code></pre>
+<pre><code class="r"># convert factor to numeric for convenience
+Orange$Tree &lt;- as.numeric(Orange$Tree)
+ntrees &lt;- max(Orange$Tree)
+
+# get the range for the x and y axis
+xrange &lt;- range(Orange$age)
+yrange &lt;- range(Orange$circumference)
+
+# set up the plot
+plot(xrange, yrange, type = 'n', xlab = 'Age (days)',
+   ylab = 'Circumference (mm)' )
+colors &lt;- rainbow(ntrees)
+linetype &lt;- c(1:ntrees)
+plotchar &lt;- seq(18, 18 + ntrees, 1)
+
+# add lines
+for (i in 1:ntrees) {
+  tree &lt;- subset(Orange, Tree == i)
+  lines(tree$age, tree$circumference, type = 'b', lwd = 1.5,
+    lty = linetype[i], col = colors[i], pch = plotchar[i])
+}
+
+# add a title and subtitle
+title('Tree Growth', 'example of line plot')
+
+# add a legend
+legend(xrange[1], yrange[2], 1:ntrees, cex = 0.8, col = colors,
+   pch = plotchar, lty = linetype, title = 'Tree')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-85-1.png" /></p>
+<p><strong>Change <code>lty =</code></strong></p>
+<p><img alt="" src="../lty.png" /></p>
+<h5 id="regressions-and-residual-plots">Regressions and Residual Plots<a class="headerlink" href="#regressions-and-residual-plots" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># first
+regr &lt;- lm(mpg ~ hp)
+
+summary(regr)
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ hp)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.7121 -2.1122 -0.8854  1.5819  8.2360 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 30.09886    1.63392  18.421  &lt; 2e-16 ***
+## hp          -0.06823    0.01012  -6.742 1.79e-07 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 3.863 on 30 degrees of freedom
+## Multiple R-squared:  0.6024, Adjusted R-squared:  0.5892 
+## F-statistic: 45.46 on 1 and 30 DF,  p-value: 1.788e-07
+</code></pre>
+<pre><code class="r">plot(mpg ~ hp)
+abline(regr)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-86-1.png" /></p>
+<pre><code class="r">par(mfrow = c(2, 2))
+
+# then
+plot(regr)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-86-2.png" /></p>
+<pre><code class="r"># reverse
+par(mfrow = c(1, 1))
+</code></pre>
+
+<h4 id="the-lattice-and-latticeextra-packages">The <code>lattice</code> and <code>latticeExtra</code> Packages<a class="headerlink" href="#the-lattice-and-latticeextra-packages" title="Permanent link">&para;</a></h4>
+<pre><code class="r">library(lattice)
+</code></pre>
+
+<h5 id="coloring">Coloring<a class="headerlink" href="#coloring" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># Show the default settings
+show.settings()
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-88-1.png" /></p>
+<pre><code class="r"># Save the default theme
+mytheme &lt;- trellis.par.get()
+
+# Turn the B&amp;W
+trellis.par.set(canonical.theme(color = FALSE))
+show.settings()
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-88-2.png" /></p>
+<h5 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h5>
+<ul>
+<li><a href="http://science.nature.nps.gov/im/datamgmt/statistics/r/graphics/lattice.cfm">National Park Service, Advanced<br />
+    Graphics (Lattice)</a></li>
+<li><a href="https://www.stat.auckland.ac.nz/~ihaka/787/lectures-trellis.pdf">Treillis<br />
+    Plots</a></li>
+</ul>
+<h5 id="a-note-on-reordering-the-levels-factors">A note on reordering the levels (factors)<a class="headerlink" href="#a-note-on-reordering-the-levels-factors" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># start
+cyl &lt;- mtcars$cyl
+cyl &lt;- as.factor(cyl)
+cyl
+</code></pre>
+
+<pre><code>##  [1] 6 6 4 6 8 6 8 4 4 6 6 8 8 8 8 8 8 4 4 4 4 8 8 8 8 4 4 4 8 6 8 4
+## Levels: 4 6 8
+</code></pre>
+<pre><code class="r">levels(cyl)
+</code></pre>
+
+<pre><code>## [1] "4" "6" "8"
+</code></pre>
+<pre><code class="r"># option 1
+cyl &lt;- factor(cyl, levels = c('8', '6', '4'))
+# or levels = 3:1
+# or levels = letters[3:1]
+levels(cyl)
+</code></pre>
+
+<pre><code>## [1] "8" "6" "4"
+</code></pre>
+<pre><code class="r">cyl &lt;- mtcars$cyl
+cyl &lt;- as.factor(cyl)
+# option 2
+cyl &lt;- reorder(cyl, new.order = 3:1)
+levels(cyl)
+</code></pre>
+
+<pre><code>## [1] "8" "6" "4"
+</code></pre>
+<pre><code class="r">library(lattice)
+
+# normalized x-axis for comparison
+barchart(Class ~ Freq | Sex + Age, data = as.data.frame(Titanic), groups = Survived, stack = TRUE, layout = c(4, 1), auto.key = list(title = 'Survived', columns = 2))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-91-1.png" /></p>
+<pre><code class="r"># free x-axis
+barchart(Class ~ Freq | Sex + Age, data = as.data.frame(Titanic), groups = Survived, stack = TRUE, layout = c(4, 1), auto.key = list(title = 'Survived', columns = 2), scales = list(x = 'free'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-91-2.png" /></p>
+<pre><code class="r"># or
+bc.titanic &lt;- barchart(Class ~ Freq | Sex + Age, data = as.data.frame(Titanic), groups = Survived, stack = TRUE, layout = c(4, 1), auto.key = list(title = 'Survived', columns = 2), scales = list(x = 'free'))
+
+bc.titanic
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-91-3.png" /></p>
+<pre><code class="r"># add bg grid
+update(bc.titanic, panel = function(...) {
+  panel.grid(h = 0, v = -1)
+  panel.barchart(...)
+})
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-91-4.png" /></p>
+<pre><code class="r"># remove lines
+update(bc.titanic, panel = function(...) {
+  panel.barchart(..., border = 'transparent')
+})
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-91-5.png" /></p>
+<pre><code class="r"># or
+update(bc.titanic, border = 'transparent')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-91-6.png" /></p>
+<pre><code class="r">Titanic1 &lt;- as.data.frame(as.table(Titanic[, , 'Adult' ,]))
+Titanic1
+</code></pre>
+
+<pre><code>##    Class    Sex Survived Freq
+## 1    1st   Male       No  118
+## 2    2nd   Male       No  154
+## 3    3rd   Male       No  387
+## 4   Crew   Male       No  670
+## 5    1st Female       No    4
+## 6    2nd Female       No   13
+## 7    3rd Female       No   89
+## 8   Crew Female       No    3
+## 9    1st   Male      Yes   57
+## 10   2nd   Male      Yes   14
+## 11   3rd   Male      Yes   75
+## 12  Crew   Male      Yes  192
+## 13   1st Female      Yes  140
+## 14   2nd Female      Yes   80
+## 15   3rd Female      Yes   76
+## 16  Crew Female      Yes   20
+</code></pre>
+<pre><code class="r">barchart(Class ~ Freq | Sex, Titanic1, groups = Survived, stack = TRUE, auto.key = list(title = 'Survived', columns = 2))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-92-1.png" /></p>
+<pre><code class="r">Titanic2 &lt;- reshape(Titanic1, direction = 'wide', v.names = 'Freq', idvar = c('Class', 'Sex'), timevar = 'Survived')
+
+names(Titanic2) &lt;- c('Class', 'Sex', 'Dead', 'Alive')
+
+barchart(Class ~ Dead + Alive | Sex, Titanic2, stack = TRUE, auto.key = list(columns = 2))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-92-2.png" /></p>
+<h5 id="uni-bi-multivariate-plots">Uni-, Bi-, Multivariate Plots<a class="headerlink" href="#uni-bi-multivariate-plots" title="Permanent link">&para;</a></h5>
+<p><strong>Barchart</strong></p>
+<p>Like <code>barplot()</code>.</p>
+<pre><code class="r"># y ~ x
+barchart(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-93-1.png" /></p>
+<pre><code class="r"># y ~ x
+barchart(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', horizontal = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-94-1.png" /></p>
+<pre><code class="r">barchart(VADeaths, groups = FALSE, layout = c(1, 4), aspect = 0.7, reference =FALSE, main = 'Title', xlab = 'rate per 100')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-95-1.png" /></p>
+<pre><code class="r">data(postdoc, package = 'latticeExtra')
+
+barchart(prop.table(postdoc, margin = 1), xlab = 'Proportion', auto.key = list(adj = 1))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-96-1.png" /></p>
+<p><strong>Change <code>layout = c(x, y, page)</code></strong></p>
+<pre><code class="r">barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'horsepowers', ylab = 'cylinders - miles per gallon', layout = c(1,3))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-97-1.png" /></p>
+<pre><code class="r">barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'cylinders - horsepowers', ylab = 'miles per gallon', layout = c(3,1))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-98-1.png" /></p>
+<p><strong>Change <code>aspect = 1</code></strong></p>
+<p><code>1</code> for square.</p>
+<pre><code class="r">barchart(mpg ~ hp | factor(cyl), main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-99-1.png" /></p>
+<p><strong>Colors</strong></p>
+<pre><code class="r">barchart(mpg ~ hp, group = cyl, auto.key = list(space = 'right'), main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-100-1.png" /></p>
+<ul>
+<li><code>shingle()</code>; control the ranges.</li>
+<li><code>equal.count()</code>; grid.</li>
+</ul>
+<p><strong>Dotplot</strong></p>
+<p>Like <code>dotchart()</code>.</p>
+<pre><code class="r">dotplot(mpg, main = 'Title', xlab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-101-1.png" /></p>
+<pre><code class="r">dotplot(factor(cyl) ~ mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-102-1.png" /></p>
+<pre><code class="r">dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'gearbox - miles per gallon', ylab = 'cylinders', layout = c(3,1))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-103-1.png" /></p>
+<pre><code class="r">dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), aspect = 0.3)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-104-1.png" /></p>
+<pre><code class="r">dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), aspect = 0.3, origin = 0)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-105-1.png" /></p>
+<pre><code class="r">dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), aspect = 0.3, origin = 0, type = c('p', 'h'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-106-1.png" /></p>
+<p>Set <code>auto.key</code>.</p>
+<pre><code class="r"># maybe we'll want this later
+old.pars &lt;- trellis.par.get()
+
+#trellis.par.set(superpose.symbol = list(pch = c(1,3), col = 12:14))
+
+trellis.par.set(superpose.symbol = list(pch = c(1,3), col = 1))
+
+# Optionally put things back how they were
+#trellis.par.set(old.pars)
+</code></pre>
+
+<p>Use <code>auto.key</code>.</p>
+<pre><code class="r">dotplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3), groups = vs, auto.key = list(space = 'right'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-108-1.png" /></p>
+<pre><code class="r">trellis.par.set(old.pars)
+</code></pre>
+
+<pre><code class="r">trellis.par.set(superpose.symbol = list(pch = c(1,3), col = 1))
+
+dotplot(variety ~ yield | site, barley, layout = c(1, 6), aspect = c(0.7), groups = year, auto.key = list(space = 'right'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-109-1.png" /></p>
+<pre><code class="r">trellis.par.set(old.pars)
+</code></pre>
+
+<p>Vertical.</p>
+<pre><code class="r">dotplot(mpg ~ factor(cyl) | factor(gear), main = 'Title', xlab = 'cylinders', ylab = 'gearbox - miles per gallon', layout = c(1,3), aspect = 0.3)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-110-1.png" /></p>
+<pre><code class="r">library(readr)
+density &lt;- read_csv('density.csv')
+density$Density &lt;- as.numeric(density$Density)
+
+dotplot(reorder(MetropolitanArea, Density) ~ Density, density, type = c('p', 'h'), main = 'Title', xlab = 'Population Density (pop / sq.mi)')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-111-1.png" /></p>
+<pre><code class="r">dotplot(reorder(MetropolitanArea, Density) ~ Density | Region, density, type = c('p', 'h'), strip = FALSE, strip.left = TRUE, layout = c(1, 3), scales = list(y = list(relation = 'free')), main = 'Title', xlab = 'Population Density (pop / sq.mi)')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-112-1.png" /></p>
+<p><strong>Stripplot</strong></p>
+<p>Like <code>stripchart()</code>.</p>
+<pre><code class="r">stripplot(mpg, main = 'Title', xlab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-113-1.png" /></p>
+<pre><code class="r">stripplot(factor(cyl) ~ mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-114-1.png" /></p>
+<pre><code class="r">stripplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'gearbox - miles per gallon', ylab = 'cylinders', layout = c(1,3))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-115-1.png" /></p>
+<pre><code class="r">stripplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'gearbox - miles per gallon', ylab = 'cylinders', layout = c(1,3), groups = vs, auto.key = list(space = 'right'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-116-1.png" /></p>
+<pre><code class="r">stripplot(mpg ~ factor(cyl) | factor(gear), main = 'Title', xlab = 'cylinders', ylab = 'gearbox - miles per gallon', layout = c(1,3))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-117-1.png" /></p>
+<p><strong>Histogram</strong></p>
+<p>Like <code>hist()</code>.</p>
+<pre><code class="r">histogram(mpg, main = 'Title', xlab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-118-1.png" /></p>
+<pre><code class="r">histogram(~mpg | factor(cyl), layout = c(1, 3), main = 'Title', xlab = 'miles per gallon', ylab = 'density')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-119-1.png" /></p>
+<p><strong>Densityplot</strong></p>
+<p>Like <code>plot.density()</code>.</p>
+<pre><code class="r">densityplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'density')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-120-1.png" /></p>
+<pre><code class="r">densityplot(~mpg | factor(cyl), layout = c(1, 3), main = 'Title', xlab = 'miles per gallon', ylab = 'density')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-121-1.png" /></p>
+<p><strong>ECDFplot</strong></p>
+<pre><code class="r">library(latticeExtra)
+
+ecdfplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = '')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-122-1.png" /></p>
+<p><strong>BWplot</strong></p>
+<p>Like <code>boxplot</code>.</p>
+<pre><code class="r">bwplot(mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'density')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-123-1.png" /></p>
+<pre><code class="r">bwplot(factor(cyl) ~ mpg, main = 'Title', xlab = 'miles per gallon', ylab = 'cylinders')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-124-1.png" /></p>
+<pre><code class="r">bwplot(factor(cyl) ~ mpg | factor(gear), main = 'Title', xlab = 'miles per gallon', ylab = 'gearbox - cylinders', layout = c(1,3))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-125-1.png" /></p>
+<pre><code class="r">bwplot(mpg ~ factor(cyl) | factor(gear), main = 'Title', xlab = 'gearbox - cylinders', ylab = 'miles per gallon', layout = c(3,1))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-126-1.png" /></p>
+<p><strong>QQmath</strong></p>
+<p>Like <code>qqnorm()</code>.</p>
+<pre><code class="r">qqmath(mpg, main = 'Title', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-127-1.png" /></p>
+<p><strong>XYplot</strong></p>
+<p>Like <code>plot()</code>.</p>
+<pre><code class="r">xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'horsepower', ylab = 'cylinders - miles per gallon', layout = c(1,3))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-128-1.png" /></p>
+<pre><code class="r">xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-129-1.png" /></p>
+<p><strong>XYplot options</strong></p>
+<pre><code class="r">xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-130-1.png" /></p>
+<pre><code class="r">xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1, scales = list(y = list(at = seq(10, 30, 10))))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-131-1.png" /></p>
+<pre><code class="r">meanmpg &lt;- mean(mpg)
+
+xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1, panel = function(...) {
+  panel.xyplot(...)
+  panel.abline(h = meanmpg, lty = 'dashed')
+  panel.text(450, meanmpg + 1, 'avg', adj = c(1,  0), cex = 0.7)
+})
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-132-1.png" /></p>
+<pre><code class="r">xyplot(mpg ~ disp | factor(cyl), main = 'Title', xlab = 'cylinder - horsepowers', ylab = 'miles per gallon', layout = c(3,1), aspect = 1, panel = function(x, y, ...) {
+    panel.lmline(x, y)
+    panel.xyplot(x, y, ...)
+})
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-133-1.png" /></p>
+<ul>
+<li><code>panel.points()</code>.</li>
+<li><code>panel.lines()</code>.</li>
+<li><code>panel.segments()</code>.</li>
+<li><code>panel.arrows()</code>.</li>
+<li><code>panel.rect()</code>.</li>
+<li><code>panel.polygon()</code>.</li>
+<li><code>panel.text()</code>.</li>
+<li><code>panel.abline()</code>.</li>
+<li><code>panel.lmline()</code>.</li>
+<li><code>panel.xyplot()</code>.</li>
+<li><code>panel.curve()</code>.</li>
+<li><code>panel.rug()</code>.</li>
+<li><code>panel.grid()</code>.</li>
+<li><code>panel.bwplot()</code>.</li>
+<li><code>panel.histogram()</code>.</li>
+<li><code>panel.loess()</code>.</li>
+<li><code>panel.violin()</code>.</li>
+<li><code>panel.smoothScatter()</code>.</li>
+<li>&hellip;</li>
+<li><code>par.settings</code>.</li>
+<li>&hellip;</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(lattice)
+
+data(SeatacWeather, package = 'latticeExtra')
+
+xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'l', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-134-1.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'p', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-1.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'l', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-2.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'o', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-3.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'r', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-4.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'g', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-5.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 's', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-6.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'S', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-7.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'h', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-8.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'a', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-9.png" /></p>
+<pre><code class="r">xyplot(min.temp + max.temp + precip ~ day | month, ylab = 'Temperature and Rainfall', data = SeatacWeather, layout = c(3,1), type = 'smooth', lty = 1, col = 'black')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-135-10.png" /></p>
+<pre><code class="r">xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-136-1.png" /></p>
+<pre><code class="r">xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', type = 'o')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-136-2.png" /></p>
+<pre><code class="r">xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon', type = 'o', pch = 16, lty = 'dashed')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-136-3.png" /></p>
+<pre><code class="r">xyplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-137-1.png" /></p>
+<pre><code class="r">data(USAge.df, package = 'latticeExtra')
+
+xyplot(Population ~ Age | factor(Year), USAge.df, groups = Sex, type = c('l', 'g'), auto.key = list(points = FALSE, lines = TRUE, columns = 2), aspect = 'xy', ylab = 'Population (millions)', subset = Year %in% seq(1905, 1975, by = 10))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-138-1.png" /></p>
+<pre><code class="r">xyplot(Population ~ Year | factor(Age), USAge.df, groups = Sex, type = 'l', strip = FALSE, strip.left = TRUE, layout = c(1, 3), ylab = 'Population (millions)', auto.key = list(lines = TRUE, points = FALSE, columns = 2), subset = Age %in% c(0, 10, 20))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-139-1.png" /></p>
+<pre><code class="r">data(USCancerRates, package = 'latticeExtra')
+
+xyplot(rate.male ~ rate.female | state, USCancerRates, aspect = 'iso', pch = '.', cex = 2, index.cond = function(x, y) { median(y - x, na.rm = TRUE) }, scales = list(log = 2, at = c(75, 150, 300, 600)), panel = function(...) { 
+  panel.grid(h = -1, v = -1)
+  panel.abline(0, 1)
+  panel.xyplot(...)
+  },
+  xlab = 'a',
+  ylab = 'b')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-140-1.png" /></p>
+<pre><code class="r">data(biocAccess, package = 'latticeExtra')
+
+baxy &lt;- xyplot(log10(counts) ~ hour | month + weekday, biocAccess, type = c('p', 'a'), as.table = TRUE, pch = '.', cex = 2, col.line = 'black')
+
+baxy
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-141-1.png" /></p>
+<pre><code class="r">library(latticeExtra)
+useOuterStrips(baxy)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-141-2.png" /></p>
+<pre><code class="r">xyplot(sunspot.year, aspect = 'xy', strip = FALSE, strip.left = TRUE, cut = list(number = 4, overlap = 0.05))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-142-1.png" /></p>
+<pre><code class="r">data(biocAccess, package = 'latticeExtra')
+
+ssd &lt;- stl(ts(biocAccess$counts[1:(24 * 30 *2)], frequency = 24), 'periodic')
+
+xyplot(ssd, main = 'Title', xlab = 'Time (Days)')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-143-1.png" /></p>
+<p><strong>Splom</strong></p>
+<pre><code class="r">splom(mtcars[c(1, 3, 6)], groups = cyl, data = mtcars, panel = panel.superpose, key = list(title = 'Three Cylinder Options', columns = 3, points = list(text = list(c('4 Cylinder', '6 Cylinder', '8 Cylinder')))))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-144-1.png" /></p>
+<pre><code class="r">trellis.par.set(superpose.symbol = list(pch = c(1,3, 22), col = 1, alpha = 0.5))
+
+splom(~data.frame(mpg, disp, hp, drat, wt, qsec), data = mtcars, groups = cyl, pscales = 0, varnames = c('miles\nper\ngallon', 'displacement\n(cu.in(', 'horsepower', 'rear\naxle\nratio', 'weight', '1/4\nmile\ntime'), auto.key = list(columns = 3, title = 'Title'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-145-1.png" /></p>
+<pre><code class="r">trellis.par.set(old.pars)
+</code></pre>
+
+<pre><code class="r">splom(USArrests)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-146-1.png" /></p>
+<pre><code class="r">splom(~USArrests[c(3,1,2,4)] | state.region, pscales = 0, type = c('g', 'p', 'smooth'))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-147-1.png" /></p>
+<p><strong>Parallel plot</strong></p>
+<p>For multivariate continuous data.</p>
+<pre><code class="r">parallelplot(~iris[1:4])
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-148-1.png" /></p>
+<pre><code class="r">parallelplot(~iris[1:4], horizontal.axis = FALSE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-148-2.png" /></p>
+<pre><code class="r">parallelplot(~iris[1:4], scales = list(x = list(rot = 90)))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-148-3.png" /></p>
+<pre><code class="r">parallelplot(~iris[1:4] | Species, iris)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-148-4.png" /></p>
+<pre><code class="r">parallelplot(~iris[1:4], iris, groups = Species,
+             horizontal.axis = FALSE, scales = list(x = list(rot = 90)))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-148-5.png" /></p>
+<p><strong>Trivariate plots</strong></p>
+<p>Like <code>image()</code>, <code>contour()</code>, <code>filled.contour()</code>, <code>persp()</code>, <code>symbols()</code>.</p>
+<ul>
+<li><code>levelplot()</code>.</li>
+<li><code>contourplot()</code>.</li>
+<li><code>cloud()</code>.</li>
+<li><code>wireframe()</code>.</li>
+</ul>
+<h4 id="additional-packages">Additional Packages<a class="headerlink" href="#additional-packages" title="Permanent link">&para;</a></h4>
+<h5 id="the-sm-package-density">The <code>sm</code> Package (density)<a class="headerlink" href="#the-sm-package-density" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(sm)
+</code></pre>
+
+<p><strong>Density plot</strong></p>
+<pre><code class="r"># create value labels
+cyl.f &lt;- factor(cyl, levels = c(4, 6, 8), labels = c('4 cyl', '6 cyl', '8 cyl'))
+
+# plot densities
+sm.density.compare(mpg, cyl, xlab = 'miles per gallon')
+
+title(main = 'Title')
+
+# add legend via mouse click
+colfill &lt;- c(2:(2 + length(levels(cyl.f))))
+legend(25, 0.19, levels(cyl.f), fill = colfill) 
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-150-1.png" /></p>
+<h5 id="the-car-package-scatter">The <code>car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(car)
+</code></pre>
+
+<p><strong>Scatter plot</strong></p>
+<pre><code class="r">scatterplot(mpg ~ wt | cyl, data = mtcars,    xlab = 'weight', ylab = 'miles per gallon', labels = row.names(mtcars)) 
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-152-1.png" /></p>
+<p><strong>Splom</strong></p>
+<pre><code class="r">scatterplotMatrix( ~mpg + disp + drat + wt | cyl, data = mtcars, main = 'Title')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-153-1.png" /></p>
+<p><code>scatterplotMatrix == spm</code>.</p>
+<pre><code class="r">spm( ~mpg + disp + drat + wt | cyl, data = mtcars, main = 'Title')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-154-1.png" /></p>
+<h5 id="the-vioplot-package-boxplot">The <code>vioplot</code> Package (boxplot)<a class="headerlink" href="#the-vioplot-package-boxplot" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(vioplot)
+</code></pre>
+
+<p><strong>Violin boxplot</strong></p>
+<pre><code class="r">x1 &lt;- mpg[mtcars$cyl == 4]
+x2 &lt;- mpg[mtcars$cyl == 6]
+x3 &lt;- mpg[mtcars$cyl == 8]
+
+vioplot(x1, x2, x3, names = c('4 cyl', '6 cyl', '8 cyl'), col = 'green')
+
+title('Title')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-156-1.png" /></p>
+<h5 id="the-vcd-package-count-correlation-mosaic">The <code>vcd</code> Package (count, correlation, mosaic)<a class="headerlink" href="#the-vcd-package-count-correlation-mosaic" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(vcd)
+</code></pre>
+
+<p>The package provides a variety of methods for visualizing multivariate<br />
+categorical data.</p>
+<p><strong>Count</strong></p>
+<pre><code class="r">counts &lt;- table(gear, cyl)
+counts
+</code></pre>
+
+<pre><code>##     cyl
+## gear  8  6  4
+##    3 12  2  1
+##    4  0  4  8
+##    5  2  1  2
+</code></pre>
+<pre><code class="r">mosaic(counts, shade = TRUE, legend = TRUE) 
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-158-1.png" /></p>
+<p><strong>Correlation</strong></p>
+<pre><code class="r">counts &lt;- table(gear, cyl)
+counts
+</code></pre>
+
+<pre><code>##     cyl
+## gear  8  6  4
+##    3 12  2  1
+##    4  0  4  8
+##    5  2  1  2
+</code></pre>
+<pre><code class="r">assoc(counts, shade = TRUE)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-159-1.png" /></p>
+<p><strong>Mosaic</strong></p>
+<pre><code class="r">ucb &lt;- data.frame(UCBAdmissions)
+ucb &lt;- within(ucb, Accept &lt;- factor(Admit, levels = c('Rejected', 'Admitted')))
+
+library(vcd); library(grid)
+
+doubledecker(xtabs(Freq~ Dept + Gender + Accept, data = ucb), gp = gpar(fill = c('grey90', 'steelblue')))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-160-1.png" /></p>
+<pre><code class="r">data(Fertility, package = 'AER')
+
+doubledecker(morekids ~ age, data = Fertility, gp = gpar(fill = c('grey90', 'green')), spacing = spacing_equal(0))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-161-1.png" /></p>
+<pre><code class="r">doubledecker(morekids ~ gender1 + gender2, data = Fertility, gp = gpar(fill = c('grey90', 'green')))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-162-1.png" /></p>
+<pre><code class="r">doubledecker(morekids ~ age + gender1 + gender2, data = Fertility, gp = gpar(fill = c('grey90', 'green')), spacing = spacing_dimequal(c(0.1, 0, 0, 0)))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-163-1.png" /></p>
+<h5 id="the-hexbin-package-scatter">The <code>hexbin</code> Package (scatter)<a class="headerlink" href="#the-hexbin-package-scatter" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(hexbin)
+</code></pre>
+
+<p><strong>Scatter plot</strong></p>
+<pre><code class="r"># new data
+data(NHANES)
+
+# compare
+plot(Serum.Iron ~ Transferin, NHANES, main = 'Title', xlab = 'Transferin', ylab = 'Iron')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-165-1.png" /></p>
+<pre><code class="r"># with
+hexbinplot(Serum.Iron ~ Transferin, NHANES, main = 'Title', xlab = 'Transferin', ylab = 'Iron')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-165-2.png" /></p>
+<pre><code class="r">hexbinplot(mpg ~ hp, main = 'Title', xlab = 'horsepowers', ylab = 'miles per gallon')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-166-1.png" /></p>
+<pre><code class="r">x &lt;- rnorm(1000)
+y &lt;- rnorm(1000)
+
+bin &lt;- hexbin(x, y, xbins = 50)
+plot(bin, main = 'Title') 
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-167-1.png" /></p>
+<pre><code class="r">x &lt;- rnorm(1000)
+y &lt;- rnorm(1000)
+
+plot(x, y, main = 'Title', col =  rgb(0, 100, 0, 50, maxColorValue = 255), pch = 16)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-168-1.png" /></p>
+<pre><code class="r">data(Diamonds, package = 'Stat2Data')
+
+a = hexbin(Diamonds$PricePerCt, Diamonds$Carat, xbins = 40)
+
+library(RColorBrewer)
+
+plot(a)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-169-1.png" /></p>
+<p>Colors.</p>
+<pre><code class="r">rf &lt;- colorRampPalette(rev(brewer.pal(12, 'Set3')))
+
+hexbinplot(Diamonds$PricePerCt ~ Diamonds$Carat, colramp = rf)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-170-1.png" /></p>
+<p><strong>Mix <code>lattice</code> and <code>hexbin</code></strong></p>
+<pre><code class="r">data(gvhd10, package = 'latticeExtra')
+
+xyplot(asinh(SSC.H) ~ asinh(FL2.H), gvhd10, aspect = 1, panel = panel.hexbinplot, .aspect.ratio = 1, trans = sqrt)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-171-1.png" /></p>
+<pre><code class="r">xyplot(asinh(SSC.H) ~ asinh(FL2.H) | Days, gvhd10, aspect = 1, panel = panel.hexbinplot, .aspect.ratio = 1, trans =sqrt)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-172-1.png" /></p>
+<h5 id="the-car-package-scatter_1">The <code>car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter_1" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(car)
+</code></pre>
+
+<p><strong>Scatter plot</strong></p>
+<pre><code class="r">scatterplotMatrix(~mpg + disp + drat + wt | cyl, data = mtcars,
+   main = 'Three Cylinder Options')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-174-1.png" /></p>
+<h5 id="the-scatterplot3d-package">The <code>scatterplot3d</code> Package<a class="headerlink" href="#the-scatterplot3d-package" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(scatterplot3d)
+</code></pre>
+
+<p><strong>Scatter plot</strong></p>
+<pre><code class="r">scatterplot3d(wt, disp, mpg, main = 'Title')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-176-1.png" /></p>
+<pre><code class="r">scatterplot3d(wt, disp, mpg, pch = 16, highlight.3d = TRUE, type = 'h', main = 'Title')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-177-1.png" /></p>
+<pre><code class="r">s3d &lt;- scatterplot3d(wt, disp, mpg, pch = 16, highlight.3d = TRUE, type = 'h', main = '   Title')
+
+fit &lt;- lm(mpg ~ wt + disp)
+
+s3d$plane3d(fit)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-178-1.png" /></p>
+<h5 id="the-rgl-package-interactive">The <code>rgl</code> Package (interactive)<a class="headerlink" href="#the-rgl-package-interactive" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(rgl)
+</code></pre>
+
+<p><strong>Interactive plot</strong></p>
+<p>The plot will open a new window.</p>
+<pre><code class="r">plot3d(wt, disp, mpg, col = 'red', size = 3)
+</code></pre>
+
+<h5 id="the-cluster-package-dendrogram">The <code>cluster</code> Package (dendrogram)<a class="headerlink" href="#the-cluster-package-dendrogram" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(cluster)
+</code></pre>
+
+<p><strong>Dendrogram</strong></p>
+<p>Use the <code>iris</code> dataset.</p>
+<pre><code class="r">subset &lt;- sample(1:150, 20)
+cS &lt;- as.character(Sp &lt;- iris$Species[subset])
+cS
+</code></pre>
+
+<pre><code>##  [1] "setosa"     "versicolor" "setosa"     "virginica"  "virginica" 
+##  [6] "setosa"     "setosa"     "setosa"     "virginica"  "setosa"    
+## [11] "versicolor" "versicolor" "virginica"  "setosa"     "versicolor"
+## [16] "versicolor" "setosa"     "virginica"  "versicolor" "versicolor"
+</code></pre>
+<pre><code class="r">cS[Sp == 'setosa'] &lt;- 'S'
+cS[Sp == 'versicolor'] &lt;- 'V'
+cS[Sp == 'virginica'] &lt;- 'g'
+
+ai &lt;- agnes(iris[subset, 1:4])
+
+plot(ai, label = cS)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-182-1.png" /><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-182-2.png" /></p>
+<h5 id="the-extracat-package-splom">The <code>extracat</code> Package (splom)<a class="headerlink" href="#the-extracat-package-splom" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(extracat)
+</code></pre>
+
+<p><strong>Splom</strong></p>
+<p>For missing values. Binary matrix with reordering and filtering of rows<br />
+and columns. The x-axis shows the frequency of NA. The y-axis shows the<br />
+marginal distribution of NA.</p>
+<pre><code class="r"># example 1
+data(CHAIN, package = 'mi')
+
+visna(CHAIN, sort = 'b')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-184-1.png" /></p>
+<pre><code class="r">summary(CHAIN)
+</code></pre>
+
+<pre><code>##    log_virus           age            income          healthy     
+##  Min.   : 0.000   Min.   :21.00   Min.   : 1.000   Min.   :16.67  
+##  1st Qu.: 0.000   1st Qu.:37.00   1st Qu.: 2.000   1st Qu.:35.00  
+##  Median : 0.000   Median :43.00   Median : 3.000   Median :45.37  
+##  Mean   : 4.324   Mean   :42.56   Mean   : 3.377   Mean   :44.40  
+##  3rd Qu.: 9.105   3rd Qu.:48.00   3rd Qu.: 5.000   3rd Qu.:54.89  
+##  Max.   :13.442   Max.   :70.00   Max.   :10.000   Max.   :70.11  
+##  NA's   :179      NA's   :24      NA's   :38       NA's   :24     
+##      mental           damage        treatment     
+##  Min.   :0.0000   Min.   :1.000   Min.   :0.0000  
+##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:0.0000  
+##  Median :0.0000   Median :4.000   Median :1.0000  
+##  Mean   :0.2717   Mean   :3.578   Mean   :0.8602  
+##  3rd Qu.:1.0000   3rd Qu.:5.000   3rd Qu.:2.0000  
+##  Max.   :1.0000   Max.   :5.000   Max.   :2.0000  
+##  NA's   :24       NA's   :63      NA's   :24
+</code></pre>
+<pre><code class="r"># example 2
+data(oly12, package = 'VGAMdata')
+
+oly12d &lt;- oly12[, names(oly12) != 'DOB']
+oly12a &lt;- oly12
+
+names(oly12a) &lt;- abbreviate(names(oly12), 3)
+
+visna(oly12a, sort = 'b')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-184-2.png" /></p>
+<pre><code class="r"># example 3
+data(freetrade, package = 'Amelia')
+
+freetrade &lt;- within(freetrade, land1 &lt;- reorder(country, tariff, function(x) sum(is.na(x))))
+
+fluctile(xtabs(is.na(tariff) ~ land1 + year, data = freetrade))
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-184-3.png" /></p>
+<pre><code>## viewport[base]
+</code></pre>
+<pre><code class="r"># example 4
+data(Pima.tr2, package = 'MASS')
+
+visna(Pima.tr2, sort = 'b')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-184-4.png" /></p>
+<h5 id="the-ash-package-density">The <code>ash</code> Package (density)<a class="headerlink" href="#the-ash-package-density" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(ash)
+</code></pre>
+
+<p><strong>Density plot</strong></p>
+<pre><code class="r">plot(ash1(bin1(mtcars$mpg, nbin = 50)), type = 'l')
+</code></pre>
+
+<pre><code>## [1] "ash estimate nonzero outside interval ab"
+</code></pre>
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-186-1.png" /></p>
+<h5 id="the-kernsmooth-package-density">The <code>KernSmooth</code> Package (density)<a class="headerlink" href="#the-kernsmooth-package-density" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(KernSmooth)
+</code></pre>
+
+<p><strong>Density plot</strong></p>
+<pre><code class="r">with(mtcars, {
+  hist(mpg, freq = FALSE, main = '', col = 'bisque2', ylab = '')
+  lines(density(mpg), lwd = 2)
+  ks1 &lt;- bkde(mpg, bandwidth = dpik(mpg))
+  lines(ks1, col = 'red', lty = 5, lwd = 2)})
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-188-1.png" /></p>
+<h5 id="the-crorplot-package-correlation">The <code>crorplot</code> Package (correlation)<a class="headerlink" href="#the-crorplot-package-correlation" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(corrplot)
+</code></pre>
+
+<p><strong>Splom</strong></p>
+<pre><code class="r"># Create a correlation matrix for the dataset (9-14 are the '2' variables only)
+correlations &lt;- cor(mtcars)
+
+corrplot(correlations)
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-190-1.png" /></p>
+<h4 id="a-peek-at-mapping">A Peek at Mapping<a class="headerlink" href="#a-peek-at-mapping" title="Permanent link">&para;</a></h4>
+<pre><code class="r">devtools::install_github('rstudio/leaflet')
+</code></pre>
+
+<p>To find out the coordinates on a <a href="http://www.latlong.net/">map</a> (by<br />
+lat-long or address).</p>
+<pre><code class="r">library(magrittr)
+library(leaflet)
+
+# Add default OpenStreetMap map tiles
+m &lt;- leaflet() %&gt;% 
+  addTiles() %&gt;% 
+  addMarkers(lng = 20.01519, lat = -34.816300, popup = 'Africa Southern Tip')
+
+m
+</code></pre>
+
+<p><img alt="" src="../lagulhas.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Plot_snippets_-_ggplot2/" class="btn btn-neutral float-right" title="Plot Snippets - ggplot2">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Code___Plot_Chunk_Options/" class="btn btn-neutral" title="Code & Plot Chunk Options"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Code___Plot_Chunk_Options/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Plot_snippets_-_ggplot2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Intermediate R - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Intermediate R";
+    var mkdocs_page_input_path = "Intermediate_R.md";
+    var mkdocs_page_url = "/Intermediate_R/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Intermediate R</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-loops">2, Loops</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-functions">3, Functions</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#4-the-apply-family">4, The apply Family</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#5-utilities">5, Utilities</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Intermediate R</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#conditionals-and-control-flow">1, Conditionals and Control Flow</a></li>
+<li><a href="#loops">2, Loops</a></li>
+<li><a href="#functions">3, Functions</a></li>
+<li><a href="#the-apply-family">4, The <code>apply</code> Family</a></li>
+<li><a href="#utilities">5, Utilities</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets and results.</li>
+</ul>
+<hr />
+<h4 id="1-conditionals-and-control-flow">1, Conditionals and Control Flow<a class="headerlink" href="#1-conditionals-and-control-flow" title="Permanent link">&para;</a></h4>
+<p><strong>Equality</strong></p>
+<pre><code class="r"># Comparison of logicals
+TRUE == FALSE
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+<pre><code class="r"># Comparison of numerics
+(-6 * 14) != (17 - 101)
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+<pre><code class="r"># Comparison of character strings
+'useR' == 'user'
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+<pre><code class="r"># Compare a logical with a numeric
+TRUE == 1
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+<p><strong>Greater and less than</strong></p>
+<pre><code class="r"># Comparison of numerics
+(-6*5 + 2) &gt;= (-10 + 1)
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+<pre><code class="r"># Comparison of character strings
+'raining' &lt;= 'raining dogs'
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+<pre><code class="r"># Comparison of logicals
+TRUE &gt; FALSE
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+<p><strong>Compare vectors</strong></p>
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
+
+# Popular days
+linkedin &gt; 15
+</code></pre>
+
+<pre><code>## [1]  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE
+</code></pre>
+<pre><code class="r"># Quiet days
+linkedin &lt;= 5
+</code></pre>
+
+<pre><code>## [1] FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE
+</code></pre>
+<pre><code class="r"># LinkedIn more popular than Facebook
+linkedin &gt; facebook
+</code></pre>
+
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE
+</code></pre>
+<p><strong>Compare matrices</strong></p>
+<pre><code class="r">views &lt;- matrix(c(linkedin, facebook), nrow = 2, byrow = TRUE)
+
+# When does views equal 13?
+views == 13
+</code></pre>
+
+<pre><code>##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]
+## [1,] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+## [2,] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE
+</code></pre>
+<pre><code class="r"># When is views less than or equal to 14?
+views &lt;= 14
+</code></pre>
+
+<pre><code>##       [,1] [,2] [,3]  [,4] [,5]  [,6] [,7]
+## [1,] FALSE TRUE TRUE  TRUE TRUE FALSE TRUE
+## [2,] FALSE TRUE TRUE FALSE TRUE  TRUE TRUE
+</code></pre>
+<pre><code class="r"># How often does facebook equal or exceed linkedin times two?
+sum(facebook &gt;= linkedin * 2)
+</code></pre>
+
+<pre><code>## [1] 2
+</code></pre>
+<p><strong><code>&amp;</code> and <code>|</code></strong></p>
+<pre><code class="r"># The linkedin and last variable
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+last &lt;- tail(linkedin, 1)
+
+# Is last under 5 or above 10?
+last &lt; 5 | last &gt; 10
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+<pre><code class="r"># Is last between 15 (exclusive) and 20 (inclusive)?
+last &gt; 15 &amp; last &lt;= 20
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+<pre><code class="r"># Is last between 0 and 5 or between 10 and 15?
+(last &gt; 0 &amp; last &lt; 5) | (last &gt; 10 &amp; last &lt; 15)
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+<p><strong><code>&amp;</code> and <code>|</code> (2)</strong></p>
+<pre><code class="r"># linkedin exceeds 10 but facebook below 10
+linkedin &gt; 10 &amp; facebook &lt; 10
+</code></pre>
+
+<pre><code>## [1] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+</code></pre>
+<pre><code class="r"># When were one or both visited at least 12 times?
+linkedin &gt;= 12 | facebook &gt;= 12
+</code></pre>
+
+<pre><code>## [1]  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
+</code></pre>
+<pre><code class="r"># When is views between 11 (exclusive) and 14 (inclusive)?
+views &gt; 11 &amp; views &lt;= 14
+</code></pre>
+
+<pre><code>##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6] [,7]
+## [1,] FALSE FALSE  TRUE FALSE FALSE FALSE TRUE
+## [2,] FALSE FALSE FALSE FALSE FALSE  TRUE TRUE
+</code></pre>
+<p><strong>Blend it all together</strong></p>
+<pre><code class="r">library(XLConnectJars)
+library(XLConnect)
+</code></pre>
+
+<pre><code class="r"># Select the second column, named day2, from li_df: second
+second &lt;- li_df$day2
+
+# Build a logical vector, TRUE if value in second is extreme: extremes
+extremes &lt;- (second &gt; 25 | second &lt; 5)
+
+# Count the number of TRUEs in extremes
+sum(extremes)
+</code></pre>
+
+<pre><code>## [1] 16
+</code></pre>
+<p><strong>The <code>if</code> statement</strong></p>
+<pre><code class="r"># Variables related to your last day of recordings
+medium &lt;- 'LinkedIn'
+num_views &lt;- 14
+
+# Examine the if statement for medium
+if (medium == 'LinkedIn') {
+  print('Showing LinkedIn information')
+}
+</code></pre>
+
+<pre><code>## [1] "Showing LinkedIn information"
+</code></pre>
+<pre><code class="r"># Write the if statement for num_views
+if (num_views &gt; 15) {
+    print('You\'re popular!')
+}
+</code></pre>
+
+<p><strong>Add an <code>else</code></strong></p>
+<pre><code class="r"># Variables related to your last day of recordings
+medium &lt;- 'LinkedIn'
+num_views &lt;- 14
+
+# Control structure for medium
+if (medium == 'LinkedIn') {
+  print('Showing LinkedIn information')
+} else {
+    print('Unknown medium')
+}
+</code></pre>
+
+<pre><code>## [1] "Showing LinkedIn information"
+</code></pre>
+<pre><code class="r"># Control structure for num_views
+if (num_views &gt; 15) {
+  print('You\'re popular!')
+} else {
+    print('Try to be more visible!')
+}
+</code></pre>
+
+<pre><code>## [1] "Try to be more visible!"
+</code></pre>
+<p><strong>Customize further: <code>else if</code></strong></p>
+<pre><code class="r"># Variables related to your last day of recordings
+medium &lt;- 'LinkedIn'
+num_views &lt;- 14
+
+# Control structure for medium
+if (medium == 'LinkedIn') {
+  print('Showing LinkedIn information')
+} else if (medium == 'Facebook') {
+  print('Showing Facebook information')
+} else {
+  print('Unknown medium')
+}
+</code></pre>
+
+<pre><code>## [1] "Showing LinkedIn information"
+</code></pre>
+<pre><code class="r"># Control structure for num_views
+if (num_views &gt; 15) {
+  print('You\'re popular!')
+} else if (num_views &gt; 10 | num_views &lt;= 15) {
+  print('Your number of views is average')
+} else {
+  print('Try to be more visible!')
+}
+</code></pre>
+
+<pre><code>## [1] "Your number of views is average"
+</code></pre>
+<p><strong>Take control!</strong></p>
+<pre><code class="r"># Variables related to your last day of recordings
+li &lt;- 15
+fb &lt;- 9
+
+# Code the control-flow construct
+if (li &gt;= 15 &amp; fb &gt;= 15) {
+    sms &lt;- 2*(li + fb)
+} else if (li &lt; 10 &amp; fb &lt; 10) {
+    sms &lt;- (li + fb)/2
+} else {
+    sms &lt;- li + fb
+}
+
+# Print the resulting sms to the console
+sms
+</code></pre>
+
+<pre><code>## [1] 24
+</code></pre>
+<h4 id="2-loops">2, Loops<a class="headerlink" href="#2-loops" title="Permanent link">&para;</a></h4>
+<p><strong>Write a <code>while</code> loop</strong></p>
+<pre><code class="r"># Initialize the speed variable
+speed &lt;- 64
+
+# Code the while loop
+while (speed &gt; 30) {
+  print('Slow down!')
+  speed &lt;- speed - 7
+}
+</code></pre>
+
+<pre><code>## [1] "Slow down!"
+## [1] "Slow down!"
+## [1] "Slow down!"
+## [1] "Slow down!"
+## [1] "Slow down!"
+</code></pre>
+<pre><code class="r"># Print out the speed variable
+speed
+</code></pre>
+
+<pre><code>## [1] 29
+</code></pre>
+<p><strong>Throw in more conditionals</strong></p>
+<pre><code class="r"># Initialize the speed variable
+speed &lt;- 64
+
+# Extend/adapt the while loop
+while (speed &gt; 30) {
+  print(paste('Your speed is ', speed))
+  if (speed &gt; 48) {
+    print('Slow down big time!')
+    speed &lt;- speed - 11
+  } else {
+        print('Slow down!')
+        speed &lt;- speed - 6
+  }
+}
+</code></pre>
+
+<pre><code>## [1] "Your speed is  64"
+## [1] "Slow down big time!"
+## [1] "Your speed is  53"
+## [1] "Slow down big time!"
+## [1] "Your speed is  42"
+## [1] "Slow down!"
+## [1] "Your speed is  36"
+## [1] "Slow down!"
+</code></pre>
+<p><strong>Stop the <code>while</code> loop: <code>break</code></strong></p>
+<pre><code class="r"># Initialize the speed variable
+speed &lt;- 88
+while (speed &gt; 30) {
+  print(paste('Your speed is',speed))
+    # Break the while loop when speed exceeds 80
+  if (speed &gt; 80) {
+    break
+  } else if (speed &gt; 48) {
+    print('Slow down big time!')
+    speed &lt;- speed - 11
+  } else {
+    print('Slow down!')
+    speed &lt;- speed - 6
+  }
+}
+</code></pre>
+
+<pre><code>## [1] "Your speed is 88"
+</code></pre>
+<p><strong>Build a <code>while</code> loop from scratch</strong></p>
+<p><code>strsplit</code>; split up in a vector that contains separate letters.</p>
+<pre><code class="r"># Initialize i
+i &lt;- 1
+
+# Code the while loop
+while (i &lt;= 10) {
+  print(i * 3)
+  if ( (i * 3) %% 8 == 0) {
+    break
+  }
+  i &lt;- i + 1
+}
+</code></pre>
+
+<pre><code>## [1] 3
+## [1] 6
+## [1] 9
+## [1] 12
+## [1] 15
+## [1] 18
+## [1] 21
+## [1] 24
+</code></pre>
+<p><strong>Loop over a vector</strong></p>
+<pre><code class="r"># The linkedin vector
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+
+# Loop version 1
+for (lin in linkedin) {
+    print(lin)
+}
+</code></pre>
+
+<pre><code>## [1] 16
+## [1] 9
+## [1] 13
+## [1] 5
+## [1] 2
+## [1] 17
+## [1] 14
+</code></pre>
+<pre><code class="r"># Loop version 2
+for (i in 1:length(linkedin)) {
+    print(linkedin[i])
+}
+</code></pre>
+
+<pre><code>## [1] 16
+## [1] 9
+## [1] 13
+## [1] 5
+## [1] 2
+## [1] 17
+## [1] 14
+</code></pre>
+<p><strong>Loop over a list</strong></p>
+<p><code>[[]]</code>; list of list.</p>
+<pre><code class="r"># The nyc list is already specified
+nyc &lt;- list(pop = 8405837, 
+            boroughs = c('Manhattan', 'Bronx', 'Brooklyn', 'Queens', 'Staten Island'), 
+            capital = FALSE)
+
+# Loop version 1
+for (item in nyc) {
+    print(item)
+}
+</code></pre>
+
+<pre><code>## [1] 8405837
+## [1] "Manhattan"     "Bronx"         "Brooklyn"      "Queens"       
+## [5] "Staten Island"
+## [1] FALSE
+</code></pre>
+<pre><code class="r"># Loop version 2
+for (i in 1:length(nyc)) {
+    print(nyc[[i]])
+}
+</code></pre>
+
+<pre><code>## [1] 8405837
+## [1] "Manhattan"     "Bronx"         "Brooklyn"      "Queens"       
+## [5] "Staten Island"
+## [1] FALSE
+</code></pre>
+<p><strong>Loop over a matrix</strong></p>
+<pre><code class="r"># The tic-tac-toe matrix has already been defined for you
+ttt &lt;- matrix(c('O', NA, 'X', NA, 'O', NA, 'X', 'O', 'X'), nrow = 3, ncol = 3)
+
+# define the double for loop
+for (i in 1:nrow(ttt)) {
+    for (j in 1:ncol(ttt)) {
+    print(paste('On row', i,'and column', j,'the board contains ', ttt[i,j]))
+    }
+}
+</code></pre>
+
+<pre><code>## [1] "On row 1 and column 1 the board contains  O"
+## [1] "On row 1 and column 2 the board contains  NA"
+## [1] "On row 1 and column 3 the board contains  X"
+## [1] "On row 2 and column 1 the board contains  NA"
+## [1] "On row 2 and column 2 the board contains  O"
+## [1] "On row 2 and column 3 the board contains  O"
+## [1] "On row 3 and column 1 the board contains  X"
+## [1] "On row 3 and column 2 the board contains  NA"
+## [1] "On row 3 and column 3 the board contains  X"
+</code></pre>
+<p><strong>Mix it up with control flow</strong></p>
+<pre><code class="r"># The linkedin vector
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+
+# Code the for loop with conditionals
+for (i in 1:length(linkedin)) {
+    if (linkedin[i] &gt; 10) {
+        print('You\'re popular!')
+    } else {
+        print('Be more visible!')
+    }
+    print(linkedin[i])
+}
+</code></pre>
+
+<pre><code>## [1] "You're popular!"
+## [1] 16
+## [1] "Be more visible!"
+## [1] 9
+## [1] "You're popular!"
+## [1] 13
+## [1] "Be more visible!"
+## [1] 5
+## [1] "Be more visible!"
+## [1] 2
+## [1] "You're popular!"
+## [1] 17
+## [1] "You're popular!"
+## [1] 14
+</code></pre>
+<p><strong>Next, you break it</strong></p>
+<pre><code class="r"># The linkedin vector
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+
+# Extend the for loop
+for (li in linkedin) {
+  if (li &gt; 10) {
+    print('You\'re popular!')
+  } else {
+    print('Be more visible!')
+  }
+    # Add code to conditionally break iteration
+  if (li &gt; 16) {
+    print('This is ridiculous, I\'m outta here!')
+    break
+  }
+  # Add code to conditionally skip iteration
+  if (li &lt; 5) {
+    print('This is too embarrassing!')
+    next
+    }
+  print(li)
+}
+</code></pre>
+
+<pre><code>## [1] "You're popular!"
+## [1] 16
+## [1] "Be more visible!"
+## [1] 9
+## [1] "You're popular!"
+## [1] 13
+## [1] "Be more visible!"
+## [1] 5
+## [1] "Be more visible!"
+## [1] "This is too embarrassing!"
+## [1] "You're popular!"
+## [1] "This is ridiculous, I'm outta here!"
+</code></pre>
+<p><strong>Build a for loop from scratch</strong></p>
+<pre><code class="r"># Pre-defined variables
+rquote &lt;- 'R\'s internals are irrefutably intriguing'
+
+chars &lt;- strsplit(rquote, split = '')[[1]]
+rcount &lt;- 0
+
+# Your solution here
+for (i in 1:length(chars)) {
+    if (chars[i] == 'u') {
+    break
+    }
+    if (chars[i] == 'r' | chars[i] == 'R') {
+        rcount &lt;- rcount + 1
+    }
+}
+
+# Print the resulting rcount variable to the console
+print(rcount)
+</code></pre>
+
+<pre><code>## [1] 5
+</code></pre>
+<h4 id="3-functions">3, Functions<a class="headerlink" href="#3-functions" title="Permanent link">&para;</a></h4>
+<p><strong>Function documentation</strong></p>
+<pre><code class="r"># Consult the documentation on the mean() function
+?mean
+
+# Inspect the arguments of the mean() function
+args(mean)
+</code></pre>
+
+<p><strong>Use a function</strong></p>
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
+
+# Calculate average number of views
+avg_li &lt;- mean(linkedin)
+avg_fb &lt;- mean(facebook)
+
+# Inspect avg_li and avg_fb
+print(avg_li)
+</code></pre>
+
+<pre><code>## [1] 10.85714
+</code></pre>
+<pre><code class="r">print(avg_fb)
+</code></pre>
+
+<pre><code>## [1] 11.42857
+</code></pre>
+<pre><code class="r">avg_li
+</code></pre>
+
+<pre><code>## [1] 10.85714
+</code></pre>
+<pre><code class="r"># Calculate the mean of linkedin minus facebook
+print(mean(linkedin - facebook))
+</code></pre>
+
+<pre><code>## [1] -0.5714286
+</code></pre>
+<p><strong>Use a function (2)</strong></p>
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
+
+# Calculate the mean of the sum
+avg_sum &lt;- mean(linkedin + facebook)
+
+# Calculate the trimmed mean of the sum
+avg_sum_trimmed &lt;- mean((linkedin + facebook), trim = 0.2)
+
+# Inspect both new variables
+avg_sum
+</code></pre>
+
+<pre><code>## [1] 22.28571
+</code></pre>
+<pre><code class="r">avg_sum_trimmed
+</code></pre>
+
+<pre><code>## [1] 22.6
+</code></pre>
+<p><strong>Use a function (3)</strong></p>
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- c(16, 9, 13, 5, NA, 17, 14)
+facebook &lt;- c(17, NA, 5, 16, 8, 13, 14)
+
+# Basic average of linkedin
+print(mean(linkedin))
+</code></pre>
+
+<pre><code>## [1] NA
+</code></pre>
+<pre><code class="r"># Advanced average of facebook
+print(mean(facebook, na.rm = TRUE))
+</code></pre>
+
+<pre><code>## [1] 12.16667
+</code></pre>
+<p><strong>Functions inside functions</strong></p>
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- c(16, 9, 13, 5, NA, 17, 14)
+facebook &lt;- c(17, NA, 5, 16, 8, 13, 14)
+
+# Calculate the mean absolute deviation
+mean((abs(linkedin - facebook)), na.rm = TRUE)
+</code></pre>
+
+<pre><code>## [1] 4.8
+</code></pre>
+<p><strong>Write your own function</strong></p>
+<pre><code class="r"># Create a function pow_two()
+pow_two &lt;- function(arg1) {
+    arg1^2
+}
+
+# Use the function 
+pow_two(12)
+</code></pre>
+
+<pre><code>## [1] 144
+</code></pre>
+<pre><code class="r"># Create a function sum_abs()
+sum_abs &lt;- function(arg2,arg3) {
+    abs(arg2) + abs(arg3)
+}
+
+# Use the function
+sum_abs(-2,3)
+</code></pre>
+
+<pre><code>## [1] 5
+</code></pre>
+<p><strong>Write your own function (2)</strong></p>
+<pre><code class="r"># Define the function hello()
+hello &lt;- function() {
+    print('Hi there!')
+    return(TRUE)
+}
+
+# Call the function hello()
+hello()
+</code></pre>
+
+<pre><code>## [1] "Hi there!"
+
+## [1] TRUE
+</code></pre>
+<pre><code class="r"># Define the function my_filter()
+my_filter &lt;- function(arg1) {
+    if (arg1 &gt; 0) {
+        return(arg1)
+    } else {
+        return(NULL)
+    }
+}
+
+# Call the function my_filter() twice
+my_filter(5)
+</code></pre>
+
+<pre><code>## [1] 5
+</code></pre>
+<pre><code class="r">my_filter(-5)
+</code></pre>
+
+<pre><code>## NULL
+</code></pre>
+<p><strong>Write your own function (3)</strong></p>
+<p>Variables inside a function are not in the Global Environment.</p>
+<pre><code class="r"># Extend the pow_two() function
+pow_two &lt;- function(x, print_info = TRUE) {
+  y &lt;- x ^ 2
+  if (print_info) {
+    print(paste(x, 'to the power two equals', y))
+  }
+  return(y)
+}
+
+#pow_two(2)
+pow_two(2, FALSE)
+</code></pre>
+
+<pre><code>## [1] 4
+</code></pre>
+<p><strong>R you functional?</strong></p>
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- c(16, 9, 13, 5, NA, 17, 14)
+facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
+
+# Define the interpret function
+interpret &lt;- function(arg) {
+    if (arg &gt; 15) {
+        print('You\'re popular!')
+        return(arg)
+    } else {
+        print('Try to be more visible!')
+        return(0)
+    }
+}
+
+interpret(linkedin[1])
+</code></pre>
+
+<pre><code>## [1] "You're popular!"
+
+## [1] 16
+</code></pre>
+<pre><code class="r">interpret(facebook[2])
+</code></pre>
+
+<pre><code>## [1] "Try to be more visible!"
+
+## [1] 0
+</code></pre>
+<p><strong>R you functional? (2)</strong></p>
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
+
+# The interpret() can be used inside interpret_all()
+interpret &lt;- function(num_views){
+  if (num_views &gt; 15) {
+    print('You\'re popular!')
+    return(num_views)
+  } else {
+    print('Try to be more visible!')
+    return(0)
+  }
+}
+
+# Define the interpret_all() function
+interpret_all &lt;- function(data, logi = TRUE){
+  yy &lt;- 0
+  for (i in data) {
+    yy &lt;- yy + interpret(i)
+  }
+  if (logi) {
+    return(yy)
+  } else {
+    return(NULL)
+  }
+}
+
+# Call the interpret_all() function on both linkedin and facebook
+interpret_all(linkedin)
+</code></pre>
+
+<pre><code>## [1] "You're popular!"
+## [1] "Try to be more visible!"
+## [1] "Try to be more visible!"
+## [1] "Try to be more visible!"
+## [1] "Try to be more visible!"
+## [1] "You're popular!"
+## [1] "Try to be more visible!"
+
+## [1] 33
+</code></pre>
+<pre><code class="r">interpret_all(facebook)
+</code></pre>
+
+<pre><code>## [1] "You're popular!"
+## [1] "Try to be more visible!"
+## [1] "Try to be more visible!"
+## [1] "You're popular!"
+## [1] "Try to be more visible!"
+## [1] "Try to be more visible!"
+## [1] "Try to be more visible!"
+
+## [1] 33
+</code></pre>
+<p><strong>Load an R package</strong></p>
+<pre><code class="r"># The mtcars vectors have already been prepared for you
+wt &lt;- mtcars$wt
+hp &lt;- mtcars$hp
+
+# Request the currently attached packages
+search()
+</code></pre>
+
+<pre><code>##  [1] ".GlobalEnv"            "package:XLConnect"    
+##  [3] "package:XLConnectJars" "package:stats"        
+##  [5] "package:graphics"      "package:grDevices"    
+##  [7] "package:utils"         "package:datasets"     
+##  [9] "package:methods"       "Autoloads"            
+## [11] "package:base"
+</code></pre>
+<pre><code class="r"># Try the qplot() function with wt and hp
+plot(wt,hp)
+
+# Load the ggplot2 package
+library('ggplot2')
+</code></pre>
+
+<p><img alt="" src="../img/Intermediate_R/unnamed-chunk-34-1.png" /></p>
+<pre><code class="r"># or
+require('ggplot2')
+
+# Retry the qplot() function
+qplot(wt,hp)
+</code></pre>
+
+<p><img alt="" src="../img/Intermediate_R/unnamed-chunk-34-2.png" /></p>
+<pre><code class="r"># Check out the currently attached packages again
+search()
+</code></pre>
+
+<pre><code>##  [1] ".GlobalEnv"            "package:ggplot2"      
+##  [3] "package:XLConnect"     "package:XLConnectJars"
+##  [5] "package:stats"         "package:graphics"     
+##  [7] "package:grDevices"     "package:utils"        
+##  [9] "package:datasets"      "package:methods"      
+## [11] "Autoloads"             "package:base"
+</code></pre>
+<h4 id="4-the-apply-family">4, The <code>apply</code> Family<a class="headerlink" href="#4-the-apply-family" title="Permanent link">&para;</a></h4>
+<p><strong>Use <code>lapply</code> with a built-in R function</strong></p>
+<pre><code class="r"># The vector pioneers
+pioneers &lt;- c('GAUSS:1777', 'BAYES:1702', 'PASCAL:1623', 'PEARSON:1857')
+
+# Split names from birth year: split_math
+split_math &lt;- strsplit(pioneers, ':')
+
+# Convert to lowercase strings: split_low
+split_low &lt;- lapply(split_math,tolower)
+
+# Take a look at the structure of split_low
+str(split_low)
+</code></pre>
+
+<pre><code>## List of 4
+##  $ : chr [1:2] "gauss" "1777"
+##  $ : chr [1:2] "bayes" "1702"
+##  $ : chr [1:2] "pascal" "1623"
+##  $ : chr [1:2] "pearson" "1857"
+</code></pre>
+<p><strong>Use <code>lapply</code> with your own function</strong></p>
+<pre><code class="r"># Code from previous exercise
+pioneers &lt;- c('GAUSS:1777', 'BAYES:1702', 'PASCAL:1623', 'PEARSON:1857')
+
+split &lt;- strsplit(pioneers, split = ':')
+split_low &lt;- lapply(split, tolower)
+
+# Write function select_first()
+select_first &lt;- function(x) {
+    return(x[1])
+}
+
+# Apply select_first() over split_low: names
+names &lt;- lapply(split_low, select_first)
+print(names)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] "gauss"
+## 
+## [[2]]
+## [1] "bayes"
+## 
+## [[3]]
+## [1] "pascal"
+## 
+## [[4]]
+## [1] "pearson"
+</code></pre>
+<pre><code class="r"># Write function select_second()
+select_second &lt;- function(x) {
+    return(x[2])
+}
+
+# Apply select_second() over split_low: years
+years &lt;- lapply(split_low, select_second)
+print(years)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] "1777"
+## 
+## [[2]]
+## [1] "1702"
+## 
+## [[3]]
+## [1] "1623"
+## 
+## [[4]]
+## [1] "1857"
+</code></pre>
+<p><strong><code>lapply</code> and anonymous functions</strong></p>
+<p>Anonymous function == lambda function.</p>
+<pre><code class="r"># Definition of split_low
+pioneers &lt;- c('GAUSS:1777', 'BAYES:1702', 'PASCAL:1623', 'PEARSON:1857')
+split &lt;- strsplit(pioneers, split = ':')
+split_low &lt;- lapply(split, tolower)
+
+#select_first &lt;- function(x) {
+#  x[1]
+#}
+
+names &lt;- lapply(split_low, function(x) { x[1] })
+
+#select_second &lt;- function(x) {
+#  x[2]
+#}
+
+years &lt;- lapply(split_low, function(x) { x[2] })
+</code></pre>
+
+<p><strong>Use <code>lapply</code> with additional arguments</strong></p>
+<pre><code class="r"># Definition of split_low
+pioneers &lt;- c('GAUSS:1777', 'BAYES:1702', 'PASCAL:1623', 'PEARSON:1857')
+
+split &lt;- strsplit(pioneers, split = ':')
+split_low &lt;- lapply(split, tolower)
+
+# Replace the select_*() functions by a single function: select_el
+select_el &lt;- function(x, i) { 
+  x[i] 
+}
+
+#select_second &lt;- function(x) { 
+#  x[2] 
+#}
+
+# Call the select_el() function twice on split_low: names and years
+names &lt;- lapply(split_low, select_el, i=1)
+years &lt;- lapply(split_low, select_el, 2)
+</code></pre>
+
+<p><strong>How to use <code>sapply</code></strong></p>
+<pre><code class="r">temp1 &lt;- c(3, 7, 9, 6, -1)
+temp2 &lt;- c(6, 9, 12, 13, 5)
+temp3 &lt;- c(4, 8, 3, -1, -3)
+temp4 &lt;- c(1, 4, 7, 2, -2)
+temp5 &lt;- c(5, 7, 9, 4, 2)
+temp6 &lt;- c(-3, 5, 8, 9, 4)
+temp7 &lt;- c(3, 6, 9, 4, 1)
+
+temp &lt;- list(temp1, temp2, temp3, temp4, temp5, temp6, temp7)
+
+# Use lapply() to find each day's minimum temperature
+lapply(temp, min)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] -1
+## 
+## [[2]]
+## [1] 5
+## 
+## [[3]]
+## [1] -3
+## 
+## [[4]]
+## [1] -2
+## 
+## [[5]]
+## [1] 2
+## 
+## [[6]]
+## [1] -3
+## 
+## [[7]]
+## [1] 1
+</code></pre>
+<pre><code class="r"># Use sapply() to find each day's minimum temperature
+sapply(temp, min)
+</code></pre>
+
+<pre><code>## [1] -1  5 -3 -2  2 -3  1
+</code></pre>
+<pre><code class="r"># Use lapply() to find each day's maximum temperature
+lapply(temp, max)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] 9
+## 
+## [[2]]
+## [1] 13
+## 
+## [[3]]
+## [1] 8
+## 
+## [[4]]
+## [1] 7
+## 
+## [[5]]
+## [1] 9
+## 
+## [[6]]
+## [1] 9
+## 
+## [[7]]
+## [1] 9
+</code></pre>
+<pre><code class="r"># Use sapply() to find each day's maximum temperature
+sapply(temp, max)
+</code></pre>
+
+<pre><code>## [1]  9 13  8  7  9  9  9
+</code></pre>
+<p><strong><code>sapply</code> with your own function</strong></p>
+<pre><code class="r"># temp is already defined in the workspace
+
+# Define a function calculates the average of the min and max of a vector: extremes_avg
+extremes_avg &lt;- function(x) {
+    return((min(x) + max(x))/2)
+}
+
+# Apply extremes_avg() over temp using sapply()
+sapply(temp, extremes_avg)
+</code></pre>
+
+<pre><code>## [1] 4.0 9.0 2.5 2.5 5.5 3.0 5.0
+</code></pre>
+<pre><code class="r"># Apply extremes_avg() over temp using lapply()
+lapply(temp, extremes_avg)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] 4
+## 
+## [[2]]
+## [1] 9
+## 
+## [[3]]
+## [1] 2.5
+## 
+## [[4]]
+## [1] 2.5
+## 
+## [[5]]
+## [1] 5.5
+## 
+## [[6]]
+## [1] 3
+## 
+## [[7]]
+## [1] 5
+</code></pre>
+<p><strong><code>sapply</code> with function returning vector</strong></p>
+<pre><code class="r"># temp is already available in the workspace
+
+# Create a function that returns min and max of a vector: extremes
+extremes &lt;- function(x) {
+    c(min(x), max(x))
+}
+
+# Apply extremes() over temp with sapply()
+sapply(temp, extremes)
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]   -1    5   -3   -2    2   -3    1
+## [2,]    9   13    8    7    9    9    9
+</code></pre>
+<pre><code class="r"># Apply extremes() over temp with lapply()
+lapply(temp, extremes)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] -1  9
+## 
+## [[2]]
+## [1]  5 13
+## 
+## [[3]]
+## [1] -3  8
+## 
+## [[4]]
+## [1] -2  7
+## 
+## [[5]]
+## [1] 2 9
+## 
+## [[6]]
+## [1] -3  9
+## 
+## [[7]]
+## [1] 1 9
+</code></pre>
+<p><strong><code>sapply</code> can&rsquo;t simplify, now what?</strong></p>
+<pre><code class="r"># temp is already prepared for you in the workspace
+
+# Create a function that returns all values below zero: below_zero
+below_zero &lt;- function(x) {
+    x[x&lt;0]
+}
+
+#below_zero(temp) alone won't work!!!
+
+# Apply below_zero over temp using sapply(): freezing_s
+freezing_s &lt;- sapply(temp, below_zero)
+
+# Apply below_zero over temp using lapply(): freezing_l
+freezing_l &lt;- lapply(temp, below_zero)
+
+# Compare freezing_s to freezing_l using identical()
+identical(freezing_s, freezing_l)
+</code></pre>
+
+<pre><code>## [1] TRUE
+</code></pre>
+<p><strong><code>sapply</code> with functions that return NULL</strong></p>
+<pre><code class="r"># temp is already available in the workspace
+
+# Write a function that 'cat()s' out the average temperatures: print_info
+print_info &lt;- function(x) {
+    cat('The average temperature is', mean(x), '\n')
+}
+
+# Apply print_info() over temp using lapply()
+lapply(temp, print_info)
+</code></pre>
+
+<pre><code>## The average temperature is 4.8 
+## The average temperature is 9 
+## The average temperature is 2.2 
+## The average temperature is 2.4 
+## The average temperature is 5.4 
+## The average temperature is 4.6 
+## The average temperature is 4.6
+
+## [[1]]
+## NULL
+## 
+## [[2]]
+## NULL
+## 
+## [[3]]
+## NULL
+## 
+## [[4]]
+## NULL
+## 
+## [[5]]
+## NULL
+## 
+## [[6]]
+## NULL
+## 
+## [[7]]
+## NULL
+</code></pre>
+<pre><code class="r"># Apply print_info() over temp using sapply()
+sapply(temp, print_info)
+</code></pre>
+
+<pre><code>## The average temperature is 4.8 
+## The average temperature is 9 
+## The average temperature is 2.2 
+## The average temperature is 2.4 
+## The average temperature is 5.4 
+## The average temperature is 4.6 
+## The average temperature is 4.6
+
+## [[1]]
+## NULL
+## 
+## [[2]]
+## NULL
+## 
+## [[3]]
+## NULL
+## 
+## [[4]]
+## NULL
+## 
+## [[5]]
+## NULL
+## 
+## [[6]]
+## NULL
+## 
+## [[7]]
+## NULL
+</code></pre>
+<p><strong>Use <code>vapply</code></strong></p>
+<pre><code class="r"># temp is already available in the workspace
+
+# Code the basics() function
+basics &lt;- function(x) {
+    c(minimum = min(x), average = mean(x), maximum = max(x))
+}
+
+# Apply basics() over temp using vapply()
+vapply(temp, basics, numeric(3))
+</code></pre>
+
+<pre><code>##         [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## minimum -1.0    5 -3.0 -2.0  2.0 -3.0  1.0
+## average  4.8    9  2.2  2.4  5.4  4.6  4.6
+## maximum  9.0   13  8.0  7.0  9.0  9.0  9.0
+</code></pre>
+<p><strong>Use <code>vapply</code> (2)</strong></p>
+<pre><code class="r"># temp is already available in the workspace
+
+# Definition of the basics() function
+basics &lt;- function(x) {
+  c(min = min(x), mean = mean(x), median = median(x), max = max(x))
+}
+
+# Fix the error:
+vapply(temp, basics, numeric(4))
+</code></pre>
+
+<pre><code>##        [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## min    -1.0    5 -3.0 -2.0  2.0 -3.0  1.0
+## mean    4.8    9  2.2  2.4  5.4  4.6  4.6
+## median  6.0    9  3.0  2.0  5.0  5.0  4.0
+## max     9.0   13  8.0  7.0  9.0  9.0  9.0
+</code></pre>
+<p><strong>From <code>sapply</code> to <code>vapply</code></strong></p>
+<pre><code class="r"># temp is already defined in the workspace
+
+# Convert to vapply() expression
+vapply(temp, max, numeric(1))
+</code></pre>
+
+<pre><code>## [1]  9 13  8  7  9  9  9
+</code></pre>
+<pre><code class="r"># Convert to vapply() expression
+vapply(temp, function(x, y) { mean(x) &gt; y }, y = 5, logical(1))
+</code></pre>
+
+<pre><code>## [1] FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE
+</code></pre>
+<pre><code class="r"># Definition of get_info (don't change)
+get_info &lt;- function(x, y) { 
+  if (mean(x) &gt; y) {
+    return('Not too cold!')
+  } else {
+    return('Pretty cold!')
+  }
+}
+
+# Convert to vapply() expression
+vapply(temp, get_info, y = 5, character(1))
+</code></pre>
+
+<pre><code>## [1] "Pretty cold!"  "Not too cold!" "Pretty cold!"  "Pretty cold!" 
+## [5] "Not too cold!" "Pretty cold!"  "Pretty cold!"
+</code></pre>
+<p><strong>Apply your knowledge. Or better yet: <code>sapply</code> it?</strong></p>
+<pre><code class="r"># work_todos and fun_todos have already been defined
+work_todos &lt;- c('Schedule call with team', 
+                'Fix error in Recommendation System', 
+                'Respond to Marc from IT')
+
+fun_todos &lt;- c('Sleep', 'Make arrangements for summer trip')
+
+# Create a list: todos
+todos &lt;- list(work_todos, fun_todos)
+todos
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] "Schedule call with team"           
+## [2] "Fix error in Recommendation System"
+## [3] "Respond to Marc from IT"           
+## 
+## [[2]]
+## [1] "Sleep"                             "Make arrangements for summer trip"
+</code></pre>
+<pre><code class="r"># Sort the vectors inside todos alphabetically
+lapply(todos, sort)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] "Fix error in Recommendation System"
+## [2] "Respond to Marc from IT"           
+## [3] "Schedule call with team"           
+## 
+## [[2]]
+## [1] "Make arrangements for summer trip" "Sleep"
+</code></pre>
+<h4 id="5-utilities">5, Utilities<a class="headerlink" href="#5-utilities" title="Permanent link">&para;</a></h4>
+<p><strong>Mathematical utilities</strong></p>
+<ul>
+<li><code>abs</code>; calculate the absolute value.</li>
+<li><code>sum</code>; calculate the sum of all the values in a data structure.</li>
+<li><code>mean</code>; calculate the arithmetic mean.</li>
+<li><code>round</code>; round the values to 0 decimal places by default. Try out<br />
+<code>?round</code> in the console for variations of <code>round</code> and ways to change<br />
+    the number of digits to round to.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r"># The errors vector
+errors &lt;- c(1.9, -2.6, 4.0, -9.5, -3.4, 7.3)
+
+# Sum of absolute rounded values of errors
+sum(abs(round(errors)))
+</code></pre>
+
+<pre><code>## [1] 29
+</code></pre>
+<p><strong>Find the error</strong></p>
+<pre><code class="r"># Vectors
+vec1 &lt;- c(1.5, 2.5, 8.4, 3.7, 6.3)
+vec2 &lt;- rev(vec1)
+
+# Fix the error
+mean(abs(append(vec1, vec2)))
+</code></pre>
+
+<pre><code>## [1] 4.48
+</code></pre>
+<p><strong>Data utilities</strong></p>
+<ul>
+<li><code>seq</code>; generate sequences, by specifying the from, to and<br />
+    by arguments.</li>
+<li><code>rep</code>; replicate elements of vectors and lists.</li>
+<li><code>sort</code>; sort a vector in ascending order. Works on numerics, but<br />
+    also on character strings and logicals.</li>
+<li><code>rev</code>; reverse the elements in a data structures for which reversal<br />
+    is defined.</li>
+<li><code>str</code>; display the structure of any R object. append; Merge vectors<br />
+    or lists.</li>
+<li><code>is.*</code>; check for the class of an R object.</li>
+<li><code>as.*</code>; convert an R object from one class to another.</li>
+<li><code>unlist</code>; flatten (possibly embedded) lists to produce a vector.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r"># The linkedin and facebook vectors
+linkedin &lt;- list(16, 9, 13, 5, 2, 17, 14)
+facebook &lt;- list(17, 7, 5, 16, 8, 13, 14)
+
+# Convert linkedin and facebook to a vector: li_vec and fb_vec
+li_vec &lt;- unlist(as.vector(linkedin))
+fb_vec &lt;- unlist(as.vector(facebook))
+
+# Append fb_vec to li_vec: social_vec
+social_vec &lt;- append(li_vec, fb_vec)
+
+# Sort social_vec
+sort(social_vec, decreasing = TRUE)
+</code></pre>
+
+<pre><code>##  [1] 17 17 16 16 14 14 13 13  9  8  7  5  5  2
+</code></pre>
+<p><strong>Find the error (2)</strong></p>
+<pre><code class="r"># Fix me
+round(sum(unlist(list(1.1, 3, 5))))
+</code></pre>
+
+<pre><code>## [1] 9
+</code></pre>
+<pre><code class="r"># Fix me
+rep(seq(1, 7, by = 2), times = 7)
+</code></pre>
+
+<pre><code>##  [1] 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7
+</code></pre>
+<pre><code class="r">print(rep(seq(1, 7, by = 2), times = 7))
+</code></pre>
+
+<pre><code>##  [1] 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7
+</code></pre>
+<p><strong>Beat Gauss using R</strong></p>
+<pre><code class="r"># Create first sequence: seq1
+seq1 &lt;- seq(1,500, by = 3)
+print(seq1)
+</code></pre>
+
+<pre><code>##   [1]   1   4   7  10  13  16  19  22  25  28  31  34  37  40  43  46  49
+##  [18]  52  55  58  61  64  67  70  73  76  79  82  85  88  91  94  97 100
+##  [35] 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148 151
+##  [52] 154 157 160 163 166 169 172 175 178 181 184 187 190 193 196 199 202
+##  [69] 205 208 211 214 217 220 223 226 229 232 235 238 241 244 247 250 253
+##  [86] 256 259 262 265 268 271 274 277 280 283 286 289 292 295 298 301 304
+## [103] 307 310 313 316 319 322 325 328 331 334 337 340 343 346 349 352 355
+## [120] 358 361 364 367 370 373 376 379 382 385 388 391 394 397 400 403 406
+## [137] 409 412 415 418 421 424 427 430 433 436 439 442 445 448 451 454 457
+## [154] 460 463 466 469 472 475 478 481 484 487 490 493 496 499
+</code></pre>
+<pre><code class="r"># Create second sequence: seq2
+seq2 &lt;- seq(1200, 900, by = -7)
+print(seq2)
+</code></pre>
+
+<pre><code>##  [1] 1200 1193 1186 1179 1172 1165 1158 1151 1144 1137 1130 1123 1116 1109
+## [15] 1102 1095 1088 1081 1074 1067 1060 1053 1046 1039 1032 1025 1018 1011
+## [29] 1004  997  990  983  976  969  962  955  948  941  934  927  920  913
+## [43]  906
+</code></pre>
+<pre><code class="r"># Calculate total sum of the sequences
+print(sum(append(seq1, seq2)))
+</code></pre>
+
+<pre><code>## [1] 87029
+</code></pre>
+<p><strong><code>grepl</code> &amp; <code>grep</code></strong></p>
+<ul>
+<li><code>grepl</code>; return TRUE when a pattern is found in the corresponding<br />
+    character string.</li>
+<li><code>grep</code>; return a vector of indices of the character strings that<br />
+    contains the pattern.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r"># The emails vector has
+emails &lt;- c('john.doe@ivyleague.edu', 'education@world.gov', 'dalai.lama@peace.org', 
+            'invalid.edu', 'quant@bigdatacollege.edu', 'cookie.monster@sesame.tv')
+
+# Use grepl() to match for 'edu'
+print(grepl(pattern = 'edu', x = emails))
+</code></pre>
+
+<pre><code>## [1]  TRUE  TRUE FALSE  TRUE  TRUE FALSE
+</code></pre>
+<pre><code class="r"># Use grep() to match for 'edu', save result to hits
+hits &lt;- grep(pattern = 'edu', x = emails)
+hits
+</code></pre>
+
+<pre><code>## [1] 1 2 4 5
+</code></pre>
+<pre><code class="r"># Subset emails using hits
+print(emails[hits])
+</code></pre>
+
+<pre><code>## [1] "john.doe@ivyleague.edu"   "education@world.gov"     
+## [3] "invalid.edu"              "quant@bigdatacollege.edu"
+</code></pre>
+<p><strong><code>grepl</code> &amp; <code>grep</code> (2)</strong></p>
+<p>Consult a regex character chart for more.</p>
+<pre><code class="r"># The emails vector
+emails &lt;- c('john.doe@ivyleague.edu', 'education@world.gov', 'dalai.lama@peace.org', 
+            'invalid.edu', 'quant@bigdatacollege.edu', 'cookie.monster@sesame.tv')
+
+# Use grep() to match for .edu addresses more robustly
+print(grep(pattern = '@.*\\.edu$',x = emails))
+</code></pre>
+
+<pre><code>## [1] 1 5
+</code></pre>
+<pre><code class="r"># Use grepl() to match for .edu addresses more robustly, save result to hits
+hits &lt;- grepl(pattern = '@.*\\.edu$',x = emails)
+hits
+</code></pre>
+
+<pre><code>## [1]  TRUE FALSE FALSE FALSE  TRUE FALSE
+</code></pre>
+<pre><code class="r"># Subset emails using hits
+print(emails[hits])
+</code></pre>
+
+<pre><code>## [1] "john.doe@ivyleague.edu"   "quant@bigdatacollege.edu"
+</code></pre>
+<p><strong><code>sub</code> &amp; <code>gsub</code></strong></p>
+<pre><code class="r"># The emails vector
+emails &lt;- c('john.doe@ivyleague.edu', 'education@world.gov', 'dalai.lama@peace.org', 
+            'invalid.edu', 'quant@bigdatacollege.edu', 'cookie.monster@sesame.tv')
+
+# Use sub() to convert the email domains to datacamp.edu (attempt 1)
+print(sub(pattern = '@.*\\.edu$', replacement = 'datacamp.edu', x = emails))
+</code></pre>
+
+<pre><code>## [1] "john.doedatacamp.edu"     "education@world.gov"     
+## [3] "dalai.lama@peace.org"     "invalid.edu"             
+## [5] "quantdatacamp.edu"        "cookie.monster@sesame.tv"
+</code></pre>
+<pre><code class="r"># Use sub() to convert the email domains to datacamp.edu (attempt 2)
+print(sub(pattern = '@.*\\.edu$', replacement = '@datacamp.edu', x = emails))
+</code></pre>
+
+<pre><code>## [1] "john.doe@datacamp.edu"    "education@world.gov"     
+## [3] "dalai.lama@peace.org"     "invalid.edu"             
+## [5] "quant@datacamp.edu"       "cookie.monster@sesame.tv"
+</code></pre>
+<p><strong>Right here, right now</strong></p>
+<pre><code class="r"># Get the current date: today
+today &lt;- Sys.Date()
+today
+</code></pre>
+
+<pre><code>## [1] "2017-02-15"
+</code></pre>
+<pre><code class="r"># See what today looks like under the hood
+print(unclass(today))
+</code></pre>
+
+<pre><code>## [1] 17212
+</code></pre>
+<pre><code class="r"># Get the current time: now
+now &lt;- Sys.time()
+now
+</code></pre>
+
+<pre><code>## [1] "2017-02-15 11:11:32 EST"
+</code></pre>
+<pre><code class="r"># See what now looks like under the hood
+print(unclass(now))
+</code></pre>
+
+<pre><code>## [1] 1487175093
+</code></pre>
+<p><strong>Create and format dates</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Symbol</th>
+<th align="left">Meaning</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">%d</td>
+<td align="left">day as a number (0-31)</td>
+<td align="left">31-janv</td>
+</tr>
+<tr class="even">
+<td align="left">%a</td>
+<td align="left">abbreviated weekday</td>
+<td align="left">Mon</td>
+</tr>
+<tr class="odd">
+<td align="left">%A</td>
+<td align="left">unabbreviated weekday</td>
+<td align="left">Monday</td>
+</tr>
+<tr class="even">
+<td align="left">%m</td>
+<td align="left">month (00-12)</td>
+<td align="left">00-12</td>
+</tr>
+<tr class="odd">
+<td align="left">%b</td>
+<td align="left">abbreviated month</td>
+<td align="left">Jan</td>
+</tr>
+<tr class="even">
+<td align="left">%B</td>
+<td align="left">unabbreviated month</td>
+<td align="left">January</td>
+</tr>
+<tr class="odd">
+<td align="left">%y</td>
+<td align="left">2-digit year</td>
+<td align="left">07</td>
+</tr>
+<tr class="even">
+<td align="left">%Y</td>
+<td align="left">4-digit year</td>
+<td align="left">2007</td>
+</tr>
+<tr class="odd">
+<td align="left">%H</td>
+<td align="left">hours as a decimal number</td>
+<td align="left">23</td>
+</tr>
+<tr class="even">
+<td align="left">%M</td>
+<td align="left">minutes as a decimal number</td>
+<td align="left">10</td>
+</tr>
+<tr class="odd">
+<td align="left">%S</td>
+<td align="left">seconds as a decimal number</td>
+<td align="left">53</td>
+</tr>
+<tr class="even">
+<td align="left">%T</td>
+<td align="left">shorthand notation for the typical format %H:%M:%S</td>
+<td align="left">23:10:53</td>
+</tr>
+</tbody>
+</table>
+
+<p>Find out more with <code>?strptime</code>.</p>
+<p>R offer default functions for dealing with time and dates. There are<br />
+better packages: <code>date</code> and <code>lubridate</code>.</p>
+<p><code>lubridate</code> enhances time-series packages such as <code>zoo</code> and <code>xts</code>, and<br />
+works well with <code>dplyr</code> for data wrangling.</p>
+<pre><code class="r">library(date)
+
+# Definition of character strings representing dates
+str1 &lt;- &quot;May 23, 96&quot;
+str2 &lt;- &quot;2012-3-15&quot;
+str3 &lt;- &quot;30/January/2006&quot;
+
+# Convert the strings to dates: date1, date2, date3
+date1 &lt;- as.date(str1, order = &quot;mdy&quot;)
+date1
+</code></pre>
+
+<pre><code>## [1] 23May96
+</code></pre>
+<pre><code class="r">date1 &lt;- as.POSIXct(date1, format = &quot;%d %m %y&quot;)
+date1
+</code></pre>
+
+<pre><code>## [1] "1996-05-22 20:00:00 EDT"
+</code></pre>
+<pre><code class="r">date2 &lt;- as.date(str2, order = &quot;ymd&quot;)
+date2
+</code></pre>
+
+<pre><code>## [1] 15Mar2012
+</code></pre>
+<pre><code class="r">date2 &lt;- as.POSIXct(date2, format = &quot;%d %m %y&quot;)
+date2
+</code></pre>
+
+<pre><code>## [1] "2012-03-14 20:00:00 EDT"
+</code></pre>
+<pre><code class="r">date3 &lt;- as.date(str3, order = &quot;dmy&quot;)
+date3
+</code></pre>
+
+<pre><code>## [1] 30Jan2006
+</code></pre>
+<pre><code class="r">date3 &lt;- as.POSIXct(date3, format = &quot;%d %m %y&quot;)
+date3
+</code></pre>
+
+<pre><code>## [1] "2006-01-29 19:00:00 EST"
+</code></pre>
+<pre><code class="r"># Convert dates to formatted strings
+format(date1, &quot;%A&quot;)
+</code></pre>
+
+<pre><code>## [1] "mercredi"
+</code></pre>
+<pre><code class="r">format(date2, &quot;%d&quot;)
+</code></pre>
+
+<pre><code>## [1] "14"
+</code></pre>
+<pre><code class="r">format(date3, &quot;%b %Y&quot;)
+</code></pre>
+
+<pre><code>## [1] "janv. 2006"
+</code></pre>
+<pre><code class="r"># convert dates to character data
+strDate2 &lt;- as.character(date2)
+strDate2
+</code></pre>
+
+<pre><code>## [1] "2012-03-14 20:00:00"
+</code></pre>
+<p><strong>Create and format times</strong></p>
+<pre><code class="r"># Definition of character strings representing times
+str1 &lt;- &quot;2012-3-12 14:23:08&quot;
+
+# Convert the strings to POSIXct objects: time1, time2
+time1 &lt;- as.POSIXct(str2, format = &quot;%Y-%m-%d %H:%M:%S&quot;)
+
+# Convert times to formatted strings
+
+# Definition of character strings representing dates
+format(time1, &quot;%M&quot;)
+</code></pre>
+
+<pre><code>## [1] NA
+</code></pre>
+<pre><code class="r">format(time1, &quot;%I:%M %p&quot;)
+</code></pre>
+
+<pre><code>## [1] NA
+</code></pre>
+<p><strong>Calculations with dates</strong></p>
+<pre><code class="r"># day1, day2, day3, day4 and day5
+day1 &lt;- as.Date(&quot;2016-11-21&quot;)
+day2 &lt;- as.Date(&quot;2016-11-16&quot;)
+day3 &lt;- as.Date(&quot;2016-11-27&quot;)
+day4 &lt;- as.Date(&quot;2016-11-14&quot;)
+day5 &lt;- as.Date(&quot;2016-12-02&quot;)
+
+# Difference between last and first pizza day
+print(day5 - day1)
+</code></pre>
+
+<pre><code>## Time difference of 11 days
+</code></pre>
+<pre><code class="r"># Create vector pizza
+pizza &lt;- c(day1, day2, day3, day4, day5)
+
+# Create differences between consecutive pizza days: day_diff
+day_diff &lt;- diff(pizza, lag = 1, differences = 1)
+day_diff
+</code></pre>
+
+<pre><code>## Time differences in days
+## [1]  -5  11 -13  18
+</code></pre>
+<pre><code class="r"># Average period between two consecutive pizza days
+print(mean(day_diff))
+</code></pre>
+
+<pre><code>## Time difference of 2.75 days
+</code></pre>
+<p><strong>Calculus with times</strong></p>
+<pre><code class="r"># login and logout
+login &lt;- as.POSIXct(c(&quot;2016-11-18 10:18:04 UTC&quot;, &quot;2016-11-23 09:14:18 UTC&quot;, &quot;2016-11-23 12:21:51 UTC&quot;, &quot;2016-11-23 12:37:24 UTC&quot;, &quot;2016-11-25 21:37:55 UTC&quot;))
+
+logout &lt;- as.POSIXct(c(&quot;2016-11-18 10:56:29 UTC&quot;, &quot;2016-11-23 09:14:52 UTC&quot;, &quot;2016-11-23 12:35:48 UTC&quot;, &quot;2016-11-23 13:17:22 UTC&quot;, &quot;2016-11-25 22:08:47 UTC&quot;))
+
+# Calculate the difference between login and logout: time_online
+time_online &lt;- logout - login
+
+# Inspect the variable time_online
+#class(time_online)
+time_online
+</code></pre>
+
+<pre><code>## Time differences in secs
+## [1] 2305   34  837 2398 1852
+</code></pre>
+<pre><code class="r"># Calculate the total time online
+print(sum(time_online))
+</code></pre>
+
+<pre><code>## Time difference of 7426 secs
+</code></pre>
+<pre><code class="r"># Calculate the average time online
+print(mean(time_online))
+</code></pre>
+
+<pre><code>## Time difference of 1485.2 secs
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Intermediate_R_-_apply_Functions/" class="btn btn-neutral float-right" title="Intermediate R - apply Functions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Charts/" class="btn btn-neutral" title="Charts & Colors"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Charts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Intermediate_R_-_apply_Functions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

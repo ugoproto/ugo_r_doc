@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Statistics with R, Course Four, Repeated Measures ANOVA - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Statistics with R, Course Four, Repeated Measures ANOVA";
+    var mkdocs_page_input_path = "A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova.md";
+    var mkdocs_page_url = "/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-repeated-measures-anova">2, Repeated measures ANOVA</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>A Hands-on Introduction to Statistics with R &raquo;</li>
+        
+      
+    
+    <li>Statistics with R, Course Four, Repeated Measures ANOVA</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#an-introduction-to-repeated-measures">1, An introduction to repeated measures</a></li>
+<li><a href="#repeated-measures-anova">2, Repeated measures ANOVA</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets and results.</li>
+</ul>
+<hr />
+<h4 id="1-an-introduction-to-repeated-measures">1, An introduction to repeated measures<a class="headerlink" href="#1-an-introduction-to-repeated-measures" title="Permanent link">&para;</a></h4>
+<p>The independent t-test is analogous to between-groups ANOVA and the<br />
+paired-sample t-test is analogous to repeated measures ANOVA.</p>
+<p>In a between-groups design, each subject is exposed to two or more<br />
+treatments or conditions over time. In a within-subjects design, each<br />
+subject is allocated to exactly one treatment or condition.</p>
+<p>Between:</p>
+<ul>
+<li>
+<p>Experiment 1: You want to test the effect of alcohol on test scores<br />
+    of students. There are three conditions: the student consumed no<br />
+    alcohol, two glasses of beer, or five glasses of beer. Alcohol<br />
+    tolerance and time spent studying should also be considered somehow.</p>
+</li>
+<li>
+<p>Experiment 2: You want to investigate the effects of certain<br />
+    fertilizers on plant growth. Assume you have two different<br />
+    fertilizers, A and B. Consider three conditions: you give the plant<br />
+    no fertilizer, fertilizer A, or fertilizer B. You measure the height<br />
+    of the plant after a specific period of time to see whether the<br />
+    fertilizers had an effect.</p>
+</li>
+</ul>
+<p>Use a within-subjects design for for Experiment 1 and between-groups<br />
+design for Experiment 2.</p>
+<p>Is it always either manipulation between-groups or manipulation<br />
+within-groups, or are there experiments where you could use either<br />
+approach? In some cases, either approach is possible.</p>
+<p><strong>Explore the working memory data</strong></p>
+<pre><code class="r">library(XLConnectJars)
+library(XLConnect)
+
+# Read in the data set and assign to the object
+wm &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'w__m', header = TRUE, startCol = 1, startRow = 1)
+
+wm$condition &lt;- as.factor(wm$condition)
+
+# Check it out
+str(wm)
+</code></pre>
+
+<pre><code class="r">library(psych)
+library(ggplot2)
+
+# Define the variable subject as a categorical variable
+wm$subject &lt;- factor(wm$subject)
+
+# Summary statistics by all groups (8 sessions, 12 sessions, 17 sessions, 19 sessions)
+describeBy(wm, wm$condition)
+
+# Boxplot IQ versus condition
+boxplot(wm$iq ~ wm$condition, main = 'Boxplot', xlab = 'Training sessions', ylab = 'IQ')
+
+# Illustration data, each line represents the development of each subject by number of trainings
+ggplot(data = wm, aes(x = wm$condition, y = wm$iq, group = wm$subject, colour = wm$subject)) + geom_line() + geom_point()
+</code></pre>
+
+<p><strong>Reduced cost</strong></p>
+<p>The cost advantage of using manipulation within groups verses<br />
+manipulation between groups for the working memory experiment is you<br />
+need 60 subjects fewer.</p>
+<p><strong>Statistically more powerful</strong></p>
+<p>Repeated measures analysis accounts for individual differences across<br />
+the experiment. This reduces the error term, which increases statistical<br />
+power.</p>
+<p><strong>Counterbalancing</strong></p>
+<p>Suppose you have three levels of an independent variable A (i.e. A1, A2,<br />
+A3) and a blocked design. You want to use full counterbalancing to take<br />
+into account order effects.</p>
+<p>What are all the possible orders that you need to use? In other words,<br />
+what are the order conditions?</p>
+<p>(A1, A2, A3), (A1, A3, A2) , (A2, A1, A3), (A2, A3, A1) , (A3, A2, A1),<br />
+(A3, A1, A2)</p>
+<p><strong>Number of order conditions?</strong></p>
+<p>Assume the number of levels of the independent variable goes up and you<br />
+want to completely counterbalance. What will happen to the number of<br />
+order conditions you&rsquo;ll need?</p>
+<p>The number becomes really large. An independent variable with n levels<br />
+will have <code>n!=n*(n???1)*(n???2)*...</code> order conditions.</p>
+<p><strong>Latin Squares design</strong></p>
+<p>As you hopefully realized in the previous exercise, completely<br />
+counterbalancing is not always a practical solution for taking into<br />
+account order effects. This is because the number of different orders<br />
+required gets really large as the number of possible conditions<br />
+increases.</p>
+<p>The most common workaround to this problem is the Latin Squares design,<br />
+in which you do not completely counterbalance, but instead put each<br />
+condition at every position (at least) once.</p>
+<p>Which of the following examples has been constructed according to the<br />
+Latin Squares design?</p>
+<p>(A1, A2, A3), (A2, A3, A1), (A3, A1, A2)</p>
+<p><strong>More on Latin Squares</strong></p>
+<p>The number of order conditions is always equal to the number of levels<br />
+of your independent variable.</p>
+<p><strong>Why is missing data a problem?</strong></p>
+<p>In a between-groups design, it is okay to have a slightly different<br />
+number of subjects in each group, so if one subject drops out in one of<br />
+the conditions then that group has just one less subject. Now you want<br />
+to look at how subjects change over time and the different scores<br />
+between two or more conditions for each subject.</p>
+<p><strong>Understanding sphericity</strong></p>
+<p>The variances of the differences between all possible pairs of groups<br />
+(i.e. levels of the independent variable) are equal.</p>
+<p><strong>Mauchly&rsquo;s test</strong></p>
+<pre><code class="r"># Define iq as a data frame where each column represents a condition
+iq &lt;- cbind(wm$iq[wm$condition == '8 days'], wm$iq[wm$condition == '12 days'], wm$iq[wm$condition == '17 days'], wm$iq[wm$condition == '19 days'])
+
+# Make an mlm object
+mlm &lt;- lm(iq ~ 1)
+
+# Mauchly's test
+mauchly.test(mlm, x = ~ 1)
+</code></pre>
+
+<p>Based on the results, the sphericity assumption holds.</p>
+<p><strong>Pros of repeated measures</strong></p>
+<p>Less cost and statistically more powerful</p>
+<p><strong>Cons of repeated measures</strong></p>
+<p>Order effects, counterbalancing, missing data, and an extra assumption</p>
+<h4 id="2-repeated-measures-anova">2, Repeated measures ANOVA<a class="headerlink" href="#2-repeated-measures-anova" title="Permanent link">&para;</a></h4>
+<p><strong>The systematic between groups variance</strong></p>
+<p>To understand everything a bit better, we will calculate the F-ratio for<br />
+a repeated measures design by ourself in the next exercises.</p>
+<p>First, we will need the systematic between-groups variance. This is the<br />
+same as in the between-groups design&ndash;the variance due to grouping by<br />
+condition.</p>
+<pre><code class="r"># Define number of subjects for each condition
+n &lt;- 20
+
+# Calculate group means
+y_j &lt;- tapply(wm$iq, wm$condition, mean)
+
+# Calculate the grand mean
+y_t &lt;- mean(y_j)
+
+# Calculate the sum of squares
+ss_cond &lt;- sum((y_j - y_t)^2)*n
+
+# Define the degrees of freedom for conditions
+df &lt;- (4 - 1)
+
+# Calculate the mean squares (variance)
+ms_cond &lt;- ss_cond/df
+</code></pre>
+
+<p><strong>The subject variance</strong></p>
+<p>We will also need the error term of the repeated measures design. This<br />
+can be calculated in a few steps.</p>
+<ul>
+<li>First calculate the systematic variance due to subjects.</li>
+<li>Below, we will calculate the unsystematic variance, like we did with<br />
+    the between-groups design.</li>
+<li>If we subtract these two results, we will get the error term of the<br />
+    repeated measures design.</li>
+</ul>
+<p>The systematic (stable) subject variance will be taken out of the error<br />
+term, so the error term is reduced in comparison with the between-groups<br />
+design.</p>
+<pre><code class="r"># Define number of conditions for each subject
+n &lt;- 4
+
+# Calculate subject means
+y_j &lt;- tapply(wm$iq, wm$subject, mean)
+
+# Calculate the grand mean
+y_t &lt;- mean(y_j)
+
+# Calculate the sum of squares
+ss_subjects &lt;- sum((y_j - y_t)^2)*n
+
+# Define the degrees of freedom for subjects
+df &lt;- (20 - 1)
+
+# Calculate the mean squares (variance)
+ms_subjects &lt;- ss_subjects/df
+</code></pre>
+
+<p><strong>The unsystematic within groups variance</strong></p>
+<p>To calculate the error term of the repeated measures design, we need the<br />
+unsystematic within-groups variance: the unsystematic variance or the<br />
+error term of the between-groups design.</p>
+<pre><code class="r"># Create four subsets of the four groups, containing the IQ results
+    # Make the subset for the group condition = &quot;8 days&quot;
+y_i1 &lt;- subset(wm$iq, wm$condition == &quot;8 days&quot;)
+    # Make the subset for the group condition = &quot;12 days&quot;
+y_i2 &lt;- subset(wm$iq, wm$condition == &quot;12 days&quot;)
+    # Make the subset for the group condition = &quot;17 days&quot;
+y_i3 &lt;- subset(wm$iq, wm$condition == &quot;17 days&quot;)
+    # Make the subset for the group condition = &quot;19 days&quot;
+y_i4 &lt;- subset(wm$iq, wm$condition == &quot;19 days&quot;)
+
+# Subtract the individual values by their group means
+s_1 &lt;- y_i1 - mean(y_i1)
+s_2 &lt;- y_i2 - mean(y_i2)
+s_3 &lt;- y_i3 - mean(y_i3)
+s_4 &lt;- y_i4 - mean(y_i4)
+
+# Put everything back into one vector
+s_t &lt;- c(s_1, s_2, s_3, s_4)
+
+# Calculate the within sum of squares by using the vector s_t
+ss_sa &lt;- sum(s_t^2)
+
+# Define the degrees of freedom
+df &lt;- 4*(20-1)
+
+# Calculate the mean squares (variances)
+ms_sa &lt;- ss_sa/df
+</code></pre>
+
+<p><strong>The unsystematic variance for the repeated measures design</strong></p>
+<p>Now we can easily calculate the unsystematic variance for the repeated<br />
+measures design, also called the error term.</p>
+<pre><code class="r"># ss_sa = ss_subjects + ss_rm
+ss_rm &lt;- ss_sa - ss_subjects
+
+# Define the degrees of freedom
+df &lt;- (20 - 1)*(4 - 1)
+
+# Calculate the mean squares (variances)
+ms_rm &lt;- ss_rm/df
+</code></pre>
+
+<p>Now we&rsquo;ve calculated the error term of the repeated measures design,<br />
+which is clearly smaller than the error term of the between-groups<br />
+design because you reduced this one. To complete you can now calculate<br />
+the F-ratio and the corresponding p-value.</p>
+<p><strong>F-ratio and p-value</strong></p>
+<p>To do the ANOVA analysis we actually need the F-ratio and the<br />
+corresponding p-value.</p>
+<pre><code class="r"># Calculate the F-ratio
+f_rat &lt;- ms_cond/ms_rm
+
+# Define the degrees of freedom of the F-distribution
+# df1 for freedom of conditions (ss_cond)
+# df2 for (freedom of) conditions and subjects (sa_sa)
+df1 &lt;- (4 - 1)
+df2 &lt;- (4 - 1)*(20 - 1)
+
+# Calculate the p-value
+p &lt;- 1 - pf(f_rat, df1, df2)
+</code></pre>
+
+<p><strong>Error term in a repeated measures design?</strong></p>
+<p>The inconsistent individual differences across conditions, the effect of<br />
+subjects that differ across conditions. So it is an interaction between<br />
+subjects and condition.</p>
+<p><strong>Anova in R</strong></p>
+<p>ANOVA in R is usually done with the <code>aov</code> function.</p>
+<pre><code class="r"># anova model
+model &lt;- aov(wm$iq ~ wm$condition + Error(wm$subject / wm$condition))
+
+# summary model
+summary(model)
+</code></pre>
+
+<p>The F-ratio is significant. Therefore, the number of training days does<br />
+affect the IQ scores.</p>
+<p><strong>Effect size</strong></p>
+<p>Calculate eta-squared, which helps you estimate effect size.</p>
+<pre><code class="r"># Define the total sum of squares
+
+# ss_cond (syst. between groups or of the effect), 
+# ss_sa (unsyst. within groups) =
+# ss_rm (unsyst. for repeated measures design) + # ss_subjects (ok)
+ss_total &lt;- ss_cond + ss_rm
+
+# Calculate the effect size
+eta_sq &lt;- ss_cond / ss_total
+</code></pre>
+
+<p><strong>Post-hoc test one</strong></p>
+<p>We will now look at a few different procedures for the post-hoc test.<br />
+Let&rsquo;s start with the Holm procedure.</p>
+<pre><code class="r"># Post-hoc test: default procedure
+with(wm, pairwise.t.test(iq, condition, paired = T))
+</code></pre>
+
+<p>We get a table with some values as the output for the post-hoc test and<br />
+a line saying that we have used the Holm procedure. What are the values<br />
+in the table of the output? p-values.</p>
+<p>Recall that the hypotheses are tested at a 5% significance level.</p>
+<p>We can conclude that all pairwise comparisons are significant, except<br />
+for the comparison between 19 and 17 and the comparison between 12 and<br />
+8.</p>
+<p><strong>Post-hoc test: Bonferroni</strong></p>
+<p>Now we&rsquo;ll take a look at the most conservative procedure, Bonferroni.<br />
+This procedure will apply the most extreme adjustments to the p-values.</p>
+<pre><code class="r"># Post-hoc test: Bonferroni procedure
+with(wm, pairwise.t.test(iq, condition, paired = TRUE, p.adjust.method = 'bonferroni'))
+</code></pre>
+
+<p>Notice the change in p-values in comparison with the previous procedure.</p>
+<p><strong>Paired t-test</strong></p>
+<p>Assume that you do not know how to perform an analysis of variance<br />
+(ANOVA), we may do a number of paired t-tests instead.</p>
+<p>Have a look at just one paired t-test and take, for example, the<br />
+comparison between 12 days and 17 days.</p>
+<pre><code class="r"># Define two subsets containing the IQ scores for the condition group '12 days' and '17 days'
+cond_12days &lt;- subset(wm, condition == '12 days')$iq
+cond_17days &lt;- subset(wm, condition == '17 days')$iq
+cond_12days
+
+# t-test
+t.test(cond_12days, cond_17days, paired = TRUE)
+</code></pre>
+
+<p>It is clear that we can apply different procedures for post-hoc tests.<br />
+These procedures differ with respect to how they handle inflation of the<br />
+possibility of a type I error and will therefore give us different<br />
+p-values. However, these p-values will always be in a certain range.</p>
+<p>What is the (smallest) range of p-values for the comparison between 12<br />
+days and 17 days? Look at the results from applying the Bonferroni<br />
+procedure as well as the paired t-test.</p>
+<p>p-values:</p>
+<ul>
+<li>Bonferroni 12 days-17 days: 0.03910</li>
+<li>Paired t-test (cond_12days, cond_17days): 0.006517</li>
+</ul>
+<p>Therefore: [0.0065, 0.0391].</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/" class="btn btn-neutral float-right" title="Statistics with R, Course Five, Correlation and Regression">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/" class="btn btn-neutral" title="Statistics with R, Course Three, Analysis of Variance"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

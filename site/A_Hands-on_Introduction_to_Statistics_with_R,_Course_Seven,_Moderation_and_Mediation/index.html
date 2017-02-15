@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Statistics with R, Course Seven, Moderation and Mediation - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Statistics with R, Course Seven, Moderation and Mediation";
+    var mkdocs_page_input_path = "A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation.md";
+    var mkdocs_page_url = "/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-an-introduction-to-centering-predictors">2, An introduction to centering predictors</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-an-introduction-to-mediation">3, An introduction to mediation</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>A Hands-on Introduction to Statistics with R &raquo;</li>
+        
+      
+    
+    <li>Statistics with R, Course Seven, Moderation and Mediation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#an-introduction-to-moderation">1, An introduction to moderation</a></li>
+<li><a href="#an-introduction-to-centering-predictors">2, An introduction to centeringpredictors</a></li>
+<li><a href="#an-introduction-to-mediation">3, An introduction to mediation</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets only.</li>
+</ul>
+<hr />
+<h4 id="1-an-introduction-to-moderation">1, An introduction to moderation<a class="headerlink" href="#1-an-introduction-to-moderation" title="Permanent link">&para;</a></h4>
+<p><strong>Data exploration</strong></p>
+<pre><code class="r">library(psych)
+
+# Summary statistics
+describeBy(mod, mod$condition)
+
+# Create a boxplot of the data
+boxplot(mod$iq ~ mod$condition, main = 'Boxplot', ylab = 'IQ', xlab = 'Group condition')
+</code></pre>
+
+<p><strong>Calculate correlations</strong></p>
+<pre><code class="r"># Create subsets of the three groups
+
+# Make the subset for the group condition = 'control'
+mod_control &lt;- subset(mod, condition == 'control')
+
+# Make the subset for the group condition = 'threat1'
+mod_threat1 &lt;- subset(mod, condition == 'threat1')
+
+# Make the subset for the group condition = 'threat2'
+mod_threat2 &lt;- subset(mod, condition == 'threat2')
+
+# Calculate the correlations
+cor(mod_control$iq, mod_control$wm, method = 'pearson')
+
+cor(mod_threat1$iq, mod_threat1$wm, method = 'pearson')
+
+cor(mod_threat2$iq, mod_threat2$wm, method = 'pearson')
+</code></pre>
+
+<p><strong>Model with and without moderation</strong></p>
+<p>A moderator variable (Z) will enhance a regression model if the<br />
+relationship between X and Y varies as a function of Z.</p>
+<p>Experimental research</p>
+<ul>
+<li>The manipulation of an X causes change in a Y.</li>
+<li>A moderator variable (Z) implies that the effect of the X on the Y<br />
+    is NOT consistent across the distribution of Z.</li>
+</ul>
+<p>Correlational research</p>
+<ul>
+<li>Assume a correlation between X and Y.</li>
+<li>A moderator variable (Z) implies that the correlation between X and<br />
+    Y is NOT consistent across the distribution of Z.</li>
+</ul>
+<p>If both X and Z are continuous:</p>
+<p><em>Y</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>X</em> + <em>β</em><sub>2</sub><em>Z</em> + <em>β</em><sub>3</sub>(<em>X</em> * <em>Z</em>)+<em>ϵ</em></p>
+<p>If X is categorical and Z is continuous:</p>
+<p><em>Y</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub>(<em>D</em><sub>1</sub>)+<em>β</em><sub>2</sub>(<em>D</em><sub>2</sub>)+<em>β</em><sub>3</sub><em>Z</em> + <em>β</em><sub>4</sub>(<em>D</em><sub>1</sub> * <em>Z</em>)+<em>β</em><sub>5</sub>(<em>D</em><sub>2</sub> * <em>Z</em>)+<em>ϵ</em></p>
+<p>Consult the PDF for performing tests.</p>
+<pre><code class="r"># Model without moderation (tests for 'first-order effects')
+model_1 &lt;- lm(mod$iq ~ mod$wm + mod$d1 + mod$d2)
+
+ # Make a summary of model_1
+summary(model_1)
+
+# Create new predictor variables
+wm_d1 &lt;- mod$wm * mod$d1
+wm_d2 &lt;- mod$wm * mod$d2
+
+# Model with moderation
+model_2 &lt;- lm(mod$iq ~ mod$wm + mod$d1 + mod$d2 + wm_d1 + wm_d2)
+
+# Make a summary of model_2
+summary(model_2)
+</code></pre>
+
+<p><strong>Model comparison</strong></p>
+<pre><code class="r"># Compare model_1 and model_2
+anova(model_1, model_2)
+</code></pre>
+
+<p><strong>Scatterplot</strong></p>
+<pre><code class="r"># Choose colors to represent the points by group
+color &lt;- c('red', 'green', 'blue')
+
+# Illustration of the first-order effects of working memory on IQ
+ggplot(mod, aes(x = wm, y = iq)) + geom_smooth(method = 'lm', color = 'black') + 
+  geom_point(aes(color = condition))
+
+# Illustration of the moderation effect of working memory on IQ
+ggplot(mod, aes(x = wm, y = iq)) + geom_smooth(aes(group = condition), method = 'lm', se = T, color = 'black', fullrange = T) + geom_point(aes(color = condition))
+</code></pre>
+
+<p><strong>Centering data</strong></p>
+<pre><code class="r"># Define wm_center
+wm_center &lt;- mod$wm - mean(mod$wm)
+
+# Compare with the variable wm.centered
+all.equal(wm_center, mod$wm.centered)
+</code></pre>
+
+<h4 id="2-an-introduction-to-centering-predictors">2, An introduction to centering predictors<a class="headerlink" href="#2-an-introduction-to-centering-predictors" title="Permanent link">&para;</a></h4>
+<p><strong>Centering versus no centering</strong></p>
+<p>To center means to put in deviation form: <em>X</em><sub><em>C</em></sub> = <em>X</em> − <em>M</em>.<br />
+Convert raw scores to deviation scores.</p>
+<p>Two reason:</p>
+<ul>
+<li>Conceptual: regression constant will be more meaningful.</li>
+<li>Statistical: avoid multicolinearity.</li>
+</ul>
+<p>Conceptual.</p>
+<ul>
+<li>The intercept, <em>β</em><sub>0</sub>, is the predicted score on Y (child&rsquo;s<br />
+    verbal ability) when all predictors (X = mother&rsquo;s vocabulary, Z =<br />
+    child&rsquo;s age) are zero.</li>
+<li>If X = zero or Z = zero is meaningless, or impossible, then<br />
+<em>β</em><sub>0</sub> will be difficult to interpret.</li>
+<li>In contrast, if X = zero and Z = zero, are the average then<br />
+<em>β</em><sub>0</sub> is easy to interpret.</li>
+<li>The regression coefficient <em>β</em><sub>1</sub> is the slope for X<br />
+    assuming an average score on Z.</li>
+<li>No moderation effect implies that <em>β</em><sub>1</sub> is consistent<br />
+    across the entire distribution of Z.</li>
+<li>In contrast, a moderation effect implies that <em>β</em><sub>1</sub> is NOT<br />
+    consistent across the entire distribution of Z.</li>
+<li>Where in the distribution of Z is <em>β</em><sub>1</sub> most<br />
+    representative of the relationship between X &amp; Y?</li>
+</ul>
+<p>Statistical</p>
+<ul>
+<li>The predictors, X and Z, can become highly correlated with the<br />
+    product, (X*Z).</li>
+<li>Multicolinearity: when two predictor variables in a GLM are so<br />
+    highly correlated that they are essentially redundant and it becomes<br />
+    difficult to estimate <em>β</em> values associated with each predictor.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r"># Model without moderation and with centered data
+model_1_centered &lt;- lm(mod$iq ~ mod$wm.centered + mod$d1 + mod$d2)
+
+# Make a summary of model_1_centered
+summary(model_1_centered)
+</code></pre>
+
+<p><strong>Centering versus no centering with moderation</strong></p>
+<pre><code class="r"># Create new predictor variables
+wm_d1_centered &lt;- mod$wm.centered * mod$d1
+wm_d2_centered &lt;- mod$wm.centered * mod$d2
+
+# Define model_2_centered
+model_2_centered &lt;- lm(mod$iq ~ mod$wm.centered + mod$d1 + mod$d2 + wm_d1_centered + wm_d2_centered)
+
+# Make a summary of model_2_centered
+summary(model_2_centered)
+</code></pre>
+
+<p><strong>Model comparison</strong></p>
+<pre><code class="r"># Compare model_1_centered and model_2_centered
+anova(model_1_centered, model_2_centered)
+
+# Compare model_1 and model_2
+anova(model_1, model_2)
+</code></pre>
+
+<p><strong>Some correlations</strong></p>
+<pre><code class="r"># Calculate the correlations between working memory capacity and the product terms
+ cor_wmd1 &lt;- cor(mod$wm, wm_d1)
+ cor_wmd2 &lt;- cor(mod$wm, wm_d2)
+ cor_wmd1_centered &lt;- cor(mod$wm.centered, wm_d1_centered)
+ cor_wmd2_centered &lt;- cor(mod$wm.centered, wm_d2_centered)
+
+# Calculate the correlations between the dummy variables and the product terms
+ cor_d1d1&lt;- cor(mod$d1, wm_d1)
+ cor_d2d2 &lt;- cor(mod$d2, wm_d2)
+ cor_d1d1_centered &lt;- cor(mod$d1, wm_d1_centered)
+ cor_d2d2_centered &lt;- cor(mod$d2, wm_d2_centered)
+
+# correlations
+ rbind(c(cor_wmd1, cor_wmd2), c(cor_wmd1_centered, cor_wmd2_centered))
+ rbind(c(cor_d1d1, cor_d2d2), c(cor_d1d1_centered, cor_d2d2_centered))
+</code></pre>
+
+<h4 id="3-an-introduction-to-mediation">3, An introduction to mediation<a class="headerlink" href="#3-an-introduction-to-mediation" title="Permanent link">&para;</a></h4>
+<p><strong>Model with and without mediation</strong></p>
+<ul>
+<li>X: Experimental manipulation (Stereotype threat).</li>
+<li>Y: Behavioral outcome (IQ score).</li>
+<li>M: Mediator (Mechanism = Working memory capacity).</li>
+</ul>
+<p>A mediation analysis is typically conducted to better understand an<br />
+observed effect of a correlation between X and Y. Why, and how, does<br />
+stereotype threat influence IQ test performance?</p>
+<p>If X and Y are correlated then we can use regression to predict Y from X</p>
+<p><em>Y</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>X</em> + <em>ϵ</em></p>
+<p>If X and Y are correlated BECAUSE of the mediator M, then (X à M à Y):</p>
+<p><em>Y</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>M</em> + <em>ϵ</em></p>
+<p><em>M</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>X</em> + <em>ϵ</em></p>
+<p>If X and Y are correlated BECAUSE of the mediator M, and:</p>
+<p><em>Y</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>M</em> + <em>β</em><sub>2</sub><em>X</em> + <em>ϵ</em></p>
+<p>A mediator variable (M) accounts for some (partial) or all of the<br />
+relationship between X and Y.</p>
+<p>CAUTION:</p>
+<ul>
+<li>Correlation does not imply causation!</li>
+<li>In other words, there is a BIG difference between statistical<br />
+    mediation and true causal mediation.</li>
+</ul>
+<p><strong>Data exploration</strong></p>
+<pre><code class="r"># Summary statistics
+describeBy(med, med$condition)
+
+# Create a boxplot of the data
+boxplot(med$iq ~ med$condition, main = 'Boxplot', xlab = 'Group condition', ylab = 'IQ')
+</code></pre>
+
+<p><strong>Run 3 regression models on the data</strong></p>
+<pre><code class="r"># Run the three regression models
+# outcome ~ predictor
+model_yx &lt;- lm(med$iq ~ med$condition)
+
+# mediator ~ predictor
+model_mx &lt;- lm(med$wm ~ med$condition)
+
+# outcome ~ predictor + mediator
+model_yxm &lt;- lm(med$iq ~ med$condition + med$wm)
+
+# Make a summary of the three models
+summary(model_yx)
+summary(model_mx)
+summary(model_yxm)
+</code></pre>
+
+<p><strong>Sobel test</strong></p>
+<pre><code class="r"># Compare the previous results to the output of the sobel function
+
+# sobel(pred,med,out)
+model_all &lt;- sobel(med$condition, med$wm, med$iq)
+model_all
+</code></pre>
+
+<p>The Sobel test is a method of testing the significance of a mediation<br />
+effect. Consult the PDF.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Big_Data_Analysis_with_Revolution_R_Enterprise/" class="btn btn-neutral float-right" title="Big Data Analysis with Revolution R Enterprise">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/" class="btn btn-neutral" title="Statistics with R, Course Six, Multiple Regression"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Big_Data_Analysis_with_Revolution_R_Enterprise/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

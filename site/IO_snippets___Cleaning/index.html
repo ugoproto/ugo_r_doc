@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>I/O snippets & Cleaning - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "I/O snippets & Cleaning";
+    var mkdocs_page_input_path = "IO_snippets___Cleaning.md";
+    var mkdocs_page_url = "/IO_snippets___Cleaning/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">I/O snippets & Cleaning</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#importing-data-into-r">Importing Data Into R</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-importing-data-from-flat-files">1, Importing Data from Flat Files</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-importing-data-from-excel">2, Importing Data from Excel</a></li>
+                
+                    <li><a class="toctree-l4" href="#3-importing-data-from-other-statistical-software">3, Importing Data from Other Statistical Software</a></li>
+                
+                    <li><a class="toctree-l4" href="#4-importing-data-from-relational-data">4, Importing Data from Relational Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#5-importing-data-from-the-web">5, Importing Data from the Web</a></li>
+                
+                    <li><a class="toctree-l4" href="#6-keyboard-inputting">6, Keyboard Inputting</a></li>
+                
+                    <li><a class="toctree-l4" href="#7-exporting-data">7, Exporting Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#8-inspecting-data-missing-data">8, Inspecting Data - Missing Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#9-labels-levels">9, Labels &amp; Levels</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-to-work-with-quandl-in-r">How to work with Quandl in R</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-importing-quandl-datasets">1, Importing Quandl Datasets</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-manipulating-quandl-datasets">2, Manipulating Quandl Datasets</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#cleaning-data-in-r">Cleaning Data in R</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-introduction-and-exploring-raw-data">1, Introduction and Exploring Raw Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-tidying-data">2, Tidying Data</a></li>
+                
+                    <li><a class="toctree-l4" href="#3-preparing-data-for-analysis">3, Preparing Data for Analysis</a></li>
+                
+                    <li><a class="toctree-l4" href="#4-putting-it-all-together">4, Putting it All Together</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>I/O snippets & Cleaning</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#datasets">Datasets</a></li>
+<li><a href="#importing-data-into-r">Importing Data Into R</a><ul>
+<li><a href="#importing-data-from-flat-files">1, Importing Data from Flat Files</a></li>
+<li><a href="#importing-data-from-excel">2, Importing Data from Excel</a></li>
+<li><a href="#importing-data-from-other-statistical-software">3, Importing Data from Other Statistical Software</a></li>
+<li><a href="#importing-data-from-relational-data">4, Importing Data from Relational Data</a></li>
+<li><a href="#importing-data-from-the-web">5, Importing Data from the Web</a></li>
+<li><a href="#keyboard-inputting">6, Keyboard Inputting</a></li>
+<li><a href="#exporting-data">7, Exporting Data</a></li>
+<li><a href="#inspecting-data---missing-data">8, Inspecting Data - Missing Data</a></li>
+<li><a href="#labels-levels">9, Labels &amp; Levels</a></li>
+</ul>
+</li>
+<li><a href="#how-to-work-with-quandl-in-r">How to work with Quandl in R</a><ul>
+<li><a href="#importing-quandl-datasets">1, Importing Quandl Datasets</a></li>
+<li><a href="#manipulating-quandl-datasets">2, Manipulating Quandl Datasets</a></li>
+</ul>
+</li>
+<li><a href="#cleaning-data-in-r">Cleaning Data in R</a><ul>
+<li><a href="#introduction-and-exploring-raw-data">1, Introduction and Exploring Raw Data</a></li>
+<li><a href="#tidying-data">2, Tidying Data</a></li>
+<li><a href="#preparing-data-for-analysis">3, Preparing Data for Analysis</a></li>
+<li><a href="#putting-it-all-together">4, Putting it All Together</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>The project stands in a directory (the &lsquo;project&rsquo;) where the we find<br />
+    the .rmd file, the data and the output.</li>
+</ul>
+<hr />
+<h4 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html">R Dataset<br />
+    Packages</a>;<br />
+    by default in R. -Other dataset can be imported with<br />
+<code>data(Cars93, package = 'MASS')</code> for example.</li>
+<li><a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html">csv/doc<br />
+    Datasets</a>.</li>
+<li><a href="https://r-dir.com/reference/datasets.html">Free Datasets</a> from the<br />
+    World Bank, Gapminder, Kaggle, Quandl, Reddit, and many<br />
+    more websites.</li>
+<li><a href="https://www.r-bloggers.com/datasets-to-practice-your-data-mining/">Datasets</a><br />
+    to Practice Your Data Mining.</li>
+<li><a href="http://college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/slr/frames/frame.html">Houghton Mifflin<br />
+    Data</a><br />
+    for linear regressions.</li>
+<li><a href="http://data.princeton.edu/wws509/datasets/">Regression Datasets</a><br />
+    for Generalized Linear Models (linear, logistic, poisson,<br />
+    multinomial, survival).</li>
+<li><a href="http://www.kdnuggets.com/2015/04/awesome-public-datasets-github.html">Public Datasets on<br />
+    GitHub</a></li>
+<li>[Awesome Public<br />
+    Datasets]<a href="https://github.com/caesar0301/awesome-public-datasets">https://github.com/caesar0301/awesome-public-datasets</a>)</li>
+</ul>
+<hr />
+<h3 id="importing-data-into-r">Importing Data Into R<a class="headerlink" href="#importing-data-into-r" title="Permanent link">&para;</a></h3>
+<p>The packages:</p>
+<ul>
+<li><code>utils</code>.</li>
+<li><code>readr</code>.</li>
+<li><code>data.table</code>.</li>
+<li><code>readxl</code>.</li>
+<li><code>gdata</code>.</li>
+<li><code>XLConnect</code>.</li>
+<li><code>haven</code>.</li>
+<li><code>foreign</code>.</li>
+<li><code>DBI</code>.</li>
+<li><code>httr</code>.</li>
+<li><code>jsonlite</code>.</li>
+</ul>
+<h4 id="1-importing-data-from-flat-files">1, Importing Data from Flat Files<a class="headerlink" href="#1-importing-data-from-flat-files" title="Permanent link">&para;</a></h4>
+<h5 id="r-functions-by-default">R functions, by default.<a class="headerlink" href="#r-functions-by-default" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>read.csv</code>; <code>sep = ','</code>, <code>dec = '.'</code>.</li>
+<li><code>read.delim</code>; .txt, <code>dec = '.'</code>.</li>
+<li><code>read.csv2</code>; <code>sep = ';'</code>, <code>dec = ','</code>.</li>
+<li><code>read.delim2</code>; .txt, <code>dec = ','</code>.</li>
+<li>Needs arguments.</li>
+</ul>
+<p><strong><code>read.csv</code> for .csv files</strong></p>
+<pre><code class="r"># List the files in your working directory
+dir()
+
+# Import swimming_pools.csv: pools
+# stringAsFactors = FALSE does not import strings as categorical variables
+pools &lt;- read.csv('swimming_pools.csv', stringsAsFactors = FALSE)
+</code></pre>
+
+<p><code>stringsAsFactors</code></p>
+<pre><code class="r"># Import swimming_pools.csv correctly: pools
+pools &lt;- read.csv('swimming_pools.csv', stringsAsFactor = FALSE, header = TRUE, sep = ',')
+
+# Import swimming_pools.csv with factors: pools_factor
+pools_factor &lt;- read.csv('swimming_pools.csv', header = TRUE, sep = ',')
+</code></pre>
+
+<p><strong><code>read.delim</code> for .txt files</strong></p>
+<pre><code class="r"># Import hotdogs.txt: hotdogs
+hotdogs &lt;- read.delim('hotdogs.txt', header = FALSE)
+
+# Name the columns of hotdogs appropriately
+names(hotdogs) &lt;- c('type', 'calories', 'sodium')
+</code></pre>
+
+<p>Arguments.</p>
+<pre><code class="r"># Load in the hotdogs data set: hotdogs
+hotdogs &lt;- read.delim('hotdogs.txt', header = FALSE, sep = '\t', col.names = c('type', 'calories', 'sodium'))
+
+# Select the hot dog with the least calories: lily
+lily &lt;- hotdogs[which.min(hotdogs$calories), ]
+# Select the observation with the most sodium: tom
+
+tom &lt;- hotdogs[which.max(hotdogs$sodium), ]
+</code></pre>
+
+<pre><code class="r"># Previous call to import hotdogs.txt
+hotdogs &lt;- read.delim('hotdogs.txt', header = FALSE, col.names = c('type', 'calories', 'sodium'))
+
+# Print a vector representing the classes of the columns
+sapply(hotdogs, class)
+
+# Edit the colClasses argument to import the data correctly: hotdogs2
+hotdogs2 &lt;- read.delim('hotdogs.txt', header = FALSE, col.names = c('type', 'calories', 'sodium'), colClasses = c('factor', 'NULL', 'numeric'))
+</code></pre>
+
+<h5 id="the-utils-package">The <code>utils</code> package<a class="headerlink" href="#the-utils-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>read.table</code>; <code>sep = '\t'</code>, <code>= ','</code>, <code>= ';'</code>.</li>
+<li>Read any tabular as a d.f.</li>
+<li>Needs arguments; lots of argument for precision.</li>
+<li>Slow.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(utils)
+</code></pre>
+
+<p><strong><code>read.table</code> .txt files</strong></p>
+<pre><code class="r"># Create a path to the hotdogs.txt file
+path &lt;- file.path('hotdogs', 'hotdogs.txt')
+
+# Import the hotdogs.txt file: hotdogs
+hotdogs &lt;- read.table(path, header = FALSE, sep = '\t', col.names = c('type', 'calories', 'sodium'))
+</code></pre>
+
+<hr />
+<h5 id="from-5-importing-data-from-the-web">(from 5, Importing Data from the Web)<a class="headerlink" href="#from-5-importing-data-from-the-web" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># https URL to the swimming_pools csv file.
+url_csv &lt;- 'https://s3.amazonaws.com/assets.datacamp.com/course/importing_data_into_r/swimming_pools.csv'
+
+# Import the file using read.csv(): pools1
+pools1 &lt;- read.csv(url_csv)
+</code></pre>
+
+<hr />
+<h5 id="the-readr-package">The <code>readr</code> package<a class="headerlink" href="#the-readr-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>read_delim</code>; <code>delim = '\t'</code>, <code>= ','</code>.</li>
+<li><code>read_csv</code>; read <code>100.000, 200.000</code></li>
+<li><code>read_tsv</code>; idem.</li>
+<li><code>read_csv2</code>; read <code>100,000; 200,000</code> or European files..</li>
+<li><code>read_tsv2</code>; idem.</li>
+<li><code>read_lines</code>.</li>
+<li><code>read_file</code>.</li>
+<li><code>write_csv</code>.</li>
+<li><code>write_rds</code>.</li>
+<li><code>type_convert</code>.</li>
+<li><code>parse_factor</code>.</li>
+<li><code>parse_date</code>.</li>
+<li><code>parse_number</code>.</li>
+<li><code>spec_csv</code>.</li>
+<li><code>spec_delim</code>.</li>
+<li>Fast, few arguments.</li>
+<li>Detect data type.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(readr)
+</code></pre>
+
+<p><strong><code>read_delim</code> .txt files</strong></p>
+<pre><code class="r"># Import potatoes.txt using read_delim(): potatoes
+potatoes &lt;- read_delim('potatoes.txt', delim = '\t')
+</code></pre>
+
+<p><strong><code>read_csv</code> .csv files</strong></p>
+<pre><code class="r"># Column names
+properties &lt;- c('area', 'temp', 'size', 'storage', 'method', 'texture', 'flavor', 'moistness')
+
+# Import potatoes.csv with read_csv(): potatoes
+potatoes &lt;- read_csv('potatoes.csv', col_names = properties)
+
+# Create a copy of potatoes: potatoes2
+potatoes2 &lt;- potatoes
+
+# Convert the method column of potatoes2 to a factor
+potatoes2$method = factor(potatoes2$method)
+
+# or
+
+potatoes2$method = as.factor(potatoes2$method)
+</code></pre>
+
+<p><strong><code>col_types</code>, <code>skip</code> and <code>n_max</code> in .tsv files</strong></p>
+<pre><code class="r"># Column names
+properties &lt;- c('area', 'temp', 'size', 'storage', 'method', 'texture', 'flavor', 'moistness')
+
+# Import 5 observations from potatoes.txt: potatoes_fragment
+# read_tsv or tab-separated values
+potatoes_fragment &lt;- read_tsv('potatoes.txt', col_names = properties, skip = 7, n_max = 5)
+
+# Import all data, but force all columns to be character: potatoes_char
+potatoes_char &lt;- read_tsv('potatoes.txt', col_types = 'cccccccc')
+</code></pre>
+
+<p><strong>Setting column types</strong></p>
+<pre><code class="r">cols(
+  weight = col_integer(),
+  feed = col_character()
+)
+</code></pre>
+
+<p><strong>Removing NA</strong></p>
+<pre><code class="r">na = c('NA', 'null')
+</code></pre>
+
+<p><strong><code>col_types</code> with collectors .tsv files</strong></p>
+<pre><code class="r"># Import without col_types
+hotdogs &lt;- read_tsv('hotdogs.txt', col_names = c('type', 'calories', 'sodium'))
+
+# The collectors you will need to import the data
+fac &lt;- col_factor(levels = c('Beef', 'Meat', 'Poultry'))
+int &lt;- col_integer()
+
+# Edit the col_types argument to import the data correctly: hotdogs_factor
+# Change col_types to the correct vector of collectors; coerce the vector into a list
+hotdogs_factor &lt;- read_tsv('hotdogs.txt', col_names = c('type', 'calories', 'sodium'), col_types = list(fac, int, int))
+</code></pre>
+
+<p><strong>Skiping columns</strong></p>
+<pre><code class="r">salaries &lt;- read_tsv('Salaries.txt', col_names = FALSE, col_types = cols(
+  X2 = col_skip(),
+  X3 = col_skip(), 
+  X4 = col_skip()
+))
+</code></pre>
+
+<p><strong>Reading an ordinary text file</strong></p>
+<pre><code class="r"># vector of character strings. 
+# Import as a character vector, one item per line: tweets
+tweets &lt;- read_lines('tweets.txt')
+tweets
+
+# returns a length 1 vector of the entire file, with line breaks represented as \n
+# Import as a length 1 vector: tweets_all
+tweets_all &lt;- read_file('tweets.txt')
+tweets_all
+</code></pre>
+
+<p><strong>Writing .csv and .tsv files</strong></p>
+<pre><code class="r"># Save cwts as chickwts.csv
+write_csv(cwts, &quot;chickwts.csv&quot;)
+
+# Append cwts2 to chickwts.csv
+write_csv(cwts2, &quot;chickwts.csv&quot;, append = TRUE)
+</code></pre>
+
+<p><strong>Writing .rds files</strong></p>
+<pre><code class="r"># Save trees as trees.rds
+write_rds(trees, 'trees.rds')
+
+# Import trees.rds: trees2
+trees2 &lt;- read_rds('trees.rds')
+
+# Check whether trees and trees2 are the same
+identical(trees, trees2)
+</code></pre>
+
+<p><strong>Coercing columns to different data types</strong></p>
+<pre><code class="r"># Convert all columns to double
+trees2 &lt;- type_convert(trees, col_types = cols(Girth = 'd', Height = 'd', Volume = 'd'))
+</code></pre>
+
+<p><strong>Coercing character columns into factors</strong></p>
+<pre><code class="r"># Parse the title column
+salaries$title &lt;- parse_factor(salaries$title, levels = c('Prof', 'AsstProf', 'AssocProf'))
+
+# Parse the gender column
+salaries$gender &lt;- parse_factor(salaries$gender, levels = c('Male', 'Female'))
+</code></pre>
+
+<p><strong>Creating Date objects</strong></p>
+<pre><code class="r"># Change type of date column
+weather$date &lt;- parse_date(weather$date, format = '%m/%d/%Y')
+</code></pre>
+
+<p><strong>Parsing number formats</strong></p>
+<pre><code class="r"># Parse amount column as a number
+debt$amount &lt;- parse_number(debt$amount)
+</code></pre>
+
+<p><strong>Viewing metadata before importing</strong></p>
+<ul>
+<li><code>spec_csv</code> for .csv and .tsv files.</li>
+<li><code>spec_delim</code> for .txt files (among others).</li>
+</ul>
+<!-- -->
+
+<pre><code class="r"># Specifications of chickwts
+spec_csv('chickwts.csv')
+</code></pre>
+
+<hr />
+<h5 id="from-5-importing-data-from-the-web_1">(from 5, Importing Data from the Web)<a class="headerlink" href="#from-5-importing-data-from-the-web_1" title="Permanent link">&para;</a></h5>
+<p><strong>Import Flat files from the web</strong></p>
+<pre><code class="r"># Import the csv file: pools
+url_csv &lt;- 'http://s3.amazonaws.com/assets.datacamp.com/course/importing_data_into_r/swimming_pools.csv'
+pools &lt;- read_csv(url_csv)
+
+pools
+
+# Import the txt file: potatoes
+url_delim &lt;- 'http://s3.amazonaws.com/assets.datacamp.com/course/importing_data_into_r/potatoes.txt'
+potatoes &lt;- read_tsv(url_delim)
+
+potatoes
+</code></pre>
+
+<p><strong>Secure importing</strong></p>
+<pre><code class="r"># Import the file using read_csv(): pools2
+pools2 &lt;- read_csv(url_csv)
+</code></pre>
+
+<hr />
+<h5 id="the-datatable-package">The <code>data.table</code> package<a class="headerlink" href="#the-datatable-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>fread</code> == <code>read.table</code>.</li>
+<li>.txt files only.</li>
+<li>Fast.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(data.table)
+</code></pre>
+
+<p><strong><code>fread</code> for .txt files</strong></p>
+<pre><code class="r"># Import potatoes.txt with fread(): potatoes
+potatoes &lt;- fread('potatoes.txt')
+
+# Print out arranged version of potatoes
+potatoes[order(moistness),] 
+
+# Import 20 rows of potatoes.txt with fread(): potatoes_part
+potatoes_part &lt;- fread('potatoes.txt', nrows = 20)
+</code></pre>
+
+<p><strong><code>fread</code>: more advanced use</strong></p>
+<pre><code class="r"># Import columns 6, 7 and 8 of potatoes.txt: potatoes
+potatoes &lt;- fread('potatoes.txt', select = c(6:8))
+
+# Keep only tasty potatoes (flavor &gt; 3): tasty_potatoes
+tasty_potatoes &lt;- subset(potatoes, potatoes$flavor &gt; 3)
+</code></pre>
+
+<h4 id="2-importing-data-from-excel">2, Importing Data from Excel<a class="headerlink" href="#2-importing-data-from-excel" title="Permanent link">&para;</a></h4>
+<h5 id="the-readxl-package">The <code>readxl</code> package<a class="headerlink" href="#the-readxl-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>excel_sheets</code>; list.</li>
+<li><code>read_excel</code>; import.</li>
+<li>.xlsx files only.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(readxl)
+</code></pre>
+
+<p><strong>List the sheets of an Excel file</strong></p>
+<pre><code class="r"># Find the names of both spreadsheets: sheets
+# Before, find out what is in the directory with 'dir()'
+sheets &lt;- excel_sheets('latitude.xlsx')
+
+sheets
+</code></pre>
+
+<p><strong>Importing an Excel sheet</strong></p>
+<pre><code class="r"># Read the first sheet of latitude.xlsx: latitude_1
+latitude_1 &lt;- read_excel('latitude.xlsx', sheet = 1)
+
+# Read the second sheet of latitude.xlsx: latitude_2
+latitude_2 &lt;- read_excel('latitude.xlsx', sheet = 2)
+
+# Put latitude_1 and latitude_2 in a list: lat_list
+lat_list &lt;- list(latitude_1, latitude_2)
+</code></pre>
+
+<p><strong>Reading a workbook</strong></p>
+<pre><code class="r"># Read all Excel sheets with lapply(): lat_list
+lat_list &lt;- lapply(excel_sheets('latitude.xlsx'), read_excel, path = 'latitude.xlsx')
+</code></pre>
+
+<p><strong>The <code>col_names</code> argument</strong></p>
+<pre><code class="r"># Import the the first Excel sheet of latitude_nonames.xlsx (R gives names): latitude_3
+latitude_3 &lt;- read_excel('latitude_nonames.xlsx', sheet = 1, col_names = FALSE)
+
+# Import the the second Excel sheet of latitude_nonames.xlsx (specify col_names): latitude_4 
+latitude_4 &lt;- read_excel('latitude_nonames.xlsx', sheet = 1, col_names = c('country', 'latitude'))
+</code></pre>
+
+<p><strong>The <code>skip</code> argument</strong></p>
+<pre><code class="r"># Import the second sheet of latitude.xlsx, skipping the first 21 rows: latitude_sel
+latitude_sel &lt;- read_excel('latitude.xlsx', skip = 21, col_names = FALSE)
+</code></pre>
+
+<hr />
+<h5 id="from-5-importing-data-from-the-web_2">(from 5, Importing Data from the Web)<a class="headerlink" href="#from-5-importing-data-from-the-web_2" title="Permanent link">&para;</a></h5>
+<p><strong>Import Excel files from the web</strong></p>
+<pre><code class="r"># Download file behind URL, name it local_latitude.xls
+download.file(url_xls, 'local_latitude.xls')
+
+# Import the local .xls file with readxl: excel_readxl
+excel_readxl &lt;- read_excel('local_latitude.xls')
+</code></pre>
+
+<p><strong>Downloading any file, secure or not</strong></p>
+<pre><code class="r"># https URL to the wine RData file.
+url_rdata &lt;- 'https://s3.amazonaws.com/assets.datacamp.com/course/importing_data_into_r/wine.RData'
+
+# Download the wine file to your working directory
+download.file(url_rdata, 'wine_local.RData')
+</code></pre>
+
+<hr />
+<h5 id="the-xlconnect-package">The <code>XLConnect</code> package<a class="headerlink" href="#the-xlconnect-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>loadWorkbook</code>.</li>
+<li><code>getSheets</code>.</li>
+<li><code>readWorksheet</code>.</li>
+<li><code>readWorksheetFromFile</code></li>
+<li><code>readNamedRegion</code></li>
+<li>
+<p><code>readNamedRegionFromFile</code></p>
+</li>
+<li>
+<p>.xls &amp; .xlsx files.</p>
+</li>
+<li>Like reading a database.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(XLConnectJars)
+library(XLConnect)
+</code></pre>
+
+<p><strong>Import a workbook</strong></p>
+<pre><code class="r"># Build connection to latitude.xlsx: my_book
+my_book &lt;- loadWorkbook('latitude.xlsx')
+</code></pre>
+
+<p><strong>List and read Excel sheets</strong></p>
+<pre><code class="r"># Build connection to latitude.xlsx
+my_book &lt;- loadWorkbook('latitude.xlsx')
+
+# List the sheets in latitude.xlsx
+getSheets(my_book)
+
+# Import the second sheet in latitude.xlsx
+readWorksheet(my_book, sheet = 2)
+
+# Import the second column of the first sheet in latitude.xlsx
+readWorksheet(my_book, sheet = 2, startCol = 2)
+</code></pre>
+
+<p><strong>Add and populate worksheets</strong></p>
+<pre><code class="r"># Build connection to latitude.xlsx
+my_book &lt;- loadWorkbook('latitude.xlsx')
+
+# Create data frame: summ
+dims1 &lt;- dim(readWorksheet(my_book, 1))
+dims2 &lt;- dim(readWorksheet(my_book, 2))
+summ &lt;- data.frame(sheets = getSheets(my_book), 
+                   nrows = c(dims1[1], dims2[1]), 
+                   ncols = c(dims1[2], dims2[2]))
+
+# Add a worksheet to my_book, named 'data_summary'
+createSheet(my_book, name = 'data_summary')
+
+# Populate 'data_summary' with summ data frame
+writeWorksheet(my_book, summ, sheet = 'data_summary')
+# Save workbook as latitude_with_summ.xlsx
+
+saveWorkbook(my_book, 'latitude_with_summ.xlsx')
+</code></pre>
+
+<p><strong>One unique function</strong></p>
+<pre><code class="r"># Read in the data set and assign to the object
+impact &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'impact', header = TRUE, startCol = 1, startRow = 1)
+
+# more arguments
+# endCol = 1
+# endRow = 1
+# autofitRow = 
+# autofitCol = 
+# region =
+# rownames =
+# colTypes =
+# forceConversion =
+# dateTimeFormat =
+# check.names =
+# useCachedValues =
+# keep =
+# drop =
+# simplify =
+# readStrategy =
+</code></pre>
+
+<h4 id="3-importing-data-from-other-statistical-software">3, Importing Data from Other Statistical Software<a class="headerlink" href="#3-importing-data-from-other-statistical-software" title="Permanent link">&para;</a></h4>
+<h5 id="the-haven-package">The <code>haven</code> package<a class="headerlink" href="#the-haven-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>read_sas</code>; sas7bdat &amp; sas7bcat files.</li>
+<li><code>read_stata</code>; version; dta files.</li>
+<li><code>read_dta</code>; idem.</li>
+<li><code>read_spss</code>; sav &amp; por files (and see below).</li>
+<li><code>read_por</code>.</li>
+<li><code>read_sav</code>.</li>
+<li>Simple, few arguments.</li>
+<li>Create a d.f.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(haven)
+</code></pre>
+
+<p><strong>Import SAS data with haven</strong></p>
+<pre><code class="r"># Import sales.sas7bdat: sales
+sales &lt;- read_sas('sales.sas7bdat')
+</code></pre>
+
+<p><strong>Import STATA data with haven</strong></p>
+<pre><code class="r"># Import the data from the URL: sugar
+sugar &lt;- read_dta('http://assets.datacamp.com/course/importing_data_into_r/trade.dta')
+</code></pre>
+
+<p><strong>Import SPSS data with haven</strong></p>
+<pre><code class="r"># Specify the file path using file.path(): path
+path &lt;- file.path('datasets', 'person.sav')
+
+# Import person.sav, which is in the datasets folder: traits
+traits &lt;- read_sav(path)
+</code></pre>
+
+<p><strong>Factorize, round two</strong></p>
+<pre><code class="r"># Import SPSS data from the URL: work
+work &lt;- read_sav('http://assets.datacamp.com/course/importing_data_into_r/employee.sav')
+</code></pre>
+
+<h5 id="theforeign-package">The<code>foreign</code> package<a class="headerlink" href="#theforeign-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Cannot import SAS, see the <code>sas7bdat</code> package.</li>
+<li><code>read.dta</code>; dta files.</li>
+<li><code>read.spss</code>; sav &amp; por files.</li>
+<li>Comprehensive.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(foreign)
+</code></pre>
+
+<p><strong>Import STATA data with foreign (1)</strong></p>
+<pre><code class="r"># Import florida.dta and name the resulting data frame florida
+florida &lt;- read.dta('florida.dta')
+</code></pre>
+
+<p><strong>Import STATA data with foreign (2)</strong></p>
+<pre><code class="r"># Specify the file path using file.path(): path
+path &lt;- file.path('worldbank', 'edequality.dta')
+
+# Create and print structure of edu_equal_1
+edu_equal_1 &lt;- read.dta(path)
+
+# Create and print structure of edu_equal_2
+edu_equal_2 &lt;- read.dta(path, convert.factors = FALSE)
+
+# Create and print structure of edu_equal_3
+edu_equal_3 &lt;- read.dta(path, convert.underscore = TRUE) 
+</code></pre>
+
+<p><strong>Import SPSS data with foreign (1)</strong></p>
+<pre><code class="r"># Import international.sav as a data frame: demo
+demo &lt;- read.spss('international.sav', to.data.frame = TRUE)
+</code></pre>
+
+<p><strong>Import SPSS data with foreign (2)</strong></p>
+<pre><code class="r"># Import international.sav as demo_1
+demo_1 &lt;- read.spss('international.sav', to.data.frame = TRUE)
+
+# Import international.sav as demo_2
+demo_2 &lt;- read.spss('international.sav', to.data.frame = TRUE, use.value.labels = FALSE)
+</code></pre>
+
+<h4 id="4-importing-data-from-relational-data">4, Importing Data from Relational Data<a class="headerlink" href="#4-importing-data-from-relational-data" title="Permanent link">&para;</a></h4>
+<h5 id="the-sbi-package">The <code>SBI</code> package<a class="headerlink" href="#the-sbi-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>dbConnect</code>.</li>
+<li><code>dbReadTable</code>.</li>
+<li><code>dbGetQuery</code>.</li>
+<li><code>dbFetch</code>.</li>
+<li><code>dbDisconnect</code>.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(DBI)
+</code></pre>
+
+<p><strong>Step 1: Establish a connection</strong></p>
+<pre><code class="r"># Connect to the MySQL database: con
+con &lt;- dbConnect(RMySQL::MySQL(), dbname = 'tweater', host = 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com', port = 3306, user = 'student', password = 'datacamp') 
+
+con
+</code></pre>
+
+<p><strong>Step 2: List the database tables</strong></p>
+<pre><code class="r"># Connect to the MySQL database: con
+con &lt;- dbConnect(RMySQL::MySQL(), 
+                 dbname = 'tweater', 
+                 host = 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com', 
+                 port = 3306,
+                 user = 'student',
+                 password = 'datacamp')
+
+# Build a vector of table names: tables
+tables &lt;- dbListTables(con)
+
+# Display structure of tables
+str(tables)
+</code></pre>
+
+<p><strong>Step 3: Import data from a table</strong></p>
+<pre><code class="r"># Connect to the MySQL database: con
+con &lt;- dbConnect(RMySQL::MySQL(), 
+                 dbname = 'tweater', 
+                 host = 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com', 
+                 port = 3306,
+                 user = 'student',
+                 password = 'datacamp')
+
+# Import the users table from tweater: users
+users &lt;- dbReadTable(con, 'users')
+
+users
+
+# Import and print the tweats table from tweater: tweats
+tweats &lt;- dbReadTable(con, 'tweats')
+
+tweats
+
+# Import and print the comments table from tweater: comments
+comments &lt;- dbReadTable(con, 'comments')
+
+comments
+</code></pre>
+
+<p><strong>Your very first SQL query</strong></p>
+<pre><code class="r">con &lt;- dbConnect(RMySQL::MySQL(), 
+                 dbname = 'tweater', 
+                 host = 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com', 
+                 port = 3306,
+                 user = 'student',
+                 password = 'datacamp')
+
+# Import post column of tweats where date is higher than '2015-09-21': latest
+latest &lt;- dbGetQuery(con, 'SELECT post FROM tweats WHERE date &gt; \'2015-09-21\'')
+
+latest
+
+# Import tweat_id column of comments where user_id is 1: elisabeth
+elisabeth &lt;- dbGetQuery(con, 'SELECT tweat_id FROM comments WHERE user_id = 1')
+
+elisabeth
+</code></pre>
+
+<p><strong>More advanced SQL queries</strong></p>
+<pre><code class="r"># Connect to the database
+con &lt;- dbConnect(RMySQL::MySQL(),
+                 dbname = 'tweater', 
+                 host = 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com', 
+                 port = 3306,
+                 user = 'student',
+                 password = 'datacamp')
+
+# Create data frame specific
+specific &lt;- dbGetQuery(con, 'SELECT message FROM comments WHERE tweat_id = 77 AND user_id &gt; 4')
+
+specific
+
+# Create data frame short
+short &lt;- dbGetQuery(con, 'SELECT id, name FROM users WHERE CHAR_LENGTH(name) &lt; 5')
+
+short
+</code></pre>
+
+<p><strong>Send - Fetch - Clear</strong></p>
+<pre><code class="r"># Connect to the database
+con &lt;- dbConnect(RMySQL::MySQL(), 
+                 dbname = 'tweater', 
+                 host = 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com', 
+                 port = 3306,
+                 user = 'student',
+                 password = 'datacamp')
+
+# Send query to the database with dbSendQuery(): res
+res &lt;- dbSendQuery(con, 'SELECT * FROM comments WHERE user_id &gt; 4')
+
+# Display information contained in res
+dbGetInfo(res)
+
+# Use dbFetch() twice
+while (!dbHasCompleted(res)) {
+    chunk &lt;- dbFetch(res, n = 2)
+    chunk2 &lt;- dbFetch(res)
+    print(chunk)
+}
+
+# Clear res
+dbClearResult(res)
+</code></pre>
+
+<p><strong>Be polite and &hellip;</strong></p>
+<pre><code class="r"># Database specifics
+dbname &lt;- 'tweater'
+host &lt;- 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com'
+port &lt;- 3306
+user &lt;- 'student'
+password &lt;- 'datacamp'
+
+# Connect to the database
+con &lt;- dbConnect(RMySQL::MySQL(), dbname = 'tweater', host = 'courses.csrrinzqubik.us-east-1.rds.amazonaws.com', port = 3306 , user = 'student', password = 'datacamp')
+
+# Create the data frame  long_tweats
+long_tweats &lt;- dbGetQuery(con, 'SELECT post, date FROM tweats WHERE CHAR_LENGTH(post) &gt; 40')
+
+# Print long_tweats
+print(long_tweats)
+
+# Disconnect from the database
+dbDisconnect(con)
+</code></pre>
+
+<p><strong>Other general packages</strong></p>
+<p>The <code>RODBC</code> package provides access to databases (including Microsoft<br />
+Access and Microsoft SQL Server) through an ODBC interface.</p>
+<p>The <code>RJDBC</code> package provides access to databases through a JDBC<br />
+interface.</p>
+<p><strong>Specialized packages</strong></p>
+<ul>
+<li><code>ROracle</code> provides an interface for Oracle.</li>
+<li><code>RMySQL</code> provides access to MySQL.</li>
+<li><code>RpostgreSQL</code> to PostgreSQL.</li>
+<li><code>RSQLite</code> to SQLite.</li>
+<li>And there are manu more packages for NoSQL databases such<br />
+    as MongoDB.</li>
+</ul>
+<h4 id="5-importing-data-from-the-web">5, Importing Data from the Web<a class="headerlink" href="#5-importing-data-from-the-web" title="Permanent link">&para;</a></h4>
+<p>The other package above can download files from the web. The next<br />
+packages are web-oriented.</p>
+<h5 id="the-httr-package">The <code>httr</code> package<a class="headerlink" href="#the-httr-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>GET</code> pages and files from the web.</li>
+<li>Concise.</li>
+<li>Parse JSON files.</li>
+<li>Communicate with APIs.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(httr)
+</code></pre>
+
+<p><strong>HTTP? <code>httr</code>!</strong></p>
+<pre><code class="r"># Get the url, save response to resp
+url &lt;- 'http://docs.datacamp.com/teach/'
+resp &lt;- GET(url)
+
+resp
+
+# Get the raw content of resp
+raw_content &lt;- content(resp, as = 'raw')
+
+# Print the head of content
+head(raw_content)
+</code></pre>
+
+<pre><code class="r"># Get the url
+url &lt;- 'https://www.omdbapi.com/?t=Annie+Hall&amp;y=&amp;plot=short&amp;r=json'
+
+resp &lt;- GET(url)
+
+# Print resp
+resp
+
+# Print content of resp as text
+content(resp, as = 'text')
+
+# Print content of resp
+content(resp)
+</code></pre>
+
+<h5 id="the-jsonlite-package">The <code>jsonlite</code> package<a class="headerlink" href="#the-jsonlite-package" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Robust.</li>
+<li>Improve the imported data.</li>
+<li><code>fromJSON</code>.</li>
+<li>from an R object to <code>toJSON</code></li>
+<li><code>prettify</code>.</li>
+<li><code>minify</code>.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">library(jsonlite)
+</code></pre>
+
+<p><strong>From <code>JSON</code> to R</strong></p>
+<pre><code class="r"># Convert wine_json to a list: wine
+wine_json &lt;- '{'name':'Chateau Migraine', 'year':1997, 'alcohol_pct':12.4, 'color':'red', 'awarded':false}'
+wine &lt;- fromJSON(wine_json)
+
+str(wine)
+
+# Import Quandl data: quandl_data
+quandl_url &lt;- 'http://www.quandl.com/api/v1/datasets/IWS/INTERNET_INDIA.json?auth_token=i83asDsiWUUyfoypkgMz'
+quandl_data &lt;- fromJSON(quandl_url)
+
+str(quandl_data)
+</code></pre>
+
+<pre><code class="r"># Experiment 1
+json1 &lt;- '[1, 2, 3, 4, 5, 6]'
+fromJSON(json1)
+
+# Experiment 2
+json2 &lt;- '{'a': [1, 2, 3], 'b': [4, 5, 6]}'
+fromJSON(json2)
+
+# Experiment 3
+json3 &lt;- '[[1, 2], [3, 4]]'
+fromJSON(json3)
+
+# Experiment 4
+json4 &lt;- '[{'a': 1, 'b': 2}, {'a': 3, 'b': 4}, {'a': 5, 'b': 6}]'
+fromJSON(json4)
+</code></pre>
+
+<p><strong>Ask OMDb</strong></p>
+<pre><code class="r"># Definition of the URLs
+url_sw4 &lt;- 'http://www.omdbapi.com/?i=tt0076759&amp;r=json'
+url_sw3 &lt;- 'http://www.omdbapi.com/?i=tt0121766&amp;r=json'
+
+# Import two URLs with fromJSON(): sw4 and sw3
+sw4 &lt;- fromJSON(url_sw4)
+sw3 &lt;- fromJSON(url_sw3)
+
+# Print out the Title element of both lists
+sw4$Title
+sw3$Title
+
+# Is the release year of sw4 later than sw3
+sw4$Year &gt; sw3$Year
+</code></pre>
+
+<p><strong>From R to <code>JSON</code></strong></p>
+<pre><code class="r"># URL pointing to the .csv file
+url_csv &lt;- 'http://s3.amazonaws.com/assets.datacamp.com/course/importing_data_into_r/water.csv'
+
+# Import the .csv file located at url_csv
+water &lt;- read.csv(url_csv, stringsAsFactors = FALSE)
+
+# Generate a summary of water
+summary(water)
+
+# Convert the data file according to the requirements
+water_json &lt;- toJSON(water)
+
+water_json
+</code></pre>
+
+<p><strong><code>Minify</code> and <code>prettify</code></strong></p>
+<pre><code class="r"># Convert mtcars to a pretty JSON: pretty_json
+pretty_json &lt;- toJSON(mtcars, pretty = TRUE)
+
+# Print pretty_json
+pretty_json
+
+# Minify pretty_json: mini_json
+mini_json &lt;- minify(pretty_json)
+
+# Print mini_json
+mini_json
+</code></pre>
+
+<h4 id="6-keyboard-inputting">6, Keyboard Inputting<a class="headerlink" href="#6-keyboard-inputting" title="Permanent link">&para;</a></h4>
+<p><strong>Coding</strong></p>
+<pre><code class="r"># create a data frame from scratch
+age &lt;- c(25, 30, 56)
+gender &lt;- c(&quot;male&quot;, &quot;female&quot;, &quot;male&quot;)
+weight &lt;- c(160, 110, 220)
+mydata &lt;- data.frame(age,gender,weight)
+</code></pre>
+
+<p><strong>Spreadsheet-like</strong></p>
+<pre><code class="r"># enter data using editor
+mydata &lt;- data.frame(age = numeric(0), gender = character(0), weight = numeric(0))
+
+mydata &lt;- edit(mydata)
+# note that without the assignment in the line above, the edits are not saved! 
+</code></pre>
+
+<h4 id="7-exporting-data">7, Exporting Data<a class="headerlink" href="#7-exporting-data" title="Permanent link">&para;</a></h4>
+<h5 id="to-a-tab-delimited-text-file">To a Tab-Delimited Text File<a class="headerlink" href="#to-a-tab-delimited-text-file" title="Permanent link">&para;</a></h5>
+<pre><code class="r">write.table(mydata, 'c:/mydata.txt', sep = &quot;\t&quot;)
+</code></pre>
+
+<h5 id="to-an-excel-spreadsheet">To an Excel Spreadsheet<a class="headerlink" href="#to-an-excel-spreadsheet" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(xlsx)
+
+write.xlsx(mydata, &quot;c:/mydata.xlsx&quot;)
+</code></pre>
+
+<p><strong>Worksheet</strong></p>
+<pre><code class="r">library(XLConnect)
+# xls or xlsx
+
+# write a worksheet in steps
+wb &lt;- loadWorkbook('XLConnectExample1.xls', create = TRUE)
+createSheet(wb, name = 'chickSheet')
+writeWorksheet(wb, ChickWeight, sheet = 'chickSheet', startRow = 3, startCol = 4)
+saveWorkbook(wb)
+
+# write a worksheet all in one step
+ChickWeight &lt;- 1
+
+writeWorksheetToFile('XLConnectExample2.xlsx', data = ChickWeight, sheet = 'chickSheet', startRow = 3, startCol = 4)
+</code></pre>
+
+<p><strong>Field</strong></p>
+<pre><code class="r"># write a field in steps
+wb = loadWorkbook('XLConnectExample3.xlsx', create = TRUE)
+createSheet(wb, name = 'womenData')
+createName(wb, name = 'womenName', formula = 'womenData!$C$5', overwrite = TRUE)
+writeNamedRegion(wb, women, name = &quot;womenName&quot;)
+saveWorkbook(wb)
+
+# write a field all in one step
+writeNamedRegionToFile(&quot;XLConnectExample4.xlsx&quot;, women, name = &quot;womenName&quot;, formula = &quot;womenData!$C$5&quot;)
+</code></pre>
+
+<p><strong>I/O</strong></p>
+<pre><code class="r"># Build connection to latitude.xlsx
+my_book &lt;- loadWorkbook('latitude.xlsx')
+
+# Create data frame: summ
+dims1 &lt;- dim(readWorksheet(my_book, 1))
+dims2 &lt;- dim(readWorksheet(my_book, 2))
+summ &lt;- data.frame(sheets = getSheets(my_book), 
+                   nrows = c(dims1[1], dims2[1]), 
+                   ncols = c(dims1[2], dims2[2]))
+
+# Add a worksheet to my_book, named 'data_summary'
+createSheet(my_book, name = 'data_summary')
+
+# Populate 'data_summary' with summ data frame
+writeWorksheet(my_book, summ, sheet = 'data_summary')
+# Save workbook as latitude_with_summ.xlsx
+
+saveWorkbook(my_book, 'latitude_with_summ.xlsx')
+</code></pre>
+
+<h5 id="to-spss">To SPSS<a class="headerlink" href="#to-spss" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(foreign)
+
+write.foreign(mydata, &quot;c:/mydata.txt&quot;, &quot;c:/mydata.sps&quot;, package = &quot;SPSS&quot;)
+</code></pre>
+
+<h5 id="to-sas">To SAS<a class="headerlink" href="#to-sas" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(foreign)
+
+write.foreign(mydata, &quot;c:/mydata.txt&quot;, &quot;c:/mydata.sas&quot;, package = &quot;SAS&quot;) 
+</code></pre>
+
+<h5 id="to-stata">To Stata<a class="headerlink" href="#to-stata" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(foreign)
+
+write.dta(mydata, &quot;c:/mydata.dta&quot;) 
+</code></pre>
+
+<h4 id="8-inspecting-data-missing-data">8, Inspecting Data - Missing Data<a class="headerlink" href="#8-inspecting-data-missing-data" title="Permanent link">&para;</a></h4>
+<h5 id="inspecting">Inspecting<a class="headerlink" href="#inspecting" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>ls(object)</code></li>
+<li><code>names(object)</code></li>
+<li><code>str(object)</code></li>
+<li><code>levels(object$v1)</code></li>
+<li><code>dim(object)</code></li>
+<li><code>class(object)</code></li>
+<li><code>print(object)</code></li>
+<li><code>head(object, 10)</code></li>
+<li><code>tail(object, 20)</code></li>
+</ul>
+<p><strong>Testing for Missing Values</strong></p>
+<pre><code class="r">y &lt;- c(1, 2, 3, NA) # returns TRUE of x is missing
+is.na(y) # returns a vector (F F F T) 
+</code></pre>
+
+<p><strong>Recoding Values to Missing</strong></p>
+<pre><code class="r"># recode 99 to missing for variable v1
+# select rows where v1 is 99 and recode column v1
+mydata$v1[mydata$v1 == 99] &lt;- NA 
+</code></pre>
+
+<p><strong>Excluding Missing Values from Analyses</strong></p>
+<pre><code class="r">x &lt;- c(1, 2, NA, 3)
+
+mean(x) # returns NA
+mean(x, na.rm = TRUE) # returns 2 
+</code></pre>
+
+<pre><code class="r"># list rows of data that have missing values
+mydata[!complete.cases(mydata),]
+</code></pre>
+
+<pre><code class="r"># create new dataset without missing data
+newdata &lt;- na.omit(mydata) 
+</code></pre>
+
+<h5 id="the-dplyr-package">The <code>dplyr</code> package<a class="headerlink" href="#the-dplyr-package" title="Permanent link">&para;</a></h5>
+<pre><code class="r">library(dplyr)
+
+tbl_df(iris) # almost like head/tail
+glimpse(iris) # almost like str
+View(iris) # open a spreadsheet
+</code></pre>
+
+<h5 id="for-thorough-cleaning">For thorough cleaning<a class="headerlink" href="#for-thorough-cleaning" title="Permanent link">&para;</a></h5>
+<ul>
+<li>The <a href="http://gking.harvard.edu/amelia/">Amelia II</a> software.</li>
+<li>The <code>mitools</code> package.</li>
+</ul>
+<h4 id="9-labels-levels">9, Labels &amp; Levels<a class="headerlink" href="#9-labels-levels" title="Permanent link">&para;</a></h4>
+<p><strong>Basic</strong></p>
+<pre><code class="r"># variable v1 is coded 1, 2 or 3
+# we want to attach value labels 1=red, 2=blue, 3=green
+mydata$v1 &lt;- factor(mydata$v1, 
+                    levels = c(1,2,3),
+                    labels = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;))
+</code></pre>
+
+<pre><code class="r"># variable y is coded 1, 3 or 5
+# we want to attach value labels 1=Low, 3=Medium, 5=High
+mydata$v1 &lt;- ordered(mydata$y,
+                     levels = c(1,3, 5),
+                     labels = c(&quot;Low&quot;, &quot;Medium&quot;, &quot;High&quot;)) 
+</code></pre>
+
+<p><strong>Order</strong></p>
+<pre><code class="r"># Create a vector of temperature observations
+temperature_vector &lt;- c('High', 'Low', 'High', 'Low', 'Medium')
+
+# Specify that they are ordinal variables with the given levels
+factor_temperature_vector &lt;- factor(temperature_vector, order = TRUE, levels = c('Low', 'Medium', 'High'))
+</code></pre>
+
+<p><strong>Add comments to an object</strong></p>
+<pre><code class="r">names(iris)[5] &lt;- &quot;This is the label for variable 5&quot;
+
+names(iris)[5] # the comment
+iris[5] # the data
+</code></pre>
+
+<pre><code class="r"># labeling the variables
+library(Hmisc)
+
+label(iris$Species) &lt;- &quot;Variable label for variable myvar&quot;
+
+describe(iris$Species) # commented
+#vs
+describe(iris$Sepal.Length) # not commented
+</code></pre>
+
+<hr />
+<h3 id="how-to-work-with-quandl-in-r">How to work with Quandl in R<a class="headerlink" href="#how-to-work-with-quandl-in-r" title="Permanent link">&para;</a></h3>
+<h4 id="1-importing-quandl-datasets">1, Importing Quandl Datasets<a class="headerlink" href="#1-importing-quandl-datasets" title="Permanent link">&para;</a></h4>
+<p><a href="https://www.quandl.com/">Quandl</a> delivers financial, economic and<br />
+alternative data to the world&rsquo;s top hedge funds, asset managers and<br />
+investment banks in several formats:</p>
+<ul>
+<li>Excel.</li>
+<li>R.</li>
+<li>Python.</li>
+<li>API.</li>
+<li>DB.</li>
+</ul>
+<p>The packages used:</p>
+<ul>
+<li><code>Quandl</code>.</li>
+<li><code>quantmod</code> for plotting.</li>
+</ul>
+<p><strong>Quandl - A first date</strong></p>
+<pre><code class="r"># Load in the Quandl package
+library(Quandl)
+
+# Assign your first dataset to the variable:
+mydata &lt;- Quandl('NSE/OIL')
+</code></pre>
+
+<p><strong>Identifying a dataset with its ID</strong></p>
+<pre><code class="r"># Assign the Prague Stock Exchange to:
+PragueStockExchange &lt;- Quandl('PRAGUESE/PX')
+</code></pre>
+
+<p><strong>Plotting a stock chart</strong></p>
+<pre><code class="r"># The quantmod package
+library(quantmod)
+
+# Load the Facebook data with the help of Quandl
+Facebook &lt;- Quandl('GOOG/NASDAQ_FB', type = 'xts')
+
+# Plot the chart with the help of candleChart()
+candleChart(Facebook)
+</code></pre>
+
+<p><strong>Searching a Quandl dataset in R</strong></p>
+<pre><code class="r"># Look up the first 3 results for 'Bitcoin' within the Quandl database:
+results &lt;- Quandl.search(query = 'Bitcoin', silent = FALSE)
+
+# Print out the results
+str(results)
+
+# Assign the data set with code BCHAIN/TOTBC
+BitCoin &lt;- Quandl('BCHAIN/TOTBC')
+</code></pre>
+
+<h4 id="2-manipulating-quandl-datasets">2, Manipulating Quandl Datasets<a class="headerlink" href="#2-manipulating-quandl-datasets" title="Permanent link">&para;</a></h4>
+<p><strong>Manipulating data</strong></p>
+<pre><code class="r"># Assign to the variable Exchange
+Exchange &lt;- Quandl('BNP/USDEUR', start_date = '2013-01-01', end_date = '2013-12-01')
+</code></pre>
+
+<p><strong>Transforming your Quandl dataset</strong></p>
+<pre><code class="r"># API transformation
+# The result:
+GDP_Change &lt;- Quandl('FRED/CANRGDPR', transformation = 'rdiff')
+head(GDP_Change)
+GDP_Chang &lt;- Quandl('FRED/CANRGDPR')
+head(GDP_Chang)
+</code></pre>
+
+<p><strong>The magic of frequency collapsing</strong></p>
+<pre><code class="r"># The result:
+eiaQuarterly &lt;- Quandl('DOE/RWTC', collapse = 'quarterly')
+</code></pre>
+
+<p><strong>Truncation and sort</strong></p>
+<pre><code class="r"># Assign to TruSo the first 5 observations of the crude oil prices
+TruSo &lt;- Quandl('DOE/RWTC', sort = 'asc', rows = 5)
+
+# Print the result
+TruSo
+</code></pre>
+
+<p><strong>A complex example</strong></p>
+<pre><code class="r"># Here you should place the return:
+Final &lt;- Quandl('DOE/RWTC', collapse = 'daily', transformation = 'rdiff', start_date = '2005-01-01', end_date = '2010-03-01', sort = 'asc')
+</code></pre>
+
+<hr />
+<h3 id="cleaning-data-in-r">Cleaning Data in R<a class="headerlink" href="#cleaning-data-in-r" title="Permanent link">&para;</a></h3>
+<p>The packages used:</p>
+<ul>
+<li><code>dplyr</code> &amp; <code>tidyr</code> for data wrangling.</li>
+<li><code>stringr</code> for regex.</li>
+<li><code>lubridate</code> for time and date.</li>
+</ul>
+<h4 id="1-introduction-and-exploring-raw-data">1, Introduction and Exploring Raw Data<a class="headerlink" href="#1-introduction-and-exploring-raw-data" title="Permanent link">&para;</a></h4>
+<p><strong>Here&rsquo;s what messy data look like</strong></p>
+<pre><code class="r"># View the first 6 rows of data
+head(weather)
+
+# View the last 6 rows of data
+tail(weather)
+
+# View a condensed summary of the data
+str(weather)
+</code></pre>
+
+<p><strong>Getting a feel for your data</strong></p>
+<pre><code class="r"># Check the class of bmi
+class(bmi)
+
+# Check the dimensions of bmi
+dim(bmi)
+
+# View the column names of bmi
+names(bmi)
+</code></pre>
+
+<p><strong>Viewing the structure of your data</strong></p>
+<pre><code class="r"># Check the structure of bmi
+str(bmi)
+
+# Load dplyr
+library(dplyr)
+
+# Check the structure of bmi, the dplyr way
+glimpse(bmi)
+
+# View a summary of bmi
+summary(bmi)
+</code></pre>
+
+<p><strong>Looking at your data</strong></p>
+<pre><code class="r"># Print bmi to the console
+print(bmi)
+
+# View the first 6 rows
+head(bmi, 6)
+
+# View the first 15 rows
+head(bmi, 15)
+
+# View the last 6 rows
+tail(bmi, 6)
+
+# View the last 10 rows
+tail(bmi, 10)
+</code></pre>
+
+<p><strong>Visualizing your data</strong></p>
+<pre><code class="r"># Histogram of BMIs from 2008
+hist(bmi$Y2008)
+
+# Scatter plot comparing BMIs from 1980 to those from 2008
+plot(bmi$Y1980, bmi$Y2008)
+</code></pre>
+
+<h4 id="2-tidying-data">2, Tidying Data<a class="headerlink" href="#2-tidying-data" title="Permanent link">&para;</a></h4>
+<p><strong>Gathering columns into key-value pairs</strong></p>
+<pre><code class="r"># Load tidyr
+library(tidyr)
+
+# Apply gather() to bmi and save the result as bmi_long
+bmi_long &lt;- gather(bmi, year, bmi_val, -Country)
+
+# View the first 20 rows of the result
+head(bmi_long, 20)
+</code></pre>
+
+<p><strong>Spreading key-value pairs into columns</strong></p>
+<pre><code class="r"># Apply spread() to bmi_long
+bmi_wide &lt;- spread(bmi_long, year, bmi_val)
+
+# View the head of bmi_wide
+head(bmi_wide)
+</code></pre>
+
+<p><strong>Separating columns</strong></p>
+<pre><code class="r"># Apply separate() to bmi_cc
+bmi_cc_clean &lt;- separate(bmi_cc, col = Country_ISO, into = c('Country', 'ISO'), sep = '/')
+
+# Print the head of the result
+head(bmi_cc_clean)
+</code></pre>
+
+<p><strong>Uniting columns</strong></p>
+<pre><code class="r"># Apply unite() to bmi_cc_clean
+bmi_cc &lt;- unite(bmi_cc_clean, Country_ISO, Country, ISO, sep = '-')
+
+# View the head of the result
+head(bmi_cc)
+</code></pre>
+
+<p><strong>Column headers are values, not variable names</strong></p>
+<pre><code class="r"># View the head of census
+head(census)
+
+# Gather the month columns
+census2 &lt;- gather(census, month, amount, JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC)
+
+# Arrange rows by YEAR using dplyr's arrange
+census2 &lt;- arrange(census2, YEAR)
+
+# View first 20 rows of census2
+head(census2, 20)
+</code></pre>
+
+<p><strong>Variables are stored in both rows and columns</strong></p>
+<pre><code class="r"># View first 50 rows of census_long
+head(census_long, 50)
+
+# Spread the type column
+census_long2 &lt;- spread(census_long, type, amount)
+
+# View first 20 rows of census_long2
+head(census_long2, 20)
+</code></pre>
+
+<p><strong>Multiple values are stored in one column</strong></p>
+<pre><code class="r"># View the head of census_long3
+head(census_long3)
+
+# Separate the yr_month column into two
+census_long4 &lt;- separate(census_long3, yr_month, c('year', 'month'), '_')
+
+# View the first 6 rows of the result
+head(census_long4, 6)
+</code></pre>
+
+<h4 id="3-preparing-data-for-analysis">3, Preparing Data for Analysis<a class="headerlink" href="#3-preparing-data-for-analysis" title="Permanent link">&para;</a></h4>
+<p><strong>Types of variables in R</strong></p>
+<pre><code class="r"># Make this evaluate to character
+class('true')
+
+# Make this evaluate to numeric
+class(8484.00)
+
+# Make this evaluate to integer
+class(99L)
+
+# Make this evaluate to factor
+class(factor('factor'))
+
+# Make this evaluate to logical
+class(FALSE)
+</code></pre>
+
+<p><strong>Common type conversions</strong></p>
+<pre><code class="r"># Preview students with str()
+str(students)
+
+# Coerce Grades to character
+students$Grades &lt;- as.character(students$Grades)
+
+# Coerce Medu to factor
+students$Medu &lt;- as.factor(students$Medu)
+
+# Coerce Fedu to factor
+students$Fedu &lt;- as.factor(students$Fedu)
+
+ # Look at students once more with str()
+str(students)
+</code></pre>
+
+<p><strong>Working with dates</strong></p>
+<pre><code class="r"># Preview students2 with str()
+str(students2)
+
+# Load the lubridate package
+library(lubridate)
+
+# Parse as date
+ymd('2015-Sep-17')
+
+# Parse as date and time (with no seconds!)
+ymd_hm('2012-July-15, 12.56')
+
+# Coerce dob to a date (with no time)
+students2$dob &lt;- ymd(students2$dob)
+
+# Coerce nurse_visit to a date and time
+students2$nurse_visit &lt;- ymd_hms(students2$nurse_visit)
+
+# Look at students2 once more with str()
+str(students2)
+</code></pre>
+
+<p><strong>Trimming and padding strings</strong></p>
+<pre><code class="r"># Load the stringr package
+library(stringr)
+
+# Trim all leading and trailing whitespace
+str_trim(c('   Filip ', 'Nick  ', ' Jonathan'))
+
+# Pad these strings with leading zeros
+str_pad(c('23485W', '8823453Q', '994Z'), width = 9, side = 'left', pad = '0')
+</code></pre>
+
+<p><strong>Upper and lower case</strong></p>
+<pre><code class="r"># Print state abbreviations
+states
+
+# Make states all uppercase and save result to states_upper
+states_upper &lt;- toupper(states)
+states_upper
+
+# Make states_upper all lowercase again
+tolower(states_upper)
+</code></pre>
+
+<p><strong>Finding and replacing strings</strong></p>
+<pre><code class="r"># stringr has been loaded for you
+# Look at the head of students2
+head(students2)
+
+# Detect all dates of birth (dob) in 1997
+str_detect(students2$dob, '1997')
+
+# In the sex column, replace 'F' with 'Female'...
+students2$sex &lt;- str_replace(students2$sex, 'F', 'Female')
+
+# ...And 'M' with 'Male'
+students2$sex &lt;- str_replace(students2$sex, 'M', 'Male')
+
+# View the head of students2
+head(students2)
+</code></pre>
+
+<p><strong>Finding missing values</strong></p>
+<pre><code class="r"># Call is.na() on the full social_df to spot all NAs
+is.na(social_df)
+
+# Use the any() function to ask whether there are any NAs in the data
+any(is.na(social_df))
+sum(is.na(social_df))
+
+# View a summary() of the dataset
+summary(social_df)
+
+# Call table() on the status column
+table(social_df$status)
+</code></pre>
+
+<p><strong>Dealing with missing values</strong></p>
+<pre><code class="r"># Use str_replace() to replace all missing strings in status with NA
+social_df$status &lt;- str_replace(social_df$status, '^$', NA)
+
+# Print social_df to the console
+social_df
+
+# Use complete.cases() to see which rows have no missing values
+complete.cases(social_df)
+
+# Use na.omit() to remove all rows with any missing values
+na.omit(social_df)
+</code></pre>
+
+<p><strong>Dealing with outliers and obvious errors</strong></p>
+<pre><code class="r"># Look at a summary() of students3
+summary(students3)
+
+# View a histogram of the age variable
+hist(students3$age, breaks = 20)
+
+# View a histogram of the absences variable
+hist(students3$absences, breaks = 20)
+
+# View a histogram of absences, but force zeros to be bucketed to the right of zero
+hist(students3$absences, breaks = 20, right = FALSE)
+</code></pre>
+
+<p><strong>Another look at strange values</strong></p>
+<pre><code class="r"># View a boxplot of age
+boxplot(students3$age)
+
+# View a boxplot of absences
+boxplot(students3$absences)
+</code></pre>
+
+<h4 id="4-putting-it-all-together">4, Putting it All Together<a class="headerlink" href="#4-putting-it-all-together" title="Permanent link">&para;</a></h4>
+<p><strong>Get a feel for the data</strong></p>
+<pre><code class="r"># Verify that weather is a data.frame
+class(weather)
+
+# Check the dimensions
+dim(weather)
+
+# View the column names
+names(weather)
+</code></pre>
+
+<p><strong>Summarize the data</strong></p>
+<pre><code class="r"># View the structure of the data
+str(weather)
+
+# Load dplyr package
+library(dplyr)
+
+# Look at the structure using dplyr's glimpse()
+glimpse(weather)
+
+# View a summary of the data
+summary(weather)
+</code></pre>
+
+<p><strong>Take a closer look</strong></p>
+<pre><code class="r"># View first 6 rows
+head(weather, 6)
+
+# View first 15 rows
+head(weather, 15)
+
+# View the last 6 rows
+tail(weather, 6)
+
+# View the last 10 rows
+tail(weather, 10)
+</code></pre>
+
+<p><strong>Column names are values</strong></p>
+<pre><code class="r"># Load the tidyr package
+library(tidyr)
+
+# Gather the columns
+weather2 &lt;- gather(weather, day, value, X1:X31, na.rm = TRUE)
+
+# View the head
+head(weather2)
+</code></pre>
+
+<p><strong>Values are variable names</strong></p>
+<pre><code class="r"># First remove column of row names
+weather2 &lt;- weather2[, -1]
+
+# Spread the data
+weather3 &lt;- spread(weather2, measure, value)
+
+# View the head
+head(weather3)
+</code></pre>
+
+<p><strong>Clean up dates</strong></p>
+<pre><code class="r"># Load the stringr and lubridate packages
+library(stringr)
+library(lubridate)
+
+# Remove X's from day column
+# weather3$day &lt;- str_pad(str_replace(weather3$day, 'X', ''), width = 2, side = 'left', pad = '0')
+weather3$day &lt;- str_replace(weather3$day, 'X', '')
+
+# Unite the year, month, and day columns
+weather4 &lt;- unite(weather3, date, year, month, day, sep = '-')
+
+# Convert date column to proper date format using stringr's ymd()
+weather4$date &lt;- ymd(weather4$date)
+
+# Rearrange columns using dplyr's select()
+weather5 &lt;- select(weather4, date, Events, CloudCover:WindDirDegrees)
+
+# View the head
+head(weather5)
+</code></pre>
+
+<p><strong>A closer look at column types</strong></p>
+<pre><code class="r"># View the structure of weather5
+str(weather5)
+
+# Examine the first 20 rows of weather5. Are most of the characters numeric?
+head(weather5, 20)
+
+# See what happens if we try to convert PrecipitationIn to numeric
+as.numeric(weather5$PrecipitationIn)
+</code></pre>
+
+<p><strong>Column type conversions</strong></p>
+<pre><code class="r"># The dplyr package is already loaded
+# Replace T with 0 (T = trace)
+weather5$PrecipitationIn &lt;- str_replace(weather5$PrecipitationIn, 'T', '0')
+
+# Convert characters to numerics
+weather6 &lt;- mutate_each(weather5, funs(as.numeric), CloudCover:WindDirDegrees)
+
+# Look at result
+str(weather6)
+</code></pre>
+
+<p><strong>Find missing values</strong></p>
+<pre><code class="r"># Count missing values
+sum(is.na(weather6))
+
+# Find missing values
+summary(weather6)
+
+# Find indices of NAs in Max.Gust.SpeedMPH
+ind &lt;- which(is.na(weather6$Max.Gust.SpeedMPH))
+ind
+
+# Look at the full rows for records missing Max.Gust.SpeedMPH
+weather6[ind, ]
+</code></pre>
+
+<p><strong>An obvious error</strong></p>
+<pre><code class="r"># Review distibutions for all variables
+summary(weather6)
+
+# Find row with Max.Humidity of 1000
+ind &lt;- which(weather6$Max.Humidity == 1000)
+
+# Look at the data for that day
+weather6[ind, ]
+
+# Change 1000 to 100
+weather6$Max.Humidity[ind] &lt;- 100
+</code></pre>
+
+<p><strong>Another obvious error</strong></p>
+<pre><code class="r"># Look at summary of Mean.VisibilityMiles
+summary(weather6$Mean.VisibilityMiles)
+
+# Get index of row with -1 value
+ind &lt;- which(weather6$Mean.VisibilityMiles == -1)
+
+# Look at full row
+weather6[ind, ]
+
+# Set Mean.VisibilityMiles to the appropriate value
+weather6$Mean.VisibilityMiles[ind] &lt;- 10
+</code></pre>
+
+<p><strong>Check other extreme values</strong></p>
+<pre><code class="r"># Review summary of full data once more
+summary(weather6)
+
+# Look at histogram for MeanDew.PointF
+hist(weather6$MeanDew.PointF)
+
+# Look at histogram for Min.TemperatureF
+hist(weather6$Min.TemperatureF)
+
+# Compare to histogram for Mean.TemperatureF
+hist(weather6$Mean.TemperatureF)
+</code></pre>
+
+<p><strong>Finishing touches</strong></p>
+<pre><code class="r"># Clean up column names
+names(weather6) &lt;- new_colnames
+
+# Replace empty cells in Events column
+weather6$events[weather6$events == ''] &lt;- 'None'
+
+# Print the first 6 rows of weather6
+head(weather6, 6)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Reading_Data_into_R_with_readr/" class="btn btn-neutral float-right" title="Reading Data into R with readr">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Working_with_RStudio_IDE/" class="btn btn-neutral" title="Working with the RStudio IDE"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Working_with_RStudio_IDE/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Reading_Data_into_R_with_readr/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

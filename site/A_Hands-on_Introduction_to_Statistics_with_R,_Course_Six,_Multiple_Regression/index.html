@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Statistics with R, Course Six, Multiple Regression - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Statistics with R, Course Six, Multiple Regression";
+    var mkdocs_page_input_path = "A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression.md";
+    var mkdocs_page_url = "/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Statistics with R, Course Six, Multiple Regression</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-intuition-behind-estimation-of-multiple-regression-coefficients">2, Intuition behind estimation of multiple regression coefficients</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-dummy-coding">3, Dummy coding</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>A Hands-on Introduction to Statistics with R &raquo;</li>
+        
+      
+    
+    <li>Statistics with R, Course Six, Multiple Regression</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#a-gentle-introduction-to-the-principles-of-multiple-regression">1, A gentle introduction to the principles of multiple regression</a></li>
+<li><a href="#intuition-behind-estimation-of-multiple-regression-coefficients">2, Intuition behind estimation of multiple regression coefficients</a></li>
+<li><a href="#dummy-coding">3, Dummy coding</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets only.</li>
+</ul>
+<hr />
+<h4 id="1-a-gentle-introduction-to-the-principles-of-multiple-regression">1, A gentle introduction to the principles of multiple regression<a class="headerlink" href="#1-a-gentle-introduction-to-the-principles-of-multiple-regression" title="Permanent link">&para;</a></h4>
+<p><strong>Multiple regression: visualization of the relationships</strong></p>
+<pre><code class="r"># Perform the two single regressions and save them in a variable
+#model_years &lt;- lm(salary ~ years, data = fs)
+#model_pubs &lt;-  lm(salary ~ pubs, data = fs)
+model_years &lt;- lm(fs$salary ~ fs$years)
+model_pubs &lt;- lm(fs$salary ~ fs$pubs)
+
+# Plot both enhanced scatter plots in one plot matrix of 1 by 2
+par(mfrow = c(1, 2))
+
+#plot(fs$years, fs$salary, main = 'plot_years', xlab = 'years', ylab = 'salary')
+plot(fs$salary ~ fs$years, main = 'plot_years', xlab = 'years', ylab = 'salary')
+abline(model_years)
+
+#plot(fs$pubs, fs$salary, main = 'plot_pubs', xlab = 'pubs', ylab = 'salary')
+plot(fs$salary ~ fs$pubs, main = 'plot_pubs', xlab = 'pubs', ylab = 'salary')
+abline(model_pubs)
+</code></pre>
+
+<p><strong>Multiple regression: model selection</strong></p>
+<pre><code class="r"># Do a single regression of salary onto years of experience and check the output
+model_1 &lt;- lm(fs$salary ~ fs$years)
+summary(model_1)
+
+# Do a multiple regression of salary onto years of experience and numbers of publications and check the output
+model_2 &lt;- lm(fs$salary ~ fs$years + fs$pubs)
+summary(model_2)
+
+# Save the R squared of both models in preliminary variables
+preliminary_model_1 &lt;- summary(model_1)$r.squared
+preliminary_model_2 &lt;- summary(model_2)$r.squared
+
+# Round them off while you save them in new variables
+r_squared &lt;- c()
+r_squared[1] &lt;- round(preliminary_model_1, 3)
+r_squared[2] &lt;- round(preliminary_model_2, 3)
+
+# Print out the vector to see both R squared coefficients
+r_squared
+</code></pre>
+
+<p><strong>Multiple regression: beware of redundancy</strong></p>
+<pre><code class="r"># Do multiple regression and check the regression output
+model_3 &lt;- lm(fs$salary ~ fs$years + fs$pubs + fs$age)
+summary(model_3)
+
+# Round off the R squared coefficients and save the result in the vector (in one step!)
+r_squared[3] &lt;- round(summary(model_3)$r.squared,3)
+
+# Print out the vector in order to display all R squared coefficients simultaneously
+r_squared
+</code></pre>
+
+<h4 id="2-intuition-behind-estimation-of-multiple-regression-coefficients">2, Intuition behind estimation of multiple regression coefficients<a class="headerlink" href="#2-intuition-behind-estimation-of-multiple-regression-coefficients" title="Permanent link">&para;</a></h4>
+<p><strong>Definition of matrices</strong></p>
+<pre><code class="r"># Construction of 3 by 8 matrix r that contains the numbers 1 up to 24
+r &lt;- matrix(seq(1,24), 3)
+
+# Construction of 3 by 8 matrix s that contains the numbers 21 up to 44
+s &lt;- matrix(seq(21,44), 3)
+
+# Take the transpose t of matrix r
+t &lt;- t(r)
+</code></pre>
+
+<p><strong>Addition, subtraction and multiplication of matrices</strong></p>
+<pre><code class="r"># Compute the sum of matrices r and s
+operation_1 &lt;- r + s
+
+# Compute the difference between matrices r and s
+operation_2 &lt;- r - s
+
+# Multiply matrices t and s
+operation_3 &lt;- t %*% s
+</code></pre>
+
+<p><strong>Row vector of sums</strong></p>
+<pre><code class="r"># The raw dataframe `X` is already loaded in.
+X
+
+# Construction of 1 by 10 matrix I of which the elements are all 1
+I &lt;- matrix(rep(1,10), 1, 10)
+
+# Compute the row vector of sums
+t_mat &lt;- I %*% X
+</code></pre>
+
+<p><strong>Row vector of means and matrix of means</strong></p>
+<pre><code class="r"># The data matrix `X` and the row vector of sums (`T`) are saved and can be used.
+# Number of observations
+n = 10
+
+# Compute the row vector of means
+# you summed up the row, you divide by the nrow to compute the average
+M &lt;- t_mat / 10
+
+# Construction of 10 by 1 matrix J of which the elements are all 1
+J &lt;- matrix(rep(1,10), 10, 1)
+
+# Compute the matrix of means 
+MM &lt;- J %*% M
+</code></pre>
+
+<p><strong>Matrix of deviation scores</strong></p>
+<pre><code class="r"># The previously generated matrices X, M and MM do not need to be constructed again but are saved and can be used.
+
+# Matrix of deviation scores D 
+D &lt;- X - MM
+</code></pre>
+
+<p><strong>Sum of squares and sum of cross products matrix</strong></p>
+<pre><code class="r"># The previously generated matrices X, M, MM and D do not need to be constructed again but are saved and can be used.
+
+# Sum of squares and sum of cross products matrix
+S &lt;- t(D) %*% D
+</code></pre>
+
+<p><strong>Calculating the correlation matrix</strong></p>
+<pre><code class="r"># The previously generated matrices X, M, MM, D and S do not need to be constructed again but are saved and can be used.
+n = 10
+
+# Construct the variance-covariance matrix 
+C &lt;-  S * 1/n
+
+# Generate the standard deviations matrix 
+SD &lt;- diag(x = diag(C)^(1/2), nrow = 3, ncol = 3)
+
+# Compute the correlation matrix
+R &lt;- solve(SD) %*% C %*% solve(SD)
+</code></pre>
+
+<h4 id="3-dummy-coding">3, Dummy coding<a class="headerlink" href="#3-dummy-coding" title="Permanent link">&para;</a></h4>
+<p><strong>Starting off</strong></p>
+<pre><code class="r"># Summary statistics
+describeBy(fs, fs$dept)
+</code></pre>
+
+<p>A system to code categorical predictors in a regression analysis</p>
+<p>Suppose we have a categorical vector of observations. The vector counts<br />
+4 distinct groups. Here is how to assign the dummy variables:</p>
+<table>
+<thead>
+<tr class="header">
+<th>ProfID</th>
+<th>Group</th>
+<th>Pubs</th>
+<th>D1</th>
+<th>D2</th>
+<th>D3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NU</td>
+<td>Cognitive</td>
+<td>83</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>ZH</td>
+<td>Clinical</td>
+<td>74</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>MK</td>
+<td>Developmental</td>
+<td>80</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>RH</td>
+<td>Social</td>
+<td>68</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<p>Summary statistics:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>M</th>
+<th>SD</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cognitive</td>
+<td>93.31</td>
+<td>29.48</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>Clinical</td>
+<td>60.67</td>
+<td>11.12</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>Developmental</td>
+<td>103.5</td>
+<td>23.64</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Social</td>
+<td>70.13</td>
+<td>21.82</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+
+<p>Model:</p>
+<p><em>Y</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub>(<em>D</em><sub>1</sub>)+<em>β</em><sub>2</sub>(<em>D</em><sub>2</sub>)+<em>β</em><sub>3</sub>(<em>D</em><sub>3</sub>)+<em>ϵ</em></p>
+<p>Coefficient:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>B</th>
+<th>SE</th>
+<th>B</th>
+<th>t</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>93.31</td>
+<td>6.5</td>
+<td>0</td>
+<td>14.37</td>
+<td>&lt;.001</td>
+</tr>
+<tr class="even">
+<td>D1 (Clinical)</td>
+<td>-32.64</td>
+<td>10.16</td>
+<td>-0.51</td>
+<td>-3.21</td>
+<td>0.003</td>
+</tr>
+<tr class="odd">
+<td>D2 (Devel)</td>
+<td>10.19</td>
+<td>11.56</td>
+<td>0.14</td>
+<td>0.88</td>
+<td>0.384</td>
+</tr>
+<tr class="even">
+<td>D3 (Social)</td>
+<td>-23.18</td>
+<td>10.52</td>
+<td>-0.35</td>
+<td>-2.2</td>
+<td>0.035</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Creating dummy variables (1)</strong></p>
+<pre><code class="r"># Create the dummy variables
+dept_code &lt;- dummy.code(fs$dept)
+dept_code
+
+# Merge the dataset in an extended dataframe
+extended_fs &lt;- cbind(fs, dept_code)
+
+# Look at the extended dataframe
+extended_fs
+
+# Provide summary statistics
+summary(extended_fs)
+</code></pre>
+
+<p><strong>Creating dummy variables (2)</strong></p>
+<pre><code class="r"># Regress salary against years and publications
+model &lt;- lm(fs$salary ~ fs$years + fs$pubs)
+
+# Apply the summary function to get summarized results for model
+summary(model)
+
+# Compute the confidence intervals for model
+confint(model) 
+
+# Create dummies for the categorical variable fs$dept by using the C() function
+dept_code &lt;- C(fs$dept, treatment)
+
+# Regress salary against years, publications and department 
+model_dummy &lt;- lm(fs$salary ~ fs$years + fs$pubs + dept_code)
+
+# Apply the summary function to get summarized results for model_dummy
+summary(model_dummy)
+
+# Compute the confidence intervals for model_dummy
+confint(model_dummy)
+</code></pre>
+
+<p><strong>Model selection: ANOVA</strong></p>
+<pre><code class="r"># Compare model 4 with model3
+anova(model, model_dummy)
+</code></pre>
+
+<p><strong>Discrepancy between actual and predicted means</strong></p>
+<pre><code class="r"># Actual means of fs$salary
+tapply(fs$salary, fs$dept, mean)
+</code></pre>
+
+<p><strong>Unweighted effects coding</strong></p>
+<p>Consult the PDF for &lsquo;Unweighted Effects Coding&rsquo;.</p>
+<pre><code class="r"># Number of levels
+fs$dept
+
+# Factorize the categorical variable fs$dept and name the factorized variable dept.f
+dept.f &lt;- factor(fs$dept)
+
+# Assign the 3 levels generated in step 2 to dept.f
+contrasts(dept.f) &lt;- contr.sum(3)
+
+# Regress salary against dept.f
+model_unweighted &lt;- lm(fs$salary ~ dept.f)
+
+# Apply the summary() function
+summary(model_unweighted)
+</code></pre>
+
+<p><strong>Weighted effects coding</strong></p>
+<p>Consult &lsquo;Weighted Effects Coding&rsquo;.</p>
+<pre><code class="r"># Factorize the categorical variable fs$dept and name the factorized variable dept.g
+dept.g &lt;- factor(fs$dept)
+
+# Assign the weights matrix to dept.g 
+contrasts(dept.g) &lt;- weights
+
+# Regress salary against dept.f and apply the summary() function
+model_weighted &lt;- lm(fs$salary ~ dept.g)
+
+# Apply the summary() function
+summary(model_weighted)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/" class="btn btn-neutral float-right" title="Statistics with R, Course Seven, Moderation and Mediation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/" class="btn btn-neutral" title="Statistics with R, Course Five, Correlation and Regression"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

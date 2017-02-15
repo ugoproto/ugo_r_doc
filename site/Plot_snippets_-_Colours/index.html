@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Plot Snippets - Colours - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Plot Snippets - Colours";
+    var mkdocs_page_input_path = "Plot_snippets_-_Colours.md";
+    var mkdocs_page_url = "/Plot_snippets_-_Colours/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Plot Snippets - Colours</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#basic-colours">Basic colours</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#rcolorbrewer-examples">RColorBrewer examples</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#building-a-palette">Building a palette</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#grabing-colours">Grabing colours</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plot Snippets &raquo;</li>
+        
+      
+    
+    <li>Plot Snippets - Colours</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#default-colours">Default colours</a></li>
+<li><a href="#basic-colours">Basic colours</a></li>
+<li><a href="#rcolorbrewer-examples">RColorBrewer examples</a></li>
+<li><a href="#building-a-palette">Building a palette</a></li>
+<li><a href="#grabing-colours">Grabing colours</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets and results.</li>
+</ul>
+<hr />
+<h4 id="default-colours">Default colours<a class="headerlink" href="#default-colours" title="Permanent link">&para;</a></h4>
+<pre><code class="r"># Set
+palette('default')
+palette()
+</code></pre>
+
+<pre><code>## [1] "black"   "red"     "green3"  "blue"    "cyan"    "magenta" "yellow" 
+## [8] "gray"
+</code></pre>
+<pre><code class="r"># Show
+par(mfrow = c(1, 2))
+
+n &lt;- 8
+pie(rep(1, n), col = FALSE, main = 'colourless')
+n &lt;- 8
+pie(rep(1, n), col = palette(), main = 'default')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-1-1.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<h4 id="basic-colours">Basic colours<a class="headerlink" href="#basic-colours" title="Permanent link">&para;</a></h4>
+<pre><code class="r"># 8 types times 9 tones
+n &lt;- 9
+rainbow(n, s = 1, v = 1, start = 0, end = max(1, n - 1)/n, alpha = 1)
+</code></pre>
+
+<pre><code>## [1] "#FF0000FF" "#FFAA00FF" "#AAFF00FF" "#00FF00FF" "#00FFAAFF" "#00AAFFFF"
+## [7] "#0000FFFF" "#AA00FFFF" "#FF00AAFF"
+</code></pre>
+<pre><code class="r">m &lt;- (1:n)/n
+gray(m)
+</code></pre>
+
+<pre><code>## [1] "#1C1C1C" "#393939" "#555555" "#717171" "#8E8E8E" "#AAAAAA" "#C6C6C6"
+## [8] "#E3E3E3" "#FFFFFF"
+</code></pre>
+<pre><code class="r">hsv(m, s = 1, v = 1, alpha = 1)
+</code></pre>
+
+<pre><code>## [1] "#FFAA00FF" "#AAFF00FF" "#00FF00FF" "#00FFAAFF" "#00AAFFFF" "#0000FFFF"
+## [7] "#AA00FFFF" "#FF00AAFF" "#FF0000FF"
+</code></pre>
+<pre><code class="r">blues9
+</code></pre>
+
+<pre><code>## [1] "#F7FBFF" "#DEEBF7" "#C6DBEF" "#9ECAE1" "#6BAED6" "#4292C6" "#2171B5"
+## [8] "#08519C" "#08306B"
+</code></pre>
+<pre><code class="r">heat.colors(n, alpha = 1)
+</code></pre>
+
+<pre><code>## [1] "#FF0000FF" "#FF2A00FF" "#FF5500FF" "#FF8000FF" "#FFAA00FF" "#FFD500FF"
+## [7] "#FFFF00FF" "#FFFF40FF" "#FFFFBFFF"
+</code></pre>
+<pre><code class="r">terrain.colors(n, alpha = 1)
+</code></pre>
+
+<pre><code>## [1] "#00A600FF" "#3EBB00FF" "#8BD000FF" "#E6E600FF" "#E8C32EFF" "#EBB25EFF"
+## [7] "#EDB48EFF" "#F0C9C0FF" "#F2F2F2FF"
+</code></pre>
+<pre><code class="r">cm.colors(n, alpha = 1)
+</code></pre>
+
+<pre><code>## [1] "#80FFFFFF" "#9FFFFFFF" "#BFFFFFFF" "#DFFFFFFF" "#FFFFFFFF" "#FFDFFFFF"
+## [7] "#FFBFFFFF" "#FF9FFFFF" "#FF80FFFF"
+</code></pre>
+<pre><code class="r">topo.colors(n, alpha = 1)
+</code></pre>
+
+<pre><code>## [1] "#4C00FFFF" "#004CFFFF" "#00E5FFFF" "#00FF4DFF" "#4DFF00FF" "#E6FF00FF"
+## [7] "#FFFF00FF" "#FFDE59FF" "#FFE0B3FF"
+</code></pre>
+<pre><code class="r"># Show
+par(mfrow = c(2, 2))
+
+pie(rep(1, n), col = rainbow(n, alpha = 1), main = 'rainbow')
+pie(rep(1, n), col = gray(m), main = 'gray')
+pie(rep(1, n), col = hsv(m, alpha = 1), main = 'hsv')
+pie(rep(1, n), col = blues9, main = 'blues9')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-2-1.png" /></p>
+<pre><code class="r">pie(rep(1, n), col = heat.colors(n, alpha = 1), main = 'heat')
+pie(rep(1, n), col = terrain.colors(n, alpha = 1), main = 'terrain')
+pie(rep(1, n), col = cm.colors(n), main = 'cm.colors')
+pie(rep(1, n), col = topo.colors(n, alpha = 1), main = 'topo')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-2-2.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<h4 id="rcolorbrewer-examples">RColorBrewer examples<a class="headerlink" href="#rcolorbrewer-examples" title="Permanent link">&para;</a></h4>
+<pre><code class="r">library(RColorBrewer)
+
+# Show all
+display.brewer.all()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-3-1.png" /></p>
+<pre><code class="r"># Pick a palette
+n &lt;- 8
+colors &lt;- brewer.pal(n, &quot;BuPu&quot;)
+colors
+</code></pre>
+
+<pre><code>## [1] "#F7FCFD" "#E0ECF4" "#BFD3E6" "#9EBCDA" "#8C96C6" "#8C6BB1" "#88419D"
+## [8] "#6E016B"
+</code></pre>
+<pre><code class="r">par(mfrow = c(1, 2))
+pie(rep(1, n), col = colors, main = 'Sequential RdPu')
+
+# Interpolate these colors
+pal &lt;- colorRampPalette(brewer.pal(n, 'RdPu'))
+pal(8)
+</code></pre>
+
+<pre><code>## [1] "#FFF7F3" "#FDE0DD" "#FCC5C0" "#FA9FB5" "#F768A1" "#DD3497" "#AE017E"
+## [8] "#7A0177"
+</code></pre>
+<pre><code class="r">pie(rep(1, n), col = pal(8), main = 'Interpolated RdPu')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-4-1.png" /></p>
+<pre><code class="r"># Apply
+data(volcano)
+par(mfrow = c(2, 1))
+image(volcano, col = pal(8))
+image(volcano, col = pal(30))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-5-1.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<pre><code class="r"># Show samples
+par(mfrow = c(2, 2))
+
+n = 9
+pie(rep(1, n), col = brewer.pal(n, 'RdPu'), main = 'Sequential RdPu')
+n = 9
+pie(rep(1, n), col = brewer.pal(n, 'Set1'), main = 'Qualitative Set1')
+n = 12
+pie(rep(1, n), col = brewer.pal(n, 'Paired'), main = 'Qualitative Paired')
+n = 11
+pie(rep(1, n), col = brewer.pal(n, 'RdBu'), main = 'Divergent RdBu')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-6-1.png" /></p>
+<pre><code class="r">par(mfrow = c(1, 1))
+</code></pre>
+
+<pre><code class="r"># Show
+n = 8
+darkcols &lt;- brewer.pal(n, 'Dark2')
+pie(rep(1, n), col = darkcols, main = 'Dark2')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-7-1.png" /></p>
+<h4 id="building-a-palette">Building a palette<a class="headerlink" href="#building-a-palette" title="Permanent link">&para;</a></h4>
+<pre><code class="r"># All
+head(colors())
+</code></pre>
+
+<pre><code>## [1] "white"         "aliceblue"     "antiquewhite"  "antiquewhite1"
+## [5] "antiquewhite2" "antiquewhite3"
+</code></pre>
+<pre><code class="r">length(colors()) # 657
+</code></pre>
+
+<pre><code>## [1] 657
+</code></pre>
+<pre><code class="r"># Create
+mycols &lt;- colors()[c(8, 5, 30, 53, 118, 72)] #
+# or
+# mycols &lt;- c('aquamarine', 'antiquewhite2', 'blue4', 'chocolate1', 'deeppink2', 'cyan4')
+
+# Show
+n = 6
+pie(rep(1, n), col = mycols, main = 'mycols')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-8-1.png" /></p>
+<pre><code class="r"># Generate randomly
+cl &lt;- colors(distinct = TRUE)
+set.seed(15887) # to set random generator seed
+mycols2 &lt;- sample(cl, 7)
+
+# Show
+n = 7
+pie(rep(1, n), col = mycols2, main = 'mycols2 (random)')
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_Colours/unnamed-chunk-8-2.png" /></p>
+<h4 id="grabing-colours">Grabing colours<a class="headerlink" href="#grabing-colours" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://www.colorcombos.com/grabcolors.html">Grab Website Colors</a></li>
+<li><a href="http://www.rapidtables.com/web/color/RGB_Color.htm#color%20picker">RGB Color Codes<br />
+    Chart</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Charts/" class="btn btn-neutral float-right" title="Charts & Colors">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Plot_snippets_-_ggplot2/" class="btn btn-neutral" title="Plot Snippets - ggplot2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Plot_snippets_-_ggplot2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Charts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

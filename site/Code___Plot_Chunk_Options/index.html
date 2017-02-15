@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Code & Plot Chunk Options - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Code & Plot Chunk Options";
+    var mkdocs_page_input_path = "Code___Plot_Chunk_Options.md";
+    var mkdocs_page_url = "/Code___Plot_Chunk_Options/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Code & Plot Chunk Options</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#chunks">Chunks</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#inputting-data">Inputting Data</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#formatting-code-chunks">Formatting Code Chunks</a></li>
+                
+                    <li><a class="toctree-l4" href="#evaltrue-show-the-results-default">eval=TRUE; show the results (default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#evalfalse-or-no-results">eval=FALSE; or no results.</a></li>
+                
+                    <li><a class="toctree-l4" href="#resultsmarkup-show-split-coderesultscoderesults-default">results='markup'; show split code/results/code/results (default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#evalasis-show-unboxed-results">eval='asis'; show 'unboxed' results.</a></li>
+                
+                    <li><a class="toctree-l4" href="#evalhide-show-code-only">eval='hide'; show code only.</a></li>
+                
+                    <li><a class="toctree-l4" href="#evalhold-show-code-blockresults-block">eval='hold'; show code block/results block.</a></li>
+                
+                    <li><a class="toctree-l4" href="#echotrue-show-the-code-default">echo=TRUE; show the code (default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#echofalse-or-no-code">echo=FALSE; or no code.</a></li>
+                
+                    <li><a class="toctree-l4" href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report">warning, error, message are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.</a></li>
+                
+                    <li><a class="toctree-l4" href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default">tidy=TRUE/FALSE; with the formatR and shiny packages (you manage spaces and indents) (FALSE by default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#cachetruefalse-cache-the-results-false-by-default">cache=TRUE/FALSE; cache the results (FALSE by default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#comment-the-comments-in-results-by-default">comment='##'; the comments in results (by default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#comment-the-new-comments">comment='#'; the new comments.</a></li>
+                
+                    <li><a class="toctree-l4" href="#code-chunk-r">code chunk {r}.</a></li>
+                
+                    <li><a class="toctree-l4" href="#code-chunk-codenull">code chunk {code=NULL}.</a></li>
+                
+                    <li><a class="toctree-l4" href="#code-chunk-text">code chunk {text}.</a></li>
+                
+                    <li><a class="toctree-l4" href="#code-chunk-python">code chunk {python}.</a></li>
+                
+                    <li><a class="toctree-l4" href="#hightlighttrue-hightlight-the-code-default">hightlight=TRUE; hightlight the code (default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#hightlightfalse-or-not">hightlight=FALSE; or not.</a></li>
+                
+                    <li><a class="toctree-l4" href="#prompttrue-add-before-the-code">prompt=TRUE; add &gt; before the code.</a></li>
+                
+                    <li><a class="toctree-l4" href="#promptfalse-or-not-default">prompt=FALSE; or not (default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#stripwhitetrue-remove-white-space-from-the-code-default">strip.white=TRUE; remove white space from the code (default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#stripwhitefalse-or-not">strip.white=FALSE; or not.</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#formatting-plot-chunk">Formatting Plot Chunk</a></li>
+                
+                    <li><a class="toctree-l4" href="#figpathfigure-new-file-path-for-this-chunk">fig.path='figure/'; new file path for this chunk.</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-device-prints-png-files-by-default">The device prints .png files by default.</a></li>
+                
+                    <li><a class="toctree-l4" href="#figwidth-figheight-change-the-box-size-7-by-default">fig.width= , fig.height=; change the box size (=7 by default).</a></li>
+                
+                    <li><a class="toctree-l4" href="#figwidth5-figheight5">fig.width=5, fig.height=5.</a></li>
+                
+                    <li><a class="toctree-l4" href="#figheight3">fig.height=3.</a></li>
+                
+                    <li><a class="toctree-l4" href="#figwidth3">fig.width=3.</a></li>
+                
+                    <li><a class="toctree-l4" href="#outheight100-outwidth100-in-pixels">out.height=100, out.width=100; in pixels.</a></li>
+                
+                    <li><a class="toctree-l4" href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels">resize.height=200, resize.width=200; resize tike graphics for latex, in pixels.</a></li>
+                
+                    <li><a class="toctree-l4" href="#sanitizetrue-sanitize-tike-graphics-for-latex">sanitize=TRUE; sanitize 'tike' graphics for latex.</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-the-device-arguments">Set the device arguments:</a></li>
+                
+                    <li><a class="toctree-l4" href="#dots-per-inch">dots per inch.</a></li>
+                
+                    <li><a class="toctree-l4" href="#dpi-multiplier-for-html-output-on-retina-screens">dpi multiplier for .html output on retina screens:</a></li>
+                
+                    <li><a class="toctree-l4" href="#figalignleft-or-figaligndefault">fig.align='left' or fig.align='default'.</a></li>
+                
+                    <li><a class="toctree-l4" href="#figalignright">fig.align='right'.</a></li>
+                
+                    <li><a class="toctree-l4" href="#figaligncenter">fig.align='center'.</a></li>
+                
+                    <li><a class="toctree-l4" href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex">Figure captions at the bottom of the plot; figure caption in latex:</a></li>
+                
+                    <li><a class="toctree-l4" href="#versions">Versions</a></li>
+                
+                    <li><a class="toctree-l4" href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex">fig.pos='test'; string to be used as the figure position arrangement in latex.</a></li>
+                
+                    <li><a class="toctree-l4" href="#show">Show</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plot Snippets &raquo;</li>
+        
+      
+    
+    <li>Code & Plot Chunk Options</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#preliminary-options">Preliminary Options</a></li>
+<li><a href="#chunks">Chunks</a></li>
+<li><a href="#inputting-data">Inputting Data</a></li>
+<li><a href="#formatting-code-chunks">Formatting Code Chunks</a></li>
+<li><a href="#formatting-plot-chunk">Formatting Plot Chunk</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Code snippets and results.</li>
+</ul>
+<hr />
+<h4 id="preliminary-options">Preliminary Options<a class="headerlink" href="#preliminary-options" title="Permanent link">&para;</a></h4>
+<p>Usually, the following code is set to FALSE (not showing in a report).<br />
+These are the general options. Code and plot chunks overrule the general<br />
+options.</p>
+<pre><code class="r">knitr::opts_chunk$set(echo=TRUE, eval=TRUE, fig.height=3, fig.width=3)
+</code></pre>
+
+<h4 id="chunks">Chunks<a class="headerlink" href="#chunks" title="Permanent link">&para;</a></h4>
+<p>Naming a chunk is including it in the document outline. The outline is a<br />
+navigation tool to jump though the document.</p>
+<h4 id="inputting-data">Inputting Data<a class="headerlink" href="#inputting-data" title="Permanent link">&para;</a></h4>
+<p>The dataset comes from the <a href="http://www.census.gov/popest/data/national/totals/2011/index.html">US Census<br />
+Bureau</a>.<br />
+On their website, open Excel file &lsquo;NST-EST2011-02&rsquo; about the annual<br />
+estimates of the resident population.</p>
+<p>The data have become an object: a data frame. Check it out, and add<br />
+column names:</p>
+<pre><code class="r">head(USstatePops,3)
+</code></pre>
+
+<pre><code>##        V1      V2
+## 1 Alabama 4779735
+## 2  Alaska  710231
+## 3 Arizona 6392013
+</code></pre>
+<pre><code class="r">colnames(USstatePops) &lt;- c('State', 'Pop')
+
+head(USstatePops, 3)
+</code></pre>
+
+<pre><code>##     State     Pop
+## 1 Alabama 4779735
+## 2  Alaska  710231
+## 3 Arizona 6392013
+</code></pre>
+<p>Check out the data frame:</p>
+<pre><code class="r">str(USstatePops)
+</code></pre>
+
+<pre><code>## 'data.frame':    51 obs. of  2 variables:
+##  $ State: Factor w/ 51 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
+##  $ Pop  : int  4779735 710231 6392013 2915921 37253956 5029196 3574097 897934 601723 18801311 ...
+</code></pre>
+<p>The states should be strings, not factors.</p>
+<p>Extract numbers or strings without any loss from a factor structure:</p>
+<pre><code class="r"># make a copy for safety
+USstatePops2 &lt;- USstatePops
+
+USstatePops2$State &lt;- as.character(levels(USstatePops2$State))
+</code></pre>
+
+<p>Check out the new data frame:</p>
+<pre><code class="r">str(USstatePops2)
+</code></pre>
+
+<pre><code>## 'data.frame':    51 obs. of  2 variables:
+##  $ State: chr  "Alabama" "Alaska" "Arizona" "Arkansas" ...
+##  $ Pop  : int  4779735 710231 6392013 2915921 37253956 5029196 3574097 897934 601723 18801311 ...
+</code></pre>
+<pre><code class="r">head(USstatePops2, 3)
+</code></pre>
+
+<pre><code>##     State     Pop
+## 1 Alabama 4779735
+## 2  Alaska  710231
+## 3 Arizona 6392013
+</code></pre>
+<h4 id="formatting-code-chunks">Formatting Code Chunks<a class="headerlink" href="#formatting-code-chunks" title="Permanent link">&para;</a></h4>
+<h6 id="evaltrue-show-the-results-default"><code>eval=TRUE</code>; show the results (default).<a class="headerlink" href="#evaltrue-show-the-results-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h6 id="evalfalse-or-no-results"><code>eval=FALSE</code>; or no results.<a class="headerlink" href="#evalfalse-or-no-results" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<h6 id="resultsmarkup-show-split-coderesultscoderesults-default"><code>results='markup'</code>; show split code/results/code/results (default).<a class="headerlink" href="#resultsmarkup-show-split-coderesultscoderesults-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<pre><code class="r">median(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 4339362
+</code></pre>
+<h6 id="evalasis-show-unboxed-results"><code>eval='asis'</code>; show &lsquo;unboxed&rsquo; results.<a class="headerlink" href="#evalasis-show-unboxed-results" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<p>[1] 6053834</p>
+<pre><code class="r">median(USstatePops2$Pop)
+</code></pre>
+
+<p>[1] 4339362</p>
+<h6 id="evalhide-show-code-only"><code>eval='hide'</code>; show code only.<a class="headerlink" href="#evalhide-show-code-only" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+median(USstatePops2$Pop)
+</code></pre>
+
+<h6 id="evalhold-show-code-blockresults-block"><code>eval='hold'</code>; show code block/results block.<a class="headerlink" href="#evalhold-show-code-blockresults-block" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+median(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+## [1] 4339362
+</code></pre>
+<hr />
+<h6 id="echotrue-show-the-code-default"><code>echo=TRUE</code>; show the code (default).<a class="headerlink" href="#echotrue-show-the-code-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<pre><code class="r">median(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 4339362
+</code></pre>
+<h6 id="echofalse-or-no-code"><code>echo=FALSE</code>; or no code.<a class="headerlink" href="#echofalse-or-no-code" title="Permanent link">&para;</a></h6>
+<pre><code>## [1] 6053834
+
+## [1] 4339362
+</code></pre>
+<hr />
+<h6 id="warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report"><code>warning</code>, <code>error</code>, <code>message</code> are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.<a class="headerlink" href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report" title="Permanent link">&para;</a></h6>
+<pre><code class="text">{r, warning=TRUE, error=TRUE, message=TRUE}
+</code></pre>
+
+<hr />
+<h6 id="tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default"><code>tidy=TRUE/FALSE</code>; with the <code>formatR</code> and <code>shiny</code> packages (you manage spaces and indents) (FALSE by default).<a class="headerlink" href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default" title="Permanent link">&para;</a></h6>
+<pre><code class="text">{r, tidy=TRUE}
+</code></pre>
+
+<hr />
+<h6 id="cachetruefalse-cache-the-results-false-by-default">cache=TRUE/FALSE; cache the results (FALSE by default).<a class="headerlink" href="#cachetruefalse-cache-the-results-false-by-default" title="Permanent link">&para;</a></h6>
+<p>Can be resused in future knits since it <strong>creates a subdir (the<br />
+&lsquo;cache&rsquo;)</strong> with a R workspace, .rdb and .rdx files.</p>
+<pre><code class="text">{r, cache=TRUE}
+</code></pre>
+
+<p>The <code>cache.path='cache/'</code> can be changed. See <code>cache-comments</code>,<br />
+<code>cache.lazy</code>, <code>cache.vars</code>, <code>autodep</code>, <code>dependson</code>.</p>
+<hr />
+<h6 id="comment-the-comments-in-results-by-default"><code>comment='##'</code>; the comments in results (by default).<a class="headerlink" href="#comment-the-comments-in-results-by-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h6 id="comment-the-new-comments"><code>comment='#'</code>; the new comments.<a class="headerlink" href="#comment-the-new-comments" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code># [1] 6053834
+</code></pre>
+<hr />
+<h6 id="code-chunk-r">code chunk <code>{r}</code>.<a class="headerlink" href="#code-chunk-r" title="Permanent link">&para;</a></h6>
+<pre><code class="r">list &lt;- c(1, 2, 3)
+list
+</code></pre>
+
+<pre><code>## [1] 1 2 3
+</code></pre>
+<h6 id="code-chunk-codenull">code chunk <code>{code=NULL}</code>.<a class="headerlink" href="#code-chunk-codenull" title="Permanent link">&para;</a></h6>
+<pre><code class="code">list &lt;- c(1, 2, 3)
+list
+</code></pre>
+
+<h6 id="code-chunk-text">code chunk <code>{text}</code>.<a class="headerlink" href="#code-chunk-text" title="Permanent link">&para;</a></h6>
+<pre><code class="text">list &lt;- c(1, 2, 3)
+list
+</code></pre>
+
+<h6 id="code-chunk-python">code chunk <code>{python}</code>.<a class="headerlink" href="#code-chunk-python" title="Permanent link">&para;</a></h6>
+<pre><code class="python">list = [1, 2, 3]
+print(list)
+</code></pre>
+
+<p>Set up the new language first.</p>
+<hr />
+<h6 id="hightlighttrue-hightlight-the-code-default"><code>hightlight=TRUE</code>; hightlight the code (default).<a class="headerlink" href="#hightlighttrue-hightlight-the-code-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h6 id="hightlightfalse-or-not"><code>hightlight=FALSE</code>; or not.<a class="headerlink" href="#hightlightfalse-or-not" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h6 id="prompttrue-add-before-the-code"><code>prompt=TRUE</code>; add <code>&gt;</code> before the code.<a class="headerlink" href="#prompttrue-add-before-the-code" title="Permanent link">&para;</a></h6>
+<pre><code class="r">&gt; mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h6 id="promptfalse-or-not-default"><code>prompt=FALSE</code>; or not (default).<a class="headerlink" href="#promptfalse-or-not-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h6 id="stripwhitetrue-remove-white-space-from-the-code-default"><code>strip.white=TRUE</code>; remove white space from the code (default).<a class="headerlink" href="#stripwhitetrue-remove-white-space-from-the-code-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h6 id="stripwhitefalse-or-not"><code>strip.white=FALSE</code>; or not.<a class="headerlink" href="#stripwhitefalse-or-not" title="Permanent link">&para;</a></h6>
+<pre><code class="r">mean(USstatePops2$Pop)
+</code></pre>
+
+<pre><code>## [1] 6053834
+</code></pre>
+<h4 id="formatting-plot-chunk">Formatting Plot Chunk<a class="headerlink" href="#formatting-plot-chunk" title="Permanent link">&para;</a></h4>
+<p>Prints the plots in the .html report and and creates a subdir with the<br />
+plot files (the references).</p>
+<h6 id="figpathfigure-new-file-path-for-this-chunk"><code>fig.path='figure/'</code>; new file path for this chunk.<a class="headerlink" href="#figpathfigure-new-file-path-for-this-chunk" title="Permanent link">&para;</a></h6>
+<p>Otherwise, the path is set in the general options.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-28-1.png" /></p>
+<h6 id="the-device-prints-png-files-by-default">The device prints .png files by default.<a class="headerlink" href="#the-device-prints-png-files-by-default" title="Permanent link">&para;</a></h6>
+<p>It can be changed to other formats.</p>
+<p><code>dev='png'</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-29-1.png" /></p>
+<p><code>dev='jpeg'</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-30-1.jpeg" /></p>
+<p><code>dev='pdf'</code>; <code>'pdf'</code> cannot be printed in the .html report, but only<br />
+included in the subdir.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-31-1.pdf" /></p>
+<hr />
+<h6 id="figwidth-figheight-change-the-box-size-7-by-default"><code>fig.width= , fig.height=</code>; change the box size (<code>=7</code> by default).<a class="headerlink" href="#figwidth-figheight-change-the-box-size-7-by-default" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-32-1.png" /></p>
+<h6 id="figwidth5-figheight5"><code>fig.width=5, fig.height=5</code>.<a class="headerlink" href="#figwidth5-figheight5" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-33-1.png" /></p>
+<h6 id="figheight3"><code>fig.height=3</code>.<a class="headerlink" href="#figheight3" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-34-1.png" /></p>
+<h6 id="figwidth3"><code>fig.width=3</code>.<a class="headerlink" href="#figwidth3" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-35-1.png" /></p>
+<h6 id="outheight100-outwidth100-in-pixels"><code>out.height=100, out.width=100</code>; in pixels.<a class="headerlink" href="#outheight100-outwidth100-in-pixels" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img src="img/Code___Plot_Chunk_Options/unnamed-chunk-36-1.png" width="100" height="100" /></p>
+<hr />
+<h6 id="resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels"><code>resize.height=200, resize.width=200</code>; resize tike graphics for latex, in pixels.<a class="headerlink" href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-37-1.png" /></p>
+<h6 id="sanitizetrue-sanitize-tike-graphics-for-latex"><code>sanitize=TRUE</code>; sanitize &lsquo;tike&rsquo; graphics for latex.<a class="headerlink" href="#sanitizetrue-sanitize-tike-graphics-for-latex" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-38-1.png" /></p>
+<hr />
+<h6 id="set-the-device-arguments">Set the device arguments:<a class="headerlink" href="#set-the-device-arguments" title="Permanent link">&para;</a></h6>
+<p><code>dev.args=list(bg='yellow', pointsize=10)</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-39-1.png" /></p>
+<p><code>dev.args=list(pointsize=8), fig.height=3</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-40-1.png" /></p>
+<hr />
+<h6 id="dots-per-inch">dots per inch.<a class="headerlink" href="#dots-per-inch" title="Permanent link">&para;</a></h6>
+<p><code>dpi=72</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-41-1.png" /></p>
+<p><code>dpi=90</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-42-1.png" /></p>
+<h6 id="dpi-multiplier-for-html-output-on-retina-screens">dpi multiplier for .html output on retina screens:<a class="headerlink" href="#dpi-multiplier-for-html-output-on-retina-screens" title="Permanent link">&para;</a></h6>
+<p><code>fig.retina=1</code></p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-43-1.png" /></p>
+<p><code>fig.retina=2</code>; double dpi.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img src="img/Code___Plot_Chunk_Options/unnamed-chunk-44-1.png" width="288" /></p>
+<hr />
+<h6 id="figalignleft-or-figaligndefault"><code>fig.align='left'</code> or <code>fig.align='default'</code>.<a class="headerlink" href="#figalignleft-or-figaligndefault" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img src="img/Code___Plot_Chunk_Options/unnamed-chunk-45-1.png" style="display: block; margin: auto auto auto 0;" /></p>
+<h6 id="figalignright"><code>fig.align='right'</code>.<a class="headerlink" href="#figalignright" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img src="img/Code___Plot_Chunk_Options/unnamed-chunk-46-1.png" style="display: block; margin: auto 0 auto auto;" /></p>
+<h6 id="figaligncenter"><code>fig.align='center'</code>.<a class="headerlink" href="#figaligncenter" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img src="img/Code___Plot_Chunk_Options/unnamed-chunk-47-1.png" style="display: block; margin: auto;" /></p>
+<hr />
+<h6 id="figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex">Figure captions at the bottom of the plot; figure caption in latex:<a class="headerlink" href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex" title="Permanent link">&para;</a></h6>
+<p><code>fig.cap='CAPTION 14'</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="CAPTION
+14" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-48-1.png" /></p>
+<p>See:</p>
+<ul>
+<li><code>fig.lp=''</code>; figure caption prefix</li>
+<li><code>fig.scap=''</code>; short figure caption prefix.</li>
+<li><code>fig.subcap=''</code>; subcaption.</li>
+<li><code>fig.env=''</code>; the latex environment for figures.</li>
+</ul>
+<hr />
+<h6 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h6>
+<p><code>fig.keep='high'</code>; merge low-level changes into high-level plots.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-49-1.png" /></p>
+<p>See:</p>
+<ul>
+<li><code>fig.keep='all'</code>; keep all plots (low-level changes may produce<br />
+    new plots).</li>
+<li><code>fig.keep='first'/'last'</code>; keep the first/last plot only.</li>
+<li><code>fig.keep='none'</code>; discard all plots.</li>
+</ul>
+<hr />
+<h6 id="figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex"><code>fig.pos='test'</code>; string to be used as the figure position arrangement in latex.<a class="headerlink" href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex" title="Permanent link">&para;</a></h6>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-50-1.png" /></p>
+<hr />
+<h6 id="show">Show<a class="headerlink" href="#show" title="Permanent link">&para;</a></h6>
+<p><code>fig.show='asis'</code>.</p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 10, main = '', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-51-1.png" /></p>
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-51-2.png" /></p>
+<ul>
+<li><code>fig.show='hold'</code>; display the plots at the very end of the chunk.</li>
+</ul>
+<!-- -->
+
+<pre><code class="r">hist(USstatePops2$Pop, breaks = 10, main = '', xlab = 'Pop')
+hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
+</code></pre>
+
+<p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-52-1.png" /><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-52-2.png" /></p>
+<p>See:</p>
+<ul>
+<li><code>fig.show='hide'</code>; generate the plots, but not in the<br />
+    final document.</li>
+<li><code>fig.show='animate'</code>; combine all of the plots created into<br />
+    an animation. Additional packages and settings are required.</li>
+</ul>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Plot_snippets_-_Basics/" class="btn btn-neutral float-right" title="Plot Snippets for Exploratory (and some Explanatory) Analyses">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Data_Wrangling/" class="btn btn-neutral" title="Data Wrangling"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Data_Wrangling/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Plot_snippets_-_Basics/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

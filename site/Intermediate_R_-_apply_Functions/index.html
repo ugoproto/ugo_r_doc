@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Intermediate R - apply Functions - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Intermediate R - apply Functions";
+    var mkdocs_page_input_path = "Intermediate_R_-_apply_Functions.md";
+    var mkdocs_page_url = "/Intermediate_R_-_apply_Functions/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Intermediate R - apply Functions</a>
+        
+            <ul>
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Intermediate R - apply Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets and results.</li>
+</ul>
+<hr />
+<p><strong><code>apply</code> functions</strong></p>
+<pre><code class="r"># Apply Functions Over Array Margins
+apply; sweep; scale
+
+# Apply a Function over a List or Vector
+lapply; sapply; vapply; replicate; rapply
+
+# Apply a Function to Multiple List or Vector Arguments
+mapply; Vectorize
+
+# Apply a Function Over a Ragged Array
+tapply
+
+# Apply a Function to a Data Frame Split by Factors
+by; aggregate; split
+
+# Apply a Function Over Values in an Environment
+eapply
+</code></pre>
+
+<p><strong><code>apply</code>, <code>sweep</code>, <code>scale</code></strong></p>
+<pre><code class="r"># &quot;apply&quot; returns a vector or array or list of values obtained by applying a function to margins of an array or matrix.
+(m = matrix(1:6, nrow = 2))
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+</code></pre>
+<pre><code class="r">apply(m, 1, sum)
+</code></pre>
+
+<pre><code>## [1]  9 12
+</code></pre>
+<pre><code class="r">apply(m, 1:2, sqrt)
+</code></pre>
+
+<pre><code>##          [,1]     [,2]     [,3]
+## [1,] 1.000000 1.732051 2.236068
+## [2,] 1.414214 2.000000 2.449490
+</code></pre>
+<pre><code class="r"># &quot;sweep&quot; returns an array obtained from an input array by sweeping out a summary statistic.
+(X = array(1:24, dim = 4:2))
+</code></pre>
+
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3]
+## [1,]    1    5    9
+## [2,]    2    6   10
+## [3,]    3    7   11
+## [4,]    4    8   12
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3]
+## [1,]   13   17   21
+## [2,]   14   18   22
+## [3,]   15   19   23
+## [4,]   16   20   24
+</code></pre>
+<pre><code class="r">sweep(X, 1, apply(X, 1, mean))
+</code></pre>
+
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3]
+## [1,]  -10   -6   -2
+## [2,]  -10   -6   -2
+## [3,]  -10   -6   -2
+## [4,]  -10   -6   -2
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3]
+## [1,]    2    6   10
+## [2,]    2    6   10
+## [3,]    2    6   10
+## [4,]    2    6   10
+</code></pre>
+<pre><code class="r"># &quot;scale&quot; is generic function whose default method centers and/or scales the columns of a numeric matrix.
+(mat = matrix(round(rnorm(10)*10), nrow = 5))
+</code></pre>
+
+<pre><code>##      [,1] [,2]
+## [1,]  -25   -9
+## [2,]   -1    6
+## [3,]   -2   21
+## [4,]  -18  -10
+## [5,]   13    2
+</code></pre>
+<pre><code class="r">scale(mat)
+</code></pre>
+
+<pre><code>##            [,1]       [,2]
+## [1,] -1.2231382 -0.8682707
+## [2,]  0.3722595  0.3157348
+## [3,]  0.3057846  1.4997404
+## [4,] -0.7578139 -0.9472044
+## [5,]  1.3029081  0.0000000
+## attr(,"scaled:center")
+## [1] -6.6  2.0
+## attr(,"scaled:scale")
+## [1] 15.04327 12.66886
+</code></pre>
+<pre><code class="r">apply(mat, 2, mean)
+</code></pre>
+
+<pre><code>## [1] -6.6  2.0
+</code></pre>
+<pre><code class="r">apply(mat, 2, sd)
+</code></pre>
+
+<pre><code>## [1] 15.04327 12.66886
+</code></pre>
+<pre><code class="r">cov(scale(mat))
+</code></pre>
+
+<pre><code>##           [,1]      [,2]
+## [1,] 1.0000000 0.5889881
+## [2,] 0.5889881 1.0000000
+</code></pre>
+<p><strong><code>lapply</code>, <code>sapply</code>, <code>vapply</code>, <code>replicate</code>, <code>rapply</code></strong></p>
+<pre><code class="r"># &quot;lapply&quot; returns a list of the same length as X, each element of which is the result of applying FUN to the corresponding element of X.
+lapply(1:5, sqrt)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 1.414214
+## 
+## [[3]]
+## [1] 1.732051
+## 
+## [[4]]
+## [1] 2
+## 
+## [[5]]
+## [1] 2.236068
+</code></pre>
+<pre><code class="r"># &quot;sapply&quot; is a user-friendly version of lapply by default returning a vector or matrix if appropriate.
+sapply(1:5, sqrt)
+</code></pre>
+
+<pre><code>## [1] 1.000000 1.414214 1.732051 2.000000 2.236068
+</code></pre>
+<pre><code class="r"># &quot;vapply&quot; is similar to sapply, but has a pre-specified type of return value, so it can be safer (and sometimes faster) to use.
+vapply(1:5, sqrt, 1i)
+</code></pre>
+
+<pre><code>## [1] 1.000000+0i 1.414214+0i 1.732051+0i 2.000000+0i 2.236068+0i
+</code></pre>
+<pre><code class="r"># &quot;replicate&quot; is a wrapper for the common use of sapply for repeated evaluation of an expression (which will usually involve random number generation).
+replicate(3, rnorm(5))
+</code></pre>
+
+<pre><code>##             [,1]       [,2]       [,3]
+## [1,]  1.27143977  1.2557048 -1.8773681
+## [2,]  1.39467927 -0.4677682  1.0071086
+## [3,] -1.40587412 -0.4815548  1.6167008
+## [4,] -0.69712942  0.6934136 -0.4936395
+## [5,]  0.06646416 -0.4202453  0.3566716
+</code></pre>
+<pre><code class="r"># &quot;rapply&quot; is a recursive version of lapply.
+(x = list(A = list(a = pi, b = list(b1 = 1)), B = &quot;a character string&quot;))
+</code></pre>
+
+<pre><code>## $A
+## $A$a
+## [1] 3.141593
+## 
+## $A$b
+## $A$b$b1
+## [1] 1
+## 
+## 
+## 
+## $B
+## [1] "a character string"
+</code></pre>
+<pre><code class="r">rapply(x, sqrt, classes = &quot;numeric&quot;, how = &quot;unlist&quot;)
+</code></pre>
+
+<pre><code>##      A.a   A.b.b1 
+## 1.772454 1.000000
+</code></pre>
+<pre><code class="r">rapply(x, sqrt, classes = &quot;numeric&quot;, how = &quot;replace&quot;)
+</code></pre>
+
+<pre><code>## $A
+## $A$a
+## [1] 1.772454
+## 
+## $A$b
+## $A$b$b1
+## [1] 1
+## 
+## 
+## 
+## $B
+## [1] "a character string"
+</code></pre>
+<pre><code class="r">rapply(x, sqrt, classes = &quot;numeric&quot;, how = &quot;list&quot;)
+</code></pre>
+
+<pre><code>## $A
+## $A$a
+## [1] 1.772454
+## 
+## $A$b
+## $A$b$b1
+## [1] 1
+## 
+## 
+## 
+## $B
+## NULL
+</code></pre>
+<pre><code class="r">rapply(x, sqrt, classes = &quot;numeric&quot;, deflt = NA, how = &quot;unlist&quot;)
+</code></pre>
+
+<pre><code>##      A.a   A.b.b1        B 
+## 1.772454 1.000000       NA
+</code></pre>
+<pre><code class="r">rapply(x, sqrt, classes = &quot;numeric&quot;, deflt = NA, how = &quot;replace&quot;)
+</code></pre>
+
+<pre><code>## $A
+## $A$a
+## [1] 1.772454
+## 
+## $A$b
+## $A$b$b1
+## [1] 1
+## 
+## 
+## 
+## $B
+## [1] "a character string"
+</code></pre>
+<pre><code class="r">rapply(x, sqrt, classes = &quot;numeric&quot;, deflt = NA, how = &quot;list&quot;)
+</code></pre>
+
+<pre><code>## $A
+## $A$a
+## [1] 1.772454
+## 
+## $A$b
+## $A$b$b1
+## [1] 1
+## 
+## 
+## 
+## $B
+## [1] NA
+</code></pre>
+<pre><code class="r">rapply(x, round, classes = &quot;numeric&quot;, how = &quot;replace&quot;, digits = 2)
+</code></pre>
+
+<pre><code>## $A
+## $A$a
+## [1] 3.14
+## 
+## $A$b
+## $A$b$b1
+## [1] 1
+## 
+## 
+## 
+## $B
+## [1] "a character string"
+</code></pre>
+<p><strong><code>mapply</code>, <code>Vectorize</code></strong></p>
+<pre><code class="r"># &quot;mapply&quot; is a multivariate version of sapply. mapply applies FUN to the first elements of each argument, the second elements, the third elements, and so on. Arguments are recycled if necessary.
+mapply(rep, LETTERS[1:3], 1:3)
+</code></pre>
+
+<pre><code>## $A
+## [1] "A"
+## 
+## $B
+## [1] "B" "B"
+## 
+## $C
+## [1] "C" "C" "C"
+</code></pre>
+<pre><code class="r"># &quot;Vectorize&quot; returns a new function that acts as if mapply was called.
+vrep = Vectorize(rep)
+vrep(LETTERS[1:3], 1:3)
+</code></pre>
+
+<pre><code>## [1] "A" "B" "B" "C" "C" "C"
+</code></pre>
+<pre><code class="r">vrep = Vectorize(rep.int)
+vrep(LETTERS[1:3], 1:3)
+</code></pre>
+
+<pre><code>## $A
+## [1] "A"
+## 
+## $B
+## [1] "B" "B"
+## 
+## $C
+## [1] "C" "C" "C"
+</code></pre>
+<p><strong><code>tapply</code></strong></p>
+<pre><code class="r"># &quot;tapply&quot; applies a function to each cell of a ragged array, that is to each (non-empty) group of values given by a unique combination of the levels of certain factors.
+(m = matrix(1:6, 2, 3))
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+</code></pre>
+<pre><code class="r">(fac = matrix(c(1,3,1,2,2,2), 2, 3))
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    1    2
+## [2,]    3    2    2
+</code></pre>
+<pre><code class="r">tapply(m, fac, max)
+</code></pre>
+
+<pre><code>## 1 2 3 
+## 3 6 2
+</code></pre>
+<p><strong><code>by</code>, <code>aggregate</code>, <code>split</code></strong></p>
+<pre><code class="r"># &quot;by&quot; is an object-oriented wrapper for tapply applied to data frames.
+by(mtcars$mpg, mtcars$cyl, max)
+</code></pre>
+
+<pre><code>## mtcars$cyl: 4
+## [1] 33.9
+## -------------------------------------------------------- 
+## mtcars$cyl: 6
+## [1] 21.4
+## -------------------------------------------------------- 
+## mtcars$cyl: 8
+## [1] 19.2
+</code></pre>
+<pre><code class="r"># &quot;aggregate&quot; splits the data into subsets, computes summary statistics for each, and returns the result in a convenient form.
+aggregate(mpg ~ cyl, data = mtcars, max)
+</code></pre>
+
+<pre><code>##   cyl  mpg
+## 1   4 33.9
+## 2   6 21.4
+## 3   8 19.2
+</code></pre>
+<pre><code class="r"># See help for usage of NA, formula, dot notation, xtabs, nfrequency.
+
+# &quot;split&quot; divides the data in the vector x into the groups defined by f. The replacement forms replace values corresponding to such a division.
+split(mtcars[1], mtcars[2])
+</code></pre>
+
+<pre><code>## $`4`
+##                 mpg
+## Datsun 710     22.8
+## Merc 240D      24.4
+## Merc 230       22.8
+## Fiat 128       32.4
+## Honda Civic    30.4
+## Toyota Corolla 33.9
+## Toyota Corona  21.5
+## Fiat X1-9      27.3
+## Porsche 914-2  26.0
+## Lotus Europa   30.4
+## Volvo 142E     21.4
+## 
+## $`6`
+##                 mpg
+## Mazda RX4      21.0
+## Mazda RX4 Wag  21.0
+## Hornet 4 Drive 21.4
+## Valiant        18.1
+## Merc 280       19.2
+## Merc 280C      17.8
+## Ferrari Dino   19.7
+## 
+## $`8`
+##                      mpg
+## Hornet Sportabout   18.7
+## Duster 360          14.3
+## Merc 450SE          16.4
+## Merc 450SL          17.3
+## Merc 450SLC         15.2
+## Cadillac Fleetwood  10.4
+## Lincoln Continental 10.4
+## Chrysler Imperial   14.7
+## Dodge Challenger    15.5
+## AMC Javelin         15.2
+## Camaro Z28          13.3
+## Pontiac Firebird    19.2
+## Ford Pantera L      15.8
+## Maserati Bora       15.0
+</code></pre>
+<p><strong><code>eapply</code></strong></p>
+<pre><code class="r"># &quot;eapply&quot; applies FUN to the named values from an environment and returns the results as a list. The user can request that all named objects are used (normally names that begin with a dot are not). The output is not sorted and no parent environments are searched.
+env = new.env()
+env$x = 1:3
+env$y = 4:6
+env$x
+</code></pre>
+
+<pre><code>## [1] 1 2 3
+</code></pre>
+<pre><code class="r">env$y
+</code></pre>
+
+<pre><code>## [1] 4 5 6
+</code></pre>
+<pre><code class="r">eapply(env, sum)
+</code></pre>
+
+<pre><code>## $x
+## [1] 6
+## 
+## $y
+## [1] 15
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/" class="btn btn-neutral float-right" title="Statistics with R, Course One, Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Intermediate_R/" class="btn btn-neutral" title="Intermediate R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Intermediate_R/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
