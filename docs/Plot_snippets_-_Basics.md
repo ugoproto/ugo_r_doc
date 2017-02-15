@@ -4,39 +4,31 @@
     -   [Functions](#functions)
     -   [Dataset](#dataset)
 -   [The Basic Package](#the-basic-package)
-    -   [Basic Plots, Options &
-        Parameters](#basic-plots-options-parameters)
+    -   [Basic Plots, Options & Parameters](#basic-plots-options-parameters)
     -   [Univariate Plots](#univariate-plots)
     -   [Bivariate (Multivariate) Plots](#bivariate-multivariate-plots)
     -   [Multivariate Plots](#multivariate-plots)
     -   [Times Series](#times-series)
-    -   [Regressions and Residual
-        Plots](#regressions-and-residual-plots)
--   [The `lattice` and `latticeExtra`
-    Packages](#the-lattice-and-latticeextra-packages)
+    -   [Regressions and Residual Plots](#regressions-and-residual-plots)
+-   [The `lattice` and `latticeExtra` Packages](#the-lattice-and-latticeextra-packages)
     -   [Coloring](#coloring)
     -   [Documentation](#documentation)
-    -   [A note on reordering the
-        levels (factors)](#a-note-on-reordering-the-levels-factors)
+    -   [A note on reordering the levels (factors)](#a-note-on-reordering-the-levels-factors)
     -   [Uni-, Bi-, Multivariate Plots](#uni--bi--multivariate-plots)
 -   [Additional Packages](#additional-packages)
     -   [The `sm` Package (density)](#the-sm-package-density)
     -   [The `car` Package (scatter)](#the-car-package-scatter)
     -   [The `vioplot` Package (boxplot)](#the-vioplot-package-boxplot)
-    -   [The `vcd` Package (count,
-        correlation, mosaic)](#the-vcd-package-count-correlation-mosaic)
+    -   [The `vcd` Package (count, correlation, mosaic)](#the-vcd-package-count-correlation-mosaic)
     -   [The `hexbin` Package (scatter)](#the-hexbin-package-scatter)
     -   [The `car` Package (scatter)](#the-car-package-scatter-1)
     -   [The `scatterplot3d` Package](#the-scatterplot3d-package)
     -   [The `rgl` Package (interactive)](#the-rgl-package-interactive)
-    -   [The `cluster`
-        Package (dendrogram)](#the-cluster-package-dendrogram)
+    -   [The `cluster` Package (dendrogram)](#the-cluster-package-dendrogram)
     -   [The `extracat` Package (splom)](#the-extracat-package-splom)
     -   [The `ash` Package (density)](#the-ash-package-density)
-    -   [The `KernSmooth`
-        Package (density)](#the-kernsmooth-package-density)
-    -   [The `crorplot`
-        Package (correlation)](#the-crorplot-package-correlation)
+    -   [The `KernSmooth` Package (density)](#the-kernsmooth-package-density)
+    -   [The `crorplot` Package (correlation)](#the-crorplot-package-correlation)
 -   [A Peek at Mapping](#a-peek-at-mapping)
 
 ------------------------------------------------------------------------
