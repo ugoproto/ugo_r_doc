@@ -30,6 +30,7 @@ pages:
         - Statistics with R, Course Six, Multiple Regression: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression.md'
         - Statistics with R, Course Seven, Moderation and Mediation: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation.md'
     - Big Data Analysis with Revolution R Enterprise: 'Big_Data_Analysis_with_Revolution_R_Enterprise.md'
+    - Time Series in R, The Power of xts and zoo: 'Time+Series+in+R+The+Power+of+xts+and+zoo.md'
 
 theme: readthedocs
 # Other themes:

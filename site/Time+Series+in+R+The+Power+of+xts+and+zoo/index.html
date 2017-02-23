@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  
+  <title>Time Series in R, The Power of xts and zoo - ugo_r_doc</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Time Series in R, The Power of xts and zoo";
+    var mkdocs_page_input_path = "Time+Series+in+R+The+Power+of+xts+and+zoo.md";
+    var mkdocs_page_url = "/Time+Series+in+R+The+Power+of+xts+and+zoo/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Time Series in R, The Power of xts and zoo</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#2-first-order-of-business-basic-manipulations">2, First Order of Business - Basic Manipulations</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-merging-and-modifying-time-series">3, Merging and modifying time series</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#4-apply-and-aggregate-by-time">4, Apply and aggregate by time</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#5-extra-features-of-xts">5, Extra features of xts</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Time Series in R, The Power of xts and zoo</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h4 id="1-introduction-to-extensible-time">1, Introduction to eXtensible Time<a class="headerlink" href="#1-introduction-to-extensible-time" title="Permanent link">&para;</a></h4>
+<p><strong>What is an <code>xts</code> object</strong></p>
+<p><code>xts</code>, a constructor or a subclass that inherits behavior from parents. <code>xts</code> (as a subclass) extends the popular <code>zoo</code> class (as a parent). Most <code>zoo</code> methods work for <code>xts</code>. </p>
+<p><code>xts</code> is a matrix objects; subsets always preserve the matrix form. </p>
+<p><code>xts</code> are indexed by a formal time object. You can time-stamp the data.</p>
+<p>The main <code>xts</code> constructor two most important arguments are <code>x</code> for the data and <code>order.by</code> for the index. <code>x</code> must be a vector or matrix. <code>order.by</code> is a vector of the same length or number of rows of <code>x</code>; it must be a proper time or date object and it must be in increasing order.</p>
+<p><code>xts</code> also allows you to bind arbitrary key-value attributes to your data. This lets you keep metadata about your object inside your object.</p>
+<pre><code class="R"># Load xts
+library(xts)
+</code></pre>
+
+<p><strong>A first <code>xts</code> object</strong></p>
+<pre><code class="R">core &lt;- matrix(c(rep(1,3), rep(2,3)), nrow = 3, ncol = 2)
+core
+
+idx &lt;- as.Date(c(&quot;2016-06-01&quot;,&quot;2016-06-02&quot;, &quot;2016-06-03&quot;))
+idx
+
+ex_matrix &lt;- xts(core, order.by = idx)
+ex_matrix
+</code></pre>
+
+<table>
+<tbody>
+    <tr><td>1</td><td>2</td></tr>
+    <tr><td>1</td><td>2</td></tr>
+    <tr><td>1</td><td>2</td></tr>
+</tbody>
+</table>
+
+<pre><code>[1] "2016-06-01" "2016-06-02" "2016-06-03"
+
+
+
+           [,1] [,2]
+2016-06-01    1    2
+2016-06-02    1    2
+2016-06-03    1    2
+</code></pre>
+<p><strong>More than a matrix</strong></p>
+<p><code>xts</code> objects are normal R matrices, but with special powers.</p>
+<pre><code class="R"># View the structure of ex_matrix
+str(ex_matrix)
+</code></pre>
+
+<pre><code>An 'xts' object on 2016-06-01/2016-06-03 containing:
+  Data: num [1:3, 1:2] 1 1 1 2 2 2
+  Indexed by objects of class: [Date] TZ: UTC
+  xts Attributes:  
+ NULL
+</code></pre>
+<pre><code class="R"># Extract the 3rd observation of the 2nd column of ex_matrix
+ex_matrix[3, 2]
+
+# Extract the 3rd observation of the 2nd column of core 
+core[3, 2]
+</code></pre>
+
+<pre><code>           [,1]
+2016-06-03    2
+</code></pre>
+<p>2</p>
+<p><strong>Your first xts object</strong></p>
+<p>Vector must be of the same length or number of rows as x and, this is very important: it must be a proper time or date object and it must be in increasing order.</p>
+<pre><code class="R"># Create the object data using 5 random numbers
+data &lt;- rnorm(5)
+data
+
+# Create dates as a Date class object starting from 2016-01-01
+dates &lt;- seq(as.Date(&quot;2016-01-01&quot;), length = 5, by = &quot;days&quot;)
+dates
+
+# Use xts() to create smith
+smith &lt;- xts(x = data, order.by = dates)
+smith
+
+# Create bday (1899-05-08) using a POSIXct date class object
+bday &lt;- as.POSIXct(&quot;1899-05-08&quot;)
+bday
+
+# Create hayek and add a new attribute called born
+hayek &lt;- xts(x = data, order.by = dates, born = bday)
+hayek
+</code></pre>
+
+<ol class=list-inline>
+    <li>0.384581498733952</li>
+    <li>-0.423869463715667</li>
+    <li>-0.49549963387221</li>
+    <li>1.49946058244083</li>
+    <li>-0.92906780054414</li>
+</ol>
+
+<pre><code>[1] "2016-01-01" "2016-01-02" "2016-01-03" "2016-01-04" "2016-01-05"
+
+
+
+                 [,1]
+2016-01-01  0.3845815
+2016-01-02 -0.4238695
+2016-01-03 -0.4954996
+2016-01-04  1.4994606
+2016-01-05 -0.9290678
+
+
+
+[1] "1899-05-08 EST"
+
+
+
+                 [,1]
+2016-01-01  0.3845815
+2016-01-02 -0.4238695
+2016-01-03 -0.4954996
+2016-01-04  1.4994606
+2016-01-05 -0.9290678
+</code></pre>
+<p><strong>Deconstructing xts</strong></p>
+<p>Separate a time series into its core data and index attributes for additional analysis and manipulation.</p>
+<p>Functions are methods from the <code>zoo</code> class.</p>
+<pre><code class="R"># Extract the core data of hayek
+hayek_core &lt;- coredata(hayek)
+
+# View the class of hayek_core
+class(hayek_core)
+
+# Extract the index of hayek
+hayek_index &lt;- index(hayek)
+
+# View the class of hayek_index
+class(hayek_index)
+</code></pre>
+
+<p>&lsquo;matrix&rsquo;</p>
+<p>&lsquo;Date&rsquo;</p>
+<p><strong>Time-based indices</strong></p>
+<p><code>xts</code> objects get their power from the index attribute that holds the time dimension. One major difference between <code>xts</code> and most other time series objects in R is the ability to use any one of various classes that are used to represent time. Whether <code>POSIXct</code>, <code>Date</code>, or some other class, xts will convert this into an internal form to make subsetting as natural to the user as possible.</p>
+<pre><code class="R"># Create dates
+dates &lt;- as.Date(&quot;2016-01-01&quot;) + 0:4
+
+# Create ts_a
+ts_a &lt;- xts(x = 1:5, order.by = dates)
+
+# Create ts_b
+ts_b &lt;- xts(x = 1:5, order.by = as.POSIXct(dates))
+
+# Extract the rows of ts_a using the index of ts_b
+ts_a[index(ts_a)]
+
+# Extract the rows of ts_b using the index of ts_a
+ts_b[index(ts_a)]
+</code></pre>
+
+<pre><code>           [,1]
+2016-01-01    1
+2016-01-02    2
+2016-01-03    3
+2016-01-04    4
+2016-01-05    5
+
+
+
+     [,1]
+</code></pre>
+<h4 id="2-first-order-of-business-basic-manipulations">2, First Order of Business - Basic Manipulations<a class="headerlink" href="#2-first-order-of-business-basic-manipulations" title="Permanent link">&para;</a></h4>
+<p><strong>Converting xts objects</strong></p>
+<p><code>xts</code> provides methods to convert all of the major objects you are likely to come across - suitable native R types like matrix, data.frame, and ts are supported, as well as contributed ones such as <code>timeSeries</code>, <code>fts</code> and of course <code>zoo</code>. <code>as.xts</code> is the workhorse function to do the conversions to <code>xts</code>, and similar functions will provide the reverse behavior.</p>
+<pre><code class="R"># using a R dataset
+head(austres)
+</code></pre>
+
+<ol class=list-inline>
+    <li>13067.3</li>
+    <li>13130.5</li>
+    <li>13198.4</li>
+    <li>13254.2</li>
+    <li>13303.7</li>
+    <li>13353.9</li>
+</ol>
+
+<pre><code class="R"># Convert austres to an xts object called au
+au &lt;- as.xts(austres)
+head(au, 5)
+
+# Convert your xts object (au) into a matrix am
+am &lt;- as.matrix(au)
+head(am, 5)
+
+# Convert the original austres into a matrix am2
+am2 &lt;- as.matrix(austres)
+head(am2, 5)
+</code></pre>
+
+<pre><code>           [,1]
+1971 Q2 13067.3
+1971 Q3 13130.5
+1971 Q4 13198.4
+1972 Q1 13254.2
+1972 Q2 13303.7
+</code></pre>
+<table>
+<tbody>
+    <tr><th scope=row>1971 Q2</th><td>13067.3</td></tr>
+    <tr><th scope=row>1971 Q3</th><td>13130.5</td></tr>
+    <tr><th scope=row>1971 Q4</th><td>13198.4</td></tr>
+    <tr><th scope=row>1972 Q1</th><td>13254.2</td></tr>
+    <tr><th scope=row>1972 Q2</th><td>13303.7</td></tr>
+</tbody>
+</table>
+
+<table>
+<tbody>
+    <tr><td>13067.3</td></tr>
+    <tr><td>13130.5</td></tr>
+    <tr><td>13198.4</td></tr>
+    <tr><td>13254.2</td></tr>
+    <tr><td>13303.7</td></tr>
+</tbody>
+</table>
+
+<p><strong>Importing data</strong></p>
+<p>Read raw data from files on disk or the web and convert data to <code>xts</code>.</p>
+<p>Read the same data into a <code>zoo</code> object using read.zoo and convert the <code>zoo</code> into an <code>xts</code> object.</p>
+<pre><code class="R"># Create dat by reading tmp_file
+dat &lt;- as.matrix(read.csv('tmp_file.csv', sep = ',', header = TRUE))
+dat
+</code></pre>
+
+<table>
+<thead><tr><th></th><th scope=col>a</th><th scope=col>b</th></tr></thead>
+<tbody>
+    <tr><th scope=row>1/02/2015</th><td>1</td><td>3</td></tr>
+    <tr><th scope=row>2/03/2015</th><td>2</td><td>4</td></tr>
+</tbody>
+</table>
+
+<pre><code class="R"># Convert dat into xts
+xts(dat, order.by = as.Date(rownames(dat), &quot;%m%d%Y&quot;))
+</code></pre>
+
+<pre><code>     a b
+&lt;NA&gt; 1 3
+&lt;NA&gt; 2 4
+</code></pre>
+<pre><code class="R"># Read tmp_file using read.zoo and as.xts
+dat_xts &lt;- as.xts(read.zoo('tmp_file.csv', index.column = 0, sep = &quot;,&quot;, format = &quot;%m/%d/%Y&quot;))
+dat_xts
+</code></pre>
+
+<pre><code>           a b
+2015-01-02 1 3
+2015-02-03 2 4
+</code></pre>
+<p><strong>Exporting xts objects</strong></p>
+<pre><code class="R">head(sunspots, 5)
+
+# Convert sunspots to xts
+sunspots_xts &lt;- as.xts(sunspots)
+</code></pre>
+
+<ol class=list-inline>
+    <li>58</li>
+    <li>62.6</li>
+    <li>70</li>
+    <li>55.7</li>
+    <li>85</li>
+</ol>
+
+<pre><code class="R"># Get the temporary file name
+tmp &lt;- tempfile()
+
+# Write the xts object using zoo to tmp 
+write.zoo(sunspots, sep = &quot;,&quot;, file = tmp)
+
+tmp
+</code></pre>
+
+<p>&lsquo;C:\Users\Dell\AppData\Local\Temp\RtmpEdYcAQ\file1a706c8c732b&rsquo;</p>
+<pre><code class="R"># Read the tmp file
+# FUN=as.yearmon will convert strings such as Jan 1749 into a proper time class
+sun &lt;- read.zoo(tmp, sep = &quot;,&quot;, FUN = as.yearmon)
+
+# Convert sun into xts
+sun_xts &lt;- as.xts(sun)
+head(sun_xts, 5)
+</code></pre>
+
+<pre><code>Error in eval(expr, envir, enclos): impossible de trouver la fonction "read.zoo"
+Traceback:
+</code></pre>
+<p><strong>The ISO8601 Standard</strong></p>
+<p>The ISO8601 standard is the internationally recognized and accepted way to represent dates and times. From the biggest to the smallest, left to right, YYYY-MM-DDTHH:MM:SS.</p>
+<p>The standard allows for a common format to not only describe dates, but also a way to represent ranges and repeating intervals:</p>
+<ol>
+<li>2004 or 2001/2015</li>
+<li>201402/03</li>
+<li>2014-02-22 08:30:00</li>
+<li>T08:00/T09:00</li>
+</ol>
+<p><strong>Querying for dates</strong></p>
+<p>Date ranges can be extracted from xts objects by simply specifying the period(s) you want using special character strings in your subset.</p>
+<p>Code:</p>
+<pre><code class="r">A[&quot;201601&quot;]         ## Jan 2016
+A[&quot;20160125&quot;]       ## Jan 25, 2016
+A[&quot;201203/201212&quot;]  ## Feb to Dec 2012
+
+# Select all of 2016 from x
+x_2016 &lt;- x[&quot;2016&quot;]
+
+# Select January 2016 to March 22
+jan_march &lt;- x[&quot;201601/20160322&quot;]
+</code></pre>
+
+<p><strong>Extracting recurring intraday intervals</strong></p>
+<p>Most common data &ldquo;in the wild&rdquo; is daily. On ocassion you may find yourself working with intraday data, that is date plus times.</p>
+<p>You can slice days easily by using special notation in the <code>i =</code> argument to the single bracket extraction (i.e. <code>[i,j]</code>).</p>
+<p>Code:</p>
+<pre><code class="r"># Intraday times for all days
+NYSE[&quot;T09:30/T16:00&quot;]
+
+# Extract all data between 8AM and 10AM
+morn_2010 &lt;- irreg[&quot;T8:00/T10:00&quot;]
+
+# Extract the observations for January 13th
+morn_2010[&quot;2010-01-13&quot;]
+</code></pre>
+
+<p><strong>Alternating extraction techniques</strong></p>
+<p>Often times you may need to subset an existing time series with a set of Dates, or time-based objects. These might be from <code>as.Date()</code>, or <code>as.POSIXct()</code>, or a variety of other classes.</p>
+<p>Code:</p>
+<pre><code class="r"># Subset x using the vector dates
+x[dates]
+
+# Subset x using dates as POSIXct
+x[as.POSIXct(dates)]
+</code></pre>
+
+<p><strong>Extracting recurring intraday intervals</strong></p>
+<p>The most common time series data is daily, intraday data, which contains both dates and times. </p>
+<pre><code class="r"># Extract all data between 8AM and 10AM
+morn_2010 &lt;- irreg[&quot;T8:00/T10:00&quot;]
+
+# Extract the observations for January 13th
+morn_2010[&quot;2010-01-13&quot;]
+</code></pre>
+
+<p><strong>Row selection with time objects</strong></p>
+<p>Subset an existing time series with a set of Dates, or time-based objects.</p>
+<pre><code class="r"># Subset x using the vector dates
+x[dates]
+
+# Subset x using dates as POSIXct
+x[as.POSIXct(dates)]
+</code></pre>
+
+<p><strong>Update and replace elements</strong></p>
+<p>Replace known intervals or observations with an NA, say due to a malfunctioning sensor on a particular day or a set of outliers given a holiday.</p>
+<p>Code:</p>
+<pre><code class="r"># Replace all values in x on dates with NA
+x[dates] &lt;- NA
+
+# Replace dates from 2016-06-09 and on with 0
+x[&quot;20160609/&quot;] &lt;- 0
+</code></pre>
+
+<p><strong>Find the <code>first</code> or <code>last</code> period of time</strong></p>
+<p>Sometimes you need to locate data by relative time. Instead of using an absolute offset, you describe a position relative in time. A simple example would be something like the <em>last 3 weeks</em> of a series, or the <em>first day of current month</em>.</p>
+<p>Code:</p>
+<pre><code class="r"># Create lastweek with using the last 1 week of temps
+lastweek &lt;- last(temps, &quot;1 week&quot;)
+
+# Print the last 2 observations in lastweek
+last(lastweek, 2)
+
+# Extract all but the last two days of lastweek
+last(lastweek, &quot;-2 day&quot;)
+</code></pre>
+
+<p><strong>Combining <code>first</code> and <code>last</code></strong></p>
+<p>Code:</p>
+<pre><code class="r"># Last 3 days of first week
+last(first(Temps, '1 week'),'3 days') 
+
+# Extract the first three days of the second week of temps
+first(last(first(temps, &quot;2 week&quot;), &quot;1 week&quot;), &quot;3 day&quot;)
+</code></pre>
+
+<p><strong>Matrix arithmetic - add, subtract, multiply and divide in time!</strong></p>
+<p>When you perform any binary operation using two xts objects, these objects are first aligned using the intersection of the indexes to preserve the point-in-time aspect of your data, assuring that you don&rsquo;t introduce accidental look ahead (or look behind!) bias into your calculations.</p>
+<p>Your options include:</p>
+<ol>
+<li>coredata() or as.numeric() (drop one to a matrix or vector).</li>
+<li>Manually shift index values - i.e. use lag().</li>
+<li>Reindex your data (before or after the calculation).</li>
+</ol>
+<p><code>xts</code> respects time and will only return the intersection of times when doing various mathematical operations. First option:</p>
+<pre><code class="r"># Add a and b
+a + b
+
+# Add a with the numeric value of b
+a + as.numeric(b)
+</code></pre>
+
+<p><strong>Math with non-overlapping indexes</strong></p>
+<p>This third way involves modifying the two series you want by aligning assuring you have some union of dates - the dates you require in your final output. This makes it possibly to preserve dimensionality of the data:</p>
+<pre><code class="r">merge(b, index(a))
+
+# Add a to b, and fill all missing rows of b with 0
+a + merge(b, index(a), fill = 0)
+
+# Add a to b and fill NAs with the last observation
+a + merge(b, index(a), fill = na.locf)
+</code></pre>
+
+<h4 id="3-merging-and-modifying-time-series">3, Merging and modifying time series<a class="headerlink" href="#3-merging-and-modifying-time-series" title="Permanent link">&para;</a></h4>
+<p><strong>Combining <code>xts</code> by column with <code>merge</code></strong></p>
+<p><code>xts</code> makes it easy to join data by column and row using a few different functions.  </p>
+<p><code>xts</code> objects must be of identical type (e.g. integer + integer), or be POSIXct dates vector, or be atomic vectors of the same type (e.g. numeric), or be a single NA. It does not work on data.frames with various column types.</p>
+<p>One of the most important functions to accomplish this is <code>merge</code>. It works like a <code>cbind</code> or and SQL <code>join</code>:</p>
+<ol>
+<li>inner join (and)</li>
+<li>outer join (or)</li>
+<li>left join</li>
+<li>right join</li>
+</ol>
+<pre><code class="r"># Basic argument use
+merge(a, b, join = &quot;right&quot;, fill = 9999)
+
+# Perform an inner join of a and b
+merge(a, b, join = &quot;inner&quot;)
+
+# Perform of a left-join of a and b, fill mising values with 0
+merge(a, b, join = &quot;left&quot;, fill = 0)
+
+# fill = na.locf, fill = NA
+</code></pre>
+
+<p><strong>Combining <code>xts</code> by row with <code>rbind</code></strong></p>
+<p>Easy to add new rows to your data.</p>
+<pre><code class="r"># Row bind temps_june30 to temps, assign this to temps2
+temps2 &lt;- rbind(temps, temps_june30)
+
+# Row bind temps_july17 and temps_july18 to temps2, call this temps3
+temps3 &lt;- rbind(temps2, temps_july17, temps_july18)
+</code></pre>
+
+<p><strong>Fill missing values using last or previous observation</strong></p>
+<p>The <code>na.locf</code> function takes the last-observation-carried-forward approach.</p>
+<p>The <code>xts</code> package leverages the power of <code>zoo</code> for help with this. <code>zoo</code> provides a variety of missing data handling functions which are usable by <code>xts</code>, and very handy.</p>
+<pre><code class="r"># Last obs. carried forward
+na.locf(x)                
+
+# Next obs. carried backward
+na.locf(x, fromLast = TRUE)
+
+# Fill missing values using the last observation
+na.locf(temps, na.rm = TRUE,
+                fromLast = TRUE)
+
+# Fill missing values using the next observation
+na.locf(temps, na.rm = TRUE)
+
+# maxgap = Inf
+# rule = 2,
+</code></pre>
+
+<p><strong>NA interpolation</strong></p>
+<p>From <code>zoo</code>.</p>
+<p>On occassion, a simple carry forward approach to missingness isn&rsquo;t appropriate. It may be that a series is missing an observation due to a higher frequency sampling than the generating process. You might also encounter an observation that is in error, yet expected to be somewhere between the values of its neighboring observations.</p>
+<p>Both of these cases are examples of where interpolation is useful.</p>
+<pre><code class="r"># Interpolate NAs using linear approximation
+na.approx(AirPass)
+</code></pre>
+
+<p><strong>Combine a leading and lagging time series</strong></p>
+<p>Another common modification for time series is the ability to lag a series.</p>
+<pre><code class="r"># Your final object
+lag(x, k = 1, na.pad = TRUE)
+
+# k = -1  leading
+# k = 1   lagging
+# zoo uses the other way around
+
+# k = c(0, 1, 5)  multiple leads or lags
+
+# Create a leading object called lead_x
+lead_x &lt;- lag(x, k = -1)
+
+# Create a lagging object called lag_x
+lag_x &lt;- lag(x, k = 1)
+
+# Merge your three series together and assign to z
+z &lt;- merge(lead_x, x, lag_x)
+</code></pre>
+
+<p><strong>Calculate a difference of a series with <code>diff</code></strong></p>
+<p>Another common operation on time series, typically on those that are non-stationary, is to take a difference of the series.</p>
+<p><code>differences</code> is the order of the difference (how many times <code>diff</code> is called). A simple way to view a single (or <em>first order</em>) difference is to see it as <code>x(t) - x(t-k)</code> where <code>k</code> is the number of lags to go back. Higher order differences are simply the reapplication of a difference to each prior result (like a second derivative or a difference of the difference).</p>
+<pre><code class="r">diff(x, lag = 1, difference = 1, log = FALSE, na.pad = TRUE)
+
+# calculate the first difference of AirPass using lag and subtraction
+AirPass - lag(AirPass, k = 1)
+
+# calculate the first order 12-month difference if AirPass
+diff(AirPass, lag = 12, differences = 1)
+</code></pre>
+
+<p>What is the key difference in lag between xts and zoo? The <code>k</code> argument in <code>zoo</code> uses positive values for shifting past observations forward.</p>
+<h4 id="4-apply-and-aggregate-by-time">4, Apply and aggregate by time<a class="headerlink" href="#4-apply-and-aggregate-by-time" title="Permanent link">&para;</a></h4>
+<p><strong>Find intervals by time in <code>xts</code></strong></p>
+<p>The main function in xts to facilitate this is endpoints. It takes a time series (or a vector of times) and returns the locations of the last observations in each interval.</p>
+<p>For example, the code below locates the last observation of each year for the <code>AirPass</code> dataset:</p>
+<pre><code class="r">endpoints(AirPass, on = &quot;years&quot;)
+
+# The argument on supports a variety of periods, including &quot;years&quot;, &quot;quarters&quot;, &quot;months&quot;, as well as intraday intervals such as &quot;hours&quot;, and &quot;minutes&quot;
+
+# on = &quot;weeks&quot;, k = 2, the result would be the final day of every other week in your data
+
+# Locate the final day of every week
+endpoints(temps, on = &quot;weeks&quot;)
+
+# Locate the final day of every two weeks
+endpoints(temps, on = &quot;weeks&quot;, k = 2)
+</code></pre>
+
+<p><strong>Apply a function by time period(s)</strong></p>
+<p><code>xts</code> provides <code>period.apply</code>, which takes a time series, an <code>INDEX</code> of endpoints, and a function to <code>apply</code>:</p>
+<pre><code class="r">period.apply(x, INDEX, FUN, ...)
+
+# Calculate the weekly endpoints
+ep &lt;- endpoints(temps, on = &quot;weeks&quot;)
+
+# Now calculate the weekly mean and display the results
+period.apply(temps[, &quot;Temp.Mean&quot;], INDEX = ep, FUN = mean)
+</code></pre>
+
+<p><strong>Using <code>lapply</code> and <code>split</code> to apply functions on intervals</strong></p>
+<p>Often it is useful to physically split your data into disjoint chunks by time and perform some calculation on these periods.</p>
+<pre><code class="r"># Split temps by week
+temps_weekly &lt;- split(temps, f = &quot;weeks&quot;)
+
+# Create a list of weekly means
+lapply(X = temps_weekly, FUN = mean)
+</code></pre>
+
+<p><strong>Selection by <code>endpoints</code> vs. <code>split-lapply-rbind</code></strong></p>
+<pre><code class="r"># use the proper combination of split, lapply and rbind.
+#T1 &lt;- do.call(rbind, ___(___(Temps, &quot;weeks&quot;), function(w) last(w, n=&quot;___&quot;)))
+T1 &lt;- do.call(rbind, lapply(split(Temps, &quot;weeks&quot;), function(w) last(w, n= &quot;1 day&quot;)))
+
+# now subset Temps using the results of 'endpoints'
+last_day_of_weeks &lt;- endpoints(Temps, on = &quot;weeks&quot;)
+T2 &lt;- Temps[last_day_of_weeks]
+</code></pre>
+
+<p><strong>Convert univariate series to OHLC data</strong></p>
+<p>In financial series it is common to find Open-High-Low-Close data calculated over some repeating and regular interval.</p>
+<p>Also known as range bars, aggregating a series based on some regular window can make analysis easier amongst series that have varying frequencies. For example, a weekly economic series and a daily stock series can be compared more easily if the daily is converted to weekly.</p>
+<p>OHLC means Opening, High, Low, Closing values.</p>
+<pre><code class="r">to.period(x,
+          period = &quot;months&quot;, 
+          k = 1, 
+          indexAt, 
+          name=NULL,
+          OHLC = TRUE,
+          ...)
+
+# Convert USDEUR to weekly
+# OHLC = FALSE by default
+USDEUR_weekly &lt;- to.period(USDEUR, period = &quot;weeks&quot;)
+head(USDEUR)
+head(USDEUR_weekly)
+
+# Convert USDEUR_weekly to monthly
+USDEUR_monthly &lt;- to.period(USDEUR_weekly, period = &quot;months&quot;)
+
+# Convert USDEUR_monthly to yearly univariate
+USDEUR_yearly &lt;- to.period(USDEUR_monthly, period = &quot;years&quot;, OHLC = FALSE)
+</code></pre>
+
+<p><strong>Convert a series to a lower frequency</strong></p>
+<p>Besides converting univariate time series to OHLC series, to.period() also lets you convert OHLC to lower regularized frequency - something like subsampling your data.</p>
+<p>For example, when using the shortcut function <code>to.quarterly()</code> xts will convert your index to the <code>yearqtr</code> class to make periods more obvious.</p>
+<pre><code class="r"># Convert EqMktNeutral to quarterly OHLC
+mkt_quarterly &lt;- to.period(EqMktNeutral, period = &quot;quarters&quot;)
+
+# Convert EqMktNeutral to quarterly using shortcut function
+# Change the base name of each OHLC column to EDHEC.Equity and change the index to &quot;firstof&quot;
+mkt_quarterly2 &lt;- to.quarterly(EqMktNeutral, name = &quot;EDHEC.Equity&quot;, indexAt = &quot;first&quot;)
+</code></pre>
+
+<p><strong>Calculate basic rolling value of series by month</strong></p>
+<p>Rolling windows can be discrete: use <code>lapply</code> with (<code>cumsum, cumprod, cummax, cummin</code>) and <code>split</code>:</p>
+<pre><code class="r"># split-lapply-rbind pattern
+
+x_split &lt;- split(x, f = &quot;months&quot;)
+x_list &lt;- lapply(x_split, cummax)
+x_list_rbind &lt;- do.call(rbind, x_list)
+
+# Split edhec into years
+edhec_years &lt;- split(edhec , f = &quot;years&quot;)
+
+# Use lapply to calculate the cumsum for each year
+edhec_ytd &lt;- lapply(edhec_years, FUN = cumsum)
+
+# Use do.call to rbind the results
+edhec_xts &lt;- do.call(rbind, edhec_ytd)
+</code></pre>
+
+<p><strong>Calculate the rolling standard deviation of a time series</strong></p>
+<p>Rolling windows can be continuous: use <code>rollapply</code>:</p>
+<pre><code class="r">rollapply(x, 10, FUN = max, na.rm = TRUE)
+
+# Use rollapply to calculate the rolling 3 period sd of EqMktNeutral
+eq_monthly &lt;- rollapply(EqMktNeutral, 3, FUN = sd)
+</code></pre>
+
+<h4 id="5-extra-features-of-xts">5, Extra features of xts<a class="headerlink" href="#5-extra-features-of-xts" title="Permanent link">&para;</a></h4>
+<p><strong>Index, attributes, and time zones</strong></p>
+<p>All time is stored in seconds since 1970-01-01. Time via <code>.index()</code> () and <code>index()</code> (raw seconds since 1970-01-01).</p>
+<p><code>index()</code> returns the time of an <code>xts</code> object, as a vector of class <code>indexClass</code>.</p>
+<p><code>Sys.setenv()</code>.</p>
+<p><strong>Class attributes - <code>tclass</code>, <code>tzone</code> and <code>tformat</code></strong></p>
+<p><code>xts</code> objects are somewhat tricky when it comes to times. Internally, we have now seen that the index attribute is really a vector of numeric values corresponding to the seconds since the UNIX epoch (1970-01-01).</p>
+<p>How these values are displayed on printing and how they are returned to the user when using the <code>index()</code> function is dependent on a few key internal attributes.</p>
+<p>The information that controls this behavior can be viewed and even changed through a set of accessor functions detailed below:</p>
+<ul>
+<li>The index class using indexClass (e.g. from Date to chron)</li>
+<li>The time zone using indexTZ (e.g. from America/Chicago to Europe/London)</li>
+<li>The time format to be displayed via indexFormat (e.g. YYYY/MM/DD)</li>
+</ul>
+<pre><code class="r"># Get the index class of temps
+indexClass(temps)
+
+# Get the timezone of temps
+indexTZ(temps)
+
+# Change the format of the time display
+indexFormat(temps) &lt;- &quot;M/DD/YYYY&quot;
+
+# Extract the new index
+time(temps)
+</code></pre>
+
+<p><strong>Time zones - (and why you should care!)</strong></p>
+<p>R provides time zone support in native classes <code>POSIXct</code> and <code>POSIXlt</code>. xts extends this power to the entire object, allowing you to have multiple timezones across various objects. One very important thing to remember is that some internal operation system functions require a timezone to do date math, and if not set one is chosen for you! Be careful to always set a timezone in your environment to prevent very hard to debug errors when working with dates and times. </p>
+<p><code>xts</code> provides the function <code>tzone</code>. This function allows to you to extract, or set timezones. <code>tzone(x) &lt;- "Time_Zone"</code> In this exercise you will work with an object called times to practice constructing your own xts objects with custom time zones.</p>
+<pre><code class="r"># Construct times_xts with TZ set to America/Chicago
+times_xts &lt;- xts(1:10, order.by = times, tzone = &quot;America/Chicago&quot;)
+
+# Change the time zone to Asia/Hong_Kong
+tzone(times_xts) &lt;- &quot;Asia/Hong_Kong&quot;
+
+# Extract the current timezone 
+indexTZ(times_xts)
+</code></pre>
+
+<p><strong>Periods, periodicity, and timestamps</strong></p>
+<p>Periods (yearly or intradays time index?): <code>periodicity()</code></p>
+<p>Broken downtime with <code>.index*</code>, <code>.index()</code>, <code>.indexmday()</code>, <code>indexyday()</code>, <code>indexyear()</code>.</p>
+<p>Timestamps.</p>
+<p><code>align.time()</code> round time stamps to another period.</p>
+<p><code>make.index.unique()</code> removes observations from duplicate time stamps.</p>
+<p><strong>Determining periodicity</strong></p>
+<p>The idea of periodicity is pretty simple; with what regularity does your data repeat? For stock market data, you might have hourly prices or maybe daily open-high-low-close bars. For macro economic series, it might be monthly or weekly survey numbers.</p>
+<pre><code class="r"># Calculate the periodicity of temps
+periodicity(temps)
+
+# Calculate the periodicity of edhec
+periodicity(edhec)
+
+# Convert edhec to yearly
+edhec_yearly &lt;- to.yearly(edhec, 12)
+
+# Calculate the periodicity of edhec_yearly
+periodicity(edhec_yearly)
+</code></pre>
+
+<p><strong>Find the number of periods in your data</strong></p>
+<p>Often times it is handy to know not just the range of your time series index, but also have an idea of how many discrete irregular periods this covers. xts provides a set of functions to do just that. If you have a time series, it is now easy to see how many days, weeks or years your data contains.</p>
+<p>Count: <code>nseconds()</code>, <code>nminutes()</code>, <code>nhours()</code>, etc.</p>
+<pre><code class="r">`# Count the months
+nmonths(edhec)
+
+# Count the quarters
+nquarters(edhec)
+
+# Count the years
+nyears(edhec)  
+</code></pre>
+
+<p><strong>Secret index tools</strong></p>
+<p>Normally you want to access the times you stored. <code>index()</code> does this magically for you by using your <code>indexClass</code>. To get to the raw vector another function is provided, <code>.index()</code>. Note the critical dot before the function name.</p>
+<p>More useful than extracting raw seconds is the ability to extract time components similar to the <code>POSIXlt</code> class, which mirrors closely the underlying POSIX internal compiled structure <code>tm</code>. This is provided by a handful of functions such as <code>.indexday()</code>, <code>.indexmon()</code>, <code>.indexyear()</code> and more.</p>
+<pre><code class="r"># Explore underlying units of temps
+.index(temps) # in seconds
+.indexwday(temps) # (0 for Sun, 1, 2,..., 6 for Sat) day of the week
+
+# Create an index using which (Sunday has a value of 0, and Saturday has a value of 6)
+index &lt;- which(.indexwday(temps) == 0 | .indexwday(temps) == 6)
+
+# Select the index
+temps[index]
+</code></pre>
+
+<p><strong>Modifying timestamps</strong></p>
+<p>Depending on your field you might encounter higher frequency data - think intraday trading intervals, or sensor data from medical equipment.</p>
+<p>If you find that you have observations with identical timestamps, it might be useful to perturb or remove these times to allow for uniqueness.</p>
+<p>On other ocassions you might find your timestamps a bit too precise. In these instances it might be better to round up to some fixed interval, for example an observation may occur at any point in an hour, but you want to record the latest as of beginning of the next hour.</p>
+<pre><code class="r">make.index.unique(x, eps = 1e-4)  # Perturb
+make.index.unique(x, drop = TRUE) # Drop duplicates
+align.time(x, n = 60) # Round to the minute
+
+# Make z have unique timestamps
+make.index.unique(z, eps = 1e-4)
+
+# Remove duplicate times in z
+make.index.unique(z, drop = TRUE)
+
+# Round observations to the next time
+align.time(z, n = 3600) # next hour
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Big_Data_Analysis_with_Revolution_R_Enterprise/" class="btn btn-neutral" title="Big Data Analysis with Revolution R Enterprise"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Big_Data_Analysis_with_Revolution_R_Enterprise/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>
