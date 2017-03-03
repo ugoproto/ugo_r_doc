@@ -1,9 +1,14 @@
 site_name: ugo_r_doc
+site_url: https://ugoproto.github.io/ugo_r_doc/
+#repo_url: https://github.com/ugoproto/ugo_r_doc
 site_description: A R documentation website.
 site_author: Ugo Spark
-copyright: null
-#google_analytics: ['UA-36723568-3', 'mkdocs.org']
-remote_name: ugo_r_doc
+#site_favicon: favicon.ico
+copyright: © Ugo Spark
+google_analytics: ['UA-93008985-1', 'mkdocs.org']
+#remote_branch: master
+#remote_name: ugo_r_doc
+
 pages:
     - Home: 'index.md'
     - An Introduction to R: 'An Introduction to R.md'
@@ -45,7 +50,16 @@ theme: readthedocs
 # [link](to_other_page.md)
 # [link](../relative/page.md)
 
+# Math equations:
+# extra JS (see below)
+# extra Python (see below)
+# new extension (see below)
+# Required to load the MathJax javascript for the mdx_math.py
+# https://github.com/mkdocs/mkdocs/issues/253
+
 markdown_extensions:
+    - mdx_math:
+        enable_dollar_delimiter: True # for use of inline $..$
     - wikilinks # internal links with [[bracketed]]
     - smarty # additional characters
     - subscript
@@ -55,3 +69,7 @@ markdown_extensions:
         title: CONTENT
         permalink: True
         baselevel: 3
+    - footnotes
+    
+# Required to load the MathJax javascript for the mdx_math.py        
+extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML','mathjaxhelper.js']
