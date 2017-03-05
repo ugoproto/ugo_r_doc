@@ -72,49 +72,36 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
         <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
         
     </li>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Intermediate R</span></li>
+
+        
+            
     <li class="toctree-l1 ">
-        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
-        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
         
     </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+
         
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
-        
-    </li>
+    </ul>
 <li>
           
             <li>
     <ul class="subnav">
-    <li><span>Plot Snippets</span></li>
+    <li><span>RStudio</span></li>
 
         
             
@@ -122,6 +109,50 @@
         <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
         
     </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Wrangling</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
 
         
             
@@ -194,9 +225,6 @@
                     <li><a class="toctree-l4" href="#the-crorplot-package-correlation">The crorplot Package (correlation)</a></li>
                 
             
-                <li class="toctree-l3"><a href="#a-peek-at-mapping">A Peek at Mapping</a></li>
-                
-            
             </ul>
         
     </li>
@@ -205,6 +233,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggvis/">Plot Snippets - ggvis</a>
         
     </li>
 
@@ -222,20 +257,6 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../Charts/">Charts & Colors</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../Intermediate_R/">Intermediate R</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
         
     </li>
 <li>
@@ -307,6 +328,13 @@
             <li>
     <li class="toctree-l1 ">
         <a class="" href="../Time%2BSeries%2Bin%2BR%2BThe%2BPower%2Bof%2Bxts%2Band%2Bzoo/">Time Series in R, The Power of xts and zoo</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
         
     </li>
 <li>
@@ -387,7 +415,6 @@
 <li><a href="#the-crorplot-package-correlation">The <code>crorplot</code> Package (correlation)</a></li>
 </ul>
 </li>
-<li><a href="#a-peek-at-mapping">A Peek at Mapping</a></li>
 </ul>
 <hr />
 <p><strong>Foreword</strong></p>
@@ -2411,24 +2438,6 @@ corrplot(correlations)
 </code></pre>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-190-1.png" /></p>
-<h4 id="a-peek-at-mapping">A Peek at Mapping<a class="headerlink" href="#a-peek-at-mapping" title="Permanent link">&para;</a></h4>
-<pre><code class="r">devtools::install_github('rstudio/leaflet')
-</code></pre>
-
-<p>To find out the coordinates on a <a href="http://www.latlong.net/">map</a> (by<br />
-lat-long or address).</p>
-<pre><code class="r">library(magrittr)
-library(leaflet)
-
-# Add default OpenStreetMap map tiles
-m &lt;- leaflet() %&gt;% 
-  addTiles() %&gt;% 
-  addMarkers(lng = 20.01519, lat = -34.816300, popup = 'Africa Southern Tip')
-
-m
-</code></pre>
-
-<p><img alt="" src="../lagulhas.png" /></p>
               
             </div>
           </div>
@@ -2439,7 +2448,7 @@ m
         <a href="../Plot_snippets_-_ggplot2/" class="btn btn-neutral float-right" title="Plot Snippets - ggplot2">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Code___Plot_Chunk_Options/" class="btn btn-neutral" title="Code & Plot Chunk Options"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Data_Wrangling/" class="btn btn-neutral" title="Data Wrangling"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -2467,7 +2476,7 @@ m
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Code___Plot_Chunk_Options/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Data_Wrangling/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../Plot_snippets_-_ggplot2/" style="color: #fcfcfc">Next &raquo;</a></span>
