@@ -29,7 +29,6 @@
     -   [The `ash` Package (density)](#the-ash-package-density)
     -   [The `KernSmooth` Package (density)](#the-kernsmooth-package-density)
     -   [The `crorplot` Package (correlation)](#the-crorplot-package-correlation)
--   [A Peek at Mapping](#a-peek-at-mapping)
 
 ------------------------------------------------------------------------
 
@@ -2672,27 +2671,3 @@ corrplot(correlations)
 ```
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-190-1.png)
-
-A Peek at Mapping
------------------
-
-``` r
-devtools::install_github('rstudio/leaflet')
-```
-
-To find out the coordinates on a [map](http://www.latlong.net/) (by
-lat-long or address).
-
-``` r
-library(magrittr)
-library(leaflet)
-
-# Add default OpenStreetMap map tiles
-m <- leaflet() %>% 
-  addTiles() %>% 
-  addMarkers(lng = 20.01519, lat = -34.816300, popup = 'Africa Southern Tip')
-
-m
-```
-
-![](lagulhas.png)

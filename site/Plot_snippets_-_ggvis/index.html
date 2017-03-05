@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Plot Snippets - ggvis - ugo_r_doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Plot Snippets - ggvis";
+    var mkdocs_page_input_path = "Plot_snippets_-_ggvis.md";
+    var mkdocs_page_url = "/Plot_snippets_-_ggvis/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-93008985-1', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Intermediate R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R/">Intermediate R</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>RStudio</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Data Wrangling</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Plot Snippets</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Plot Snippets - ggvis</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#dataset">Dataset</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#the-ggvis-package">The ggvis Package</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#1-the-grammar-of-graphics">1, The Grammar of Graphics</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#2-lines-and-syntax">2, Lines and Syntax</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#3-transformations">3, Transformations</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#4-interactivity-and-layers">4, Interactivity and Layers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#5-customizing-axes-legends-and-scales">5, Customizing Axes, Legends, and Scales</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Charts/">Charts & Colors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>A Hands-on Introduction to Statistics with R</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Time%2BSeries%2Bin%2BR%2BThe%2BPower%2Bof%2Bxts%2Band%2Bzoo/">Time Series in R, The Power of xts and zoo</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plot Snippets &raquo;</li>
+        
+      
+    
+    <li>Plot Snippets - ggvis</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#dataset">Dataset</a></li>
+<li><a href="#the-ggvis-package">The <code>ggvis</code> Package</a></li>
+<li><a href="#the-grammar-of-graphics">1, The Grammar of Graphics</a></li>
+<li><a href="#lines-and-syntax">2, Lines and Syntax</a></li>
+<li><a href="#transformations">3, Transformations</a></li>
+<li><a href="#interactivity-and-layers">4, Interactivity and Layers</a></li>
+<li><a href="#customizing-axes-legends-and-scales">5, Customizing Axes, Legends, and<br />
+    Scales</a></li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Code snippets and results.</li>
+<li><code>ggvis</code> generates html outputs. Graphics presented here are images:<br />
+    .png files; .gif files when specified.</li>
+</ul>
+<hr />
+<h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://ggvis.rstudio.com/"><code>ggvis</code> Overview</a></li>
+<li><a href="http://ggvis.rstudio.com/cookbook.html"><code>ggvis</code> Cookbook</a></li>
+</ul>
+<h4 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h4>
+<p>For most examples, we use the <code>mtcars</code>, <code>pressure</code>, <code>faithful</code> datasets.</p>
+<h4 id="the-ggvis-package">The <code>ggvis</code> Package<a class="headerlink" href="#the-ggvis-package" title="Permanent link">&para;</a></h4>
+<pre><code class="r">library(ggvis)
+</code></pre>
+
+<h4 id="1-the-grammar-of-graphics">1, The Grammar of Graphics<a class="headerlink" href="#1-the-grammar-of-graphics" title="Permanent link">&para;</a></h4>
+<p><strong>Start to explore </strong></p>
+<pre><code class="r"># change the code below to plot the disp variable of mtcars on the x axis
+mtcars %&gt;%
+  ggvis(~disp, ~mpg) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis1.png" /></p>
+<p><strong><code>ggvis</code> and its capabilities </strong></p>
+<pre><code class="r"># Change the code below to make a graph with red points
+mtcars %&gt;%
+  ggvis(~wt, ~mpg, fill := &quot;red&quot;) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis2.png" /></p>
+<pre><code class="r"># Change the code below draw smooths instead of points
+mtcars %&gt;%
+  ggvis(~wt, ~mpg) %&gt;%
+  layer_smooths()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis3.png" /></p>
+<pre><code class="r"># Change the code below to make a graph containing both points and a smoothed summary line
+mtcars %&gt;%
+  ggvis(~wt, ~mpg) %&gt;%
+  layer_points() %&gt;%
+  layer_smooths()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis4.png" /></p>
+<p><strong><code>ggvis</code> grammar ~ graphics grammar</strong></p>
+<pre><code class="r"># Make a scatterplot of the pressure dataset
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_points
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis5.png" /></p>
+<pre><code class="r"># Adapt the code you wrote for the first challenge: show bars instead of points
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_bars
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis6.png" /></p>
+<pre><code class="r"># Adapt the code you wrote for the first challenge: show lines instead of points
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_lines
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis7.png" /></p>
+<pre><code class="r"># Adapt the code you wrote for the first challenge: map the fill property to the temperature variable
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, fill = ~temperature) %&gt;%
+  layer_points
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis8.png" /></p>
+<pre><code class="r"># Extend the code you wrote for the previous challenge: map the size property to the pressure variable
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, fill = ~temperature, size = ~pressure) %&gt;%
+  layer_points
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis9.png" /></p>
+<p><strong>4 essential components of a graph</strong></p>
+<pre><code class="r">faithful %&gt;%
+    ggvis(~waiting, ~eruptions, fill := &quot;red&quot;) %&gt;%
+    layer_points() %&gt;%
+    add_axis(&quot;y&quot;, title = &quot;Duration of eruption (m)&quot;,
+             values = c(2, 3, 4, 5), subdivide = 9) %&gt;%
+    add_axis(&quot;x&quot;, title = &quot;Time since previous eruption (m)&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis10.png" /></p>
+<h4 id="2-lines-and-syntax">2, Lines and Syntax<a class="headerlink" href="#2-lines-and-syntax" title="Permanent link">&para;</a></h4>
+<p><strong>Three operators: <code>%&gt;%</code>, <code>=</code> and <code>:=</code></strong></p>
+<pre><code class="r">layer_points(ggvis(faithful, ~waiting, ~eruptions))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis11.png" /></p>
+<pre><code class="r"># Rewrite the code with the pipe operator     
+faithful %&gt;%
+  ggvis(~waiting, ~eruptions) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis12.png" /></p>
+<pre><code class="r">pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis13.png" /></p>
+<pre><code class="r"># Modify this graph to map the size property to the pressure variable
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, size = ~pressure) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis14.png" /></p>
+<pre><code class="r">pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis15.png" /></p>
+<pre><code class="r"># Modify this graph by setting the size property
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, size := 100) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis16.png" /></p>
+<pre><code class="r">pressure %&gt;% 
+  ggvis(~temperature, ~pressure, fill = &quot;red&quot;) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis17.png" /></p>
+<pre><code class="r"># Fix this code to set the fill property to red
+pressure %&gt;% 
+  ggvis(~temperature, ~pressure, fill := &quot;red&quot;) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis18.png" /></p>
+<p><strong>Referring to different objects</strong></p>
+<pre><code class="r">red &lt;- &quot;green&quot;
+pressure$red &lt;- pressure$temperature
+
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, fill := red) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis19.png" /></p>
+<p><strong>Properties for points</strong></p>
+<pre><code class="r"># Change the code to set the fills using pressure$black
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, fill := ~'black') %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis20.png" /></p>
+<pre><code class="r"># Plot the faithful data as described in the second instruction
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions, size = ~eruptions, opacity := 0.5, fill := &quot;blue&quot;, stroke := &quot;black&quot;) %&gt;% 
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis21.png" /></p>
+<pre><code class="r"># Plot the faithful data as described in the third instruction
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions, size := 100, fill := &quot;red&quot;, fillOpacity = ~eruptions, stroke := &quot;red&quot;, shape := &quot;cross&quot;) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis22.png" /></p>
+<p><strong>Properties for lines</strong></p>
+<pre><code class="r"># Change the code below to use the lines mark
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_lines()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis23.png" /></p>
+<pre><code class="r"># Set the properties described in the second instruction in the graph below
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, stroke := &quot;red&quot;, strokeWidth := 2, strokeDash := 6) %&gt;%
+  layer_lines()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis24.png" /></p>
+<p><strong>Display model fits</strong></p>
+<p><code>layer_lines()</code> will always connect the points in your plot from the<br />
+leftmost point to the rightmost point. This can be undesirable if you<br />
+are trying to plot a specific shape.</p>
+<p><code>layer_paths()</code>: this mark connects the points in the order that they<br />
+appear in the data set. So the paths mark will connect the point that<br />
+corresponds to the first row of the data to the point that corresponds<br />
+to the second row of data, and so on - no matter where those points<br />
+appear in the graph.</p>
+<pre><code class="r"># change the third line of code to plot a map of Texas
+library(maps)
+library(ggplot2)
+
+texas &lt;- ggplot2::map_data(&quot;state&quot;, region = &quot;texas&quot;)
+
+texas %&gt;%
+  ggvis(~long, ~lat) %&gt;%
+  layer_paths()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis25.png" /></p>
+<pre><code class="r"># Same plot, but set the fill property of the texas map to dark orange
+texas %&gt;%
+  ggvis(~long, ~lat, fill := &quot;darkorange&quot;) %&gt;%
+  layer_paths()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis26.png" /></p>
+<p><strong><code>compute_smooth()</code> to simplify model fits</strong></p>
+<p><code>compute_model_prediction()</code> is a useful function to use with line<br />
+graphs. It takes a data frame as input and returns a new data frame as<br />
+output. The new data frame will contain the x and y values of a line<br />
+fitted to the data in the original data frame.</p>
+<p>Generate the x and y coordinates for a LOESS smooth line.</p>
+<pre><code class="r">faithful %&gt;%
+  compute_model_prediction(eruptions ~ waiting, model = &quot;lm&quot;) %&gt;%
+  head(10)
+</code></pre>
+
+<pre><code>##       pred_    resp_
+## 1  43.00000 1.377986
+## 2  43.67089 1.428724
+## 3  44.34177 1.479461
+## 4  45.01266 1.530199
+## 5  45.68354 1.580937
+## 6  46.35443 1.631674
+## 7  47.02532 1.682412
+## 8  47.69620 1.733150
+## 9  48.36709 1.783888
+## 10 49.03797 1.834625
+</code></pre>
+<pre><code class="r"># Compute the x and y coordinates for a loess smooth line that predicts mpg with the wt
+mtcars %&gt;%
+  compute_smooth(mpg ~ wt) %&gt;%
+  head(10)
+</code></pre>
+
+<pre><code>##       pred_    resp_
+## 1  1.513000 32.08897
+## 2  1.562506 31.68786
+## 3  1.612013 31.28163
+## 4  1.661519 30.87037
+## 5  1.711025 30.45419
+## 6  1.760532 30.03318
+## 7  1.810038 29.60745
+## 8  1.859544 29.17711
+## 9  1.909051 28.74224
+## 10 1.958557 28.30017
+</code></pre>
+<pre><code class="r">#model = &quot;loess&quot; is set by default
+</code></pre>
+
+<h4 id="3-transformations">3, Transformations<a class="headerlink" href="#3-transformations" title="Permanent link">&para;</a></h4>
+<p><strong>Histograms (1)</strong></p>
+<pre><code class="r"># Build a histogram of the waiting variable of the faithful data set.
+faithful %&gt;%
+  ggvis(~waiting) %&gt;%
+  layer_histograms()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis29.png" /></p>
+<pre><code class="r"># Build the same histogram, but with a binwidth (width argument) of 5 units
+faithful %&gt;%
+  ggvis(~waiting) %&gt;%
+  layer_histograms(width = 5)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis30.png" /></p>
+<p><strong>Histograms (2)</strong></p>
+<pre><code class="r">faithful %&gt;%
+  ggvis(~waiting) %&gt;%
+  layer_histograms(width = 5)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis31.png" /></p>
+<pre><code class="r"># Transform the code: just compute the bins instead of plotting a histogram
+faithful %&gt;%
+  compute_bin(~waiting, width = 5)
+</code></pre>
+
+<pre><code>##    count_ x_ xmin_ xmax_ width_
+## 1      13 45  42.5  47.5      5
+## 2      24 50  47.5  52.5      5
+## 3      29 55  52.5  57.5      5
+## 4      21 60  57.5  62.5      5
+## 5      13 65  62.5  67.5      5
+## 6      13 70  67.5  72.5      5
+## 7      42 75  72.5  77.5      5
+## 8      58 80  77.5  82.5      5
+## 9      38 85  82.5  87.5      5
+## 10     17 90  87.5  92.5      5
+## 11      4 95  92.5  97.5      5
+</code></pre>
+<pre><code class="r"># Combine the solution to the first challenge with layer_rects() to build a histogram
+faithful %&gt;%
+  compute_bin(~waiting, width = 5) %&gt;%
+  ggvis(x = ~xmin_, x2 = ~xmax_, y = 0, y2 = ~count_) %&gt;%
+  layer_rects()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis33.png" /></p>
+<p><strong>Density plots</strong></p>
+<pre><code class="r"># Combine compute_density() with layer_lines() to make a density plot of the waiting variable.
+faithful %&gt;%
+  compute_density(~waiting) %&gt;%
+  ggvis(~pred_,~resp_) %&gt;%
+  layer_lines()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis34.png" /></p>
+<pre><code class="r"># Build a density plot directly using layer_densities. Use the correct variables and properties.
+faithful %&gt;%
+  ggvis(~waiting) %&gt;%
+  layer_densities(fill := &quot;green&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis35.png" /></p>
+<p><strong>Shortcuts</strong></p>
+<pre><code class="r"># Complete the code to plot a bar graph of the cyl factor.
+mtcars %&gt;%
+  ggvis(~factor(cyl)) %&gt;%
+  layer_bars()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis36.png" /></p>
+<pre><code class="r"># Adapt the solution to the first challenge to just calculate the count values. No plotting!
+mtcars %&gt;%
+  compute_count(~factor(cyl))
+</code></pre>
+
+<pre><code>##   count_ x_
+## 1     11  4
+## 2      7  6
+## 3     14  8
+</code></pre>
+<p><strong><code>ggvis</code> and <code>group_by</code></strong></p>
+<pre><code class="r">mtcars %&gt;%
+  group_by(am) %&gt;%
+  ggvis(~mpg, ~wt, stroke = ~factor(am)) %&gt;%
+  layer_smooths()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis38.png" /></p>
+<pre><code class="r"># Change the code to plot a unique smooth line for each value of the cyl variable.
+mtcars %&gt;%
+  group_by(cyl) %&gt;%
+  ggvis(~mpg, ~wt, stroke = ~factor(cyl)) %&gt;%
+  layer_smooths()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis39.png" /></p>
+<pre><code class="r"># Adapt the graph to contain a separate density for each value of cyl.
+mtcars %&gt;%
+  group_by(cyl) %&gt;%
+  ggvis(~mpg) %&gt;%
+  layer_densities()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis40.png" /></p>
+<pre><code class="r"># Copy and alter the solution to the second challenge to map the fill property to a categorical version of cyl.
+mtcars %&gt;%
+  group_by(cyl) %&gt;%
+  ggvis(~mpg) %&gt;%
+  layer_densities(fill = ~factor(cyl))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis41.png" /></p>
+<p><strong><code>group_by()</code> versus <code>interaction()</code></strong></p>
+<pre><code class="r">mtcars %&gt;%
+  group_by(cyl) %&gt;%
+  ggvis(~mpg) %&gt;%
+  layer_densities(fill = ~factor(cyl))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis42.png" /></p>
+<pre><code class="r"># Alter the graph: separate density for each unique combination of 'cyl' and 'am'.
+mtcars %&gt;%
+  group_by(cyl,am) %&gt;%
+  ggvis(~mpg, fill = ~factor(cyl)) %&gt;%
+  layer_densities()
+
+#factor(cyl),factor(am)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis43.png" /></p>
+<pre><code class="r">mtcars %&gt;%
+  group_by(cyl, am) %&gt;%
+  ggvis(~mpg, fill = ~factor(cyl)) %&gt;%
+  layer_densities()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis44.png" /></p>
+<pre><code class="r"># Update the graph to map `fill` to the unique combinations of the grouping variables.
+mtcars %&gt;%
+  group_by(cyl, am) %&gt;%
+  ggvis(~mpg, fill = ~interaction(cyl,am)) %&gt;% 
+  layer_densities()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis45.png" /></p>
+<p><strong>Chaining is a virtue</strong></p>
+<pre><code class="r">mtcars %&gt;%
+    group_by(cyl, am) %&gt;%
+    ggvis(~mpg, fill = ~interaction(cyl, am)) %&gt;%
+    layer_densities()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis46.png" /></p>
+<p>This call is exactly equivalent to the following piece of code that is<br />
+very hard to read:</p>
+<pre><code class="r">layer_densities(ggvis(group_by(mtcars, cyl, am), ~mpg, fill = ~interaction(cyl, am)))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis47.png" /></p>
+<h4 id="4-interactivity-and-layers">4, Interactivity and Layers<a class="headerlink" href="#4-interactivity-and-layers" title="Permanent link">&para;</a></h4>
+<p><strong>The basics of interactive plots</strong></p>
+<pre><code class="r"># Run this code and inspect the output. Follow the link in the instructions for the interactive version
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions, fillOpacity := 0.5, 
+        shape := input_select(label = &quot;Choose shape:&quot;, choices = c(&quot;circle&quot;, &quot;square&quot;, &quot;cross&quot;, &quot;diamond&quot;, &quot;triangle-up&quot;, &quot;triangle-down&quot;))) %&gt;% 
+  layer_points()
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif1.gif" /></p>
+<pre><code class="r"># Copy the first code chunk and alter the code to make the fill property interactive using a select box
+faithful %&gt;%
+  ggvis(~waiting, ~eruptions, fillOpacity := 0.5, shape := input_select(label = &quot;Choose shape:&quot;, choices = c(&quot;circle&quot;, &quot;square&quot;, &quot;cross&quot;, &quot;diamond&quot;, &quot;triangle-up&quot;, &quot;triangle-down&quot;)), fill := input_select(label = &quot;Choose color:&quot;, choices = c(&quot;black&quot;,&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;))) %&gt;%
+  layer_points()
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif2.gif" /></p>
+<pre><code class="r"># Add radio buttons to control the fill of the plot
+mtcars %&gt;% 
+  ggvis(~mpg, ~wt, fill := input_radiobuttons(label = &quot;Choose color:&quot;, choices = c(&quot;black&quot;,&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;))) %&gt;%
+  layer_points()
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif3.gif" /></p>
+<p><strong>Input widgets in more detail</strong></p>
+<pre><code class="r">mtcars %&gt;%
+  ggvis(~mpg, ~wt, fill := input_radiobuttons(label = &quot;Choose color:&quot;, choices = c(&quot;black&quot;, &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;))) %&gt;%
+  layer_points()
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif4.gif" /></p>
+<pre><code class="r"># Change the radiobuttons widget to a text widget 
+mtcars %&gt;%
+  ggvis(~mpg, ~wt, fill := input_text(label = &quot;Choose color:&quot;, value = c(&quot;black&quot;))) %&gt;%
+  layer_points()
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif5.gif" /></p>
+<pre><code class="r">mtcars %&gt;%
+  ggvis(~mpg, ~wt) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis48.png" /></p>
+<pre><code class="r"># Map the fill property to a select box that returns variable names
+mtcars %&gt;%
+  ggvis(~mpg, ~wt, fill = input_select(label = &quot;Choose fill variable:&quot;, choices = names(mtcars), map = as.name)) %&gt;%
+  layer_points()
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif6.gif" /></p>
+<p><strong>Input widgets in more detail (2)</strong></p>
+<pre><code class="r"># Map the fill property to a select box that returns variable names
+mtcars %&gt;%
+  ggvis(~mpg, ~wt, fill = input_select(label = &quot;Choose fill variable:&quot;, choices = names(mtcars), map = as.name)) %&gt;%
+  layer_points()
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif7.gif" /></p>
+<p><strong>Control parameters and values</strong></p>
+<pre><code class="r"># Map the bindwidth to a numeric field (&quot;Choose a binwidth:&quot;)
+mtcars %&gt;%
+  ggvis(~mpg) %&gt;%
+  layer_histograms(width = input_numeric(value = 1, label = &quot;Choose a binwidth:&quot;))
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif8.gif" /></p>
+<pre><code class="r"># Map the binwidth to a slider bar (&quot;Choose a binwidth:&quot;) with the correct specifications
+mtcars %&gt;%
+  ggvis(~mpg) %&gt;%
+  layer_histograms(width = input_slider(min = 1, max = 20, label = &quot;Choose a binwidth:&quot;))
+</code></pre>
+
+<p>.gif file:</p>
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif9.gif" /></p>
+<p><strong>Multi-layered plots and their properties</strong></p>
+<pre><code class="r"># Add a layer of points to the graph below.
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, stroke := &quot;skyblue&quot;) %&gt;% layer_lines() %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis49.png" /></p>
+<pre><code class="r"># Copy and adapt the solution to the first instruction below so that only the lines layer uses a skyblue stroke.
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_lines(stroke := &quot;skyblue&quot;) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis50.png" /></p>
+<pre><code class="r"># Rewrite the code below so that only the points layer uses the shape property.
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_lines(stroke := &quot;skyblue&quot;) %&gt;%
+  layer_points(shape := &quot;triangle-up&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis51.png" /></p>
+<pre><code class="r"># Refactor the code for the graph below to make it as concise as possible
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, stroke := &quot;skyblue&quot;, strokeOpacity := 0.5, strokeWidth := 5) %&gt;%
+  layer_lines() %&gt;%
+  layer_points(fill = ~temperature, shape := &quot;triangle-up&quot;, size := 300)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis52.png" /></p>
+<p><strong>Multi-layered plots and their properties (2)</strong></p>
+<pre><code class="r"># Rewrite the code below so that only the points layer uses the shape property.
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_lines(stroke := &quot;skyblue&quot;) %&gt;%
+  layer_points(shape := &quot;triangle-up&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis53.png" /></p>
+<pre><code class="r"># Refactor the code for the graph below to make it as concise as possible
+pressure %&gt;%
+  ggvis(~temperature, ~pressure, stroke := &quot;skyblue&quot;,
+        strokeOpacity := 0.5, strokeWidth := 5) %&gt;%
+  layer_lines() %&gt;%
+  layer_points(fill = ~temperature, shape := &quot;triangle-up&quot;, size := 300)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis54.png" /></p>
+<p><strong>There is no limit on the number of layers!</strong></p>
+<pre><code class="r"># Create a graph containing a scatterplot, a linear model and a smooth line.
+pressure %&gt;%
+  ggvis(~temperature, ~pressure) %&gt;%
+  layer_points() %&gt;%
+  layer_lines(stroke := &quot;black&quot;, opacity := 0.5) %&gt;%
+  layer_model_predictions(model = &quot;lm&quot;, stroke := &quot;navy&quot;) %&gt;%
+  layer_smooths(stroke := &quot;skyblue&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis55.png" /></p>
+<p><strong>Taking local and global to the next level</strong></p>
+<pre><code class="r">pressure %&gt;%
+  ggvis(~temperature, ~pressure, stroke := &quot;darkred&quot;) %&gt;%
+  layer_lines(stroke := &quot;orange&quot;, strokeDash := 5, strokeWidth := 5) %&gt;%
+  layer_points(shape := &quot;circle&quot;, size := 100, fill := &quot;lightgreen&quot;) %&gt;%
+  layer_smooths()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis56.png" /></p>
+<h4 id="5-customizing-axes-legends-and-scales">5, Customizing Axes, Legends, and Scales<a class="headerlink" href="#5-customizing-axes-legends-and-scales" title="Permanent link">&para;</a></h4>
+<p><strong>Axes</strong></p>
+<pre><code class="r"># add the title of the x axis: &quot;Time since previous eruption (m)&quot;
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions) %&gt;% 
+  layer_points() %&gt;% 
+  add_axis(&quot;y&quot;, title = &quot;Duration of eruption (m)&quot;) %&gt;%
+  add_axis(&quot;x&quot;, title = &quot;Time since previous eruption (m)&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis57.png" /></p>
+<pre><code class="r"># Add to the code to place a labelled tick mark at 50, 60, 70, 80, 90 on the x axis.
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions) %&gt;% 
+  layer_points() %&gt;% 
+  add_axis(&quot;y&quot;, title = &quot;Duration of eruption (m)&quot;, values = c(2, 3, 4, 5), subdivide = 9) %&gt;% 
+  add_axis(&quot;x&quot;, title = &quot;Time since previous eruption (m)&quot;, values = c(50, 60, 70, 80, 90), subdivide = 9)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis58.png" /></p>
+<pre><code class="r"># Add to the code below to change the location of the y axis
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions) %&gt;% 
+  layer_points() %&gt;%
+  add_axis(&quot;x&quot;, orient = &quot;top&quot;) %&gt;% add_axis(&quot;y&quot;, orient = &quot;right&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis59.png" /></p>
+<p><strong>Legends</strong></p>
+<pre><code class="r"># Add a legend to the plot below: use the correct title and orientation
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions, opacity := 0.6, fill = ~factor(round(eruptions))) %&gt;% 
+  layer_points() %&gt;%
+  add_legend(&quot;fill&quot;, title = &quot;~ duration (m)&quot;, orient = &quot;left&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis60.png" /></p>
+<pre><code class="r">#add_legend(vis, scales = NULL, orient = &quot;right&quot;, title = NULL, format = NULL, values = NULL, properties = NULL)
+
+# Use add_legend() to combine the legends in the plot below. Adjust its properties as instructed.
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions, opacity := 0.6, fill = ~factor(round(eruptions)), shape = ~factor(round(eruptions)), 
+        size = ~round(eruptions))  %&gt;%
+  layer_points() %&gt;%
+  add_legend(c(&quot;fill&quot;, &quot;shape&quot;, &quot;size&quot;), title = &quot;~ duration (m)&quot;, values = c(2,3,4,5))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis61.png" /></p>
+<p><strong>Legends (2)</strong></p>
+<pre><code class="r"># Fix the legend
+faithful %&gt;% 
+  ggvis(~waiting, ~eruptions, opacity := 0.6, fill = ~factor(round(eruptions)), shape = ~factor(round(eruptions)), 
+        size = ~round(eruptions)) %&gt;% 
+    layer_points() %&gt;% 
+    add_legend(c(&quot;fill&quot;, &quot;shape&quot;, &quot;size&quot;), title = &quot;~ duration (m)&quot;)
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis62.png" /></p>
+<p><strong>Scale types</strong></p>
+<pre><code class="r"># Add to the code below to make the stroke color range from &quot;darkred&quot; to &quot;orange&quot;.
+mtcars %&gt;% 
+  ggvis(~wt, ~mpg, fill = ~disp, stroke = ~disp, strokeWidth := 2) %&gt;%
+  layer_points() %&gt;%
+  scale_numeric(&quot;fill&quot;, range = c(&quot;red&quot;, &quot;yellow&quot;)) %&gt;% scale_numeric(&quot;stroke&quot;, range = c(&quot;darkred&quot;, &quot;orange&quot;))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis63.png" /></p>
+<pre><code class="r"># Change the graph below to make the fill colors range from green to beige.
+mtcars %&gt;% ggvis(~wt, ~mpg, fill = ~hp) %&gt;%
+  layer_points() %&gt;% scale_numeric(&quot;fill&quot;, range = c(&quot;green&quot;, &quot;beige&quot;))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis64.png" /></p>
+<pre><code class="r"># Create a scale that will map `factor(cyl)` to a new range of colors: purple, blue, and green. 
+mtcars %&gt;% ggvis(~wt, ~mpg, fill = ~factor(cyl)) %&gt;%
+  layer_points() %&gt;% scale_nominal(&quot;fill&quot;, range = c(&quot;purple&quot;, &quot;blue&quot;, &quot;green&quot;))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis65.png" /></p>
+<p><strong>Adjust any visual property</strong></p>
+<pre><code class="r"># Add a scale that limits the range of opacity from 0.2 to 1. 
+mtcars %&gt;%
+  ggvis(x = ~wt, y = ~mpg, fill = ~factor(cyl), opacity = ~hp) %&gt;%
+  layer_points() %&gt;%
+  scale_numeric(&quot;opacity&quot;, range = c(0.2,1))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis66.png" /></p>
+<pre><code class="r"># Add a second scale that will expand the x axis to cover data values from 0 to 6.
+mtcars %&gt;%
+  ggvis(~wt, ~mpg, fill = ~disp) %&gt;%
+  layer_points() %&gt;%
+  scale_numeric(&quot;y&quot;, domain = c(0, NA)) %&gt;%
+  scale_numeric(&quot;x&quot;, domain = c(0, 6))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis67.png" /></p>
+<p><strong>Adjust any visual property (2)</strong></p>
+<pre><code class="r"># Add a second scale to set domain for x
+mtcars %&gt;%
+  ggvis(~wt, ~mpg, fill = ~disp) %&gt;%
+  layer_points() %&gt;%
+  scale_numeric(&quot;y&quot;, domain = c(0, NA)) %&gt;%
+  scale_numeric(&quot;x&quot;, domain = c(0, 6))
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis68.png" /></p>
+<p><strong>&ldquo;<code>=</code>&rdquo; versus &ldquo;<code>:=</code>&ldquo;</strong></p>
+<pre><code class="r"># Set the fill value to the color variable instead of mapping it, and see what happens
+mtcars$color &lt;- c(&quot;red&quot;, &quot;teal&quot;, &quot;#cccccc&quot;, &quot;tan&quot;)
+
+mtcars %&gt;%
+  ggvis(x = ~wt, y = ~mpg, fill = ~color) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis69.png" /></p>
+<pre><code class="r">mtcars %&gt;%
+  ggvis(x = ~wt, y = ~mpg, fill := ~color) %&gt;%
+  layer_points()
+</code></pre>
+
+<p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis70.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Plot_snippets_-_Colours/" class="btn btn-neutral float-right" title="Plot Snippets - Colours">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Plot_snippets_-_ggplot2/" class="btn btn-neutral" title="Plot Snippets - ggplot2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© Ugo Spark</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Plot_snippets_-_ggplot2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Plot_snippets_-_Colours/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="../mathjaxhelper.js"></script>
+
+</body>
+</html>
