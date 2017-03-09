@@ -19,7 +19,7 @@ pages:
     - RStudio:
         - Code & Plot Chunk Options: 'Code___Plot_Chunk_Options.md'
         - Working with the RStudio IDE: 'Working_with_RStudio_IDE.md'
-    - Data Wrangling:
+    - Data Wrangling Snippets:
         - I/O snippets & Cleaning: 'IO_snippets___Cleaning.md'
         - Reading Data into R with readr: 'Reading_Data_into_R_with_readr.md'
         - Data Wrangling: 'Data_Wrangling.md'
@@ -28,7 +28,9 @@ pages:
         - Plot Snippets - ggplot2: 'Plot_snippets_-_ggplot2.md'
         - Plot Snippets - ggvis: 'Plot_snippets_-_ggvis.md'
         - Plot Snippets - Colours: 'Plot_snippets_-_Colours.md'
-    - Charts & Colors: 'Charts.md'
+    - Other Snippets:
+        - Tables: 'Tables.md'
+        - Charts & Colors: 'Charts.md'
     - A Hands-on Introduction to Statistics with R:
         - Statistics with R, Course One, Introduction: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction.md'
         - Statistics with R, Course Two, Student's t-test: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test.md'
