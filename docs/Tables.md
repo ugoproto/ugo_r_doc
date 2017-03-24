@@ -130,10 +130,10 @@ The `xtable` package
 library(xtable)
 
 # given the data in the first row
-print(xtable(output, 
-             caption="A test table", 
-             align = c("l", "c", "r")), 
-      type="html")
+print(xtable(output,
+             caption = 'A test table', 
+             align = c('l', 'c', 'r')),
+      type = 'html')
 ```
 
 The `knitr::kable` function
@@ -146,8 +146,8 @@ library(knitr)
 
 # given the data in the first row
 kable(output, 
-      caption="A test table", 
-      align = c("c", "r"))
+      caption = 'A test table', 
+      align = c('c', 'r'))
 ```
 
 <table>
@@ -182,7 +182,9 @@ The `pander::pandoc.table` function
 library(pander)
 
 # given the data in the first row
-pandoc.table(output, emphasize.rows = 1, emphasize.strong.cols = 2)
+pandoc.table(output, 
+             emphasize.rows = 1, 
+             emphasize.strong.cols = 2)
 ```
 
 The `htmlTable` package
@@ -194,23 +196,20 @@ The `htmlTable` package
 
 ``` r
 output <- 
-  matrix(paste("Content", LETTERS[1:16]), 
-         ncol=4, byrow = TRUE)
+  matrix(paste('Content', LETTERS[1:16]), 
+         ncol = 4, byrow = TRUE)
 
 library(htmlTable)
 
 htmlTable(output,
-          header =  paste(c("1st", "2nd",
-                            "3rd", "4th"), "header"),
-          rnames = paste(c("1st", "2nd",
-                           "3rd", "4th"), "row"),
-          rgroup = c("Group A",
-                     "Group B"),
+          header = paste(c('1st', '2nd', '3rd', '4th'), 'header'),
+          rnames = paste(c('1st', '2nd', '3rd', '4th'), 'row'),
+          rgroup = c('Group A', 'Group B'),
           n.rgroup = c(2,2),
-          cgroup = c("Cgroup 1", "Cgroup 2&dagger;"),
+          cgroup = c('Cgroup 1', 'Cgroup 2&dagger;'),
           n.cgroup = c(2,2), 
-          caption="Basic table with both column spanners (groups) and row groups",
-          tfoot="&dagger; A table footer commment")
+          caption = 'Basic table with both column spanners (groups) and row groups',
+          tfoot = '&dagger; A table footer commment')
 ```
 
 <!--html_preserve-->
@@ -364,12 +363,10 @@ library(htmlTable)
 htmlTable(txtRound(mx, 1), 
           cgroup = cgroup,
           n.cgroup = n.cgroup,
-          rgroup = c("First period", 
-                     "Second period",
-                     "Third period"),
+          rgroup = c('First period', 'Second period', 'Third period'),
           n.rgroup = rep(5, 3),
-          tfoot = txtMergeLines("&Delta;<sub>int</sub> correspnds to the change since start",
-                                "&Delta;<sub>std</sub> corresponds to the change compared to national average"))
+          tfoot = txtMergeLines('&Delta;<sub>int</sub> correspnds to the change since start',
+                                '&Delta;<sub>std</sub> corresponds to the change compared to national average'))
 ```
 
 <!--html_preserve-->
@@ -1955,15 +1952,13 @@ library(htmlTable)
 
 # given the data in the first row
 htmlTable(txtRound(mx, 1), 
-          align="rrrr|r",
+          align = 'rrrr|r',
           cgroup = cgroup,
           n.cgroup = n.cgroup,
-          rgroup = c("First period", 
-                     "Second period",
-                     "Third period"),
+          rgroup = c('First period', 'Second period', 'Third period'),
           n.rgroup = rep(5, 3),
-          tfoot = txtMergeLines("&Delta;<sub>int</sub> correspnds to the change since start",
-                                "&Delta;<sub>std</sub> corresponds to the change compared to national average"))
+          tfoot = txtMergeLines('&Delta;<sub>int</sub> correspnds to the change since start',
+                                '&Delta;<sub>std</sub> corresponds to the change compared to national average'))
 ```
 
 <!--html_preserve-->
@@ -3549,17 +3544,15 @@ library(htmlTable)
 
 # given the data in the first row
 htmlTable(txtRound(mx, 1), 
-          col.columns = c(rep("#E6E6F0", 4),
-                          rep("none", ncol(mx) - 4)),
-          align="rrrr|r",
+          col.columns = c(rep('#E6E6F0', 4),
+                          rep('none', ncol(mx) - 4)),
+          align = 'rrrr|r',
           cgroup = cgroup,
           n.cgroup = n.cgroup,
-          rgroup = c("First period", 
-                     "Second period",
-                     "Third period"),
+          rgroup = c('First period', 'Second period', 'Third period'),
           n.rgroup = rep(5, 3),
-                    tfoot = txtMergeLines("&Delta;<sub>int</sub> correspnds to the change since start",
-                                "&Delta;<sub>std</sub> corresponds to the change compared to national average"))
+                    tfoot = txtMergeLines('&Delta;<sub>int</sub> correspnds to the change since start',
+                                          '&Delta;<sub>std</sub> corresponds to the change compared to national average'))
 ```
 
 <!--html_preserve-->
@@ -5145,21 +5138,19 @@ library(htmlTable)
 
 # given the data in the first row
 htmlTable(txtRound(mx, 1),
-          col.rgroup = c("none", "#FFFFCC"),
-          col.columns = c(rep("#EFEFF0", 4),
-                          rep("none", ncol(mx) - 4)),
-          align="rrrr|r",
+          col.rgroup = c('none', '#FFFFCC'),
+          col.columns = c(rep('#EFEFF0', 4),
+                          rep('none', ncol(mx) - 4)),
+          align = 'rrrr|r',
           cgroup = cgroup,
           n.cgroup = n.cgroup,
           # I use the &nbsp; - the no breaking space as I don't want to have a
           # row break in the row group. This adds a little space in the table
           # when used together with the cspan.rgroup=1.
-          rgroup = c("1st&nbsp;period", 
-                     "2nd&nbsp;period",
-                     "3rd&nbsp;period"),
+          rgroup = c('1st&nbsp;period', '2nd&nbsp;period', '3rd&nbsp;period'),
           n.rgroup = rep(5, 3),
-          tfoot = txtMergeLines("&Delta;<sub>int</sub> correspnds to the change since start",
-                                "&Delta;<sub>std</sub> corresponds to the change compared to national average"),
+          tfoot = txtMergeLines('&Delta;<sub>int</sub> correspnds to the change since start',
+                                '&Delta;<sub>std</sub> corresponds to the change compared to national average'),
           cspan.rgroup = 1)
 ```
 
@@ -6941,25 +6932,23 @@ library(htmlTable)
 
 # given the data in the first row
 htmlTable(out_mx,
-          caption = "Average age in Sweden counties over a period of
+          caption = 'Average age in Sweden counties over a period of
                      15 years. The Norbotten county is typically known
                      for having a negative migration pattern compared to
                      Stockholm, while Uppsala has a proportionally large 
-                     population of students.",
-          pos.rowlabel = "bottom",
-          rowlabel="Year", 
-          col.rgroup = c("none", "#FFFFCC"),
-          col.columns = c(rep("#EFEFF0", 4),
-                          rep("none", ncol(mx) - 4)),
-          align="rrrr|r",
+                     population of students.',
+          pos.rowlabel = 'bottom',
+          rowlabel='Year', 
+          col.rgroup = c('none', '#FFFFCC'),
+          col.columns = c(rep('#EFEFF0', 4),
+                          rep('none', ncol(mx) - 4)),
+          align = 'rrrr|r',
           cgroup = cgroup,
           n.cgroup = n.cgroup,
-          rgroup = c("1st&nbsp;period", 
-                     "2nd&nbsp;period",
-                     "3rd&nbsp;period"),
+          rgroup = c('1st&nbsp;period', '2nd&nbsp;period', '3rd&nbsp;period'),
           n.rgroup = rep(5, 3),
-          tfoot = txtMergeLines("&Delta;<sub>int</sub> correspnds to the change since start",
-                                "&Delta;<sub>std</sub> corresponds to the change compared to national average"),
+          tfoot = txtMergeLines('&Delta;<sub>int</sub> correspnds to the change since start',
+                                '&Delta;<sub>std</sub> corresponds to the change compared to national average'),
           cspan.rgroup = 1)
 ```
 
@@ -8750,25 +8739,22 @@ library(htmlTable)
 
 # given the data in the first row
 htmlTable(out_mx,
-          caption = "Average age in Sweden counties over a period of
+          caption = 'Average age in Sweden counties over a period of
                      15 years. The Norbotten county is typically known
                      for having a negative migration pattern compared to
                      Stockholm, while Uppsala has a proportionally large 
-                     population of students.",
-          pos.rowlabel = "bottom",
-          rowlabel="Year", 
-          col.rgroup = c("none", "#FFFFCC"),
-          col.columns = c(rep("#EFEFF0", 4),
-                          rep("none", ncol(mx) - 4)),
-          align="rrrr|r",
+                     population of students.',
+          pos.rowlabel = 'bottom',
+          rowlabel = 'Year', 
+          col.rgroup = c('none', '#FFFFCC'),
+          col.columns = c(rep('#EFEFF0', 4), rep('none', ncol(mx) - 4)),
+          align = 'rrrr|r',
           cgroup = cgroup,
           n.cgroup = n.cgroup,
-          rgroup = c("1st&nbsp;period", 
-                     "2nd&nbsp;period",
-                     "3rd&nbsp;period"),
+          rgroup = c('1st&nbsp;period', '2nd&nbsp;period', '3rd&nbsp;period'),
           n.rgroup = rep(5, 3),
-          tfoot = txtMergeLines("&Delta;<sub>int</sub> correspnds to the change since start",
-                                "&Delta;<sub>std</sub> corresponds to the change compared to national average"),
+          tfoot = txtMergeLines('&Delta;<sub>int</sub> correspnds to the change since start',
+                                '&Delta;<sub>std</sub> corresponds to the change compared to national average'),
           cspan.rgroup = 1)
 ```
 
@@ -10562,27 +10548,25 @@ The package can also export to *L**a**T**e**X*.
 ``` r
 library(ztable)
 
-options(ztable.type="html")
+options(ztable.type='html')
 
 # given the data in the first row
 zt <- ztable(out_mx, 
-             caption = "Average age in Sweden counties over a period of
+             caption = 'Average age in Sweden counties over a period of
              15 years. The Norbotten county is typically known
              for having a negative migration pattern compared to
              Stockholm, while Uppsala has a proportionally large 
-             population of students.",
+             population of students.',
              zebra.type = 1,
-             zebra = "peach",
-             align=paste(rep("r", ncol(out_mx) + 1), collapse = ""))
+             zebra = 'peach',
+             align=paste(rep('r', ncol(out_mx) + 1), collapse = ''))
 # zt <- addcgroup(zt,
 #                 cgroup = cgroup,
 #                 n.cgroup = n.cgroup)
 # Causes an error:
 # Error in if (result <= length(vlines)) { : 
 zt <- addrgroup(zt, 
-                rgroup = c("1st&nbsp;period", 
-                           "2nd&nbsp;period",
-                           "3rd&nbsp;period"),
+                rgroup = c('1st&nbsp;period', '2nd&nbsp;period', '3rd&nbsp;period'),
                 n.rgroup = rep(5, 3))
 
 print(zt)
