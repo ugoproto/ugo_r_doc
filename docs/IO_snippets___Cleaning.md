@@ -1,19 +1,26 @@
 -   [Datasets](#datasets)
 -   [Importing Data Into R](#importing-data-into-r)
-    -   [1, Importing Data from Flat Files](#importing-data-from-flat-files)
+    -   [1, Importing Data from Flat
+        Files](#importing-data-from-flat-files)
     -   [2, Importing Data from Excel](#importing-data-from-excel)
-    -   [3, Importing Data from Other Statistical Software](#importing-data-from-other-statistical-software)
-    -   [4, Importing Data from Relational Data](#importing-data-from-relational-data)
+    -   [3, Importing Data from Other Statistical
+        Software](#importing-data-from-other-statistical-software)
+    -   [4, Importing Data from Relational
+        Data](#importing-data-from-relational-data)
+    -   [4b, Importing Data from Relational Data --
+        More](#b-importing-data-from-relational-data----more)
     -   [5, Importing Data from the Web](#importing-data-from-the-web)
     -   [6, Keyboard Inputting](#keyboard-inputting)
     -   [7, Exporting Data](#exporting-data)
-    -   [8, Inspecting Data - Missing Data](#inspecting-data---missing-data)
+    -   [8, Inspecting Data - Missing
+        Data](#inspecting-data---missing-data)
     -   [9, Labels & Levels](#labels-levels)
 -   [How to work with Quandl in R](#how-to-work-with-quandl-in-r)
     -   [1, Importing Quandl Datasets](#importing-quandl-datasets)
     -   [2, Manipulating Quandl Datasets](#manipulating-quandl-datasets)
 -   [Cleaning Data in R](#cleaning-data-in-r)
-    -   [1, Introduction and Exploring Raw Data](#introduction-and-exploring-raw-data)
+    -   [1, Introduction and Exploring Raw
+        Data](#introduction-and-exploring-raw-data)
     -   [2, Tidying Data](#tidying-data)
     -   [3, Preparing Data for Analysis](#preparing-data-for-analysis)
     -   [4, Putting it All Together](#putting-it-all-together)
@@ -710,7 +717,7 @@ demo_2 <- read.spss('international.sav', to.data.frame = TRUE, use.value.labels 
 4, Importing Data from Relational Data
 --------------------------------------
 
-### The `SBI` package
+### The `DBI` package
 
 -   `dbConnect`.
 -   `dbReadTable`.
@@ -888,6 +895,210 @@ interface.
 -   `RSQLite` to SQLite.
 -   And there are manu more packages for NoSQL databases such
     as MongoDB.
+
+4b, Importing Data from Relational Data -- More
+-----------------------------------------------
+
+### `DBI`
+
+First, change the working directory with `setwd`. Install the `DBI`
+library.
+
+**Connect and read preliminary results**
+
+``` r
+library(DBI)
+library(sqliter)
+
+# Assign the sqlite database and full path to a variable
+dbfile = 'chinook.db'
+   
+# Instantiate the dbDriver to a convenient object
+sqlite = dbDriver('SQLite')
+   
+# Assign the connection string to a connection object
+sqlitedb <- dbConnect(RSQLite::SQLite(), 
+                 dbname = dbfile, 
+                 host = '', 
+                 port = 3306,
+                 user = '',
+                 password = '')
+   
+# Request a list of tables using the connection object
+dbListTables(sqlitedb)
+```
+
+**Extract some data**
+
+``` r
+# Assign the results of a SQL query to an object
+results = dbSendQuery(sqlitedb, "SELECT * FROM albums")
+   
+# Return results from a custom object to a data.frame
+data = fetch(results)
+   
+# Print data frame to console
+head(data)
+```
+
+``` r
+# Clear the results and close the connection
+dbClearResult(results)
+
+# Disconnect from the database
+dbDisconnect(sqlitedb)
+```
+
+### `RSQLite`
+
+First, change the working directory with `setwd`. Install the `RSQLite`
+library.
+
+**Connect and read preliminary results**
+
+``` r
+library(RSQLite)
+library(sqliter)
+
+# Assign the sqlite database and full path to a variable
+dbfile = 'chinook.db'
+   
+# Instantiate the dbDriver to a convenient object
+sqlite = dbDriver('SQLite')
+   
+# Assign the connection string to a connection object
+mysqldb = dbConnect(sqlite, dbfile)
+   
+# Request a list of tables using the connection object
+dbListTables(sqlitedb)
+```
+
+**Extract some data**
+
+``` r
+# Assign the results of a SQL query to an object
+results = dbSendQuery(sqlitedb, "SELECT * FROM albums")
+
+# Check the object
+results
+dbGetInfo(results)
+
+# Return results from a custom object to a data.frame
+data = fetch(results)
+   
+# Print data frame to console
+head(data)
+```
+
+``` r
+# Clear the results and close the connection
+dbClearResult(results)
+
+# Disconnect from the database
+dbDisconnect(sqlitedb)
+```
+
+### MySQL with `DBI` or `RMySQL`
+
+``` r
+library(DBI)
+
+# Assign the sqlite database and full path to a variable
+dbfile = 'chinook.db'
+   
+# Instantiate the dbDriver to a convenient object
+mysql = dbDriver('MySQL')
+   
+# Assign the connection string to a connection object
+mysqldb <- dbConnect(RMySQL::MySQL(), 
+                 dbname = dbfile, 
+                 host = '', 
+                 port = 3306,
+                 user = '',
+                 password = '')
+
+# Request a list of tables using the connection object
+dbListTables(mysqldb)
+
+# Request a list of tables using the connection object
+dbListTables(mysqldb)
+
+# Disconnect from the database
+dbDisconnect(mysqldb)
+```
+
+``` r
+library(RMySQL)
+
+# Assign the sqlite database and full path to a variable
+dbfile = 'chinook.db'
+   
+# Instantiate the dbDriver to a convenient object
+mysql = dbDriver('MySQL')
+   
+# Assign the connection string to a connection object
+mysqldb = dbConnect(mysql, dbfile)
+   
+# Request a list of tables using the connection object
+dbListTables(mysqldb)
+
+# Request a list of tables using the connection object
+dbListTables(mysqldb)
+
+# Disconnect from the database
+dbDisconnect(mysqldb)
+```
+
+### PosgreSQL with `DBI` or `RPostgreSQL`
+
+``` r
+library(DBI)
+
+# Assign the sqlite database and full path to a variable
+dbfile = 'chinook.db'
+   
+# Instantiate the dbDriver to a convenient object
+postgresql = dbDriver('PostgreSQL')
+   
+# Assign the connection string to a connection object
+postgresqldb <- dbConnect(RPostgreSQL::PostgreSQL(), 
+                 dbname = dbfile, 
+                 host = '', 
+                 port = 3306,
+                 user = '',
+                 password = '')
+
+# Request a list of tables using the connection object
+dbListTables(postgresqldb)
+
+# Request a list of tables using the connection object
+dbListTables(postgresqldb)
+
+# Disconnect from the database
+dbDisconnect(postgresqldb)
+```
+
+``` r
+library(RPostgreSQL)
+
+# Assign the sqlite database and full path to a variable
+dbfile = 'chinook.db'
+   
+# Instantiate the dbDriver to a convenient object
+postgresql = dbDriver('PostgreSQL')
+   
+# Assign the connection string to a connection object
+postgresqldb = dbConnect(postgresql, dbfile)
+   
+# Request a list of tables using the connection object
+dbListTables(postgresqldb)
+
+# Request a list of tables using the connection object
+dbListTables(postgresqldb)
+
+# Disconnect from the database
+dbDisconnect(postgresqldb)
+```
 
 5, Importing Data from the Web
 ------------------------------
