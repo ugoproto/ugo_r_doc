@@ -14,6 +14,7 @@
 **Foreword**
 
 -   Output options: the 'tango' syntax and the 'readable' theme.
+-   Snippets, results, and notes.
 
 ------------------------------------------------------------------------
 

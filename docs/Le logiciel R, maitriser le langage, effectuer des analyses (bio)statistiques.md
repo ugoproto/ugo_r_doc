@@ -1,14 +1,14 @@
-# Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques
+---
+
+[TOC]
+
+---
 
 **Foreword**
 
 Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.* From Springer, 2014.
 
------
-
-[TOC]
-
------
+---
 
 ## A, Presentation
 

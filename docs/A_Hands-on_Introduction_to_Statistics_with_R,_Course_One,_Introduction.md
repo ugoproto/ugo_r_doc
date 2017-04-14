@@ -75,13 +75,7 @@ chronos <- c(10.60, 10.12, 9.58, 11.1)
 **Creating histograms in R**
 
 ``` r
-library(XLConnectJars)
-library(XLConnect)
-
-# Read in the data set and assign to the object
-impact <- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'impact', header = TRUE, startCol = 1, startRow = 1)
-
-# This will print the data set in the console
+# Print the data set in the console
 head(impact)
 ```
 
@@ -177,7 +171,7 @@ verbal_baseline
 hist(verbal_baseline, main = 'Distribution of verbal memory baseline scores', xlab = 'score', ylab = 'frequency')
 ```
 
-![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-6-1.png)
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-6-1.png)</center>
 
 **Let us go wine tasting (red wine)**
 
@@ -235,7 +229,7 @@ hist(red_ratings_australia)
 hist(red_ratings_argentina)
 ```
 
-![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-8-1.png)
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-8-1.png)</center>
 
 **Let us go wine tasting (white wine)**
 
@@ -272,7 +266,7 @@ hist(white_ratings_argentina, main = 'Argentina white ratings', xlab = 'score')
 hist(white_ratings_france, main = 'France white ratings', xlab = 'score')
 ```
 
-![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-10-1.png)
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-10-1.png)</center>
 
 3, Scales of Measurement
 ------------------------
@@ -311,7 +305,7 @@ hist(ratings_australia)
 hist(z_scores_australia)
 ```
 
-![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-12-1.png)
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-12-1.png)</center>
 
 4, Measures of Central Tendency
 -------------------------------
@@ -365,7 +359,7 @@ hist(red_wine$Ratings, main = 'Shiraz', xlab = 'Ratings')
 hist(white_wine$Ratings, main = 'Pinot Grigio', xlab = 'Ratings')
 ```
 
-![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-15-1.png)
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-15-1.png)</center>
 
 **Robustness to outliers**
 
@@ -420,7 +414,7 @@ plot(data_jordan$game, data_jordan$points,main = '1st NBA season of Michael Jord
 abline(h = mean_jordan)
 ```
 
-![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-18-1.png)
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-18-1.png)</center>
 
 **Michael Jordan's first NBA season - Calculate the variance manually**
 

@@ -82,7 +82,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
                 </li>
     </ul>
 	    </li>
@@ -206,6 +206,10 @@
                     
     <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Notes/">Statistics with R, Notes</a>
+                </li>
     </ul>
 	    </li>
           
@@ -217,11 +221,6 @@
             <li class="toctree-l1">
 		
     <a class="" href="../Time%2BSeries%2Bin%2BR%2BThe%2BPower%2Bof%2Bxts%2Band%2Bzoo/">Time Series in R, The Power of xts and zoo</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
 	    </li>
           
         </ul>
@@ -322,13 +321,7 @@ chronos &lt;- c(10.60, 10.12, 9.58, 11.1)
 
 <h4 id="2-histograms-and-distributions">2, Histograms and Distributions<a class="headerlink" href="#2-histograms-and-distributions" title="Permanent link">&para;</a></h4>
 <p><strong>Creating histograms in R</strong></p>
-<pre><code class="r">library(XLConnectJars)
-library(XLConnect)
-
-# Read in the data set and assign to the object
-impact &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'impact', header = TRUE, startCol = 1, startRow = 1)
-
-# This will print the data set in the console
+<pre><code class="r"># Print the data set in the console
 head(impact)
 </code></pre>
 
@@ -421,7 +414,7 @@ verbal_baseline
 hist(verbal_baseline, main = 'Distribution of verbal memory baseline scores', xlab = 'score', ylab = 'frequency')
 </code></pre>
 
-<p><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-6-1.png" /></p>
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-6-1.png" /></center></p>
 <p><strong>Let us go wine tasting (red wine)</strong></p>
 <pre><code class="r"># Read in the data set and assign to the object
 red_wine_data &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'red_wine_data', header = TRUE, startCol = 1, startRow = 1)
@@ -474,7 +467,7 @@ hist(red_ratings_australia)
 hist(red_ratings_argentina)
 </code></pre>
 
-<p><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-8-1.png" /></p>
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-8-1.png" /></center></p>
 <p><strong>Let us go wine tasting (white wine)</strong></p>
 <pre><code class="r"># Read in the data set and assign to the object
 white_wine_data &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'white_wine_data', header = TRUE, startCol = 1, startRow = 1)
@@ -507,7 +500,7 @@ hist(white_ratings_argentina, main = 'Argentina white ratings', xlab = 'score')
 hist(white_ratings_france, main = 'France white ratings', xlab = 'score')
 </code></pre>
 
-<p><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-10-1.png" /></p>
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-10-1.png" /></center></p>
 <h4 id="3-scales-of-measurement">3, Scales of Measurement<a class="headerlink" href="#3-scales-of-measurement" title="Permanent link">&para;</a></h4>
 <p><strong>Converting a distribution to Z-scale</strong></p>
 <pre><code class="r"># Read in the data set and assign to the object
@@ -539,7 +532,7 @@ hist(ratings_australia)
 hist(z_scores_australia)
 </code></pre>
 
-<p><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-12-1.png" /></p>
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-12-1.png" /></center></p>
 <h4 id="4-measures-of-central-tendency">4, Measures of Central Tendency<a class="headerlink" href="#4-measures-of-central-tendency" title="Permanent link">&para;</a></h4>
 <p><strong>The mean of a Fibonacci sequence</strong></p>
 <pre><code class="r"># create a vector that contains the Fibonacci elements
@@ -584,7 +577,7 @@ hist(red_wine$Ratings, main = 'Shiraz', xlab = 'Ratings')
 hist(white_wine$Ratings, main = 'Pinot Grigio', xlab = 'Ratings')
 </code></pre>
 
-<p><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-15-1.png" /></p>
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-15-1.png" /></center></p>
 <p><strong>Robustness to outliers</strong></p>
 <pre><code class="r"># create the outlier and add it to the dataset
 outlier &lt;- data.frame(condition = 'Red', Ratings = 0)
@@ -630,7 +623,7 @@ plot(data_jordan$game, data_jordan$points,main = '1st NBA season of Michael Jord
 abline(h = mean_jordan)
 </code></pre>
 
-<p><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-18-1.png" /></p>
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-18-1.png" /></center></p>
 <p><strong>Michael Jordan&rsquo;s first NBA season - Calculate the variance manually</strong></p>
 <pre><code class="r"># Calculate the differences with respect to the mean 
 diff &lt;- data_jordan$points - mean(data_jordan$points)

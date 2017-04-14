@@ -1,6 +1,6 @@
 -   [1, An introduction to ANOVA](#an-introduction-to-anova)
 -   [2, Post-hoc analysis](#post-hoc-analysis)
--   [3, Between groups factorialANOVA](#between-groups-factorial-anova)
+-   [3, Between groups factorial ANOVA](#between-groups-factorial-anova)
 
 ------------------------------------------------------------------------
 
@@ -23,25 +23,73 @@ period of time: 8, 12, 17, or 19 days. The independent variable is the
 number of training days and the dependent variable is the IQ gain.
 
 ``` r
-library(XLConnectJars)
-library(XLConnect)
-
-# Read in the data set and assign to the object
-wm <- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'w_m', header = TRUE, startCol = 1, startRow = 1)
-
-# Check it out
+# Print the data set in the console
 head(wm)
 ```
+
+    ##   subject condition   iq
+    ## 1       1    8 days 12.4
+    ## 2       2    8 days 11.8
+    ## 3       3    8 days 14.6
+    ## 4       4    8 days  7.7
+    ## 5       5    8 days 15.7
+    ## 6       6    8 days 11.6
 
 ``` r
 library(psych)
 
 # Summary statistics by all groups (8 sessions, 12 sessions, 17 sessions, 19 sessions)
 describeBy(wm, wm$condition)
+```
 
+    ## 
+    ##  Descriptive statistics by group 
+    ## group: 12 days
+    ##            vars  n mean   sd median trimmed  mad  min  max range skew
+    ## subject       1 20 30.5 5.92  30.50   30.50 7.41 21.0 40.0  19.0 0.00
+    ## condition*    2 20  NaN   NA     NA     NaN   NA  Inf -Inf  -Inf   NA
+    ## iq            3 20 11.7 2.58  11.65   11.69 2.89  6.9 16.1   9.2 0.05
+    ##            kurtosis   se
+    ## subject       -1.38 1.32
+    ## condition*       NA   NA
+    ## iq            -1.06 0.58
+    ## -------------------------------------------------------- 
+    ## group: 17 days
+    ##            vars  n mean   sd median trimmed  mad  min  max range skew
+    ## subject       1 20 50.5 5.92   50.5    50.5 7.41 41.0 60.0  19.0 0.00
+    ## condition*    2 20  NaN   NA     NA     NaN   NA  Inf -Inf  -Inf   NA
+    ## iq            3 20 13.9 2.26   13.6    13.9 2.00  9.8 18.1   8.3 0.11
+    ##            kurtosis   se
+    ## subject       -1.38 1.32
+    ## condition*       NA   NA
+    ## iq            -0.85 0.50
+    ## -------------------------------------------------------- 
+    ## group: 19 days
+    ##            vars  n  mean   sd median trimmed  mad  min  max range  skew
+    ## subject       1 20 70.50 5.92   70.5   70.50 7.41 61.0 80.0  19.0  0.00
+    ## condition*    2 20   NaN   NA     NA     NaN   NA  Inf -Inf  -Inf    NA
+    ## iq            3 20 14.75 2.50   15.3   14.71 2.15 10.4 19.2   8.8 -0.09
+    ##            kurtosis   se
+    ## subject       -1.38 1.32
+    ## condition*       NA   NA
+    ## iq            -0.99 0.56
+    ## -------------------------------------------------------- 
+    ## group: 8 days
+    ##            vars  n  mean   sd median trimmed  mad min  max range  skew
+    ## subject       1 20 10.50 5.92   10.5   10.50 7.41 1.0 20.0  19.0  0.00
+    ## condition*    2 20   NaN   NA     NA     NaN   NA Inf -Inf  -Inf    NA
+    ## iq            3 20 10.91 2.63   11.3   10.97 2.67 5.4 15.7  10.3 -0.21
+    ##            kurtosis   se
+    ## subject       -1.38 1.32
+    ## condition*       NA   NA
+    ## iq            -0.70 0.59
+
+``` r
 # Boxplot IQ versus cond
 boxplot(wm$iq ~ wm$condition, main="Boxplot", xlab="Group (cond)", ylab="IQ")
 ```
+
+<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-3-1.png)</center>
 
 Notice that the IQ increases as the amount of training sessions
 increases.
@@ -93,6 +141,8 @@ lines(x,y_7, col = 7, 'l')
 legend('topright', title = 'F distributions', c('df = (1,1)', 'df = (3,1)', 'df = (6,1)', 'df = (3,3)', 'df = (6,3)', 'df = (3,6)', 'df = (6,6)'), col = c(1, 2, 3, 4, 5, 6, 7), lty = 1)
 ```
 
+<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-4-1.png)</center>
+
 The F-distribution cannot take negative values, because it is a ratio of
 variances and variances are always non-negative numbers. The
 distribution represents the ratio between the variance between groups
@@ -117,15 +167,25 @@ n <- 20
 # Calculate group means
 Y_j <- as.numeric(tapply(wm$iq, wm$condition, mean))
 Y_j
+```
 
+    ## [1] 11.700 13.905 14.750 10.910
+
+``` r
 # Calculate the grand mean
 Y_T <- mean(wm$iq)
 Y_T
+```
 
+    ## [1] 12.81625
+
+``` r
 # Calculate the sum of squares
 SS_A <- sum((Y_j - Y_T)^2) * n
 SS_A
 ```
+
+    ## [1] 196.0914
 
 **Within groups sum of squares**
 
@@ -195,10 +255,29 @@ Normally, we do not have to do all calculations.
 # Apply the aov function
 anova.wm <- aov(wm$iq ~ wm$condition)
 anova.wm
+```
 
+    ## Call:
+    ##    aov(formula = wm$iq ~ wm$condition)
+    ## 
+    ## Terms:
+    ##                 wm$condition Residuals
+    ## Sum of Squares      196.0914  473.4175
+    ## Deg. of Freedom            3        76
+    ## 
+    ## Residual standard error: 2.495832
+    ## Estimated effects may be unbalanced
+
+``` r
 # Look at the summary table of the result
 summary(anova.wm)
 ```
+
+    ##              Df Sum Sq Mean Sq F value   Pr(>F)    
+    ## wm$condition  3  196.1   65.36   10.49 7.47e-06 ***
+    ## Residuals    76  473.4    6.23                     
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 F-value is significant.
 
@@ -214,10 +293,22 @@ library(car)
 
 # Levene's test
 leveneTest(wm$iq ~ wm$condition)
+```
 
+    ## Levene's Test for Homogeneity of Variance (center = median)
+    ##       Df F value Pr(>F)
+    ## group  3  0.1405 0.9355
+    ##       76
+
+``` r
 # Levene's test with the change for the default, namely center = mean
 leveneTest(wm$iq ~ wm$condition, center = mean)
 ```
+
+    ## Levene's Test for Homogeneity of Variance (center = mean)
+    ##       Df F value Pr(>F)
+    ## group  3  0.1598  0.923
+    ##       76
 
 The assumption of homogeneity of variance hold: the within group
 variance equivalent for all groups.
@@ -233,14 +324,9 @@ What does it mean to inflate the type I error?
 
 Suppose the post-hoc test involves performing three pairwise
 comparisons, each with the probability of a type I error set at 5%. The
-probability of making at least one type I error is then equal to:
-
-1 − (*n**o* : *t**y**p**e* : *I* : *e**r**r**o**r* : × : *n**o* : *t**y**p**e* : *I* : *e**r**r**o**r* : × : *n**o* : *t**y**p**e* : *I* : *e**r**r**o**r*)
-
-If, for simplicity, you assume independence of these three events, the
-maximum familywise error rate becomes:
-
-1 − (0.95 × 0.95 × 0.95)=14.26%
+probability of making at least one type I error: if you assume
+independence of these three events, the maximum familywise error rate is
+then equal to: 1 - (0.95 x 0.95 x 0.95) = 14.26 %.
 
 In other words, the probability of having at least one false alarm (i.e.
 type I error) is 14.26%.
@@ -261,16 +347,15 @@ Sensitivity and specificity are two concepts that statisticians use to
 measure the performance of a statistical test. The sensitivity of a test
 is its true positive rate:
 
-$$\\mathrm{sensitivity} = \\frac{\\mathrm{number\\ of\\ true\\ positives}}{\\mathrm{number\\ of\\ true\\ positives} + \\mathrm{number\\ of\\ false\\ negatives}}$$
+$$sensitivity = \frac{number~of~true~positives}{number~ of~true~positives + number~of~false~negatives}$$
 
 The specificity of a test is its true negative rate:
-
-$$\\mathrm{specificity} = \\frac{\\mathrm{number\\ of\\ true\\ negatives}}{\\mathrm{number\\ of\\ true\\ negatives} + \\mathrm{number\\ of\\ false\\ positives}}$$
+$$specificity = \frac{number~of~true~negatives}{number~ of~true~negatives + number~of~false~positives}$$
 
 Calculate both the sensitivity and specificity of the test based on
 numbers displayed in the NHST table?
 
-![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/NHST_1.png)
+<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/NHST_1.png)</center>
 
 The sensitivity is 0.89 and the specificity is 0.85.
 
@@ -291,20 +376,58 @@ wm <- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', 
 head(wm)
 ```
 
+    ##   cond pre post gain train
+    ## 1  t08   8    9    1     1
+    ## 2  t08   8   10    2     1
+    ## 3  t08   8    8    0     1
+    ## 4  t08   8    7   -1     1
+    ## 5  t08   9   11    2     1
+    ## 6  t08   9   10    1     1
+
 ``` r
 # Revision: Analysis of variance
 anova_wm <- aov(wm$gain ~ wm$cond)
 
 # Summary Analysis of Variance
 summary(anova_wm)
+```
 
+    ##              Df Sum Sq Mean Sq F value Pr(>F)    
+    ## wm$cond       4  274.0   68.51   34.57 <2e-16 ***
+    ## Residuals   115  227.9    1.98                   
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+``` r
 # Post-hoc (Tukey)
 TukeyHSD(anova_wm)
+```
 
+    ##   Tukey multiple comparisons of means
+    ##     95% family-wise confidence level
+    ## 
+    ## Fit: aov(formula = wm$gain ~ wm$cond)
+    ## 
+    ## $`wm$cond`
+    ##               diff         lwr       upr     p adj
+    ## t08-control -0.625 -1.69355785 0.4435578 0.4871216
+    ## t12-control  0.625 -0.44355785 1.6935578 0.4871216
+    ## t17-control  2.425  1.35644215 3.4935578 0.0000001
+    ## t19-control  3.625  2.55644215 4.6935578 0.0000000
+    ## t12-t08      1.250  0.01613568 2.4838643 0.0454650
+    ## t17-t08      3.050  1.81613568 4.2838643 0.0000000
+    ## t19-t08      4.250  3.01613568 5.4838643 0.0000000
+    ## t17-t12      1.800  0.56613568 3.0338643 0.0008953
+    ## t19-t12      3.000  1.76613568 4.2338643 0.0000000
+    ## t19-t17      1.200 -0.03386432 2.4338643 0.0607853
+
+``` r
 # Plot confidence intervals
 #plot(c(TukeyHSD(anova_wm)$lwr,TukeyHSD(anova_wm)$upr))
 plot(TukeyHSD(anova_wm))
 ```
+
+<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-11-1.png)</center>
 
 **Bonferroni adjusted p-values**
 
@@ -317,10 +440,10 @@ familywise error rate.
 Bonferroni is based on the idea that if you test *N* dependent or
 independent hypotheses, one way of maintaining the familywise error rate
 is to test each individual hypothesis at a statistical significance
-level that is deflated by a factor of $\\frac{1}{n}$. So, for a
+level that is deflated by a factor of $\frac{1}{n}$. So, for a
 significance level for the whole family of tests of *α*, the Bonferroni
 correction would be to test each of the individual tests at a
-significance level of $\\frac{\\alpha}{n}$.
+significance level of $\frac{\alpha}{n}$.
 
 The Bonferroni correction is controversial. It is a strict measure to
 limit false positives and generates conservative p-value. Alternative:
@@ -335,10 +458,27 @@ method.
 bonferroni_ex <- p.adjust(.005, method='bonferroni', n = 8)
 
 bonferroni_ex
+```
 
+    ## [1] 0.04
+
+``` r
 # Pairwise T-test
 pairwise.t.test(wm$gain,wm$cond, p.adjust = 'bonferroni')
 ```
+
+    ## 
+    ##  Pairwise comparisons using t tests with pooled SD 
+    ## 
+    ## data:  wm$gain and wm$cond 
+    ## 
+    ##     control t08     t12     t17    
+    ## t08 1.00000 -       -       -      
+    ## t12 1.00000 0.05862 -       -      
+    ## t17 5.9e-08 3.8e-09 0.00096 -      
+    ## t19 6.4e-15 2.9e-15 6.7e-09 0.08084
+    ## 
+    ## P value adjustment method: bonferroni
 
 3, Between groups factorial ANOVA
 ---------------------------------
@@ -369,6 +509,14 @@ ab$error <- as.integer(ab$error)
 head(ab)
 ```
 
+    ##   subject conversation driving errors error
+    ## 1       1         None    Easy     20    20
+    ## 2       2         None    Easy     19    19
+    ## 3       3         None    Easy     31    31
+    ## 4       4         None    Easy     27    27
+    ## 5       5         None    Easy     31    31
+    ## 6       6         None    Easy     17    17
+
 Each of the subjects was randomly assigned to one of six conditions
 formed by combining different values of the independent variables.
 
@@ -390,6 +538,8 @@ barplot(ab_groups, beside = TRUE, col = c('orange','blue'), main = 'Driving Erro
 legend('topright', c('Difficult','Easy'), title = 'Driving', fill = c('orange','blue'))
 ```
 
+<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-14-1.png)</center>
+
 The driving errors made during different driving conditions are
 influenced by the level of conversation demand. In other words, the
 driving conditions have a different effect on the number of errors made,
@@ -408,6 +558,11 @@ We now have two independent variables instead of just one.
 leveneTest(ab$errors ~ ab$conversation * ab$driving)
 ```
 
+    ## Levene's Test for Homogeneity of Variance (center = median)
+    ##        Df F value Pr(>F)
+    ## group   5  0.5206 0.7602
+    ##       114
+
 The homogeneity of variance assumption holds.
 
 By performing a `leveneTest`, we can check whether or not the
@@ -419,9 +574,21 @@ F-ratios, in which two types of degrees of freedom are involved.
 
 ``` r
 dim(ab)
+```
+
+    ## [1] 120   5
+
+``` r
 str(ab$conversation)
+```
+
+    ##  Factor w/ 3 levels "High demand",..: 3 3 3 3 3 3 3 3 3 3 ...
+
+``` r
 str(ab$driving)
 ```
+
+    ##  Factor w/ 2 levels "Difficult","Easy": 2 2 2 2 2 2 2 2 2 2 ...
 
 There are 120 subjets and 2 (Easy, Difficult) \* 3 (High Demand, Low
 Demand, None) = 6 groups.
@@ -435,6 +602,14 @@ ab_model <- aov(ab$errors ~ ab$conversation * ab$driving)
 # Get the summary table
 summary(ab_model)
 ```
+
+    ##                             Df Sum Sq Mean Sq F value   Pr(>F)    
+    ## ab$conversation              2   4416    2208   36.14 6.98e-13 ***
+    ## ab$driving                   1   5782    5782   94.64  < 2e-16 ***
+    ## ab$conversation:ab$driving   2   1639     820   13.41 5.86e-06 ***
+    ## Residuals                  114   6965      61                     
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Based on the summary table of the factorial ANOVA, the main effect for
 driving difficulty, the main effect for conversation difficulty and the
@@ -464,8 +639,23 @@ aov_ab_2 <- aov(ab_2$errors ~ ab_2$conversation)
 
 # Get the summary tables for both aov_ab_1 and aov_ab_2
 summary(aov_ab_1)
+```
+
+    ##                   Df Sum Sq Mean Sq F value Pr(>F)  
+    ## ab_1$conversation  2  504.7   252.3   4.928 0.0106 *
+    ## Residuals         57 2918.5    51.2                 
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+``` r
 summary(aov_ab_2)
 ```
+
+    ##                   Df Sum Sq Mean Sq F value   Pr(>F)    
+    ## ab_2$conversation  2   5551    2776   39.09 2.05e-11 ***
+    ## Residuals         57   4047      71                     
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 There a significant simple effect for the easy driving condition based
 on the summary table of `aov_ab_1`.
@@ -491,10 +681,26 @@ library(lsr)
 #easy is ab_1
 #difficult is ab_2
 etaSquared(aov_ab_1, anova = TRUE)
+```
 
+    ##                     eta.sq eta.sq.part      SS df        MS        F
+    ## ab_1$conversation 0.147433    0.147433  504.70  2 252.35000 4.928458
+    ## Residuals         0.852567          NA 2918.55 57  51.20263       NA
+    ##                            p
+    ## ab_1$conversation 0.01061116
+    ## Residuals                 NA
+
+``` r
 # Calculate the etaSquared for the difficult driving case
 etaSquared(aov_ab_2, anova = TRUE)
 ```
+
+    ##                      eta.sq eta.sq.part       SS df         MS        F
+    ## ab_2$conversation 0.5783571   0.5783571 5551.033  2 2775.51667 39.09275
+    ## Residuals         0.4216429          NA 4046.900 57   70.99825       NA
+    ##                              p
+    ## ab_2$conversation 2.046097e-11
+    ## Residuals                   NA
 
 Based on the output of the `etaSquared` function for the easy driving
 condition, the percentage of variance explained by the conversation
@@ -509,10 +715,34 @@ can do this with the Tukey post-hoc test.
 ``` r
 # Tukey for easy driving
 TukeyHSD(aov_ab_1)
+```
 
+    ##   Tukey multiple comparisons of means
+    ##     95% family-wise confidence level
+    ## 
+    ## Fit: aov(formula = ab_1$errors ~ ab_1$conversation)
+    ## 
+    ## $`ab_1$conversation`
+    ##                         diff        lwr        upr     p adj
+    ## Low demand-High demand -6.05 -11.495243 -0.6047574 0.0260458
+    ## None-High demand       -6.25 -11.695243 -0.8047574 0.0207614
+    ## None-Low demand        -0.20  -5.645243  5.2452426 0.9957026
+
+``` r
 # Tukey for difficult driving
 TukeyHSD(aov_ab_2)
 ```
+
+    ##   Tukey multiple comparisons of means
+    ##     95% family-wise confidence level
+    ## 
+    ## Fit: aov(formula = ab_2$errors ~ ab_2$conversation)
+    ## 
+    ## $`ab_2$conversation`
+    ##                          diff       lwr        upr     p adj
+    ## Low demand-High demand  -9.75 -16.16202  -3.337979 0.0015849
+    ## None-High demand       -23.45 -29.86202 -17.037979 0.0000000
+    ## None-Low demand        -13.70 -20.11202  -7.287979 0.0000103
 
 For 'Easy Driving', two mean differences in terms of number of errors
 are significant (below 0.05).

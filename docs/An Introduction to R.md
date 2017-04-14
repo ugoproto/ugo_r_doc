@@ -1,4 +1,8 @@
-# An Introduction to R
+---
+
+[TOC]
+
+---
 
 **Foreword**
 
@@ -8,11 +12,7 @@ Notes, leads, and ideas on what R can do. More at:
 - [R-intro](https://cran.r-project.org/doc/manuals/R-intro.html)
 - [cran.r-project.org/manuals (series of official manuals)](https://cran.r-project.org/manuals.html)
 
------
-
-[TOC]
-
------
+---
 
 ## 1, Introduction and Preliminaries
 

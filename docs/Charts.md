@@ -1,14 +1,16 @@
 # Charts & Colors
 
+---
+
+[TOC]
+
+---
+
 **Foreword**
 
 Notes.
 
------
-
-[TOC]
-
------
+---
 
 ## Charts
 

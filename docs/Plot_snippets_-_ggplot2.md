@@ -21,15 +21,15 @@
 **Foreword**
 
 -   Output options: the 'tango' syntax and the 'readable' theme.
--   Code snippets and results.
+-   Snippets and results.
 
 ------------------------------------------------------------------------
 
 Documentation
 -------------
 
--   [`ggplot2`](http://docs.ggplot2.org/current/)
--   [`ggthemes`](https://github.com/jrnold/ggthemes)
+-   [ggplot2](http://docs.ggplot2.org/current/)
+-   [ggthemes](https://github.com/jrnold/ggthemes)
 -   [r4stats](http://r4stats.com/examples/graphics-ggplot2/)
 
 Dataset

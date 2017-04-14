@@ -13,7 +13,7 @@
 **Foreword**
 
 -   Output options: the 'tango' syntax and the 'readable' theme.
--   Code snippets and results.
+-   Snippets and results.
 -   `ggvis` generates html outputs. Graphics presented here are images:
     .png files; .gif files when specified.
 

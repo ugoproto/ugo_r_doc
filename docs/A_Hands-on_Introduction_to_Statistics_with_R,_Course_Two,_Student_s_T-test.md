@@ -55,6 +55,8 @@ lines(x, y_2, col = 'red')
 legend('topright', c('df = 4', 'df = 6', 'df = 8', 'df = 10', 'df = 12'), title = 'T distributions', col = c('black', 'red', 'orange', 'green', 'blue'), lty = 1)
 ```
 
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/unnamed-chunk-1-1.png)</center>
+
 **The working memory dataset**
 
 Conduct a dependent (or paired) t-test on the "working memory" dataset.
@@ -69,26 +71,87 @@ a dependent t-test. This will test whether or not the difference in mean
 intelligence scores before and after training are significant.
 
 ``` r
-library(XLConnectJars)
-library(XLConnect)
-
-# Read in the data set and assign to the object
-wm <- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'wm', header = TRUE, startCol = 1, startRow = 1)
-
-# This will print the data set in the console
+# Print the data set in the console
 head(wm)
 ```
 
+    ##   cond pre post gain train
+    ## 1  t08   8    9    1     1
+    ## 2  t08   8   10    2     1
+    ## 3  t08   8    8    0     1
+    ## 4  t08   8    7   -1     1
+    ## 5  t08   9   11    2     1
+    ## 6  t08   9   10    1     1
+
 ``` r
+library(Hmisc)
+
 # Create a subset for the data that contains information on those subject who trained
 wm_t <- subset(wm, wm$train == 1)
 
  # Summary statistics 
 describe(wm_t)
+```
 
+    ## wm_t 
+    ## 
+    ##  5  Variables      80  Observations
+    ## ---------------------------------------------------------------------------
+    ## cond 
+    ##        n  missing distinct 
+    ##       80        0        4 
+    ##                               
+    ## Value       t08  t12  t17  t19
+    ## Frequency    20   20   20   20
+    ## Proportion 0.25 0.25 0.25 0.25
+    ## ---------------------------------------------------------------------------
+    ## pre 
+    ##        n  missing distinct     Info     Mean      Gmd 
+    ##       80        0        5    0.955    10.03    1.551 
+    ##                                         
+    ## Value          8     9    10    11    12
+    ## Frequency     12    20    19    12    17
+    ## Proportion 0.150 0.250 0.238 0.150 0.212
+    ## ---------------------------------------------------------------------------
+    ## post 
+    ##        n  missing distinct     Info     Mean      Gmd      .05      .10 
+    ##       80        0       13    0.984    13.51     2.87     9.95    10.00 
+    ##      .25      .50      .75      .90      .95 
+    ##    12.00    14.00    15.00    17.00    18.00 
+    ##                                                                       
+    ## Value          7     8     9    10    11    12    13    14    15    16
+    ## Frequency      1     1     2     5     8    11    11    15     8     9
+    ## Proportion 0.012 0.012 0.025 0.062 0.100 0.138 0.138 0.188 0.100 0.112
+    ##                             
+    ## Value         17    18    19
+    ## Frequency      4     2     3
+    ## Proportion 0.050 0.025 0.038
+    ## ---------------------------------------------------------------------------
+    ## gain 
+    ##        n  missing distinct     Info     Mean      Gmd      .05      .10 
+    ##       80        0       10    0.975    3.487    2.415      0.0      1.0 
+    ##      .25      .50      .75      .90      .95 
+    ##      2.0      3.0      5.0      6.1      7.0 
+    ##                                                                       
+    ## Value         -1     0     1     2     3     4     5     6     7     9
+    ## Frequency      2     3     7    18    12    16     6     8     6     2
+    ## Proportion 0.025 0.038 0.088 0.225 0.150 0.200 0.075 0.100 0.075 0.025
+    ## ---------------------------------------------------------------------------
+    ## train 
+    ##        n  missing distinct     Info     Mean      Gmd 
+    ##       80        0        1        0        1        0 
+    ##              
+    ## Value       1
+    ## Frequency  80
+    ## Proportion  1
+    ## ---------------------------------------------------------------------------
+
+``` r
 # Create a boxplot with pre- and post-training groups 
 boxplot(wm_t$pre, wm_t$post, main = "Boxplot", xlab = "Pre and Post Training", ylab = "Intelligence Score", col = c("red", "green"))
 ```
+
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/unnamed-chunk-4-1.png)</center>
 
 **Performing dependent t-tests manually in R (1)**
 
@@ -128,8 +191,15 @@ xdt2 <- xdt/n
 sd_diff2 <- sqrt((xdt - xdt2)/(n - 1))
 sd_diff <- sqrt((sum(wm_t$gain^2) - ((sum(wm_t$gain))^2/n))/(n - 1))
 sd_diff2
+```
+
+    ## [1] 4.091149
+
+``` r
 sd_diff
 ```
+
+    ## [1] 2.152383
 
 **Performing dependent t-tests manually in R (2)**
 
@@ -175,18 +245,38 @@ t_value <- mean_diff/(sd_diff/sqrt(n))
 
 # Check whether or not the mean difference is statistically significant
 t_value
-t_crit
+```
 
+    ## [1] 14.49238
+
+``` r
+t_crit
+```
+
+    ## [1] 1.99045
+
+``` r
 # Calculate the confidence interval
 conf_upper <- mean_diff + t_crit * (sd_diff/sqrt(n))
 conf_lower <- mean_diff - t_crit * (sd_diff/sqrt(n))
 conf_upper
-conf_lower
+```
 
+    ## [1] 3.966489
+
+``` r
+conf_lower
+```
+
+    ## [1] 3.008511
+
+``` r
 # Calculate Cohen's d
 cohens_d <- mean_diff/sd_diff
 cohens_d
 ```
+
+    ## [1] 1.620297
 
 **Letting R do all the dirty work: Dependent t-tests**
 
@@ -204,10 +294,28 @@ deviation.
 ``` r
 # Conduct a paired t-test using the t.test function
 t.test(wm_t$post, wm_t$pre, paired = TRUE)
+```
 
+    ## 
+    ##  Paired t-test
+    ## 
+    ## data:  wm_t$post and wm_t$pre
+    ## t = 14.492, df = 79, p-value < 2.2e-16
+    ## alternative hypothesis: true difference in means is not equal to 0
+    ## 95 percent confidence interval:
+    ##  3.008511 3.966489
+    ## sample estimates:
+    ## mean of the differences 
+    ##                  3.4875
+
+``` r
 # Calculate Cohen's d
+library(lsr)
+
 cohensD(wm_t$post, wm_t$pre, method = 'paired')
 ```
+
+    ## [1] 1.620297
 
 2, Independent t-tests
 ----------------------
@@ -230,6 +338,14 @@ wm_t <- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls'
 head(wm_t)
 ```
 
+    ##   cond pre post gain train
+    ## 1  t08   8    9    1     1
+    ## 2  t08   8   10    2     1
+    ## 3  t08   8    8    0     1
+    ## 4  t08   8    7   -1     1
+    ## 5  t08   9   11    2     1
+    ## 6  t08   9   10    1     1
+
 Add statistical functions.
 
 ``` r
@@ -248,16 +364,90 @@ wm_t19 <- subset(wm_t, cond == 't19')
 
 # Summary statistics of the change in training scores before and after exercise
 describe(wm_t08)
-describe(wm_t12)
-describe(wm_t17)
-describe(wm_t19)
+```
 
+    ##       vars  n  mean   sd median trimmed  mad min  max range  skew kurtosis
+    ## cond*    1 20   NaN   NA     NA     NaN   NA Inf -Inf  -Inf    NA       NA
+    ## pre      2 20 10.05 1.50   10.0   10.06 1.48   8   12     4  0.01    -1.53
+    ## post     3 20 11.40 2.14   11.5   11.50 2.22   7   15     8 -0.25    -0.84
+    ## gain     4 20  1.35 1.23    1.0    1.44 1.48  -1    3     4 -0.32    -0.82
+    ## train    5 20  1.00 0.00    1.0    1.00 0.00   1    1     0   NaN      NaN
+    ##         se
+    ## cond*   NA
+    ## pre   0.34
+    ## post  0.48
+    ## gain  0.27
+    ## train 0.00
+
+``` r
+describe(wm_t12)
+```
+
+    ##       vars  n mean   sd median trimmed  mad min  max range skew kurtosis
+    ## cond*    1 20  NaN   NA     NA     NaN   NA Inf -Inf  -Inf   NA       NA
+    ## pre      2 20  9.9 1.45     10    9.88 1.48   8   12     4 0.16    -1.43
+    ## post     3 20 12.5 1.88     12   12.38 2.22  10   17     7 0.48    -0.54
+    ## gain     4 20  2.6 1.27      2    2.50 0.00   0    5     5 0.44    -0.54
+    ## train    5 20  1.0 0.00      1    1.00 0.00   1    1     0  NaN      NaN
+    ##         se
+    ## cond*   NA
+    ## pre   0.32
+    ## post  0.42
+    ## gain  0.28
+    ## train 0.00
+
+``` r
+describe(wm_t17)
+```
+
+    ##       vars  n mean   sd median trimmed  mad min  max range skew kurtosis
+    ## cond*    1 20  NaN   NA     NA     NaN   NA Inf -Inf  -Inf   NA       NA
+    ## pre      2 20 10.0 1.34     10   10.00 1.48   8   12     4 0.25    -1.34
+    ## post     3 20 14.4 1.85     14   14.25 1.48  12   19     7 0.63    -0.27
+    ## gain     4 20  4.4 1.39      4    4.25 1.48   3    7     4 0.64    -1.12
+    ## train    5 20  1.0 0.00      1    1.00 0.00   1    1     0  NaN      NaN
+    ##         se
+    ## cond*   NA
+    ## pre   0.30
+    ## post  0.41
+    ## gain  0.31
+    ## train 0.00
+
+``` r
+describe(wm_t19)
+```
+
+    ##       vars  n  mean   sd median trimmed  mad min  max range skew kurtosis
+    ## cond*    1 20   NaN   NA     NA     NaN   NA Inf -Inf  -Inf   NA       NA
+    ## pre      2 20 10.15 1.27   10.0   10.19 1.48   8   12     4 0.03    -1.10
+    ## post     3 20 15.75 1.86   16.0   15.69 1.48  13   19     6 0.16    -1.03
+    ## gain     4 20  5.60 1.73    5.5    5.50 2.22   3    9     6 0.36    -0.76
+    ## train    5 20  1.00 0.00    1.0    1.00 0.00   1    1     0  NaN      NaN
+    ##         se
+    ## cond*   NA
+    ## pre   0.28
+    ## post  0.42
+    ## gain  0.39
+    ## train 0.00
+
+``` r
 # Create a boxplot of the different training times
 ggplot(wm_t, aes(x = cond, y = gain, fill = cond)) + geom_boxplot()
+```
 
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/unnamed-chunk-10-1.png)</center>
+
+``` r
 # Levene's test
+library(car)
+
 leveneTest(wm_t$gain ~ wm_t$cond)
 ```
+
+    ## Levene's Test for Homogeneity of Variance (center = median)
+    ##       Df F value Pr(>F)
+    ## group  3  1.3134 0.2763
+    ##       76
 
 **Conducting an independent t-test manually (1)**
 
@@ -321,7 +511,23 @@ cohens_d <- mean_diff/pooled_sd
 ``` r
 # Conduct an independent t-test 
 t.test(wm_t19$gain, wm_t08$gain,var.equal = TRUE)
+```
 
+    ## 
+    ##  Two Sample t-test
+    ## 
+    ## data:  wm_t19$gain and wm_t08$gain
+    ## t = 8.9677, df = 38, p-value = 6.443e-11
+    ## alternative hypothesis: true difference in means is not equal to 0
+    ## 95 percent confidence interval:
+    ##  3.290588 5.209412
+    ## sample estimates:
+    ## mean of x mean of y 
+    ##      5.60      1.35
+
+``` r
 # Calculate Cohen's d
 cohensD(wm_t19$gain, wm_t08$gain, method = 'pooled')
 ```
+
+    ## [1] 2.835822

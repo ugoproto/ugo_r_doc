@@ -1,3 +1,14 @@
+---
+
+[TOC]
+
+---
+
+**Foreword**
+
+Course.
+
+---
 
 ## 1, Introduction to eXtensible Time
 

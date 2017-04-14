@@ -1,5 +1,7 @@
--   [1, A gentle introduction to the principles of multiple regression](#a-gentle-introduction-to-the-principles-of-multiple-regression)
--   [2, Intuition behind estimation of multiple regression coefficients](#intuition-behind-estimation-of-multiple-regression-coefficients)
+-   [1, A gentle introduction to the principles of multiple
+    regression](#a-gentle-introduction-to-the-principles-of-multiple-regression)
+-   [2, Intuition behind estimation of multiple regression
+    coefficients](#intuition-behind-estimation-of-multiple-regression-coefficients)
 -   [3, Dummy coding](#dummy-coding)
 
 ------------------------------------------------------------------------

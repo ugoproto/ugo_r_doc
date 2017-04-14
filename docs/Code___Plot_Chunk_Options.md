@@ -9,7 +9,7 @@
 **Foreword**
 
 -   Output options: the 'tango' syntax and the 'readable' theme.
--   Code snippets and results.
+-   Snippets and results.
 
 ------------------------------------------------------------------------
 

@@ -1,5 +1,6 @@
 -   [1, An introduction to moderation](#an-introduction-to-moderation)
--   [2, An introduction to centeringpredictors](#an-introduction-to-centering-predictors)
+-   [2, An introduction to centering
+    predictors](#an-introduction-to-centering-predictors)
 -   [3, An introduction to mediation](#an-introduction-to-mediation)
 
 ------------------------------------------------------------------------

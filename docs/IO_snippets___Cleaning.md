@@ -30,8 +30,7 @@
 **Foreword**
 
 -   Output options: the 'tango' syntax and the 'readable' theme.
--   The project stands in a directory (the 'project') where the we find
-    the .rmd file, the data and the output.
+-   Snippets and results.
 
 ------------------------------------------------------------------------
 
@@ -40,7 +39,8 @@ Datasets
 
 -   [R Dataset
     Packages](http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html);
-    by default in R. -Other dataset can be imported with
+    by default in R.
+-   Other dataset can be imported with
     `data(Cars93, package = 'MASS')` for example.
 -   [csv/doc
     Datasets](https://vincentarelbundock.github.io/Rdatasets/datasets.html).
@@ -57,8 +57,8 @@ Datasets
     multinomial, survival).
 -   [Public Datasets on
     GitHub](http://www.kdnuggets.com/2015/04/awesome-public-datasets-github.html)
--   \[Awesome Public
-    Datasets\]<https://github.com/caesar0301/awesome-public-datasets>)
+-   [Awesome Public
+    Datasets](https://github.com/caesar0301/awesome-public-datasets)
 
 ------------------------------------------------------------------------
 
