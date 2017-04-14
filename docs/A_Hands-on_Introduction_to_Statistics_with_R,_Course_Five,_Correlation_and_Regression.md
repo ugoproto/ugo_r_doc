@@ -1,8 +1,6 @@
 -   [1, An introduction to Correlation](#an-introduction-to-correlation)
--   [2, An introduction to Linear Regression
-    Models](#an-introduction-to-linear-regression-models)
--   [3, Linear Regression Models
-    continued](#linear-regression-models-continued)
+-   [2, An introduction to Linear Regression Models](#an-introduction-to-linear-regression-models)
+-   [3, Linear Regression Models continued](#linear-regression-models-continued)
 
 ------------------------------------------------------------------------
 
@@ -182,12 +180,9 @@ cor.test(PE$endurance, PE$activeyears)
 
 CAUTION:
 
--   The magnitude of a correlation depends upon many factors,
-    including sampling.
--   The magnitude of a correlation is also influenced by measurement of
-    X & Y.
--   The correlation coefficient is a sample statistic, just like
-    the mean.
+-   The magnitude of a correlation depends upon many factors, including sampling.
+-   The magnitude of a correlation is also influenced by measurement of X & Y.
+-   The correlation coefficient is a sample statistic, just like the mean.
 
 2, An introduction to Linear Regression Models
 ----------------------------------------------

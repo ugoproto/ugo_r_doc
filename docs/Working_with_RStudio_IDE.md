@@ -1,10 +1,8 @@
--   [Working with RStudio IDE
-    (Part 1)](#working-with-rstudio-ide-part-1)
+-   [Working with RStudio IDE (Part 1)](#working-with-rstudio-ide-part-1)
     -   [1, Orientation](#orientation)
     -   [2, Programming](#programming)
     -   [3, Project](#project)
--   [Working with RStudio IDE
-    (Part 2)](#working-with-rstudio-ide-part-2)
+-   [Working with RStudio IDE (Part 2)](#working-with-rstudio-ide-part-2)
     -   [1, Packages](#packages)
     -   [2, Version Control](#version-control)
     -   [3, Reporting](#reporting)
@@ -14,7 +12,7 @@
 **Foreword**
 
 -   Output options: the 'tango' syntax and the 'readable' theme.
--   Snippets, results, and notes.
+-   Snippets and results.
 
 ------------------------------------------------------------------------
 
@@ -52,7 +50,7 @@ df
 View(df) # in a new window
 ```
 
-![](img/Working_with_RStudio_IDE/Viewdf.png)
+![](Viewdf.png)
 
 **IDE panes**
 

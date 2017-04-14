@@ -13,17 +13,13 @@
     -   [Bivariate tests](#bivariate-tests)
     -   [ANOVA](#anova)
 -   [6, Multiple Regressions](#multiple-regressions)
--   [Fitting the Model](#fitting-the-model)
+    -   [Fitting the Model](#fitting-the-model)
     -   [Diagnostic plots](#diagnostic-plots)
-    -   [Comparing two models with
-        ANOVA](#comparing-two-models-with-anova)
+    -   [Comparing two models with ANOVA](#comparing-two-models-with-anova)
     -   [Cross validation](#cross-validation)
-    -   [Variable selection -- Heuristic
-        methods](#variable-selection----heuristic-methods)
-    -   [Variable selection -- Graphical
-        methods](#variable-selection----graphical-methods)
-    -   [Variable selection -- Relative
-        importance](#variable-selection----relative-importance)
+    -   [Variable selection -- Heuristic methods](#variable-selection----heuristic-methods)
+    -   [Variable selection -- Graphical methods](#variable-selection----graphical-methods)
+    -   [Variable selection -- Relative importance](#variable-selection----relative-importance)
     -   [Going further](#going-further)
 -   [7, Regression diagnostics](#regression-diagnostics)
     -   [Outliers](#outliers)
@@ -36,8 +32,7 @@
     -   [Global diagnostic](#global-diagnostic)
 -   [8, ANOVA](#anova-1)
     -   [Evaluate model effects](#evaluate-model-effects)
-    -   [Compare nested models
-        directly](#compare-nested-models-directly)
+    -   [Compare nested models directly](#compare-nested-models-directly)
     -   [Multiple comparisons](#multiple-comparisons)
     -   [Visualizing results](#visualizing-results)
     -   [MANOVA](#manova)
@@ -48,14 +43,10 @@
     -   [Multivariate normality](#multivariate-normality)
     -   [Heteroscedasticity](#heteroscedasticity-1)
 -   [10, Resampling Statistics](#resampling-statistics)
-    -   [Independent k-sample location
-        tests](#independent-k-sample-location-tests)
-    -   [Symmetry of a response for repeated
-        measurements](#symmetry-of-a-response-for-repeated-measurements)
-    -   [Independence of two numeric
-        variables](#independence-of-two-numeric-variables)
-    -   [Independence in contingency
-        tables](#independence-in-contingency-tables)
+    -   [Independent k-sample location tests](#independent-k-sample-location-tests)
+    -   [Symmetry of a response for repeated measurements](#symmetry-of-a-response-for-repeated-measurements)
+    -   [Independence of two numeric variables](#independence-of-two-numeric-variables)
+    -   [Independence in contingency tables](#independence-in-contingency-tables)
 
 ------------------------------------------------------------------------
 
@@ -69,8 +60,7 @@
 1, Descriptive Statistics
 -------------------------
 
-Extract basic, exploratory statistics from datasets with `apply`,
-`summary`, `fivenum`, `describe`, and `stat.desc`.
+Extract basic, exploratory statistics from datasets with `apply`, `summary`, `fivenum`, `describe`, and `stat.desc`.
 
 ``` r
 # dataset
@@ -417,9 +407,7 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 2, Frequency Tables, CrossTables, and Independence
 --------------------------------------------------
 
-Create frequency and contingency tables from categorical variables.
-Perform tests of independence, measures of association, and graphically
-display results.
+Create frequency and contingency tables from categorical variables. Perform tests of independence, measures of association, and graphically display results.
 
 ### 2D frequency tables
 
@@ -581,8 +569,7 @@ CrossTable(A, B) # mydata$myrowvar x mydata$mycolvar
 
 ### Tests of independence
 
-There are more tests of independence in section 10, Resampling
-Statistics.
+There are more tests of independence in section 10, Resampling Statistics.
 
 ``` r
 # dataset, a contingency table
@@ -760,8 +747,7 @@ loglm(~A + B + C + A * B + A * C + B * C, mytable)
 
 ### Measures of association
 
-Association between two nominal variables, giving a value between 0 and
-+1 (inclusive). It is based on Pearson's chi-squared statistic.
+Association between two nominal variables, giving a value between 0 and +1 (inclusive). It is based on Pearson's chi-squared statistic.
 
 ``` r
 # Dataset
@@ -990,8 +976,7 @@ cor(x, y)
 
 **Polychoric correlation**
 
-The correlation between two theorised normally distributed continuous
-latent variables, from two observed ordinal variables.
+The correlation between two theorised normally distributed continuous latent variables, from two observed ordinal variables.
 
 ``` r
 # dataset
@@ -1137,10 +1122,8 @@ t.test(as.numeric(colors[1,]), mu = 0, alternative="greater") # Ho: mu=<0
     ## mean of x 
     ##     143.6
 
--   `alternative="less"` or `alternative="greater"` option to specify a
-    one tailed test.
--   `var.equal = TRUE` option to specify equal variances and a pooled
-    variance estimate.
+-   `alternative="less"` or `alternative="greater"` option to specify a one tailed test.
+-   `var.equal = TRUE` option to specify equal variances and a pooled variance estimate.
 
 For multivariate tests and ANOVA, see sections 8 and 9.
 
@@ -1227,8 +1210,7 @@ kruskal.test(as.numeric(colors[1,]), as.numeric(colors[2,])) # where y and x are
 6, Multiple Regressions
 -----------------------
 
-Fitting the Model
------------------
+### Fitting the Model
 
 ``` r
 # multiple linear regression
@@ -1610,8 +1592,7 @@ step$anova # display results
     ##   Step Df Deviance Resid. Df Resid. Dev AIC
     ## 1                         11      21655 125
 
-The goal is to reduce the AIC. Adding variable does not improve the
-model. Let's opt for the most valuable variable.
+The goal is to reduce the AIC. Adding variable does not improve the model. Let's opt for the most valuable variable.
 
 ``` r
 fit <- lm(Armed.Forces ~ Unemployed, data = longley)
@@ -1732,8 +1713,7 @@ subsets(leaps, statistic = "bic", legend = FALSE) # available criteria are rsq, 
 
 ### Variable selection -- Relative importance
 
-Model:
-`fit <- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)`.
+Model: `fit <- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)`.
 
 Warning: `eval=FALSE`.
 
@@ -1773,8 +1753,7 @@ Results.
 
 **Bootstrapping**
 
-Model:
-`fit <- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)`.
+Model: `fit <- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)`.
 
 Warning: `eval=FALSE`.
 
@@ -1891,12 +1870,9 @@ The .png file.
 ### Going further
 
 -   The `nls` package provides functions for nonlinear regression.
--   Perform robust regression with the `rlm` function in the
-    `MASS` package.
--   The `robust` package provides a comprehensive library of robust
-    methods, including regression.
--   The `robustbase` package also provides basic robust statistics
-    including model selection methods.
+-   Perform robust regression with the `rlm` function in the `MASS` package.
+-   The `robust` package provides a comprehensive library of robust methods, including regression.
+-   The `robustbase` package also provides basic robust statistics including model selection methods.
 
 7, Regression diagnostics
 -------------------------
@@ -2134,8 +2110,7 @@ summary(gvmodel)
 8, ANOVA
 --------
 
-Analysis of variance (ANOVA) is an alternative to regressions among
-other applications.
+Analysis of variance (ANOVA) is an alternative to regressions among other applications.
 
 ``` r
 # lower case letters are numeric variables
@@ -2306,8 +2281,7 @@ summary(fit)
 ### Evaluate model effects
 
 -   Type I sequential SS: A+B and B+A will produce different results!
--   Use the `drop1` to produce the familiar Type III results; compare
-    each term with the full model.
+-   Use the `drop1` to produce the familiar Type III results; compare each term with the full model.
 
 <!-- -->
 
@@ -2401,9 +2375,8 @@ anova(fit1, fit2)
 
 ### Multiple comparisons
 
--   Tukey HSD tests for post hoc comparisons on each factor in
-    the model.
--   Factors as an option
+-   Tukey HSD tests for post hoc comparisons on each factor in the model.
+-   Factors as an option.
 -   Type I SS.
 
 <!-- -->
@@ -2522,9 +2495,7 @@ detach(mtcars)
 
 ### MANOVA
 
-Multivariate analysis of variance (MANOVA) With more than one dependent
-variable Y. We can run several ANOVA over different Y, or one MANOVA
-with one Y built with several variables.
+Multivariate analysis of variance (MANOVA) With more than one dependent variable Y. We can run several ANOVA over different Y, or one MANOVA with one Y built with several variables.
 
 ``` r
 head(longley, 3)
@@ -2619,14 +2590,11 @@ summary(fit2)
 
 **Multiple comparisons**
 
-`TukeyHSD` and `plot` do work with a MANOVA fit. Run each dependent
-variable separately to obtain them... or proceed with ANOVA on each
-dependent variable.
+`TukeyHSD` and `plot` do work with a MANOVA fit. Run each dependent variable separately to obtain them... or proceed with ANOVA on each dependent variable.
 
 ### Going further
 
-Package `lme4` has excellent facilities for fitting linear and
-generalized linear mixed-effects models.
+Package `lme4` has excellent facilities for fitting linear and generalized linear mixed-effects models.
 
 9, (M)ANOVA Assumptions
 -----------------------
@@ -2793,9 +2761,7 @@ mshapiro.test(t(EuStockMarkets))
     ## data:  Z
     ## W = 0.9, p-value <2e-16
 
-With a p x 1 multivariate normal random vector x vector, the squared
-Mahalanobis distance between x and ?? is going to be chi-square
-distributed with p degrees of freedom.
+With a p x 1 multivariate normal random vector x vector, the squared Mahalanobis distance between x and ?? is going to be chi-square distributed with p degrees of freedom.
 
 ``` r
 # graphical assessment of multivariate normality
@@ -2937,11 +2903,8 @@ wilcox_test(mpg ~ factor(am), data = mtcars, distribution = "exact")
 # lower case letters represent numerical variables and upper case letters represent categorical factors
 ```
 
--   Monte-Carlo simulations are available for all tests. Exact tests are
-    available for 2 group procedures.
--   These tests do not assume random sampling from
-    well-defined populations. They can be a reasonable alternative to
-    classical procedures when test assumptions can not be met.
+-   Monte-Carlo simulations are available for all tests. Exact tests are available for 2 group procedures.
+-   These tests do not assume random sampling from well-defined populations. They can be a reasonable alternative to     classical procedures when test assumptions can not be met.
 
 <!-- -->
 
@@ -3092,5 +3055,4 @@ lbl_test(Plant ~ Type, data = CO2, distribution = approximate(B = 9999))
     ## Z = -8, p-value <2e-16
     ## alternative hypothesis: two.sided
 
-Many other univariate and multivariate tests are possible using the
-functions in the `coin` package.
+Many other univariate and multivariate tests are possible using the functions in the `coin` package.

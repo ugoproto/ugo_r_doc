@@ -116,7 +116,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+    <a class="" href="../Data_Analysis_in_R%2C_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
                 </li>
     </ul>
 	    </li>
@@ -235,10 +239,9 @@
 
     <li class="toctree-l3"><a href="#6-multiple-regressions">6, Multiple Regressions</a></li>
     
-
-    <li class="toctree-l3"><a href="#fitting-the-model">Fitting the Model</a></li>
-    
         <ul>
+        
+            <li><a class="toctree-l4" href="#fitting-the-model">Fitting the Model</a></li>
         
             <li><a class="toctree-l4" href="#diagnostic-plots">Diagnostic plots</a></li>
         
@@ -401,18 +404,14 @@
 <li><a href="#anova">ANOVA</a></li>
 </ul>
 </li>
-<li><a href="#multiple-regressions">6, Multiple Regressions</a></li>
-<li><a href="#fitting-the-model">Fitting the Model</a><ul>
+<li><a href="#multiple-regressions">6, Multiple Regressions</a><ul>
+<li><a href="#fitting-the-model">Fitting the Model</a></li>
 <li><a href="#diagnostic-plots">Diagnostic plots</a></li>
-<li><a href="#comparing-two-models-with-anova">Comparing two models with<br />
-    ANOVA</a></li>
+<li><a href="#comparing-two-models-with-anova">Comparing two models with ANOVA</a></li>
 <li><a href="#cross-validation">Cross validation</a></li>
-<li><a href="#variable-selection----heuristic-methods">Variable selection &ndash; Heuristic<br />
-    methods</a></li>
-<li><a href="#variable-selection----graphical-methods">Variable selection &ndash; Graphical<br />
-    methods</a></li>
-<li><a href="#variable-selection----relative-importance">Variable selection &ndash; Relative<br />
-    importance</a></li>
+<li><a href="#variable-selection----heuristic-methods">Variable selection &ndash; Heuristic methods</a></li>
+<li><a href="#variable-selection----graphical-methods">Variable selection &ndash; Graphical methods</a></li>
+<li><a href="#variable-selection----relative-importance">Variable selection &ndash; Relative importance</a></li>
 <li><a href="#going-further">Going further</a></li>
 </ul>
 </li>
@@ -429,8 +428,7 @@
 </li>
 <li><a href="#anova-1">8, ANOVA</a><ul>
 <li><a href="#evaluate-model-effects">Evaluate model effects</a></li>
-<li><a href="#compare-nested-models-directly">Compare nested models<br />
-    directly</a></li>
+<li><a href="#compare-nested-models-directly">Compare nested models directly</a></li>
 <li><a href="#multiple-comparisons">Multiple comparisons</a></li>
 <li><a href="#visualizing-results">Visualizing results</a></li>
 <li><a href="#manova">MANOVA</a></li>
@@ -445,14 +443,10 @@
 </ul>
 </li>
 <li><a href="#resampling-statistics">10, Resampling Statistics</a><ul>
-<li><a href="#independent-k-sample-location-tests">Independent k-sample location<br />
-    tests</a></li>
-<li><a href="#symmetry-of-a-response-for-repeated-measurements">Symmetry of a response for repeated<br />
-    measurements</a></li>
-<li><a href="#independence-of-two-numeric-variables">Independence of two numeric<br />
-    variables</a></li>
-<li><a href="#independence-in-contingency-tables">Independence in contingency<br />
-    tables</a></li>
+<li><a href="#independent-k-sample-location-tests">Independent k-sample location tests</a></li>
+<li><a href="#symmetry-of-a-response-for-repeated-measurements">Symmetry of a response for repeated measurements</a></li>
+<li><a href="#independence-of-two-numeric-variables">Independence of two numeric variables</a></li>
+<li><a href="#independence-in-contingency-tables">Independence in contingency tables</a></li>
 </ul>
 </li>
 </ul>
@@ -464,8 +458,7 @@
 </ul>
 <hr />
 <h4 id="1-descriptive-statistics">1, Descriptive Statistics<a class="headerlink" href="#1-descriptive-statistics" title="Permanent link">&para;</a></h4>
-<p>Extract basic, exploratory statistics from datasets with <code>apply</code>,<br />
-<code>summary</code>, <code>fivenum</code>, <code>describe</code>, and <code>stat.desc</code>.</p>
+<p>Extract basic, exploratory statistics from datasets with <code>apply</code>, <code>summary</code>, <code>fivenum</code>, <code>describe</code>, and <code>stat.desc</code>.</p>
 <pre><code class="r"># dataset
 head(longley, 3)
 </code></pre>
@@ -795,9 +788,7 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 ## 5   8  0 15.10000 2.5600481 3.999214 0.7594047
 </code></pre>
 <h4 id="2-frequency-tables-crosstables-and-independence">2, Frequency Tables, CrossTables, and Independence<a class="headerlink" href="#2-frequency-tables-crosstables-and-independence" title="Permanent link">&para;</a></h4>
-<p>Create frequency and contingency tables from categorical variables.<br />
-Perform tests of independence, measures of association, and graphically<br />
-display results.</p>
+<p>Create frequency and contingency tables from categorical variables. Perform tests of independence, measures of association, and graphically display results.</p>
 <h5 id="2d-frequency-tables">2D frequency tables<a class="headerlink" href="#2d-frequency-tables" title="Permanent link">&para;</a></h5>
 <p><code>mytable &lt;- table(A, B)</code> where A are rows, B are columns.</p>
 <pre><code class="r"># dataset
@@ -939,8 +930,7 @@ CrossTable(A, B) # mydata$myrowvar x mydata$mycolvar
 ##
 </code></pre>
 <h5 id="tests-of-independence">Tests of independence<a class="headerlink" href="#tests-of-independence" title="Permanent link">&para;</a></h5>
-<p>There are more tests of independence in section 10, Resampling<br />
-Statistics.</p>
+<p>There are more tests of independence in section 10, Resampling Statistics.</p>
 <pre><code class="r"># dataset, a contingency table
 colors
 </code></pre>
@@ -1106,8 +1096,7 @@ loglm(~A + B + C + A * B + A * C + B * C, mytable)
 ## Pearson               NaN 4950      NaN
 </code></pre>
 <h5 id="measures-of-association">Measures of association<a class="headerlink" href="#measures-of-association" title="Permanent link">&para;</a></h5>
-<p>Association between two nominal variables, giving a value between 0 and<br />
-+1 (inclusive). It is based on Pearson&rsquo;s chi-squared statistic.</p>
+<p>Association between two nominal variables, giving a value between 0 and +1 (inclusive). It is based on Pearson&rsquo;s chi-squared statistic.</p>
 <pre><code class="r"># Dataset
 str(Arthritis)
 </code></pre>
@@ -1320,8 +1309,7 @@ cor(x, y)
 ## disp  0.7909486 -0.7102139  0.8879799
 </code></pre>
 <p><strong>Polychoric correlation</strong></p>
-<p>The correlation between two theorised normally distributed continuous<br />
-latent variables, from two observed ordinal variables.</p>
+<p>The correlation between two theorised normally distributed continuous latent variables, from two observed ordinal variables.</p>
 <pre><code class="r"># dataset
 # 2-way contingency table of counts
 colors
@@ -1456,10 +1444,8 @@ t.test(as.numeric(colors[1,]), mu = 0) # Ho: mu=0
 ##     143.6
 </code></pre>
 <ul>
-<li><code>alternative="less"</code> or <code>alternative="greater"</code> option to specify a<br />
-    one tailed test.</li>
-<li><code>var.equal = TRUE</code> option to specify equal variances and a pooled<br />
-    variance estimate.</li>
+<li><code>alternative="less"</code> or <code>alternative="greater"</code> option to specify a one tailed test.</li>
+<li><code>var.equal = TRUE</code> option to specify equal variances and a pooled variance estimate.</li>
 </ul>
 <p>For multivariate tests and ANOVA, see sections 8 and 9.</p>
 <h4 id="5-nonparametric-statistics">5, Nonparametric statistics<a class="headerlink" href="#5-nonparametric-statistics" title="Permanent link">&para;</a></h4>
@@ -1531,7 +1517,7 @@ kruskal.test(as.numeric(colors[1,]), as.numeric(colors[2,])) # where y and x are
 ## Kruskal-Wallis chi-squared = 4, df = 4, p-value = 0.406
 </code></pre>
 <h4 id="6-multiple-regressions">6, Multiple Regressions<a class="headerlink" href="#6-multiple-regressions" title="Permanent link">&para;</a></h4>
-<h4 id="fitting-the-model">Fitting the Model<a class="headerlink" href="#fitting-the-model" title="Permanent link">&para;</a></h4>
+<h5 id="fitting-the-model">Fitting the Model<a class="headerlink" href="#fitting-the-model" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># multiple linear regression
 fit &lt;- lm(y ~ x1 + x2 + x3, data = mydata)
 summary(fit) # show results
@@ -1884,8 +1870,7 @@ step &lt;- stepAIC(fit, direction = &quot;both&quot;)
 ##   Step Df Deviance Resid. Df Resid. Dev AIC
 ## 1                         11      21655 125
 </code></pre>
-<p>The goal is to reduce the AIC. Adding variable does not improve the<br />
-model. Let&rsquo;s opt for the most valuable variable.</p>
+<p>The goal is to reduce the AIC. Adding variable does not improve the model. Let&rsquo;s opt for the most valuable variable.</p>
 <pre><code class="r">fit &lt;- lm(Armed.Forces ~ Unemployed, data = longley)
 step &lt;- stepAIC(fit, direction = &quot;both&quot;)
 </code></pre>
@@ -1993,8 +1978,7 @@ subsets(leaps, statistic = &quot;rsq&quot;, legend = FALSE) # available criteria
 ## Unemployed            U
 </code></pre>
 <h5 id="variable-selection-relative-importance">Variable selection &ndash; Relative importance<a class="headerlink" href="#variable-selection-relative-importance" title="Permanent link">&para;</a></h5>
-<p>Model:<br />
-<code>fit &lt;- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)</code>.</p>
+<p>Model: <code>fit &lt;- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)</code>.</p>
 <p>Warning: <code>eval=FALSE</code>.</p>
 <pre><code class="r"># calculate the relative importance of each predictor
 library(relaimpo)
@@ -2029,8 +2013,7 @@ Employed    9.062  17.646 -34.249 -54.144
 Unemployed -0.132  -0.511  -0.584  -0.436
 </code></pre>
 <p><strong>Bootstrapping</strong></p>
-<p>Model:<br />
-<code>fit &lt;- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)</code>.</p>
+<p>Model: <code>fit &lt;- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)</code>.</p>
 <p>Warning: <code>eval=FALSE</code>.</p>
 <pre><code class="r"># bootstrap measures of relative importance (1000 samples)
 boot &lt;- boot.relimp(fit, b = 1000, type = c(&quot;lmg&quot;, &quot;last&quot;, &quot;first&quot;, &quot;pratt&quot;), rank = TRUE, diff = TRUE, rela = TRUE)
@@ -2140,12 +2123,9 @@ CAUTION: Bootstrap confidence intervals can be somewhat liberal.
 <h5 id="going-further">Going further<a class="headerlink" href="#going-further" title="Permanent link">&para;</a></h5>
 <ul>
 <li>The <code>nls</code> package provides functions for nonlinear regression.</li>
-<li>Perform robust regression with the <code>rlm</code> function in the<br />
-<code>MASS</code> package.</li>
-<li>The <code>robust</code> package provides a comprehensive library of robust<br />
-    methods, including regression.</li>
-<li>The <code>robustbase</code> package also provides basic robust statistics<br />
-    including model selection methods.</li>
+<li>Perform robust regression with the <code>rlm</code> function in the <code>MASS</code> package.</li>
+<li>The <code>robust</code> package provides a comprehensive library of robust methods, including regression.</li>
+<li>The <code>robustbase</code> package also provides basic robust statistics including model selection methods.</li>
 </ul>
 <h4 id="7-regression-diagnostics">7, Regression diagnostics<a class="headerlink" href="#7-regression-diagnostics" title="Permanent link">&para;</a></h4>
 <pre><code class="r"># assume that we are fitting a multiple linear regression
@@ -2334,8 +2314,7 @@ summary(gvmodel)
 ## Heteroscedasticity  0.8947 0.34421    Assumptions acceptable.
 </code></pre>
 <h4 id="8-anova">8, ANOVA<a class="headerlink" href="#8-anova" title="Permanent link">&para;</a></h4>
-<p>Analysis of variance (ANOVA) is an alternative to regressions among<br />
-other applications.</p>
+<p>Analysis of variance (ANOVA) is an alternative to regressions among other applications.</p>
 <pre><code class="r"># lower case letters are numeric variables
 # upper case letters are factors
 
@@ -2493,8 +2472,7 @@ fit
 <h5 id="evaluate-model-effects">Evaluate model effects<a class="headerlink" href="#evaluate-model-effects" title="Permanent link">&para;</a></h5>
 <ul>
 <li>Type I sequential SS: A+B and B+A will produce different results!</li>
-<li>Use the <code>drop1</code> to produce the familiar Type III results; compare<br />
-    each term with the full model.</li>
+<li>Use the <code>drop1</code> to produce the familiar Type III results; compare each term with the full model.</li>
 </ul>
 <!-- -->
 
@@ -2581,9 +2559,8 @@ anova(fit1, fit2)
 </code></pre>
 <h5 id="multiple-comparisons">Multiple comparisons<a class="headerlink" href="#multiple-comparisons" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Tukey HSD tests for post hoc comparisons on each factor in<br />
-    the model.</li>
-<li>Factors as an option</li>
+<li>Tukey HSD tests for post hoc comparisons on each factor in the model.</li>
+<li>Factors as an option.</li>
 <li>Type I SS.</li>
 </ul>
 <!-- -->
@@ -2694,9 +2671,7 @@ plotmeans(mpg ~ cyl, xlab = &quot;Number of Cylinders&quot;, ylab = &quot;Miles 
 </code></pre>
 
 <h5 id="manova">MANOVA<a class="headerlink" href="#manova" title="Permanent link">&para;</a></h5>
-<p>Multivariate analysis of variance (MANOVA) With more than one dependent<br />
-variable Y. We can run several ANOVA over different Y, or one MANOVA<br />
-with one Y built with several variables.</p>
+<p>Multivariate analysis of variance (MANOVA) With more than one dependent variable Y. We can run several ANOVA over different Y, or one MANOVA with one Y built with several variables.</p>
 <pre><code class="r">head(longley, 3)
 </code></pre>
 
@@ -2784,12 +2759,9 @@ summary(fit2)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 </code></pre>
 <p><strong>Multiple comparisons</strong></p>
-<p><code>TukeyHSD</code> and <code>plot</code> do work with a MANOVA fit. Run each dependent<br />
-variable separately to obtain them&hellip; or proceed with ANOVA on each<br />
-dependent variable.</p>
+<p><code>TukeyHSD</code> and <code>plot</code> do work with a MANOVA fit. Run each dependent variable separately to obtain them&hellip; or proceed with ANOVA on each dependent variable.</p>
 <h5 id="going-further_1">Going further<a class="headerlink" href="#going-further_1" title="Permanent link">&para;</a></h5>
-<p>Package <code>lme4</code> has excellent facilities for fitting linear and<br />
-generalized linear mixed-effects models.</p>
+<p>Package <code>lme4</code> has excellent facilities for fitting linear and generalized linear mixed-effects models.</p>
 <h4 id="9-manova-assumptions">9, (M)ANOVA Assumptions<a class="headerlink" href="#9-manova-assumptions" title="Permanent link">&para;</a></h4>
 <h5 id="outliers_1">Outliers<a class="headerlink" href="#outliers_1" title="Permanent link">&para;</a></h5>
 <p>Outliers can severely affect normality and homogeneity of variance.</p>
@@ -2934,9 +2906,7 @@ mshapiro.test(t(EuStockMarkets))
 ## data:  Z
 ## W = 0.9, p-value &lt;2e-16
 </code></pre>
-<p>With a p x 1 multivariate normal random vector x vector, the squared<br />
-Mahalanobis distance between x and ?? is going to be chi-square<br />
-distributed with p degrees of freedom.</p>
+<p>With a p x 1 multivariate normal random vector x vector, the squared Mahalanobis distance between x and ?? is going to be chi-square distributed with p degrees of freedom.</p>
 <pre><code class="r"># graphical assessment of multivariate normality
 x &lt;- as.matrix(EuStockMarkets) # n x p numeric matrix
 center &lt;- colMeans(x) # centroid
@@ -3058,11 +3028,8 @@ wilcox_test(mpg ~ factor(am), data = mtcars, distribution = &quot;exact&quot;)
 </code></pre>
 
 <ul>
-<li>Monte-Carlo simulations are available for all tests. Exact tests are<br />
-    available for 2 group procedures.</li>
-<li>These tests do not assume random sampling from<br />
-    well-defined populations. They can be a reasonable alternative to<br />
-    classical procedures when test assumptions can not be met.</li>
+<li>Monte-Carlo simulations are available for all tests. Exact tests are available for 2 group procedures.</li>
+<li>These tests do not assume random sampling from well-defined populations. They can be a reasonable alternative to     classical procedures when test assumptions can not be met.</li>
 </ul>
 <!-- -->
 
@@ -3201,8 +3168,7 @@ lbl_test(Plant ~ Type, data = CO2, distribution = approximate(B = 9999))
 ## Z = -8, p-value &lt;2e-16
 ## alternative hypothesis: two.sided
 </code></pre>
-<p>Many other univariate and multivariate tests are possible using the<br />
-functions in the <code>coin</code> package.</p>
+<p>Many other univariate and multivariate tests are possible using the functions in the <code>coin</code> package.</p>
               
             </div>
           </div>

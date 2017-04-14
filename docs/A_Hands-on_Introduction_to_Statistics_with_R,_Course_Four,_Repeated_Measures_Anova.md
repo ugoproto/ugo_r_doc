@@ -1,5 +1,4 @@
--   [1, An introduction to repeated
-    measures](#an-introduction-to-repeated-measures)
+-   [1, An introduction to repeated measures](#an-introduction-to-repeated-measures)
 -   [2, Repeated measures ANOVA](#repeated-measures-anova)
 
 ------------------------------------------------------------------------
@@ -14,33 +13,19 @@
 1, An introduction to repeated measures
 ---------------------------------------
 
-The independent t-test is analogous to between-groups ANOVA and the
-paired-sample t-test is analogous to repeated measures ANOVA.
+The independent t-test is analogous to between-groups ANOVA and the paired-sample t-test is analogous to repeated measures ANOVA.
 
-In a between-groups design, each subject is exposed to two or more
-treatments or conditions over time. In a within-subjects design, each
-subject is allocated to exactly one treatment or condition.
+In a between-groups design, each subject is exposed to two or more treatments or conditions over time. In a within-subjects design, each subject is allocated to exactly one treatment or condition.
 
 Between:
 
--   Experiment 1: You want to test the effect of alcohol on test scores
-    of students. There are three conditions: the student consumed no
-    alcohol, two glasses of beer, or five glasses of beer. Alcohol
-    tolerance and time spent studying should also be considered somehow.
+-   Experiment 1: You want to test the effect of alcohol on test scores of students. There are three conditions: the student consumed no alcohol, two glasses of beer, or five glasses of beer. Alcohol tolerance and time spent studying should also be considered somehow.
+-   Experiment 2: You want to investigate the effects of certain fertilizers on plant growth. Assume you have two different
+    fertilizers, A and B. Consider three conditions: you give the plant no fertilizer, fertilizer A, or fertilizer B. You measure the height of the plant after a specific period of time to see whether the fertilizers had an effect.
 
--   Experiment 2: You want to investigate the effects of certain
-    fertilizers on plant growth. Assume you have two different
-    fertilizers, A and B. Consider three conditions: you give the plant
-    no fertilizer, fertilizer A, or fertilizer B. You measure the height
-    of the plant after a specific period of time to see whether the
-    fertilizers had an effect.
+Use a within-subjects design for for Experiment 1 and between-groups design for Experiment 2.
 
-Use a within-subjects design for for Experiment 1 and between-groups
-design for Experiment 2.
-
-Is it always either manipulation between-groups or manipulation
-within-groups, or are there experiments where you could use either
-approach? In some cases, either approach is possible.
+Is it always either manipulation between-groups or manipulation within-groups, or are there experiments where you could use either approach? In some cases, either approach is possible.
 
 **Explore the working memory data**
 
@@ -123,71 +108,48 @@ ggplot(data = wm, aes(x = wm$condition, y = wm$iq, group = wm$subject, colour = 
 
 **Reduced cost**
 
-The cost advantage of using manipulation within groups verses
-manipulation between groups for the working memory experiment is you
-need 60 subjects fewer.
+The cost advantage of using manipulation within groups verses manipulation between groups for the working memory experiment is you need 60 subjects fewer.
 
 **Statistically more powerful**
 
-Repeated measures analysis accounts for individual differences across
-the experiment. This reduces the error term, which increases statistical
-power.
+Repeated measures analysis accounts for individual differences across the experiment. This reduces the error term, which  increases statistical power.
 
 **Counterbalancing**
 
-Suppose you have three levels of an independent variable A (i.e. A1, A2,
-A3) and a blocked design. You want to use full counterbalancing to take
-into account order effects.
+Suppose you have three levels of an independent variable A (i.e. A1, A2, A3) and a blocked design. You want to use full counterbalancing to take into account order effects.
 
-What are all the possible orders that you need to use? In other words,
-what are the order conditions?
+What are all the possible orders that you need to use? In other words, what are the order conditions?
 
 (A1, A2, A3), (A1, A3, A2) , (A2, A1, A3), (A2, A3, A1) , (A3, A2, A1),
 (A3, A1, A2)
 
 **Number of order conditions?**
 
-Assume the number of levels of the independent variable goes up and you
-want to completely counterbalance. What will happen to the number of
-order conditions you'll need?
+Assume the number of levels of the independent variable goes up and you want to completely counterbalance. What will happen to the number of order conditions you'll need?
 
-The number becomes really large. An independent variable with n levels
-will have `n!=n*(n???1)*(n???2)*...` order conditions.
+The number becomes really large. An independent variable with n levels will have `n!=n*(n???1)*(n???2)*...` order conditions.
 
 **Latin Squares design**
 
-As you hopefully realized in the previous exercise, completely
-counterbalancing is not always a practical solution for taking into
-account order effects. This is because the number of different orders
-required gets really large as the number of possible conditions
-increases.
+As you hopefully realized in the previous exercise, completely counterbalancing is not always a practical solution for taking into account order effects. This is because the number of different orders required gets really large as the number of possible conditions increases.
 
-The most common workaround to this problem is the Latin Squares design,
-in which you do not completely counterbalance, but instead put each
-condition at every position (at least) once.
+The most common workaround to this problem is the Latin Squares design, in which you do not completely counterbalance, but instead put each condition at every position (at least) once.
 
-Which of the following examples has been constructed according to the
-Latin Squares design?
+Which of the following examples has been constructed according to the Latin Squares design?
 
 (A1, A2, A3), (A2, A3, A1), (A3, A1, A2)
 
 **More on Latin Squares**
 
-The number of order conditions is always equal to the number of levels
-of your independent variable.
+The number of order conditions is always equal to the number of levels of your independent variable.
 
 **Why is missing data a problem?**
 
-In a between-groups design, it is okay to have a slightly different
-number of subjects in each group, so if one subject drops out in one of
-the conditions then that group has just one less subject. Now you want
-to look at how subjects change over time and the different scores
-between two or more conditions for each subject.
+In a between-groups design, it is okay to have a slightly different number of subjects in each group, so if one subject drops out in one of the conditions then that group has just one less subject. Now you want to look at how subjects change over time and the different scores between two or more conditions for each subject.
 
 **Understanding sphericity**
 
-The variances of the differences between all possible pairs of groups
-(i.e. levels of the independent variable) are equal.
+The variances of the differences between all possible pairs of groups (i.e. levels of the independent variable) are equal.
 
 **Mauchly's test**
 
@@ -223,12 +185,9 @@ Order effects, counterbalancing, missing data, and an extra assumption
 
 **The systematic between groups variance**
 
-To understand everything a bit better, we will calculate the F-ratio for
-a repeated measures design by ourself in the next exercises.
+To understand everything a bit better, we will calculate the F-ratio for a repeated measures design by ourself in the next exercises.
 
-First, we will need the systematic between-groups variance. This is the
-same as in the between-groups design--the variance due to grouping by
-condition.
+First, we will need the systematic between-groups variance. This is the same as in the between-groups design--the variance due to grouping by condition.
 
 ``` r
 # Define number of subjects for each condition
@@ -252,18 +211,13 @@ ms_cond <- ss_cond/df
 
 **The subject variance**
 
-We will also need the error term of the repeated measures design. This
-can be calculated in a few steps.
+We will also need the error term of the repeated measures design. This can be calculated in a few steps.
 
 -   First calculate the systematic variance due to subjects.
--   Below, we will calculate the unsystematic variance, like we did with
-    the between-groups design.
--   If we subtract these two results, we will get the error term of the
-    repeated measures design.
+-   Below, we will calculate the unsystematic variance, like we did with the between-groups design.
+-   If we subtract these two results, we will get the error term of the repeated measures design.
 
-The systematic (stable) subject variance will be taken out of the error
-term, so the error term is reduced in comparison with the between-groups
-design.
+The systematic (stable) subject variance will be taken out of the error term, so the error term is reduced in comparison with the between-groups design.
 
 ``` r
 # Define number of conditions for each subject
@@ -287,9 +241,7 @@ ms_subjects <- ss_subjects/df
 
 **The unsystematic within groups variance**
 
-To calculate the error term of the repeated measures design, we need the
-unsystematic within-groups variance: the unsystematic variance or the
-error term of the between-groups design.
+To calculate the error term of the repeated measures design, we need the unsystematic within-groups variance: the unsystematic variance or the error term of the between-groups design.
 
 ``` r
 # Create four subsets of the four groups, containing the IQ results
@@ -323,8 +275,7 @@ ms_sa <- ss_sa/df
 
 **The unsystematic variance for the repeated measures design**
 
-Now we can easily calculate the unsystematic variance for the repeated
-measures design, also called the error term.
+Now we can easily calculate the unsystematic variance for the repeated measures design, also called the error term.
 
 ``` r
 # ss_sa = ss_subjects + ss_rm
@@ -337,15 +288,11 @@ df <- (20 - 1)*(4 - 1)
 ms_rm <- ss_rm/df
 ```
 
-Now we've calculated the error term of the repeated measures design,
-which is clearly smaller than the error term of the between-groups
-design because you reduced this one. To complete you can now calculate
-the F-ratio and the corresponding p-value.
+Now we've calculated the error term of the repeated measures design, which is clearly smaller than the error term of the between-groups design because you reduced this one. To complete you can now calculate the F-ratio and the corresponding p-value.
 
 **F-ratio and p-value**
 
-To do the ANOVA analysis we actually need the F-ratio and the
-corresponding p-value.
+To do the ANOVA analysis we actually need the F-ratio and the corresponding p-value.
 
 ``` r
 # Calculate the F-ratio
@@ -363,9 +310,7 @@ p <- 1 - pf(f_rat, df1, df2)
 
 **Error term in a repeated measures design?**
 
-The inconsistent individual differences across conditions, the effect of
-subjects that differ across conditions. So it is an interaction between
-subjects and condition.
+The inconsistent individual differences across conditions, the effect of subjects that differ across conditions. So it is an interaction between subjects and condition.
 
 **Anova in R**
 
@@ -391,8 +336,7 @@ summary(model)
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-The F-ratio is significant. Therefore, the number of training days does
-affect the IQ scores.
+The F-ratio is significant. Therefore, the number of training days does affect the IQ scores.
 
 **Effect size**
 
@@ -412,8 +356,7 @@ eta_sq <- ss_cond / ss_total
 
 **Post-hoc test one**
 
-We will now look at a few different procedures for the post-hoc test.
-Let's start with the Holm procedure.
+We will now look at a few different procedures for the post-hoc test. Let's start with the Holm procedure.
 
 ``` r
 # Post-hoc test: default procedure
@@ -432,20 +375,15 @@ with(wm, pairwise.t.test(iq, condition, paired = T))
     ## 
     ## P value adjustment method: holm
 
-We get a table with some values as the output for the post-hoc test and
-a line saying that we have used the Holm procedure. What are the values
-in the table of the output? p-values.
+We get a table with some values as the output for the post-hoc test and a line saying that we have used the Holm procedure. What are the values in the table of the output? p-values.
 
 Recall that the hypotheses are tested at a 5% significance level.
 
-We can conclude that all pairwise comparisons are significant, except
-for the comparison between 19 and 17 and the comparison between 12 and
-8.
+We can conclude that all pairwise comparisons are significant, except for the comparison between 19 and 17 and the comparison between 12 and 8.
 
 **Post-hoc test: Bonferroni**
 
-Now we'll take a look at the most conservative procedure, Bonferroni.
-This procedure will apply the most extreme adjustments to the p-values.
+Now we'll take a look at the most conservative procedure, Bonferroni. This procedure will apply the most extreme adjustments to the p-values.
 
 ``` r
 # Post-hoc test: Bonferroni procedure
@@ -468,11 +406,9 @@ Notice the change in p-values in comparison with the previous procedure.
 
 **Paired t-test**
 
-Assume that you do not know how to perform an analysis of variance
-(ANOVA), we may do a number of paired t-tests instead.
+Assume that you do not know how to perform an analysis of variance (ANOVA), we may do a number of paired t-tests instead.
 
-Have a look at just one paired t-test and take, for example, the
-comparison between 12 days and 17 days.
+Have a look at just one paired t-test and take, for example, the comparison between 12 days and 17 days.
 
 ``` r
 # Define two subsets containing the IQ scores for the condition group '12 days' and '17 days'
@@ -501,14 +437,9 @@ t.test(cond_12days, cond_17days, paired = TRUE)
     ## mean of the differences 
     ##                  -2.205
 
-It is clear that we can apply different procedures for post-hoc tests.
-These procedures differ with respect to how they handle inflation of the
-possibility of a type I error and will therefore give us different
-p-values. However, these p-values will always be in a certain range.
+It is clear that we can apply different procedures for post-hoc tests. These procedures differ with respect to how they handle inflation of the possibility of a type I error and will therefore give us different p-values. However, these p-values will always be in a certain range.
 
-What is the (smallest) range of p-values for the comparison between 12
-days and 17 days? Look at the results from applying the Bonferroni
-procedure as well as the paired t-test.
+What is the (smallest) range of p-values for the comparison between 12 days and 17 days? Look at the results from applying the Bonferroni procedure as well as the paired t-test.
 
 p-values:
 

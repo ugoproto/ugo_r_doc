@@ -1,8 +1,30 @@
 -   [1, Conditionals and Control Flow](#conditionals-and-control-flow)
+    -   [Equality (or not)](#equality-or-not)
+    -   [`&` and `|`](#and)
+    -   [The `if` statement (and more)](#the-if-statement-and-more)
 -   [2, Loops](#loops)
+    -   [Write a `while` loop](#write-a-while-loop)
+    -   [Write a `for` loop](#write-a-for-loop)
+    -   [Mix up loops with control flow](#mix-up-loops-with-control-flow)
 -   [3, Functions](#functions)
+    -   [Function documentation](#function-documentation)
+    -   [Use a function](#use-a-function)
+    -   [Functions inside functions](#functions-inside-functions)
+    -   [Write your own function](#write-your-own-function)
+    -   [R you functional?](#r-you-functional)
+    -   [Load an R package](#load-an-r-package)
 -   [4, The `apply` Family](#the-apply-family)
+    -   [Use `lapply` (with a built-in R function)](#use-lapply-with-a-built-in-r-function)
+    -   [Use `sapply`](#use-sapply)
+    -   [Use `vapply`](#use-vapply)
+    -   [Apply your knowledge. Or better yet: `sapply` it?](#apply-your-knowledge.-or-better-yet-sapply-it)
 -   [5, Utilities](#utilities)
+    -   [Mathematical utilities](#mathematical-utilities)
+    -   [Find the error](#find-the-error)
+    -   [Data utilities](#data-utilities)
+    -   [Beat Gauss using R](#beat-gauss-using-r)
+    -   [`grepl` & `grep` (and the likes)](#grepl-grep-and-the-likes)
+    -   [Time is of the essence](#time-is-of-the-essence)
 
 ------------------------------------------------------------------------
 
@@ -16,7 +38,7 @@
 1, Conditionals and Control Flow
 --------------------------------
 
-**Equality**
+### Equality (or not)
 
 ``` r
 # Comparison of logicals
@@ -125,7 +147,7 @@ sum(facebook >= linkedin * 2)
 
     ## [1] 2
 
-**`&` and `|`**
+### `&` and `|`
 
 ``` r
 # The linkedin and last variable
@@ -180,11 +202,6 @@ views > 11 & views <= 14
 **Blend it all together**
 
 ``` r
-library(XLConnectJars)
-library(XLConnect)
-```
-
-``` r
 # Select the second column, named day2, from li_df: second
 second <- li_df$day2
 
@@ -197,7 +214,7 @@ sum(extremes)
 
     ## [1] 16
 
-**The `if` statement**
+### The `if` statement (and more)
 
 ``` r
 # Variables related to your last day of recordings
@@ -304,7 +321,7 @@ sms
 2, Loops
 --------
 
-**Write a `while` loop**
+### Write a `while` loop
 
 ``` r
 # Initialize the speed variable
@@ -407,6 +424,8 @@ while (i <= 10) {
     ## [1] 21
     ## [1] 24
 
+### Write a `for` loop
+
 **Loop over a vector**
 
 ``` r
@@ -499,7 +518,7 @@ for (i in 1:nrow(ttt)) {
     ## [1] "On row 3 and column 2 the board contains  NA"
     ## [1] "On row 3 and column 3 the board contains  X"
 
-**Mix it up with control flow**
+### Mix up loops with control flow
 
 ``` r
 # The linkedin vector
@@ -599,7 +618,7 @@ print(rcount)
 3, Functions
 ------------
 
-**Function documentation**
+### Function documentation
 
 ``` r
 # Consult the documentation on the mean() function
@@ -609,7 +628,7 @@ print(rcount)
 args(mean)
 ```
 
-**Use a function**
+### Use a function
 
 ``` r
 # The linkedin and facebook vectors
@@ -690,7 +709,7 @@ print(mean(facebook, na.rm = TRUE))
 
     ## [1] 12.16667
 
-**Functions inside functions**
+### Functions inside functions
 
 ``` r
 # The linkedin and facebook vectors
@@ -703,7 +722,7 @@ mean((abs(linkedin - facebook)), na.rm = TRUE)
 
     ## [1] 4.8
 
-**Write your own function**
+### Write your own function
 
 ``` r
 # Create a function pow_two()
@@ -788,7 +807,7 @@ pow_two(2, FALSE)
 
     ## [1] 4
 
-**R you functional?**
+### R you functional?
 
 ``` r
 # The linkedin and facebook vectors
@@ -880,7 +899,7 @@ interpret_all(facebook)
 
     ## [1] 33
 
-**Load an R package**
+### Load an R package
 
 ``` r
 # The mtcars vectors have already been prepared for you
@@ -906,7 +925,7 @@ plot(wt,hp)
 library('ggplot2')
 ```
 
-![](img/Intermediate_R/unnamed-chunk-34-1.png)
+![](Intermediate_R_files/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-33-1.png)
 
 ``` r
 # or
@@ -916,7 +935,7 @@ require('ggplot2')
 qplot(wt,hp)
 ```
 
-![](img/Intermediate_R/unnamed-chunk-34-2.png)
+![](Intermediate_R_files/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-33-2.png)
 
 ``` r
 # Check out the currently attached packages again
@@ -933,7 +952,7 @@ search()
 4, The `apply` Family
 ---------------------
 
-**Use `lapply` with a built-in R function**
+### Use `lapply` (with a built-in R function)
 
 ``` r
 # The vector pioneers
@@ -1055,7 +1074,7 @@ names <- lapply(split_low, select_el, i=1)
 years <- lapply(split_low, select_el, 2)
 ```
 
-**How to use `sapply`**
+### Use `sapply`
 
 ``` r
 temp1 <- c(3, 7, 9, 6, -1)
@@ -1320,7 +1339,7 @@ sapply(temp, print_info)
     ## [[7]]
     ## NULL
 
-**Use `vapply`**
+### Use `vapply`
 
 ``` r
 # temp is already available in the workspace
@@ -1394,7 +1413,7 @@ vapply(temp, get_info, y = 5, character(1))
     ## [1] "Pretty cold!"  "Not too cold!" "Pretty cold!"  "Pretty cold!" 
     ## [5] "Not too cold!" "Pretty cold!"  "Pretty cold!"
 
-**Apply your knowledge. Or better yet: `sapply` it?**
+### Apply your knowledge. Or better yet: `sapply` it?
 
 ``` r
 # work_todos and fun_todos have already been defined
@@ -1433,7 +1452,7 @@ lapply(todos, sort)
 5, Utilities
 ------------
 
-**Mathematical utilities**
+### Mathematical utilities
 
 -   `abs`; calculate the absolute value.
 -   `sum`; calculate the sum of all the values in a data structure.
@@ -1454,7 +1473,7 @@ sum(abs(round(errors)))
 
     ## [1] 29
 
-**Find the error**
+### Find the error
 
 ``` r
 # Vectors
@@ -1467,7 +1486,7 @@ mean(abs(append(vec1, vec2)))
 
     ## [1] 4.48
 
-**Data utilities**
+### Data utilities
 
 -   `seq`; generate sequences, by specifying the from, to and
     by arguments.
@@ -1524,7 +1543,7 @@ print(rep(seq(1, 7, by = 2), times = 7))
 
     ##  [1] 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7
 
-**Beat Gauss using R**
+### Beat Gauss using R
 
 ``` r
 # Create first sequence: seq1
@@ -1561,7 +1580,7 @@ print(sum(append(seq1, seq2)))
 
     ## [1] 87029
 
-**`grepl` & `grep`**
+### `grepl` & `grep` (and the likes)
 
 -   `grepl`; return TRUE when a pattern is found in the corresponding
     character string.
@@ -1651,6 +1670,8 @@ print(sub(pattern = '@.*\\.edu$', replacement = '@datacamp.edu', x = emails))
     ## [3] "dalai.lama@peace.org"     "invalid.edu"             
     ## [5] "quant@datacamp.edu"       "cookie.monster@sesame.tv"
 
+### Time is of the essence
+
 **Right here, right now**
 
 ``` r
@@ -1659,14 +1680,14 @@ today <- Sys.Date()
 today
 ```
 
-    ## [1] "2017-02-15"
+    ## [1] "2017-04-14"
 
 ``` r
 # See what today looks like under the hood
 print(unclass(today))
 ```
 
-    ## [1] 17212
+    ## [1] 17270
 
 ``` r
 # Get the current time: now
@@ -1674,14 +1695,14 @@ now <- Sys.time()
 now
 ```
 
-    ## [1] "2017-02-15 11:11:32 EST"
+    ## [1] "2017-04-14 08:29:36 EDT"
 
 ``` r
 # See what now looks like under the hood
 print(unclass(now))
 ```
 
-    ## [1] 1487175093
+    ## [1] 1492172976
 
 **Create and format dates**
 

@@ -1,6 +1,5 @@
 -   [1, An introduction to moderation](#an-introduction-to-moderation)
--   [2, An introduction to centering
-    predictors](#an-introduction-to-centering-predictors)
+-   [2, An introduction to centering predictors](#an-introduction-to-centering-predictors)
 -   [3, An introduction to mediation](#an-introduction-to-mediation)
 
 ------------------------------------------------------------------------
@@ -51,20 +50,17 @@ cor(mod_threat2$iq, mod_threat2$wm, method = 'pearson')
 
 **Model with and without moderation**
 
-A moderator variable (Z) will enhance a regression model if the
-relationship between X and Y varies as a function of Z.
+A moderator variable (Z) will enhance a regression model if the relationship between X and Y varies as a function of Z.
 
 Experimental research
 
 -   The manipulation of an X causes change in a Y.
--   A moderator variable (Z) implies that the effect of the X on the Y
-    is NOT consistent across the distribution of Z.
+-   A moderator variable (Z) implies that the effect of the X on the Y is NOT consistent across the distribution of Z.
 
 Correlational research
 
 -   Assume a correlation between X and Y.
--   A moderator variable (Z) implies that the correlation between X and
-    Y is NOT consistent across the distribution of Z.
+-   A moderator variable (Z) implies that the correlation between X and Y is NOT consistent across the distribution of Z.
 
 If both X and Z are continuous:
 
@@ -130,8 +126,7 @@ all.equal(wm_center, mod$wm.centered)
 
 **Centering versus no centering**
 
-To center means to put in deviation form: *X*<sub>*C*</sub> = *X* − *M*.
-Convert raw scores to deviation scores.
+To center means to put in deviation form: *X*<sub>*C*</sub> = *X* − *M*. Convert raw scores to deviation scores.
 
 Two reason:
 
@@ -140,29 +135,18 @@ Two reason:
 
 Conceptual.
 
--   The intercept, *β*<sub>0</sub>, is the predicted score on Y (child's
-    verbal ability) when all predictors (X = mother's vocabulary, Z =
-    child's age) are zero.
--   If X = zero or Z = zero is meaningless, or impossible, then
-    *β*<sub>0</sub> will be difficult to interpret.
--   In contrast, if X = zero and Z = zero, are the average then
-    *β*<sub>0</sub> is easy to interpret.
--   The regression coefficient *β*<sub>1</sub> is the slope for X
-    assuming an average score on Z.
--   No moderation effect implies that *β*<sub>1</sub> is consistent
-    across the entire distribution of Z.
--   In contrast, a moderation effect implies that *β*<sub>1</sub> is NOT
-    consistent across the entire distribution of Z.
--   Where in the distribution of Z is *β*<sub>1</sub> most
-    representative of the relationship between X & Y?
+-   The intercept, *β*<sub>0</sub>, is the predicted score on Y (child's verbal ability) when all predictors (X = mother's vocabulary, Z = child's age) are zero.
+-   If X = zero or Z = zero is meaningless, or impossible, then *β*<sub>0</sub> will be difficult to interpret.
+-   In contrast, if X = zero and Z = zero, are the average then *β*<sub>0</sub> is easy to interpret.
+-   The regression coefficient *β*<sub>1</sub> is the slope for X assuming an average score on Z.
+-   No moderation effect implies that *β*<sub>1</sub> is consistent across the entire distribution of Z.
+-   In contrast, a moderation effect implies that *β*<sub>1</sub> is NOT consistent across the entire distribution of Z.
+-   Where in the distribution of Z is *β*<sub>1</sub> most representative of the relationship between X & Y?
 
 Statistical
 
--   The predictors, X and Z, can become highly correlated with the
-    product, (X\*Z).
--   Multicolinearity: when two predictor variables in a GLM are so
-    highly correlated that they are essentially redundant and it becomes
-    difficult to estimate *β* values associated with each predictor.
+-   The predictors, X and Z, can become highly correlated with the product, (X\*Z).
+-   Multicolinearity: when two predictor variables in a GLM are so highly correlated that they are essentially redundant and it becomes difficult to estimate *β* values associated with each predictor.
 
 <!-- -->
 
@@ -227,9 +211,7 @@ anova(model_1, model_2)
 -   Y: Behavioral outcome (IQ score).
 -   M: Mediator (Mechanism = Working memory capacity).
 
-A mediation analysis is typically conducted to better understand an
-observed effect of a correlation between X and Y. Why, and how, does
-stereotype threat influence IQ test performance?
+A mediation analysis is typically conducted to better understand an observed effect of a correlation between X and Y. Why, and how, does stereotype threat influence IQ test performance?
 
 If X and Y are correlated then we can use regression to predict Y from X
 
@@ -245,14 +227,12 @@ If X and Y are correlated BECAUSE of the mediator M, and:
 
 *Y* = *β*<sub>0</sub> + *β*<sub>1</sub>*M* + *β*<sub>2</sub>*X* + *ϵ*
 
-A mediator variable (M) accounts for some (partial) or all of the
-relationship between X and Y.
+A mediator variable (M) accounts for some (partial) or all of the relationship between X and Y.
 
 CAUTION:
 
 -   Correlation does not imply causation!
--   In other words, there is a BIG difference between statistical
-    mediation and true causal mediation.
+-   In other words, there is a BIG difference between statistical mediation and true causal mediation.
 
 **Data exploration**
 

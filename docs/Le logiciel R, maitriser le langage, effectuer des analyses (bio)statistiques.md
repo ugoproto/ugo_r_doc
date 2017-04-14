@@ -12,7 +12,7 @@ Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.* From 
 
 ## A, Presentation
 
-**GUI**
+### GUI
 
 - Rcommander; `Rcmdr` pachage.
 
@@ -27,34 +27,34 @@ Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.* From 
 ## Part 1, Basics
 ## Chapter 1, Basic Concept, Organizing Data
 
-**Editors**
+### Editors
 
 - RStudio.
 - Tinn-R.
 - JGR.
 - Emacs/ESS.
 
-**Data entry**
+### Data entry
 
 - `x <- 2`.
 - `2 -> 2`.
 
-**Exponent**
+### Exponent
 
 - `exp(1)`.
 
-**Logarithm**
+### Logarithm
 
 - `log(3)`.
 - `log(x = 3)`.
 - `log(x = 3, base(exp(1))`.
 - `log(3, exp(1))`.
 
-**Factorial**
+### Factorial
 
 - `factorial(2)`.
 
-**Find out about an object, a variable (`is.`)**
+### Find out about an object, a variable (`is.`)
 
 - `is.character()`.
 - `is.vector()`.
@@ -62,14 +62,14 @@ Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.* From 
 - `is.character()`
 - and many more.
 
-**Convert (`as.`)**
+### Convert (`as.`)
 
 - `as.character()`.
 - `as.raw()`.
 - `as.date()`.
 - and many more.
 
-**Array and matrix**
+### Array and matrix
 
 ```r
 matrix(1:12, nrow = 4, ncol = 3, byrow = FALSE)
@@ -106,17 +106,17 @@ array(1:12, dim = c(2, 2, 3))
 [2,]   10   12
 ```
 
-**Vector**
+### Vector
 
 - `vec <- c(1.1, 2.2, 3.5)`.
 - `vec <- 1:3`.
 
-**Sequence**
+### Sequence
 
 - `seq(1:3)`.
 - `1:3`.
 
-**List**
+### List
 
 ```r
 c(1:3) # vector
@@ -129,14 +129,13 @@ list(1:3) # list
 [1] 1 2 3
 ```
 
-**Data Frame**
+### Data Frame
 
 <sub>table, tabular</sub>
 
 - `data.frame(name = c(), name = c(), name = c(), etc)`; each column is a vector with a name.
 
-
-**Time series**
+### Time series
 
 ```r
 > ts(1:10, frequency=4, start=c(1959,2))
@@ -146,7 +145,7 @@ list(1:3) # list
 1961    8    9   10     
 ```
 
-**Class and mode**
+### Class and mode
 
 <sub>type, data, variable, object</sub>
 
@@ -158,7 +157,7 @@ list(1:3) # list
 
 <sub>import, export, i/o</sub>
 
-**Input data from files**
+### Input data from files
 
 ```r
 read.table(file = path/file.txt, header = TRUE, sep= "\t", dec=".", row.names = 1)
@@ -168,7 +167,7 @@ read.table(file = path/file.txt, header = TRUE, sep= "\t", dec=".", row.names = 
 - `search()`; search objects in .GlobalEnv, including attached dataset,
 - `detach(data)`.
 
-More about .GlobalEnv in [Chapter 7, Session Management](#-chapter-7,-session-management).
+More about .GlobalEnv in Chapter 7, Session Management.
 
 **Read .csv and .tsv**
 
@@ -196,14 +195,14 @@ More about .GlobalEnv in [Chapter 7, Session Management](#-chapter-7,-session-ma
 	- `readMat()`.
 - and many other formats and commands.
 
-**Ouput data and export**
+### Ouput data and export
 
 - `lookup.xport()`; for SAS.
 - `write.table(data, file="file.txt", sep="\t")`.
 - `xlsReadWrite()`.
 - and many more.
 
-**Measure computation time**
+### Measure computation time
 
 ```r
 # start the timer
@@ -216,7 +215,7 @@ dbsnp <- read.table("file")
 Sys.time() - tmps
 ```
 
-**Produce by repetition**
+### Produce by repetition
 
 <sub>repeat</sub>
 
@@ -225,7 +224,7 @@ rep(1:4, reach = 2, len = 10)
 [1] 1 2 3 4 1 2 3 4 1 2
 ```
 
-**Produce random numbers**
+### Produce random numbers
 
 ```r
 # generate random numbers between 0 and 1
@@ -236,7 +235,7 @@ runif(5, min = 2, max = 7)
 [1] 4.588744 5.522278 4.307162 6.248397 3.854982
 ```
 
-More on random number in [Chapter 10, Random Variables, Laws, and Simulation](#chapter-10,-random-variables,-laws,-and-simulation).
+More on random number in Chapter 10, Random Variables, Laws, and Simulation.
 
 **Produce random number following a distribution**
 
@@ -258,24 +257,24 @@ sample(urne, 20, replace = TRUE)
 [1] 5 4 2 2 9 7 4 6 2 2 7 8 3 3 9 6 6 1 1 0
 ```
 
-**Produce data by manual input (vector-like)**
+### Produce data by manual input (vector-like)
 
 - First,  `z <- scan()`.
 - Second, input data in the prompt.
 
-**Produce data with a mini-spreadsheet (tabular-like)**
+### Produce data with a mini-spreadsheet (tabular-like)
 
 - `x <- as.data.frame(de(""))`; open a spreadsheet.
 - `data.entry("")`; alternatively.
 	- Input data; column are variables like in a data frame.
 - `fix(x)`; invokes edit on x, then assigns the new (edited) version of x to the user's workspace.
 
-**List of objects**
+### List of objects
 
 - `ls()`; list of objects.
 - `rm(list = ls())`; remove all the objects.
 
-**Read from and write to a database**
+### Read from and write to a database
 
 - `RODBC` package.
 - `odbcConnect()`.
@@ -284,18 +283,18 @@ sample(urne, 20, replace = TRUE)
 
 *REF: p.82-84*
 
-**File management**
+### File management
 
 - `file.choose()`; open a window.
 
-**Read from the clipboard**
+### Read from the clipboard
 
 - First, copy from a spreadsheet or a table.
 - Second, `read.clipboard()`.
 
 ## Chapter 3, Data Manipulation
 
-**Arithmetics**
+### Arithmetics
 
 ```r
 x <- c(1,2,3)
@@ -305,7 +304,7 @@ x + y
 [1] 5 7 9
 ```
 
-**Built-in functions**
+### Built-in functions
 
 - `length(vec)`; length.
 - `sort(vec, decreasing = TRUE)`; sort.
@@ -318,7 +317,7 @@ x + y
 - `x %% y`;  modulus (x mod y).
 - `x %/% y`; integer division.
 
-**Dimension functions**
+### Dimension functions
 
 <sub>number, row, column, dimension</sub>
 
@@ -326,13 +325,13 @@ x + y
 - `nrow(df)`.
 - `ncol(df)`.
 
-**Name functions**
+### Name functions
 
 - `dimnames(df)`.
 - `names(df)`, `colnames(df)`.
 - `rownames(df)`.
 
-**Merge functions**
+### Merge functions
 
 <sub>combine</sub>
 
@@ -375,7 +374,7 @@ merge(x, y)
 - `gtools` package.
 - `smartbind(x,y)`; for two data frames, similar to merge.
 
-**Apply functions and family**
+### `apply` functions and family
 
 <sub>excel, wrangle</sub>
 
@@ -400,9 +399,7 @@ Among the most useful function for 'wrangling' data. Excel-like power. When and 
 
 *REF: p.99*
 
-More help online such as this article: [Tutorial on the apply family](https://www.datacamp.com/community/tutorials/r-tutorial-apply-family#gs.au_CSuY), and complementary notes below.
-
-**Sweep functions**
+### Sweep functions
 
 ```r
 u
@@ -431,7 +428,7 @@ sweep(u, MARGIN = 2, STATS = c(2, 2, 3, 3), FUN = "/")
 
 *REF: p.100-101*
 
-**Stack functions**
+### Stack functions
 
 <sub>stack, unstack</sub>
 
@@ -472,7 +469,7 @@ w
 4  4  8 12 103
 ```
 
-**Aggregation functions**
+### Aggregation functions
 
 <sub>aggregate</sub>
 
@@ -501,7 +498,7 @@ aggregate(w, by = list(x$fac), sum)
 
 *REF: p.101*
 
-**Boolean & logical functions**
+### Boolean & logical functions
 
 - `logical(2)`; generate two FALSE in a vector; change the length.
 - `!logical(2)`; generate two TRUE.
@@ -526,7 +523,7 @@ aggregate(w, by = list(x$fac), sum)
 
 *REF: p.126-127*
 
-**Venn functions**
+### Venn functions
 
 ```r
 A <- 1:3
@@ -557,7 +554,7 @@ intersect(A, B)
 [1] 3
 ```
 
-**Vector functions**
+### Vector functions
 
 - `vec[2]`; extract.
 - `vec[2:5]`; extract.
@@ -570,26 +567,26 @@ intersect(A, B)
 - `vec[-2]`; exclude.
 - `vec[-c(1,5)]`; exclude.
 
-**Search functions**
+### Search functions
 
 - `masque <- c(TRUE, FALSE)`.
 - `which(masque)`; return the TRUE indices.
 - `which.min(x)`; return the index with minimum value.
 - `which.max(x)`.
 
-**Replace functions**
+### Replace functions
 
 - `z[c(1, 5)] <- 1`; replace value 1 and 5 by 1.
 - `z[which.max(z)] <- 0`; replace the maximum value.
 - `z[z == 0] <- 8`; replace zeros and FALSE.
 
-**Extend a vector**
+### Extend a vector
 
 - `vecA`.
 - `vecB <- c(vecA, 4, 5)`.
 - `vecC <- c(vecA[1:4], 8, 5, vecA[5:9])`.
 
-**Matrix and array**
+### Matrix and array
 
 - `mat[r, c]`; extract.
 - `mat[1, 2]`.
@@ -602,7 +599,7 @@ intersect(A, B)
 
 *REF: p.110-113*
 
-**Lists**
+### Lists
 
 ```r
 char <- c("a", "b", "c")
@@ -644,7 +641,7 @@ x$numb[2]
 
 *REF: p.113-115*
 
-**String**
+### String
 
 ```r
 "bla bla bla"
@@ -660,7 +657,7 @@ dQuote("bla bla bla")
 [1] "“bla bla bla”"
 ```
 
-**Text**
+### Text
 
 <sub>wrangle, text, string, character, natural language processing, nlp</sub>
 
@@ -692,7 +689,7 @@ dQuote("bla bla bla")
 - `tolower()`.
 - `toupper()`.
 
-**Date and time**
+### Date and time
 
 <sub>convert, extract</sub>
 
@@ -705,7 +702,7 @@ dQuote("bla bla bla")
 
 *REF: p.120-123*
 
-**Custom functions (two examples)**
+### Custom functions (two examples)
 
 ```r
 a <- 2
@@ -740,7 +737,7 @@ g(a, abs(b))
 
 More about custom functions in [Chapter 6, Initiation to R Programming](#chapter-6,-initiation-to-r-programming).
 
-**Loops structure**
+### Loops structure
 
 - `for`.
 - `while`.
@@ -814,7 +811,7 @@ utilisateur     système      écoulé
 
 *REF: p.133-136*
 
-**Binary and decimal**
+### Binary and decimal
 
 <sub>convert</sub>
 
@@ -825,7 +822,7 @@ utilisateur     système      écoulé
 
 ## Chapter 4, R Documentation
 
-**Help**
+### Help
 
 - `?functionname`.
 - `help(functionname)`.
@@ -849,7 +846,7 @@ utilisateur     système      écoulé
 - `demo(graphics)`; give examples.
 - `example(mean)`; give examples.
 
-**Resources**
+### Resources
 
 - [nmz](http://search.r-project.org/nmz.html); search the content of the R functions, package vignette, and task views.
 - [R-Project Mailing Lists](http://www.r-project.org/mail.html); mailing lists.
@@ -872,7 +869,7 @@ stat.ethz.ch/mailman/listinfo/r-annonce
 
 ## Chapter 5, Techniques for Plotting Graphics
 
-**Graphic windows**
+### Graphic windows
 
 Of course, these commands are automated in an editor (RStudio).
 
@@ -922,7 +919,7 @@ pdf(file = "mygraph.pdf")
 dev.off()
 ```
 
-**Multiple windows**
+### Multiple windows
 
 - `par(mfrow = c(3, 2))`; create 6 graphic boxes, 3 rows X 2 columns.
 
@@ -941,14 +938,14 @@ layout.show(5)
 
 *REF: p.168*
 
-**Draw on a graphic**
+### Draw on a graphic
 
 - `segments(x0 = 0, y0 = 0, x1 = 1, y1 = 1)`; draw lines on a plot.
 - `lines(x = c(1,0), y = c(0,1))`.
 - `abline(h = 0, v = 0)`; add a line to a plot.
 - `abline(a = 1, b = 1)`.
 
-**Random numbers**
+### Random numbers
 
 ```r
 x <- runif(12)
@@ -968,7 +965,7 @@ x
 [7] 0.26962190 0.41913598 0.60013387 0.61067995 0.66696650 0.92957527
 ```
 
-More on random number in [Chapter 10, Random Variables, Laws, and Simulation](#chapter-10,-random-variables,-laws,-and-simulation).
+More on random number in Chapter 10, Random Variables, Laws, and Simulation.
 
 **Examples**
 
@@ -982,13 +979,12 @@ More on random number in [Chapter 10, Random Variables, Laws, and Simulation](#c
 
 - `colors()[grep("orange", colors())]`; list of tones.
 
-**Colors**
+### Colors
 
 - `rgb(red = 26, green = 204, blue = 76, maxColorValue = 255)`; return the code.
 - `rgb(red = 0.1, green = 0.8, blue = 0.3)`.
 - `col2rgb("#1AVV4C")`; inversely.
 - R generates 256³ colors, 15M.
-- [A site about colors](http://www.pourpre.com).
 - `rainbow(#)`; show 1, 8, 17 or more colors; R can generate 256³ colors (over 15M),
 - `pie(rep(1,200), labels = "", col = rainbow(200), border = NA)`; show the colors.
 - `plot(1:40, col = rainbow(n), pch = 19, cex = 2),     grid(col = "grey50")`; show.
@@ -999,13 +995,13 @@ library('RColorBrewer')
 display.brewer.all()
 ```
 
-**Images**
+### Images
 
 - `caTools` package to manage images.
 - `read.gif()`.
 - `image()`.
 
-**Write and add marks on a graphic**
+### Write and add marks on a graphic
 
 - `text(coord x, coord y, 'text')`; write.
 - `demo(plotmath)`; see examples.
@@ -1015,11 +1011,11 @@ plot(1,1); locate area to be annotated with `text()`.
 - `text(locator(1), label="ici")`; add a label, one or several occurrences, by pointing the location with the mouse.
 - `identify(occurrence, label)`; add one or more labels by pointing the location with the mouse. 
 
-**Graphic parameters and graphic windows**
+### Graphic parameters and graphic windows
 
 <sub>margin, border, box, square, space, height, width, color, text, title, label, mark, font, police, character, language, size, length, size, tick, coordinate, x, y, log, scale, axis, axes, format, alignment, point</sub>
 
-**Advanced graphic package**
+### Advanced graphic package
 
 - `rgl`.
 - `lattice`.
@@ -1063,7 +1059,7 @@ bonjour(l="a")
     
 *REF: p.218-219*
 
-**Union**
+### Union
 
 ```r
 "%union%" <- function (A,B) { union(A,B) }
@@ -1074,7 +1070,7 @@ A %union% B
 [1] 4 5 2 7 1 3
 ```
 
-**Class**
+### Class
 
 ```r
 obj <- 1:10
@@ -1091,7 +1087,7 @@ inherits(obj, "TheClass")
 [1] TRUE
 ```
 
-**Methods**
+### Methods
 
 ```r
 x <- 1:10
@@ -1102,7 +1098,7 @@ print.default(x)
 
 *REF: p.227-231*
 
-**Combine and permute**
+### Combine and permute
 
 - `combinat` package.
 - `combn(5,3)`; combine 3 numbers from 1:5.
@@ -1111,7 +1107,7 @@ print.default(x)
 
 Very time consuming!
 
-**More power, speed**
+### More power, speed
 
 - The core of R in programmed in C. Converting a R function into C is easy. C is faster.
 - Call it through API C.
@@ -1122,10 +1118,6 @@ Very time consuming!
 -  `bigmemory`, `ff`, packages; split a matrix into sub-matrices, perform computation and combine the results (parallel computing). 
 - Use a multi-core architecture with the `parallel` package.
 - [HighPerformanceComputing list of packages](https://www.rdocumentation.org/taskviews/HighPerformanceComputing?).
-	- Use the `Rmpi` package and the MPI protocol (OpenMPI or mpich2 software).
-	- [Build a cluster or a collection of workstations in parallel; the `snow` package](www.divms.uiowa.edu/</sub>luke/R/cluster/cluster.html).
-	- [`snow` or Simple Network of Workstation](www.sfu.ca/</sub>sblay/R/snow.html).
-	- [Developing parallel programs using snowfall](cran.r-project.org/web/packages/snowfall/vignettes/snowfall.pdf).
 
 **Try parallel computing with a Monte Carlo with the `parallel` package**
 
@@ -1178,11 +1170,10 @@ cl <- makeCluster(4,type="PSOCK")
 out <- clusterCall(cl, Sys.getpid))
 ```
 
-**Involve the graphical card for more power**
+### Involve the graphical card for more power
 
 - Run computations with the graphical card, the GPU.
-	- [`gputools` package](cran.r-project.org/web/packages/gputools/gputools.pdf)
-	- [CUDA Education & Training, Accelerate Your Applications ](developer.nvidia.com/object/cuda_training.html)
+	- `gputools` package.
 
 *REF: p.303-308*
 
@@ -1190,7 +1181,7 @@ out <- clusterCall(cl, Sys.getpid))
 
 <sub>work, session, save, object, instruction, graphic, create, package</sub>
 
-**Environment**
+### Environment
 
 - `globalenv()`; .GlobalEnv.
 - `new.env()`; new environment with its own functions, variable, etc.
@@ -1223,7 +1214,7 @@ out <- clusterCall(cl, Sys.getpid))
 - `sink(file = "sortie.txt")`; save a file on the current working directory.
 - `sink()`; stop the recording.
 
-**File manipulation**
+### File manipulation
 
 - Low-level interface to the computer's file system.
 - Create a file.
@@ -1249,11 +1240,11 @@ out <- clusterCall(cl, Sys.getpid))
 
 *REF: p.320-330*
 
-**Memory management**
+### Memory management
 
 - The KSysGuard software analyzes memory usage in real time. It is a task manager and performance monitor for UNIX-like OS.
 
-**Create a package**
+### Create a package
 
 - How to: build a list of R instruction, load a dataset, create function, and output the results.
 - Run a series of scripts in batch, run a script at a distance.
@@ -1267,11 +1258,11 @@ out <- clusterCall(cl, Sys.getpid))
 ## Part 2, Mathematics and Basic Statistics
 ## Chapter 8, Basic Mathematics, matrix algebra, integration, optimization
 
-**Math functions**
+### Math functions
 
 *REF: p.342*
 
-**Matrix calculation**
+### Matrix calculation
 
 ```r
 A <- matrix(c(2,3,5,4), nrow = 2, ncol = 2)
@@ -1454,7 +1445,7 @@ attr(,"class")
 [1] "qr"
 ```
 
-**Integral calculus**
+### Integral calculus
 
 <sub>integration</sub>
 
@@ -1486,7 +1477,7 @@ attr(,"gradient")
 	- `hessian()`; second-degree derivative.
 	- and many more.
 
-**Optimisation**
+### Optimisation
 
 <sub>linear, programming, constraints, min-max</sub>
 
@@ -1520,7 +1511,7 @@ polyroot(x(3, -8, 1)) # for p(x) = 3 - 8x + x²
 
 ## Chapter 9, Descriptive Statistics
 
-**Factor, levels, labels**
+### Factor, levels, labels
 
 - `factor(c())`
 - `as.factor()`.
@@ -1543,14 +1534,14 @@ mydata <- ordered(mydata,
 	) 
 ```
 
-**Names**
+### Names
 
 - `names(var) <- c()`; add names to a vector, data frame, list.
 - `colnames(var) <- c()`; idem.
 - `rownames()`; left-most column.
 - `dimnames()`; add names to an array.
 
-**Order**
+### Order
 
 - `sort(vec, decreasing = TRUE)`.
 - `rev(vec)`; inverse sorting.
@@ -1562,7 +1553,7 @@ mydata <- ordered(mydata,
 
 Consult keywords 'arithmetics' and 'random numbers', where ordering data is commonly used.
 
-**Convert (`as.`)**
+### Convert (`as.`)
 
 - `is.integer()`.
 - `as.integer()`.
@@ -1574,7 +1565,7 @@ Consult keywords 'arithmetics' and 'random numbers', where ordering data is comm
 - `as.character()`.
 - and many more.
 
-**Table, proportion table**
+### Table, proportion table
 
 <sub>tabular, comparison, 2-dimensional, 2, two, dimensions</sub>
 
@@ -1592,7 +1583,7 @@ Consult keywords 'arithmetics' and 'random numbers', where ordering data is comm
 - `prop.table(mytable, 2)`; percentage view; 2, row sum = 100%.
 - `which.max(table)`; find the max, min, mean, etc.
 
-**Descriptive statistics**
+### Descriptive statistics
 
 - `mean(x)`.
 - `median(x)`.
@@ -1622,7 +1613,7 @@ Consult keywords 'arithmetics' and 'random numbers', where ordering data is comm
 
 *REF: p.378-379*
 
-**Graphic descriptive statistics**
+### Graphic descriptive statistics
 
 - `plot()`.
 - `dotchart(table(), col = c("", "", "" ,"") ,pch = , main = , lcolor = )`.
@@ -1645,7 +1636,7 @@ Consult keywords 'arithmetics' and 'random numbers', where ordering data is comm
 
 - `x %% m`; modulo or modulus.
 
-**Randomness**
+### Randomness
 
 - `runif(1)`; generate a pseudo-random number between 0 and 1.
 - `set.seed()`; 'shuffle the dice!'.
@@ -1699,7 +1690,7 @@ mean(runif(10000))
 
 ## Chapter 11, Confidence Intervals and Hypothesis Testing
 
-**Confidence intervals**
+### Confidence intervals
 
 - Use t-values with at least 30 observation in the sample.
 - With smaller samples (or larger too), use bootstraps to simulate populations from the `boot` package (`boot()` and `boot.ci()`).
@@ -1711,7 +1702,7 @@ mean(runif(10000))
 
 *REF: p.450-456*
 
-**Test**
+### Test
 
 - In a test, $\alpha$ is the signification threshold, $H_0$ is the tested hypothesis.
 - Average tests;  compare the theoretical average to a reference value with the `t.test()`.
@@ -1738,7 +1729,7 @@ mean(runif(10000))
 
 ## Chapter 12, Simple and Multiple Linear Regression
 
-**Regression**
+### Regression
 
 - `lm(y <sub>x`.
 - `lm(y <sub>0 + x)`; no intercept.
@@ -1759,7 +1750,7 @@ mean(runif(10000))
 
 *REF: p.498-499*
 
-**Normality**
+### Normality
 
 <sub>histogram, test, residual, quantile-quantile, quantile, qq<sub> 
 
@@ -1777,7 +1768,7 @@ hist(residuals(model), main = "Histogram")
 
 *REF: p.502-503*
 
-**Correlation**
+### Correlation
 
 <sub>test, explanatory variable interaction, colinearity,  best subset</sub>
 
@@ -1785,7 +1776,7 @@ hist(residuals(model), main = "Histogram")
 
 *REF: p.506*
 
-**Model improvement**
+### Model improvement
 
 - Variables selection.
 - Best subset, leaps and bounds.
@@ -1797,7 +1788,7 @@ hist(residuals(model), main = "Histogram")
 
 *REF: p.511-535*
 
-**Polynomial regression**
+### Polynomial regression
 
 *REF: p.535-540*
 

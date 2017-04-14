@@ -1,7 +1,5 @@
--   [1, A gentle introduction to the principles of multiple
-    regression](#a-gentle-introduction-to-the-principles-of-multiple-regression)
--   [2, Intuition behind estimation of multiple regression
-    coefficients](#intuition-behind-estimation-of-multiple-regression-coefficients)
+-   [1, A gentle introduction to the principles of multiple regression](#a-gentle-introduction-to-the-principles-of-multiple-regression)
+-   [2, Intuition behind estimation of multiple regression  coefficients](#intuition-behind-estimation-of-multiple-regression-coefficients)
 -   [3, Dummy coding](#dummy-coding)
 
 ------------------------------------------------------------------------
@@ -181,8 +179,7 @@ describeBy(fs, fs$dept)
 
 A system to code categorical predictors in a regression analysis
 
-Suppose we have a categorical vector of observations. The vector counts
-4 distinct groups. Here is how to assign the dummy variables:
+Suppose we have a categorical vector of observations. The vector counts 4 distinct groups. Here is how to assign the dummy variables:
 
 <table>
 <thead>

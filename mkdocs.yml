@@ -11,7 +11,6 @@ google_analytics: ['UA-93008985-1', 'mkdocs.org']
 
 pages:
     - Home: 'index.md'
-#- Test: 'Survival_of_the_Fittest.md'
     - An Introduction to R: 'An Introduction to R.md'
     - Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques: 'Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques.md'
     - Intermediate R:
@@ -23,7 +22,8 @@ pages:
     - Data Wrangling Snippets:
         - I/O snippets & Cleaning: 'IO_snippets___Cleaning.md'
         - Reading Data into R with readr: 'Reading_Data_into_R_with_readr.md'
-        - Data Wrangling: 'Data_Wrangling.md'
+        - Data Analysis in R, the data.table Way: 'Data_Analysis_in_R,_the_data.table_Way.md'
+        - Data Manipulation in R with dplyr: 'Data_Manipulation_in_R_with_dplyr.md'
     - Plot Snippets:
         - Plot Snippets for Exploratory (and some Explanatory) Analyses: 'Plot_snippets_-_Basics.md'
         - Plot Snippets - ggplot2: 'Plot_snippets_-_ggplot2.md'

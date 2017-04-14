@@ -81,16 +81,79 @@
     <a class="current" href="./">Intermediate R</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#equality-or-not">Equality (or not)</a></li>
+    
+
+    <li class="toctree-l3"><a href="#and">&amp; and |</a></li>
+    
+
+    <li class="toctree-l3"><a href="#the-if-statement-and-more">The if statement (and more)</a></li>
+    
+
     <li class="toctree-l3"><a href="#2-loops">2, Loops</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#write-a-while-loop">Write a while loop</a></li>
+        
+            <li><a class="toctree-l4" href="#write-a-for-loop">Write a for loop</a></li>
+        
+            <li><a class="toctree-l4" href="#mix-up-loops-with-control-flow">Mix up loops with control flow</a></li>
+        
+        </ul>
     
 
     <li class="toctree-l3"><a href="#3-functions">3, Functions</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#function-documentation">Function documentation</a></li>
+        
+            <li><a class="toctree-l4" href="#use-a-function">Use a function</a></li>
+        
+            <li><a class="toctree-l4" href="#functions-inside-functions">Functions inside functions</a></li>
+        
+            <li><a class="toctree-l4" href="#write-your-own-function">Write your own function</a></li>
+        
+            <li><a class="toctree-l4" href="#r-you-functional">R you functional?</a></li>
+        
+            <li><a class="toctree-l4" href="#load-an-r-package">Load an R package</a></li>
+        
+        </ul>
+    
 
     <li class="toctree-l3"><a href="#4-the-apply-family">4, The apply Family</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#use-lapply-with-a-built-in-r-function">Use lapply (with a built-in R function)</a></li>
+        
+            <li><a class="toctree-l4" href="#use-sapply">Use sapply</a></li>
+        
+            <li><a class="toctree-l4" href="#use-vapply">Use vapply</a></li>
+        
+            <li><a class="toctree-l4" href="#apply-your-knowledge-or-better-yet-sapply-it">Apply your knowledge. Or better yet: sapply it?</a></li>
+        
+        </ul>
+    
 
     <li class="toctree-l3"><a href="#5-utilities">5, Utilities</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#mathematical-utilities">Mathematical utilities</a></li>
+        
+            <li><a class="toctree-l4" href="#find-the-error">Find the error</a></li>
+        
+            <li><a class="toctree-l4" href="#data-utilities">Data utilities</a></li>
+        
+            <li><a class="toctree-l4" href="#beat-gauss-using-r">Beat Gauss using R</a></li>
+        
+            <li><a class="toctree-l4" href="#grepl-grep-and-the-likes">grepl &amp; grep (and the likes)</a></li>
+        
+            <li><a class="toctree-l4" href="#time-is-of-the-essence">Time is of the essence</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -131,7 +194,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+    <a class="" href="../Data_Analysis_in_R%2C_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
                 </li>
     </ul>
 	    </li>
@@ -260,11 +327,43 @@
             <div class="section">
               
                 <ul>
-<li><a href="#conditionals-and-control-flow">1, Conditionals and Control Flow</a></li>
-<li><a href="#loops">2, Loops</a></li>
-<li><a href="#functions">3, Functions</a></li>
-<li><a href="#the-apply-family">4, The <code>apply</code> Family</a></li>
-<li><a href="#utilities">5, Utilities</a></li>
+<li><a href="#conditionals-and-control-flow">1, Conditionals and Control Flow</a><ul>
+<li><a href="#equality-or-not">Equality (or not)</a></li>
+<li><a href="#and"><code>&amp;</code> and <code>|</code></a></li>
+<li><a href="#the-if-statement-and-more">The <code>if</code> statement (and more)</a></li>
+</ul>
+</li>
+<li><a href="#loops">2, Loops</a><ul>
+<li><a href="#write-a-while-loop">Write a <code>while</code> loop</a></li>
+<li><a href="#write-a-for-loop">Write a <code>for</code> loop</a></li>
+<li><a href="#mix-up-loops-with-control-flow">Mix up loops with control flow</a></li>
+</ul>
+</li>
+<li><a href="#functions">3, Functions</a><ul>
+<li><a href="#function-documentation">Function documentation</a></li>
+<li><a href="#use-a-function">Use a function</a></li>
+<li><a href="#functions-inside-functions">Functions inside functions</a></li>
+<li><a href="#write-your-own-function">Write your own function</a></li>
+<li><a href="#r-you-functional">R you functional?</a></li>
+<li><a href="#load-an-r-package">Load an R package</a></li>
+</ul>
+</li>
+<li><a href="#the-apply-family">4, The <code>apply</code> Family</a><ul>
+<li><a href="#use-lapply-with-a-built-in-r-function">Use <code>lapply</code> (with a built-in R function)</a></li>
+<li><a href="#use-sapply">Use <code>sapply</code></a></li>
+<li><a href="#use-vapply">Use <code>vapply</code></a></li>
+<li><a href="#apply-your-knowledge.-or-better-yet-sapply-it">Apply your knowledge. Or better yet: <code>sapply</code> it?</a></li>
+</ul>
+</li>
+<li><a href="#utilities">5, Utilities</a><ul>
+<li><a href="#mathematical-utilities">Mathematical utilities</a></li>
+<li><a href="#find-the-error">Find the error</a></li>
+<li><a href="#data-utilities">Data utilities</a></li>
+<li><a href="#beat-gauss-using-r">Beat Gauss using R</a></li>
+<li><a href="#grepl-grep-and-the-likes"><code>grepl</code> &amp; <code>grep</code> (and the likes)</a></li>
+<li><a href="#time-is-of-the-essence">Time is of the essence</a></li>
+</ul>
+</li>
 </ul>
 <hr />
 <p><strong>Foreword</strong></p>
@@ -274,7 +373,7 @@
 </ul>
 <hr />
 <h4 id="1-conditionals-and-control-flow">1, Conditionals and Control Flow<a class="headerlink" href="#1-conditionals-and-control-flow" title="Permanent link">&para;</a></h4>
-<p><strong>Equality</strong></p>
+<h5 id="equality-or-not">Equality (or not)<a class="headerlink" href="#equality-or-not" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Comparison of logicals
 TRUE == FALSE
 </code></pre>
@@ -366,7 +465,7 @@ sum(facebook &gt;= linkedin * 2)
 
 <pre><code>## [1] 2
 </code></pre>
-<p><strong><code>&amp;</code> and <code>|</code></strong></p>
+<h5 id="and"><code>&amp;</code> and <code>|</code><a class="headerlink" href="#and" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># The linkedin and last variable
 linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
 last &lt;- tail(linkedin, 1)
@@ -411,10 +510,6 @@ views &gt; 11 &amp; views &lt;= 14
 ## [2,] FALSE FALSE FALSE FALSE FALSE  TRUE TRUE
 </code></pre>
 <p><strong>Blend it all together</strong></p>
-<pre><code class="r">library(XLConnectJars)
-library(XLConnect)
-</code></pre>
-
 <pre><code class="r"># Select the second column, named day2, from li_df: second
 second &lt;- li_df$day2
 
@@ -427,7 +522,7 @@ sum(extremes)
 
 <pre><code>## [1] 16
 </code></pre>
-<p><strong>The <code>if</code> statement</strong></p>
+<h5 id="the-if-statement-and-more">The <code>if</code> statement (and more)<a class="headerlink" href="#the-if-statement-and-more" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Variables related to your last day of recordings
 medium &lt;- 'LinkedIn'
 num_views &lt;- 14
@@ -521,7 +616,7 @@ sms
 <pre><code>## [1] 24
 </code></pre>
 <h4 id="2-loops">2, Loops<a class="headerlink" href="#2-loops" title="Permanent link">&para;</a></h4>
-<p><strong>Write a <code>while</code> loop</strong></p>
+<h5 id="write-a-while-loop">Write a <code>while</code> loop<a class="headerlink" href="#write-a-while-loop" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Initialize the speed variable
 speed &lt;- 64
 
@@ -614,6 +709,7 @@ while (i &lt;= 10) {
 ## [1] 21
 ## [1] 24
 </code></pre>
+<h5 id="write-a-for-loop">Write a <code>for</code> loop<a class="headerlink" href="#write-a-for-loop" title="Permanent link">&para;</a></h5>
 <p><strong>Loop over a vector</strong></p>
 <pre><code class="r"># The linkedin vector
 linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
@@ -697,7 +793,7 @@ for (i in 1:nrow(ttt)) {
 ## [1] "On row 3 and column 2 the board contains  NA"
 ## [1] "On row 3 and column 3 the board contains  X"
 </code></pre>
-<p><strong>Mix it up with control flow</strong></p>
+<h5 id="mix-up-loops-with-control-flow">Mix up loops with control flow<a class="headerlink" href="#mix-up-loops-with-control-flow" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># The linkedin vector
 linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
 
@@ -789,7 +885,7 @@ print(rcount)
 <pre><code>## [1] 5
 </code></pre>
 <h4 id="3-functions">3, Functions<a class="headerlink" href="#3-functions" title="Permanent link">&para;</a></h4>
-<p><strong>Function documentation</strong></p>
+<h5 id="function-documentation">Function documentation<a class="headerlink" href="#function-documentation" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Consult the documentation on the mean() function
 ?mean
 
@@ -797,7 +893,7 @@ print(rcount)
 args(mean)
 </code></pre>
 
-<p><strong>Use a function</strong></p>
+<h5 id="use-a-function">Use a function<a class="headerlink" href="#use-a-function" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># The linkedin and facebook vectors
 linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
 facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
@@ -867,7 +963,7 @@ print(mean(facebook, na.rm = TRUE))
 
 <pre><code>## [1] 12.16667
 </code></pre>
-<p><strong>Functions inside functions</strong></p>
+<h5 id="functions-inside-functions">Functions inside functions<a class="headerlink" href="#functions-inside-functions" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># The linkedin and facebook vectors
 linkedin &lt;- c(16, 9, 13, 5, NA, 17, 14)
 facebook &lt;- c(17, NA, 5, 16, 8, 13, 14)
@@ -878,7 +974,7 @@ mean((abs(linkedin - facebook)), na.rm = TRUE)
 
 <pre><code>## [1] 4.8
 </code></pre>
-<p><strong>Write your own function</strong></p>
+<h5 id="write-your-own-function">Write your own function<a class="headerlink" href="#write-your-own-function" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Create a function pow_two()
 pow_two &lt;- function(arg1) {
     arg1^2
@@ -953,7 +1049,7 @@ pow_two(2, FALSE)
 
 <pre><code>## [1] 4
 </code></pre>
-<p><strong>R you functional?</strong></p>
+<h5 id="r-you-functional">R you functional?<a class="headerlink" href="#r-you-functional" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># The linkedin and facebook vectors
 linkedin &lt;- c(16, 9, 13, 5, NA, 17, 14)
 facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
@@ -1039,7 +1135,7 @@ interpret_all(linkedin)
 
 ## [1] 33
 </code></pre>
-<p><strong>Load an R package</strong></p>
+<h5 id="load-an-r-package">Load an R package<a class="headerlink" href="#load-an-r-package" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># The mtcars vectors have already been prepared for you
 wt &lt;- mtcars$wt
 hp &lt;- mtcars$hp
@@ -1062,7 +1158,7 @@ plot(wt,hp)
 library('ggplot2')
 </code></pre>
 
-<p><img alt="" src="../img/Intermediate_R/unnamed-chunk-34-1.png" /></p>
+<p><img alt="" src="../Intermediate_R_files/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-33-1.png" /></p>
 <pre><code class="r"># or
 require('ggplot2')
 
@@ -1070,7 +1166,7 @@ require('ggplot2')
 qplot(wt,hp)
 </code></pre>
 
-<p><img alt="" src="../img/Intermediate_R/unnamed-chunk-34-2.png" /></p>
+<p><img alt="" src="../Intermediate_R_files/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-33-2.png" /></p>
 <pre><code class="r"># Check out the currently attached packages again
 search()
 </code></pre>
@@ -1083,7 +1179,7 @@ search()
 ## [11] "Autoloads"             "package:base"
 </code></pre>
 <h4 id="4-the-apply-family">4, The <code>apply</code> Family<a class="headerlink" href="#4-the-apply-family" title="Permanent link">&para;</a></h4>
-<p><strong>Use <code>lapply</code> with a built-in R function</strong></p>
+<h5 id="use-lapply-with-a-built-in-r-function">Use <code>lapply</code> (with a built-in R function)<a class="headerlink" href="#use-lapply-with-a-built-in-r-function" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># The vector pioneers
 pioneers &lt;- c('GAUSS:1777', 'BAYES:1702', 'PASCAL:1623', 'PEARSON:1857')
 
@@ -1195,7 +1291,7 @@ names &lt;- lapply(split_low, select_el, i=1)
 years &lt;- lapply(split_low, select_el, 2)
 </code></pre>
 
-<p><strong>How to use <code>sapply</code></strong></p>
+<h5 id="use-sapply">Use <code>sapply</code><a class="headerlink" href="#use-sapply" title="Permanent link">&para;</a></h5>
 <pre><code class="r">temp1 &lt;- c(3, 7, 9, 6, -1)
 temp2 &lt;- c(6, 9, 12, 13, 5)
 temp3 &lt;- c(4, 8, 3, -1, -3)
@@ -1444,7 +1540,7 @@ sapply(temp, print_info)
 ## [[7]]
 ## NULL
 </code></pre>
-<p><strong>Use <code>vapply</code></strong></p>
+<h5 id="use-vapply">Use <code>vapply</code><a class="headerlink" href="#use-vapply" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># temp is already available in the workspace
 
 # Code the basics() function
@@ -1510,7 +1606,7 @@ vapply(temp, get_info, y = 5, character(1))
 <pre><code>## [1] "Pretty cold!"  "Not too cold!" "Pretty cold!"  "Pretty cold!" 
 ## [5] "Not too cold!" "Pretty cold!"  "Pretty cold!"
 </code></pre>
-<p><strong>Apply your knowledge. Or better yet: <code>sapply</code> it?</strong></p>
+<h5 id="apply-your-knowledge-or-better-yet-sapply-it">Apply your knowledge. Or better yet: <code>sapply</code> it?<a class="headerlink" href="#apply-your-knowledge-or-better-yet-sapply-it" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># work_todos and fun_todos have already been defined
 work_todos &lt;- c('Schedule call with team', 
                 'Fix error in Recommendation System', 
@@ -1544,7 +1640,7 @@ lapply(todos, sort)
 ## [1] "Make arrangements for summer trip" "Sleep"
 </code></pre>
 <h4 id="5-utilities">5, Utilities<a class="headerlink" href="#5-utilities" title="Permanent link">&para;</a></h4>
-<p><strong>Mathematical utilities</strong></p>
+<h5 id="mathematical-utilities">Mathematical utilities<a class="headerlink" href="#mathematical-utilities" title="Permanent link">&para;</a></h5>
 <ul>
 <li><code>abs</code>; calculate the absolute value.</li>
 <li><code>sum</code>; calculate the sum of all the values in a data structure.</li>
@@ -1564,7 +1660,7 @@ sum(abs(round(errors)))
 
 <pre><code>## [1] 29
 </code></pre>
-<p><strong>Find the error</strong></p>
+<h5 id="find-the-error">Find the error<a class="headerlink" href="#find-the-error" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Vectors
 vec1 &lt;- c(1.5, 2.5, 8.4, 3.7, 6.3)
 vec2 &lt;- rev(vec1)
@@ -1575,7 +1671,7 @@ mean(abs(append(vec1, vec2)))
 
 <pre><code>## [1] 4.48
 </code></pre>
-<p><strong>Data utilities</strong></p>
+<h5 id="data-utilities">Data utilities<a class="headerlink" href="#data-utilities" title="Permanent link">&para;</a></h5>
 <ul>
 <li><code>seq</code>; generate sequences, by specifying the from, to and<br />
     by arguments.</li>
@@ -1627,7 +1723,7 @@ rep(seq(1, 7, by = 2), times = 7)
 
 <pre><code>##  [1] 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7
 </code></pre>
-<p><strong>Beat Gauss using R</strong></p>
+<h5 id="beat-gauss-using-r">Beat Gauss using R<a class="headerlink" href="#beat-gauss-using-r" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Create first sequence: seq1
 seq1 &lt;- seq(1,500, by = 3)
 print(seq1)
@@ -1660,7 +1756,7 @@ print(sum(append(seq1, seq2)))
 
 <pre><code>## [1] 87029
 </code></pre>
-<p><strong><code>grepl</code> &amp; <code>grep</code></strong></p>
+<h5 id="grepl-grep-and-the-likes"><code>grepl</code> &amp; <code>grep</code> (and the likes)<a class="headerlink" href="#grepl-grep-and-the-likes" title="Permanent link">&para;</a></h5>
 <ul>
 <li><code>grepl</code>; return TRUE when a pattern is found in the corresponding<br />
     character string.</li>
@@ -1739,32 +1835,33 @@ print(sub(pattern = '@.*\\.edu$', replacement = '@datacamp.edu', x = emails))
 ## [3] "dalai.lama@peace.org"     "invalid.edu"             
 ## [5] "quant@datacamp.edu"       "cookie.monster@sesame.tv"
 </code></pre>
+<h5 id="time-is-of-the-essence">Time is of the essence<a class="headerlink" href="#time-is-of-the-essence" title="Permanent link">&para;</a></h5>
 <p><strong>Right here, right now</strong></p>
 <pre><code class="r"># Get the current date: today
 today &lt;- Sys.Date()
 today
 </code></pre>
 
-<pre><code>## [1] "2017-02-15"
+<pre><code>## [1] "2017-04-14"
 </code></pre>
 <pre><code class="r"># See what today looks like under the hood
 print(unclass(today))
 </code></pre>
 
-<pre><code>## [1] 17212
+<pre><code>## [1] 17270
 </code></pre>
 <pre><code class="r"># Get the current time: now
 now &lt;- Sys.time()
 now
 </code></pre>
 
-<pre><code>## [1] "2017-02-15 11:11:32 EST"
+<pre><code>## [1] "2017-04-14 08:29:36 EDT"
 </code></pre>
 <pre><code class="r"># See what now looks like under the hood
 print(unclass(now))
 </code></pre>
 
-<pre><code>## [1] 1487175093
+<pre><code>## [1] 1492172976
 </code></pre>
 <p><strong>Create and format dates</strong></p>
 <table>
