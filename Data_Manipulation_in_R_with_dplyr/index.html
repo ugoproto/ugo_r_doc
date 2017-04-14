@@ -8,7 +8,7 @@
   
   <meta name="author" content="Ugo Spark">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Data Wrangling - ugo_r_doc</title>
+  <title>Data Manipulation in R with dplyr - ugo_r_doc</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Data Wrangling";
-    var mkdocs_page_input_path = "Data_Wrangling.md";
-    var mkdocs_page_url = "/Data_Wrangling/";
+    var mkdocs_page_name = "Data Manipulation in R with dplyr";
+    var mkdocs_page_input_path = "Data_Manipulation_in_R_with_dplyr.md";
+    var mkdocs_page_url = "/Data_Manipulation_in_R_with_dplyr/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -114,37 +114,90 @@
                     
     <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Analysis_in_R%2C_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Data Wrangling</a>
+    <a class="current" href="./">Data Manipulation in R with dplyr</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#data-analysis-in-r-the-datatable-way">Data Analysis in R, the data.table Way</a></li>
+    <li class="toctree-l3"><a href="#1-introduction-to-dplyr">1, Introduction to dplyr</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#1-datatable-novice">1, data.table novice</a></li>
+            <li><a class="toctree-l4" href="#load-the-dplyr-and-hflights-package">Load the dplyr and hflights package</a></li>
         
-            <li><a class="toctree-l4" href="#2-datatable-yeoman">2, data.table yeoman</a></li>
+            <li><a class="toctree-l4" href="#convert-dataframe-to-table">Convert data.frame to table</a></li>
         
-            <li><a class="toctree-l4" href="#3-datatable-expert">3, data.table expert</a></li>
+            <li><a class="toctree-l4" href="#changing-labels-of-hflights">Changing labels of hflights</a></li>
         
         </ul>
     
 
-    <li class="toctree-l3"><a href="#data-manipulation-in-r-with-dplyr">Data Manipulation in R with dplyr</a></li>
+    <li class="toctree-l3"><a href="#2-select-and-mutate">2, select and mutate</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#1-introduction-to-dplyr">1, Introduction to dplyr</a></li>
+            <li><a class="toctree-l4" href="#the-five-verbs-and-their-meaning">The five verbs and their meaning</a></li>
         
-            <li><a class="toctree-l4" href="#2-select-and-mutate">2, select and mutate</a></li>
+            <li><a class="toctree-l4" href="#the-select-verb">The select verb</a></li>
         
-            <li><a class="toctree-l4" href="#3-filter-and-arrange">3, filter and arrange</a></li>
+            <li><a class="toctree-l4" href="#helper-functions-for-variable-selection">Helper functions for variable selection</a></li>
         
-            <li><a class="toctree-l4" href="#4-summarise-and-the-pipe-operator">4, summarise and the Pipe Operator</a></li>
+            <li><a class="toctree-l4" href="#comparison-to-basic-r">Comparison to basic R</a></li>
         
-            <li><a class="toctree-l4" href="#5-group_by-and-working-with-data">5, group_by and working with data</a></li>
+            <li><a class="toctree-l4" href="#mutate-is-creating">mutate is creating</a></li>
+        
+            <li><a class="toctree-l4" href="#add-multiple-variables-using-mutate">Add multiple variables using mutate</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#3-filter-and-arrange">3, filter and arrange</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#logical-operators">Logical operators</a></li>
+        
+            <li><a class="toctree-l4" href="#combining-tests-using-boolean-operators">Combining tests using boolean operators</a></li>
+        
+            <li><a class="toctree-l4" href="#blend-together">Blend together</a></li>
+        
+            <li><a class="toctree-l4" href="#arranging-your-data">Arranging your data</a></li>
+        
+            <li><a class="toctree-l4" href="#reverse-the-order-of-arranging">Reverse the order of arranging</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#4-summarise-and-the-pipe-operator">4, summarise and the Pipe Operator</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#the-syntax-of-summarise">The syntax of summarise</a></li>
+        
+            <li><a class="toctree-l4" href="#aggregate-functions">Aggregate functions</a></li>
+        
+            <li><a class="toctree-l4" href="#dplyr-aggregate-functions">dplyr aggregate functions</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#5-group_by-and-working-with-data">5, group_by and working with data</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#unite-and-conquer-using-group_by">Unite and conquer using group_by</a></li>
+        
+            <li><a class="toctree-l4" href="#combine-group_by-with-mutate">Combine group_by with mutate</a></li>
+        
+            <li><a class="toctree-l4" href="#advanced-group_by">Advanced group_by</a></li>
+        
+            <li><a class="toctree-l4" href="#dplyr-deals-with-different-types">dplyr deals with different types</a></li>
+        
+            <li><a class="toctree-l4" href="#dplyr-and-mysql-databases">dplyr and mySQL databases</a></li>
         
         </ul>
     
@@ -152,7 +205,7 @@
     <li class="toctree-l3"><a href="#adding-tidyr-functions">Adding tidyr Functions</a></li>
     
 
-    <li class="toctree-l3"><a href="#extension-joining-data-in-r-with-dplyr">Extension: 'Joining Data in R with dplyr'</a></li>
+    <li class="toctree-l3"><a href="#joining-data-in-r-with-dplyr">Joining Data in R with dplyr</a></li>
     
 
     </ul>
@@ -273,7 +326,7 @@
         
       
     
-    <li>Data Wrangling</li>
+    <li>Data Manipulation in R with dplyr</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -285,22 +338,56 @@
               
                 <ul>
 <li><a href="#documentation">Documentation</a></li>
-<li><a href="#data-analysis-in-r-the-data.table-way">Data Analysis in R, the <code>data.table</code> Way</a><ul>
-<li><a href="#data.table-novice">1, <code>data.table</code> novice</a></li>
-<li><a href="#data.table-yeoman">2, <code>data.table</code> yeoman</a></li>
-<li><a href="#data.table-expert">3, <code>data.table</code> expert</a></li>
+<li><a href="#introduction-to-dplyr">1, Introduction to <code>dplyr</code></a><ul>
+<li><a href="#load-the-dplyr-and-hflights-package">Load the <code>dplyr</code> and <code>hflights</code><br />
+    package</a></li>
+<li><a href="#convert-data.frame-to-table">Convert <code>data.frame</code> to table</a></li>
+<li><a href="#changing-labels-of-hflights">Changing labels of <code>hflights</code></a></li>
 </ul>
 </li>
-<li><a href="#data-manipulation-in-r-with-dplyr">Data Manipulation in R with <code>dplyr</code></a><ul>
-<li><a href="#introduction-to-dplyr">1, Introduction to <code>dplyr</code></a></li>
-<li><a href="#select-and-mutate">2, <code>select</code> and <code>mutate</code></a></li>
-<li><a href="#filter-and-arrange">3, <code>filter</code> and <code>arrange</code></a></li>
-<li><a href="#summarise-and-the-pipe-operator">4, <code>summarise</code> and the Pipe Operator</a></li>
-<li><a href="#group_by-and-working-with-data">5, <code>group_by</code> and working with data</a></li>
+<li><a href="#select-and-mutate">2, <code>select</code> and <code>mutate</code></a><ul>
+<li><a href="#the-five-verbs-and-their-meaning">The five verbs and their<br />
+    meaning</a></li>
+<li><a href="#the-select-verb">The <code>select</code> verb</a></li>
+<li><a href="#helper-functions-for-variable-selection">Helper functions for variable<br />
+    selection</a></li>
+<li><a href="#comparison-to-basic-r">Comparison to basic R</a></li>
+<li><a href="#mutate-is-creating"><code>mutate</code> is creating</a></li>
+<li><a href="#add-multiple-variables-using-mutate">Add multiple variables using<br />
+<code>mutate</code></a></li>
+</ul>
+</li>
+<li><a href="#filter-and-arrange">3, <code>filter</code> and <code>arrange</code></a><ul>
+<li><a href="#logical-operators">Logical operators</a></li>
+<li><a href="#combining-tests-using-boolean-operators">Combining tests using boolean<br />
+    operators</a></li>
+<li><a href="#blend-together">Blend together</a></li>
+<li><a href="#arranging-your-data">Arranging your data</a></li>
+<li><a href="#reverse-the-order-of-arranging">Reverse the order of<br />
+    arranging</a></li>
+</ul>
+</li>
+<li><a href="#summarise-and-the-pipe-operator">4, <code>summarise</code> and the Pipe<br />
+    Operator</a><ul>
+<li><a href="#the-syntax-of-summarise">The syntax of <code>summarise</code></a></li>
+<li><a href="#aggregate-functions">Aggregate functions</a></li>
+<li><a href="#dplyr-aggregate-functions"><code>dplyr</code> aggregate functions</a></li>
+</ul>
+</li>
+<li><a href="#group_by-and-working-with-data">5, <code>group_by</code> and working with<br />
+    data</a><ul>
+<li><a href="#unite-and-conquer-using-group_by">Unite and conquer using<br />
+<code>group_by</code></a></li>
+<li><a href="#combine-group_by-with-mutate">Combine <code>group_by</code> with<br />
+<code>mutate</code></a></li>
+<li><a href="#advanced-group_by">Advanced <code>group_by</code></a></li>
+<li><a href="#dplyr-deals-with-different-types"><code>dplyr</code> deals with different<br />
+    types</a></li>
+<li><a href="#dplyr-and-mysql-databases"><code>dplyr</code> and mySQL databases</a></li>
 </ul>
 </li>
 <li><a href="#adding-tidyr-functions">Adding <code>tidyr</code> Functions</a></li>
-<li><a href="#extension-joining-data-in-r-with-dplyr">Extension: &lsquo;Joining Data in R with <code>dplyr</code>&lsquo;</a></li>
+<li><a href="#joining-data-in-r-with-dplyr">Joining Data in R with <code>dplyr</code></a></li>
 </ul>
 <hr />
 <p><strong>Foreword</strong></p>
@@ -363,843 +450,8 @@
 </tbody>
 </table>
 
-<h3 id="data-analysis-in-r-the-datatable-way">Data Analysis in R, the <code>data.table</code> Way<a class="headerlink" href="#data-analysis-in-r-the-datatable-way" title="Permanent link">&para;</a></h3>
-<h4 id="1-datatable-novice">1, <code>data.table</code> novice<a class="headerlink" href="#1-datatable-novice" title="Permanent link">&para;</a></h4>
-<p>Find out more with <code>?data.table</code>.</p>
-<p><strong>Create and subset a <code>data.table</code></strong></p>
-<pre><code class="r"># The data.table package
-library(data.table)
-
-# Create my_first_data_table
-my_first_data_table &lt;- data.table(x = c('a', 'b', 'c', 'd', 'e'), y = c(1, 2, 3, 4, 5))
-
-# Create a data.table using recycling
-DT &lt;- data.table(a = 1:2, b = c('A', 'B', 'C', 'D'))
-
-# Print the third row to the console
-DT[3,]
-</code></pre>
-
-<pre><code>##    a b
-## 1: 1 C
-</code></pre>
-<pre><code class="r"># Print the second and third row to the console, but do not commas
-DT[2:3]
-</code></pre>
-
-<pre><code>##    a b
-## 1: 2 B
-## 2: 1 C
-</code></pre>
-<p><strong>Getting to know a <code>data.table</code></strong></p>
-<p>Like <code>head</code>, <code>tail</code>.</p>
-<pre><code class="r"># Print the penultimate row of DT using .N
-DT[.N - 1]
-</code></pre>
-
-<pre><code>##    a b
-## 1: 1 C
-</code></pre>
-<pre><code class="r"># Print the column names of DT, and number of rows and number of columns
-colnames(DT)
-</code></pre>
-
-<pre><code>## [1] "a" "b"
-</code></pre>
-<pre><code class="r">dim(DT)
-</code></pre>
-
-<pre><code>## [1] 4 2
-</code></pre>
-<pre><code class="r"># Select row 2 twice and row 3, returning a data.table with three rows where row 2 is a duplicate of row 1.
-DT[c(2, 2, 3)]
-</code></pre>
-
-<pre><code>##    a b
-## 1: 2 B
-## 2: 2 B
-## 3: 1 C
-</code></pre>
-<p><code>DT</code> is a data.table/data.frame, but <code>DT[ , B]</code> is a vector;<br />
-<code>DT[ , .(B)]</code> is a subsetted data.table.</p>
-<p><strong>Subsetting data tables</strong></p>
-<p><code>DT[i, j, by]</code> means take <code>DT</code>, subset rows using <code>i</code>, then calculate<br />
-<code>j</code> grouped by <code>by</code>. You can wrap <code>j</code> with <code>.()</code>.</p>
-<pre><code class="r">A &lt;- c(1, 2, 3, 4, 5)
-B &lt;- c('a', 'b', 'c', 'd', 'e')
-C &lt;- c(6, 7, 8, 9, 10)
-DT &lt;- data.table(A, B, C)
-
-# Subset rows 1 and 3, and columns B and C
-DT[c(1,3) ,.(B, C)]
-</code></pre>
-
-<pre><code>##    B C
-## 1: a 6
-## 2: c 8
-</code></pre>
-<pre><code class="r"># Assign to ans the correct value
-ans &lt;- data.table(DT[, .(B, val = A * C)])
-
-# Fill in the blanks such that ans2 equals target
-#target &lt;- data.table(B = c('a', 'b', 'c', 'd', 'e', 'a', 'b', 'c', 'd', 'e'),  val = as.integer(c(6:10, 1:5)))
-ans2 &lt;- data.table(DT[, .(B, val = as.integer(c(6:10, 1:5)))])
-</code></pre>
-
-<p><strong>The <code>by</code> basics</strong></p>
-<pre><code class="r"># iris and iris3 are already available in the workspace
-
-# Convert iris to a data.table: DT
-DT &lt;- as.data.table(iris)
-
-# For each Species, print the mean Sepal.Length
-DT[, .(mean(Sepal.Length)), by = .(Species)]
-</code></pre>
-
-<pre><code>##       Species    V1
-## 1:     setosa 5.006
-## 2: versicolor 5.936
-## 3:  virginica 6.588
-</code></pre>
-<pre><code class="r"># Print mean Sepal.Length, grouping by first letter of Species
-DT[, .(mean(Sepal.Length)), by = .(substr(Species, 1,1))]
-</code></pre>
-
-<pre><code>##    substr    V1
-## 1:      s 5.006
-## 2:      v 6.262
-</code></pre>
-<p><strong>Using <code>.N</code> and <code>by</code></strong></p>
-<p><code>.N</code>, number, in row or column.</p>
-<pre><code class="r"># data.table version of iris: DT
-DT &lt;- as.data.table(iris)
-
-# Group the specimens by Sepal area (to the nearest 10 cm2) and count how many occur in each group.
-DT[, .N, by = 10 * round(Sepal.Length * Sepal.Width / 10)]
-</code></pre>
-
-<pre><code>##    round   N
-## 1:    20 117
-## 2:    10  29
-## 3:    30   4
-</code></pre>
-<pre><code class="r"># Now name the output columns `Area` and `Count`
-DT[, .(Count = .N), by = .(Area = 10 * round(Sepal.Length * Sepal.Width / 10))]
-</code></pre>
-
-<pre><code>##    Area Count
-## 1:   20   117
-## 2:   10    29
-## 3:   30     4
-</code></pre>
-<p><strong>Return multiple numbers in <code>j</code></strong></p>
-<pre><code class="r"># Create the data.table DT
-set.seed(1L)
-DT &lt;- data.table(A = rep(letters[2:1], each = 4L), B = rep(1:4, each = 2L), C = sample(8))
-
-# Create the new data.table, DT2
-DT2 &lt;- DT[, .(C = cumsum(C)), by=.(A,B)]
-
-# Select from DT2 the last two values from C while you group by A
-DT2[, .(C = tail(C,2)), by=A]
-</code></pre>
-
-<pre><code>##    A C
-## 1: b 4
-## 2: b 9
-## 3: a 2
-## 4: a 8
-</code></pre>
-<h4 id="2-datatable-yeoman">2, <code>data.table</code> yeoman<a class="headerlink" href="#2-datatable-yeoman" title="Permanent link">&para;</a></h4>
-<p><strong>Chaining, the basics</strong></p>
-<pre><code class="r"># Build DT
-set.seed(1L)
-DT &lt;- data.table(A = rep(letters[2:1], each = 4L), B = rep(1:4, each = 2L), C = sample(8)) 
-DT
-</code></pre>
-
-<pre><code>##    A B C
-## 1: b 1 3
-## 2: b 1 8
-## 3: b 2 4
-## 4: b 2 5
-## 5: a 3 1
-## 6: a 3 7
-## 7: a 4 2
-## 8: a 4 6
-</code></pre>
-<pre><code class="r"># Use chaining
-# Cumsum of C while grouping by A and B, and then select last two values of C while grouping by A
-DT[, .(C = cumsum(C)), by = .(A,B)][, .(C = tail(C,2)), by = .(A)]
-</code></pre>
-
-<pre><code>##    A C
-## 1: b 4
-## 2: b 9
-## 3: a 2
-## 4: a 8
-</code></pre>
-<p><strong>Chaining your <code>iris</code> dataset</strong></p>
-<pre><code class="r">DT &lt;- data.table(iris)
-
-# Perform chained operations on DT
-DT[, .(Sepal.Length = median(Sepal.Length), Sepal.Width = median(Sepal.Width), Petal.Length = median(Petal.Length), Petal.Width = median(Petal.Width)), by = .(Species)][order(Species, decreasing = TRUE)]
-</code></pre>
-
-<pre><code>##       Species Sepal.Length Sepal.Width Petal.Length Petal.Width
-## 1:  virginica          6.5         3.0         5.55         2.0
-## 2: versicolor          5.9         2.8         4.35         1.3
-## 3:     setosa          5.0         3.4         1.50         0.2
-</code></pre>
-<pre><code class="r">DT
-</code></pre>
-
-<pre><code>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##   1:          5.1         3.5          1.4         0.2    setosa
-##   2:          4.9         3.0          1.4         0.2    setosa
-##   3:          4.7         3.2          1.3         0.2    setosa
-##   4:          4.6         3.1          1.5         0.2    setosa
-##   5:          5.0         3.6          1.4         0.2    setosa
-##  ---                                                            
-## 146:          6.7         3.0          5.2         2.3 virginica
-## 147:          6.3         2.5          5.0         1.9 virginica
-## 148:          6.5         3.0          5.2         2.0 virginica
-## 149:          6.2         3.4          5.4         2.3 virginica
-## 150:          5.9         3.0          5.1         1.8 virginica
-</code></pre>
-<p><strong>Programming time vs readability</strong></p>
-<pre><code class="r">x &lt;- c(2, 1, 2, 1, 2, 2, 1)
-y &lt;- c(1, 3, 5, 7, 9, 11, 13)
-z &lt;- c(2, 4, 6, 8, 10, 12, 14)
-DT &lt;- data.table(x, y, z)
-
-# Mean of columns
-DT[, lapply(.SD, mean), by = .(x)] 
-</code></pre>
-
-<pre><code>##    x        y        z
-## 1: 2 6.500000 7.500000
-## 2: 1 7.666667 8.666667
-</code></pre>
-<pre><code class="r"># Median of columns
-DT[, lapply(.SD, median), by = .(x)]
-</code></pre>
-
-<pre><code>##    x y z
-## 1: 2 7 8
-## 2: 1 7 8
-</code></pre>
-<p><strong>Introducing <code>.SDcols</code></strong></p>
-<p><code>.SDcols</code> specifies the columns of <code>DT</code> that are included in <code>.SD</code>.</p>
-<pre><code class="r">grp &lt;- c(6, 6, 8, 8, 8)
-Q1 &lt;- c(4, 3, 3, 5, 3)
-Q2 &lt;- c(1, 4, 1, 4, 4)
-Q3 &lt;- c(3, 1, 5, 5, 2)
-H1 &lt;- c(1, 2, 3, 2, 4)
-H2 &lt;- c(1, 4, 3, 4, 3)
-DT &lt;- data.table(grp, Q1, Q2, Q3, H1, H2)
-
-# Calculate the sum of the Q columns
-DT[, lapply(.SD, sum), .SDcols = 2:4]
-</code></pre>
-
-<pre><code>##    Q1 Q2 Q3
-## 1: 18 14 16
-</code></pre>
-<pre><code class="r"># Calculate the sum of columns H1 and H2 
-DT[, lapply(.SD, sum), .SDcols = 5:6]
-</code></pre>
-
-<pre><code>##    H1 H2
-## 1: 12 15
-</code></pre>
-<pre><code class="r"># Select all but the first row of groups 1 and 2, returning only the grp column and the Q columns. 
-DT[, .SD[-1], .SDcols = 2:4, by = .(grp)]
-</code></pre>
-
-<pre><code>##    grp Q1 Q2 Q3
-## 1:   6  3  4  1
-## 2:   8  5  4  5
-## 3:   8  3  4  2
-</code></pre>
-<p><strong>Mixing it together: <code>lapply</code>, <code>.SD</code>, <code>SDcols</code> and <code>.N</code></strong></p>
-<pre><code class="r">x &lt;- c(2, 1, 2, 1, 2, 2, 1)
-y &lt;- c(1, 3, 5, 7, 9, 11, 13)
-z &lt;- c(2, 4, 6, 8, 10, 12, 14)
-DT &lt;- data.table(x, y, z)
-
-# Sum of all columns and the number of rows
-# For the first part, you need to combine the returned list from lapply, .SD and .SDcols and the integer vector of .N. You have to this because the result of the two together has to be a list again, with all values put together.
-DT
-</code></pre>
-
-<pre><code>##    x  y  z
-## 1: 2  1  2
-## 2: 1  3  4
-## 3: 2  5  6
-## 4: 1  7  8
-## 5: 2  9 10
-## 6: 2 11 12
-## 7: 1 13 14
-</code></pre>
-<pre><code class="r">DT[,c(lapply(.SD, sum), .N), .SDcols = 1:3, by = x]
-</code></pre>
-
-<pre><code>##    x x  y  z N
-## 1: 2 8 26 30 4
-## 2: 1 3 23 26 3
-</code></pre>
-<pre><code class="r"># Cumulative sum of column x and y while grouping by x and z &gt; 8
-DT[,lapply(.SD, cumsum), .SDcols = 1:2, by = .(by1 = x, by2 = z &gt; 8)]
-</code></pre>
-
-<pre><code>##    by1   by2 x  y
-## 1:   2 FALSE 2  1
-## 2:   2 FALSE 4  6
-## 3:   1 FALSE 1  3
-## 4:   1 FALSE 2 10
-## 5:   2  TRUE 2  9
-## 6:   2  TRUE 4 20
-## 7:   1  TRUE 1 13
-</code></pre>
-<pre><code class="r"># Chaining
-DT[,lapply(.SD, cumsum), .SDcols = 1:2, by = .(by1 = x, by2 = z &gt; 8)][,lapply(.SD, max), .SDcols = 3:4, by = by1]
-</code></pre>
-
-<pre><code>##    by1 x  y
-## 1:   2 4 20
-## 2:   1 2 13
-</code></pre>
-<p><strong>Adding, updating and removing columns</strong></p>
-<p><code>:=</code> is defined for use in <code>j</code> only.</p>
-<pre><code class="r"># The data.table DT
-DT &lt;- data.table(A = letters[c(1, 1, 1, 2, 2)], B = 1:5)
-DT
-</code></pre>
-
-<pre><code>##    A B
-## 1: a 1
-## 2: a 2
-## 3: a 3
-## 4: b 4
-## 5: b 5
-</code></pre>
-<pre><code class="r"># Add column by reference: Total
-DT[, ('Total') := sum(B), by = .(A)]
-</code></pre>
-
-<pre><code>##    A B Total
-## 1: a 1     6
-## 2: a 2     6
-## 3: a 3     6
-## 4: b 4     9
-## 5: b 5     9
-</code></pre>
-<pre><code class="r"># Add 1 to column B
-DT[c(2,4), ('B') := as.integer(1 + B)]
-</code></pre>
-
-<pre><code>##    A B Total
-## 1: a 1     6
-## 2: a 3     6
-## 3: a 3     6
-## 4: b 5     9
-## 5: b 5     9
-</code></pre>
-<pre><code class="r"># Add a new column Total2
-DT[2:4, ':='(Total2 = sum(B)), by = .(A)]
-</code></pre>
-
-<pre><code>##    A B Total Total2
-## 1: a 1     6     NA
-## 2: a 3     6      6
-## 3: a 3     6      6
-## 4: b 5     9      5
-## 5: b 5     9     NA
-</code></pre>
-<pre><code class="r"># Remove the Total column
-DT[, Total := NULL]
-</code></pre>
-
-<pre><code>##    A B Total2
-## 1: a 1     NA
-## 2: a 3      6
-## 3: a 3      6
-## 4: b 5      5
-## 5: b 5     NA
-</code></pre>
-<pre><code class="r"># Select the third column using `[[`
-DT[[3]]
-</code></pre>
-
-<pre><code>## [1] NA  6  6  5 NA
-</code></pre>
-<p><strong>The functional form</strong></p>
-<pre><code class="r"># A data.table DT
-DT &lt;- data.table(A = c(1, 1, 1, 2, 2), B = 1:5)
-
-# Update B, add C and D
-DT[, `:=`(B = B + 1,  C = A + B, D = 2)]
-</code></pre>
-
-<pre><code>##    A B C D
-## 1: 1 2 2 2
-## 2: 1 3 3 2
-## 3: 1 4 4 2
-## 4: 2 5 6 2
-## 5: 2 6 7 2
-</code></pre>
-<pre><code class="r"># Delete my_cols
-my_cols &lt;- c('B', 'C')
-DT[, (my_cols) := NULL]
-</code></pre>
-
-<pre><code>##    A D
-## 1: 1 2
-## 2: 1 2
-## 3: 1 2
-## 4: 2 2
-## 5: 2 2
-</code></pre>
-<pre><code class="r"># Delete column 2 by number
-DT[, 2 := NULL]
-</code></pre>
-
-<pre><code>##    A
-## 1: 1
-## 2: 1
-## 3: 1
-## 4: 2
-## 5: 2
-</code></pre>
-<p><strong>Ready, <code>set</code>, go!</strong></p>
-<p>The <code>set</code> function is used to repeatedly update a data.table by<br />
-reference. You can think of the <code>set</code> function as a loopable.</p>
-<pre><code class="r">A &lt;- c(2, 2, 3, 5, 2, 5, 5, 4, 4, 1)
-B &lt;- c(2, 1, 4, 2, 4, 3, 4, 5, 2, 4)
-C &lt;- c(5, 2, 4, 1, 2, 2, 1, 2, 5, 2)
-D &lt;- c(3, 3, 3, 1, 5, 4, 4, 1, 4, 3)
-DT &lt;- data.table(A, B, C, D)
-
-# Set the seed
-set.seed(1)
-
-# Check the DT
-DT
-</code></pre>
-
-<pre><code>##     A B C D
-##  1: 2 2 5 3
-##  2: 2 1 2 3
-##  3: 3 4 4 3
-##  4: 5 2 1 1
-##  5: 2 4 2 5
-##  6: 5 3 2 4
-##  7: 5 4 1 4
-##  8: 4 5 2 1
-##  9: 4 2 5 4
-## 10: 1 4 2 3
-</code></pre>
-<pre><code class="r"># For loop with set
-for (l in 2:4) set(DT, sample(10,3), l, NA)
-
-# Change the column names to lowercase
-setnames(DT,c('A','B','C','D'), c('a','b','c','d'))
-
-# Print the resulting DT to the console
-DT
-</code></pre>
-
-<pre><code>##     a  b  c  d
-##  1: 2  2  5  3
-##  2: 2  1 NA  3
-##  3: 3 NA  4  3
-##  4: 5 NA  1  1
-##  5: 2 NA  2  5
-##  6: 5  3  2 NA
-##  7: 5  4  1  4
-##  8: 4  5 NA  1
-##  9: 4  2  5 NA
-## 10: 1  4 NA NA
-</code></pre>
-<p><strong>The <code>set</code> family</strong></p>
-<pre><code class="r"># Define DT
-DT &lt;- data.table(a = letters[c(1, 1, 1, 2, 2)], b = 1)
-DT
-</code></pre>
-
-<pre><code>##    a b
-## 1: a 1
-## 2: a 1
-## 3: a 1
-## 4: b 1
-## 5: b 1
-</code></pre>
-<pre><code class="r"># Add a postfix '_2' to all column names
-setnames(DT, c(1:2), paste0(c('a','b'), '_2'))
-DT
-</code></pre>
-
-<pre><code>##    a_2 b_2
-## 1:   a   1
-## 2:   a   1
-## 3:   a   1
-## 4:   b   1
-## 5:   b   1
-</code></pre>
-<pre><code class="r"># Change column name 'a_2' to 'A2'
-setnames(DT, 'a_2', 'A2')
-DT
-</code></pre>
-
-<pre><code>##    A2 b_2
-## 1:  a   1
-## 2:  a   1
-## 3:  a   1
-## 4:  b   1
-## 5:  b   1
-</code></pre>
-<pre><code class="r"># Reverse the order of the columns
-setcolorder(DT, c('b_2','A2'))
-</code></pre>
-
-<h4 id="3-datatable-expert">3, <code>data.table</code> expert<a class="headerlink" href="#3-datatable-expert" title="Permanent link">&para;</a></h4>
-<p><strong>Selecting rows the <code>data.table</code> way</strong></p>
-<pre><code class="r"># Convert iris to a data.table
-iris &lt;- data.table('Sepal.Length' = iris$Sepal.Length, 'Sepal.Width' = iris$Sepal.Width, 'Petal.Length' = iris$Petal.Length, 'Petal.Width' = iris$Petal.Width, 'Species' = iris$Species)
-iris
-</code></pre>
-
-<pre><code>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##   1:          5.1         3.5          1.4         0.2    setosa
-##   2:          4.9         3.0          1.4         0.2    setosa
-##   3:          4.7         3.2          1.3         0.2    setosa
-##   4:          4.6         3.1          1.5         0.2    setosa
-##   5:          5.0         3.6          1.4         0.2    setosa
-##  ---                                                            
-## 146:          6.7         3.0          5.2         2.3 virginica
-## 147:          6.3         2.5          5.0         1.9 virginica
-## 148:          6.5         3.0          5.2         2.0 virginica
-## 149:          6.2         3.4          5.4         2.3 virginica
-## 150:          5.9         3.0          5.1         1.8 virginica
-</code></pre>
-<pre><code class="r"># Species is 'virginica'
-head(iris[Species == 'virginica'], 20)
-</code></pre>
-
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##  1:          6.3         3.3          6.0         2.5 virginica
-##  2:          5.8         2.7          5.1         1.9 virginica
-##  3:          7.1         3.0          5.9         2.1 virginica
-##  4:          6.3         2.9          5.6         1.8 virginica
-##  5:          6.5         3.0          5.8         2.2 virginica
-##  6:          7.6         3.0          6.6         2.1 virginica
-##  7:          4.9         2.5          4.5         1.7 virginica
-##  8:          7.3         2.9          6.3         1.8 virginica
-##  9:          6.7         2.5          5.8         1.8 virginica
-## 10:          7.2         3.6          6.1         2.5 virginica
-## 11:          6.5         3.2          5.1         2.0 virginica
-## 12:          6.4         2.7          5.3         1.9 virginica
-## 13:          6.8         3.0          5.5         2.1 virginica
-## 14:          5.7         2.5          5.0         2.0 virginica
-## 15:          5.8         2.8          5.1         2.4 virginica
-## 16:          6.4         3.2          5.3         2.3 virginica
-## 17:          6.5         3.0          5.5         1.8 virginica
-## 18:          7.7         3.8          6.7         2.2 virginica
-## 19:          7.7         2.6          6.9         2.3 virginica
-## 20:          6.0         2.2          5.0         1.5 virginica
-</code></pre>
-<pre><code class="r"># Species is either 'virginica' or 'versicolor'
-head(iris[Species %in% c('virginica', 'versicolor')], 20)
-</code></pre>
-
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-##  1:          7.0         3.2          4.7         1.4 versicolor
-##  2:          6.4         3.2          4.5         1.5 versicolor
-##  3:          6.9         3.1          4.9         1.5 versicolor
-##  4:          5.5         2.3          4.0         1.3 versicolor
-##  5:          6.5         2.8          4.6         1.5 versicolor
-##  6:          5.7         2.8          4.5         1.3 versicolor
-##  7:          6.3         3.3          4.7         1.6 versicolor
-##  8:          4.9         2.4          3.3         1.0 versicolor
-##  9:          6.6         2.9          4.6         1.3 versicolor
-## 10:          5.2         2.7          3.9         1.4 versicolor
-## 11:          5.0         2.0          3.5         1.0 versicolor
-## 12:          5.9         3.0          4.2         1.5 versicolor
-## 13:          6.0         2.2          4.0         1.0 versicolor
-## 14:          6.1         2.9          4.7         1.4 versicolor
-## 15:          5.6         2.9          3.6         1.3 versicolor
-## 16:          6.7         3.1          4.4         1.4 versicolor
-## 17:          5.6         3.0          4.5         1.5 versicolor
-## 18:          5.8         2.7          4.1         1.0 versicolor
-## 19:          6.2         2.2          4.5         1.5 versicolor
-## 20:          5.6         2.5          3.9         1.1 versicolor
-</code></pre>
-<p><strong>Removing columns and adapting your column names</strong></p>
-<p>Refer to a regex cheat sheet for metacharacter.</p>
-<pre><code class="r"># iris as a data.table
-iris &lt;- as.data.table(iris)
-iris
-</code></pre>
-
-<pre><code>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##   1:          5.1         3.5          1.4         0.2    setosa
-##   2:          4.9         3.0          1.4         0.2    setosa
-##   3:          4.7         3.2          1.3         0.2    setosa
-##   4:          4.6         3.1          1.5         0.2    setosa
-##   5:          5.0         3.6          1.4         0.2    setosa
-##  ---                                                            
-## 146:          6.7         3.0          5.2         2.3 virginica
-## 147:          6.3         2.5          5.0         1.9 virginica
-## 148:          6.5         3.0          5.2         2.0 virginica
-## 149:          6.2         3.4          5.4         2.3 virginica
-## 150:          5.9         3.0          5.1         1.8 virginica
-</code></pre>
-<pre><code class="r"># Remove the 'Sepal.' prefix
-#gsub('([ab])', '\\1_\\1_', 'abc and ABC') = pattern, replacement, x
-setnames(iris, c('Sepal.Length', 'Sepal.Width'), c('Length','Width')) 
-#gsub('^Sepal\\.','', iris)
-
-# Remove the two columns starting with 'Petal'
-iris[, c('Petal.Length', 'Petal.Width') := NULL]
-</code></pre>
-
-<pre><code>##      Length Width   Species
-##   1:    5.1   3.5    setosa
-##   2:    4.9   3.0    setosa
-##   3:    4.7   3.2    setosa
-##   4:    4.6   3.1    setosa
-##   5:    5.0   3.6    setosa
-##  ---                       
-## 146:    6.7   3.0 virginica
-## 147:    6.3   2.5 virginica
-## 148:    6.5   3.0 virginica
-## 149:    6.2   3.4 virginica
-## 150:    5.9   3.0 virginica
-</code></pre>
-<p><strong>Understanding automatic indexing</strong></p>
-<pre><code class="r"># Cleaned up iris data.table
-iris2 &lt;- data.frame(Length = iris$Sepal.Length, Width = iris$Sepal.Width, Species = iris$Species)
-iris2 &lt;- as.data.table(iris2)
-</code></pre>
-
-<pre><code class="r"># Area is greater than 20 square centimeters
-iris2[ Width * Length &gt; 20 ], 20
-</code></pre>
-
-<pre><code class="text">   Length Width    Species is_large
- 1:    5.4   3.9     setosa    FALSE
- 2:    5.8   4.0     setosa    FALSE
- 3:    5.7   4.4     setosa     TRUE
- 4:    5.4   3.9     setosa    FALSE
- 5:    5.7   3.8     setosa    FALSE
- 6:    5.2   4.1     setosa    FALSE
- 7:    5.5   4.2     setosa    FALSE
- 8:    7.0   3.2 versicolor    FALSE
- 9:    6.4   3.2 versicolor    FALSE
-10:    6.9   3.1 versicolor    FALSE
-11:    6.3   3.3 versicolor    FALSE
-12:    6.7   3.1 versicolor    FALSE
-13:    6.7   3.0 versicolor    FALSE
-14:    6.0   3.4 versicolor    FALSE
-15:    6.7   3.1 versicolor    FALSE
-16:    6.3   3.3  virginica    FALSE
-17:    7.1   3.0  virginica    FALSE
-18:    7.6   3.0  virginica    FALSE
-19:    7.3   2.9  virginica    FALSE
-20:    7.2   3.6  virginica     TRUE
-...
-</code></pre>
-
-<pre><code class="r"># Add new boolean column
-iris2[, is_large := Width * Length &gt; 25]
-</code></pre>
-
-<pre><code class="r"># Now large observations with is_large
-iris2[is_large == TRUE]
-</code></pre>
-
-<pre><code class="text">   Length Width   Species is_large
-1:    5.7   4.4    setosa     TRUE
-2:    7.2   3.6 virginica     TRUE
-3:    7.7   3.8 virginica     TRUE
-4:    7.9   3.8 virginica     TRUE
-</code></pre>
-
-<pre><code class="r">iris2[(is_large)] # Also OK
-</code></pre>
-
-<pre><code class="text">   Length Width   Species is_large
-1:    5.7   4.4    setosa     TRUE
-2:    7.2   3.6 virginica     TRUE
-3:    7.7   3.8 virginica     TRUE
-4:    7.9   3.8 virginica     TRUE
-</code></pre>
-
-<p><strong>Selecting groups or parts of groups</strong></p>
-<pre><code class="r"># The 'keyed' data.table DT
-DT &lt;- data.table(A = letters[c(2, 1, 2, 3, 1, 2, 3)],
-                 B = c(5, 4, 1, 9,8 ,8, 6), 
-                 C = 6:12)
-setkey(DT, A, B)
-
-# Select the 'b' group
-DT['b']
-</code></pre>
-
-<pre><code>##    A B  C
-## 1: b 1  8
-## 2: b 5  6
-## 3: b 8 11
-</code></pre>
-<pre><code class="r"># 'b' and 'c' groups
-DT[c('b', 'c')]
-</code></pre>
-
-<pre><code>##    A B  C
-## 1: b 1  8
-## 2: b 5  6
-## 3: b 8 11
-## 4: c 6 12
-## 5: c 9  9
-</code></pre>
-<pre><code class="r"># The first row of the 'b' and 'c' groups
-DT[c('b', 'c'), mult = 'first']
-</code></pre>
-
-<pre><code>##    A B  C
-## 1: b 1  8
-## 2: c 6 12
-</code></pre>
-<pre><code class="r"># First and last row of the 'b' and 'c' groups
-DT[c('b', 'c'), .SD[c(1, .N)], by = .EACHI]
-</code></pre>
-
-<pre><code>##    A B  C
-## 1: b 1  8
-## 2: b 8 11
-## 3: c 6 12
-## 4: c 9  9
-</code></pre>
-<pre><code class="r"># Copy and extend code for instruction 4: add printout
-DT[c('b', 'c'), { print(.SD); .SD[c(1, .N)] }, by = .EACHI]
-</code></pre>
-
-<pre><code>##    B  C
-## 1: 1  8
-## 2: 5  6
-## 3: 8 11
-##    B  C
-## 1: 6 12
-## 2: 9  9
-
-##    A B  C
-## 1: b 1  8
-## 2: b 8 11
-## 3: c 6 12
-## 4: c 9  9
-</code></pre>
-<p><strong>Rolling joins - part one</strong></p>
-<pre><code class="r"># Keyed data.table DT
-DT &lt;- data.table(A = letters[c(2, 1, 2, 3, 1, 2, 3)],                  B = c(5, 4, 1, 9, 8, 8, 6), 
-                 C = 6:12, 
-                 key = 'A,B')
-
-# Get the key of DT
-key(DT)
-</code></pre>
-
-<pre><code>## [1] "A" "B"
-</code></pre>
-<pre><code class="r"># Row where A == 'b' &amp; B == 6
-setkey(DT, A, B)
-DT[.('b', 6)]
-</code></pre>
-
-<pre><code>##    A B  C
-## 1: b 6 NA
-</code></pre>
-<pre><code class="r"># Return the prevailing row
-DT[.('b',6), roll = TRUE]
-</code></pre>
-
-<pre><code>##    A B C
-## 1: b 6 6
-</code></pre>
-<pre><code class="r"># Return the nearest row
-DT[.('b',6), roll =+ Inf]
-</code></pre>
-
-<pre><code>##    A B C
-## 1: b 6 6
-</code></pre>
-<p><strong>Rolling joins - part two</strong></p>
-<pre><code class="r"># Keyed data.table DT
-DT &lt;- data.table(A = letters[c(2, 1, 2, 3, 1, 2, 3)],                  B = c(5, 4, 1, 9, 8, 8, 6), 
-                 C = 6:12, 
-                 key = 'A,B')
-
-# Look at the sequence (-2):10 for the 'b' group
-DT[.('b', (-2):10)]
-</code></pre>
-
-<pre><code>##     A  B  C
-##  1: b -2 NA
-##  2: b -1 NA
-##  3: b  0 NA
-##  4: b  1  8
-##  5: b  2 NA
-##  6: b  3 NA
-##  7: b  4 NA
-##  8: b  5  6
-##  9: b  6 NA
-## 10: b  7 NA
-## 11: b  8 11
-## 12: b  9 NA
-## 13: b 10 NA
-</code></pre>
-<pre><code class="r"># Add code: carry the prevailing values forwards
-DT[.('b', (-2):10), roll = TRUE]
-</code></pre>
-
-<pre><code>##     A  B  C
-##  1: b -2 NA
-##  2: b -1 NA
-##  3: b  0 NA
-##  4: b  1  8
-##  5: b  2  8
-##  6: b  3  8
-##  7: b  4  8
-##  8: b  5  6
-##  9: b  6  6
-## 10: b  7  6
-## 11: b  8 11
-## 12: b  9 11
-## 13: b 10 11
-</code></pre>
-<pre><code class="r"># Add code: carry the first observation backwards
-DT[.('b', (-2):10), roll = TRUE, rollends = TRUE]
-</code></pre>
-
-<pre><code>##     A  B  C
-##  1: b -2  8
-##  2: b -1  8
-##  3: b  0  8
-##  4: b  1  8
-##  5: b  2  8
-##  6: b  3  8
-##  7: b  4  8
-##  8: b  5  6
-##  9: b  6  6
-## 10: b  7  6
-## 11: b  8 11
-## 12: b  9 11
-## 13: b 10 11
-</code></pre>
-<hr />
-<h3 id="data-manipulation-in-r-with-dplyr">Data Manipulation in R with <code>dplyr</code><a class="headerlink" href="#data-manipulation-in-r-with-dplyr" title="Permanent link">&para;</a></h3>
 <h4 id="1-introduction-to-dplyr">1, Introduction to <code>dplyr</code><a class="headerlink" href="#1-introduction-to-dplyr" title="Permanent link">&para;</a></h4>
-<p><strong>Load the <code>dplyr</code> and <code>hflights</code> package</strong></p>
+<h5 id="load-the-dplyr-and-hflights-package">Load the <code>dplyr</code> and <code>hflights</code> package<a class="headerlink" href="#load-the-dplyr-and-hflights-package" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Load the dplyr package
 library(dplyr)
 library(dtplyr)
@@ -1286,7 +538,7 @@ head(hflights)
 ##  Max.   :1.000000  
 ##
 </code></pre>
-<p><strong>Convert <code>data.frame</code> to table</strong></p>
+<h5 id="convert-dataframe-to-table">Convert <code>data.frame</code> to table<a class="headerlink" href="#convert-dataframe-to-table" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Convert the hflights data.frame into a hflights tbl
 hflights &lt;- tbl_df(hflights)
 
@@ -1317,7 +569,8 @@ hflights
 carriers &lt;- hflights$UniqueCarrier
 </code></pre>
 
-<p><strong>Changing labels of <code>hflights</code>, part 1 of 2</strong></p>
+<h5 id="changing-labels-of-hflights">Changing labels of <code>hflights</code><a class="headerlink" href="#changing-labels-of-hflights" title="Permanent link">&para;</a></h5>
+<p><strong>part 1 of 2</strong></p>
 <pre><code class="r"># add
 lut &lt;- c('AA' = 'American', 'AS' = 'Alaska', 'B6' = 'JetBlue', 'CO' = 'Continental', 
          'DL' = 'Delta', 'OO' = 'SkyWest', 'UA' = 'United', 'US' = 'US_Airways', 
@@ -1355,7 +608,7 @@ glimpse(hflights)
 ## $ CancellationCode  &lt;chr&gt; "", "", "", "", "", "", "", "", "", "", "", ...
 ## $ Diverted          &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
 </code></pre>
-<p><strong>Changing labels of <code>hflights</code>, part 2 of 2</strong></p>
+<p><strong>part 2 of 2</strong></p>
 <pre><code class="r"># Build the lookup table: lut
 lut &lt;- c(&quot;A&quot; = &quot;carrier&quot;, &quot;B&quot; = &quot;weather&quot; ,&quot;C&quot; = &quot;FFA&quot; ,&quot;D&quot; = &quot;security&quot;, &quot;E&quot; = &quot;not cancelled&quot;)
 
@@ -1394,7 +647,7 @@ $ Code              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA,...
 </code></pre>
 
 <h4 id="2-select-and-mutate">2, <code>select</code> and <code>mutate</code><a class="headerlink" href="#2-select-and-mutate" title="Permanent link">&para;</a></h4>
-<p><strong>The five verbs and their meaning</strong></p>
+<h5 id="the-five-verbs-and-their-meaning">The five verbs and their meaning<a class="headerlink" href="#the-five-verbs-and-their-meaning" title="Permanent link">&para;</a></h5>
 <ul>
 <li><code>select</code>; which returns a subset of the columns.</li>
 <li><code>filter</code>; that is able to return a subset of the rows.</li>
@@ -1404,7 +657,7 @@ $ Code              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA,...
 <li><code>summarise</code>; which reduces each group to a single row by calculating<br />
     aggregate measures.</li>
 </ul>
-<p><strong>Choosing is not losing! The <code>select</code> verb</strong></p>
+<h5 id="the-select-verb">The <code>select</code> verb<a class="headerlink" href="#the-select-verb" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Print out a tbl with the four columns of hflights related to delay
 select(hflights, ActualElapsedTime, AirTime, ArrDelay, DepDelay)
 </code></pre>
@@ -1487,7 +740,7 @@ select(hflights, 1:4, 12:21)
 ## #   TaxiIn &lt;int&gt;, TaxiOut &lt;int&gt;, Cancelled &lt;int&gt;, CancellationCode &lt;chr&gt;,
 ## #   Diverted &lt;int&gt;
 </code></pre>
-<p><strong>Helper functions for variable selection</strong></p>
+<h5 id="helper-functions-for-variable-selection">Helper functions for variable selection<a class="headerlink" href="#helper-functions-for-variable-selection" title="Permanent link">&para;</a></h5>
 <p><code>select</code>:</p>
 <ul>
 <li><code>starts_with("X")</code>; every name that starts with <code>"X"</code>,</li>
@@ -1559,7 +812,7 @@ select(hflights, ends_with('Time'), ends_with('Delay'))
 ## 10    1443    1553                70      45       43       43
 ## # ... with 227,486 more rows
 </code></pre>
-<p><strong>Comparison to basic R</strong></p>
+<h5 id="comparison-to-basic-r">Comparison to basic R<a class="headerlink" href="#comparison-to-basic-r" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># add
 ex1r &lt;- hflights[c('TaxiIn','TaxiOut','Distance')]
 
@@ -1574,7 +827,7 @@ ex3r &lt;- hflights[c('TailNum','TaxiIn','TaxiOut')]
 ex3d &lt;- select(hflights, TailNum, starts_with('Taxi'))
 </code></pre>
 
-<p><strong>Mutating is creating</strong></p>
+<h5 id="mutate-is-creating"><code>mutate</code> is creating<a class="headerlink" href="#mutate-is-creating" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Add the new variable ActualGroundTime to a copy of hflights and save the result as g1
 g1 &lt;- mutate(hflights, ActualGroundTime = ActualElapsedTime - AirTime)
 glimpse(hflights)
@@ -1666,7 +919,7 @@ g3
 ## #   Diverted &lt;int&gt;, ActualGroundTime &lt;int&gt;, GroundTime &lt;int&gt;,
 ## #   AverageSpeed &lt;dbl&gt;
 </code></pre>
-<p><strong>Add multiple variables using mutate</strong></p>
+<h5 id="add-multiple-variables-using-mutate">Add multiple variables using <code>mutate</code><a class="headerlink" href="#add-multiple-variables-using-mutate" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Add a second variable loss_percent to the dataset: m1
 m1 &lt;- mutate(hflights, loss = ArrDelay - DepDelay, loss_percent = (ArrDelay - DepDelay)/DepDelay*100)
 
@@ -1706,7 +959,7 @@ glimpse(m3)
 ## $ Diff              &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
 </code></pre>
 <h4 id="3-filter-and-arrange">3, <code>filter</code> and <code>arrange</code><a class="headerlink" href="#3-filter-and-arrange" title="Permanent link">&para;</a></h4>
-<p><strong>Logical operators</strong></p>
+<h5 id="logical-operators">Logical operators<a class="headerlink" href="#logical-operators" title="Permanent link">&para;</a></h5>
 <p><code>filter</code>:</p>
 <ul>
 <li><code>x &lt; y</code>; <code>TRUE</code> if <code>x</code> is less than <code>y</code>.</li>
@@ -1788,7 +1041,7 @@ filter(hflights, (TaxiIn + TaxiOut) &gt; AirTime)
 ## #   TaxiIn &lt;int&gt;, TaxiOut &lt;int&gt;, Cancelled &lt;int&gt;, CancellationCode &lt;chr&gt;,
 ## #   Diverted &lt;int&gt;
 </code></pre>
-<p><strong>Combining tests using boolean operators</strong></p>
+<h5 id="combining-tests-using-boolean-operators">Combining tests using boolean operators<a class="headerlink" href="#combining-tests-using-boolean-operators" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># All flights that departed before 5am or arrived after 10pm
 filter(hflights, DepTime &lt; 500 | ArrTime &gt; 2200)
 </code></pre>
@@ -1881,7 +1134,7 @@ filter(hflights, DepDelay &gt; 0 &amp; Cancelled == 1)
 ## #   TaxiIn &lt;int&gt;, TaxiOut &lt;int&gt;, Cancelled &lt;int&gt;, CancellationCode &lt;chr&gt;,
 ## #   Diverted &lt;int&gt;
 </code></pre>
-<p><strong>Blend together what you&rsquo;ve learned!</strong></p>
+<h5 id="blend-together">Blend together<a class="headerlink" href="#blend-together" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Select the flights that had JFK as their destination: c1
 c1 &lt;- filter(hflights, Dest == 'JFK')
 
@@ -1907,7 +1160,7 @@ select(c2, Date, DepTime, ArrTime, TailNum)
 ## 10 2011-1-5    1544    1954  N644JB
 ## # ... with 685 more rows
 </code></pre>
-<p><strong>Arranging your data</strong></p>
+<h5 id="arranging-your-data">Arranging your data<a class="headerlink" href="#arranging-your-data" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Definition of dtc
 dtc &lt;- filter(hflights, Cancelled == 1, !is.na(DepDelay))
 
@@ -1980,7 +1233,7 @@ arrange(dtc, UniqueCarrier, DepDelay)
 ## #   TaxiIn &lt;int&gt;, TaxiOut &lt;int&gt;, Cancelled &lt;int&gt;, CancellationCode &lt;chr&gt;,
 ## #   Diverted &lt;int&gt;
 </code></pre>
-<p><strong>Reverse the order of arranging</strong></p>
+<h5 id="reverse-the-order-of-arranging">Reverse the order of arranging<a class="headerlink" href="#reverse-the-order-of-arranging" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Arrange according to carrier and decreasing departure delays
 arrange(hflights, UniqueCarrier, desc(DepDelay))
 </code></pre>
@@ -2051,7 +1304,7 @@ arrange(filter(hflights, Dest == 'DFW' &amp; DepTime&lt;800), desc(AirTime))
 ## #   Diverted &lt;int&gt;
 </code></pre>
 <h4 id="4-summarise-and-the-pipe-operator">4, <code>summarise</code> and the Pipe Operator<a class="headerlink" href="#4-summarise-and-the-pipe-operator" title="Permanent link">&para;</a></h4>
-<p><strong>The syntax of summarise</strong></p>
+<h5 id="the-syntax-of-summarise">The syntax of <code>summarise</code><a class="headerlink" href="#the-syntax-of-summarise" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Print out a summary with variables min_dist and max_dist
 summarise(hflights, min_dist = min(Distance), max_dist = max(Distance))
 </code></pre>
@@ -2070,7 +1323,7 @@ summarise(filter(hflights, Diverted == 1), max_div = max(Distance))
 ##     &lt;int&gt;
 ## 1    3904
 </code></pre>
-<p><strong>Aggregate functions</strong></p>
+<h5 id="aggregate-functions">Aggregate functions<a class="headerlink" href="#aggregate-functions" title="Permanent link">&para;</a></h5>
 <p><code>summarise</code>:</p>
 <ul>
 <li><code>min(x)</code>; minimum value of vector x.</li>
@@ -2109,7 +1362,7 @@ summarise(temp2, max_taxi_diff = max(abs(TaxiIn - TaxiOut)))
 ##           &lt;int&gt;
 ## 1           160
 </code></pre>
-<p><strong><code>dplyr</code> aggregate functions</strong></p>
+<h5 id="dplyr-aggregate-functions"><code>dplyr</code> aggregate functions<a class="headerlink" href="#dplyr-aggregate-functions" title="Permanent link">&para;</a></h5>
 <ul>
 <li><code>first(x)</code>; the first element of vector <code>x</code>.</li>
 <li><code>last(x)</code>; the last element of vector <code>x</code>.</li>
@@ -2200,7 +1453,7 @@ hflights %&gt;%
 ## 1  2718
 </code></pre>
 <h4 id="5-group_by-and-working-with-data">5, <code>group_by</code> and working with data<a class="headerlink" href="#5-group_by-and-working-with-data" title="Permanent link">&para;</a></h4>
-<p><strong>Unite and conquer using <code>group_by</code></strong></p>
+<h5 id="unite-and-conquer-using-group_by">Unite and conquer using <code>group_by</code><a class="headerlink" href="#unite-and-conquer-using-group_by" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Make an ordered per-carrier summary of hflights
 hflights %&gt;%
    group_by(UniqueCarrier) %&gt;%
@@ -2248,7 +1501,7 @@ hflights %&gt;%
 ## 6         7 20.93726
 ## 7         6 20.43061
 </code></pre>
-<p><strong>Combine <code>group_by</code> with <code>mutate</code></strong></p>
+<h5 id="combine-group_by-with-mutate">Combine <code>group_by</code> with <code>mutate</code><a class="headerlink" href="#combine-group_by-with-mutate" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Solution to first instruction
 hflights %&gt;%
     filter(!is.na(ArrDelay)) %&gt;%
@@ -2305,7 +1558,7 @@ hflights %&gt;%
 ## 14 Atlantic_Southeast 40.24231    14
 ## 15            JetBlue 45.47744    15
 </code></pre>
-<p><strong>Advanced <code>group_by</code> exercises</strong></p>
+<h5 id="advanced-group_by">Advanced <code>group_by</code><a class="headerlink" href="#advanced-group_by" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Which plane (by tail number) flew out of Houston the most times? How many times? adv1
 adv1 &lt;- hflights %&gt;%
           group_by(TailNum) %&gt;%
@@ -2334,13 +1587,13 @@ adv4 &lt;- hflights %&gt;%
           filter(rank == 1)
 </code></pre>
 
-<p><strong><code>dplyr</code> deals with different types</strong></p>
+<h5 id="dplyr-deals-with-different-types"><code>dplyr</code> deals with different types<a class="headerlink" href="#dplyr-deals-with-different-types" title="Permanent link">&para;</a></h5>
 <pre><code class="r"># Use summarise to calculate n_carrier
 s2 &lt;- hflights %&gt;%
     summarise(n_carrier = n_distinct(UniqueCarrier))
 </code></pre>
 
-<p><strong><code>dplyr</code> and mySQL databases</strong></p>
+<h5 id="dplyr-and-mysql-databases"><code>dplyr</code> and mySQL databases<a class="headerlink" href="#dplyr-and-mysql-databases" title="Permanent link">&para;</a></h5>
 <p>Code only.</p>
 <pre><code class="r"># set up a src that connects to the mysql database (src_mysql is provided by dplyr)
 my_db &lt;- src_mysql(dbname = 'dplyr', 
@@ -2362,31 +1615,32 @@ nycflights %&gt;%
    arrange(avg_delay)
 </code></pre>
 
-<h3 id="adding-tidyr-functions">Adding <code>tidyr</code> Functions<a class="headerlink" href="#adding-tidyr-functions" title="Permanent link">&para;</a></h3>
+<h4 id="adding-tidyr-functions">Adding <code>tidyr</code> Functions<a class="headerlink" href="#adding-tidyr-functions" title="Permanent link">&para;</a></h4>
 <ul>
-<li><code>complete</code></li>
-<li><code>drop_na</code></li>
-<li><code>expand</code></li>
-<li><code>extract</code></li>
-<li><code>extract_numeric</code></li>
-<li><code>complete</code></li>
-<li><code>fill</code></li>
-<li><code>full_seq</code></li>
-<li><code>gather</code></li>
-<li><code>nest</code></li>
-<li><code>replace_na</code></li>
-<li><code>separate</code></li>
-<li><code>separate_rows</code></li>
-<li><code>separate_rows_</code></li>
-<li><code>smiths</code></li>
-<li><code>spread</code></li>
-<li><code>table1</code></li>
-<li><code>unite</code></li>
-<li><code>unnest</code></li>
-<li><code>who</code></li>
+<li><code>complete</code>.</li>
+<li><code>drop_na</code>.</li>
+<li><code>expand</code>.</li>
+<li><code>extract</code>.</li>
+<li><code>extract_numeric</code>.</li>
+<li><code>complete</code>.</li>
+<li><code>fill</code>.</li>
+<li><code>full_seq</code>.</li>
+<li><code>gather</code>.</li>
+<li><code>nest</code>.</li>
+<li><code>replace_na</code>.</li>
+<li><code>separate</code>.</li>
+<li><code>separate_rows</code>.</li>
+<li><code>separate_rows_</code>.</li>
+<li><code>smiths</code>.</li>
+<li><code>spread</code>.</li>
+<li><code>table1</code>.</li>
+<li><code>unite</code>.</li>
+<li><code>unnest</code>.</li>
+<li><code>who</code>.</li>
 </ul>
 <hr />
-<h3 id="extension-joining-data-in-r-with-dplyr">Extension: &lsquo;Joining Data in R with <code>dplyr</code>&lsquo;<a class="headerlink" href="#extension-joining-data-in-r-with-dplyr" title="Permanent link">&para;</a></h3>
+<h4 id="joining-data-in-r-with-dplyr">Joining Data in R with <code>dplyr</code><a class="headerlink" href="#joining-data-in-r-with-dplyr" title="Permanent link">&para;</a></h4>
+<p><em>In development</em></p>
 <pre><code class="text">## 1, Mutating Joins
 
 ## 2, Filtering Joins and Set Operations
@@ -2407,7 +1661,7 @@ nycflights %&gt;%
         <a href="../Plot_snippets_-_Basics/" class="btn btn-neutral float-right" title="Plot Snippets for Exploratory (and some Explanatory) Analyses">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Reading_Data_into_R_with_readr/" class="btn btn-neutral" title="Reading Data into R with readr"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Data_Analysis_in_R%2C_the_data.table_Way/" class="btn btn-neutral" title="Data Analysis in R, the data.table Way"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -2435,7 +1689,7 @@ nycflights %&gt;%
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../Reading_Data_into_R_with_readr/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Data_Analysis_in_R%2C_the_data.table_Way/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../Plot_snippets_-_Basics/" style="color: #fcfcfc">Next &raquo;</a></span>

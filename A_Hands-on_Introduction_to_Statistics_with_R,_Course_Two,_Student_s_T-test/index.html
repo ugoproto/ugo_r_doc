@@ -116,7 +116,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+    <a class="" href="../Data_Analysis_in_R%2C_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
                 </li>
     </ul>
 	    </li>
@@ -264,20 +268,10 @@
 <h4 id="1-introduction-to-t-tests">1, Introduction to t-tests<a class="headerlink" href="#1-introduction-to-t-tests" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Test p-values for significance with z-tests, t-tests.</li>
-<li>Single sample t-test: group of people from a particular geographic<br />
-    region perform on a well-known test of intelligence. In particular,<br />
-    you are interested in finding out whether or not this group scores<br />
-    significantly higher than the overall population on an IQ test. This<br />
-    is a form of Null Hypothesis Significance Testing (NHST), where the<br />
-    null hypothesis is that there&rsquo;s no difference between this group and<br />
-    the overall population.</li>
-<li>Dependent t-test: single group of voters to rate their likelihood of<br />
-    voting for the candidate before the speech and again after the<br />
-    speech; understand if voters from a particular neighborhood are<br />
-    likely to vote differently when compared to the overall<br />
+<li>Single sample t-test: group of people from a particular geographic region perform on a well-known test of intelligence. In particular, you are interested in finding out whether or not this group scores significantly higher than the overall population on an IQ test. This is a form of Null Hypothesis Significance Testing (NHST), where the null hypothesis is that there&rsquo;s no difference between this group and the overall population.</li>
+<li>Dependent t-test: single group of voters to rate their likelihood of voting for the candidate before the speech and again after the speech; understand if voters from a particular neighborhood are likely to vote differently when compared to the overall<br />
     voting population.</li>
-<li>Independent t-test: significant difference in preferences between<br />
-    these two groups; compare liberals and convervatives.</li>
+<li>Independent t-test: significant difference in preferences between these two groups; compare liberals and convervatives.</li>
 <li>t-distribution, observed value, expected value, standard error.</li>
 </ul>
 <p><strong>Generate density plots of different t-distributions</strong></p>
@@ -305,15 +299,8 @@ legend('topright', c('df = 4', 'df = 6', 'df = 8', 'df = 10', 'df = 12'), title 
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/unnamed-chunk-1-1.png" /></center></p>
 <p><strong>The working memory dataset</strong></p>
-<p>Conduct a dependent (or paired) t-test on the &ldquo;working memory&rdquo; dataset.<br />
-This dataset consists of the intelligence scores for subjects before and<br />
-after training, as well as for a control group. Our goal is to assess<br />
-whether intelligence training results in significantly different<br />
-intelligence scores for the individuals.</p>
-<p>The observations of individuals before and after training are two<br />
-samples from the same group at different points in time, which calls for<br />
-a dependent t-test. This will test whether or not the difference in mean<br />
-intelligence scores before and after training are significant.</p>
+<p>Conduct a dependent (or paired) t-test on the &ldquo;working memory&rdquo; dataset. This dataset consists of the intelligence scores for subjects before and after training, as well as for a control group. Our goal is to assess whether intelligence training results in significantly different intelligence scores for the individuals.</p>
+<p>The observations of individuals before and after training are two samples from the same group at different points in time, which calls for a dependent t-test. This will test whether or not the difference in mean intelligence scores before and after training are significant.</p>
 <pre><code class="r"># Print the data set in the console
 head(wm)
 </code></pre>
@@ -394,8 +381,7 @@ boxplot(wm_t$pre, wm_t$post, main = &quot;Boxplot&quot;, xlab = &quot;Pre and Po
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/unnamed-chunk-4-1.png" /></center></p>
 <p><strong>Performing dependent t-tests manually in R (1)</strong></p>
-<p>Conducting a dependent t-test, also known as a paired t-test, requires<br />
-the following steps:</p>
+<p>Conducting a dependent t-test, also known as a paired t-test, requires the following steps:</p>
 <ul>
 <li>Define null and alternative hypotheses</li>
 <li>Decide significance level <em>α</em></li>
@@ -403,11 +389,7 @@ the following steps:</p>
 <li>Find critical value</li>
 <li>Compare observed value to critical value</li>
 </ul>
-<p>We&rsquo;re performing a Null Hypothesis Significance Test (NHST), so our null<br />
-hypothesis is that there&rsquo;s no effect (i.e. training has no impact on<br />
-intelligence scores). The alternative hypothesis is that training<br />
-results in signficantly different intelligence scores. We&rsquo;ll use a<br />
-significance level of 0.05, which is very common in statistics.</p>
+<p>We&rsquo;re performing a Null Hypothesis Significance Test (NHST), so our null hypothesis is that there&rsquo;s no effect (i.e. training has no impact on intelligence scores). The alternative hypothesis is that training results in signficantly different  intelligence scores. We&rsquo;ll use a significance level of 0.05, which is very common in statistics.</p>
 <p>Compute the observed t-value.</p>
 <pre><code class="r"># Define the sample size
 n &lt;- dim(wm_t)[1]
@@ -437,28 +419,10 @@ sd_diff2
 <pre><code>## [1] 2.152383
 </code></pre>
 <p><strong>Performing dependent t-tests manually in R (2)</strong></p>
-<p>Now that we&rsquo;ve determined our null and alternative hypotheses, decided<br />
-on a significance level, and computed our observed t-value, all that<br />
-remains is to calculate the critical value for this test and compare it<br />
-to our observed t-value. This will tell us whether we have sufficient<br />
-evidence to reject our null hypothesis. We&rsquo;ll even go one step further<br />
-and compute an effect size with Cohen&rsquo;s d!</p>
-<p>The critical value is the point on the relevant t-distribution that<br />
-determines whether the value we observed is extreme enough to warrant<br />
-rejecting the null hypothesis. Recall that a t-distribution is defined<br />
-by its degrees of freedom, which in turn is equal to the sample size<br />
-minus 1. In this example, we have 80 subjects so the relevant<br />
-t-distribution has 79 degrees of freedom.</p>
-<p>We&rsquo;re performing a two-tailed t-test in this situation since we care<br />
-about detecting a significant effect in either the positive or negative<br />
-direction. In other words, we want to know if training significantly<br />
-increases or decreases intelligence, however, given that our observed<br />
-t-value is positive (14.49) the right-hand is the only relevant value<br />
-here.</p>
-<p>Furthermore, since our desired significance level (i.e. alpha) is 0.05,<br />
-our critical value is the point on our t-distribution at which 0.025<br />
-(0.05 / 2) of its total area of 1 is to the right and thus 0.975 (1 -<br />
-0.025) of its total area is to the left.</p>
+<p>Now that we&rsquo;ve determined our null and alternative hypotheses, decided on a significance level, and computed our observed t-value, all that remains is to calculate the critical value for this test and compare it to our observed t-value. This will tell us whether we have sufficient evidence to reject our null hypothesis. We&rsquo;ll even go one step further and compute an effect size with Cohen&rsquo;s d!</p>
+<p>The critical value is the point on the relevant t-distribution that determines whether the value we observed is extreme enough to warrant rejecting the null hypothesis. Recall that a t-distribution is defined by its degrees of freedom, which in turn is equal to the sample size minus 1. In this example, we have 80 subjects so the relevant t-distribution has 79 degrees of freedom.</p>
+<p>We&rsquo;re performing a two-tailed t-test in this situation since we care about detecting a significant effect in either the positive or negative direction. In other words, we want to know if training significantly increases or decreases intelligence, however, given that our observed t-value is positive (14.49) the right-hand is the only relevant value here.</p>
+<p>Furthermore, since our desired significance level (i.e. alpha) is 0.05, our critical value is the point on our t-distribution at which 0.025 (0.05 / 2) of its total area of 1 is to the right and thus 0.975 (1 - 0.025) of its total area is to the left.</p>
 <p>This point is called the 0.975 quantile and is computed for a<br />
 t-distrbution.</p>
 <pre><code class="r"># The variables from the previous exercise are still preloaded, type ls() in the console to see them
@@ -504,13 +468,8 @@ cohens_d
 </code></pre>
 <p><strong>Letting R do all the dirty work: Dependent t-tests</strong></p>
 <p>The <code>CohensD</code> function (not showns).</p>
-<p>Cohen&rsquo;s d Determine that the difference pre- and post-training is<br />
-statistically significant; and the effect size, meaning the effect of<br />
-training on intelligence gains particularly strong or not.</p>
-<p>Cohen&rsquo;s d is unbiased by sample size. Cohen&rsquo;s d provides a standardized<br />
-difference between two means. Cohen&rsquo;s d is calculated by subtracting one<br />
-group mean from the other, then dividing by the pooled standard<br />
-deviation.</p>
+<p>Cohen&rsquo;s d Determine that the difference pre- and post-training is statistically significant; and the effect size, meaning the effect of training on intelligence gains particularly strong or not.</p>
+<p>Cohen&rsquo;s d is unbiased by sample size. Cohen&rsquo;s d provides a standardized difference between two means. Cohen&rsquo;s d is calculated by subtracting one group mean from the other, then dividing by the pooled standard deviation.</p>
 <pre><code class="r"># Conduct a paired t-test using the t.test function
 t.test(wm_t$post, wm_t$pre, paired = TRUE)
 </code></pre>
@@ -536,13 +495,9 @@ cohensD(wm_t$post, wm_t$pre, method = 'paired')
 <pre><code>## [1] 1.620297
 </code></pre>
 <h4 id="2-independent-t-tests">2, Independent t-tests<a class="headerlink" href="#2-independent-t-tests" title="Permanent link">&para;</a></h4>
-<p>An independent t-test is appropriate when you want to compare the the<br />
-means for two independent groups.</p>
+<p>An independent t-test is appropriate when you want to compare the the means for two independent groups.</p>
 <p><strong>Preliminary statistics</strong></p>
-<p>For independent t-tests you will revisit the working memory dataset from<br />
-the previous chapter. In this dataset, subjects were randomly assigned<br />
-to four different training groups that trained for 8, 12, 17 and 19<br />
-days.</p>
+<p>For independent t-tests you will revisit the working memory dataset from the previous chapter. In this dataset, subjects were randomly assigned to four different training groups that trained for 8, 12, 17 and 19 days.</p>
 <pre><code class="r"># Read in the data set and assign to the object
 wm_t &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'wm_t', header = TRUE, startCol = 1, startRow = 1)
 
@@ -652,16 +607,8 @@ leveneTest(wm_t$gain ~ wm_t$cond)
 ##       76
 </code></pre>
 <p><strong>Conducting an independent t-test manually (1)</strong></p>
-<p>Perform an independent t-test the same way we did for the dependent<br />
-t-test in the previous chapter. Continuing with the working memory<br />
-example, our null hypothesis is that the difference in intelligence<br />
-score gain between the group that trained for 8 days and the group that<br />
-trained for 19 days is equal to zero. If our observed t-value is<br />
-sufficiently large, we can reject the null in favor of the alternative<br />
-hypothesis, which would imply a significant difference in intelligence<br />
-gain between the two training groups.</p>
-<p>Calculation of the observed t-value for an independent t-test is similar<br />
-to the dependent t-test, but involves slightly different formulas.</p>
+<p>Perform an independent t-test the same way we did for the dependent t-test in the previous chapter. Continuing with the working memory example, our null hypothesis is that the difference in intelligence score gain between the group that trained for 8 days and the group that trained for 19 days is equal to zero. If our observed t-value is sufficiently large, we can reject the null in favor of the alternative hypothesis, which would imply a significant difference in intelligence gain between the two training groups.</p>
+<p>Calculation of the observed t-value for an independent t-test is similar to the dependent t-test, but involves slightly  different formulas.</p>
 <pre><code class="r"># Calculate mean difference by subtracting the gain for t08 by the gain for t19
 mean_t08 &lt;- mean(wm_t08$gain)
 mean_t19 &lt;- mean(wm_t19$gain)
@@ -679,12 +626,7 @@ se_pooled &lt;- sqrt((var_t08/n_t08) + (var_t19/n_t19))
 </code></pre>
 
 <p><strong>Conducting an independent t-test manually (2)</strong></p>
-<p>Compute the observed t-value. Then we will determine the p-value using<br />
-the relevant t-distribution. If you recall, in the last chapter we<br />
-calculated the critical value. The p-value is simply an alternative<br />
-approach to hypothesis testing and determining the significance of your<br />
-results. It&rsquo;s good to practice both! Finally, we will finish by<br />
-calculating effect size via Cohen&rsquo;s d.</p>
+<p>Compute the observed t-value. Then we will determine the p-value using the relevant t-distribution. If you recall, in the last chapter we calculated the critical value. The p-value is simply an alternative approach to hypothesis testing and determining the significance of your results. It&rsquo;s good to practice both! Finally, we will finish by calculating effect size via Cohen&rsquo;s d.</p>
 <pre><code class="r"># All variables from the previous exercises are preloaded in your workspace
 # Type ls() to see them
 # Calculate the t-value

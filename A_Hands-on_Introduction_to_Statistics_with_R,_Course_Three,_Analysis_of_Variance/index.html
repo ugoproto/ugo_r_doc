@@ -116,7 +116,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../Data_Wrangling/">Data Wrangling</a>
+    <a class="" href="../Data_Analysis_in_R%2C_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
                 </li>
     </ul>
 	    </li>
@@ -267,11 +271,7 @@
 <hr />
 <h4 id="1-an-introduction-to-anova">1, An introduction to ANOVA<a class="headerlink" href="#1-an-introduction-to-anova" title="Permanent link">&para;</a></h4>
 <p><strong>Working memory experiment</strong></p>
-<p>We&rsquo;ll use data from the working memory experiment, which investigates<br />
-the relationship between the number of training days and a change in IQ.<br />
-There are four independent groups, each of which trained for a different<br />
-period of time: 8, 12, 17, or 19 days. The independent variable is the<br />
-number of training days and the dependent variable is the IQ gain.</p>
+<p>We&rsquo;ll use data from the working memory experiment, which investigates the relationship between the number of training days and a change in IQ. There are four independent groups, each of which trained for a different period of time: 8, 12, 17, or 19 days. The independent variable is the number of training days and the dependent variable is the IQ gain.</p>
 <pre><code class="r"># Print the data set in the console
 head(wm)
 </code></pre>
@@ -337,22 +337,12 @@ boxplot(wm$iq ~ wm$condition, main=&quot;Boxplot&quot;, xlab=&quot;Group (cond)&
 </code></pre>
 
 <p><center><img alt="" src="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-3-1.png" /></center></p>
-<p>Notice that the IQ increases as the amount of training sessions<br />
-increases.</p>
+<p>Notice that the IQ increases as the amount of training sessions increases.</p>
 <p><strong>t-test vs ANOVA</strong></p>
-<p>ANOVA is used when more than two group means are compared, whereas a<br />
-t-test can only compare two group means.</p>
+<p>ANOVA is used when more than two group means are compared, whereas a t-test can only compare two group means.</p>
 <p><strong>Generate density plot of the F-distribution</strong></p>
-<p>The test statistic associated with ANOVA is the F-test (or F-ratio).<br />
-Recall that when carrying out a t-test, you computed an observed<br />
-t-value, then compared that with a critical value derived from the<br />
-relevant t-distribution. That t-distribution came from a family of<br />
-t-distributions, each of which was defined entirely by its degrees of<br />
-freedom.</p>
-<p>ANOVA uses the same principle, but instead an observed F-value is<br />
-computed and compared to the relevant F-distribution. That<br />
-F-distribution comes from a family of F-distributions, each of which is<br />
-defined by two numbers (i.e. degrees of freedom).</p>
+<p>The test statistic associated with ANOVA is the F-test (or F-ratio). Recall that when carrying out a t-test, you computed an observed t-value, then compared that with a critical value derived from the relevant t-distribution. That t-distribution came from a family of t-distributions, each of which was defined entirely by its degrees of freedom.</p>
+<p>ANOVA uses the same principle, but instead an observed F-value is computed and compared to the relevant F-distribution. That F-distribution comes from a family of F-distributions, each of which is defined by two numbers (i.e. degrees of freedom).</p>
 <p>F-distribution has a different shape than the t-distribution.</p>
 <pre><code class="r"># Create the vector x
 x &lt;- seq(from = 0, to = 2, length = 100)
@@ -380,19 +370,10 @@ legend('topright', title = 'F distributions', c('df = (1,1)', 'df = (3,1)', 'df 
 </code></pre>
 
 <p><center><img alt="" src="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-4-1.png" /></center></p>
-<p>The F-distribution cannot take negative values, because it is a ratio of<br />
-variances and variances are always non-negative numbers. The<br />
-distribution represents the ratio between the variance between groups<br />
-and the variance within groups.</p>
+<p>The F-distribution cannot take negative values, because it is a ratio of variances and variances are always non-negative numbers. The distribution represents the ratio between the variance between groups and the variance within groups.</p>
 <p><strong>Between group sum of squares</strong></p>
-<p>To calculate the F-value, you need to calculate the ratio between the<br />
-variance between groups and the variance within groups. Furthermore, to<br />
-calculate the variance (i.e. mean of squares), you first have to<br />
-calculate the sum of squares.</p>
-<p>Now, remember that the working memory experiment investigates the<br />
-relationship between the change in IQ and the number of training<br />
-sessions. Calculate the between group sum of squares for the data from<br />
-this experiment.</p>
+<p>To calculate the F-value, you need to calculate the ratio between the variance between groups and the variance within groups. Furthermore, to calculate the variance (i.e. mean of squares), you first have to calculate the sum of squares.</p>
+<p>Now, remember that the working memory experiment investigates the relationship between the change in IQ and the number of training sessions. Calculate the between group sum of squares for the data from this experiment.</p>
 <pre><code class="r"># Define number of subjects in each group
 n &lt;- 20
 
@@ -418,9 +399,7 @@ SS_A
 <pre><code>## [1] 196.0914
 </code></pre>
 <p><strong>Within groups sum of squares</strong></p>
-<p>To calculate the F-value, you also need the variance within groups.<br />
-Similar to the last exercise, we&rsquo;ll start by computing the within groups<br />
-sum of squares.</p>
+<p>To calculate the F-value, you also need the variance within groups. Similar to the last exercise, we&rsquo;ll start by computing the within groups sum of squares.</p>
 <pre><code class="r"># Create four subsets of the four groups, containing the IQ results
 
 # Make the subset for the group cond = '8 days'
@@ -451,7 +430,7 @@ S_T &lt;- c(S_1,S_2,S_3,S_4)
 SS_SA &lt;- sum(S_T^2)
 </code></pre>
 
-<p><strong>Calculating the F-ratio</strong>&lt;</p>
+<p><strong>Calculating the F-ratio</strong></p>
 <p>Calculate the F-ratio.</p>
 <pre><code class="r"># Number of groups
 a &lt;- 4
@@ -501,10 +480,7 @@ summary(anova.wm)
 </code></pre>
 <p>F-value is significant.</p>
 <p><strong>Levene&rsquo;s test</strong></p>
-<p>The assumptions of ANOVA are relatively simple. Similar to an<br />
-independent t-test, we have a continuous dependent variable, which we<br />
-assume to be normally distributed. Furthermore, we assume homogeneity of<br />
-variance, which can be tested with Levene&rsquo;s test.</p>
+<p>The assumptions of ANOVA are relatively simple. Similar to an independent t-test, we have a continuous dependent variable, which we assume to be normally distributed. Furthermore, we assume homogeneity of variance, which can be tested with Levene&rsquo;s test.</p>
 <pre><code class="r">library(car)
 
 # Levene's test
@@ -525,50 +501,27 @@ leveneTest(wm$iq ~ wm$condition, center = mean)
 ## group  3  0.1598  0.923
 ##       76
 </code></pre>
-<p>The assumption of homogeneity of variance hold: the within group<br />
-variance equivalent for all groups.</p>
+<p>The assumption of homogeneity of variance hold: the within group variance equivalent for all groups.</p>
 <h4 id="2-post-hoc-analysis">2, Post-hoc analysis<a class="headerlink" href="#2-post-hoc-analysis" title="Permanent link">&para;</a></h4>
-<p>Post-hoc tests help finding out which groups differ significantly from<br />
-one other and which do not. More formally, post-hoc tests allow for<br />
-multiple pairwise comparisons without inflating the type I error.</p>
+<p>Post-hoc tests help finding out which groups differ significantly from one other and which do not. More formally, post-hoc tests allow for multiple pairwise comparisons without inflating the type I error.</p>
 <p>What does it mean to inflate the type I error?</p>
-<p>Suppose the post-hoc test involves performing three pairwise<br />
-comparisons, each with the probability of a type I error set at 5%. The<br />
-probability of making at least one type I error: if you assume<br />
-independence of these three events, the maximum familywise error rate is<br />
-then equal to: 1 - (0.95 x 0.95 x 0.95) = 14.26 %.</p>
-<p>In other words, the probability of having at least one false alarm (i.e.<br />
-type I error) is 14.26%.</p>
-<p>What is the maximum familywise error rate for the working memory<br />
-experiment, assuming that you do all possible pairwise comparisons with<br />
-a type I error of 5%? 26.49%.</p>
-<p>Null Hypothesis Significance Testing (NHST) is a statistical method used<br />
-to test whether or not you are able to reject or retain the null<br />
-hypothesis. This type of test can confront you with a type I error. This<br />
-happens when the test rejects the null hypothesis, while it is actually<br />
-true in reality. Furthermore, the test can also deliver a type II error.<br />
-This is the failure to reject a null hypothesis when it is false. All<br />
-hypothesis tests have a probability of making type I and II errors.</p>
-<p>Sensitivity and specificity are two concepts that statisticians use to<br />
-measure the performance of a statistical test. The sensitivity of a test<br />
-is its true positive rate:</p>
+<p>Suppose the post-hoc test involves performing three pairwise comparisons, each with the probability of a type I error set at 5%. The probability of making at least one type I error: if you assume independence of these three events, the maximum familywise error rate is then equal to: 1 - (0.95 x 0.95 x 0.95) = 14.26 %.</p>
+<p>In other words, the probability of having at least one false alarm (i.e. type I error) is 14.26%.</p>
+<p>What is the maximum familywise error rate for the working memory experiment, assuming that you do all possible pairwise comparisons with a type I error of 5%? 26.49%.</p>
+<p>Null Hypothesis Significance Testing (NHST) is a statistical method used to test whether or not you are able to reject or retain the null hypothesis. This type of test can confront you with a type I error. This happens when the test rejects the null hypothesis, while it is actually true in reality. Furthermore, the test can also deliver a type II error. This is the failure to reject a null hypothesis when it is false. All hypothesis tests have a probability of making type I and II errors.</p>
+<p>Sensitivity and specificity are two concepts that statisticians use to measure the performance of a statistical test. The sensitivity of a test is its true positive rate:</p>
 <p>
 <script type="math/tex; mode=display">sensitivity = \frac{number~of~true~positives}{number~ of~true~positives + number~of~false~negatives}</script>
 </p>
-<p>The specificity of a test is its true negative rate:<br />
+<p>The specificity of a test is its true negative rate:</p>
+<p>
 <script type="math/tex; mode=display">specificity = \frac{number~of~true~negatives}{number~ of~true~negatives + number~of~false~positives}</script>
 </p>
-<p>Calculate both the sensitivity and specificity of the test based on<br />
-numbers displayed in the NHST table?</p>
+<p>Calculate both the sensitivity and specificity of the test based on numbers displayed in the NHST table?</p>
 <p><center><img alt="" src="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/NHST_1.png" /></center></p>
 <p>The sensitivity is 0.89 and the specificity is 0.85.</p>
 <p><strong>Calculate and interpret the results of Tukey</strong></p>
-<p>In a situation were you do multiple pairwise comparisons, the<br />
-probability of type I errors in the process inflates substantially.<br />
-Therefore, it is better to build in adjustments to take this into<br />
-account. This is what Tukey tests and other post-hoc procedures do. They<br />
-adjust the p-value to prevent inflation of the type I error rate.Use<br />
-Tukey&rsquo;s procedure.</p>
+<p>In a situation were you do multiple pairwise comparisons, the probability of type I errors in the process inflates substantially. Therefore, it is better to build in adjustments to take this into account. This is what Tukey tests and other post-hoc procedures do. They adjust the p-value to prevent inflation of the type I error rate. Use Tukey&rsquo;s procedure.</p>
 <pre><code class="r"># Read in the data set and assign to the object
 wm &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'wm', header = TRUE, startCol = 1, startRow = 1)
 
@@ -626,25 +579,9 @@ plot(TukeyHSD(anova_wm))
 
 <p><center><img alt="" src="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-11-1.png" /></center></p>
 <p><strong>Bonferroni adjusted p-values</strong></p>
-<p>Just like Tukey&rsquo;s procedure, the Bonferroni correction is a method that<br />
-is used to counteract the problem of inflated type I errors while<br />
-engaging in multiple pairwise comparisons between subgroups. Bonferroni<br />
-is generally known as the most conservative method to control the<br />
-familywise error rate.</p>
-<p>Bonferroni is based on the idea that if you test <em>N</em> dependent or<br />
-independent hypotheses, one way of maintaining the familywise error rate<br />
-is to test each individual hypothesis at a statistical significance<br />
-level that is deflated by a factor of <script type="math/tex">\frac{1}{n}</script>. So, for a<br />
-significance level for the whole family of tests of <em>α</em>, the Bonferroni<br />
-correction would be to test each of the individual tests at a<br />
-significance level of <script type="math/tex">\frac{\alpha}{n}</script>.</p>
-<p>The Bonferroni correction is controversial. It is a strict measure to<br />
-limit false positives and generates conservative p-value. Alternative:<br />
-increase the sample size, compute the false discovery rate (the expected<br />
-percent of false predictions in the set of predictions. For example if<br />
-the algorithm returns 100 results with a false discovery rate of .3 then<br />
-we should expect 70 of them to be correct.), and the Holm-Bonferroni<br />
-method.</p>
+<p>Just like Tukey&rsquo;s procedure, the Bonferroni correction is a method that is used to counteract the problem of inflated type I errors while engaging in multiple pairwise comparisons between subgroups. Bonferroni is generally known as the most conservative method to control the familywise error rate.</p>
+<p>Bonferroni is based on the idea that if you test <em>N</em> dependent or independent hypotheses, one way of maintaining the familywise error rate is to test each individual hypothesis at a statistical significance level that is deflated by a factor of <script type="math/tex">\frac{1}{n}</script>. So, for a significance level for the whole family of tests of <em>α</em>, the Bonferroni correction would be to test each of the individual tests at a significance level of <script type="math/tex">\frac{\alpha}{n}</script>.</p>
+<p>The Bonferroni correction is controversial. It is a strict measure to limit false positives and generates conservative p-value. Alternative: increase the sample size, compute the false discovery rate (the expected percent of false predictions in the set of predictions. For example if the algorithm returns 100 results with a false discovery rate of .3 then we should expect 70 of them to be correct.), and the Holm-Bonferroni method.</p>
 <pre><code class="r"># Use `p.adjust` 
 bonferroni_ex &lt;- p.adjust(.005, method='bonferroni', n = 8)
 
@@ -672,11 +609,7 @@ pairwise.t.test(wm$gain,wm$cond, p.adjust = 'bonferroni')
 </code></pre>
 <h4 id="3-between-groups-factorial-anova">3, Between groups factorial ANOVA<a class="headerlink" href="#3-between-groups-factorial-anova" title="Permanent link">&para;</a></h4>
 <p><strong>Data exploration with a barplot</strong></p>
-<p>We&rsquo;ll use in this chapter is a randomized controlled experiment<br />
-investigating the effects of talking on a cell phone while driving. The<br />
-dependent variable in the experiment is the number of driving errors<br />
-that subjects made in a driving simulator. There are two independent<br />
-variables:</p>
+<p>We&rsquo;ll use in this chapter is a randomized controlled experiment investigating the effects of talking on a cell phone while driving. The dependent variable in the experiment is the number of driving errors that subjects made in a driving simulator. There are two independent variables:</p>
 <ul>
 <li>Conversation difficulty: None, Low, High</li>
 <li>Driving difficulty: Easy, Difficult</li>
@@ -703,11 +636,9 @@ head(ab)
 ## 5       5         None    Easy     31    31
 ## 6       6         None    Easy     17    17
 </code></pre>
-<p>Each of the subjects was randomly assigned to one of six conditions<br />
-formed by combining different values of the independent variables.</p>
+<p>Each of the subjects was randomly assigned to one of six conditions formed by combining different values of the independent variables.</p>
 <ul>
-<li><code>subject</code>: unique identifier for each subject conversation: level of<br />
-    conversation difficulty.</li>
+<li><code>subject</code>: unique identifier for each subject conversation: level of conversation difficulty.</li>
 <li><code>driving</code> : level of driving difficulty in the simulator.</li>
 <li><code>errors</code>: number of driving errors made.</li>
 </ul>
@@ -724,14 +655,9 @@ legend('topright', c('Difficult','Easy'), title = 'Driving', fill = c('orange','
 </code></pre>
 
 <p><center><img alt="" src="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-14-1.png" /></center></p>
-<p>The driving errors made during different driving conditions are<br />
-influenced by the level of conversation demand. In other words, the<br />
-driving conditions have a different effect on the number of errors made,<br />
-depending on the level of conversation demand.</p>
+<p>The driving errors made during different driving conditions are influenced by the level of conversation demand. In other words, the driving conditions have a different effect on the number of errors made, depending on the level of conversation demand.</p>
 <p><strong>The homogeneity of variance assumption</strong></p>
-<p>Before we do factorial ANOVA, we need to test the homogeneity of the<br />
-variance assumption. When studying one-way ANOVA, we tested this<br />
-assumption with the <code>leveneTest</code> function.</p>
+<p>Before we do factorial ANOVA, we need to test the homogeneity of the variance assumption. When studying one-way ANOVA, we tested this assumption with the <code>leveneTest</code> function.</p>
 <p>We now have two independent variables instead of just one.</p>
 <pre><code class="r"># Test the homogeneity of variance assumption
 leveneTest(ab$errors ~ ab$conversation * ab$driving)
@@ -743,11 +669,8 @@ leveneTest(ab$errors ~ ab$conversation * ab$driving)
 ##       114
 </code></pre>
 <p>The homogeneity of variance assumption holds.</p>
-<p>By performing a <code>leveneTest</code>, we can check whether or not the<br />
-homogeneity of variance assumption holds for a given dataset. The<br />
-assumption must hold for the results of an ANOVA analysis to be valid.</p>
-<p>Recall from the first chapter that ANOVA makes use of F-statistics, or<br />
-F-ratios, in which two types of degrees of freedom are involved.</p>
+<p>By performing a <code>leveneTest</code>, we can check whether or not the homogeneity of variance assumption holds for a given dataset. The assumption must hold for the results of an ANOVA analysis to be valid.</p>
+<p>Recall from the first chapter that ANOVA makes use of F-statistics, or F-ratios, in which two types of degrees of freedom are involved.</p>
 <pre><code class="r">dim(ab)
 </code></pre>
 
@@ -763,8 +686,7 @@ F-ratios, in which two types of degrees of freedom are involved.</p>
 
 <pre><code>##  Factor w/ 2 levels "Difficult","Easy": 2 2 2 2 2 2 2 2 2 2 ...
 </code></pre>
-<p>There are 120 subjets and 2 (Easy, Difficult) * 3 (High Demand, Low<br />
-Demand, None) = 6 groups.</p>
+<p>There are 120 subjets and 2 (Easy, Difficult) * 3 (High Demand, Low Demand, None) = 6 groups.</p>
 <p><strong>The factorial ANOVA</strong></p>
 <pre><code class="r"># Factorial ANOVA
 ab_model &lt;- aov(ab$errors ~ ab$conversation * ab$driving)
@@ -781,19 +703,10 @@ summary(ab_model)
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 </code></pre>
-<p>Based on the summary table of the factorial ANOVA, the main effect for<br />
-driving difficulty, the main effect for conversation difficulty and the<br />
-interaction effect are all significant.</p>
+<p>Based on the summary table of the factorial ANOVA, the main effect for driving difficulty, the main effect for conversation difficulty and the interaction effect are all significant.</p>
 <p><strong>The interaction effect</strong></p>
-<p>Now it&rsquo;s time to explore the interaction effect. You will do this with<br />
-the help of a simple effects analysis.</p>
-<p>Why a simple effects analysis? Well, remember what we had to do when you<br />
-had a significant main effect in a one-way ANOVA? There, you just had to<br />
-perform some post-hoc tests to see from which level of the categorical<br />
-variable the main effect was coming. With an interaction effect, it is<br />
-quite similar. Conduct a simple effects analysis of the variable<br />
-<code>conversation</code> on the outcome variable <code>errors</code> at each level of<br />
-<code>driving</code>.</p>
+<p>Now it&rsquo;s time to explore the interaction effect. You will do this with the help of a simple effects analysis.</p>
+<p>Why a simple effects analysis? Well, remember what we had to do when you had a significant main effect in a one-way ANOVA? There, you just had to perform some post-hoc tests to see from which level of the categorical variable the main effect was coming. With an interaction effect, it is quite similar. Conduct a simple effects analysis of the variable <code>conversation</code> on the outcome variable <code>errors</code> at each level of <code>driving</code>.</p>
 <pre><code class="r"># Create the two subsets
 ab_1 &lt;- subset(ab, ab$driving == 'Easy')  
 ab_2 &lt;- subset(ab, ab$driving == 'Difficult')
@@ -821,18 +734,11 @@ summary(aov_ab_1)
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 </code></pre>
-<p>There a significant simple effect for the easy driving condition based<br />
-on the summary table of <code>aov_ab_1</code>.</p>
-<p>There a significant simple effect for the difficult driving condition<br />
-based on the summary table of <code>aov_ab_2</code>.</p>
+<p>There a significant simple effect for the easy driving condition based on the summary table of <code>aov_ab_1</code>.</p>
+<p>There a significant simple effect for the difficult driving condition based on the summary table of <code>aov_ab_2</code>.</p>
 <p><strong>The effect sizes</strong></p>
-<p>The definition of an interaction effect states that the effect of one<br />
-variable changes across levels of the other variable. For example, we<br />
-might expect the effect of conversation to be greater when driving<br />
-conditions are difficult than when they are relatively easy.</p>
-<p>Unfortunately, it is not quite that simple. In order to really<br />
-understand the different effect sizes, you should make use of the<br />
-<code>etaSquared</code> function.</p>
+<p>The definition of an interaction effect states that the effect of one variable changes across levels of the other variable. For example, we might expect the effect of conversation to be greater when driving conditions are difficult than when they are relatively easy.</p>
+<p>Unfortunately, it is not quite that simple. In order to really understand the different effect sizes, you should make use of the <code>etaSquared</code> function.</p>
 <pre><code class="r">library(lsr)
 
 # Calculate the etaSquared for the easy driving case
@@ -859,13 +765,9 @@ etaSquared(aov_ab_2, anova = TRUE)
 ## ab_2$conversation 2.046097e-11
 ## Residuals                   NA
 </code></pre>
-<p>Based on the output of the <code>etaSquared</code> function for the easy driving<br />
-condition, the percentage of variance explained by the conversation<br />
-variable is 14.7%; the percentage of variance explained by the<br />
-conversation variable is 57.8%.</p>
+<p>Based on the output of the <code>etaSquared</code> function for the easy driving condition, the percentage of variance explained by the conversation variable is 14.7%; the percentage of variance explained by the conversation variable is 57.8%.</p>
 <p><strong>Pairwise comparisons</strong></p>
-<p>Finally, let us look at pairwise comparisons for the simple effects. You<br />
-can do this with the Tukey post-hoc test.</p>
+<p>Finally, let us look at pairwise comparisons for the simple effects. You can do this with the Tukey post-hoc test.</p>
 <pre><code class="r"># Tukey for easy driving
 TukeyHSD(aov_ab_1)
 </code></pre>
@@ -896,10 +798,8 @@ TukeyHSD(aov_ab_2)
 ## None-High demand       -23.45 -29.86202 -17.037979 0.0000000
 ## None-Low demand        -13.70 -20.11202  -7.287979 0.0000103
 </code></pre>
-<p>For &lsquo;Easy Driving&rsquo;, two mean differences in terms of number of errors<br />
-are significant (below 0.05).</p>
-<p>For &lsquo;Difficult Driving&rsquo;, three mean differences in terms of number of<br />
-errors are significant (below 0.05).</p>
+<p>For &lsquo;Easy Driving&rsquo;, two mean differences in terms of number of errors are significant (below 0.05).</p>
+<p>For &lsquo;Difficult Driving&rsquo;, three mean differences in terms of number of errors are significant (below 0.05).</p>
               
             </div>
           </div>

@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Spark">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Data Analysis in R, the data.table Way - ugo_r_doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data Analysis in R, the data.table Way";
+    var mkdocs_page_input_path = "Data_Analysis_in_R,_the_data.table_Way.md";
+    var mkdocs_page_url = "/Data_Analysis_in_R,_the_data.table_Way/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-93008985-1', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../An%20Introduction%20to%20R/">An Introduction to R</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Le%20logiciel%20R%2C%20maitriser%20le%20langage%2C%20effectuer%20des%20analyses%20%28bio%29statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Intermediate R</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Intermediate_R/">Intermediate R</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">RStudio</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Data Wrangling Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Data Analysis in R, the data.table Way</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#1-datatable-novice">1, data.table novice</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#create-and-subset-a-datatable">Create and subset a data.table</a></li>
+        
+            <li><a class="toctree-l4" href="#getting-to-know-a-datatable">Getting to know a data.table</a></li>
+        
+            <li><a class="toctree-l4" href="#subsetting-data-tables">Subsetting data tables</a></li>
+        
+            <li><a class="toctree-l4" href="#the-by-basics">The by basics</a></li>
+        
+            <li><a class="toctree-l4" href="#using-n-and-by">Using .N and by</a></li>
+        
+            <li><a class="toctree-l4" href="#return-multiple-numbers-in-j">Return multiple numbers in j</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#2-datatable-yeoman">2, data.table yeoman</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#chaining-the-basics">Chaining, the basics</a></li>
+        
+            <li><a class="toctree-l4" href="#programming-time-vs-readability">Programming time vs readability</a></li>
+        
+            <li><a class="toctree-l4" href="#introducing-sdcols">Introducing .SDcols</a></li>
+        
+            <li><a class="toctree-l4" href="#mixing-it-together-lapply-sd-sdcols-and-n">Mixing it together: lapply, .SD, SDcols and .N</a></li>
+        
+            <li><a class="toctree-l4" href="#adding-updating-and-removing-columns">Adding, updating, and removing columns</a></li>
+        
+            <li><a class="toctree-l4" href="#the-functional-form">The functional form</a></li>
+        
+            <li><a class="toctree-l4" href="#ready-set-go">Ready, set, go!</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#3-datatable-expert">3, data.table expert</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#selecting-rows-the-datatable-way">Selecting rows the data.table way</a></li>
+        
+            <li><a class="toctree-l4" href="#removing-columns-and-adapting-your-column-names">Removing columns and adapting your column names</a></li>
+        
+            <li><a class="toctree-l4" href="#understanding-automatic-indexing">Understanding automatic indexing</a></li>
+        
+            <li><a class="toctree-l4" href="#selecting-groups-or-parts-of-groups">Selecting groups or parts of groups</a></li>
+        
+            <li><a class="toctree-l4" href="#rolling-joins">Rolling joins</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Plot Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_ggvis/">Plot Snippets - ggvis</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Other Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Tables/">Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Charts/">Charts & Colors</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">A Hands-on Introduction to Statistics with R</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_One%2C_Introduction/">Statistics with R, Course One, Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Two%2C_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Three%2C_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Four%2C_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Five%2C_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Six%2C_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Notes/">Statistics with R, Notes</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Time%2BSeries%2Bin%2BR%2BThe%2BPower%2Bof%2Bxts%2Band%2Bzoo/">Time Series in R, The Power of xts and zoo</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Data Wrangling Snippets &raquo;</li>
+        
+      
+    
+    <li>Data Analysis in R, the data.table Way</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <ul>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#data.table-novice">1, <code>data.table</code> novice</a><ul>
+<li><a href="#create-and-subset-a-data.table">Create and subset a<br />
+<code>data.table</code></a></li>
+<li><a href="#getting-to-know-a-data.table">Getting to know a <code>data.table</code></a></li>
+<li><a href="#subsetting-data-tables">Subsetting data tables</a></li>
+<li><a href="#the-by-basics">The <code>by</code> basics</a></li>
+<li><a href="#using-.n-and-by">Using <code>.N</code> and <code>by</code></a></li>
+<li><a href="#return-multiple-numbers-in-j">Return multiple numbers in <code>j</code></a></li>
+</ul>
+</li>
+<li><a href="#data.table-yeoman">2, <code>data.table</code> yeoman</a><ul>
+<li><a href="#chaining-the-basics">Chaining, the basics</a></li>
+<li><a href="#programming-time-vs-readability">Programming time vs<br />
+    readability</a></li>
+<li><a href="#introducing-.sdcols">Introducing <code>.SDcols</code></a></li>
+<li><a href="#mixing-it-together-lapply-.sd-sdcols-and-.n">Mixing it together: <code>lapply</code>, <code>.SD</code>, <code>SDcols</code> and<br />
+<code>.N</code></a></li>
+<li><a href="#adding-updating-and-removing-columns">Adding, updating, and removing<br />
+    columns</a></li>
+<li><a href="#the-functional-form">The functional form</a></li>
+<li><a href="#ready-set-go">Ready, <code>set</code>, go!</a></li>
+</ul>
+</li>
+<li><a href="#data.table-expert">3, <code>data.table</code> expert</a><ul>
+<li><a href="#selecting-rows-the-data.table-way">Selecting rows the <code>data.table</code><br />
+    way</a></li>
+<li><a href="#removing-columns-and-adapting-your-column-names">Removing columns and adapting your column<br />
+    names</a></li>
+<li><a href="#understanding-automatic-indexing">Understanding automatic<br />
+    indexing</a></li>
+<li><a href="#selecting-groups-or-parts-of-groups">Selecting groups or parts of<br />
+    groups</a></li>
+<li><a href="#rolling-joins">Rolling joins</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
+<li>Snippets and results.</li>
+</ul>
+<hr />
+<h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h4>
+<p><code>data.table</code></p>
+<ul>
+<li>extension of <code>data.frame</code>.</li>
+<li>Fast aggregation of large data (e.g. 100GB in RAM), fast ordered<br />
+    joins, fast add/modify/delete of columns by group using no copies at<br />
+    all, list columns, a fast friendly file reader and parallel<br />
+    file writer. Offers a natural and flexible syntax, for<br />
+    faster development.</li>
+</ul>
+<p><code>dplyr</code></p>
+<ul>
+<li>A fast, consistent tool for working with data frame like objects,<br />
+    both in memory and out of memory.</li>
+<li>Pipelines.</li>
+</ul>
+<p><code>tidyr</code></p>
+<ul>
+<li>An evolution of &lsquo;reshape2&rsquo;. It&rsquo;s designed specifically for data<br />
+    tidying (not general reshaping or aggregating) and works well with<br />
+    dplyr data pipelines.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">package</th>
+<th align="left">'narrower'</th>
+<th align="left">'wider'</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>tidyr</code></td>
+<td align="left">gather</td>
+<td align="left">spread</td>
+</tr>
+<tr class="even">
+<td align="left"><code>reshape2</code></td>
+<td align="left">melt</td>
+<td align="left">cast</td>
+</tr>
+<tr class="odd">
+<td align="left">spreadsheets</td>
+<td align="left">unpivot</td>
+<td align="left">pivot</td>
+</tr>
+<tr class="even">
+<td align="left">databases</td>
+<td align="left">fold</td>
+<td align="left">unfold</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="1-datatable-novice">1, <code>data.table</code> novice<a class="headerlink" href="#1-datatable-novice" title="Permanent link">&para;</a></h4>
+<p>Find out more with <code>?data.table</code>.</p>
+<h5 id="create-and-subset-a-datatable">Create and subset a <code>data.table</code><a class="headerlink" href="#create-and-subset-a-datatable" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># The data.table package
+library(data.table)
+
+# Create my_first_data_table
+my_first_data_table &lt;- data.table(x = c('a', 'b', 'c', 'd', 'e'), y = c(1, 2, 3, 4, 5))
+
+# Create a data.table using recycling
+DT &lt;- data.table(a = 1:2, b = c('A', 'B', 'C', 'D'))
+
+# Print the third row to the console
+DT[3,]
+</code></pre>
+
+<pre><code>##    a b
+## 1: 1 C
+</code></pre>
+<pre><code class="r"># Print the second and third row to the console, but do not commas
+DT[2:3]
+</code></pre>
+
+<pre><code>##    a b
+## 1: 2 B
+## 2: 1 C
+</code></pre>
+<h5 id="getting-to-know-a-datatable">Getting to know a <code>data.table</code><a class="headerlink" href="#getting-to-know-a-datatable" title="Permanent link">&para;</a></h5>
+<p>Like <code>head</code>, <code>tail</code>.</p>
+<pre><code class="r"># Print the penultimate row of DT using .N
+DT[.N - 1]
+</code></pre>
+
+<pre><code>##    a b
+## 1: 1 C
+</code></pre>
+<pre><code class="r"># Print the column names of DT, and number of rows and number of columns
+colnames(DT)
+</code></pre>
+
+<pre><code>## [1] "a" "b"
+</code></pre>
+<pre><code class="r">dim(DT)
+</code></pre>
+
+<pre><code>## [1] 4 2
+</code></pre>
+<pre><code class="r"># Select row 2 twice and row 3, returning a data.table with three rows where row 2 is a duplicate of row 1.
+DT[c(2, 2, 3)]
+</code></pre>
+
+<pre><code>##    a b
+## 1: 2 B
+## 2: 2 B
+## 3: 1 C
+</code></pre>
+<p><code>DT</code> is a data.table/data.frame, but <code>DT[ , B]</code> is a vector;<br />
+<code>DT[ , .(B)]</code> is a subsetted data.table.</p>
+<h5 id="subsetting-data-tables">Subsetting data tables<a class="headerlink" href="#subsetting-data-tables" title="Permanent link">&para;</a></h5>
+<p><code>DT[i, j, by]</code> means take <code>DT</code>, subset rows using <code>i</code>, then calculate<br />
+<code>j</code> grouped by <code>by</code>. You can wrap <code>j</code> with <code>.()</code>.</p>
+<pre><code class="r">A &lt;- c(1, 2, 3, 4, 5)
+B &lt;- c('a', 'b', 'c', 'd', 'e')
+C &lt;- c(6, 7, 8, 9, 10)
+DT &lt;- data.table(A, B, C)
+
+# Subset rows 1 and 3, and columns B and C
+DT[c(1,3) ,.(B, C)]
+</code></pre>
+
+<pre><code>##    B C
+## 1: a 6
+## 2: c 8
+</code></pre>
+<pre><code class="r"># Assign to ans the correct value
+ans &lt;- data.table(DT[, .(B, val = A * C)])
+
+# Fill in the blanks such that ans2 equals target
+#target &lt;- data.table(B = c('a', 'b', 'c', 'd', 'e', 'a', 'b', 'c', 'd', 'e'),  val = as.integer(c(6:10, 1:5)))
+ans2 &lt;- data.table(DT[, .(B, val = as.integer(c(6:10, 1:5)))])
+</code></pre>
+
+<h5 id="the-by-basics">The <code>by</code> basics<a class="headerlink" href="#the-by-basics" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># iris and iris3 are already available in the workspace
+
+# Convert iris to a data.table: DT
+DT &lt;- as.data.table(iris)
+
+# For each Species, print the mean Sepal.Length
+DT[, .(mean(Sepal.Length)), by = .(Species)]
+</code></pre>
+
+<pre><code>##       Species    V1
+## 1:     setosa 5.006
+## 2: versicolor 5.936
+## 3:  virginica 6.588
+</code></pre>
+<pre><code class="r"># Print mean Sepal.Length, grouping by first letter of Species
+DT[, .(mean(Sepal.Length)), by = .(substr(Species, 1,1))]
+</code></pre>
+
+<pre><code>##    substr    V1
+## 1:      s 5.006
+## 2:      v 6.262
+</code></pre>
+<h5 id="using-n-and-by">Using <code>.N</code> and <code>by</code><a class="headerlink" href="#using-n-and-by" title="Permanent link">&para;</a></h5>
+<p><code>.N</code>, number, in row or column.</p>
+<pre><code class="r"># data.table version of iris: DT
+DT &lt;- as.data.table(iris)
+
+# Group the specimens by Sepal area (to the nearest 10 cm2) and count how many occur in each group.
+DT[, .N, by = 10 * round(Sepal.Length * Sepal.Width / 10)]
+</code></pre>
+
+<pre><code>##    round   N
+## 1:    20 117
+## 2:    10  29
+## 3:    30   4
+</code></pre>
+<pre><code class="r"># Now name the output columns `Area` and `Count`
+DT[, .(Count = .N), by = .(Area = 10 * round(Sepal.Length * Sepal.Width / 10))]
+</code></pre>
+
+<pre><code>##    Area Count
+## 1:   20   117
+## 2:   10    29
+## 3:   30     4
+</code></pre>
+<h5 id="return-multiple-numbers-in-j">Return multiple numbers in <code>j</code><a class="headerlink" href="#return-multiple-numbers-in-j" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># Create the data.table DT
+set.seed(1L)
+DT &lt;- data.table(A = rep(letters[2:1], each = 4L), B = rep(1:4, each = 2L), C = sample(8))
+
+# Create the new data.table, DT2
+DT2 &lt;- DT[, .(C = cumsum(C)), by=.(A,B)]
+
+# Select from DT2 the last two values from C while you group by A
+DT2[, .(C = tail(C,2)), by=A]
+</code></pre>
+
+<pre><code>##    A C
+## 1: b 4
+## 2: b 9
+## 3: a 2
+## 4: a 8
+</code></pre>
+<h4 id="2-datatable-yeoman">2, <code>data.table</code> yeoman<a class="headerlink" href="#2-datatable-yeoman" title="Permanent link">&para;</a></h4>
+<h5 id="chaining-the-basics">Chaining, the basics<a class="headerlink" href="#chaining-the-basics" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># Build DT
+set.seed(1L)
+DT &lt;- data.table(A = rep(letters[2:1], each = 4L), B = rep(1:4, each = 2L), C = sample(8)) 
+DT
+</code></pre>
+
+<pre><code>##    A B C
+## 1: b 1 3
+## 2: b 1 8
+## 3: b 2 4
+## 4: b 2 5
+## 5: a 3 1
+## 6: a 3 7
+## 7: a 4 2
+## 8: a 4 6
+</code></pre>
+<pre><code class="r"># Use chaining
+# Cumsum of C while grouping by A and B, and then select last two values of C while grouping by A
+DT[, .(C = cumsum(C)), by = .(A,B)][, .(C = tail(C,2)), by = .(A)]
+</code></pre>
+
+<pre><code>##    A C
+## 1: b 4
+## 2: b 9
+## 3: a 2
+## 4: a 8
+</code></pre>
+<p><strong>Chaining your <code>iris</code> dataset</strong></p>
+<pre><code class="r">DT &lt;- data.table(iris)
+
+# Perform chained operations on DT
+DT[, .(Sepal.Length = median(Sepal.Length), Sepal.Width = median(Sepal.Width), Petal.Length = median(Petal.Length), Petal.Width = median(Petal.Width)), by = .(Species)][order(Species, decreasing = TRUE)]
+</code></pre>
+
+<pre><code>##       Species Sepal.Length Sepal.Width Petal.Length Petal.Width
+## 1:  virginica          6.5         3.0         5.55         2.0
+## 2: versicolor          5.9         2.8         4.35         1.3
+## 3:     setosa          5.0         3.4         1.50         0.2
+</code></pre>
+<pre><code class="r">DT
+</code></pre>
+
+<pre><code>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+##   1:          5.1         3.5          1.4         0.2    setosa
+##   2:          4.9         3.0          1.4         0.2    setosa
+##   3:          4.7         3.2          1.3         0.2    setosa
+##   4:          4.6         3.1          1.5         0.2    setosa
+##   5:          5.0         3.6          1.4         0.2    setosa
+##  ---                                                            
+## 146:          6.7         3.0          5.2         2.3 virginica
+## 147:          6.3         2.5          5.0         1.9 virginica
+## 148:          6.5         3.0          5.2         2.0 virginica
+## 149:          6.2         3.4          5.4         2.3 virginica
+## 150:          5.9         3.0          5.1         1.8 virginica
+</code></pre>
+<h5 id="programming-time-vs-readability">Programming time vs readability<a class="headerlink" href="#programming-time-vs-readability" title="Permanent link">&para;</a></h5>
+<pre><code class="r">x &lt;- c(2, 1, 2, 1, 2, 2, 1)
+y &lt;- c(1, 3, 5, 7, 9, 11, 13)
+z &lt;- c(2, 4, 6, 8, 10, 12, 14)
+DT &lt;- data.table(x, y, z)
+
+# Mean of columns
+DT[, lapply(.SD, mean), by = .(x)] 
+</code></pre>
+
+<pre><code>##    x        y        z
+## 1: 2 6.500000 7.500000
+## 2: 1 7.666667 8.666667
+</code></pre>
+<pre><code class="r"># Median of columns
+DT[, lapply(.SD, median), by = .(x)]
+</code></pre>
+
+<pre><code>##    x y z
+## 1: 2 7 8
+## 2: 1 7 8
+</code></pre>
+<h5 id="introducing-sdcols">Introducing <code>.SDcols</code><a class="headerlink" href="#introducing-sdcols" title="Permanent link">&para;</a></h5>
+<p><code>.SDcols</code> specifies the columns of <code>DT</code> that are included in <code>.SD</code>.</p>
+<pre><code class="r">grp &lt;- c(6, 6, 8, 8, 8)
+Q1 &lt;- c(4, 3, 3, 5, 3)
+Q2 &lt;- c(1, 4, 1, 4, 4)
+Q3 &lt;- c(3, 1, 5, 5, 2)
+H1 &lt;- c(1, 2, 3, 2, 4)
+H2 &lt;- c(1, 4, 3, 4, 3)
+DT &lt;- data.table(grp, Q1, Q2, Q3, H1, H2)
+
+# Calculate the sum of the Q columns
+DT[, lapply(.SD, sum), .SDcols = 2:4]
+</code></pre>
+
+<pre><code>##    Q1 Q2 Q3
+## 1: 18 14 16
+</code></pre>
+<pre><code class="r"># Calculate the sum of columns H1 and H2 
+DT[, lapply(.SD, sum), .SDcols = 5:6]
+</code></pre>
+
+<pre><code>##    H1 H2
+## 1: 12 15
+</code></pre>
+<pre><code class="r"># Select all but the first row of groups 1 and 2, returning only the grp column and the Q columns. 
+DT[, .SD[-1], .SDcols = 2:4, by = .(grp)]
+</code></pre>
+
+<pre><code>##    grp Q1 Q2 Q3
+## 1:   6  3  4  1
+## 2:   8  5  4  5
+## 3:   8  3  4  2
+</code></pre>
+<h5 id="mixing-it-together-lapply-sd-sdcols-and-n">Mixing it together: <code>lapply</code>, <code>.SD</code>, <code>SDcols</code> and <code>.N</code><a class="headerlink" href="#mixing-it-together-lapply-sd-sdcols-and-n" title="Permanent link">&para;</a></h5>
+<pre><code class="r">x &lt;- c(2, 1, 2, 1, 2, 2, 1)
+y &lt;- c(1, 3, 5, 7, 9, 11, 13)
+z &lt;- c(2, 4, 6, 8, 10, 12, 14)
+DT &lt;- data.table(x, y, z)
+
+# Sum of all columns and the number of rows
+# For the first part, you need to combine the returned list from lapply, .SD and .SDcols and the integer vector of .N. You have to this because the result of the two together has to be a list again, with all values put together.
+DT
+</code></pre>
+
+<pre><code>##    x  y  z
+## 1: 2  1  2
+## 2: 1  3  4
+## 3: 2  5  6
+## 4: 1  7  8
+## 5: 2  9 10
+## 6: 2 11 12
+## 7: 1 13 14
+</code></pre>
+<pre><code class="r">DT[,c(lapply(.SD, sum), .N), .SDcols = 1:3, by = x]
+</code></pre>
+
+<pre><code>##    x x  y  z N
+## 1: 2 8 26 30 4
+## 2: 1 3 23 26 3
+</code></pre>
+<pre><code class="r"># Cumulative sum of column x and y while grouping by x and z &gt; 8
+DT[,lapply(.SD, cumsum), .SDcols = 1:2, by = .(by1 = x, by2 = z &gt; 8)]
+</code></pre>
+
+<pre><code>##    by1   by2 x  y
+## 1:   2 FALSE 2  1
+## 2:   2 FALSE 4  6
+## 3:   1 FALSE 1  3
+## 4:   1 FALSE 2 10
+## 5:   2  TRUE 2  9
+## 6:   2  TRUE 4 20
+## 7:   1  TRUE 1 13
+</code></pre>
+<pre><code class="r"># Chaining
+DT[,lapply(.SD, cumsum), .SDcols = 1:2, by = .(by1 = x, by2 = z &gt; 8)][,lapply(.SD, max), .SDcols = 3:4, by = by1]
+</code></pre>
+
+<pre><code>##    by1 x  y
+## 1:   2 4 20
+## 2:   1 2 13
+</code></pre>
+<h5 id="adding-updating-and-removing-columns">Adding, updating, and removing columns<a class="headerlink" href="#adding-updating-and-removing-columns" title="Permanent link">&para;</a></h5>
+<p><code>:=</code> is defined for use in <code>j</code> only.</p>
+<pre><code class="r"># The data.table DT
+DT &lt;- data.table(A = letters[c(1, 1, 1, 2, 2)], B = 1:5)
+DT
+</code></pre>
+
+<pre><code>##    A B
+## 1: a 1
+## 2: a 2
+## 3: a 3
+## 4: b 4
+## 5: b 5
+</code></pre>
+<pre><code class="r"># Add column by reference: Total
+DT[, ('Total') := sum(B), by = .(A)]
+</code></pre>
+
+<pre><code>##    A B Total
+## 1: a 1     6
+## 2: a 2     6
+## 3: a 3     6
+## 4: b 4     9
+## 5: b 5     9
+</code></pre>
+<pre><code class="r"># Add 1 to column B
+DT[c(2,4), ('B') := as.integer(1 + B)]
+</code></pre>
+
+<pre><code>##    A B Total
+## 1: a 1     6
+## 2: a 3     6
+## 3: a 3     6
+## 4: b 5     9
+## 5: b 5     9
+</code></pre>
+<pre><code class="r"># Add a new column Total2
+DT[2:4, ':='(Total2 = sum(B)), by = .(A)]
+</code></pre>
+
+<pre><code>##    A B Total Total2
+## 1: a 1     6     NA
+## 2: a 3     6      6
+## 3: a 3     6      6
+## 4: b 5     9      5
+## 5: b 5     9     NA
+</code></pre>
+<pre><code class="r"># Remove the Total column
+DT[, Total := NULL]
+</code></pre>
+
+<pre><code>##    A B Total2
+## 1: a 1     NA
+## 2: a 3      6
+## 3: a 3      6
+## 4: b 5      5
+## 5: b 5     NA
+</code></pre>
+<pre><code class="r"># Select the third column using `[[`
+DT[[3]]
+</code></pre>
+
+<pre><code>## [1] NA  6  6  5 NA
+</code></pre>
+<h5 id="the-functional-form">The functional form<a class="headerlink" href="#the-functional-form" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># A data.table DT
+DT &lt;- data.table(A = c(1, 1, 1, 2, 2), B = 1:5)
+
+# Update B, add C and D
+DT[, `:=`(B = B + 1,  C = A + B, D = 2)]
+</code></pre>
+
+<pre><code>##    A B C D
+## 1: 1 2 2 2
+## 2: 1 3 3 2
+## 3: 1 4 4 2
+## 4: 2 5 6 2
+## 5: 2 6 7 2
+</code></pre>
+<pre><code class="r"># Delete my_cols
+my_cols &lt;- c('B', 'C')
+DT[, (my_cols) := NULL]
+</code></pre>
+
+<pre><code>##    A D
+## 1: 1 2
+## 2: 1 2
+## 3: 1 2
+## 4: 2 2
+## 5: 2 2
+</code></pre>
+<pre><code class="r"># Delete column 2 by number
+DT[, 2 := NULL]
+</code></pre>
+
+<pre><code>##    A
+## 1: 1
+## 2: 1
+## 3: 1
+## 4: 2
+## 5: 2
+</code></pre>
+<h5 id="ready-set-go">Ready, <code>set</code>, go!<a class="headerlink" href="#ready-set-go" title="Permanent link">&para;</a></h5>
+<p>The <code>set</code> function is used to repeatedly update a data.table by<br />
+reference. You can think of the <code>set</code> function as a loopable.</p>
+<pre><code class="r">A &lt;- c(2, 2, 3, 5, 2, 5, 5, 4, 4, 1)
+B &lt;- c(2, 1, 4, 2, 4, 3, 4, 5, 2, 4)
+C &lt;- c(5, 2, 4, 1, 2, 2, 1, 2, 5, 2)
+D &lt;- c(3, 3, 3, 1, 5, 4, 4, 1, 4, 3)
+DT &lt;- data.table(A, B, C, D)
+
+# Set the seed
+set.seed(1)
+
+# Check the DT
+DT
+</code></pre>
+
+<pre><code>##     A B C D
+##  1: 2 2 5 3
+##  2: 2 1 2 3
+##  3: 3 4 4 3
+##  4: 5 2 1 1
+##  5: 2 4 2 5
+##  6: 5 3 2 4
+##  7: 5 4 1 4
+##  8: 4 5 2 1
+##  9: 4 2 5 4
+## 10: 1 4 2 3
+</code></pre>
+<pre><code class="r"># For loop with set
+for (l in 2:4) set(DT, sample(10,3), l, NA)
+
+# Change the column names to lowercase
+setnames(DT,c('A','B','C','D'), c('a','b','c','d'))
+
+# Print the resulting DT to the console
+DT
+</code></pre>
+
+<pre><code>##     a  b  c  d
+##  1: 2  2  5  3
+##  2: 2  1 NA  3
+##  3: 3 NA  4  3
+##  4: 5 NA  1  1
+##  5: 2 NA  2  5
+##  6: 5  3  2 NA
+##  7: 5  4  1  4
+##  8: 4  5 NA  1
+##  9: 4  2  5 NA
+## 10: 1  4 NA NA
+</code></pre>
+<p><strong>The <code>set</code> family</strong></p>
+<pre><code class="r"># Define DT
+DT &lt;- data.table(a = letters[c(1, 1, 1, 2, 2)], b = 1)
+DT
+</code></pre>
+
+<pre><code>##    a b
+## 1: a 1
+## 2: a 1
+## 3: a 1
+## 4: b 1
+## 5: b 1
+</code></pre>
+<pre><code class="r"># Add a postfix '_2' to all column names
+setnames(DT, c(1:2), paste0(c('a','b'), '_2'))
+DT
+</code></pre>
+
+<pre><code>##    a_2 b_2
+## 1:   a   1
+## 2:   a   1
+## 3:   a   1
+## 4:   b   1
+## 5:   b   1
+</code></pre>
+<pre><code class="r"># Change column name 'a_2' to 'A2'
+setnames(DT, 'a_2', 'A2')
+DT
+</code></pre>
+
+<pre><code>##    A2 b_2
+## 1:  a   1
+## 2:  a   1
+## 3:  a   1
+## 4:  b   1
+## 5:  b   1
+</code></pre>
+<pre><code class="r"># Reverse the order of the columns
+setcolorder(DT, c('b_2','A2'))
+</code></pre>
+
+<h4 id="3-datatable-expert">3, <code>data.table</code> expert<a class="headerlink" href="#3-datatable-expert" title="Permanent link">&para;</a></h4>
+<h5 id="selecting-rows-the-datatable-way">Selecting rows the <code>data.table</code> way<a class="headerlink" href="#selecting-rows-the-datatable-way" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># Convert iris to a data.table
+iris &lt;- data.table('Sepal.Length' = iris$Sepal.Length, 'Sepal.Width' = iris$Sepal.Width, 'Petal.Length' = iris$Petal.Length, 'Petal.Width' = iris$Petal.Width, 'Species' = iris$Species)
+iris
+</code></pre>
+
+<pre><code>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+##   1:          5.1         3.5          1.4         0.2    setosa
+##   2:          4.9         3.0          1.4         0.2    setosa
+##   3:          4.7         3.2          1.3         0.2    setosa
+##   4:          4.6         3.1          1.5         0.2    setosa
+##   5:          5.0         3.6          1.4         0.2    setosa
+##  ---                                                            
+## 146:          6.7         3.0          5.2         2.3 virginica
+## 147:          6.3         2.5          5.0         1.9 virginica
+## 148:          6.5         3.0          5.2         2.0 virginica
+## 149:          6.2         3.4          5.4         2.3 virginica
+## 150:          5.9         3.0          5.1         1.8 virginica
+</code></pre>
+<pre><code class="r"># Species is 'virginica'
+head(iris[Species == 'virginica'], 20)
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+##  1:          6.3         3.3          6.0         2.5 virginica
+##  2:          5.8         2.7          5.1         1.9 virginica
+##  3:          7.1         3.0          5.9         2.1 virginica
+##  4:          6.3         2.9          5.6         1.8 virginica
+##  5:          6.5         3.0          5.8         2.2 virginica
+##  6:          7.6         3.0          6.6         2.1 virginica
+##  7:          4.9         2.5          4.5         1.7 virginica
+##  8:          7.3         2.9          6.3         1.8 virginica
+##  9:          6.7         2.5          5.8         1.8 virginica
+## 10:          7.2         3.6          6.1         2.5 virginica
+## 11:          6.5         3.2          5.1         2.0 virginica
+## 12:          6.4         2.7          5.3         1.9 virginica
+## 13:          6.8         3.0          5.5         2.1 virginica
+## 14:          5.7         2.5          5.0         2.0 virginica
+## 15:          5.8         2.8          5.1         2.4 virginica
+## 16:          6.4         3.2          5.3         2.3 virginica
+## 17:          6.5         3.0          5.5         1.8 virginica
+## 18:          7.7         3.8          6.7         2.2 virginica
+## 19:          7.7         2.6          6.9         2.3 virginica
+## 20:          6.0         2.2          5.0         1.5 virginica
+</code></pre>
+<pre><code class="r"># Species is either 'virginica' or 'versicolor'
+head(iris[Species %in% c('virginica', 'versicolor')], 20)
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+##  1:          7.0         3.2          4.7         1.4 versicolor
+##  2:          6.4         3.2          4.5         1.5 versicolor
+##  3:          6.9         3.1          4.9         1.5 versicolor
+##  4:          5.5         2.3          4.0         1.3 versicolor
+##  5:          6.5         2.8          4.6         1.5 versicolor
+##  6:          5.7         2.8          4.5         1.3 versicolor
+##  7:          6.3         3.3          4.7         1.6 versicolor
+##  8:          4.9         2.4          3.3         1.0 versicolor
+##  9:          6.6         2.9          4.6         1.3 versicolor
+## 10:          5.2         2.7          3.9         1.4 versicolor
+## 11:          5.0         2.0          3.5         1.0 versicolor
+## 12:          5.9         3.0          4.2         1.5 versicolor
+## 13:          6.0         2.2          4.0         1.0 versicolor
+## 14:          6.1         2.9          4.7         1.4 versicolor
+## 15:          5.6         2.9          3.6         1.3 versicolor
+## 16:          6.7         3.1          4.4         1.4 versicolor
+## 17:          5.6         3.0          4.5         1.5 versicolor
+## 18:          5.8         2.7          4.1         1.0 versicolor
+## 19:          6.2         2.2          4.5         1.5 versicolor
+## 20:          5.6         2.5          3.9         1.1 versicolor
+</code></pre>
+<h5 id="removing-columns-and-adapting-your-column-names">Removing columns and adapting your column names<a class="headerlink" href="#removing-columns-and-adapting-your-column-names" title="Permanent link">&para;</a></h5>
+<p>Refer to a regex cheat sheet for metacharacter.</p>
+<pre><code class="r"># iris as a data.table
+iris &lt;- as.data.table(iris)
+iris
+</code></pre>
+
+<pre><code>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+##   1:          5.1         3.5          1.4         0.2    setosa
+##   2:          4.9         3.0          1.4         0.2    setosa
+##   3:          4.7         3.2          1.3         0.2    setosa
+##   4:          4.6         3.1          1.5         0.2    setosa
+##   5:          5.0         3.6          1.4         0.2    setosa
+##  ---                                                            
+## 146:          6.7         3.0          5.2         2.3 virginica
+## 147:          6.3         2.5          5.0         1.9 virginica
+## 148:          6.5         3.0          5.2         2.0 virginica
+## 149:          6.2         3.4          5.4         2.3 virginica
+## 150:          5.9         3.0          5.1         1.8 virginica
+</code></pre>
+<pre><code class="r"># Remove the 'Sepal.' prefix
+#gsub('([ab])', '\\1_\\1_', 'abc and ABC') = pattern, replacement, x
+setnames(iris, c('Sepal.Length', 'Sepal.Width'), c('Length','Width')) 
+#gsub('^Sepal\\.','', iris)
+
+# Remove the two columns starting with 'Petal'
+iris[, c('Petal.Length', 'Petal.Width') := NULL]
+</code></pre>
+
+<pre><code>##      Length Width   Species
+##   1:    5.1   3.5    setosa
+##   2:    4.9   3.0    setosa
+##   3:    4.7   3.2    setosa
+##   4:    4.6   3.1    setosa
+##   5:    5.0   3.6    setosa
+##  ---                       
+## 146:    6.7   3.0 virginica
+## 147:    6.3   2.5 virginica
+## 148:    6.5   3.0 virginica
+## 149:    6.2   3.4 virginica
+## 150:    5.9   3.0 virginica
+</code></pre>
+<h5 id="understanding-automatic-indexing">Understanding automatic indexing<a class="headerlink" href="#understanding-automatic-indexing" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># Cleaned up iris data.table
+iris2 &lt;- data.frame(Length = iris$Sepal.Length, Width = iris$Sepal.Width, Species = iris$Species)
+iris2 &lt;- as.data.table(iris2)
+</code></pre>
+
+<pre><code class="r"># Area is greater than 20 square centimeters
+iris2[ Width * Length &gt; 20 ], 20
+</code></pre>
+
+<pre><code class="text">   Length Width    Species is_large
+ 1:    5.4   3.9     setosa    FALSE
+ 2:    5.8   4.0     setosa    FALSE
+ 3:    5.7   4.4     setosa     TRUE
+ 4:    5.4   3.9     setosa    FALSE
+ 5:    5.7   3.8     setosa    FALSE
+ 6:    5.2   4.1     setosa    FALSE
+ 7:    5.5   4.2     setosa    FALSE
+ 8:    7.0   3.2 versicolor    FALSE
+ 9:    6.4   3.2 versicolor    FALSE
+10:    6.9   3.1 versicolor    FALSE
+11:    6.3   3.3 versicolor    FALSE
+12:    6.7   3.1 versicolor    FALSE
+13:    6.7   3.0 versicolor    FALSE
+14:    6.0   3.4 versicolor    FALSE
+15:    6.7   3.1 versicolor    FALSE
+16:    6.3   3.3  virginica    FALSE
+17:    7.1   3.0  virginica    FALSE
+18:    7.6   3.0  virginica    FALSE
+19:    7.3   2.9  virginica    FALSE
+20:    7.2   3.6  virginica     TRUE
+...
+</code></pre>
+
+<pre><code class="r"># Add new boolean column
+iris2[, is_large := Width * Length &gt; 25]
+</code></pre>
+
+<pre><code class="r"># Now large observations with is_large
+iris2[is_large == TRUE]
+</code></pre>
+
+<pre><code class="text">   Length Width   Species is_large
+1:    5.7   4.4    setosa     TRUE
+2:    7.2   3.6 virginica     TRUE
+3:    7.7   3.8 virginica     TRUE
+4:    7.9   3.8 virginica     TRUE
+</code></pre>
+
+<pre><code class="r">iris2[(is_large)] # Also OK
+</code></pre>
+
+<pre><code class="text">   Length Width   Species is_large
+1:    5.7   4.4    setosa     TRUE
+2:    7.2   3.6 virginica     TRUE
+3:    7.7   3.8 virginica     TRUE
+4:    7.9   3.8 virginica     TRUE
+</code></pre>
+
+<h5 id="selecting-groups-or-parts-of-groups">Selecting groups or parts of groups<a class="headerlink" href="#selecting-groups-or-parts-of-groups" title="Permanent link">&para;</a></h5>
+<pre><code class="r"># The 'keyed' data.table DT
+DT &lt;- data.table(A = letters[c(2, 1, 2, 3, 1, 2, 3)],
+                 B = c(5, 4, 1, 9,8 ,8, 6), 
+                 C = 6:12)
+setkey(DT, A, B)
+
+# Select the 'b' group
+DT['b']
+</code></pre>
+
+<pre><code>##    A B  C
+## 1: b 1  8
+## 2: b 5  6
+## 3: b 8 11
+</code></pre>
+<pre><code class="r"># 'b' and 'c' groups
+DT[c('b', 'c')]
+</code></pre>
+
+<pre><code>##    A B  C
+## 1: b 1  8
+## 2: b 5  6
+## 3: b 8 11
+## 4: c 6 12
+## 5: c 9  9
+</code></pre>
+<pre><code class="r"># The first row of the 'b' and 'c' groups
+DT[c('b', 'c'), mult = 'first']
+</code></pre>
+
+<pre><code>##    A B  C
+## 1: b 1  8
+## 2: c 6 12
+</code></pre>
+<pre><code class="r"># First and last row of the 'b' and 'c' groups
+DT[c('b', 'c'), .SD[c(1, .N)], by = .EACHI]
+</code></pre>
+
+<pre><code>##    A B  C
+## 1: b 1  8
+## 2: b 8 11
+## 3: c 6 12
+## 4: c 9  9
+</code></pre>
+<pre><code class="r"># Copy and extend code for instruction 4: add printout
+DT[c('b', 'c'), { print(.SD); .SD[c(1, .N)] }, by = .EACHI]
+</code></pre>
+
+<pre><code>##    B  C
+## 1: 1  8
+## 2: 5  6
+## 3: 8 11
+##    B  C
+## 1: 6 12
+## 2: 9  9
+
+##    A B  C
+## 1: b 1  8
+## 2: b 8 11
+## 3: c 6 12
+## 4: c 9  9
+</code></pre>
+<h5 id="rolling-joins">Rolling joins<a class="headerlink" href="#rolling-joins" title="Permanent link">&para;</a></h5>
+<p><strong>Rolling joins &ndash; part one</strong></p>
+<pre><code class="r"># Keyed data.table DT
+DT &lt;- data.table(A = letters[c(2, 1, 2, 3, 1, 2, 3)],                  B = c(5, 4, 1, 9, 8, 8, 6), 
+                 C = 6:12, 
+                 key = 'A,B')
+
+# Get the key of DT
+key(DT)
+</code></pre>
+
+<pre><code>## [1] "A" "B"
+</code></pre>
+<pre><code class="r"># Row where A == 'b' &amp; B == 6
+setkey(DT, A, B)
+DT[.('b', 6)]
+</code></pre>
+
+<pre><code>##    A B  C
+## 1: b 6 NA
+</code></pre>
+<pre><code class="r"># Return the prevailing row
+DT[.('b',6), roll = TRUE]
+</code></pre>
+
+<pre><code>##    A B C
+## 1: b 6 6
+</code></pre>
+<pre><code class="r"># Return the nearest row
+DT[.('b',6), roll =+ Inf]
+</code></pre>
+
+<pre><code>##    A B C
+## 1: b 6 6
+</code></pre>
+<p><strong>Rolling joins &ndash; part two</strong></p>
+<pre><code class="r"># Keyed data.table DT
+DT &lt;- data.table(A = letters[c(2, 1, 2, 3, 1, 2, 3)],                  B = c(5, 4, 1, 9, 8, 8, 6), 
+                 C = 6:12, 
+                 key = 'A,B')
+
+# Look at the sequence (-2):10 for the 'b' group
+DT[.('b', (-2):10)]
+</code></pre>
+
+<pre><code>##     A  B  C
+##  1: b -2 NA
+##  2: b -1 NA
+##  3: b  0 NA
+##  4: b  1  8
+##  5: b  2 NA
+##  6: b  3 NA
+##  7: b  4 NA
+##  8: b  5  6
+##  9: b  6 NA
+## 10: b  7 NA
+## 11: b  8 11
+## 12: b  9 NA
+## 13: b 10 NA
+</code></pre>
+<pre><code class="r"># Add code: carry the prevailing values forwards
+DT[.('b', (-2):10), roll = TRUE]
+</code></pre>
+
+<pre><code>##     A  B  C
+##  1: b -2 NA
+##  2: b -1 NA
+##  3: b  0 NA
+##  4: b  1  8
+##  5: b  2  8
+##  6: b  3  8
+##  7: b  4  8
+##  8: b  5  6
+##  9: b  6  6
+## 10: b  7  6
+## 11: b  8 11
+## 12: b  9 11
+## 13: b 10 11
+</code></pre>
+<pre><code class="r"># Add code: carry the first observation backwards
+DT[.('b', (-2):10), roll = TRUE, rollends = TRUE]
+</code></pre>
+
+<pre><code>##     A  B  C
+##  1: b -2  8
+##  2: b -1  8
+##  3: b  0  8
+##  4: b  1  8
+##  5: b  2  8
+##  6: b  3  8
+##  7: b  4  8
+##  8: b  5  6
+##  9: b  6  6
+## 10: b  7  6
+## 11: b  8 11
+## 12: b  9 11
+## 13: b 10 11
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Data_Manipulation_in_R_with_dplyr/" class="btn btn-neutral float-right" title="Data Manipulation in R with dplyr">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Reading_Data_into_R_with_readr/" class="btn btn-neutral" title="Reading Data into R with readr"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© Ugo Spark</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Reading_Data_into_R_with_readr/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Data_Manipulation_in_R_with_dplyr/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="../mathjaxhelper.js"></script>
+
+</body>
+</html>
