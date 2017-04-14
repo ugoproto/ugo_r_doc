@@ -6,7 +6,7 @@
 
 **Foreword**
 
-Course.
+Course notes and snippets.
 
 ---
 
