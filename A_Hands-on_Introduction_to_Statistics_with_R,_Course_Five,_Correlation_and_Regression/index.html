@@ -82,7 +82,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../Intermediate_R_-_apply_Functions/">Intermediate R - apply Functions</a>
+    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
                 </li>
     </ul>
 	    </li>
@@ -200,6 +200,10 @@
                     
     <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Course_Seven%2C_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R%2C_Notes/">Statistics with R, Notes</a>
+                </li>
     </ul>
 	    </li>
           
@@ -211,11 +215,6 @@
             <li class="toctree-l1">
 		
     <a class="" href="../Time%2BSeries%2Bin%2BR%2BThe%2BPower%2Bof%2Bxts%2Band%2Bzoo/">Time Series in R, The Power of xts and zoo</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Jupyter%20Notebook%20and%20the%20R%20Kernel/">Jupyter Notebook and the R Kernel</a>
 	    </li>
           
         </ul>
@@ -256,28 +255,30 @@
               
                 <ul>
 <li><a href="#an-introduction-to-correlation">1, An introduction to Correlation</a></li>
-<li><a href="#an-introduction-to-linear-regression-models">2, An introduction to Linear Regression Models</a></li>
-<li><a href="#linear-regression-models-continued">3, Linear Regression Models continued</a></li>
+<li><a href="#an-introduction-to-linear-regression-models">2, An introduction to Linear Regression<br />
+    Models</a></li>
+<li><a href="#linear-regression-models-continued">3, Linear Regression Models<br />
+    continued</a></li>
 </ul>
 <hr />
 <p><strong>Foreword</strong></p>
 <ul>
 <li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
-<li>Snippets only.</li>
+<li>Snippets and results.</li>
 </ul>
 <hr />
 <h4 id="1-an-introduction-to-correlation">1, An introduction to Correlation<a class="headerlink" href="#1-an-introduction-to-correlation" title="Permanent link">&para;</a></h4>
 <p><strong>Manual computation of correlation coefficients - Part 1</strong></p>
-<pre><code class="r">library(XLConnectJars)
-library(XLConnect)
-
-# Read in the data set and assign to the object
-PE &lt;- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xls', sheet = 'PE', header = TRUE, startCol = 1, startRow = 1)
-
-# Check it out
+<pre><code class="r"># Print the data set in the console
 str(PE)
 </code></pre>
 
+<pre><code>## 'data.frame':    200 obs. of  4 variables:
+##  $ pid        : num  1 2 3 4 5 6 7 8 9 10 ...
+##  $ age        : num  60 40 29 47 48 42 55 43 39 51 ...
+##  $ activeyears: num  10 9 2 10 9 6 8 19 9 14 ...
+##  $ endurance  : num  18 36 51 18 23 30 8 40 28 15 ...
+</code></pre>
 <pre><code class="r"># Take a quick peek at both vectors
 A &lt;- PE$activeyears
 B &lt;- PE$endurance
@@ -291,6 +292,8 @@ cov &lt;- sum(diff_A*diff_B) / (length(A) - 1)
 cov
 </code></pre>
 
+<pre><code>## [1] 16.59045
+</code></pre>
 <p><strong>Manual computation of correlation coefficients - Part 2</strong></p>
 <pre><code class="r"># Square the differences that were found in the previous step
 sq_diff_A &lt;- diff_A^2
@@ -300,44 +303,116 @@ sq_diff_B &lt;- diff_B^2
 sd_A &lt;- sqrt(sum(sq_diff_A)/(length(A) - 1))
 sd_B &lt;- sqrt(sum(sq_diff_B)/(length(B) - 1))
 sd_A
-sd_B
 </code></pre>
 
+<pre><code>## [1] 4.687134
+</code></pre>
+<pre><code class="r">sd_B
+</code></pre>
+
+<pre><code>## [1] 10.83963
+</code></pre>
 <p><strong>Manual computation of correlation coefficients - part 3</strong></p>
 <pre><code class="r"># Combine all the pieces of the puzzle
 correlation &lt;- cov/(sd_A*sd_B)
 correlation
+</code></pre>
 
-# Check the validity of your result with the cor() command
+<pre><code>## [1] 0.3265402
+</code></pre>
+<pre><code class="r"># Check the validity of your result with the cor() command
 cor(A,B)
 </code></pre>
 
+<pre><code>## [1] 0.3265402
+</code></pre>
 <p><strong>Creating scatterplots</strong></p>
 <pre><code class="r">library(psych)
 
 # Summary statistics
 describe(PE)
+</code></pre>
 
-# Scatter plots
+<pre><code>##             vars   n   mean    sd median trimmed   mad min max range skew
+## pid            1 200 101.81 58.85  101.5  101.71 74.87   1 204   203 0.01
+## age            2 200  49.41 10.48   48.0   49.46 10.38  20  82    62 0.06
+## activeyears    3 200  10.68  4.69   11.0   10.57  4.45   0  26    26 0.30
+## endurance      4 200  26.50 10.84   27.0   26.22 10.38   3  55    52 0.22
+##             kurtosis   se
+## pid            -1.21 4.16
+## age            -0.14 0.74
+## activeyears     0.46 0.33
+## endurance      -0.44 0.77
+</code></pre>
+<pre><code class="r"># Scatter plots
 par(mfrow = c(1, 3))
 
 plot(PE$age ~ PE$activeyears)
 plot(PE$endurance ~ PE$activeyears)
 plot(PE$endurance ~ PE$age)
+</code></pre>
 
-par(mfrow = c(1, 1))
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-6-1.png" /></center></p>
+<pre><code class="r">par(mfrow = c(1, 1))
 </code></pre>
 
 <p><strong>Correlation matrix</strong></p>
 <pre><code class="r"># Correlation Analysis 
 round(cor(PE[2:4], use = 'pairwise.complete.obs', method = 'pearson'), 2)  
-# Do some correlation tests. If the null hypothesis of no correlation can be rejected on a significance level of 5%, then the relationship between variables is  significantly different from zero at the 95% confidence level
-
-cor.test(PE$age, PE$activeyears)
-cor.test(PE$age, PE$endurance)
-cor.test(PE$endurance, PE$activeyears)
 </code></pre>
 
+<pre><code>##               age activeyears endurance
+## age          1.00        0.33     -0.08
+## activeyears  0.33        1.00      0.33
+## endurance   -0.08        0.33      1.00
+</code></pre>
+<pre><code class="r"># Do some correlation tests. If the null hypothesis of no correlation can be rejected on a significance level of 5%, then the relationship between variables is  significantly different from zero at the 95% confidence level
+
+cor.test(PE$age, PE$activeyears)
+</code></pre>
+
+<pre><code>## 
+##  Pearson's product-moment correlation
+## 
+## data:  PE$age and PE$activeyears
+## t = 4.9022, df = 198, p-value = 1.969e-06
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.1993491 0.4473145
+## sample estimates:
+##       cor 
+## 0.3289909
+</code></pre>
+<pre><code class="r">cor.test(PE$age, PE$endurance)
+</code></pre>
+
+<pre><code>## 
+##  Pearson's product-moment correlation
+## 
+## data:  PE$age and PE$endurance
+## t = -1.1981, df = 198, p-value = 0.2323
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.22097811  0.05454491
+## sample estimates:
+##         cor 
+## -0.08483813
+</code></pre>
+<pre><code class="r">cor.test(PE$endurance, PE$activeyears)
+</code></pre>
+
+<pre><code>## 
+##  Pearson's product-moment correlation
+## 
+## data:  PE$endurance and PE$activeyears
+## t = 4.8613, df = 198, p-value = 2.37e-06
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.1967110 0.4451154
+## sample estimates:
+##       cor 
+## 0.3265402
+</code></pre>
 <p>CAUTION:</p>
 <ul>
 <li>The magnitude of a correlation depends upon many factors,<br />
@@ -347,29 +422,6 @@ cor.test(PE$endurance, PE$activeyears)
 <li>The correlation coefficient is a sample statistic, just like<br />
     the mean.</li>
 </ul>
-<p><strong>Non-representative data samples</strong></p>
-<pre><code class="r"># Summary statistics entire dataset
-describe(impact)
-
-# Calculate correlation coefficient 
-entirecorr &lt;- round(cor(impact$vismem2, impact$vermem2),2)
-
-# Summary statistics subsets
-describeBy(impact, group = impact$condition)
-
-# Create 2 subsets: control and concussed
-control &lt;- subset(impact, impact$condition == 'control')
-concussed &lt;- subset(impact, impact$condition == 'concussed')
-
-# Calculate correlation coefficients for each subset
-controlcorr &lt;- round(cor(control$vismem2, control$vermem2),2)
-concussedcorr &lt;- round(cor(concussed$vismem2, concussed$vermem2),2)
-
-# Display all values at the same time
-correlations &lt;- cbind(entirecorr, controlcorr, concussedcorr)
-correlations
-</code></pre>
-
 <h4 id="2-an-introduction-to-linear-regression-models">2, An introduction to Linear Regression Models<a class="headerlink" href="#2-an-introduction-to-linear-regression-models" title="Permanent link">&para;</a></h4>
 <p><strong>Impact experiment</strong></p>
 <pre><code class="r"># Create a correlation matrix for the dataset (9-14 are the '2' variables only)
@@ -381,6 +433,7 @@ library(corrplot)
 corrplot(correlations)
 </code></pre>
 
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-8-1.png" /></center></p>
 <p><strong>Manual computation of a simple linear regression</strong></p>
 <pre><code class="r"># Calculate the required means, standard deviations and correlation coefficient
 mean_ay &lt;- mean(PE$activeyears)
@@ -402,14 +455,35 @@ plot(PE$activeyear, PE$endurance, main = 'Scatterplot', ylab = 'Endurance', xlab
 abline(B_0, B_1, col = 'red')
 </code></pre>
 
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-9-1.png" /></center></p>
 <p><strong>Executing a simple linear regression using R</strong></p>
 <pre><code class="r"># Construct the regression model
 model_1 &lt;- lm(PE$endurance ~ PE$activeyear)
 
 # Look at the results of the regression by using the summary function
 summary(model_1)
+</code></pre>
 
-# Extract the predicted values
+<pre><code>## 
+## Call:
+## lm(formula = PE$endurance ~ PE$activeyear)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -20.5006  -7.8066   0.5304   5.7649  31.0511 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    18.4386     1.8104  10.185  &lt; 2e-16 ***
+## PE$activeyear   0.7552     0.1553   4.861 2.37e-06 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 10.27 on 198 degrees of freedom
+## Multiple R-squared:  0.1066, Adjusted R-squared:  0.1021 
+## F-statistic: 23.63 on 1 and 198 DF,  p-value: 2.37e-06
+</code></pre>
+<pre><code class="r"># Extract the predicted values
 predicted &lt;- fitted(model_1)
 
 # Create a scatter plot of Impulse Control against Symptom Score
@@ -420,14 +494,36 @@ abline(model_1, col = 'red')
 abline(lm(predicted ~ PE$activeyears), col = 'green', lty = 2)
 </code></pre>
 
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-10-1.png" /></center></p>
 <p><strong>Executing a multiple regression in R</strong></p>
 <pre><code class="r"># Multiple Regression
 model_2 &lt;- lm(PE$endurance ~ PE$activeyear + PE$age)
 
 # Examine the results of the regression
 summary(model_2)
+</code></pre>
 
-# Extract the predicted values
+<pre><code>## 
+## Call:
+## lm(formula = PE$endurance ~ PE$activeyear + PE$age)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -21.4598  -7.7398   0.6984   5.5364  27.9230 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    27.7035     3.4779   7.966 1.29e-13 ***
+## PE$activeyear   0.9192     0.1610   5.708 4.16e-08 ***
+## PE$age         -0.2229     0.0720  -3.096  0.00225 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 10.06 on 197 degrees of freedom
+## Multiple R-squared:  0.1481, Adjusted R-squared:  0.1394 
+## F-statistic: 17.12 on 2 and 197 DF,  p-value: 1.394e-07
+</code></pre>
+<pre><code class="r"># Extract the predicted values
 predicted &lt;- fitted(model_2)
 
 # Plotting predicted scores against observed scores
@@ -435,6 +531,7 @@ plot(predicted ~ PE$activeyears, main = 'Scatterplot', ylab = 'Endurance', xlab 
 abline(lm(predicted ~ PE$activeyears), col = 'green')
 </code></pre>
 
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-11-1.png" /></center></p>
 <h4 id="3-linear-regression-models-continued">3, Linear Regression Models continued<a class="headerlink" href="#3-linear-regression-models-continued" title="Permanent link">&para;</a></h4>
 <p><strong>Calculating the sum of squared residuals</strong></p>
 <pre><code class="r"># Create a linear regression with `ic2` and `vismem2` as regressors
@@ -451,36 +548,90 @@ SSR_1 &lt;- sum(deviation_1)
 SSR_1
 </code></pre>
 
+<pre><code>## [1] 19919.55
+</code></pre>
 <p><strong>Standardized linear regression</strong></p>
 <pre><code class="r"># Create a standardized simple linear regression
 model_1_z &lt;- lm(scale(PE$endurance) ~ scale(PE$activeyear))
 
 # Look at the output of this regression model
 summary(model_1_z)
+</code></pre>
 
-# Extract the R-Squared value for this regression
+<pre><code>## 
+## Call:
+## lm(formula = scale(PE$endurance) ~ scale(PE$activeyear))
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.89126 -0.72019  0.04893  0.53184  2.86459 
+## 
+## Coefficients:
+##                       Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)          4.871e-17  6.700e-02   0.000        1    
+## scale(PE$activeyear) 3.265e-01  6.717e-02   4.861 2.37e-06 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.9476 on 198 degrees of freedom
+## Multiple R-squared:  0.1066, Adjusted R-squared:  0.1021 
+## F-statistic: 23.63 on 1 and 198 DF,  p-value: 2.37e-06
+</code></pre>
+<pre><code class="r"># Extract the R-Squared value for this regression
 r_square_1 &lt;- summary(model_1_z)$r.squared
 r_square_1
+</code></pre>
 
-# Calculate the correlation coefficient
+<pre><code>## [1] 0.1066285
+</code></pre>
+<pre><code class="r"># Calculate the correlation coefficient
 corr_coef_1 &lt;- sqrt(r_square_1)
 corr_coef_1
+</code></pre>
 
-# Create a standardized multiple linear regression
+<pre><code>## [1] 0.3265402
+</code></pre>
+<pre><code class="r"># Create a standardized multiple linear regression
 model_2_z &lt;- lm(scale(PE$endurance) ~ scale(PE$activeyear) + scale(PE$age))
 
 # Look at the output of this regression model
 summary(model_2_z)
+</code></pre>
 
-# Extract the R-Squared value for this regression
+<pre><code>## 
+## Call:
+## lm(formula = scale(PE$endurance) ~ scale(PE$activeyear) + scale(PE$age))
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.97975 -0.71403  0.06443  0.51076  2.57601 
+## 
+## Coefficients:
+##                        Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)           5.590e-17  6.560e-02   0.000  1.00000    
+## scale(PE$activeyear)  3.975e-01  6.964e-02   5.708 4.16e-08 ***
+## scale(PE$age)        -2.156e-01  6.964e-02  -3.096  0.00225 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.9277 on 197 degrees of freedom
+## Multiple R-squared:  0.1481, Adjusted R-squared:  0.1394 
+## F-statistic: 17.12 on 2 and 197 DF,  p-value: 1.394e-07
+</code></pre>
+<pre><code class="r"># Extract the R-Squared value for this regression
 r_square_2 &lt;- summary(model_2_z)$r.squared
 r_square_2
+</code></pre>
 
-# Calculate the correlation coefficient
+<pre><code>## [1] 0.1480817
+</code></pre>
+<pre><code class="r"># Calculate the correlation coefficient
 corr_coef_2 &lt;- sqrt(r_square_2)
 corr_coef_2
 </code></pre>
 
+<pre><code>## [1] 0.3848139
+</code></pre>
 <p>Assumptions of linear regression:</p>
 <ul>
 <li>Normal distribution for Y.</li>
@@ -497,14 +648,18 @@ residual &lt;- resid(model_2)
 
 # Draw a histogram of the residuals
 hist(residual)
+</code></pre>
 
-# Extract the predicted symptom scores from the model
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-14-1.png" /></center></p>
+<pre><code class="r"># Extract the predicted symptom scores from the model
 predicted &lt;- fitted(model_2)
 
 # Plot the residuals against the predicted symptom scores
 plot(residual ~ predicted, main = 'Scatterplot', ylab = 'Model 2 Residuals', xlab = 'Model 2 Predicted Scores')
 abline(lm(residual ~ predicted), col = 'red')
 </code></pre>
+
+<p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-14-2.png" /></center></p>
               
             </div>
           </div>
