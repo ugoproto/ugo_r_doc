@@ -13,6 +13,7 @@ pages:
     - Home: 'index.md'
     - An Introduction to R: 'An Introduction to R.md'
     - Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques: 'Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques.md'
+    - R Cheat Sheets: 'R_CS.md'
     - Intermediate R:
         - Intermediate R: 'Intermediate_R.md'
         - Intermediate R - The apply Family: 'Intermediate_R_-_The_apply_Family.md'     
@@ -31,7 +32,6 @@ pages:
         - Plot Snippets - Colours: 'Plot_snippets_-_Colours.md'
     - Other Snippets:
         - Tables: 'Tables.md'
-        - Charts & Colors: 'Charts.md'
     - A Hands-on Introduction to Statistics with R:
         - Statistics with R, Course One, Introduction: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction.md'
         - Statistics with R, Course Two, Student's t-test: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test.md'
