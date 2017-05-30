@@ -126,7 +126,7 @@ Cheat sheets.
 ![](img/specialization_cs/sparklyr-cheatsheetb.png)
 </center>
 
-### Quandl
+### R-Quandl
 
 - [Quandl](R-Quandl-Cheatsheet.pdf).
 
@@ -153,7 +153,7 @@ Cheat sheets.
 - [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
     - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
 
-## Visualization (and mapping)
+## Visualization (including maps)
 
 - [ggplot2](ggplot2-cheatsheet.pdf).
 
