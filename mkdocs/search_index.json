@@ -917,7 +917,7 @@
         }, 
         {
             "location": "/R_CS/", 
-            "text": "CONTENT\n\n\nBasics\n\n\nAdvanced\n\n\nRStudio \n RMarkdown\n\n\nSpecialization\n\n\ndplyr \n tidyr\n\n\ndata.table\n\n\nRegular Expressions\n\n\nSpark\n\n\nR-Quandl\n\n\nTime series, survival, regression, data mining, machine learning\n\n\n\n\n\n\nVisualization (including maps)\n\n\nCharts\n\n\nParamaters\n\n\nGraphs\n\n\nColors\n\n\n\n\n\n\n\n\n\n\n\n\nForeword\n\n\nCheat sheets.\n\n\n\n\nBasics\n\n\n\n\nBase R\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Import\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nControl Structures\n.\n\n\n\n\n\n\n\n\n\n\nAdvanced\n\n\n\n\nAdvanced R\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRStudio \n RMarkdown\n\n\n\n\nR Markdown Reference Guide\n. PDF only.\n\n\nsyntax, chunk options, pandoc options, slide formats, LaTeX options\n\n\n\n\n\n\nR Markdown\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRStudio\n.\n\n\n\n\n\n\n\n\n\n\n\n\nSpecialization\n\n\ndplyr \n tidyr\n\n\n\n\nGrammar of dplyr\n. PDF only (explanatory slides).\n\n\ndplyr\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr \n tidyr\n.\n\n\n\n\n\n\n\n\n\n\n\n\ndata.table\n\n\n\n\ndata.table Intro\n. PDF only (explanatory article).\n\n\ndata.table\n.\n\n\n\n\n\n\n\n\n\n\nRegular Expressions\n\n\n\n\nBasic Regular Expressions\n.\n\n\n\n\n\n\n\n\n\n\nSpark\n\n\n\n\nsparklyr\n.\n\n\n\n\n\n\n\n\n\n\n\n\nR-Quandl\n\n\n\n\nQuandl\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTime series, survival, regression, data mining, machine learning\n\n\n\n\nTime Series\n. PDF only.\n\n\ninput, decomposition, tests, stochastic, graphics, miscellaneous\n\n\n\n\n\n\nsurvminer\n. PDF only.\n\n\ncurve, ggplot2, cox model\n\n\n\n\n\n\nRegressions\n. PDF only.\n\n\nlinear model, variable selection, diagnostics, graphics, tests, variable transformation, ridge, segmented, gls, glm, nls, gnls, loess, splines, robust, structural equation, simultaneous equation, pls, principal components, quantile, linear and nonlinear mixed effects, generalized additive, survival analysis, classification \n regression trees, beta\n\n\n\n\n\n\nData Mining\n. PDF only.\n\n\nassociation rules, sequential patterns, classification \n prediction, regression, clustering, outliers, time series, text mining, socila networks, graph mining, spatial data, statistics, graphics, data manipulation, data access, big data, parallel computing, reports, weka, editors, guis\n\n\n\n\n\n\nBig Data Machine Learning\n. PDF only.\n\n\nlinear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and na\u00efve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)\n\n\n\n\n\n\n\n\nVisualization (including maps)\n\n\n\n\nggplot2\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggmap\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggvis\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggvis\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshiny\n.\n\n\n\n\n\n\n\n\n\n\n\n\nCharts\n\n\n\n\n\n\n\n\nParamaters\n\n\nLines\n\n\n\n\n\n\n\n\nPoints\n\n\n\n\n\n\n\n\nGraphs\n\n\n\n\nGraphs\n.\n\n\n\n\n\n\n\n\n\n\nColors", 
+            "text": "CONTENT\n\n\nBasics\n\n\nAdvanced\n\n\nRStudio \n RMarkdown\n\n\nSpecialization\n\n\ndplyr \n tidyr\n\n\ndata.table\n\n\nRegular Expressions\n\n\nR-Quandl\n\n\nSpark\n\n\nTime series, survival, regression, data mining, machine learning\n\n\n\n\n\n\nVisualization (ggplot2, ggmap, ggvis, shiny)\n\n\nCharts\n\n\nParameters\n\n\nGraphs\n\n\nColors\n\n\n\n\n\n\n\n\n\n\n\n\nForeword\n\n\nCheat sheets.\n\n\n\n\nBasics\n\n\n\n\nBase R\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Import\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nControl Structures\n.\n\n\n\n\n\n\n\n\n\n\nAdvanced\n\n\n\n\nAdvanced R\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRStudio \n RMarkdown\n\n\n\n\nR Markdown Reference Guide\n. PDF only.\n\n\nsyntax, chunk options, pandoc options, slide formats, LaTeX options\n\n\n\n\n\n\nR Markdown\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRStudio\n.\n\n\n\n\n\n\n\n\n\n\n\n\nSpecialization\n\n\ndplyr \n tidyr\n\n\n\n\nGrammar of dplyr\n. PDF only (explanatory slides).\n\n\ndplyr\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndplyr \n tidyr\n.\n\n\n\n\n\n\n\n\n\n\n\n\ndata.table\n\n\n\n\ndata.table Intro\n. PDF only (explanatory article).\n\n\ndata.table\n.\n\n\n\n\n\n\n\n\n\n\nRegular Expressions\n\n\n\n\nBasic Regular Expressions\n.\n\n\n\n\n\n\n\n\n\n\nR-Quandl\n\n\n\n\nQuandl\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpark\n\n\n\n\nsparklyr\n.\n\n\n\n\n\n\n\n\n\n\n\n\nTime series, survival, regression, data mining, machine learning\n\n\n\n\nTime Series\n. PDF only.\n\n\ninput, decomposition, tests, stochastic, graphics, miscellaneous\n\n\n\n\n\n\nsurvminer\n. PDF only.\n\n\ncurve, ggplot2, cox model\n\n\n\n\n\n\nRegressions\n. PDF only.\n\n\nlinear model, variable selection, diagnostics, graphics, tests, variable transformation, ridge, segmented, gls, glm, nls, gnls, loess, splines, robust, structural equation, simultaneous equation, pls, principal components, quantile, linear and nonlinear mixed effects, generalized additive, survival analysis, classification \n regression trees, beta\n\n\n\n\n\n\nData Mining\n. PDF only.\n\n\nassociation rules, sequential patterns, classification \n prediction, regression, clustering, outliers, time series, text mining, socila networks, graph mining, spatial data, statistics, graphics, data manipulation, data access, big data, parallel computing, reports, weka, editors, guis\n\n\n\n\n\n\nBig Data Machine Learning\n. PDF only.\n\n\nlinear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and na\u00efve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)\n\n\n\n\n\n\n\n\nVisualization (ggplot2, ggmap, ggvis, shiny)\n\n\n\n\nggplot2\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggmap\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggvis\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggvis\n.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshiny\n.\n\n\n\n\n\n\n\n\n\n\n\n\nCharts\n\n\n\n\n\n\n\n\nParameters\n\n\nLines\n\n\n\n\n\n\n\n\nPoints\n\n\n\n\n\n\n\n\nGraphs\n\n\n\n\nGraphs\n.\n\n\n\n\n\n\n\n\n\n\nColors", 
             "title": "R Cheat Sheets"
         }, 
         {
@@ -951,14 +951,14 @@
             "title": "Regular Expressions"
         }, 
         {
-            "location": "/R_CS/#spark", 
-            "text": "sparklyr .", 
-            "title": "Spark"
-        }, 
-        {
             "location": "/R_CS/#r-quandl", 
             "text": "Quandl .", 
             "title": "R-Quandl"
+        }, 
+        {
+            "location": "/R_CS/#spark", 
+            "text": "sparklyr .", 
+            "title": "Spark"
         }, 
         {
             "location": "/R_CS/#time-series-survival-regression-data-mining-machine-learning", 
@@ -966,9 +966,9 @@
             "title": "Time series, survival, regression, data mining, machine learning"
         }, 
         {
-            "location": "/R_CS/#visualization-including-maps", 
+            "location": "/R_CS/#visualization-ggplot2-ggmap-ggvis-shiny", 
             "text": "ggplot2 .         ggmap .         ggvis .        ggvis .         shiny .", 
-            "title": "Visualization (including maps)"
+            "title": "Visualization (ggplot2, ggmap, ggvis, shiny)"
         }, 
         {
             "location": "/R_CS/#charts", 
@@ -976,9 +976,9 @@
             "title": "Charts"
         }, 
         {
-            "location": "/R_CS/#paramaters", 
+            "location": "/R_CS/#parameters", 
             "text": "Lines     Points", 
-            "title": "Paramaters"
+            "title": "Parameters"
         }, 
         {
             "location": "/R_CS/#graphs", 
