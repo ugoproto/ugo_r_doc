@@ -258,5 +258,4 @@ Grabing colours
 ---------------
 
 -   [Grab Website Colors](http://www.colorcombos.com/grabcolors.html)
--   [RGB Color Codes
-    Chart](http://www.rapidtables.com/web/color/RGB_Color.htm#color%20picker)
+-   [RGB Color Codes Chart](http://www.rapidtables.com/web/color/RGB_Color.htm#color%20picker)

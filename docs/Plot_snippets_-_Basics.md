@@ -28,7 +28,7 @@
     -   [The `extracat` Package (splom)](#the-extracat-package-splom)
     -   [The `ash` Package (density)](#the-ash-package-density)
     -   [The `KernSmooth` Package (density)](#the-kernsmooth-package-density)
-    -   [The `crorplot` Package (correlation)](#the-crorplot-package-correlation)
+    -   [The `corrplot` Package (correlation)](#the-crorplot-package-correlation)
 
 ------------------------------------------------------------------------
 
@@ -2655,7 +2655,7 @@ with(mtcars, {
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-188-1.png)
 
-### The `crorplot` Package (correlation)
+### The `corrplot` Package (correlation)
 
 ``` r
 library(corrplot)
