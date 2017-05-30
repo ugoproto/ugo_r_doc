@@ -116,16 +116,6 @@ Cheat sheets.
 ![](img/specialization_cs/RegExCheatsheet.png)
 </center>
 
-### Spark
-
-- [sparklyr](sparklyr-cheatsheet.pdf).
-
-<center>
-![](img/specialization_cs/sparklyr-cheatsheeta.png)
-
-![](img/specialization_cs/sparklyr-cheatsheetb.png)
-</center>
-
 ### R-Quandl
 
 - [Quandl](R-Quandl-Cheatsheet.pdf).
@@ -138,6 +128,16 @@ Cheat sheets.
 ![](img/specialization_cs/R-Quandl-Cheatsheetc.png)
 
 ![](img/specialization_cs/R-Quandl-Cheatsheetd.png)
+</center>
+
+### Spark
+
+- [sparklyr](sparklyr-cheatsheet.pdf).
+
+<center>
+![](img/specialization_cs/sparklyr-cheatsheeta.png)
+
+![](img/specialization_cs/sparklyr-cheatsheetb.png)
 </center>
 
 ### Time series, survival, regression, data mining, machine learning
@@ -153,7 +153,7 @@ Cheat sheets.
 - [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
     - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
 
-## Visualization (including maps)
+## Visualization (ggplot2, ggmap, ggvis, shiny)
 
 - [ggplot2](ggplot2-cheatsheet.pdf).
 
@@ -201,13 +201,13 @@ Cheat sheets.
 ![](img/visualization_cs/shiny-cheatsheetb.png)
 </center>
 
-## Charts
+### Charts
 
 <center>
 ![](img/visualization_cs/Chart_Selection.jpeg)
 </center>
 
-### Paramaters
+### Parameters
 
 **Lines**
 
