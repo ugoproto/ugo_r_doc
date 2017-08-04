@@ -34,10 +34,10 @@ library(readr)
 getwd()
 ```
 
-    ## [1] "D:/Admin_Hugues/Documents/Rprojects/Data Wrangling"
+    ## [1] "D:/.../Rprojects/Data Wrangling"
 
 ``` r
-setwd("D:/Admin_Hugues/Documents/Rprojects/Data Wrangling")
+setwd("D:/.../Rprojects/Data Wrangling")
 ```
 
 Import .csv (only ',').

@@ -140,10 +140,14 @@ Cheat sheets.
 ![](img/specialization_cs/sparklyr-cheatsheetb.png)
 </center>
 
-### Time series, survival, regression, data mining, machine learning
+### Time series
 
 - [Time Series](R-FUNCTIONS-FOR-TIME-SERIES-ANALYSIS.pdf). PDF only.
     - *input, decomposition, tests, stochastic, graphics, miscellaneous*
+- [xts](xts_Cheat_Sheet_R.pdf). PDF only.
+
+### Survival, regression, data mining, machine learning
+
 - [survminer](survminer_cheatsheet.pdf). PDF only.
     - *curve, ggplot2, cox model*
 - [Regressions](Ricci-refcard-regression.pdf). PDF only.
