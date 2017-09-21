@@ -12,7 +12,7 @@ Cheat sheets.
 
 ## Basics
 
-- [Base R](baseR-cheat-sheet-3.pdf).
+- [Base R](baseR-cheat-sheet-3.pdf). PDF.
 
 <center>
 ![](img/base_r_cs/baseR-cheat-sheet-3a.png)
@@ -22,7 +22,7 @@ Cheat sheets.
 
 ---
 
-- [Data Import](data-import-cheatsheet.pdf).
+- [Data Import](data-import-cheatsheet.pdf). PDF.
 
 <center>
 ![](img/base_r_cs/data-import-cheatsheeta.png)
@@ -32,7 +32,7 @@ Cheat sheets.
 
 ---
 
-- [Control Structures](R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.pdf).
+- [Control Structures](R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.pdf). PDF.
 
 <center>
 ![](img/base_r_cs/R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.png)
@@ -40,7 +40,7 @@ Cheat sheets.
 
 ## Advanced
 
-- [Advanced R](advancedR.pdf).
+- [Advanced R](advancedR.pdf). PDF.
 
 <center>
 ![](img/advanced_r_cs/AdvancedRa.png)
@@ -58,7 +58,7 @@ Cheat sheets.
 
 - [R Markdown Reference Guide](R-Markdown-Reference.pdf). PDF only.
     - *syntax, chunk options, pandoc options, slide formats, LaTeX options*
-- [R Markdown](rmarkdown-cheatsheet-2.0.pdf).
+- [R Markdown](rmarkdown-cheatsheet-2.0.pdf). PDF.
 
 <center>
 ![](img/rstudio_rmarkdown_cs/rmarkdown-cheatsheet-2.0a.png)
@@ -68,7 +68,7 @@ Cheat sheets.
 
 ---
 
-- [RStudio](rstudio-IDE-cheatsheet.pdf).
+- [RStudio](rstudio-IDE-cheatsheet.pdf). PDF.
 
 <center>
 ![](img/rstudio_rmarkdown_cs/rstudio-IDE-cheatsheeta.png)
@@ -81,7 +81,7 @@ Cheat sheets.
 ### dplyr & tidyr
 
 - [Grammar of dplyr](r-dplyr.pdf). PDF only (explanatory slides).
-- [dplyr](data-transformation-cheatsheet.pdf).
+- [dplyr](data-transformation-cheatsheet.pdf). PDF.
 
 <center>
 ![](img/specialization_cs/data-transformation-cheatsheeta.png)
@@ -91,7 +91,7 @@ Cheat sheets.
 
 ---
 
-- [dplyr & tidyr](dplyr-and-tidyr-data-wrangling-Cheatsheet.pdf).
+- [dplyr & tidyr](dplyr-and-tidyr-data-wrangling-Cheatsheet.pdf). PDF.
     
 <center>
 ![](img/specialization_cs/dplyr-and-tidyr-data-wrangling-Cheatsheeta.png)
@@ -102,7 +102,7 @@ Cheat sheets.
 ### data.table
 
 - [data.table Intro](data.table-Intro.pdf). PDF only (explanatory article).
-- [data.table](data+table+cheat+sheet.pdf).
+- [data.table](data+table+cheat+sheet.pdf). PDF.
 
 <center>
 ![](img/specialization_cs/data+table+cheat+sheet.png)
@@ -110,7 +110,7 @@ Cheat sheets.
 
 ### Regular Expressions
 
-- [Basic Regular Expressions](RegExCheatsheet.pdf).
+- [Basic Regular Expressions](RegExCheatsheet.pdf). PDF.
 
 <center>
 ![](img/specialization_cs/RegExCheatsheet.png)
@@ -132,7 +132,7 @@ Cheat sheets.
 
 ### Spark
 
-- [sparklyr](sparklyr-cheatsheet.pdf).
+- [sparklyr](sparklyr-cheatsheet.pdf). PDF.
 
 <center>
 ![](img/specialization_cs/sparklyr-cheatsheeta.png)
@@ -145,6 +145,7 @@ Cheat sheets.
 - [Time Series](R-FUNCTIONS-FOR-TIME-SERIES-ANALYSIS.pdf). PDF only.
     - *input, decomposition, tests, stochastic, graphics, miscellaneous*
 - [xts](xts_Cheat_Sheet_R.pdf). PDF only.
+- [Time Series in R -- The Power of `xts` and `zoo`](Time+Series+in+R+The+Power+of+xts+and+zoo.html). HTML.
 
 ### Survival, regression, data mining, machine learning
 
@@ -159,7 +160,7 @@ Cheat sheets.
 
 ## Visualization (ggplot2, ggmap, ggvis, shiny)
 
-- [ggplot2](ggplot2-cheatsheet.pdf).
+- [ggplot2](ggplot2-cheatsheet.pdf). PDF.
 
 <center>
 ![](img/visualization_cs/ggplot2-cheatsheeta.png)
@@ -179,7 +180,7 @@ Cheat sheets.
 
 ---
 
-- [ggvis](shanly3011_data-visualization-in-r-ggvis.pdf).
+- [ggvis](shanly3011_data-visualization-in-r-ggvis.pdf). PDF.
 
 <center>
 ![](img/visualization_cs/shanly3011_data-visualization-in-r-ggvis.png)
