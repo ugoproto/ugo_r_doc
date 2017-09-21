@@ -22,6 +22,8 @@ Cheat sheets.
 
 ---
 
+- [Tidy Data](tidy_data.pdf). PDF only.
+
 - [Data Import](data-import-cheatsheet.pdf). PDF.
 
 <center>
