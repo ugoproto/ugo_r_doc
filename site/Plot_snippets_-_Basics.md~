@@ -46,6 +46,8 @@
 Plotting Packages
 -----------------
 
+Packages used in bold.
+
 Graphics:
 
 -   `maps` for grids and mapping.
@@ -53,14 +55,14 @@ Graphics:
 -   `plotrix` for ternary, polar plots.
 -   `gplots`.
 -   `pixmap`, `png`, `rtiff`, `ReadImages`, `EBImage`, `RImageJ`.
--   `leaflet`.
+-   **`leaflet`**.
 
 Grid:
 
--   `vcd` for mosaic, ternary plots.
+-   **`vcd`** for mosaic, ternary plots.
 -   `grImport` for vectors.
 -   `ggplot2` and extensions.
--   `lattice` and `latticeExtra`.
+-   **`lattice`** and **`latticeExtra`**.
 -   `gridBase`.
 
 grDevices:
@@ -71,29 +73,29 @@ grDevices:
 
 Interactive:
 
--   `rgl`.
+-   **`rgl`**.
 -   `ggvis`.
 -   `iplots`.
 -   `rggobi`.
 
 Others:
 
--   `ash` for density plots.
--   `cluster` for dendrograms.
+-   **`ash`** for density plots.
+-   **`cluster`** for dendrograms.
 -   `copula` for multivariate analyses.
--   `corrplot` for correlations.
+-   **`corrplot`** for correlations.
 -   `compositions` for geometries, ternary plots.
--   `extracat` for missing values.
+-   **`extracat`** for missing values.
 -   `soiltexture` for ternary plots and more.
--   `KernSmooth` for histograms-density plots.
+-   **`KernSmooth`** for histograms-density plots.
 -   `openair` for polar, circular plots.
--   `sm` for density plots.
--   `car` for scatter plots.
--   `vioplot` for boxplots.
--   `vcd` for mosaic plots and multivariate analyses.
--   `hexbin` for scatter plots.
--   `scatterplot3d` for 3D scatter plots.
--   `cluster` for dendrograms.
+-   **`sm`** for density plots.
+-   **`car`** for scatter plots.
+-   **`vioplot`** for boxplots.
+-   **`vcd`** for mosaic plots and multivariate analyses.
+-   **`hexbin`** for scatter plots.
+-   **`scatterplot3d`** for 3D scatter plots.
+-   **`cluster`** for dendrograms.
 -   `shiny` for interactive plots.
 -   `ggvis`.
 

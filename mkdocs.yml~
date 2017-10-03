@@ -2,9 +2,9 @@ site_name: ugo_r_doc
 site_url: https://ugoproto.github.io/ugo_r_doc/
 #repo_url: https://github.com/ugoproto/ugo_r_doc
 site_description: A R documentation website.
-site_author: Ugo Sparks
+site_author: Ugo Spark
 #site_favicon: favicon.ico
-copyright: © Ugo Sparks
+copyright: © Ugo Spark
 google_analytics: ['UA-93008985-1', 'mkdocs.org']
 #remote_branch: master
 #remote_name: ugo_r_doc
