@@ -178,7 +178,7 @@
         
             <li><a class="toctree-l4" href="#gvismotionchart">gvisMotionChart</a></li>
         
-            <li><a class="toctree-l4" href="#within-an-html-iframe">Within an HTML iframe</a></li>
+            <li><a class="toctree-l4" href="#within-an-html-iframe-or-embed">Within an HTML &lt;iframe&gt; or &lt;embed&gt;</a></li>
         
             <li><a class="toctree-l4" href="#information-from-the-object">Information from the object</a></li>
         
@@ -323,7 +323,7 @@
 </li>
 <li><a href="#charts">Charts</a><ul>
 <li><a href="#gvismotionchart">gvisMotionChart</a></li>
-<li><a href="#within-an-html-iframe">Within an HTML iframe</a></li>
+<li><a href="#within-an-html-iframe-or-embed">Within an HTML &lt;iframe&gt; or &lt;embed&gt;</a></li>
 <li><a href="#information-from-the-object">Information from the object</a></li>
 </ul>
 </li>
@@ -892,7 +892,7 @@ callbacks.shift()();
 </div>
 
 <p><br></p>
-<h5 id="within-an-html-iframe">Within an HTML <code>iframe</code><a class="headerlink" href="#within-an-html-iframe" title="Permanent link">&para;</a></h5>
+<h5 id="within-an-html-iframe-or-embed">Within an HTML <code>&lt;iframe&gt;</code> or <code>&lt;embed&gt;</code><a class="headerlink" href="#within-an-html-iframe-or-embed" title="Permanent link">&para;</a></h5>
 <p>After we generate the HTML chart or map, save the object as a HTML file.</p>
 <pre><code class="r">library(htmlwidgets) 
 library(DT) 
@@ -908,12 +908,16 @@ height=400px &gt;&lt;/iframe&gt;
 <iframe seamless src="../googleVis_m.html" width=600px 
 height=400px ></iframe>
 
+<pre><code class="html">&lt;embed seamless src=&quot;../googleVis.html&quot; width=600px 
+height=400px &gt;&lt;/embed&gt;
+</code></pre>
+
 <p><embed seamless src="../googleVis_m.html" width=600px 
 height=400px ></p>
 <p>Here is another example with a Leaflet file with the <code>leaflet</code> package.</p>
-<iframe seamless src="../googleVis_Leaflet_m.html" width=600px 
-height=400px ></iframe>
+<iframe seamless src="../googleVis_Leaflet_m.html" width=600px height=400px ></iframe>
 
+<p><embed seamless src="../googleVis_Leaflet_m.html" width=600px height=400px ></embed></p>
 <h5 id="information-from-the-object">Information from the object<a class="headerlink" href="#information-from-the-object" title="Permanent link">&para;</a></h5>
 <pre><code class="r">M$type
 M$chartid

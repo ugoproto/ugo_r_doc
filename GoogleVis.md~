@@ -574,7 +574,7 @@ callbacks.shift()();
 </div>
 <br>
 
-### Within an HTML `iframe`
+### Within an HTML `<iframe>` or `<embed>`
 
 After we generate the HTML chart or map, save the object as a HTML file.
 
@@ -588,19 +588,24 @@ saveWidget(object, "googleVis.html")
 Add this HTML snippet to the Markdown/HTML document.
 
 ```html
-<iframe seamless src="/googleVis.html" width=600px 
+<iframe seamless src="../googleVis.html" width=600px 
 height=400px ></iframe>
 ```
 
-<iframe seamless src="/googleVis_m.html" width=600px 
+<iframe seamless src="../googleVis_m.html" width=600px 
 height=400px ></iframe>
 
-<embed seamless src="/googleVis_m.html" width=600px 
+```html
+<embed seamless src="../googleVis.html" width=600px 
+height=400px ></embed>
+```
+
+<embed seamless src="../googleVis_m.html" width=600px 
 height=400px >
 
 Here is another example with a Leaflet file with the `leaflet` package.
 
-<iframe seamless src="/googleVis_Leaflet_m.html" width=600px 
+<iframe seamless src="../googleVis_Leaflet_m.html" width=600px 
 height=400px ></iframe>
 
 ### Information from the object
