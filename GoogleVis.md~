@@ -803,6 +803,8 @@ Geo2 <- gvisGeoChart(CityPopularity,
 plot(Geo2)
 ```
 
+<embed seamless src="../googleVis_geo2.html" width=600px height=400px ></embed>
+
 <!-- jsHeader -->
 <script type="text/javascript">
  
