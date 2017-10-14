@@ -1,0 +1,96 @@
+<!-- GeoChart generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Fri Oct 13 19:24:07 2017 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID49614f24acff () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"Montreal",
+700
+],
+[
+"Toronto",
+200
+] 
+];
+data.addColumn('string','City');
+data.addColumn('number','Popularity');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID49614f24acff() {
+var data = gvisDataGeoChartID49614f24acff();
+var options = {};
+options["width"] = 556;
+options["height"] = 350;
+options["region"] = "CA";
+options["displayMode"] = "markers";
+options["colorAxis"] = {values:[200,400,600,800], colors:['red', 'pink', 'orange','green']};
+
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID49614f24acff')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID49614f24acff);
+})();
+function displayChartGeoChartID49614f24acff() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID49614f24acff"></script>
+ 
+<!-- divChart -->
+  
+<div id="GeoChartID49614f24acff" 
+  style="width: 556; height: 350;">
+</div>
