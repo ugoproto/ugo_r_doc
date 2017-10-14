@@ -595,6 +595,9 @@ height=400px ></iframe>
 <iframe seamless src="/googleVis_m.html" width=600px 
 height=400px ></iframe>
 
+<embed seamless src="/googleVis_m.html" width=600px 
+height=400px >
+
 Here is another example with a Leaflet file with the `leaflet` package.
 
 <iframe seamless src="/googleVis_Leaflet_m.html" width=600px 
