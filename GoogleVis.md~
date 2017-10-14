@@ -574,9 +574,31 @@ callbacks.shift()();
 </div>
 <br>
 
-### Within an HTML `iframe` ???
+### Within an HTML `iframe`
 
-<iframe src="GoogleVis_m.html" style="width:400px;" ></iframe>
+After we generate the HTML chart or map, save the object as a HTML file.
+
+```r
+library(htmlwidgets) 
+library(DT) 
+
+saveWidget(object, "googleVis.html")
+```
+
+Add this HTML snippet to the Markdown/HTML document.
+
+```html
+<iframe seamless src="/googleVis.html" width=600px 
+height=400px ></iframe>
+```
+
+<iframe seamless src="/googleVis_m.html" width=600px 
+height=400px ></iframe>
+
+Here is another example with a Leaflet file with the `leaflet` package.
+
+<iframe seamless src="/googleVis_Leaflet_m.html" width=600px 
+height=400px ></iframe>
 
 ### Information from the object
 
@@ -1393,7 +1415,7 @@ callbacks.shift()();
 </div>
 <br>
 
-### `gvisMap`
+### `gvisMap` or Google Maps
 
 <!--  -->
 <!-- GeoMarker -->
@@ -4791,11 +4813,5 @@ callbacks.shift()();
 <div id="ColumnChartID336e54fe1b42" 
   style="width: 500; height: automatic;">
 </div>
-
----
-
-Insert Leaflet html output
-
-<iframe src="Leaflet_m.html" style="width:400px;" ></iframe>
 
 ---

@@ -19,14 +19,6 @@
 
     
     <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//GoogleVis/</loc>
-     <lastmod>2017-10-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/</loc>
      <lastmod>2017-10-14</lastmod>
      <changefreq>daily</changefreq>
@@ -123,6 +115,12 @@
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Plot_snippets_-_Colours/</loc>
+     <lastmod>2017-10-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//GoogleVis/</loc>
      <lastmod>2017-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>

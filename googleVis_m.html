@@ -1,119 +1,73 @@
-<!-- MotionChart generated in R 3.4.2 by googleVis 0.6.2 package -->
-<!-- Fri Oct 13 11:31:57 2017 -->
+<!-- GeoChart generated in R 3.4.2 by googleVis 0.6.2 package -->
+<!-- Fri Oct 13 18:56:26 2017 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID336e668836ab () {
+function gvisDataGeoChartID49617fef373 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
  [
-"Apples",
-2008,
-"West",
-98,
-78,
-20,
-"2008-12-31"
+"Germany",
+3
 ],
 [
-"Apples",
-2009,
-"West",
-111,
-79,
-32,
-"2009-12-31"
+"Brazil",
+4
 ],
 [
-"Apples",
-2010,
-"West",
-89,
-76,
-13,
-"2010-12-31"
+"United States",
+5
 ],
 [
-"Oranges",
-2008,
-"East",
-96,
-81,
-15,
-"2008-12-31"
+"France",
+4
 ],
 [
-"Bananas",
-2008,
-"East",
-85,
-76,
-9,
-"2008-12-31"
+"Hungary",
+3
 ],
 [
-"Oranges",
-2009,
-"East",
-93,
-80,
-13,
-"2009-12-31"
+"India",
+2
 ],
 [
-"Bananas",
-2009,
-"East",
-94,
-78,
-16,
-"2009-12-31"
+"Iceland",
+1
 ],
 [
-"Oranges",
-2010,
-"East",
-98,
-91,
-7,
-"2010-12-31"
+"Norway",
+4
 ],
 [
-"Bananas",
-2010,
-"East",
-81,
-71,
-10,
-"2010-12-31"
+"Spain",
+5
+],
+[
+"Turkey",
+1
 ] 
 ];
-data.addColumn('string','Fruit');
-data.addColumn('number','Year');
-data.addColumn('string','Location');
-data.addColumn('number','Sales');
-data.addColumn('number','Expenses');
+data.addColumn('string','Country');
 data.addColumn('number','Profit');
-data.addColumn('string','Date');
 data.addRows(datajson);
 return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID336e668836ab() {
-var data = gvisDataMotionChartID336e668836ab();
+function drawChartGeoChartID49617fef373() {
+var data = gvisDataGeoChartID49617fef373();
 var options = {};
-options["width"] = 400;
-options["height"] = 350;
-options["state"] = "";
+options["width"] = 556;
+options["height"] = 347;
+options["projection"] = "kavrayskiy-vii";
 
 
-    var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID336e668836ab')
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID49617fef373')
     );
     chart.draw(data,options);
     
@@ -125,7 +79,7 @@ options["state"] = "";
 (function() {
 var pkgs = window.__gvisPackages = window.__gvisPackages || [];
 var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = "motionchart";
+var chartid = "geochart";
   
 // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
 var i, newPackage = true;
@@ -137,9 +91,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID336e668836ab);
+callbacks.push(drawChartGeoChartID49617fef373);
 })();
-function displayChartMotionChartID336e668836ab() {
+function displayChartGeoChartID49617fef373() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -163,10 +117,10 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID336e668836ab"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID49617fef373"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID336e668836ab" 
-  style="width: 400; height: 350;">
+<div id="GeoChartID49617fef373" 
+  style="width: 556; height: 347;">
 </div>
