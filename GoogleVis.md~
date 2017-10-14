@@ -585,7 +585,7 @@ library(DT)
 saveWidget(object, "googleVis.html")
 ```
 
-Add this HTML snippet to the Markdown/HTML document.
+Add these HTML snippets to the Markdown/HTML document.
 
 ```html
 <iframe seamless src="../googleVis.html" width=600px 
@@ -596,17 +596,15 @@ height=400px ></iframe>
 height=400px ></iframe>
 
 ```html
-<embed seamless src="../googleVis.html" width=600px 
-height=400px ></embed>
+<embed seamless src="../googleVis.html" width=600px height=400px ></embed>
 ```
 
-<embed seamless src="../googleVis_m.html" width=600px 
-height=400px >
+<embed seamless src="../googleVis_m.html" width=600px height=400px >
 
-Here is another example with a Leaflet file with the `leaflet` package.
+Here is another example with a Leaflet HTML snippet with the `leaflet` package.
 
 <iframe seamless src="../googleVis_Leaflet_m.html" width=600px height=400px ></iframe>
-
+<br>
 <embed seamless src="../googleVis_Leaflet_m.html" width=600px height=400px ></embed>
 
 ### Information from the object
