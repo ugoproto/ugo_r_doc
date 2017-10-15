@@ -134,8 +134,8 @@ options(gvis.plot.tag='chart')
 
 # Create the chart
 M <- gvisMotionChart(Fruits,
-                     'Fruit',
-                     'Year',
+                     idvar='Fruit',
+                     timevar='Year',
                      options=list(width=400, height=350))
 
 # Do not print the chart in the browser
@@ -574,7 +574,7 @@ callbacks.shift()();
 </div>
 <br>
 
-### Within an HTML `<iframe>` or `<embed>`
+### Embedding with `<iframe>` or `<embed>`
 
 After we generate the HTML chart or map, save the object as a HTML file.
 
@@ -601,11 +601,7 @@ height=400px ></iframe>
 
 <embed seamless src="../googleVis_m.html" width=600px height=400px >
 
-Here is another example with a Leaflet HTML snippet with the `leaflet` package.
-
-<iframe seamless src="../googleVis_Leaflet_m.html" width=600px height=400px ></iframe>
-<br>
-<embed seamless src="../googleVis_Leaflet_m.html" width=600px height=400px ></embed>
+In other words, we can either write the code or embed a file into the HTML/Markdown document.
 
 ### Information from the object
 
@@ -803,7 +799,114 @@ Geo2 <- gvisGeoChart(CityPopularity,
 plot(Geo2)
 ```
 
-<embed seamless src="../googleVis_geo2.html" width=600px height=400px ></embed>
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID4961741b9385 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"New York",
+200
+],
+[
+"Boston",
+300
+],
+[
+"Miami",
+400
+],
+[
+"Chicago",
+500
+],
+[
+"Los Angeles",
+600
+],
+[
+"Houston",
+700
+] 
+];
+data.addColumn('string','City');
+data.addColumn('number','Popularity');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID4961741b9385() {
+var data = gvisDataGeoChartID4961741b9385();
+var options = {};
+options["width"] = 556;
+options["height"] = 350;
+options["region"] = "US";
+options["displayMode"] = "markers";
+options["colorAxis"] = {values:[200,400,600,800], colors:['red', 'pink', 'orange','green']};
+
+
+    var chart = new google.visualization.GeoChart(
+    document.getElementById('GeoChartID4961741b9385')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "geochart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGeoChartID4961741b9385);
+})();
+function displayChartGeoChartID4961741b9385() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID4961741b9385"></script>
+ 
+<!-- divChart -->
+  
+<div id="GeoChartID4961741b9385" 
+  style="width: 556; height: 350;">
+</div>
 
 <!--  -->
 <!-- Geo3 -->
@@ -918,7 +1021,7 @@ callbacks.shift()();
 </div>
 
 <!--  -->
-<!-- AndrewMap -->
+<!-- GeoMarker -->
 <!--  -->
 
 ```r
@@ -939,7 +1042,7 @@ head(Andrew, 3)
 
 ```r
 GeoMarker <- gvisGeoChart(Andrew,
-                          "LatLong", 
+                          locationvar="LatLong", 
                           sizevar='Speed_kt',
                           colorvar="Pressure_mb", 
                           options=list(region="US"))
@@ -1318,7 +1421,7 @@ callbacks.shift()();
 ### `gvisMap` or Google Maps
 
 <!--  -->
-<!-- GeoMarker -->
+<!-- AndrewMap -->
 <!--  -->
 
 ```r
@@ -1654,7 +1757,6 @@ callbacks.shift()();
 <div id="MapID496129f7ada" 
   style="width: 500; height: automatic;">
 </div>
-<br>
 
 ## Editor
 
