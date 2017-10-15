@@ -42,14 +42,22 @@ Consult the documentation and the [website](http://leafletjs.com/) for the speci
 
 ## Embedding
 
-Leaflet is a JavaScript library. JavaScript should be the prime language for creating maps and embedding them into web sites.
+We can embed just about any HTML snippet.
 
-However, we can also publish [web sites]() or build a [flexdashboard](http://rmarkdown.rstudio.com/flexdashboard/). These tools seamlessly integrate interactive htmlwidgets along with static visualizations (and optionally use Shiny to drive visualizations dynamically).
+On the other hand, Leaflet is a JavaScript library. JavaScript should be the prime language for creating maps and embedding them into web sites.
 
-A flexdashboard is an alternative to an HTML report, using other formats than 'pages' or 'slides'.
+Nonetheless, we can render [htmlwidgets](http://www.htmlwidgets.org/showcase_leaflet.html) (including Leaflet) in any HTML output. We can publish [R Markdown Websites](http://rmarkdown.rstudio.com/rmarkdown_websites.html#additional_examples) or blogs with [blogdown](https://bookdown.org/yihui/blogdown/). We can build a [flexdashboard](http://rmarkdown.rstudio.com/flexdashboard/). A flexdashboard is an alternative to an HTML report or presentation, using other formats than 'pages' or 'slides'. We can publish a book with [bookdown](https://bookdown.org/). And so on.
 
-[bookdown](https://bookdown.org/) is a static document that do not take interactive and dynamic tools.
+These tools seamlessly integrate interactive [htmlwidgets](http://www.htmlwidgets.org/showcase_leaflet.html) along with static visualizations (and optionally use [Shiny](https://shiny.rstudio.com/) to drive visualizations dynamically).
 
+The widgets that are worth the trip:
 
+- Leaflet (works with Shiny).
+- dygraphs (works with Shiny).
+- rbokeh (?).
+- Highcharter (works with Shiny).
+- DataTables (works with Shiny).
+
+In addition, `ggvis` can work with Shiny.
 
 ---

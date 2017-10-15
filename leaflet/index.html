@@ -305,9 +305,19 @@
 <p><br><br />
 <embed seamless src="../leaflet.html" width=600px height=400px ></embed></p>
 <h4 id="embedding">Embedding<a class="headerlink" href="#embedding" title="Permanent link">&para;</a></h4>
-<p>Leaflet is a JavaScript library. JavaScript should be the prime language for creating maps and embedding them into web sites.</p>
-<p>However, with  with RStudio, we can also publish <a href="">web sites</a> or build a <a href="http://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a>. These tools seamlessly integrate interactive htmlwidgets along with static visualizations (and optionally use Shiny to drive visualizations dynamically).</p>
-<p>A flexdashboard is an alternative to an HTML report, using other formats than &lsquo;pages&rsquo; or &lsquo;slides&rsquo;.</p>
+<p>We can embed just about any HTML snippet.</p>
+<p>On the other hand, Leaflet is a JavaScript library. JavaScript should be the prime language for creating maps and embedding them into web sites.</p>
+<p>Nonetheless, we can render <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> (including Leaflet) in any HTML output. We can publish <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html#additional_examples">R Markdown Websites</a> or blogs with <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>. We can build a <a href="http://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a>. A flexdashboard is an alternative to an HTML report or presentation, using other formats than &lsquo;pages&rsquo; or &lsquo;slides&rsquo;. We can publish a book with <a href="https://bookdown.org/">bookdown</a>. And so on.</p>
+<p>These tools seamlessly integrate interactive <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> along with static tabulating, charting, and mapping visualizations (and optionally use <a href="https://shiny.rstudio.com/">Shiny</a> to drive visualizations dynamically).</p>
+<p>The widgets that are worth the trip:</p>
+<ul>
+<li>Leaflet (works with Shiny).</li>
+<li>dygraphs (works with Shiny).</li>
+<li>rbokeh (?).</li>
+<li>Highcharter (works with Shiny).</li>
+<li>DataTables (works with Shiny).</li>
+</ul>
+<p>In addition, <code>ggvis</code> can work with Shiny.</p>
 <hr />
               
             </div>
