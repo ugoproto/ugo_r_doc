@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Sparks">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>leaflet - ugo_r_doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "leaflet";
+    var mkdocs_page_input_path = "leaflet.md";
+    var mkdocs_page_url = "/leaflet/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-93008985-1', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../An Introduction to R/">An Introduction to R</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../R_CS/">R Cheat Sheets</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Intermediate R</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Intermediate_R/">Intermediate R</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">RStudio</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Data Wrangling Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Analysis_in_R,_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Plot Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_ggvis/">Plot Snippets - ggvis</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../googleVis/">googleVis</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gganimate/">gganimate</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">leaflet</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#embedding-with-iframe-or-embed">Embedding with &lt;iframe&gt; or &lt;embed&gt;</a></li>
+    
+
+    <li class="toctree-l3"><a href="#embedding">Embedding</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Other Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Tables/">Tables</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">A Hands-on Introduction to Statistics with R</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/">Statistics with R, Course One, Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/">Statistics with R, Notes</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Time+Series+in+R+The+Power+of+xts+and+zoo/">Time Series in R, The Power of xts and zoo</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plot Snippets &raquo;</li>
+        
+      
+    
+    <li>leaflet</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="toc"><span class="toctitle">CONTENT</span><ul>
+<li><a href="#the-leaflet-package">The leaflet package</a></li>
+<li><a href="#embedding-with-iframe-or-embed">Embedding with &lt;iframe&gt; or &lt;embed&gt;</a></li>
+<li><a href="#embedding">Embedding</a></li>
+</ul>
+</div>
+<hr />
+<p><strong>Foreword</strong></p>
+<p>Notes, snippets, and results.</p>
+<hr />
+<h4 id="the-leaflet-package">The <code>leaflet</code> package<a class="headerlink" href="#the-leaflet-package" title="Permanent link">&para;</a></h4>
+<p>The <a href="http://leafletjs.com/">package</a> is an open-source JavaScript library for mobile-friendly interactive maps. We can make interactive panning/zooming and overlay object on maps:</p>
+<ul>
+<li>Map tiles.</li>
+<li>Markers (with custom icons).</li>
+<li>Polygons.</li>
+<li>Lines.</li>
+<li>Popups.</li>
+<li>GeoJSON.</li>
+<li>Choropleth maps.</li>
+<li>Non-geographical maps.</li>
+<li>WMS and TMS (weather and time measurement systems).</li>
+<li>Map panes.</li>
+<li>Videos.</li>
+</ul>
+<p>We can embed maps in R Markdown documents and Shiny apps. We can embed maps into websites.</p>
+<p>We can render spatial objects from the sp or sf packages, or data frames with latitude/longitude columns.</p>
+<p>With <code>leftlet</code> grammar, we can build a set of overlays with the <code>magrittr</code> pipe operator (<code>%&gt;%</code>).</p>
+<p>Consult the documentation and the <a href="http://leafletjs.com/">website</a> for the specifics.</p>
+<h4 id="embedding-with-iframe-or-embed">Embedding with <code>&lt;iframe&gt;</code> or <code>&lt;embed&gt;</code><a class="headerlink" href="#embedding-with-iframe-or-embed" title="Permanent link">&para;</a></h4>
+<iframe seamless src="../leaflet.html" width=600px height=400px ></iframe>
+
+<p><br><br />
+<embed seamless src="../leaflet.html" width=600px height=400px ></embed></p>
+<h4 id="embedding">Embedding<a class="headerlink" href="#embedding" title="Permanent link">&para;</a></h4>
+<p>We can embed just about any HTML snippet.</p>
+<p>On the other hand, Leaflet is a JavaScript library. JavaScript should be the prime language for creating maps and embedding them into web sites.</p>
+<p>Nonetheless, we can render <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> (including Leaflet) in any HTML output. We can publish <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html#additional_examples">R Markdown Websites</a> or blogs with <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>. We can build a <a href="http://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a>. A flexdashboard is an alternative to an HTML report or presentation, using other formats than &lsquo;pages&rsquo; or &lsquo;slides&rsquo;. We can publish a book with <a href="https://bookdown.org/">bookdown</a>. And so on.</p>
+<p>These tools seamlessly integrate interactive <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> along with static tabulating, charting, and mapping visualizations (and optionally use <a href="https://shiny.rstudio.com/">Shiny</a> to drive visualizations dynamically).</p>
+<p>The widgets that are worth the trip:</p>
+<ul>
+<li>Leaflet (works with Shiny).</li>
+<li>dygraphs (works with Shiny).</li>
+<li>rbokeh (?).</li>
+<li>Highcharter (works with Shiny).</li>
+<li>DataTables (works with Shiny).</li>
+</ul>
+<p>In addition, <code>ggvis</code> can work with Shiny.</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Tables/" class="btn btn-neutral float-right" title="Tables">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gganimate/" class="btn btn-neutral" title="gganimate"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© Ugo Sparks</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gganimate/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Tables/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="../mathjaxhelper.js"></script>
+
+</body>
+</html>
