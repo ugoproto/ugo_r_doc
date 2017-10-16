@@ -152,7 +152,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../googleVis/">googleVis</a>
+    <a class="" href="../googleVis/">googleVis (embed HTML plots)</a>
                 </li>
                 <li class="">
                     
@@ -160,7 +160,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../leaflet/">leaflet</a>
+    <a class="" href="../leaflet/">Leaflet (embed HTML maps)</a>
                 </li>
     </ul>
 	    </li>
@@ -198,20 +198,11 @@
         </ul>
     
 
-    <li class="toctree-l3"><a href="#the-panderpandoctable-function">The pander::pandoc.table function</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#example-1_3">Example 1</a></li>
-        
-        </ul>
-    
-
     <li class="toctree-l3"><a href="#the-htmltable-package">The htmlTable package</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#example-1_4">Example 1</a></li>
+            <li><a class="toctree-l4" href="#example-1_3">Example 1</a></li>
         
             <li><a class="toctree-l4" href="#example-2_1">Example 2</a></li>
         
@@ -232,7 +223,7 @@
     
         <ul>
         
-            <li><a class="toctree-l4" href="#example-1_5">Example 1</a></li>
+            <li><a class="toctree-l4" href="#example-1_4">Example 1</a></li>
         
         </ul>
     
@@ -339,11 +330,6 @@
 </li>
 <li><a href="#the-knitrkable-function">The <code>knitr::kable</code> function</a><ul>
 <li><a href="#example-1-2">Example 1</a></li>
-</ul>
-</li>
-<li><a href="#the-panderpandoc.table-function">The <code>pander::pandoc.table</code><br />
-    function</a><ul>
-<li><a href="#example-1-3">Example 1</a></li>
 </ul>
 </li>
 <li><a href="#the-htmltable-package">The <code>htmlTable</code> package</a><ul>
@@ -458,7 +444,7 @@
 </table>
 
 <h4 id="the-xtable-package">The <code>xtable</code> package<a class="headerlink" href="#the-xtable-package" title="Permanent link">&para;</a></h4>
-<p>The results is HTML.</p>
+<p>The output is in HTML.</p>
 <h5 id="example-1_1">Example 1<a class="headerlink" href="#example-1_1" title="Permanent link">&para;</a></h5>
 <pre><code class="r">library(xtable)
 
@@ -481,7 +467,7 @@ print(xtable(output,
    </table>
 
 <h4 id="the-knitrkable-function">The <code>knitr::kable</code> function<a class="headerlink" href="#the-knitrkable-function" title="Permanent link">&para;</a></h4>
-<p>The results is Markdown.</p>
+<p>The output is in Markdown.</p>
 <h5 id="example-1_2">Example 1<a class="headerlink" href="#example-1_2" title="Permanent link">&para;</a></h5>
 <pre><code class="r">library(knitr)
 
@@ -514,20 +500,10 @@ kable(output,
 </tbody>
 </table>
 
-<p>We can also write <code>knitr::kable()</code> without call the <code>library(knitr)</code>.</p>
-<h4 id="the-panderpandoctable-function">The <code>pander::pandoc.table</code> function<a class="headerlink" href="#the-panderpandoctable-function" title="Permanent link">&para;</a></h4>
-<h5 id="example-1_3">Example 1<a class="headerlink" href="#example-1_3" title="Permanent link">&para;</a></h5>
-<pre><code class="r">library(pander)
-
-# given the data in the first row
-pandoc.table(output, 
-             emphasize.rows = 1, 
-             emphasize.strong.cols = 2)
-</code></pre>
-
+<p>We can also write <code>knitr::kable()</code> without calling <code>library(knitr)</code>.</p>
 <h4 id="the-htmltable-package">The <code>htmlTable</code> package<a class="headerlink" href="#the-htmltable-package" title="Permanent link">&para;</a></h4>
 <p><a href="https://github.com/gforge/htmlTable">htmlTable</a> on GitHub.</p>
-<h5 id="example-1_4">Example 1<a class="headerlink" href="#example-1_4" title="Permanent link">&para;</a></h5>
+<h5 id="example-1_3">Example 1<a class="headerlink" href="#example-1_3" title="Permanent link">&para;</a></h5>
 <pre><code class="r">output &lt;- 
   matrix(paste('Content', LETTERS[1:16]), 
          ncol = 4, byrow = TRUE)
@@ -10882,7 +10858,7 @@ Age
 
 <h4 id="the-ztable-package">The <code>ztable</code> package<a class="headerlink" href="#the-ztable-package" title="Permanent link">&para;</a></h4>
 <p>The package can also export to <em>L<strong>a</strong>T<strong>e</strong>X</em>.</p>
-<h5 id="example-1_5">Example 1<a class="headerlink" href="#example-1_5" title="Permanent link">&para;</a></h5>
+<h5 id="example-1_4">Example 1<a class="headerlink" href="#example-1_4" title="Permanent link">&para;</a></h5>
 <pre><code class="r">library(ztable)
 
 options(ztable.type='html')
@@ -10918,7 +10894,7 @@ print(zt)
         <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/" class="btn btn-neutral float-right" title="Statistics with R, Course One, Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../leaflet/" class="btn btn-neutral" title="leaflet"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../leaflet/" class="btn btn-neutral" title="Leaflet (embed HTML maps)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   

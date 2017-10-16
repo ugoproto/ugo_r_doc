@@ -124,6 +124,8 @@ Markdown tables
 The `xtable` package
 --------------------
 
+The output is in HTML.
+
 ### Example 1
 
 ``` r
@@ -147,6 +149,8 @@ print(xtable(output,
 
 The `knitr::kable` function
 ---------------------------
+
+The output is in Markdown.
 
 ### Example 1
 
@@ -182,19 +186,7 @@ kable(output,
 </tbody>
 </table>
 
-The `pander::pandoc.table` function
------------------------------------
-
-### Example 1
-
-``` r
-library(pander)
-
-# given the data in the first row
-pandoc.table(output, 
-             emphasize.rows = 1, 
-             emphasize.strong.cols = 2)
-```
+We can also write `knitr::kable()` without calling `library(knitr)`.
 
 The `htmlTable` package
 -----------------------

@@ -8,7 +8,7 @@
   
   <meta name="author" content="Ugo Sparks">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>leaflet - ugo_r_doc</title>
+  <title>Leaflet (embed HTML maps) - ugo_r_doc</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "leaflet";
+    var mkdocs_page_name = "Leaflet (embed HTML maps)";
     var mkdocs_page_input_path = "leaflet.md";
     var mkdocs_page_url = "/leaflet/";
   </script>
@@ -152,7 +152,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../googleVis/">googleVis</a>
+    <a class="" href="../googleVis/">googleVis (embed HTML plots)</a>
                 </li>
                 <li class="">
                     
@@ -160,13 +160,13 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">leaflet</a>
+    <a class="current" href="./">Leaflet (embed HTML maps)</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#embedding-with-iframe-or-embed">Embedding with &lt;iframe&gt; or &lt;embed&gt;</a></li>
+    <li class="toctree-l3"><a href="#embedding-leaflet-outputs-with-iframe-or-embed">Embedding Leaflet outputs with &lt;iframe&gt; or &lt;embed&gt;</a></li>
     
 
-    <li class="toctree-l3"><a href="#embedding">Embedding</a></li>
+    <li class="toctree-l3"><a href="#embedding-html-outputs-in-general">Embedding HTML outputs in general</a></li>
     
 
     </ul>
@@ -260,7 +260,7 @@
         
       
     
-    <li>leaflet</li>
+    <li>Leaflet (embed HTML maps)</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -272,8 +272,8 @@
               
                 <div class="toc"><span class="toctitle">CONTENT</span><ul>
 <li><a href="#the-leaflet-package">The leaflet package</a></li>
-<li><a href="#embedding-with-iframe-or-embed">Embedding with &lt;iframe&gt; or &lt;embed&gt;</a></li>
-<li><a href="#embedding">Embedding</a></li>
+<li><a href="#embedding-leaflet-outputs-with-iframe-or-embed">Embedding Leaflet outputs with &lt;iframe&gt; or &lt;embed&gt;</a></li>
+<li><a href="#embedding-html-outputs-in-general">Embedding HTML outputs in general</a></li>
 </ul>
 </div>
 <hr />
@@ -299,31 +299,21 @@
 <p>We can render spatial objects from the sp or sf packages, or data frames with latitude/longitude columns.</p>
 <p>With <code>leftlet</code> grammar, we can build a set of overlays with the <code>magrittr</code> pipe operator (<code>%&gt;%</code>).</p>
 <p>Consult the documentation and the <a href="http://leafletjs.com/">website</a> for the specifics.</p>
-<h4 id="embedding-with-iframe-or-embed">Embedding with <code>&lt;iframe&gt;</code> or <code>&lt;embed&gt;</code><a class="headerlink" href="#embedding-with-iframe-or-embed" title="Permanent link">&para;</a></h4>
+<h4 id="embedding-leaflet-outputs-with-iframe-or-embed">Embedding Leaflet outputs with <code>&lt;iframe&gt;</code> or <code>&lt;embed&gt;</code><a class="headerlink" href="#embedding-leaflet-outputs-with-iframe-or-embed" title="Permanent link">&para;</a></h4>
 <pre><code>&lt;iframe seamless src=&quot;../leaflet.html&quot; width=600px height=400px &gt;&lt;/iframe&gt;
 </code></pre>
 
 <iframe seamless src="../leaflet.html" width=600px height=400px ></iframe>
 
-<p><br></p>
 <pre><code>&lt;embed seamless src=&quot;../leaflet.html&quot; width=600px height=400px &gt;&lt;/embed&gt;
 </code></pre>
 
 <p><embed seamless src="../leaflet.html" width=600px height=400px ></embed></p>
-<h4 id="embedding">Embedding<a class="headerlink" href="#embedding" title="Permanent link">&para;</a></h4>
+<h4 id="embedding-html-outputs-in-general">Embedding HTML outputs in general<a class="headerlink" href="#embedding-html-outputs-in-general" title="Permanent link">&para;</a></h4>
 <p>We can embed just about any HTML snippet.</p>
 <p>On the other hand, Leaflet is a JavaScript library. JavaScript should be the prime language for creating maps and embedding them into web sites.</p>
 <p>Nonetheless, we can render <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> (including Leaflet) in any HTML output. We can publish <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html#additional_examples">R Markdown Websites</a> or blogs with <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>. We can build a <a href="http://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a>. A flexdashboard is an alternative to an HTML report or presentation, using other formats than &lsquo;pages&rsquo; or &lsquo;slides&rsquo;. We can publish a book with <a href="https://bookdown.org/">bookdown</a>. And so on.</p>
 <p>These tools seamlessly integrate interactive <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> along with static tabulating, charting, and mapping visualizations (and optionally use <a href="https://shiny.rstudio.com/">Shiny</a> to drive visualizations dynamically).</p>
-<p>The widgets that are worth the trip:</p>
-<ul>
-<li>Leaflet (works with Shiny).</li>
-<li>dygraphs (works with Shiny).</li>
-<li>rbokeh (?).</li>
-<li>Highcharter (works with Shiny).</li>
-<li>DataTables (works with Shiny).</li>
-</ul>
-<p>In addition, <code>ggvis</code> can work with Shiny.</p>
 <hr />
               
             </div>

@@ -30,9 +30,9 @@ pages:
         - Plot Snippets - ggplot2: 'Plot_snippets_-_ggplot2.md'
         - Plot Snippets - ggvis: 'Plot_snippets_-_ggvis.md'
         - Plot Snippets - Colours: 'Plot_snippets_-_Colours.md'
-        - googleVis (embed HTML plots): 'googleVis.md'
+        - googleVis: 'googleVis.md'
         - gganimate: 'gganimate.md'
-        - Leaflet (embed HTML maps): 'leaflet.md'
+        - leaflet: 'leaflet.md'
     - Other Snippets:
         - Tables: 'Tables.md'
     - A Hands-on Introduction to Statistics with R:

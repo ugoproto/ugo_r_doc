@@ -5,9 +5,6 @@
     -   [Example 1](#example-1-1)
 -   [The `knitr::kable` function](#the-knitrkable-function)
     -   [Example 1](#example-1-2)
--   [The `pander::pandoc.table`
-    function](#the-panderpandoc.table-function)
-    -   [Example 1](#example-1-3)
 -   [The `htmlTable` package](#the-htmltable-package)
     -   [Example 1](#example-1-4)
     -   [Example 2](#example-2-1)
@@ -124,7 +121,7 @@ Markdown tables
 The `xtable` package
 --------------------
 
-The results is HTML.
+The output is in HTML.
 
 ### Example 1
 
@@ -150,7 +147,7 @@ print(xtable(output,
 The `knitr::kable` function
 ---------------------------
 
-The results is Markdown.
+The output is in Markdown.
 
 ### Example 1
 
@@ -186,21 +183,7 @@ kable(output,
 </tbody>
 </table>
 
-We can also write `knitr::kable()` without call the `library(knitr)`.
-
-The `pander::pandoc.table` function
------------------------------------
-
-### Example 1
-
-``` r
-library(pander)
-
-# given the data in the first row
-pandoc.table(output, 
-             emphasize.rows = 1, 
-             emphasize.strong.cols = 2)
-```
+We can also write `knitr::kable()` without calling `library(knitr)`.
 
 The `htmlTable` package
 -----------------------
