@@ -458,6 +458,7 @@
 </table>
 
 <h4 id="the-xtable-package">The <code>xtable</code> package<a class="headerlink" href="#the-xtable-package" title="Permanent link">&para;</a></h4>
+<p>The results is HTML.</p>
 <h5 id="example-1_1">Example 1<a class="headerlink" href="#example-1_1" title="Permanent link">&para;</a></h5>
 <pre><code class="r">library(xtable)
 
@@ -468,7 +469,19 @@ print(xtable(output,
       type = 'html')
 </code></pre>
 
+<!-- html table generated in R 3.4.2 by xtable 1.8-2 package -->
+
+<!-- Sun Oct 15 19:29:31 2017 -->
+
+<table border=1>
+<caption align="bottom"> A test table </caption>
+<tr> <th>  </th> <th> 1st header </th> <th> 2nd header </th>  </tr>
+  <tr> <td> 1st row </td> <td align="center"> Content A </td> <td align="right"> Content B </td> </tr>
+  <tr> <td> 2nd row </td> <td align="center"> Content C </td> <td align="right"> Content D </td> </tr>
+   </table>
+
 <h4 id="the-knitrkable-function">The <code>knitr::kable</code> function<a class="headerlink" href="#the-knitrkable-function" title="Permanent link">&para;</a></h4>
+<p>The results is Markdown.</p>
 <h5 id="example-1_2">Example 1<a class="headerlink" href="#example-1_2" title="Permanent link">&para;</a></h5>
 <pre><code class="r">library(knitr)
 
@@ -501,6 +514,7 @@ kable(output,
 </tbody>
 </table>
 
+<p>We can also write <code>knitr::kable()</code> without call the <code>library(knitr)</code>.</p>
 <h4 id="the-panderpandoctable-function">The <code>pander::pandoc.table</code> function<a class="headerlink" href="#the-panderpandoctable-function" title="Permanent link">&para;</a></h4>
 <h5 id="example-1_3">Example 1<a class="headerlink" href="#example-1_3" title="Permanent link">&para;</a></h5>
 <pre><code class="r">library(pander)

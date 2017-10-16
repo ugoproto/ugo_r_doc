@@ -41,7 +41,6 @@ Consult the documentation and the [website](http://leafletjs.com/) for the speci
 ```
 
 <iframe seamless src="../leaflet.html" width=600px height=400px ></iframe>
-<br>
 
 ```
 <embed seamless src="../leaflet.html" width=600px height=400px ></embed>
