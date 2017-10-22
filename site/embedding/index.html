@@ -8,7 +8,7 @@
   
   <meta name="author" content="Ugo Sparks">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Leaflet (embed HTML maps) - ugo_r_doc</title>
+  <title>Embedding HTML into HTML - ugo_r_doc</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Leaflet (embed HTML maps)";
-    var mkdocs_page_input_path = "leaflet.md";
-    var mkdocs_page_url = "/leaflet/";
+    var mkdocs_page_name = "Embedding HTML into HTML";
+    var mkdocs_page_input_path = "embedding.md";
+    var mkdocs_page_url = "/embedding/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -158,19 +158,6 @@
                     
     <a class="" href="../gganimate/">gganimate</a>
                 </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Leaflet (embed HTML maps)</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#embedding-leaflet-outputs-with-iframe-or-embed">Embedding Leaflet outputs with &lt;iframe&gt; or &lt;embed&gt;</a></li>
-    
-
-    <li class="toctree-l3"><a href="#embedding-html-outputs-in-general">Embedding HTML outputs in general</a></li>
-    
-
-    </ul>
-                </li>
     </ul>
 	    </li>
           
@@ -181,6 +168,36 @@
                 <li class="">
                     
     <a class="" href="../Tables/">Tables</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Embedding HTML into HTML</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#embedding-outputs-from">Embedding outputs from...</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#the-leaflet-package">...the leaflet package</a></li>
+        
+            <li><a class="toctree-l4" href="#the-dygraphs-package">...the dygraphs package</a></li>
+        
+            <li><a class="toctree-l4" href="#the-plotly-package">...the plotly package</a></li>
+        
+            <li><a class="toctree-l4" href="#the-rbokeh-package">...the rbokeh package</a></li>
+        
+            <li><a class="toctree-l4" href="#the-highcharters-package">...the highcharters package</a></li>
+        
+            <li><a class="toctree-l4" href="#the-datatables-package">...the datatables package</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../embedding2/">Embedding Rmd into Rmd</a>
                 </li>
     </ul>
 	    </li>
@@ -256,11 +273,11 @@
     
       
         
-          <li>Plot Snippets &raquo;</li>
+          <li>Other Snippets &raquo;</li>
         
       
     
-    <li>Leaflet (embed HTML maps)</li>
+    <li>Embedding HTML into HTML</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -271,49 +288,75 @@
             <div class="section">
               
                 <div class="toc"><span class="toctitle">CONTENT</span><ul>
-<li><a href="#the-leaflet-package">The leaflet package</a></li>
-<li><a href="#embedding-leaflet-outputs-with-iframe-or-embed">Embedding Leaflet outputs with &lt;iframe&gt; or &lt;embed&gt;</a></li>
 <li><a href="#embedding-html-outputs-in-general">Embedding HTML outputs in general</a></li>
+<li><a href="#embedding-outputs-from">Embedding outputs from&hellip;</a><ul>
+<li><a href="#the-leaflet-package">&hellip;the leaflet package</a></li>
+<li><a href="#the-dygraphs-package">&hellip;the dygraphs package</a></li>
+<li><a href="#the-plotly-package">&hellip;the plotly package</a></li>
+<li><a href="#the-rbokeh-package">&hellip;the rbokeh package</a></li>
+<li><a href="#the-highcharters-package">&hellip;the highcharters package</a></li>
+<li><a href="#the-datatables-package">&hellip;the datatables package</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <hr />
 <p><strong>Foreword</strong></p>
 <p>Notes, snippets, and results.</p>
 <hr />
-<h4 id="the-leaflet-package">The <code>leaflet</code> package<a class="headerlink" href="#the-leaflet-package" title="Permanent link">&para;</a></h4>
-<p>The <a href="http://leafletjs.com/">package</a> is an open-source JavaScript library for mobile-friendly interactive maps. We can make interactive panning/zooming and overlay object on maps:</p>
-<ul>
-<li>Map tiles.</li>
-<li>Markers (with custom icons).</li>
-<li>Polygons.</li>
-<li>Lines.</li>
-<li>Popups.</li>
-<li>GeoJSON.</li>
-<li>Choropleth maps.</li>
-<li>Non-geographical maps.</li>
-<li>WMS and TMS (weather and time measurement systems).</li>
-<li>Map panes.</li>
-<li>Videos.</li>
-</ul>
-<p>We can embed maps in R Markdown documents and Shiny apps. We can embed maps into websites.</p>
-<p>We can render spatial objects from the sp or sf packages, or data frames with latitude/longitude columns.</p>
-<p>With <code>leftlet</code> grammar, we can build a set of overlays with the <code>magrittr</code> pipe operator (<code>%&gt;%</code>).</p>
-<p>Consult the documentation and the <a href="http://leafletjs.com/">website</a> for the specifics.</p>
-<h4 id="embedding-leaflet-outputs-with-iframe-or-embed">Embedding Leaflet outputs with <code>&lt;iframe&gt;</code> or <code>&lt;embed&gt;</code><a class="headerlink" href="#embedding-leaflet-outputs-with-iframe-or-embed" title="Permanent link">&para;</a></h4>
-<pre><code>&lt;iframe seamless src=&quot;../leaflet.html&quot; width=600px height=400px &gt;&lt;/iframe&gt;
-</code></pre>
-
-<iframe seamless src="../leaflet.html" width=600px height=400px ></iframe>
-
-<pre><code>&lt;embed seamless src=&quot;../leaflet.html&quot; width=600px height=400px &gt;&lt;/embed&gt;
-</code></pre>
-
-<p><embed seamless src="../leaflet.html" width=600px height=400px ></embed></p>
 <h4 id="embedding-html-outputs-in-general">Embedding HTML outputs in general<a class="headerlink" href="#embedding-html-outputs-in-general" title="Permanent link">&para;</a></h4>
-<p>We can embed just about any HTML snippet.</p>
-<p>On the other hand, Leaflet is a JavaScript library. JavaScript should be the prime language for creating maps and embedding them into web sites.</p>
-<p>Nonetheless, we can render <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> (including Leaflet) in any HTML output. We can publish <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html#additional_examples">R Markdown Websites</a> or blogs with <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>. We can build a <a href="http://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a>. A flexdashboard is an alternative to an HTML report or presentation, using other formats than &lsquo;pages&rsquo; or &lsquo;slides&rsquo;. We can publish a book with <a href="https://bookdown.org/">bookdown</a>. And so on.</p>
-<p>These tools seamlessly integrate interactive <a href="http://www.htmlwidgets.org/showcase_leaflet.html">htmlwidgets</a> along with static tabulating, charting, and mapping visualizations (and optionally use <a href="https://shiny.rstudio.com/">Shiny</a> to drive visualizations dynamically).</p>
+<ul>
+<li>We can embed just about any HTML snippet with <code>&lt;iframe&gt;</code> or <code>&lt;embed&gt;</code>. </li>
+<li>Embedding static visualizations from packages such as <code>ggplot2</code>, <code>ggmap</code> or <code>rworldmap</code>, to name a few, can be done with image outputs (.png, .pdf) or HTML outputs. </li>
+<li>For htmlwidgets, we can work with HTML outputs, as we demonstrate further down, or with the Shiny server. In both cases, the final results are interactive.</li>
+<li>Some interactive visualization packages, like <code>ggvis</code>, require the Shiny server to be fully interactive.</li>
+<li>The HTML document heading:</li>
+</ul>
+<pre><code>---
+output:
+  html_document:
+    code_folding: hide
+---
+</code></pre>
+
+<p>If the figures are generated with <code>fig.width=5, fig.height=5</code>; they should fit in a 520x520px box. In some case, we might need more room&hellip;</p>
+<h4 id="embedding-outputs-from">Embedding outputs from&hellip;<a class="headerlink" href="#embedding-outputs-from" title="Permanent link">&para;</a></h4>
+<h5 id="the-leaflet-package">&hellip;the <code>leaflet</code> package<a class="headerlink" href="#the-leaflet-package" title="Permanent link">&para;</a></h5>
+<pre><code>&lt;iframe seamless src=&quot;../leaflet_frag.html&quot; width=520px height=520px &gt;&lt;/iframe&gt;
+</code></pre>
+
+<iframe seamless src="../leaflet_frag.html" width=520px height=520px ></iframe>
+
+<pre><code>&lt;embed seamless src=&quot;../leaflet_frag.html&quot; width=520px height=520px &gt;&lt;/embed&gt;
+</code></pre>
+
+<p><embed seamless src="../leaflet_frag.html" width=520px height=520px ></embed></p>
+<h5 id="the-dygraphs-package">&hellip;the <code>dygraphs</code> package<a class="headerlink" href="#the-dygraphs-package" title="Permanent link">&para;</a></h5>
+<pre><code>&lt;embed seamless src=&quot;../dygraphs_frag.html&quot; width=520px height=520px &gt;&lt;/embed&gt;
+</code></pre>
+
+<p><embed seamless src="../dygraphs_frag.html" width=520px height=520px ></embed></p>
+<h5 id="the-plotly-package">&hellip;the <code>plotly</code> package<a class="headerlink" href="#the-plotly-package" title="Permanent link">&para;</a></h5>
+<pre><code>&lt;embed seamless src=&quot;../plotly_frag.html&quot; width=520px height=520px &gt;&lt;/embed&gt;
+</code></pre>
+
+<p><embed seamless src="../plotly_frag.html" width=520px height=520px ></embed></p>
+<h5 id="the-rbokeh-package">&hellip;the <code>rbokeh</code> package<a class="headerlink" href="#the-rbokeh-package" title="Permanent link">&para;</a></h5>
+<pre><code>&lt;embed seamless src=&quot;../rbokeh_frag.html&quot; width=540px height=540px &gt;&lt;/embed&gt;
+</code></pre>
+
+<p><embed seamless src="../rbokeh_frag.html" width=540px height=540px ></embed></p>
+<h5 id="the-highcharters-package">&hellip;the <code>highcharters</code> package<a class="headerlink" href="#the-highcharters-package" title="Permanent link">&para;</a></h5>
+<p><em>Highcharts (www.highcharts.com) is a Highsoft software product which is not free for commercial and Governmental use.</em></p>
+<pre><code>&lt;embed seamless src=&quot;../highcharters_frag.html&quot; width=600px height=600px &gt;&lt;/embed&gt;
+</code></pre>
+
+<p><embed seamless src="../highcharters_frag.html" width=600px height=600px ></embed></p>
+<h5 id="the-datatables-package">&hellip;the <code>datatables</code> package<a class="headerlink" href="#the-datatables-package" title="Permanent link">&para;</a></h5>
+<pre><code>&lt;embed seamless src=&quot;../datatable_frag.html&quot; width=700px height=600px &gt;&lt;/embed&gt;
+</code></pre>
+
+<p><embed seamless src="../datatable_frag.html" width=700px height=600px ></embed></p>
 <hr />
               
             </div>
@@ -322,10 +365,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Tables/" class="btn btn-neutral float-right" title="Tables">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../embedding2/" class="btn btn-neutral float-right" title="Embedding Rmd into Rmd">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../gganimate/" class="btn btn-neutral" title="gganimate"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Tables/" class="btn btn-neutral" title="Tables"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -353,10 +396,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../gganimate/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Tables/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Tables/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../embedding2/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

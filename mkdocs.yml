@@ -32,9 +32,10 @@ pages:
         - Plot Snippets - Colours: 'Plot_snippets_-_Colours.md'
         - googleVis (embed HTML plots): 'googleVis.md'
         - gganimate: 'gganimate.md'
-        - Leaflet (embed HTML maps): 'leaflet.md'
     - Other Snippets:
         - Tables: 'Tables.md'
+        - Embedding HTML into HTML: 'embedding.md'
+        - Embedding Rmd into Rmd: 'embedding2.md'
     - A Hands-on Introduction to Statistics with R:
         - Statistics with R, Course One, Introduction: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction.md'
         - Statistics with R, Course Two, Student's t-test: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test.md'

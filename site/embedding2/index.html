@@ -8,7 +8,7 @@
   
   <meta name="author" content="Ugo Sparks">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>gganimate - ugo_r_doc</title>
+  <title>Embedding Rmd into Rmd - ugo_r_doc</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "gganimate";
-    var mkdocs_page_input_path = "gganimate.md";
-    var mkdocs_page_url = "/gganimate/";
+    var mkdocs_page_name = "Embedding Rmd into Rmd";
+    var mkdocs_page_input_path = "embedding2.md";
+    var mkdocs_page_url = "/embedding2/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -154,24 +154,9 @@
                     
     <a class="" href="../googleVis/">googleVis (embed HTML plots)</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">gganimate</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#static-chart">Static chart</a></li>
-    
-
-    <li class="toctree-l3"><a href="#dynamising-a-static-chart">Dynamising a static chart</a></li>
-    
-
-    <li class="toctree-l3"><a href="#saving-the-animation">Saving the animation</a></li>
-    
-
-    <li class="toctree-l3"><a href="#and-again">And again...</a></li>
-    
-
-    </ul>
+    <a class="" href="../gganimate/">gganimate</a>
                 </li>
     </ul>
 	    </li>
@@ -188,9 +173,15 @@
                     
     <a class="" href="../embedding/">Embedding HTML into HTML</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../embedding2/">Embedding Rmd into Rmd</a>
+    <a class="current" href="./">Embedding Rmd into Rmd</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#embedding-rmd-sub-documents-into-a-rmd-document">Embedding .Rmd sub-documents into a .Rmd document</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -266,11 +257,11 @@
     
       
         
-          <li>Plot Snippets &raquo;</li>
+          <li>Other Snippets &raquo;</li>
         
       
     
-    <li>gganimate</li>
+    <li>Embedding Rmd into Rmd</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -280,77 +271,34 @@
           <div role="main">
             <div class="section">
               
-                <ul>
-<li><a href="#the-gganimate-package">The <code>gganimate</code> package</a></li>
-<li><a href="#static-chart">Static chart</a></li>
-<li><a href="#dynamising-a-static-chart">Dynamising a static chart</a></li>
-<li><a href="#saving-the-animation">Saving the animation</a></li>
-<li><a href="#and-again...">And again&hellip;</a></li>
+                <div class="toc"><span class="toctitle">CONTENT</span><ul>
+<li><a href="#stand-alone-rdm-document">Stand-alone .Rdm document</a></li>
+<li><a href="#embedding-rmd-sub-documents-into-a-rmd-document">Embedding .Rmd sub-documents into a .Rmd document</a></li>
 </ul>
+</div>
 <hr />
 <p><strong>Foreword</strong></p>
-<ul>
-<li>Snippets and results.</li>
-</ul>
+<p>Notes &amp; snippets.</p>
 <hr />
-<h4 id="the-gganimate-package">The <code>gganimate</code> package<a class="headerlink" href="#the-gganimate-package" title="Permanent link">&para;</a></h4>
-<p>The <a href="https://github.com/dgrtwo/gganimate">package</a> does not make interactive charts, but introduces a time dimension in the display of static charts.</p>
-<h4 id="static-chart">Static chart<a class="headerlink" href="#static-chart" title="Permanent link">&para;</a></h4>
-<p>We add a time dimension with <code>frame = year</code>. However, we are not using it and the data points look bunched up!</p>
-<pre><code>library(gapminder)
-library(ggplot2)
-theme_set(theme_bw())
-
-p &lt;- ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, color = continent, frame = year)) +
-  geom_point() +
-  scale_x_log10()
-
-p
+<h4 id="stand-alone-rdm-document">Stand-alone .Rdm document<a class="headerlink" href="#stand-alone-rdm-document" title="Permanent link">&para;</a></h4>
+<p>It is one document with a header; the settings determine the output (HTML, Word, PDF) style and appearance:</p>
+<pre><code>---
+title: &quot;Document only&quot;
+output: html_document
+---
 </code></pre>
-<p><img alt="" src="../../img/gganimate_files/figure-markdown_strict/unnamed-chunk-2-1.png" /></p>
-<h4 id="dynamising-a-static-chart">Dynamising a static chart<a class="headerlink" href="#dynamising-a-static-chart" title="Permanent link">&para;</a></h4>
-<p>Moving frames can turn into a motion pictures! Let&rsquo;s use <code>frame = year</code>.</p>
-<pre><code>library(gganimate)
 
-gganimate(p)
+<h4 id="embedding-rmd-sub-documents-into-a-rmd-document">Embedding .Rmd sub-documents into a .Rmd document<a class="headerlink" href="#embedding-rmd-sub-documents-into-a-rmd-document" title="Permanent link">&para;</a></h4>
+<p>It is also possible to create sub-documents to be casted in the main document.</p>
+<p>The sub-documents have to headers, no settings. They are not even <code>html_fragment</code>. They simply contain Markdown text strings and code chunks.</p>
+<p>The main document is like a stand-alone document. Its settings are applied to itself and its &lsquo;children&rsquo;.</p>
+<p>Within the main document, we call sub-documents with this code chunk (path and filename):</p>
+<pre><code>```{r, child="sub1.Rmd"}
+```
 </code></pre>
-<p>We can see the results further down.</p>
-<h4 id="saving-the-animation">Saving the animation<a class="headerlink" href="#saving-the-animation" title="Permanent link">&para;</a></h4>
-<pre><code>gganimate(p, "img/gganimate/output.mp4")
-gganimate(p, "img/gganimate/output.swf")
-gganimate(p, "img/gganimate/output.html")
-
-gganimate(p, "output.gif")
-</code></pre>
-<p>Rendering the animation (.gif):</p>
-<p><img alt="" src="../../img/gganimate_files/output.gif" /></p>
-<h4 id="and-again">And again&hellip;<a class="headerlink" href="#and-again" title="Permanent link">&para;</a></h4>
-<pre><code>library(googleVis)
-
-head(Fruits, 3)
-
-##    Fruit Year Location Sales Expenses Profit       Date
-## 1 Apples 2008     West    98       78     20 2008-12-31
-## 2 Apples 2009     West   111       79     32 2009-12-31
-## 3 Apples 2010     West    89       76     13 2010-12-31
-
-library(ggplot2)
-library(gganimate)
-
-Fruits_a &lt;- ggplot(Fruits, aes(x=Sales, y=Expenses, size = Profit, color = Fruit, frame = Year)) +
-  geom_point() +
-  geom_path(aes(cumulative = TRUE, group = Fruit)) +
-  facet_wrap(~Fruit)
-
-Fruits_a
-</code></pre>
-<p><img alt="" src="../../img/gganimate_files/figure-markdown_strict/unnamed-chunk-7-1.png" /></p>
-<pre><code>gganimate(Fruits_a, interval = 5)
-
-gganimate(Fruits_a, "Fruits_a.gif")
-</code></pre>
-<p>Rendering the animation (.gif):</p>
-<p><img alt="" src="../../img/gganimate_files/Fruits_a.gif" /></p>
+<p>We can add extra options: <code>eval=FALSE</code>, <code>echo=FALSE</code>, <code>include=FALSE</code>, etc. to bypass the main settings.</p>
+<p>We can compile sub-documents to test them.</p>
+<p>We compile the main document to wrap up the complete document (&lsquo;parent + children&rsquo;).</p>
 <hr />
               
             </div>
@@ -359,10 +307,10 @@ gganimate(Fruits_a, "Fruits_a.gif")
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Tables/" class="btn btn-neutral float-right" title="Tables">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/" class="btn btn-neutral float-right" title="Statistics with R, Course One, Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../googleVis/" class="btn btn-neutral" title="googleVis (embed HTML plots)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../embedding/" class="btn btn-neutral" title="Embedding HTML into HTML"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -390,10 +338,10 @@ gganimate(Fruits_a, "Fruits_a.gif")
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../googleVis/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../embedding/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Tables/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
