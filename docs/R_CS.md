@@ -24,12 +24,12 @@ Cheat sheets.
 
 - [Tidy Data](tidy_data.pdf). PDF only.
 
-- [Data Import](data-import-cheatsheet.pdf). PDF.
+- [Data Import](data-import.pdf). PDF.
 
 <center>
-![](img/base_r_cs/data-import-cheatsheeta.png)
+![](img/base_r_cs/data_importa.png)
 
-![](img/base_r_cs/data-import-cheatsheetb.png)
+![](img/base_r_cs/data_importb.png)
 </center>
 
 ---
@@ -60,35 +60,35 @@ Cheat sheets.
 
 - [R Markdown Reference Guide](R-Markdown-Reference.pdf). PDF only.
     - *syntax, chunk options, pandoc options, slide formats, LaTeX options*
-- [R Markdown](rmarkdown-cheatsheet-2.0.pdf). PDF.
+- [R Markdown](rmarkdown.pdf). PDF.
 
 <center>
-![](img/rstudio_rmarkdown_cs/rmarkdown-cheatsheet-2.0a.png)
+![](img/rstudio_rmarkdown_cs/rmarkdowna.png)
 
-![](img/rstudio_rmarkdown_cs/rmarkdown-cheatsheet-2.0b.png)
+![](img/rstudio_rmarkdown_cs/rmarkdownb.png)
 </center>
 
 ---
 
-- [RStudio](rstudio-IDE-cheatsheet.pdf). PDF.
+- [RStudio](rstudio.pdf). PDF.
 
 <center>
-![](img/rstudio_rmarkdown_cs/rstudio-IDE-cheatsheeta.png)
+![](img/rstudio_rmarkdown_cs/rstudioa.png)
 
-![](img/rstudio_rmarkdown_cs/rstudio-IDE-cheatsheetb.png)
+![](img/rstudio_rmarkdown_cs/rstudiob.png)
 </center>
 
-## Specialization 
+## Specialization
 
 ### dplyr & tidyr
 
 - [Grammar of dplyr](r-dplyr.pdf). PDF only (explanatory slides).
-- [dplyr](data-transformation-cheatsheet.pdf). PDF.
+- [dplyr](dplyr.pdf). PDF.
 
 <center>
-![](img/specialization_cs/data-transformation-cheatsheeta.png)
+![](img/specialization_cs/dplyra.png)
 
-![](img/specialization_cs/data-transformation-cheatsheetb.png)
+![](img/specialization_cs/dplyrb.png)
 </center>
 
 ---
@@ -104,11 +104,28 @@ Cheat sheets.
 ### data.table
 
 - [data.table Intro](data.table-Intro.pdf). PDF only (explanatory article).
-- [data.table](data+table+cheat+sheet.pdf). PDF.
+- [data.table](data.table.pdf) 1. PDF.
+- [data.table](data+table+cheat+sheet.pdf) 2. PDF.
+
+<center>
+![](img/specialization_cs/data.table.png)
+</center>
 
 <center>
 ![](img/specialization_cs/data+table+cheat+sheet.png)
 </center>
+
+### Caret
+
+- [caret](caret.pdf). PDF.
+
+<center>
+![](img/specialization_cs/caret.png)
+</center>
+
+### Probabilities
+
+- [Probabilities](probability_cheatsheet.pdf). PDF only.
 
 ### Regular Expressions
 
@@ -160,19 +177,19 @@ Cheat sheets.
 - [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
     - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
 
-## Visualization (ggplot2, ggmap, ggvis, shiny)
+## Visualization (ggplot2, ggmap, ggvis, shiny, plotly)
 
-- [ggplot2](ggplot2-cheatsheet.pdf). PDF.
+- [ggplot2](ggplot2.pdf). PDF.
 
 <center>
-![](img/visualization_cs/ggplot2-cheatsheeta.png)
+![](img/visualization_cs/ggplot2a.png)
 
-![](img/visualization_cs/ggplot2-cheatsheetb.png)
+![](img/visualization_cs/ggplot2b.png)
 </center>
 
 ---
 
-- [ggmap](ggmapCheatsheet.pdf).
+- [ggmap](ggmapCheatsheet.pdf). PDF.
 
 <center>
 ![](img/visualization_cs/ggmapCheatsheeta.png)
@@ -190,7 +207,7 @@ Cheat sheets.
 
 ---
 
-- [ggvis](shanly3011_data-visualization-in-r-ggvis-continued.pdf).
+- [ggvis](shanly3011_data-visualization-in-r-ggvis-continued.pdf). PDF.
 
 <center>
 ![](img/visualization_cs/shanly3011_data-visualization-in-r-ggvis-continueda.png)
@@ -200,13 +217,17 @@ Cheat sheets.
 
 ---
 
-- [shiny](shiny-cheatsheet.pdf).
+- [shiny](shiny-cheatsheet.pdf). PDF.
 
 <center>
 ![](img/visualization_cs/shiny-cheatsheeta.png)
 
 ![](img/visualization_cs/shiny-cheatsheetb.png)
 </center>
+
+---
+
+- [plotly](plotly_r_cheat_sheet.pdf). PDF only.
 
 ### Charts
 
