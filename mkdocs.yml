@@ -30,12 +30,18 @@ pages:
         - Plot Snippets - ggplot2: 'Plot_snippets_-_ggplot2.md'
         - Plot Snippets - ggvis: 'Plot_snippets_-_ggvis.md'
         - Plot Snippets - Colours: 'Plot_snippets_-_Colours.md'
+        - Improved codes: 'Improved_codes.md'
+        - Formulas in R: 'Formulas_in_R.md'
+    - Packages:
         - googleVis (embed HTML plots): 'googleVis.md'
         - gganimate: 'gganimate.md'
-    - Other Snippets:
+        - Fast-and-Frugal Decision Trees: 'Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.md'
+    - Other Snippets: 
         - Tables: 'Tables.md'
         - Embedding HTML into HTML: 'embedding.md'
         - Embedding Rmd into Rmd: 'embedding2.md'
+        - Frequentist vs. Bayesian: 'Frequentist_Bayesian.md'
+        - Parallel computing in R: 'Parallel computing in R.md'
     - A Hands-on Introduction to Statistics with R:
         - Statistics with R, Course One, Introduction: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction.md'
         - Statistics with R, Course Two, Student's t-test: 'A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test.md'

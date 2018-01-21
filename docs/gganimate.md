@@ -1,8 +1,4 @@
--   [The `gganimate` package](#the-gganimate-package)
--   [Static chart](#static-chart)
--   [Dynamising a static chart](#dynamising-a-static-chart)
--   [Saving the animation](#saving-the-animation)
--   [And again...](#and-again...)
+[TOC]
 
 ------------------------------------------------------------------------
 
@@ -13,12 +9,12 @@
 ------------------------------------------------------------------------
 
 The `gganimate` package
------------------------
+=======================
 
 The [package](https://github.com/dgrtwo/gganimate) does not make interactive charts, but introduces a time dimension in the display of static charts.
 
 Static chart
-------------
+============
 
 We add a time dimension with `frame = year`. However, we are not using it and the data points look bunched up!
 
@@ -35,7 +31,7 @@ We add a time dimension with `frame = year`. However, we are not using it and th
 ![](../img/gganimate_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 Dynamising a static chart
--------------------------
+=========================
 
 Moving frames can turn into a motion pictures! Let's use `frame = year`.
 
@@ -46,7 +42,7 @@ Moving frames can turn into a motion pictures! Let's use `frame = year`.
 We can see the results further down.
 
 Saving the animation
---------------------
+====================
 
     gganimate(p, "img/gganimate/output.mp4")
     gganimate(p, "img/gganimate/output.swf")
@@ -59,7 +55,7 @@ Rendering the animation (.gif):
 ![](../img/gganimate_files/output.gif)
 
 And again...
-------------
+============
 
     library(googleVis)
 
