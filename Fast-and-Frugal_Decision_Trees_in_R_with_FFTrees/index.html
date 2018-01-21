@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Ugo Sparks">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Fast-and-Frugal Decision Trees - ugo_r_doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Fast-and-Frugal Decision Trees";
+    var mkdocs_page_input_path = "Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.md";
+    var mkdocs_page_url = "/Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-93008985-1', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> ugo_r_doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../An Introduction to R/">An Introduction to R</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../R_CS/">R Cheat Sheets</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Intermediate R</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Intermediate_R/">Intermediate R</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">RStudio</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Data Wrangling Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Analysis_in_R,_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Plot Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_ggvis/">Plot Snippets - ggvis</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Improved_codes/">Improved codes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Formulas_in_R/">Formulas in R</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Packages</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../googleVis/">googleVis (embed HTML plots)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gganimate/">gganimate</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Fast-and-Frugal Decision Trees</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#explore-the-heart-disease-data">Explore the Heart Disease Data</a></li>
+    
+
+    <li class="toctree-l3"><a href="#create-an-fftrees-object">Create an FFTrees object</a></li>
+    
+
+    <li class="toctree-l3"><a href="#plotting-fast-and-frugal-trees">Plotting Fast-And-Frugal Trees</a></li>
+    
+
+    <li class="toctree-l3"><a href="#creating-and-testing-a-custom-tree">Creating and Testing a Custom Tree</a></li>
+    
+
+    <li class="toctree-l3"><a href="#more">More</a></li>
+    
+
+    <li class="toctree-l3"><a href="#summary">Summary</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Other Snippets</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Tables/">Tables</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../embedding/">Embedding HTML into HTML</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../embedding2/">Embedding Rmd into Rmd</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Frequentist_Bayesian/">Frequentist vs. Bayesian</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Parallel computing in R/">Parallel computing in R</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">A Hands-on Introduction to Statistics with R</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/">Statistics with R, Course One, Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/">Statistics with R, Notes</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Time+Series+in+R+The+Power+of+xts+and+zoo/">Time Series in R, The Power of xts and zoo</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">ugo_r_doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Packages &raquo;</li>
+        
+      
+    
+    <li>Fast-and-Frugal Decision Trees</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <div class="toc"><span class="toctitle">CONTENT</span><ul>
+<li><a href="#why">Why?</a></li>
+<li><a href="#explore-the-heart-disease-data">Explore the Heart Disease Data</a></li>
+<li><a href="#create-an-fftrees-object">Create an FFTrees object</a></li>
+<li><a href="#plotting-fast-and-frugal-trees">Plotting Fast-And-Frugal Trees</a></li>
+<li><a href="#creating-and-testing-a-custom-tree">Creating and Testing a Custom Tree</a></li>
+<li><a href="#more">More</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</div>
+<hr />
+<p><strong>Foreword</strong></p>
+<ul>
+<li>Code snippets and excerpts from the tutorial. From DataCamp.</li>
+<li>Open the <a href="../Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.html">HTML file</a> in a new tab.</li>
+</ul>
+<hr />
+<h3 id="why">Why?<a class="headerlink" href="#why" title="Permanent link">&para;</a></h3>
+<p>Quickly decide: use an algorithm that can quickly understand and apply<br />
+with minimal effort. For this reason, complex algorithms such as random<br />
+forests, and even regression are not viable.</p>
+<p>A fast-and-frugal tree is an extremely simple decision tree that anyone<br />
+can easily understand, learn, and use to make fast decisions with<br />
+minimal effort.</p>
+<h3 id="explore-the-heart-disease-data">Explore the Heart Disease Data<a class="headerlink" href="#explore-the-heart-disease-data" title="Permanent link">&para;</a></h3>
+<p>The <code>FFTrees</code> package contains two datasets: <code>heart.train</code> to create<br />
+(aka. train) fast-and-frugal trees, and <code>heart.test</code> to test their<br />
+prediction performance.</p>
+<pre><code># Load the package
+library("FFTrees")
+
+# Print the first few rows of the training dataframe
+head(heart.train, 3)
+
+##     age sex cp trestbps chol fbs     restecg thalach exang oldpeak slope
+## 94   44   0 np      108  141   0      normal     175     0     0.6  flat
+## 78   51   0 np      140  308   0 hypertrophy     142     0     1.5    up
+## 167  52   1 np      138  223   0      normal     169     0     0.0    up
+##     ca   thal diagnosis
+## 94   0 normal         0
+## 78   1 normal         0
+## 167  1 normal         0
+</code></pre>
+<p>The train dataframe contains data from several patients, each<br />
+categorized by demographic features such as age and sex, as well as the<br />
+results of medical tests and measures such as their cholesterol level<br />
+(<code>chol</code>) and their type of chest pain (<code>cp</code>). The key variable you want<br />
+to predict is <code>diagnosis</code>, which is 1 for patients who are truly having<br />
+heart attacks, and 0 for those who are not. The goal of your<br />
+fast-and-frugal tree will be to find a few key variables in the data<br />
+that can quickly and accurately predict diagnosis.</p>
+<h3 id="create-an-fftrees-object">Create an <code>FFTrees</code> object<a class="headerlink" href="#create-an-fftrees-object" title="Permanent link">&para;</a></h3>
+<p>As with any algorithm, we need a function (formula), a train set, and a<br />
+test set. We add a title and labels to the results.</p>
+<pre><code># Create an FFTrees object called `heart_FFT`
+heart_FFT &lt;- FFTrees(formula = diagnosis ~ .,
+                     data = heart.train,
+                     data.test = heart.test,
+                     main = "ER Decisions",
+                     decision.labels = c("Stable", "H Attack"))
+
+# Print the summary statistics
+heart_FFT
+
+## ER Decisions
+## FFT #1 predicts diagnosis using 3 cues: {thal,cp,ca}
+## 
+## [1] If thal = {rd,fd}, predict H Attack.
+## [2] If cp != {a}, predict Stable.
+## [3] If ca &lt;= 0, predict Stable, otherwise, predict H Attack.
+## 
+##                    train   test
+## cases       :n    150.00 153.00
+## speed       :mcu    1.74   1.73
+## frugality   :pci    0.88   0.88
+## accuracy    :acc    0.80   0.82
+## weighted    :wacc   0.80   0.82
+## sensitivity :sens   0.82   0.88
+## specificity :spec   0.79   0.76
+## 
+## pars: algorithm = 'ifan', goal = 'wacc', goal.chase = 'bacc', sens.w = 0.5, max.levels = 4
+</code></pre>
+<p><code>thal</code> is either <code>rd</code> or <code>fd</code>, the dependent variable <code>H Attack</code>. <code>cp</code><br />
+is not equal to <code>a</code> and the model has converged towards an optimum<br />
+(<code>Stable</code>). The tree used an average of 1.74 pieces of information to<br />
+classify cases with the train set. The tree has then an accuracy of 82%<br />
+with the test set.</p>
+<h3 id="plotting-fast-and-frugal-trees">Plotting Fast-And-Frugal Trees<a class="headerlink" href="#plotting-fast-and-frugal-trees" title="Permanent link">&para;</a></h3>
+<p>The visualization greatly improves the understanding.</p>
+<pre><code># Visualise the tree applied to the test data heart.test
+plot(heart_FFT, data = "test")
+</code></pre>
+<p><img alt="" src="../img/Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.md/unnamed-chunk-4-1.png" /></p>
+<ul>
+<li>On the top row, you can see that there were 153 patients (cases)<br />
+    were in the training data, where 73 patients were truly having heart<br />
+    attacks (48%), and 80 patients were not (52%).</li>
+<li>In the middle row, you see exactly how the tree makes decisions for<br />
+    each of the patients using easy&ndash;to&ndash;understand icon arrays. For<br />
+    example, you see that 72 patients suspected of having heart attacks<br />
+    were (virtually) sent to the CCU after the first question, where 18<br />
+    were not having heart attacks (false&ndash;alarms), and 54 were having<br />
+    heart attacks (hits).</li>
+<li>In the bottom row of the plot, you can see aggregate summary<br />
+    statistics for the tree. On the bottom row, you have a 2 x 2<br />
+    confusion matrix, which shows you a summary of how well the tree was<br />
+    able to classify patients, levels indicating overall summary<br />
+    statistics, and an ROC curve which compares the accuracy of the tree<br />
+    to other algorithms such as logistic regression (LR) and random<br />
+    forests (RF). Here, where the fast-and-frugal tree is represented by<br />
+    the green circle &ldquo;1&rdquo;, you can see that the fast-and-frugal tree had<br />
+    a higher sensitivity than logistic regression and random forests,<br />
+    but at a cost of a lower specificity.</li>
+</ul>
+<h3 id="creating-and-testing-a-custom-tree">Creating and Testing a Custom Tree<a class="headerlink" href="#creating-and-testing-a-custom-tree" title="Permanent link">&para;</a></h3>
+<p>We can easily describe fast-and-frugal trees &lsquo;in words&rsquo;: &ldquo;A better rule<br />
+would be to use the cues cholesterol, age, and slope.&rdquo;</p>
+<ol>
+<li>If cholesterol &gt; 300, decide Heart Attack.</li>
+<li>If age &lt; 50, decide Stable.</li>
+<li>If slope is either up or flat, predict Attack, otherwise,<br />
+    predict Stable.</li>
+</ol>
+<!-- -->
+
+<pre><code># Create Heidi's custom FFT
+custom_FFT &lt;- FFTrees(formula = diagnosis ~ .,               
+                      data = heart.train,                    
+                      data.test = heart.test,                
+                      main = "Heidi's Tree",                  
+                      decision.labels = c("Stable", "Attack"),
+                      my.tree = "If chol &gt; 300, predict Attack.
+                                 If age &lt; 50, predict Stable.
+                                 If slope = {up, flat} predict Attack. Otherwise, predict Stable.")
+
+# Print the summary statistics
+custom_FFT
+
+## Heidi's Tree
+## FFT #1 predicts diagnosis using 3 cues: {chol,age,slope}
+## 
+## [1] If chol &gt; 300, predict Attack.
+## [2] If age &lt; 50, predict Stable.
+## [3] If slope != {up,flat}, predict Stable, otherwise, predict Attack.
+## 
+##                    train   test
+## cases       :n    150.00 153.00
+## speed       :mcu    2.41   2.49
+## frugality   :pci    0.83   0.82
+## accuracy    :acc    0.59   0.54
+## weighted    :wacc   0.61   0.55
+## sensitivity :sens   0.80   0.77
+## specificity :spec   0.42   0.34
+## 
+## pars: algorithm = 'ifan', goal = 'wacc', goal.chase = 'bacc', sens.w = 0.5, max.levels = 4
+
+# Plot Heidi's tree and accuracy statistics
+plot(custom_FFT, data = "test")
+</code></pre>
+<p><img alt="" src="../img/Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.md/unnamed-chunk-5-1.png" /></p>
+<p>The new tree is much, much worse than the tree the internal algorithm<br />
+came up with. While the tree generated by FFTrees had an overall<br />
+accuracy of 82%, the new tree is only 54% accurate!</p>
+<p>Moreover, you can see very few patients (only 21) are classified as<br />
+having a heart attack after the first node based on their cholesterol<br />
+level, and of those, only 12 / 21 (57%) were really having heart<br />
+attacks. In contrast, for the tree created by <code>FFTrees</code>, a full 72<br />
+patients are classified after the first node based on their value of<br />
+<code>thal</code>, and of these, 75% were truly having heart attacks.</p>
+<h3 id="more">More<a class="headerlink" href="#more" title="Permanent link">&para;</a></h3>
+<p>We can use trees to predict classes (and their probabilities) for new<br />
+datasets, and create trees that minimise different classification error<br />
+costs (for example, when the cost of a miss is much higher than the cost<br />
+of a false alarm).</p>
+<p>Check out the package vignette by running <code>FFTrees.guide()</code>.</p>
+<pre><code>FFTrees.guide()
+</code></pre>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<p>Fast-and-frugal decision trees are great options when you need a simple,<br />
+transparent decision algorithm that can easily be communicated and<br />
+applied, either by a person or a computer.</p>
+<p>Although fast-and-frugal trees are great for medical decisions (Green &amp;<br />
+Mehr, 1997), they can be created from any dataset with a binary<br />
+criterion, from predicting whether or not a bank will fail (Neth et al.,<br />
+2014), to predicting a judge&rsquo;s bailing decisions (Dhami &amp; Ayton, 2001).</p>
+<ul>
+<li>Dhami, Mandeep K, and Peter Ayton. 2001. &ldquo;Bailing and Jailing the Fast and Frugal Way.&rdquo; Journal of Behavioral Decision Making 14 (2). Wiley Online Library: 141 - 168.</li>
+<li>Galesic, Mirta, Rocio Garcia-Retamero, and Gerd Gigerenzer. 2009. &ldquo;Using Icon Arrays to Communicate Medical Risks: Overcoming Low Numeracy.&rdquo; Health Psychology 28 (2). American Psychological Association: 210.</li>
+<li>Green, Lee, and David R Mehr. 1997. &ldquo;What Alters Physicians&rsquo; Decisions to Admit to the Coronary Care Unit&rdquo;. Journal of Family Practice 45 (3). [New York, Appleton-Century-Crofts]: 219 - 226.</li>
+<li>Martignon, Laura, Oliver Vitouch, Masanori Takezawa, and Malcolm R Forster. 2003. &ldquo;Naive and yet Enlightened: From Natural Frequencies to Fast and Frugal Decision Trees.&rdquo; Thinking: Pychological Perspectives on Reasoning, Judgment and Decision Making. John Wiley &amp; Sons, Ltd, 189 - 211.</li>
+<li>Neth, Hansjörg, Björn Meder, Amit Kothiyal, and Gerd Gigerenzer. 2014. &ldquo;Homo Heuristicus in the Financial World: From Risk Management to Managing Uncertainty.&rdquo; Journal of Risk Management in Financial Institutions 7 (2). Henry Stewart Publications: 134 - 144.</li>
+<li>Phillips, Nathaniel D, Hansjörg Neth, Jan K Woike, and Wolfgang Gaissmaier. 2017. &ldquo;FFTrees: A Toolbox to Create, Visualize, and Evaluate Fast-and-Frugal Decision Trees.&rdquo; Judgment and Decision Making 12 (4). Society for Judgment &amp; Decision Making: 344.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Tables/" class="btn btn-neutral float-right" title="Tables">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gganimate/" class="btn btn-neutral" title="gganimate"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© Ugo Sparks</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gganimate/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Tables/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      <script src="../mathjaxhelper.js"></script>
+
+</body>
+</html>
