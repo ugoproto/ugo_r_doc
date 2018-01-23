@@ -80,6 +80,14 @@ Cheat sheets.
 
 ## Specialization
 
+### Tydyverse
+
+- [Tidyverse](Tidyverse_for_Beginners.pdf). PDF.
+
+<center>
+![](img/specialization_cs/Tidyverse_for_Beginners.png)
+</center>
+
 ### dplyr & tidyr
 
 - [Grammar of dplyr](r-dplyr.pdf). PDF only (explanatory slides).
