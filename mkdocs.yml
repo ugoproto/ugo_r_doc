@@ -5,7 +5,9 @@ site_description: A R documentation website.
 site_author: Ugo Sparks
 #site_favicon: favicon.ico
 copyright: © Ugo Sparks
-google_analytics: ['UA-93008985-1', 'mkdocs.org']
+google_analytics: 
+    - 'UA-93008985-1'
+    - 'auto'
 #remote_branch: master
 #remote_name: ugo_r_doc
 
