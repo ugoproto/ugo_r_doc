@@ -189,7 +189,7 @@ Cheat sheets.
 - [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
     - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
 
-## Visualization (ggplot2, ggmap, ggvis, shiny, plotly)
+## Visualization (ggplot2, ggmap, ggvis, shiny, plotly, Leaflet)
 
 - [ggplot2](ggplot2.pdf). PDF.
 
