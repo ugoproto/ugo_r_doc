@@ -1,5 +1,4 @@
-[TOC]
-
+<!-- -->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -12,20 +11,14 @@
 Why?
 ====
 
-Quickly decide: use an algorithm that can quickly understand and apply
-with minimal effort. For this reason, complex algorithms such as random
-forests, and even regression are not viable.
+Quickly decide: use an algorithm that can quickly understand and apply with minimal effort. For this reason, complex algorithms such as random forests, and even regression are not viable.
 
-A fast-and-frugal tree is an extremely simple decision tree that anyone
-can easily understand, learn, and use to make fast decisions with
-minimal effort.
+A fast-and-frugal tree is an extremely simple decision tree that anyone can easily understand, learn, and use to make fast decisions with minimal effort.
 
 Explore the Heart Disease Data
 ==============================
 
-The `FFTrees` package contains two datasets: `heart.train` to create
-(aka. train) fast-and-frugal trees, and `heart.test` to test their
-prediction performance.
+The `FFTrees` package contains two datasets: `heart.train` to create (aka. train) fast-and-frugal trees, and `heart.test` to test their prediction performance.
 
     # Load the package
     library("FFTrees")
@@ -42,20 +35,12 @@ prediction performance.
     ## 78   1 normal         0
     ## 167  1 normal         0
 
-The train dataframe contains data from several patients, each
-categorized by demographic features such as age and sex, as well as the
-results of medical tests and measures such as their cholesterol level
-(`chol`) and their type of chest pain (`cp`). The key variable you want
-to predict is `diagnosis`, which is 1 for patients who are truly having
-heart attacks, and 0 for those who are not. The goal of your
-fast-and-frugal tree will be to find a few key variables in the data
-that can quickly and accurately predict diagnosis.
+The train dataframe contains data from several patients, each categorized by demographic features such as age and sex, as well as the results of medical tests and measures such as their cholesterol level (`chol`) and their type of chest pain (`cp`). The key variable you want to predict is `diagnosis`, which is 1 for patients who are truly having heart attacks, and 0 for those who are not. The goal of your fast-and-frugal tree will be to find a few key variables in the data that can quickly and accurately predict diagnosis.
 
 Create an `FFTrees` object
 ==========================
 
-As with any algorithm, we need a function (formula), a train set, and a
-test set. We add a title and labels to the results.
+As with any algorithm, we need a function (formula), a train set, and a test set. We add a title and labels to the results.
 
     # Create an FFTrees object called `heart_FFT`
     heart_FFT <- FFTrees(formula = diagnosis ~ .,
@@ -85,11 +70,7 @@ test set. We add a title and labels to the results.
     ## 
     ## pars: algorithm = 'ifan', goal = 'wacc', goal.chase = 'bacc', sens.w = 0.5, max.levels = 4
 
-`thal` is either `rd` or `fd`, the dependent variable `H Attack`. `cp`
-is not equal to `a` and the model has converged towards an optimum
-(`Stable`). The tree used an average of 1.74 pieces of information to
-classify cases with the train set. The tree has then an accuracy of 82%
-with the test set.
+`thal` is either `rd` or `fd`, the dependent variable `H Attack`. `cp` is not equal to `a` and the model has converged towards an optimum (`Stable`). The tree used an average of 1.74 pieces of information to classify cases with the train set. The tree has then an accuracy of 82% with the test set.
 
 Plotting Fast-And-Frugal Trees
 ==============================
@@ -101,31 +82,14 @@ The visualization greatly improves the understanding.
 
 ![](img/Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.md/unnamed-chunk-4-1.png)
 
--   On the top row, you can see that there were 153 patients (cases)
-    were in the training data, where 73 patients were truly having heart
-    attacks (48%), and 80 patients were not (52%).
--   In the middle row, you see exactly how the tree makes decisions for
-    each of the patients using easy--to--understand icon arrays. For
-    example, you see that 72 patients suspected of having heart attacks
-    were (virtually) sent to the CCU after the first question, where 18
-    were not having heart attacks (false--alarms), and 54 were having
-    heart attacks (hits).
--   In the bottom row of the plot, you can see aggregate summary
-    statistics for the tree. On the bottom row, you have a 2 x 2
-    confusion matrix, which shows you a summary of how well the tree was
-    able to classify patients, levels indicating overall summary
-    statistics, and an ROC curve which compares the accuracy of the tree
-    to other algorithms such as logistic regression (LR) and random
-    forests (RF). Here, where the fast-and-frugal tree is represented by
-    the green circle "1", you can see that the fast-and-frugal tree had
-    a higher sensitivity than logistic regression and random forests,
-    but at a cost of a lower specificity.
+-   On the top row, you can see that there were 153 patients (cases) were in the training data, where 73 patients were truly having heart attacks (48%), and 80 patients were not (52%).
+-   In the middle row, you see exactly how the tree makes decisions for each of the patients using easy--to--understand icon arrays. For example, you see that 72 patients suspected of having heart attacks were (virtually) sent to the CCU after the first question, where 18 were not having heart attacks (false--alarms), and 54 were having heart attacks (hits).
+-   In the bottom row of the plot, you can see aggregate summary statistics for the tree. On the bottom row, you have a 2 x 2 confusion matrix, which shows you a summary of how well the tree was able to classify patients, levels indicating overall summary statistics, and an ROC curve which compares the accuracy of the tree to other algorithms such as logistic regression (LR) and random forests (RF). Here, where the fast-and-frugal tree is represented by the green circle "1", you can see that the fast-and-frugal tree had a higher sensitivity than logistic regression and random forests, but at a cost of a lower specificity.
 
 Creating and Testing a Custom Tree
 ==================================
 
-We can easily describe fast-and-frugal trees 'in words': "A better rule
-would be to use the cues cholesterol, age, and slope."
+We can easily describe fast-and-frugal trees 'in words': "A better rule would be to use the cues cholesterol, age, and slope."
 
 1.  If cholesterol &gt; 300, decide Heart Attack.
 2.  If age &lt; 50, decide Stable.
@@ -170,24 +134,14 @@ would be to use the cues cholesterol, age, and slope."
 
 ![](img/Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.md/unnamed-chunk-5-1.png)
 
-The new tree is much, much worse than the tree the internal algorithm
-came up with. While the tree generated by FFTrees had an overall
-accuracy of 82%, the new tree is only 54% accurate!
+The new tree is much, much worse than the tree the internal algorithm came up with. While the tree generated by FFTrees had an overall accuracy of 82%, the new tree is only 54% accurate!
 
-Moreover, you can see very few patients (only 21) are classified as
-having a heart attack after the first node based on their cholesterol
-level, and of those, only 12 / 21 (57%) were really having heart
-attacks. In contrast, for the tree created by `FFTrees`, a full 72
-patients are classified after the first node based on their value of
-`thal`, and of these, 75% were truly having heart attacks.
+Moreover, you can see very few patients (only 21) are classified as having a heart attack after the first node based on their cholesterol level, and of those, only 12 / 21 (57%) were really having heart attacks. In contrast, for the tree created by `FFTrees`, a full 72 patients are classified after the first node based on their value of `thal`, and of these, 75% were truly having heart attacks.
 
 More
 ====
 
-We can use trees to predict classes (and their probabilities) for new
-datasets, and create trees that minimise different classification error
-costs (for example, when the cost of a miss is much higher than the cost
-of a false alarm).
+We can use trees to predict classes (and their probabilities) for new datasets, and create trees that minimise different classification error costs (for example, when the cost of a miss is much higher than the cost of a false alarm).
 
 Check out the package vignette by running `FFTrees.guide()`.
 
@@ -196,14 +150,9 @@ Check out the package vignette by running `FFTrees.guide()`.
 Summary
 =======
 
-Fast-and-frugal decision trees are great options when you need a simple,
-transparent decision algorithm that can easily be communicated and
-applied, either by a person or a computer.
+Fast-and-frugal decision trees are great options when you need a simple, transparent decision algorithm that can easily be communicated and applied, either by a person or a computer.
 
-Although fast-and-frugal trees are great for medical decisions (Green &
-Mehr, 1997), they can be created from any dataset with a binary
-criterion, from predicting whether or not a bank will fail (Neth et al.,
-2014), to predicting a judge's bailing decisions (Dhami & Ayton, 2001).
+Although fast-and-frugal trees are great for medical decisions (Green & Mehr, 1997), they can be created from any dataset with a binary criterion, from predicting whether or not a bank will fail (Neth et al., 2014), to predicting a judge's bailing decisions (Dhami & Ayton, 2001).
 
 - Dhami, Mandeep K, and Peter Ayton. 2001. "Bailing and Jailing the Fast and Frugal Way." Journal of Behavioral Decision Making 14 (2). Wiley Online Library: 141 - 168.
 - Galesic, Mirta, Rocio Garcia-Retamero, and Gerd Gigerenzer. 2009. "Using Icon Arrays to Communicate Medical Risks: Overcoming Low Numeracy." Health Psychology 28 (2). American Psychological Association: 210.

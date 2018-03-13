@@ -4,31 +4,7 @@
     
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//An Introduction to R/</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//R_CS/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,14 +12,44 @@
     
         
     <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//R_CS/</loc>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//An Introduction to R/</loc>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/</loc>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//Formulas_in_R/</loc>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//Improved_codes/</loc>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Intermediate_R/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Intermediate_R_-_The_apply_Family/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -53,13 +59,13 @@
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Code___Plot_Chunk_Options/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Working_with_RStudio_IDE/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -69,25 +75,25 @@
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//IO_snippets___Cleaning/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Reading_Data_into_R_with_readr/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Data_Analysis_in_R,_the_data.table_Way/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Data_Manipulation_in_R_with_dplyr/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -97,37 +103,25 @@
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Plot_snippets_-_Basics/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Plot_snippets_-_ggplot2/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Plot_snippets_-_ggvis/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Plot_snippets_-_Colours/</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//Improved_codes/</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//Formulas_in_R/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -137,19 +131,37 @@
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//googleVis/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//gganimate/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//Big_Data_Analysis_with_Revolution_R_Enterprise/</loc>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//Time+Series+in+R+The+Power+of+xts+and+zoo/</loc>
+     <lastmod>2018-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://ugoproto.github.io/ugo_r_doc//Parallel computing in R/</loc>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -159,31 +171,25 @@
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Tables/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//embedding/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//embedding2/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//Frequentist_Bayesian/</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//Parallel computing in R/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -193,68 +199,52 @@
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://ugoproto.github.io/ugo_r_doc//A_Hands-on_Introduction_to_Statistics_with_R,_Notes/</loc>
-     <lastmod>2018-03-04</lastmod>
+     <lastmod>2018-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
-    
-
-    
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//Big_Data_Analysis_with_Revolution_R_Enterprise/</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>https://ugoproto.github.io/ugo_r_doc//Time+Series+in+R+The+Power+of+xts+and+zoo/</loc>
-     <lastmod>2018-03-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
     
 
 </urlset>

@@ -1,7 +1,8 @@
+<!--
 ---
 
 [TOC]
-
+-->
 ---
 
 **Foreword**
@@ -10,7 +11,7 @@ Course notes and snippets.
 
 ---
 
-## 1, Introduction to eXtensible Time
+## Introduction to eXtensible Time
 
 **What is an `xts` object**
 
@@ -98,10 +99,9 @@ core[3, 2]
 
 
 
-2
 
 
-**Your first xts object**
+**Your first `xts` object**
 
 Vector must be of the same length or number of rows as x and, this is very important: it must be a proper time or date object and it must be in increasing order.
 
@@ -130,11 +130,11 @@ hayek
 
 
 <ol class=list-inline>
-	<li>0.384581498733952</li>
-	<li>-0.423869463715667</li>
-	<li>-0.49549963387221</li>
-	<li>1.49946058244083</li>
-	<li>-0.92906780054414</li>
+    <li>0.384581498733952</li>
+    <li>-0.423869463715667</li>
+    <li>-0.49549963387221</li>
+    <li>1.49946058244083</li>
+    <li>-0.92906780054414</li>
 </ol>
 
 
@@ -165,7 +165,7 @@ hayek
     2016-01-05 -0.9290678
 
 
-**Deconstructing xts**
+**Deconstructing `xts`**
 
 Separate a time series into its core data and index attributes for additional analysis and manipulation.
 
@@ -229,9 +229,9 @@ ts_b[index(ts_a)]
          [,1]
 
 
-## 2, First Order of Business - Basic Manipulations
+## First Order of Business - Basic Manipulations
 
-**Converting xts objects**
+**Converting `xts` objects**
 
 `xts` provides methods to convert all of the major objects you are likely to come across - suitable native R types like matrix, data.frame, and ts are supported, as well as contributed ones such as `timeSeries`, `fts` and of course `zoo`. `as.xts` is the workhorse function to do the conversions to `xts`, and similar functions will provide the reverse behavior.
 
@@ -352,7 +352,7 @@ dat_xts
     2015-02-03 2 4
 
 
-**Exporting xts objects**
+**Exporting `xts` objects**
 
 
 ```R
@@ -420,8 +420,6 @@ The standard allows for a common format to not only describe dates, but also a w
 
 Date ranges can be extracted from xts objects by simply specifying the period(s) you want using special character strings in your subset.
 
-Code:
-
 ```r
 A["201601"]         ## Jan 2016
 A["20160125"]       ## Jan 25, 2016
@@ -440,8 +438,6 @@ Most common data "in the wild" is daily. On ocassion you may find yourself worki
 
 You can slice days easily by using special notation in the `i =` argument to the single bracket extraction (i.e. `[i,j]`).
 
-Code:
-
 ```r
 # Intraday times for all days
 NYSE["T09:30/T16:00"]
@@ -456,8 +452,6 @@ morn_2010["2010-01-13"]
 **Alternating extraction techniques**
 
 Often times you may need to subset an existing time series with a set of Dates, or time-based objects. These might be from `as.Date()`, or `as.POSIXct()`, or a variety of other classes.
-
-Code:
 
 ```r
 # Subset x using the vector dates
@@ -495,8 +489,6 @@ x[as.POSIXct(dates)]
 
 Replace known intervals or observations with an NA, say due to a malfunctioning sensor on a particular day or a set of outliers given a holiday.
 
-Code:
-
 ```r
 # Replace all values in x on dates with NA
 x[dates] <- NA
@@ -508,8 +500,6 @@ x["20160609/"] <- 0
 **Find the `first` or `last` period of time**
 
 Sometimes you need to locate data by relative time. Instead of using an absolute offset, you describe a position relative in time. A simple example would be something like the *last 3 weeks* of a series, or the *first day of current month*.
-
-Code:
 
 ```r
 # Create lastweek with using the last 1 week of temps
@@ -523,8 +513,6 @@ last(lastweek, "-2 day")
 ```
 
 **Combining `first` and `last`**
-
-Code:
 
 ```r
 # Last 3 days of first week
@@ -568,7 +556,7 @@ a + merge(b, index(a), fill = 0)
 a + merge(b, index(a), fill = na.locf)
 ```
 
-## 3, Merging and modifying time series
+## Merging and modifying time series
 
 **Combining `xts` by column with `merge`**
 
@@ -578,10 +566,10 @@ a + merge(b, index(a), fill = na.locf)
 
 One of the most important functions to accomplish this is `merge`. It works like a `cbind` or and SQL `join`:
 
-1. inner join (and)
-1. outer join (or)
-1. left join
-1. right join
+1. inner join (and).
+1. outer join (or).
+1. left join.
+1. right join.
 
 ```r
 # Basic argument use
@@ -687,7 +675,7 @@ diff(AirPass, lag = 12, differences = 1)
 
 What is the key difference in lag between xts and zoo? The `k` argument in `zoo` uses positive values for shifting past observations forward.
 
-## 4, Apply and aggregate by time
+## Apply and aggregate by time
 
 **Find intervals by time in `xts`**
 
@@ -824,7 +812,7 @@ rollapply(x, 10, FUN = max, na.rm = TRUE)
 eq_monthly <- rollapply(EqMktNeutral, 3, FUN = sd)
 ```
 
-## 5, Extra features of xts
+## Extra features of `xts`
 
 **Index, attributes, and time zones**
 
@@ -834,7 +822,7 @@ All time is stored in seconds since 1970-01-01. Time via `.index()` () and `inde
 
 `Sys.setenv()`.
 
-**Class attributes - `tclass`, `tzone` and `tformat`**
+**Class attributes -- `tclass`, `tzone` and `tformat`**
 
 `xts` objects are somewhat tricky when it comes to times. Internally, we have now seen that the index attribute is really a vector of numeric values corresponding to the seconds since the UNIX epoch (1970-01-01).
 
@@ -860,7 +848,7 @@ indexFormat(temps) <- "M/DD/YYYY"
 time(temps)
 ```
 
-**Time zones - (and why you should care!)**
+**Time zones**
 
 R provides time zone support in native classes `POSIXct` and `POSIXlt`. xts extends this power to the entire object, allowing you to have multiple timezones across various objects. One very important thing to remember is that some internal operation system functions require a timezone to do date math, and if not set one is chosen for you! Be careful to always set a timezone in your environment to prevent very hard to debug errors when working with dates and times. 
 

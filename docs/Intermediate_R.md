@@ -1,3 +1,4 @@
+<!--
 -   [1, Conditionals and Control Flow](#conditionals-and-control-flow)
     -   [Equality (or not)](#equality-or-not)
     -   [`&` and `|`](#and)
@@ -25,7 +26,7 @@
     -   [Beat Gauss using R](#beat-gauss-using-r)
     -   [`grepl` & `grep` (and the likes)](#grepl-grep-and-the-likes)
     -   [Time is of the essence](#time-is-of-the-essence)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -35,7 +36,7 @@
 
 ------------------------------------------------------------------------
 
-1, Conditionals and Control Flow
+Conditionals and Control Flow
 --------------------------------
 
 ### Equality (or not)
@@ -318,7 +319,7 @@ sms
 
     ## [1] 24
 
-2, Loops
+Loops
 --------
 
 ### Write a `while` loop
@@ -615,7 +616,7 @@ print(rcount)
 
     ## [1] 5
 
-3, Functions
+Functions
 ------------
 
 ### Function documentation
@@ -949,7 +950,7 @@ search()
     ##  [9] "package:datasets"      "package:methods"      
     ## [11] "Autoloads"             "package:base"
 
-4, The `apply` Family
+The `apply` Family
 ---------------------
 
 ### Use `lapply` (with a built-in R function)
@@ -1449,7 +1450,7 @@ lapply(todos, sort)
     ## [[2]]
     ## [1] "Make arrangements for summer trip" "Sleep"
 
-5, Utilities
+Utilities
 ------------
 
 ### Mathematical utilities

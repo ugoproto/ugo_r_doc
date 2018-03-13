@@ -1,3 +1,4 @@
+<!--
 -   [Documentation](#documentation)
 -   [1, Introduction to `dplyr`](#introduction-to-dplyr)
     -   [Load the `dplyr` and `hflights`
@@ -39,7 +40,7 @@
     -   [`dplyr` and mySQL databases](#dplyr-and-mysql-databases)
 -   [Adding `tidyr` Functions](#adding-tidyr-functions)
 -   [Joining Data in R with `dplyr`](#joining-data-in-r-with-dplyr)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -55,23 +56,16 @@ Documentation
 `data.table`
 
 -   extension of `data.frame`.
--   Fast aggregation of large data (e.g. 100GB in RAM), fast ordered
-    joins, fast add/modify/delete of columns by group using no copies at
-    all, list columns, a fast friendly file reader and parallel
-    file writer. Offers a natural and flexible syntax, for
-    faster development.
+-   Fast aggregation of large data (e.g. 100GB in RAM), fast ordered joins, fast add/modify/delete of columns by group using no copies at all, list columns, a fast friendly file reader and parallel file writer. Offers a natural and flexible syntax, for faster development.
 
 `dplyr`
 
--   A fast, consistent tool for working with data frame like objects,
-    both in memory and out of memory.
+-   A fast, consistent tool for working with data frame like objects, both in memory and out of memory.
 -   Pipelines.
 
 `tidyr`
 
--   An evolution of 'reshape2'. It's designed specifically for data
-    tidying (not general reshaping or aggregating) and works well with
-    dplyr data pipelines.
+-   An evolution of 'reshape2'. It's designed specifically for data tidying (not general reshaping or aggregating) and works well with dplyr data pipelines.
 
 <table>
 <thead>
@@ -323,11 +317,9 @@ $ Code              <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,...
 
 -   `select`; which returns a subset of the columns.
 -   `filter`; that is able to return a subset of the rows.
--   `arrange`; that reorders the rows according to single or
-    multiple variables.
+-   `arrange`; that reorders the rows according to single or multiple variables.
 -   `mutate`; used to add columns from existing data.
--   `summarise`; which reduces each group to a single row by calculating
-    aggregate measures.
+-   `summarise`; which reduces each group to a single row by calculating aggregate measures.
 
 ### The `select` verb
 
@@ -424,12 +416,9 @@ select(hflights, 1:4, 12:21)
 -   `starts_with("X")`; every name that starts with `"X"`,
 -   `ends_with("X")`; every name that ends with `"X"`,
 -   `contains("X")`; every name that contains `"X"`,
--   `matches("X")`; every name that matches `"X"`, where `"X"` can be a
-    regular expression,
--   `num_range("x", 1:5)`; the variables named `x01`, `x02`, `x03`, -
-    `x04` and `x05`,
--   `one_of(x)`; every name that appears in `x`, which should be a
-    character vector.
+-   `matches("X")`; every name that matches `"X"`, where `"X"` can be a regular expression,
+-   `num_range("x", 1:5)`; the variables named `x01`, `x02`, `x03`, `x04` and `x05`,
+-   `one_of(x)`; every name that appears in `x`, which should be a character vector.
 
 <!-- -->
 
@@ -1086,8 +1075,7 @@ summarise(temp2, max_taxi_diff = max(abs(TaxiIn - TaxiOut)))
 -   `first(x)`; the first element of vector `x`.
 -   `last(x)`; the last element of vector `x`.
 -   `nth(x, n)`; The `n`th element of vector `x`.
--   `n()`; The number of rows in the data.frame or group of observations
-    that `summarise()` describes.
+-   `n()`; The number of rows in the data.frame or group of observations that `summarise()` describes.
 -   `n_distinct(x)`; The number of unique values in vector `x`.
 
 <!-- -->

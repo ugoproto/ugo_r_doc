@@ -1,311 +1,943 @@
+
+
+
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="Ugo Sparks">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Statistics with R, Course Seven, Moderation and Mediation - ugo_r_doc</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../css/highlight.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Statistics with R, Course Seven, Moderation and Mediation";
-    var mkdocs_page_input_path = "A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation.md";
-    var mkdocs_page_url = "/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
-  
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-93008985-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> ugo_r_doc</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A R documentation website.">
+      
+      
+        <link rel="canonical" href="https://ugoproto.github.io/ugo_r_doc/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/">
+      
+      
+        <meta name="author" content="Ugo Sparks">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>Statistics with R, Course Seven, Moderation and Mediation - ugo_r_doc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#2-an-introduction-to-centering-predictors" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://ugoproto.github.io/ugo_r_doc/" title="ugo_r_doc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">layers</i>
+          
+        </a>
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../An Introduction to R/">An Introduction to R</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../R_CS/">R Cheat Sheets</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Intermediate R</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Intermediate_R/">Intermediate R</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">RStudio</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Data Wrangling Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data_Analysis_in_R,_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Plot Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_ggvis/">Plot Snippets - ggvis</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Improved_codes/">Improved codes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Formulas_in_R/">Formulas in R</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Packages</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../googleVis/">googleVis (embed HTML plots)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../gganimate/">gganimate</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/">Fast-and-Frugal Decision Trees</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Other Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Tables/">Tables</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../embedding/">Embedding HTML into HTML</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../embedding2/">Embedding Rmd into Rmd</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Frequentist_Bayesian/">Frequentist vs. Bayesian</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Parallel computing in R/">Parallel computing in R</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">A Hands-on Introduction to Statistics with R</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/">Statistics with R, Course One, Introduction</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Statistics with R, Course Seven, Moderation and Mediation</a>
-    <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#2-an-introduction-to-centering-predictors">2, An introduction to centering predictors</a></li>
-    
-
-    <li class="toctree-l3"><a href="#3-an-introduction-to-mediation">3, An introduction to mediation</a></li>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/">Statistics with R, Notes</a>
-                </li>
-    </ul>
-	    </li>
+              <span class="md-header-nav__topic">
+                ugo_r_doc
+              </span>
+              <span class="md-header-nav__topic">
+                Statistics with R, Course Seven, Moderation and Mediation
+              </span>
+            
           
-            <li class="toctree-l1">
-		
-    <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Time+Series+in+R+The+Power+of+xts+and+zoo/">Time Series in R, The Power of xts and zoo</a>
-	    </li>
-          
-        </ul>
+        </div>
       </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">ugo_r_doc</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
+      <div class="md-flex__cell md-flex__cell--shrink">
         
-          <li>A Hands-on Introduction to Statistics with R &raquo;</li>
-        
-      
-    
-    <li>Statistics with R, Course Seven, Moderation and Mediation</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main">
-            <div class="section">
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ugo_r_doc
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">layers</i>
+      
+    </span>
+    ugo_r_doc
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ugo_r_doc
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Basics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../R_CS/" title="R Cheat Sheets" class="md-nav__link">
+      R Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../An Introduction to R/" title="An Introduction to R" class="md-nav__link">
+      An Introduction to R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/" title="Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques" class="md-nav__link">
+      Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formulas_in_R/" title="Formulas in R" class="md-nav__link">
+      Formulas in R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Improved_codes/" title="Improved Codes" class="md-nav__link">
+      Improved Codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Intermediate_R/" title="Intermediate R" class="md-nav__link">
+      Intermediate R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Intermediate_R_-_The_apply_Family/" title="Intermediate R - The apply Family" class="md-nav__link">
+      Intermediate R - The apply Family
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      RStudio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        RStudio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Code___Plot_Chunk_Options/" title="Code & Plot Chunk Options" class="md-nav__link">
+      Code & Plot Chunk Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working_with_RStudio_IDE/" title="Working with the RStudio IDE" class="md-nav__link">
+      Working with the RStudio IDE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Wrangling Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Wrangling Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
+      I/O snippets & Cleaning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Reading_Data_into_R_with_readr/" title="Reading Data into R with readr" class="md-nav__link">
+      Reading Data into R with readr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Analysis_in_R,_the_data.table_Way/" title="Data Analysis in R, the data.table Way" class="md-nav__link">
+      Data Analysis in R, the data.table Way
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Manipulation_in_R_with_dplyr/" title="Data Manipulation in R with dplyr" class="md-nav__link">
+      Data Manipulation in R with dplyr
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Plot Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Plot Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_Basics/" title="Plot Snippets for Exploratory (and some Explanatory) Analyses" class="md-nav__link">
+      Plot Snippets for Exploratory (and some Explanatory) Analyses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_ggplot2/" title="Plot Snippets - ggplot2" class="md-nav__link">
+      Plot Snippets - ggplot2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_ggvis/" title="Plot Snippets - ggvis" class="md-nav__link">
+      Plot Snippets - ggvis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_Colours/" title="Plot Snippets - Colours" class="md-nav__link">
+      Plot Snippets - Colours
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Packages
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Packages
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../googleVis/" title="googleVis (embed HTML plots)" class="md-nav__link">
+      googleVis (embed HTML plots)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gganimate/" title="gganimate" class="md-nav__link">
+      gganimate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/" title="Fast-and-Frugal Decision Trees" class="md-nav__link">
+      Fast-and-Frugal Decision Trees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Big_Data_Analysis_with_Revolution_R_Enterprise/" title="Big Data Analysis with Revolution R Enterprise" class="md-nav__link">
+      Big Data Analysis with Revolution R Enterprise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Time+Series+in+R+The+Power+of+xts+and+zoo/" title="Time Series in R, The Power of xts and zoo" class="md-nav__link">
+      Time Series in R, The Power of xts and zoo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Parallel computing in R/" title="Parallel computing in R" class="md-nav__link">
+      Parallel computing in R
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Other Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Other Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tables/" title="Tables" class="md-nav__link">
+      Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedding/" title="Embedding HTML into HTML" class="md-nav__link">
+      Embedding HTML into HTML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedding2/" title="Embedding Rmd into Rmd" class="md-nav__link">
+      Embedding Rmd into Rmd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequentist_Bayesian/" title="Frequentist vs. Bayesian" class="md-nav__link">
+      Frequentist vs. Bayesian
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      A Hands-on Introduction to Statistics with R
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        A Hands-on Introduction to Statistics with R
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/" title="Statistics with R, Course One, Introduction" class="md-nav__link">
+      Statistics with R, Course One, Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/" title="Statistics with R, Course Two, Student's t-test" class="md-nav__link">
+      Statistics with R, Course Two, Student's t-test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/" title="Statistics with R, Course Three, Analysis of Variance" class="md-nav__link">
+      Statistics with R, Course Three, Analysis of Variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/" title="Statistics with R, Course Four, Repeated Measures ANOVA" class="md-nav__link">
+      Statistics with R, Course Four, Repeated Measures ANOVA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/" title="Statistics with R, Course Five, Correlation and Regression" class="md-nav__link">
+      Statistics with R, Course Five, Correlation and Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/" title="Statistics with R, Course Six, Multiple Regression" class="md-nav__link">
+      Statistics with R, Course Six, Multiple Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Statistics with R, Course Seven, Moderation and Mediation
+      </label>
+    
+    <a href="./" title="Statistics with R, Course Seven, Moderation and Mediation" class="md-nav__link md-nav__link--active">
+      Statistics with R, Course Seven, Moderation and Mediation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2-an-introduction-to-centering-predictors" title="2, An introduction to centering predictors" class="md-nav__link">
+    2, An introduction to centering predictors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-an-introduction-to-mediation" title="3, An introduction to mediation" class="md-nav__link">
+    3, An introduction to mediation
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/" title="Statistics with R, Notes" class="md-nav__link">
+      Statistics with R, Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2-an-introduction-to-centering-predictors" title="2, An introduction to centering predictors" class="md-nav__link">
+    2, An introduction to centering predictors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-an-introduction-to-mediation" title="3, An introduction to mediation" class="md-nav__link">
+    3, An introduction to mediation
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
-                <ul>
-<li><a href="#an-introduction-to-moderation">1, An introduction to moderation</a></li>
-<li><a href="#an-introduction-to-centering-predictors">2, An introduction to centering predictors</a></li>
-<li><a href="#an-introduction-to-mediation">3, An introduction to mediation</a></li>
-</ul>
+                
+                  <a href="https://github.com/ugoproto/ugo_r_doc.git/edit/master/docs/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Statistics with R, Course Seven, Moderation and Mediation</h1>
+                
+                <!--
+-   [1, An introduction to moderation](#an-introduction-to-moderation)
+-   [2, An introduction to centering predictors](#an-introduction-to-centering-predictors)
+-   [3, An introduction to mediation](#an-introduction-to-mediation)
+-->
+
 <hr />
 <p><strong>Foreword</strong></p>
 <ul>
@@ -315,34 +947,58 @@
 <hr />
 <h4 id="1-an-introduction-to-moderation">1, An introduction to moderation<a class="headerlink" href="#1-an-introduction-to-moderation" title="Permanent link">&para;</a></h4>
 <p><strong>Data exploration</strong></p>
-<pre><code class="r">library(psych)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>psych<span class="p">)</span>
 
-# Summary statistics
-describeBy(mod, mod$condition)
+<span class="c1"># Summary statistics</span>
+describeBy<span class="p">(</span>mod<span class="p">,</span> mod<span class="o">$</span>condition<span class="p">)</span>
 
-# Create a boxplot of the data
-boxplot(mod$iq ~ mod$condition, main = 'Boxplot', ylab = 'IQ', xlab = 'Group condition')
-</code></pre>
+<span class="c1"># Create a boxplot of the data</span>
+boxplot<span class="p">(</span>mod<span class="o">$</span>iq <span class="o">~</span> mod<span class="o">$</span>condition<span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;Boxplot&#39;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#39;IQ&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Group condition&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Calculate correlations</strong></p>
-<pre><code class="r"># Create subsets of the three groups
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create subsets of the three groups</span>
 
-# Make the subset for the group condition = 'control'
-mod_control &lt;- subset(mod, condition == 'control')
+<span class="c1"># Make the subset for the group condition = &#39;control&#39;</span>
+mod_control <span class="o">&lt;-</span> <span class="kp">subset</span><span class="p">(</span>mod<span class="p">,</span> condition <span class="o">==</span> <span class="s">&#39;control&#39;</span><span class="p">)</span>
 
-# Make the subset for the group condition = 'threat1'
-mod_threat1 &lt;- subset(mod, condition == 'threat1')
+<span class="c1"># Make the subset for the group condition = &#39;threat1&#39;</span>
+mod_threat1 <span class="o">&lt;-</span> <span class="kp">subset</span><span class="p">(</span>mod<span class="p">,</span> condition <span class="o">==</span> <span class="s">&#39;threat1&#39;</span><span class="p">)</span>
 
-# Make the subset for the group condition = 'threat2'
-mod_threat2 &lt;- subset(mod, condition == 'threat2')
+<span class="c1"># Make the subset for the group condition = &#39;threat2&#39;</span>
+mod_threat2 <span class="o">&lt;-</span> <span class="kp">subset</span><span class="p">(</span>mod<span class="p">,</span> condition <span class="o">==</span> <span class="s">&#39;threat2&#39;</span><span class="p">)</span>
 
-# Calculate the correlations
-cor(mod_control$iq, mod_control$wm, method = 'pearson')
+<span class="c1"># Calculate the correlations</span>
+cor<span class="p">(</span>mod_control<span class="o">$</span>iq<span class="p">,</span> mod_control<span class="o">$</span>wm<span class="p">,</span> method <span class="o">=</span> <span class="s">&#39;pearson&#39;</span><span class="p">)</span>
 
-cor(mod_threat1$iq, mod_threat1$wm, method = 'pearson')
+cor<span class="p">(</span>mod_threat1<span class="o">$</span>iq<span class="p">,</span> mod_threat1<span class="o">$</span>wm<span class="p">,</span> method <span class="o">=</span> <span class="s">&#39;pearson&#39;</span><span class="p">)</span>
 
-cor(mod_threat2$iq, mod_threat2$wm, method = 'pearson')
-</code></pre>
+cor<span class="p">(</span>mod_threat2<span class="o">$</span>iq<span class="p">,</span> mod_threat2<span class="o">$</span>wm<span class="p">,</span> method <span class="o">=</span> <span class="s">&#39;pearson&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Model with and without moderation</strong></p>
 <p>A moderator variable (Z) will enhance a regression model if the relationship between X and Y varies as a function of Z.</p>
@@ -361,47 +1017,78 @@ cor(mod_threat2$iq, mod_threat2$wm, method = 'pearson')
 <p>If X is categorical and Z is continuous:</p>
 <p><em>Y</em> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub>(<em>D</em><sub>1</sub>)+<em>β</em><sub>2</sub>(<em>D</em><sub>2</sub>)+<em>β</em><sub>3</sub><em>Z</em> + <em>β</em><sub>4</sub>(<em>D</em><sub>1</sub> * <em>Z</em>)+<em>β</em><sub>5</sub>(<em>D</em><sub>2</sub> * <em>Z</em>)+<em>ϵ</em></p>
 <p>Consult the PDF for performing tests.</p>
-<pre><code class="r"># Model without moderation (tests for 'first-order effects')
-model_1 &lt;- lm(mod$iq ~ mod$wm + mod$d1 + mod$d2)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Model without moderation (tests for &#39;first-order effects&#39;)</span>
+model_1 <span class="o">&lt;-</span> lm<span class="p">(</span>mod<span class="o">$</span>iq <span class="o">~</span> mod<span class="o">$</span>wm <span class="o">+</span> mod<span class="o">$</span>d1 <span class="o">+</span> mod<span class="o">$</span>d2<span class="p">)</span>
 
- # Make a summary of model_1
-summary(model_1)
+ <span class="c1"># Make a summary of model_1</span>
+<span class="kp">summary</span><span class="p">(</span>model_1<span class="p">)</span>
 
-# Create new predictor variables
-wm_d1 &lt;- mod$wm * mod$d1
-wm_d2 &lt;- mod$wm * mod$d2
+<span class="c1"># Create new predictor variables</span>
+wm_d1 <span class="o">&lt;-</span> mod<span class="o">$</span>wm <span class="o">*</span> mod<span class="o">$</span>d1
+wm_d2 <span class="o">&lt;-</span> mod<span class="o">$</span>wm <span class="o">*</span> mod<span class="o">$</span>d2
 
-# Model with moderation
-model_2 &lt;- lm(mod$iq ~ mod$wm + mod$d1 + mod$d2 + wm_d1 + wm_d2)
+<span class="c1"># Model with moderation</span>
+model_2 <span class="o">&lt;-</span> lm<span class="p">(</span>mod<span class="o">$</span>iq <span class="o">~</span> mod<span class="o">$</span>wm <span class="o">+</span> mod<span class="o">$</span>d1 <span class="o">+</span> mod<span class="o">$</span>d2 <span class="o">+</span> wm_d1 <span class="o">+</span> wm_d2<span class="p">)</span>
 
-# Make a summary of model_2
-summary(model_2)
-</code></pre>
+<span class="c1"># Make a summary of model_2</span>
+<span class="kp">summary</span><span class="p">(</span>model_2<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Model comparison</strong></p>
-<pre><code class="r"># Compare model_1 and model_2
-anova(model_1, model_2)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Compare model_1 and model_2</span>
+anova<span class="p">(</span>model_1<span class="p">,</span> model_2<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Scatterplot</strong></p>
-<pre><code class="r"># Choose colors to represent the points by group
-color &lt;- c('red', 'green', 'blue')
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Choose colors to represent the points by group</span>
+color <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">)</span>
 
-# Illustration of the first-order effects of working memory on IQ
-ggplot(mod, aes(x = wm, y = iq)) + geom_smooth(method = 'lm', color = 'black') + 
-  geom_point(aes(color = condition))
+<span class="c1"># Illustration of the first-order effects of working memory on IQ</span>
+ggplot<span class="p">(</span>mod<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wm<span class="p">,</span> y <span class="o">=</span> iq<span class="p">))</span> <span class="o">+</span> geom_smooth<span class="p">(</span>method <span class="o">=</span> <span class="s">&#39;lm&#39;</span><span class="p">,</span> color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">)</span> <span class="o">+</span> 
+  geom_point<span class="p">(</span>aes<span class="p">(</span>color <span class="o">=</span> condition<span class="p">))</span>
 
-# Illustration of the moderation effect of working memory on IQ
-ggplot(mod, aes(x = wm, y = iq)) + geom_smooth(aes(group = condition), method = 'lm', se = T, color = 'black', fullrange = T) + geom_point(aes(color = condition))
-</code></pre>
+<span class="c1"># Illustration of the moderation effect of working memory on IQ</span>
+ggplot<span class="p">(</span>mod<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wm<span class="p">,</span> y <span class="o">=</span> iq<span class="p">))</span> <span class="o">+</span> geom_smooth<span class="p">(</span>aes<span class="p">(</span>group <span class="o">=</span> condition<span class="p">),</span> method <span class="o">=</span> <span class="s">&#39;lm&#39;</span><span class="p">,</span> se <span class="o">=</span> <span class="bp">T</span><span class="p">,</span> color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> fullrange <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="o">+</span> geom_point<span class="p">(</span>aes<span class="p">(</span>color <span class="o">=</span> condition<span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Centering data</strong></p>
-<pre><code class="r"># Define wm_center
-wm_center &lt;- mod$wm - mean(mod$wm)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Define wm_center</span>
+wm_center <span class="o">&lt;-</span> mod<span class="o">$</span>wm <span class="o">-</span> <span class="kp">mean</span><span class="p">(</span>mod<span class="o">$</span>wm<span class="p">)</span>
 
-# Compare with the variable wm.centered
-all.equal(wm_center, mod$wm.centered)
-</code></pre>
+<span class="c1"># Compare with the variable wm.centered</span>
+<span class="kp">all.equal</span><span class="p">(</span>wm_center<span class="p">,</span> mod<span class="o">$</span>wm.centered<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <h4 id="2-an-introduction-to-centering-predictors">2, An introduction to centering predictors<a class="headerlink" href="#2-an-introduction-to-centering-predictors" title="Permanent link">&para;</a></h4>
 <p><strong>Centering versus no centering</strong></p>
@@ -428,50 +1115,84 @@ all.equal(wm_center, mod$wm.centered)
 </ul>
 <!-- -->
 
-<pre><code class="r"># Model without moderation and with centered data
-model_1_centered &lt;- lm(mod$iq ~ mod$wm.centered + mod$d1 + mod$d2)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Model without moderation and with centered data</span>
+model_1_centered <span class="o">&lt;-</span> lm<span class="p">(</span>mod<span class="o">$</span>iq <span class="o">~</span> mod<span class="o">$</span>wm.centered <span class="o">+</span> mod<span class="o">$</span>d1 <span class="o">+</span> mod<span class="o">$</span>d2<span class="p">)</span>
 
-# Make a summary of model_1_centered
-summary(model_1_centered)
-</code></pre>
+<span class="c1"># Make a summary of model_1_centered</span>
+<span class="kp">summary</span><span class="p">(</span>model_1_centered<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Centering versus no centering with moderation</strong></p>
-<pre><code class="r"># Create new predictor variables
-wm_d1_centered &lt;- mod$wm.centered * mod$d1
-wm_d2_centered &lt;- mod$wm.centered * mod$d2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create new predictor variables</span>
+wm_d1_centered <span class="o">&lt;-</span> mod<span class="o">$</span>wm.centered <span class="o">*</span> mod<span class="o">$</span>d1
+wm_d2_centered <span class="o">&lt;-</span> mod<span class="o">$</span>wm.centered <span class="o">*</span> mod<span class="o">$</span>d2
 
-# Define model_2_centered
-model_2_centered &lt;- lm(mod$iq ~ mod$wm.centered + mod$d1 + mod$d2 + wm_d1_centered + wm_d2_centered)
+<span class="c1"># Define model_2_centered</span>
+model_2_centered <span class="o">&lt;-</span> lm<span class="p">(</span>mod<span class="o">$</span>iq <span class="o">~</span> mod<span class="o">$</span>wm.centered <span class="o">+</span> mod<span class="o">$</span>d1 <span class="o">+</span> mod<span class="o">$</span>d2 <span class="o">+</span> wm_d1_centered <span class="o">+</span> wm_d2_centered<span class="p">)</span>
 
-# Make a summary of model_2_centered
-summary(model_2_centered)
-</code></pre>
+<span class="c1"># Make a summary of model_2_centered</span>
+<span class="kp">summary</span><span class="p">(</span>model_2_centered<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Model comparison</strong></p>
-<pre><code class="r"># Compare model_1_centered and model_2_centered
-anova(model_1_centered, model_2_centered)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Compare model_1_centered and model_2_centered</span>
+anova<span class="p">(</span>model_1_centered<span class="p">,</span> model_2_centered<span class="p">)</span>
 
-# Compare model_1 and model_2
-anova(model_1, model_2)
-</code></pre>
+<span class="c1"># Compare model_1 and model_2</span>
+anova<span class="p">(</span>model_1<span class="p">,</span> model_2<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Some correlations</strong></p>
-<pre><code class="r"># Calculate the correlations between working memory capacity and the product terms
- cor_wmd1 &lt;- cor(mod$wm, wm_d1)
- cor_wmd2 &lt;- cor(mod$wm, wm_d2)
- cor_wmd1_centered &lt;- cor(mod$wm.centered, wm_d1_centered)
- cor_wmd2_centered &lt;- cor(mod$wm.centered, wm_d2_centered)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Calculate the correlations between working memory capacity and the product terms</span>
+ cor_wmd1 <span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>wm<span class="p">,</span> wm_d1<span class="p">)</span>
+ cor_wmd2 <span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>wm<span class="p">,</span> wm_d2<span class="p">)</span>
+ cor_wmd1_centered <span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>wm.centered<span class="p">,</span> wm_d1_centered<span class="p">)</span>
+ cor_wmd2_centered <span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>wm.centered<span class="p">,</span> wm_d2_centered<span class="p">)</span>
 
-# Calculate the correlations between the dummy variables and the product terms
- cor_d1d1&lt;- cor(mod$d1, wm_d1)
- cor_d2d2 &lt;- cor(mod$d2, wm_d2)
- cor_d1d1_centered &lt;- cor(mod$d1, wm_d1_centered)
- cor_d2d2_centered &lt;- cor(mod$d2, wm_d2_centered)
+<span class="c1"># Calculate the correlations between the dummy variables and the product terms</span>
+ cor_d1d1<span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>d1<span class="p">,</span> wm_d1<span class="p">)</span>
+ cor_d2d2 <span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>d2<span class="p">,</span> wm_d2<span class="p">)</span>
+ cor_d1d1_centered <span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>d1<span class="p">,</span> wm_d1_centered<span class="p">)</span>
+ cor_d2d2_centered <span class="o">&lt;-</span> cor<span class="p">(</span>mod<span class="o">$</span>d2<span class="p">,</span> wm_d2_centered<span class="p">)</span>
 
-# correlations
- rbind(c(cor_wmd1, cor_wmd2), c(cor_wmd1_centered, cor_wmd2_centered))
- rbind(c(cor_d1d1, cor_d2d2), c(cor_d1d1_centered, cor_d2d2_centered))
-</code></pre>
+<span class="c1"># correlations</span>
+ <span class="kp">rbind</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span>cor_wmd1<span class="p">,</span> cor_wmd2<span class="p">),</span> <span class="kt">c</span><span class="p">(</span>cor_wmd1_centered<span class="p">,</span> cor_wmd2_centered<span class="p">))</span>
+ <span class="kp">rbind</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span>cor_d1d1<span class="p">,</span> cor_d2d2<span class="p">),</span> <span class="kt">c</span><span class="p">(</span>cor_d1d1_centered<span class="p">,</span> cor_d2d2_centered<span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <h4 id="3-an-introduction-to-mediation">3, An introduction to mediation<a class="headerlink" href="#3-an-introduction-to-mediation" title="Permanent link">&para;</a></h4>
 <p><strong>Model with and without mediation</strong></p>
@@ -495,88 +1216,148 @@ anova(model_1, model_2)
 <li>In other words, there is a BIG difference between statistical mediation and true causal mediation.</li>
 </ul>
 <p><strong>Data exploration</strong></p>
-<pre><code class="r"># Summary statistics
-describeBy(med, med$condition)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Summary statistics</span>
+describeBy<span class="p">(</span>med<span class="p">,</span> med<span class="o">$</span>condition<span class="p">)</span>
 
-# Create a boxplot of the data
-boxplot(med$iq ~ med$condition, main = 'Boxplot', xlab = 'Group condition', ylab = 'IQ')
-</code></pre>
+<span class="c1"># Create a boxplot of the data</span>
+boxplot<span class="p">(</span>med<span class="o">$</span>iq <span class="o">~</span> med<span class="o">$</span>condition<span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;Boxplot&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Group condition&#39;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#39;IQ&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Run 3 regression models on the data</strong></p>
-<pre><code class="r"># Run the three regression models
-# outcome ~ predictor
-model_yx &lt;- lm(med$iq ~ med$condition)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Run the three regression models</span>
+<span class="c1"># outcome ~ predictor</span>
+model_yx <span class="o">&lt;-</span> lm<span class="p">(</span>med<span class="o">$</span>iq <span class="o">~</span> med<span class="o">$</span>condition<span class="p">)</span>
 
-# mediator ~ predictor
-model_mx &lt;- lm(med$wm ~ med$condition)
+<span class="c1"># mediator ~ predictor</span>
+model_mx <span class="o">&lt;-</span> lm<span class="p">(</span>med<span class="o">$</span>wm <span class="o">~</span> med<span class="o">$</span>condition<span class="p">)</span>
 
-# outcome ~ predictor + mediator
-model_yxm &lt;- lm(med$iq ~ med$condition + med$wm)
+<span class="c1"># outcome ~ predictor + mediator</span>
+model_yxm <span class="o">&lt;-</span> lm<span class="p">(</span>med<span class="o">$</span>iq <span class="o">~</span> med<span class="o">$</span>condition <span class="o">+</span> med<span class="o">$</span>wm<span class="p">)</span>
 
-# Make a summary of the three models
-summary(model_yx)
-summary(model_mx)
-summary(model_yxm)
-</code></pre>
+<span class="c1"># Make a summary of the three models</span>
+<span class="kp">summary</span><span class="p">(</span>model_yx<span class="p">)</span>
+<span class="kp">summary</span><span class="p">(</span>model_mx<span class="p">)</span>
+<span class="kp">summary</span><span class="p">(</span>model_yxm<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><strong>Sobel test</strong></p>
-<pre><code class="r"># Compare the previous results to the output of the sobel function
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Compare the previous results to the output of the sobel function</span>
 
-# sobel(pred,med,out)
-model_all &lt;- sobel(med$condition, med$wm, med$iq)
+<span class="c1"># sobel(pred,med,out)</span>
+model_all <span class="o">&lt;-</span> sobel<span class="p">(</span>med<span class="o">$</span>condition<span class="p">,</span> med<span class="o">$</span>wm<span class="p">,</span> med<span class="o">$</span>iq<span class="p">)</span>
 model_all
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p>The Sobel test is a method of testing the significance of a mediation<br />
 effect. Consult the PDF.</p>
+                
+                  
+                
               
-            </div>
+              
+                
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/" class="btn btn-neutral float-right" title="Statistics with R, Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/" class="btn btn-neutral" title="Statistics with R, Course Six, Multiple Regression"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/" title="Statistics with R, Course Six, Multiple Regression" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Statistics with R, Course Six, Multiple Regression
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/" title="Statistics with R, Notes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Statistics with R, Notes
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>© Ugo Sparks</p>
-    
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-	  
-        </div>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Ugo Sparks
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
       </div>
-
-    </section>
-    
+      
+        
+      
+    </div>
   </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+</footer>
       
+    </div>
+    
+      <script src="../assets/javascripts/application.8eb9be28.js"></script>
       
-        <span><a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
-        <span style="margin-left: 15px"><a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+    
       
-    </span>
-</div>
-    <script src="../js/theme.js"></script>
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-      <script src="../mathjaxhelper.js"></script>
-
-</body>
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
 </html>

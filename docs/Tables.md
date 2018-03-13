@@ -1,3 +1,4 @@
+<!--
 -   [Markdown tables](#markdown-tables)
     -   [Example 1](#example-1)
     -   [Example 2](#example-2)
@@ -15,7 +16,7 @@
     -   [Example 7](#example-7)
 -   [The `ztable` package](#the-ztable-package)
     -   [Example 1](#example-1-5)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -10539,7 +10540,7 @@ Age
 The `ztable` package
 --------------------
 
-The package can also export to *L**a**T**e**X*.
+The package can also export to $\LaTeX$.
 
 ### Example 1
 

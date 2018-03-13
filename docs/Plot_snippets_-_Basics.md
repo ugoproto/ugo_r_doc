@@ -1,3 +1,4 @@
+<!--
 -   [Plotting Packages](#plotting-packages)
 -   [Data Type & Dataset](#data-type-dataset)
     -   [Data Types](#data-types)
@@ -29,7 +30,7 @@
     -   [The `ash` Package (density)](#the-ash-package-density)
     -   [The `KernSmooth` Package (density)](#the-kernsmooth-package-density)
     -   [The `corrplot` Package (correlation)](#the-crorplot-package-correlation)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -37,9 +38,7 @@
 -   Output options: the 'tango' syntax and the 'readable' theme.
 -   Code snippets and results.
 -   Some data might necessitate more specialized packages.
--   For explaining data, presenting results, reporting and publishing,
-    we can generate prettier graphics with `ggvis` or `ggplot2`, and
-    interactive packages such as `shiny`.
+-   For explaining data, presenting results, reporting and publishing, we can generate prettier graphics with `ggvis` or `ggplot2`, and interactive packages such as `shiny`.
 
 ------------------------------------------------------------------------
 
@@ -63,7 +62,7 @@ Grid:
 -   `lattice` and `latticeExtra`.
 -   `gridBase`.
 
-grDevices:
+Devices:
 
 -   `JavaGD`.
 -   `Cairo`.
@@ -103,10 +102,8 @@ Data Type & Dataset
 ### Data Types
 
 -   continuous vs categorical (or discrete).
--   continuous: float, x-y-z, 3D, map coordinates, trianguar, lat-long,
-    polar, degree-distance, angle-vector.
--   categorical: integer, binary, dichotomic, dummy, factor,
-    ordinal (ordered).
+-   continuous: float, x-y-z, 3D, map coordinates, trianguar, lat-long, polar, degree-distance, angle-vector.
+-   categorical: integer, binary, dichotomic, dummy, factor, ordinal (ordered).
 
 Continuous variable characteristics:
 
@@ -132,8 +129,7 @@ Categorical variable characteristics:
 -   ordinal: fixed order (scale of 1 to 5).
 -   discrete: counts, integers.
 -   dependencies, correlation, associations.
--   causal relationships, outliers, groups, clusters, gaps, barriers,
-    conditional relationship.
+-   causal relationships, outliers, groups, clusters, gaps, barriers, conditional relationship.
 -   ...
 
 Univariate main plots:
@@ -166,8 +162,7 @@ Specialized plots:
 
 -   frequencies, crosstabs: bar charts, mosaic plots, association plots.
 -   correlations: sploms, pairs, correlograms.
--   t-tests, non-parrametric tests of group differences: box plot,
-    density plot.
+-   t-tests, non-parrametric tests of group differences: box plot, density plot.
 -   regression: scatter plot.
 -   ANOVA: box plots, line plots.
 
@@ -318,8 +313,7 @@ mplot(A, B, C)
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-14-1.png)
 
-See the `lattice` and `latticeExtra` packages for built-in
-facet/gridview. `ggplot2` as well.
+See the `lattice` and `latticeExtra` packages for built-in facet/gridview. `ggplot2` as well.
 
 **Plot and add ablines**
 
@@ -403,8 +397,7 @@ mtext('text 2', 4, line = 0.5) # pos = 1 (bottom), 2 (left), 3 (top), 4 (right);
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-20-1.png)
 
-With `locator()`, use the mouse; with 1 for 1 click, 2 for... Find the
-coordinates to be entered in the code. For example (after two clicks):
+With `locator()`, use the mouse; with 1 for 1 click, 2 for... Find the coordinates to be entered in the code. For example (after two clicks):
 
 ``` text
 > locator(2)
@@ -979,8 +972,7 @@ smoothScatter(mpg, hp, main = 'Title', xlab = 'miles per gallon', ylab = 'horsep
 
 **Sunflowerplot; categorical/categorical**
 
-Special symbols at each location: one observation = one dot; more
-observations = cross, star, etc.
+Special symbols at each location: one observation = one dot; more observations = cross, star, etc.
 
 ``` r
 sunflowerplot(gear, cyl, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
@@ -1076,8 +1068,7 @@ dotchart(counts, main = 'Title', xlab = 'count', ylab = 'gearbox/cylinders')
 
 **Barplot with its options**
 
-Vertical or horizontal. The legend as well can be horizontal or
-vertical.
+Vertical or horizontal. The legend as well can be horizontal or vertical.
 
 ``` r
 counts <- table(gear, cyl)
@@ -1215,8 +1206,7 @@ plot(iris, col = brewer.pal(3, 'Set1'))
 
 **Stars**
 
-The star branches are explanatory; be careful with the interpretation!
-Well-advised for visual and pattern exploration.
+The star branches are explanatory; be careful with the interpretation! Well-advised for visual and pattern exploration.
 
 ``` r
 mtcars[1:4, c(1, 4, 6)]
@@ -2287,8 +2277,7 @@ title('Title')
 library(vcd)
 ```
 
-The package provides a variety of methods for visualizing multivariate
-categorical data.
+The package provides a variety of methods for visualizing multivariate categorical data.
 
 **Count**
 

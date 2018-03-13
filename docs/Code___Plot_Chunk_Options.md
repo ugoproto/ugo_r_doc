@@ -1,3 +1,4 @@
+<!--
 -   [1, Preliminary Options](#preliminary-options)
 -   [2, Chunks](#chunks)
 -   [3, Inputting Data](#inputting-data)
@@ -44,7 +45,7 @@
     -   [Versions](#versions)
     -   [`fig.pos='test'`; string to be used as the figure position arrangement in latex.](#fig.postest-string-to-be-used-as-the-figure-position-arrangement-in-latex.)
     -   [Show](#show)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -54,7 +55,7 @@
 
 ------------------------------------------------------------------------
 
-1, Preliminary Options
+Preliminary Options
 -------------------
 
 Usually, the following code is set to FALSE (not showing in a report). These are the general options. Code and plot chunks overrule the general options.
@@ -63,12 +64,12 @@ Usually, the following code is set to FALSE (not showing in a report). These are
 knitr::opts_chunk$set(echo=TRUE, eval=TRUE, fig.height=3, fig.width=3)
 ```
 
-2, Chunks
+Chunks
 ------
 
 Naming a chunk is including it in the document outline. The outline is a navigation tool to jump though the document.
 
-3, Inputting Data
+Inputting Data
 --------------
 
 The dataset comes from the [US Census Bureau](http://www.census.gov/popest/data/national/totals/2011/index.html). On their website, open Excel file 'NST-EST2011-02' about the annual estimates of the resident population.
@@ -135,7 +136,7 @@ head(USstatePops2, 3)
     ## 2  Alaska  710231
     ## 3 Arizona 6392013
 
-4, Formatting Code Chunks
+Formatting Code Chunks
 ----------------------
 
 ### `eval=TRUE`; show the results (default).
@@ -349,7 +350,7 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-5, Formatting Plot Chunk
+Formatting Plot Chunk
 ---------------------
 
 Prints the plots in the .html report and and creates a subdir with the plot files (the references).
@@ -610,6 +611,4 @@ hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
 See:
 
 -   `fig.show='hide'`; generate the plots, but not in the final document.
--   `fig.show='animate'`; combine all of the plots created into an animation. Additional packages and settings are required.
-
-------------------------------------------------------------------------
+-   `fig.show='animate'`; combine all of the plots created into an animation. Additional packages and settings arerequired.

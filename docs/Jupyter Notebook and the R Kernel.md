@@ -1,14 +1,15 @@
-# Jupyter Notebook
+<!--
+---
+
+[TOC]
+-->
+---
 
 **Foreword**
 
 Notes.
 
------
-
-[TOC]
-
------
+---
 
 ## Distribution
 

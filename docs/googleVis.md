@@ -1,7 +1,8 @@
+<!--
 ---
 
 [TOC]
-
+-->
 ---
 
 **Foreword**
@@ -341,21 +342,23 @@ callbacks.shift()();
  
 <!-- divChart -->
   
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
 <div id="MotionChartID2cd02805862d" 
 style="width: 400; height: 350; float:left;";>
 </div>
+
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 
 ### Other static websites
 
 There is a procedure for embedding graphics in:
 
-- WordPress,
-- Google Sites,
-- Blogger,
+- WordPress.
+- Google Sites.
+- Blogger.
 - Google Code wiki pages.
-- Wikipedia,
+- Wikipedia.
 - others websites.
 
 ### Dynamic websites
@@ -4815,5 +4818,3 @@ callbacks.shift()();
 <div id="ColumnChartID336e54fe1b42" 
   style="width: 500; height: automatic;">
 </div>
-
----

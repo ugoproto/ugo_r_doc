@@ -1,7 +1,8 @@
+<!--
 -   [1, An introduction to ANOVA](#an-introduction-to-anova)
 -   [2, Post-hoc analysis](#post-hoc-analysis)
 -   [3, Between groups factorial ANOVA](#between-groups-factorial-anova)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

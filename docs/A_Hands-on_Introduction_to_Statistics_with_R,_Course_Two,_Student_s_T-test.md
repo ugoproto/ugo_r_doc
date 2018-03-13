@@ -1,6 +1,7 @@
+<!--
 -   [1, Introduction to t-tests](#introduction-to-t-tests)
 -   [2, Independent t-tests](#independent-t-tests)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

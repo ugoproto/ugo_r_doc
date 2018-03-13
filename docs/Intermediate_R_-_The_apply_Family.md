@@ -1,3 +1,4 @@
+<!--
 -   [`apply` to Matrices and Arrays](#apply-to-matrices-and-arrays)
     -   [`sweep`](#sweep)
     -   [`aggregate`](#aggregate)
@@ -12,7 +13,7 @@
 -   [`mapply`: multivariate-apply](#mapply-multivariate-apply)
     -   [`Vectorize`](#vectorize-1)
 -   [And more](#and-more)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

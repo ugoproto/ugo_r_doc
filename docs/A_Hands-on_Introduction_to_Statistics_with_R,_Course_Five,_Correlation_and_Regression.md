@@ -1,7 +1,8 @@
+<!--
 -   [1, An introduction to Correlation](#an-introduction-to-correlation)
 -   [2, An introduction to Linear Regression Models](#an-introduction-to-linear-regression-models)
 -   [3, Linear Regression Models continued](#linear-regression-models-continued)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

@@ -1,3 +1,4 @@
+<!--
 -   [Survival Analysis: Goal and
     Applications](#survival-analysis-goal-and-applications)
 -   [1, The Non-parametric Methods: the Kaplan-Meier (KM)
@@ -8,7 +9,7 @@
 -   [Going further (with the `Rossi` dataset
     in mind)](#going-further-with-the-rossi-dataset-in-mind)
 -   [Terminology](#terminology)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

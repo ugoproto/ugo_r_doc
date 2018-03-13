@@ -1,3 +1,4 @@
+<!--
 -   [Documentation](#documentation)
 -   [1, `data.table` novice](#data.table-novice)
     -   [Create and subset a
@@ -28,7 +29,7 @@
     -   [Selecting groups or parts of
         groups](#selecting-groups-or-parts-of-groups)
     -   [Rolling joins](#rolling-joins)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -43,24 +44,17 @@ Documentation
 
 `data.table`
 
--   extension of `data.frame`.
--   Fast aggregation of large data (e.g. 100GB in RAM), fast ordered
-    joins, fast add/modify/delete of columns by group using no copies at
-    all, list columns, a fast friendly file reader and parallel
-    file writer. Offers a natural and flexible syntax, for
-    faster development.
+- Extension of `data.frame`.
+- Fast aggregation of large data (e.g. 100GB in RAM), fast ordered     joins, fast add/modify/delete of columns by group using no copies at     all, list columns, a fast friendly file reader and parallel file writer. Offers a natural and flexible syntax, for faster development.
 
 `dplyr`
 
--   A fast, consistent tool for working with data frame like objects,
-    both in memory and out of memory.
--   Pipelines.
+- A fast, consistent tool for working with data frame like objects, both in memory and out of memory.
+- Pipelines.
 
 `tidyr`
 
--   An evolution of 'reshape2'. It's designed specifically for data
-    tidying (not general reshaping or aggregating) and works well with
-    dplyr data pipelines.
+- An evolution of 'reshape2'. It's designed specifically for data tidying (not general reshaping or aggregating) and works well with dplyr data pipelines.
 
 <table>
 <thead>
@@ -94,7 +88,7 @@ Documentation
 </tbody>
 </table>
 
-1, `data.table` novice
+`data.table` novice
 ----------------------
 
 Find out more with `?data.table`.
@@ -162,13 +156,11 @@ DT[c(2, 2, 3)]
     ## 2: 2 B
     ## 3: 1 C
 
-`DT` is a data.table/data.frame, but `DT[ , B]` is a vector;
-`DT[ , .(B)]` is a subsetted data.table.
+`DT` is a data.table/data.frame, but `DT[ , B]` is a vector; `DT[ , .(B)]` is a subsetted data.table.
 
 ### Subsetting data tables
 
-`DT[i, j, by]` means take `DT`, subset rows using `i`, then calculate
-`j` grouped by `by`. You can wrap `j` with `.()`.
+`DT[i, j, by]` means take `DT`, subset rows using `i`, then calculate `j` grouped by `by`. You can wrap `j` with `.()`.
 
 ``` r
 A <- c(1, 2, 3, 4, 5)
@@ -266,7 +258,7 @@ DT2[, .(C = tail(C,2)), by=A]
     ## 3: a 2
     ## 4: a 8
 
-2, `data.table` yeoman
+`data.table` yeoman
 ----------------------
 
 ### Chaining, the basics
@@ -563,8 +555,7 @@ DT[, 2 := NULL]
 
 ### Ready, `set`, go!
 
-The `set` function is used to repeatedly update a data.table by
-reference. You can think of the `set` function as a loopable.
+The `set` function is used to repeatedly update a data.table by reference. You can think of the `set` function as a loopable.
 
 ``` r
 A <- c(2, 2, 3, 5, 2, 5, 5, 4, 4, 1)
@@ -661,7 +652,7 @@ DT
 setcolorder(DT, c('b_2','A2'))
 ```
 
-3, `data.table` expert
+`data.table` expert
 ----------------------
 
 ### Selecting rows the `data.table` way

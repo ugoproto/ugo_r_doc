@@ -1,3 +1,4 @@
+<!--
 -   [Documentation](#documentation)
 -   [Dataset](#dataset)
 -   [The `ggvis` Package](#the-ggvis-package)
@@ -7,23 +8,22 @@
 -   [4, Interactivity and Layers](#interactivity-and-layers)
 -   [5, Customizing Axes, Legends, and
     Scales](#customizing-axes-legends-and-scales)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
 
 -   Output options: the 'tango' syntax and the 'readable' theme.
 -   Snippets and results.
--   `ggvis` generates html outputs. Graphics presented here are images:
-    .png files; .gif files when specified.
+-   `ggvis` generates html outputs. Graphics presented here are images: .png files; .gif files when specified.
 
 ------------------------------------------------------------------------
 
 Documentation
 -------------
 
--   [`ggvis` Overview](http://ggvis.rstudio.com/)
--   [`ggvis` Cookbook](http://ggvis.rstudio.com/cookbook.html)
+-   [`ggvis` Overview](http://ggvis.rstudio.com/).
+-   [`ggvis` Cookbook](http://ggvis.rstudio.com/cookbook.html).
 
 Dataset
 -------
@@ -37,10 +37,10 @@ The `ggvis` Package
 library(ggvis)
 ```
 
-1, The Grammar of Graphics
+The Grammar of Graphics
 --------------------------
 
-**Start to explore **
+**Start to explore**
 
 ``` r
 # change the code below to plot the disp variable of mtcars on the x axis
@@ -51,7 +51,7 @@ mtcars %>%
 
 ![](img/Plot_snippets_-_ggvis/ggvis1.png)
 
-**`ggvis` and its capabilities **
+**`ggvis` and its capabilities**
 
 ``` r
 # Change the code below to make a graph with red points
@@ -81,7 +81,7 @@ mtcars %>%
 
 ![](img/Plot_snippets_-_ggvis/ggvis4.png)
 
-**`ggvis` grammar ~ graphics grammar**
+**`ggvis` grammar**
 
 ``` r
 # Make a scatterplot of the pressure dataset
@@ -141,7 +141,7 @@ faithful %>%
 
 ![](img/Plot_snippets_-_ggvis/ggvis10.png)
 
-2, Lines and Syntax
+Lines and Syntax
 -------------------
 
 **Three operators: `%>%`, `=` and `:=`**
@@ -276,15 +276,9 @@ pressure %>%
 
 **Display model fits**
 
-`layer_lines()` will always connect the points in your plot from the
-leftmost point to the rightmost point. This can be undesirable if you
-are trying to plot a specific shape.
+`layer_lines()` will always connect the points in your plot from the leftmost point to the rightmost point. This can be undesirable if you are trying to plot a specific shape.
 
-`layer_paths()`: this mark connects the points in the order that they
-appear in the data set. So the paths mark will connect the point that
-corresponds to the first row of the data to the point that corresponds
-to the second row of data, and so on - no matter where those points
-appear in the graph.
+`layer_paths()`: this mark connects the points in the order that they appear in the data set. So the paths mark will connect the point that corresponds to the first row of the data to the point that corresponds to the second row of data, and so on - no matter where those points appear in the graph.
 
 ``` r
 # change the third line of code to plot a map of Texas
@@ -311,10 +305,7 @@ texas %>%
 
 **`compute_smooth()` to simplify model fits**
 
-`compute_model_prediction()` is a useful function to use with line
-graphs. It takes a data frame as input and returns a new data frame as
-output. The new data frame will contain the x and y values of a line
-fitted to the data in the original data frame.
+`compute_model_prediction()` is a useful function to use with line graphs. It takes a data frame as input and returns a new data frame as output. The new data frame will contain the x and y values of a line fitted to the data in the original data frame.
 
 Generate the x and y coordinates for a LOESS smooth line.
 
@@ -359,7 +350,7 @@ mtcars %>%
 #model = "loess" is set by default
 ```
 
-3, Transformations
+Transformations
 ------------------
 
 **Histograms (1)**
@@ -558,8 +549,7 @@ mtcars %>%
 
 ![](img/Plot_snippets_-_ggvis/ggvis46.png)
 
-This call is exactly equivalent to the following piece of code that is
-very hard to read:
+This call is exactly equivalent to the following piece of code that is very hard to read:
 
 ``` r
 layer_densities(ggvis(group_by(mtcars, cyl, am), ~mpg, fill = ~interaction(cyl, am)))
@@ -567,7 +557,7 @@ layer_densities(ggvis(group_by(mtcars, cyl, am), ~mpg, fill = ~interaction(cyl, 
 
 ![](img/Plot_snippets_-_ggvis/ggvis47.png)
 
-4, Interactivity and Layers
+Interactivity and Layers
 ---------------------------
 
 **The basics of interactive plots**
@@ -775,7 +765,7 @@ pressure %>%
 
 ![](img/Plot_snippets_-_ggvis/ggvis56.png)
 
-5, Customizing Axes, Legends, and Scales
+Customizing Axes, Legends, and Scales
 ----------------------------------------
 
 **Axes**

@@ -1,5 +1,4 @@
-[TOC]
-
+<!-- -->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -69,7 +68,7 @@ A speed test
 Which
 =====
 
-Is it par of the series, vector? What value?
+Is it a series, a vector? What value?
 
     x <- 3:7
 
@@ -223,5 +222,3 @@ A speed test
 
     ##    user  system elapsed 
     ##   0.104   0.012   0.114
-
-------------------------------------------------------------------------

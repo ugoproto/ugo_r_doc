@@ -1,6 +1,7 @@
+<!--
 -   [1, Importing data with `readr`](#importing-data-with-readr)
 -   [2, Parsing Data with `readr`](#parsing-data-with-readr)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -10,22 +11,16 @@
 
 ------------------------------------------------------------------------
 
-1, Importing data with `readr`
+Importing data with `readr`
 ------------------------------
 
 **Reading a .csv file**
 
-Your first task will be to master the use of the `read_csv()` function.
-There are many arguments available, but the only required argument is
-`file`, a path to a CSV file on your computer (or the web).
+Your first task will be to master the use of the `read_csv()` function. There are many arguments available, but the only required argument is `file`, a path to a CSV file on your computer (or the web).
 
-One big advantage that `read_csv()` has over `read.csv()` is that it
-doesn't convert strings into factors by default.
+One big advantage that `read_csv()` has over `read.csv()` is that it doesn't convert strings into factors by default.
 
-`read_csv()` recognizes 8 different data types (integer, logical, etc.)
-and leaves anything else as characters. That means you don't have to set
-`stringsAsFactors = FALSE` every time you import a CSV file with
-character strings!
+`read_csv()` recognizes 8 different data types (integer, logical, etc.) and leaves anything else as characters. That means you don't have to set `stringsAsFactors = FALSE` every time you import a CSV file with character strings!
 
 ``` r
 #install.packages('readr')
@@ -119,8 +114,7 @@ head(salaries)
 
 **Reading a European .csv**
 
-In most of Europe, commas (rather than periods) are used as decimal
-points.
+In most of Europe, commas (rather than periods) are used as  decimal points.
 
 ``` r
 # Import data with read_csv2(): trees
@@ -148,8 +142,7 @@ head(trees)
 
 **Read a fixed-width file**
 
-Files containing columns of data that are separated by whitespace and
-all line up on one side.
+Files containing columns of data that are separated by whitespace and all line up on one side.
 
 Code only:
 
@@ -199,8 +192,7 @@ write_csv(cwts2, "chickwts.csv", append = TRUE)
 
 **Writing .rds files**
 
-If the R object you're working with has metadata associated with it,
-saving to a CSV will cause that information to be lost.
+If the R object you're working with has metadata associated with it, saving to a CSV will cause that information to be lost.
 
 Exports an entire R object (metadata and all).
 
@@ -217,14 +209,12 @@ trees2 <- read_rds('trees.rds')
 identical(trees, trees2)
 ```
 
-2, Parsing Data with `readr`
+Parsing Data with `readr`
 ----------------------------
 
 **Coercing columns to different data types**
 
-`readr` functions are quite good at guessing the correct data type for
-each column in a dataset. Of course, they aren't perfect, so sometimes
-you will need to change the type of a column after importing.
+`readr` functions are quite good at guessing the correct data type for each column in a dataset. Of course, they aren't perfect, so sometimes you will need to change the type of a column after importing.
 
 Code only:
 
@@ -235,8 +225,7 @@ trees2 <- type_convert(trees, col_types = cols(Girth = 'd', Height = 'd', Volume
 
 **Coercing character columns into factors**
 
-`readr` import functions is that they don't automatically convert
-strings into factors like `read.csv` does.
+`readr` import functions is that they don't automatically convert strings into factors like `read.csv` does.
 
 Code only:
 
@@ -250,10 +239,7 @@ salaries$gender <- parse_factor(salaries$gender, levels = c('Male', 'Female'))
 
 **Creating Date objects**
 
-The `readr` import functions can automatically recognize dates in
-standard ISO 8601 format (YYYY-MM-DD) and parse columns accordingly. If
-you want to import a dataset with dates in other formats, you can use
-`parse_date`.
+The `readr` import functions can automatically recognize dates in standard ISO 8601 format (YYYY-MM-DD) and parse columns accordingly. If you want to import a dataset with dates in other formats, you can use `parse_date`.
 
 Code only:
 
@@ -264,9 +250,7 @@ weather$date <- parse_date(weather$date, format = '%m/%d/%Y')
 
 **Parsing number formats**
 
-The `readr` importing functions can sometimes run into trouble parsing a
-column as numbers when it contains non-numeric symbols in addition to
-numerals.
+The `readr` importing functions can sometimes run into trouble parsing a column as numbers when it contains non-numeric symbols in addition to numerals.
 
 Code only:
 
@@ -277,10 +261,7 @@ debt$amount <- parse_number(debt$amount)
 
 **Viewing metadata before importing**
 
-In some cases, it may be easier to get an idea of how `readr` plans to
-parse a dataset before you actually import it. When you see the planned
-column specification, you might decide to change the type of one or more
-columns, for example.
+In some cases, it may be easier to get an idea of how `readr` plans to parse a dataset before you actually import it. When you see the planned column specification, you might decide to change the type of one or more columns, for example.
 
 -   `spec_csv` for .csv and .tsv files.
 -   `spec_delim` for .txt files (among others).

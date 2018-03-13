@@ -1,7 +1,8 @@
+<!--
 ---
 
 [TOC]
-
+-->
 ---
 
 **Foreword**
@@ -20,14 +21,14 @@ We can distribute the task on multiple machines (multiple CPU-cache-RAM) and use
 
 ## Applications
 
-- Linear algebra transformations,
-- Bootstrapping, Monte Carlo, inferential computations,
-- Using the `caret` package,
-- cross-validation in machine learning (train-test sets),
-- SVD,
-- PCA,
-- LDA,
-- regressions with a binary or multinomial dependent variables,
+- Linear algebra transformations.
+- Bootstrapping, Monte Carlo, inferential computations.
+- Using the `caret` package.
+- cross-validation in machine learning (train-test sets).
+- SVD.
+- PCA.
+- LDA.
+- regressions with a binary or multinomial dependent variables.
 - Neural networks and deep learning.
 
 # Implicit mode
@@ -48,13 +49,13 @@ We can use the `apply` family functions alone.
 
 ## Packages
 
-- `data.table`,
-- `snowfall`
-- `parallel`, `doParallel`,
-- `Rmpi`,
-- `foreach`,
-- `Multicore` on Unix-based OS,
-- `RevoScaleR` with `MicrosoftML` ([doc](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/revoscaler)),
+- `data.table`.
+- `snowfall`.
+- `parallel`, `doParallel`.
+- `Rmpi`.
+- `foreach`.
+- `Multicore` on Unix-based OS.
+- `RevoScaleR` with `MicrosoftML` ([doc](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/revoscaler)).
 - and others.
 
 ## Tests
@@ -72,5 +73,3 @@ Using the `parallel` package, then the `doParallel` and `foreach` package.
 Using the `parallel` package.
 
 Running a [binomial regression](http://www.win-vector.com/blog/2016/01/parallel-computing-in-r/).
-
----

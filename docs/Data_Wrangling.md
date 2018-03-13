@@ -1,3 +1,5 @@
+<!--
+
 -   [Documentation](#documentation)
 -   [Data Analysis in R, the `data.table` Way](#data-analysis-in-r-the-data.table-way)
     -   [1, `data.table` novice](#data.table-novice)
@@ -11,7 +13,7 @@
     -   [5, `group_by` and working with data](#group_by-and-working-with-data)
 -   [Adding `tidyr` Functions](#adding-tidyr-functions)
 -   [Extension: 'Joining Data in R with `dplyr`'](#extension-joining-data-in-r-with-dplyr)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

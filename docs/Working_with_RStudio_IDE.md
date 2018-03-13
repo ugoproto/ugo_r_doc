@@ -1,3 +1,5 @@
+<!--
+
 -   [Working with RStudio IDE (Part 1)](#working-with-rstudio-ide-part-1)
     -   [1, Orientation](#orientation)
     -   [2, Programming](#programming)
@@ -6,7 +8,7 @@
     -   [1, Packages](#packages)
     -   [2, Version Control](#version-control)
     -   [3, Reporting](#reporting)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -16,14 +18,11 @@
 
 ------------------------------------------------------------------------
 
-Working with RStudio IDE (Part 1)
-=================================
-
 **HELP**
 
 -   Alt+Shift+k or Tools/Keyboard Shortcuts Help.
 
-1, Orientation
+Orientation
 --------------
 
 **Commands**
@@ -67,7 +66,7 @@ View(df) # in a new window
 -   Help pane; pages.
 -   Viewer pane; more than plots!
 
-2, Programming
+Programming
 --------------
 
 **Scripting**
@@ -147,7 +146,7 @@ of the script; R automatically open the debugger mode.
 -   Shift+F4; step into.
 -   Shift+F6; execute the remainder of the bug.
 
-3, Project
+Project
 ----------
 
 -   Create a project with a folder and all the files (Global
@@ -173,12 +172,7 @@ project. Associate a project with its own set of packages.
 -   The library is virtually separate from R library.
 -   Perfect for collaborating with GitHub
 
-------------------------------------------------------------------------
-
-Working with RStudio IDE (Part 2)
-=================================
-
-1, Packages
+Packages
 -----------
 
 **Introduction to R packages**
@@ -352,7 +346,7 @@ Read r-pkgs.had.co.nz/package.html\#package
 
 Get www.rstudio.com/resources/cheatsheets/
 
-2, Version Control
+Version Control
 ------------------
 
 **Introduction to Git**
@@ -428,7 +422,7 @@ Go to help.github.com
 
 Go to stackoverflow.com
 
-3, Reporting
+Reporting
 ------------
 
 **Tools for reporting**

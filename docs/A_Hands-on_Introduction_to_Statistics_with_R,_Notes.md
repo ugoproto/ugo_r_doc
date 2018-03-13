@@ -1,3 +1,4 @@
+<!--
 -   [1, Descriptive Statistics](#descriptive-statistics)
     -   [Group data](#group-data)
 -   [2, Frequency Tables, CrossTables, and
@@ -47,7 +48,7 @@
     -   [Symmetry of a response for repeated measurements](#symmetry-of-a-response-for-repeated-measurements)
     -   [Independence of two numeric variables](#independence-of-two-numeric-variables)
     -   [Independence in contingency tables](#independence-in-contingency-tables)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

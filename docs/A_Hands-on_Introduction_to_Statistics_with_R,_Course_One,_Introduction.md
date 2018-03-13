@@ -1,9 +1,10 @@
+<!--
 -   [1, Variables](#variables)
 -   [2, Histograms and Distributions](#histograms-and-distributions)
 -   [3, Scales of Measurement](#scales-of-measurement)
 -   [4, Measures of Central Tendency](#measures-of-central-tendency)
 -   [5, Measures of Variability](#measures-of-variability)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

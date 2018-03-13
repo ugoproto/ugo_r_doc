@@ -1,6 +1,7 @@
+<!--
 -   [1, An introduction to repeated measures](#an-introduction-to-repeated-measures)
 -   [2, Repeated measures ANOVA](#repeated-measures-anova)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**

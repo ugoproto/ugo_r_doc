@@ -1,9 +1,10 @@
+<!--
 -   [Documentation](#documentation)
 -   [1, Introduction](#introduction)
 -   [2, Data Exploration](#data-exploration)
 -   [3, Data Manipulation](#data-manipulation)
 -   [4, Data Analysis](#data-analysis)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -21,7 +22,7 @@ Documentation
 -   Microsoft Data Science Virtual Machine: an analytics tool developed by the Revolution Analytics division premiered in January 2015.
 -   Microsoft R Open: a rebranded version of Revolution R Open.
 
-1, Introduction
+Introduction
 ---------------
 
 **Importing data with `rxImport` function**
@@ -135,7 +136,7 @@ myLMobj <- rxLinMod(formula = airSpeed ~ DepDelay,
 summary(myLMobj)
 ```
 
-2, Data Exploration
+Data Exploration
 -------------------
 
 **`RevoScaleR` options**
@@ -294,7 +295,7 @@ rxCube(Close ~ DayOfWeek,
        fweights = 'Volume')
 ```
 
-3, Data Manipulation
+Data Manipulation
 --------------------
 
 **Using `rxDataStep` to transform data**
@@ -357,7 +358,7 @@ rxSummary(~ scaledCreditScore,
           data = myMortData)
 ```
 
-4, Data Analysis
+Data Analysis
 ----------------
 
 **Preparing data for analysis: import**

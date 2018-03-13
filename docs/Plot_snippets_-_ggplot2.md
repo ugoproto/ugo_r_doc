@@ -1,3 +1,4 @@
+<!--
 -   [Documentation](#documentation)
 -   [Dataset](#dataset)
 -   [The `ggplot2` Package](#the-ggplot2-package)
@@ -15,7 +16,7 @@
 -   [5, Case Study](#case-study)
 -   [SECTION 3](#section-3)
 -   [SECTION 4 - Cheat List](#section-4---cheat-list)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -28,16 +29,14 @@
 Documentation
 -------------
 
--   [ggplot2](http://docs.ggplot2.org/current/)
--   [ggthemes](https://github.com/jrnold/ggthemes)
--   [r4stats](http://r4stats.com/examples/graphics-ggplot2/)
+-   [ggplot2](http://docs.ggplot2.org/current/).
+-   [ggthemes](https://github.com/jrnold/ggthemes).
+-   [r4stats](http://r4stats.com/examples/graphics-ggplot2/).
 
 Dataset
 -------
 
-For most examples, we use the `mtcars`, `diamonds`, `iris`,
-`ChickWeight`, `recess`, `fish`, `Vocab`, `Titanic`, `mamsleep`,
-`barley`, `adult` datasets.
+For most examples, we use the `mtcars`, `diamonds`, `iris`, `ChickWeight`, `recess`, `fish`, `Vocab`, `Titanic`, `mamsleep`, `barley`, `adult` datasets.
 
 The `ggplot2` Package
 ---------------------
@@ -77,7 +76,7 @@ Suggested additional packages...
 SECTION 1
 ---------
 
-1, Introduction
+Introduction
 ---------------
 
 **Exploring `ggplot2`, part 1**
@@ -264,7 +263,7 @@ dia_plot +
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-33-1.png)
 
-2, Data
+Data
 -------
 
 **Base package and `ggplot2`, part 1 - plot**
@@ -472,7 +471,7 @@ ggplot(iris.wide, aes(x = Length, y = Width, col = Part)) +
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-41-1.png)
 
-3, Aesthetics
+Aesthetics
 -------------
 
 **All about aesthetics, part 1**
@@ -773,7 +772,7 @@ ggplot(diamonds, aes(x = Clarity, y = Carat, col = PricePerCt)) +
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-74-1.png)
 
-4, Geometries
+Geometries
 -------------
 
 **Scatter plots and jittering (1)**
@@ -1153,7 +1152,7 @@ ggplot(fish.tidy, aes(x = Year, y = Capture, col = Species)) +
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-113-1.png)
 
-5, qplot and wrap-up
+`qplot` and wrap-up
 --------------------
 
 **Using `qplot`**
@@ -1311,7 +1310,7 @@ ggplot(titanic, aes(x = factor(Pclass), y = Age, col = factor(Sex))) +
 SECTION 2
 ---------
 
-1, Statistics
+Statistics
 -------------
 
 **Smoothing**
@@ -1595,7 +1594,7 @@ wt.cyl.am +
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-159-1.png)
 
-2, Coordinates and Facets
+Coordinates and Facets
 -------------------------
 
 **Zooming In**
@@ -1785,7 +1784,7 @@ ggplot(mamsleep, aes(x = time, y = name, col = sleep)) +
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-179-1.png)
 
-3, Themes
+Themes
 ---------
 
 **Rectangles**
@@ -2014,7 +2013,7 @@ z2 +
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-201-1.png)
 
-4, Best Practices
+Best Practices
 -----------------
 
 **Bar Plots (1)**
@@ -2274,7 +2273,7 @@ ggplot(barley, aes(x = year, y = yield, col = site, group = site, fill = site)) 
 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-226-1.png)
 
-5, Case Study
+Case Study
 -------------
 
 **Sort and order**
@@ -2703,10 +2702,8 @@ posn.j &lt;- position\_jitter(width = 0.1)
 -   `faithfuld`, 2d density estimate of Old Faithful data.
 -   `luv_colours`, colors().
 -   `midwest`, midwest demographics.
--   `mpg`, fuel economy data from 1999 and 2008 for 38 popular models
-    of car.
--   `msleep`, an updated and expanded version of the mammals
-    sleep dataset.
+-   `mpg`, fuel economy data from 1999 and 2008 for 38 popular models of car.
+-   `msleep`, an updated and expanded version of the mammals  sleep dataset.
 -   `presidential`, terms of 11 presidents from Eisenhower to Obama.
 -   `seals`, vector field of seal movements.
 -   `txhousing`, Housing sales in TX.
@@ -2723,29 +2720,21 @@ posn.j &lt;- position\_jitter(width = 0.1)
 -   shape (points).
 -   linetype (lines).
 -   `aes`, Define aesth.etic mappings.
--   `aes_` (aes\_q, aes\_string), Define aesthetic mappings from
-    strings, or quoted calls and formulas.
--   `aes_all`, Given a character vector, create a set of
-    identity mappings.
+-   `aes_` (aes\_q, aes\_string), Define aesthetic mappings from strings, or quoted calls and formulas.
+-   `aes_all`, Given a character vector, create a set of    identity mappings.
 -   `aes_auto`, Automatic aesthetic mapping.
--   `aes_colour_fill_alpha` (color, colour, fill), Colour related
-    aesthetics: colour, fill and alpha.
--   `aes_group_order` (group), Aesthetics: group.
-    aes\_linetype\_size\_shape (linetype, shape, size), Differentiation
-    related aesthetics: linetype, size, shape.
--   `aes_position` (x, xend, xmax, xmin, y, yend, ymax, ymin), Position
-    related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend.
+-   `aes_colour_fill_alpha` (color, colour, fill), Colour related aesthetics: colour, fill and alpha.
+-   `aes_group_order` (group), Aesthetics: group. aes\_linetype\_size\_shape (linetype, shape, size), Differentiation related aesthetics: linetype, size, shape.
+-   `aes_position` (x, xend, xmax, xmin, y, yend, ymax, ymin), Position related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend.
 
 **Position**
 
 -   `position_dodge`, Adjust position by dodging overlaps to the side.
--   `position_fill` (position\_stack), Stack overlapping objects on top
-    of one another.
+-   `position_fill` (position\_stack), Stack overlapping objects on top of one another.
 -   `position_identity`, Don't adjust position
 -   `position_nudge`, Nudge points.
 -   `position_jitter`, Jitter points to avoid overplotting.
--   `position_jitterdodge`, Adjust position by simultaneously dodging
-    and jittering.
+-   `position_jitterdodge`, Adjust position by simultaneously dodging and jittering.
 
 **Scales**
 
@@ -2754,40 +2743,17 @@ posn.j &lt;- position\_jitter(width = 0.1)
 -   `guide_legend`, Legend guide.
 -   `guide_colourbar` (guide\_colorbar), Continuous colour bar guide.
 -   `lims` (xlim, ylim), Convenience functions to set the axis limits.
--   `scale_alpha` (scale\_alpha\_continuous, scale\_alpha\_discrete),
-    Alpha scales.
--   `scale_colour_brewer` (scale\_color\_brewer,
-    scale\_color\_distiller, scale\_colour\_distiller,
-    scale\_fill\_brewer, scale\_fill\_distiller), Sequential, diverging
-    and qualitative colour scales from colorbrewer.org
--   `scale_colour_gradient` (scale\_color\_continuous,
-    scale\_color\_gradient, scale\_color\_gradient2,
-    scale\_color\_gradientn, scale\_colour\_continuous,
-    scale\_colour\_date, scale\_colour\_datetime,
-    scale\_colour\_gradient2, scale\_colour\_gradientn,
-    scale\_fill\_continuous, scale\_fill\_date, scale\_fill\_datetime,
-    scale\_fill\_gradient,
-    scale\_fill\_gradient2, scale\_fill\_gradientn).
--   `scale_colour_grey` (scale\_color\_grey, scale\_fill\_grey),
-    Sequential grey colour scale.
--   `scale_colour_hue` (scale\_color\_discrete, scale\_color\_hue,
-    scale\_colour\_discrete, scale\_fill\_discrete, scale\_fill\_hue),
-    Qualitative colour scale with evenly spaced hues.
--   `scale_identity` (scale\_alpha\_identity, scale\_color\_identity,
-    scale\_colour\_identity, scale\_fill\_identity,
-    scale\_linetype\_identity, scale\_shape\_identity,
-    scale\_size\_identity), Use values without scaling.
--   `scale_manual` (scale\_alpha\_manual, scale\_color\_manual,
-    scale\_colour\_manual, scale\_fill\_manual, scale\_linetype\_manual,
-    scale\_shape\_manual, scale\_size\_manual), Create your own
-    discrete scale.
--   `scale_linetype` (scale\_linetype\_continuous,
-    scale\_linetype\_discrete), Scale for line patterns.
--   `scale_shape` (scale\_shape\_continuous, scale\_shape\_discrete),
-    Scale for shapes, aka glyphs.
+-   `scale_alpha` (scale\_alpha\_continuous, scale\_alpha\_discrete), Alpha scales.
+-   `scale_colour_brewer` (scale\_color\_brewer, scale\_color\_distiller, scale\_colour\_distiller, scale\_fill\_brewer, scale\_fill\_distiller), Sequential, diverging and qualitative colour scales from colorbrewer.org
+-   `scale_colour_gradient` (scale\_color\_continuous, scale\_color\_gradient, scale\_color\_gradient2, scale\_color\_gradientn, scale\_colour\_continuous, scale\_colour\_date, scale\_colour\_datetime, scale\_colour\_gradient2, scale\_colour\_gradientn, scale\_fill\_continuous, scale\_fill\_date, scale\_fill\_datetime, scale\_fill\_gradient, scale\_fill\_gradient2, scale\_fill\_gradientn).
+-   `scale_colour_grey` (scale\_color\_grey, scale\_fill\_grey), Sequential grey colour scale.
+-   `scale_colour_hue` (scale\_color\_discrete, scale\_color\_hue, scale\_colour\_discrete, scale\_fill\_discrete, scale\_fill\_hue), Qualitative colour scale with evenly spaced hues.
+-   `scale_identity` (scale\_alpha\_identity, scale\_color\_identity, scale\_colour\_identity, scale\_fill\_identity, scale\_linetype\_identity, scale\_shape\_identity, scale\_size\_identity), Use values without scaling.
+-   `scale_manual` (scale\_alpha\_manual, scale\_color\_manual, scale\_colour\_manual, scale\_fill\_manual, scale\_linetype\_manual, scale\_shape\_manual, scale\_size\_manual), Create your own discrete scale.
+-   `scale_linetype` (scale\_linetype\_continuous, scale\_linetype\_discrete), Scale for line patterns.
+-   `scale_shape` (scale\_shape\_continuous, scale\_shape\_discrete), Scale for shapes, aka glyphs.
 -   `scale_size` (scale\_radius, scale\_size\_area,
-    scale\_size\_continuous, scale\_size\_date, scale\_size\_datetime,
-    scale\_size\_discrete), Scale size (area or radius).
+    scale\_size\_continuous, scale\_size\_date, scale\_size\_datetime, scale\_size\_discrete), Scale size (area or radius).
 -   `scale_x_discrete` (scale\_y\_discrete), Discrete position.
 -   `labs` (ggtitle, xlab, ylab), Change axis labels and legend titles.
 -   `update_labels`, Update axis/legend labels.
@@ -2802,23 +2768,17 @@ posn.j &lt;- position\_jitter(width = 0.1)
 -   `geom_abline` (geom\_hline, geom\_vline), Lines: horizontal,
     vertical, and specified by slope and intercept.
 -   `geom_bar` (stat\_count), Bars, rectangles with bases on x-axis
--   `geom_bin2d` (stat\_bin2d, stat\_bin\_2d), Add heatmap of 2d
-    bin counts.
+-   `geom_bin2d` (stat\_bin2d, stat\_bin\_2d), Add heatmap of 2d bin counts.
 -   `geom_blank`, Blank, draws nothing.
 -   `geom_boxplot` (stat\_boxplot), Box and whiskers plot.
--   `geom_contour` (stat\_contour), Display contours of a 3d surface
-    in 2d.
--   `geom_count`(stat\_sum), Count the number of observations at
-    each location.
--   `geom_crossbar` (geom\_errorbar, geom\_linerange, geom\_pointrange),
-    Vertical intervals: lines, crossbars & errorbars.
+-   `geom_contour` (stat\_contour), Display contours of a 3d surface in 2d.
+-   `geom_count`(stat\_sum), Count the number of observations at each location.
+-   `geom_crossbar` (geom\_errorbar, geom\_linerange, geom\_pointrange), Vertical intervals: lines, crossbars & errorbars.
 -   `geom_density` (stat\_density), Display a smooth density estimate.
--   `geom_density_2d` (geom\_density2d, stat\_density2d,
-    stat\_density\_2d), Contours from a 2d density estimate.
+-   `geom_density_2d` (geom\_density2d, stat\_density2d,    stat\_density\_2d), Contours from a 2d density estimate.
 -   `geom_dotplot`, Dot plot
 -   `geom_errorbarh`, Horizontal error bars.
--   `geom_freqpoly` (geom\_histogram, stat\_bin), Histograms and
-    frequency polygons.
+-   `geom_freqpoly` (geom\_histogram, stat\_bin), Histograms and frequency polygons.
 -   `geom_hex` (stat\_bin\_hex, stat\_binhex), Hexagon binning.
 -   `geom_jitter`, Points, jittered to reduce overplotting.
 -   `geom_label` (geom\_text), Textual annotations.
@@ -2826,8 +2786,7 @@ posn.j &lt;- position\_jitter(width = 0.1)
 -   `geom_path` (geom\_line, geom\_step), Connect observations.
 -   `geom_point`, Points, as for a scatterplot.
 -   `geom_polygon`, Polygon, a filled path.
--   `geom_quantile` (stat\_quantile), Add quantile lines from a
-    quantile regression.
+-   `geom_quantile` (stat\_quantile), Add quantile lines from a quantile regression.
 -   `geom_raster` (geom\_rect, geom\_tile), Draw rectangles.
 -   `geom_ribbon` (geom\_area), Ribbons and area plots.
 -   `geom_rug`, Marginal rug plots.
@@ -2858,15 +2817,10 @@ posn.j &lt;- position\_jitter(width = 0.1)
 **Fortify**
 
 -   `fortify`, Fortify a model with data.
--   `fortify-multcomp` (fortify.cld, fortify.confint.glht, fortify.glht,
-    fortify.summary.glht), Fortify methods for objects produced by.
--   `fortify.lm`, Supplement the data fitted to a linear model with
-    model fit statistics.
+-   `fortify-multcomp` (fortify.cld, fortify.confint.glht, fortify.glht, fortify.summary.glht), Fortify methods for objects produced by.
+-   `fortify.lm`, Supplement the data fitted to a linear model with model fit statistics.
 -   `fortify.map`, Fortify method for map objects.
--   `fortify.sp` (fortify.Line, fortify.Lines, fortify.Polygon,
-    fortify.Polygons, fortify.SpatialLinesDataFrame,
-    fortify.SpatialPolygons, fortify.SpatialPolygonsDataFrame), Fortify
-    method for classes from the sp package.
+-   `fortify.sp` (fortify.Line, fortify.Lines, fortify.Polygon, fortify.Polygons, fortify.SpatialLinesDataFrame, fortify.SpatialPolygons, fortify.SpatialPolygonsDataFrame), Fortify method for classes from the sp package.
 -   `map_data`, Create a data frame of map data.
 
 **Statistics**
@@ -2880,8 +2834,7 @@ posn.j &lt;- position\_jitter(width = 0.1)
 -   `stat_function`, Superimpose a function.
 -   `stat_identity`, Identity statistic.
 -   `stat_qq` (geom\_qq), Calculation for quantile-quantile plot.
--   `stat_summary_2d` (stat\_summary2d, stat\_summary\_hex), Bin and
-    summarise in 2d (rectangle & hexagons)
+-   `stat_summary_2d` (stat\_summary2d, stat\_summary\_hex), Bin and summarise in 2d (rectangle & hexagons)
 -   `stat_unique`, Remove duplicates.
 -   Coordinates.
 -   cartesian.

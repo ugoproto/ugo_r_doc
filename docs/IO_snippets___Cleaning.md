@@ -1,3 +1,4 @@
+<!--
 -   [Datasets](#datasets)
 -   [Importing Data Into R](#importing-data-into-r)
     -   [1, Importing Data from Flat
@@ -24,7 +25,7 @@
     -   [2, Tidying Data](#tidying-data)
     -   [3, Preparing Data for Analysis](#preparing-data-for-analysis)
     -   [4, Putting it All Together](#putting-it-all-together)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -37,28 +38,15 @@
 Datasets
 --------
 
--   [R Dataset
-    Packages](http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html);
-    by default in R.
--   Other dataset can be imported with
-    `data(Cars93, package = 'MASS')` for example.
--   [csv/doc
-    Datasets](https://vincentarelbundock.github.io/Rdatasets/datasets.html).
--   [Free Datasets](https://r-dir.com/reference/datasets.html) from the
-    World Bank, Gapminder, Kaggle, Quandl, Reddit, and many
-    more websites.
--   [Datasets](https://www.r-bloggers.com/datasets-to-practice-your-data-mining/)
-    to Practice Your Data Mining.
--   [Houghton Mifflin
-    Data](http://college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/slr/frames/frame.html)
-    for linear regressions.
--   [Regression Datasets](http://data.princeton.edu/wws509/datasets/)
-    for Generalized Linear Models (linear, logistic, poisson,
-    multinomial, survival).
--   [Public Datasets on
-    GitHub](http://www.kdnuggets.com/2015/04/awesome-public-datasets-github.html)
--   [Awesome Public
-    Datasets](https://github.com/caesar0301/awesome-public-datasets)
+-   [R Dataset Packages](http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html); by default in R.
+-   Other dataset can be imported with `data(Cars93, package = 'MASS')` for example.
+-   [csv/doc Datasets](https://vincentarelbundock.github.io/Rdatasets/datasets.html).
+-   [Free Datasets](https://r-dir.com/reference/datasets.html) from the World Bank, Gapminder, Kaggle, Quandl, Reddit, and many more websites.
+-   [Datasets](https://www.r-bloggers.com/datasets-to-practice-your-data-mining/) to Practice Your Data Mining.
+-   [Houghton Mifflin Data](http://college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/slr/frames/frame.html) for linear regressions.
+-   [Regression Datasets](http://data.princeton.edu/wws509/datasets/) for Generalized Linear Models (linear, logistic, poisson, multinomial, survival).
+-   [Public Datasets on GitHub](http://www.kdnuggets.com/2015/04/awesome-public-datasets-github.html).
+-   [Awesome Public Datasets](https://github.com/caesar0301/awesome-public-datasets).
 
 ------------------------------------------------------------------------
 
@@ -79,7 +67,7 @@ The packages:
 -   `httr`.
 -   `jsonlite`.
 
-1, Importing Data from Flat Files
+Importing Data from Flat Files
 ---------------------------------
 
 ### R functions, by default.
@@ -170,7 +158,7 @@ hotdogs <- read.table(path, header = FALSE, sep = '\t', col.names = c('type', 'c
 
 ------------------------------------------------------------------------
 
-### (from 5, Importing Data from the Web)
+### (from Importing Data from the Web)
 
 ``` r
 # https URL to the swimming_pools csv file.
@@ -371,7 +359,7 @@ spec_csv('chickwts.csv')
 
 ------------------------------------------------------------------------
 
-### (from 5, Importing Data from the Web)
+### (from Importing Data from the Web)
 
 **Import Flat files from the web**
 
@@ -433,7 +421,7 @@ potatoes <- fread('potatoes.txt', select = c(6:8))
 tasty_potatoes <- subset(potatoes, potatoes$flavor > 3)
 ```
 
-2, Importing Data from Excel
+Importing Data from Excel
 ----------------------------
 
 ### The `readxl` package
@@ -497,7 +485,7 @@ latitude_sel <- read_excel('latitude.xlsx', skip = 21, col_names = FALSE)
 
 ------------------------------------------------------------------------
 
-### (from 5, Importing Data from the Web)
+### (from Importing Data from the Web)
 
 **Import Excel files from the web**
 
@@ -610,7 +598,7 @@ impact <- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xl
 # readStrategy =
 ```
 
-3, Importing Data from Other Statistical Software
+Importing Data from Other Statistical Software
 -------------------------------------------------
 
 ### The `haven` package
@@ -714,7 +702,7 @@ demo_1 <- read.spss('international.sav', to.data.frame = TRUE)
 demo_2 <- read.spss('international.sav', to.data.frame = TRUE, use.value.labels = FALSE)
 ```
 
-4, Importing Data from Relational Data
+Importing Data from Relational Data
 --------------------------------------
 
 ### The `DBI` package
@@ -896,7 +884,7 @@ interface.
 -   And there are manu more packages for NoSQL databases such
     as MongoDB.
 
-4b, Importing Data from Relational Data -- More
+Importing Data from Relational Data -- More
 -----------------------------------------------
 
 ### `DBI`
@@ -1100,7 +1088,7 @@ dbListTables(postgresqldb)
 dbDisconnect(postgresqldb)
 ```
 
-5, Importing Data from the Web
+Importing Data from the Web
 ------------------------------
 
 The other package above can download files from the web. The next
@@ -1253,7 +1241,7 @@ mini_json <- minify(pretty_json)
 mini_json
 ```
 
-6, Keyboard Inputting
+Keyboard Inputting
 ---------------------
 
 **Coding**
@@ -1276,7 +1264,7 @@ mydata <- edit(mydata)
 # note that without the assignment in the line above, the edits are not saved! 
 ```
 
-7, Exporting Data
+Exporting Data
 -----------------
 
 ### To a Tab-Delimited Text File
@@ -1372,20 +1360,20 @@ library(foreign)
 write.dta(mydata, "c:/mydata.dta") 
 ```
 
-8, Inspecting Data - Missing Data
+Inspecting Data - Missing Data
 ---------------------------------
 
 ### Inspecting
 
--   `ls(object)`
--   `names(object)`
--   `str(object)`
--   `levels(object$v1)`
--   `dim(object)`
--   `class(object)`
--   `print(object)`
--   `head(object, 10)`
--   `tail(object, 20)`
+-   `ls(object)`.
+-   `names(object)`.
+-   `str(object)`.
+-   `levels(object$v1)`.
+-   `dim(object)`.
+-   `class(object)`.
+-   `print(object)`.
+-   `head(object, 10)`.
+-   `tail(object, 20)`.
 
 **Testing for Missing Values**
 
@@ -1436,7 +1424,7 @@ View(iris) # open a spreadsheet
 -   The [Amelia II](http://gking.harvard.edu/amelia/) software.
 -   The `mitools` package.
 
-9, Labels & Levels
+Labels & Levels
 ------------------
 
 **Basic**
@@ -1492,7 +1480,7 @@ describe(iris$Sepal.Length) # not commented
 How to work with Quandl in R
 ============================
 
-1, Importing Quandl Datasets
+Importing Quandl Datasets
 ----------------------------
 
 [Quandl](https://www.quandl.com/) delivers financial, economic and
@@ -1553,7 +1541,7 @@ str(results)
 BitCoin <- Quandl('BCHAIN/TOTBC')
 ```
 
-2, Manipulating Quandl Datasets
+Manipulating Quandl Datasets
 -------------------------------
 
 **Manipulating data**
@@ -1609,7 +1597,7 @@ The packages used:
 -   `stringr` for regex.
 -   `lubridate` for time and date.
 
-1, Introduction and Exploring Raw Data
+Introduction and Exploring Raw Data
 --------------------------------------
 
 **Here's what messy data look like**
@@ -1683,7 +1671,7 @@ hist(bmi$Y2008)
 plot(bmi$Y1980, bmi$Y2008)
 ```
 
-2, Tidying Data
+Tidying Data
 ---------------
 
 **Gathering columns into key-value pairs**
@@ -1771,7 +1759,7 @@ census_long4 <- separate(census_long3, yr_month, c('year', 'month'), '_')
 head(census_long4, 6)
 ```
 
-3, Preparing Data for Analysis
+Preparing Data for Analysis
 ------------------------------
 
 **Types of variables in R**
@@ -1943,7 +1931,7 @@ boxplot(students3$age)
 boxplot(students3$absences)
 ```
 
-4, Putting it All Together
+Putting it All Together
 --------------------------
 
 **Get a feel for the data**

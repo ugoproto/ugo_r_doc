@@ -1,9 +1,10 @@
+<!--
 -   [Default colours](#default-colours)
 -   [Basic colours](#basic-colours)
 -   [RColorBrewer examples](#rcolorbrewer-examples)
 -   [Building a palette](#building-a-palette)
 -   [Grabing colours](#grabing-colours)
-
+-->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -257,5 +258,5 @@ pie(rep(1, n), col = mycols2, main = 'mycols2 (random)')
 Grabing colours
 ---------------
 
--   [Grab Website Colors](http://www.colorcombos.com/grabcolors.html)
--   [RGB Color Codes Chart](http://www.rapidtables.com/web/color/RGB_Color.htm#color%20picker)
+-   [Grab Website Colors](http://www.colorcombos.com/grabcolors.html).
+-   [RGB Color Codes Chart](http://www.rapidtables.com/web/color/RGB_Color.htm#color%20picker).

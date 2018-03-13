@@ -1,5 +1,4 @@
-[TOC]
-
+<!-- -->
 ------------------------------------------------------------------------
 
 **Foreword**
@@ -35,9 +34,7 @@ Overall data structures
 
     ## [1] "list"
 
-Note that if an object does not have a class attribute, it has an
-implicit `class`, "matrix", "array" or the result of the `mode()`
-function.
+Note that if an object does not have a class attribute, it has an implicit `class`, "matrix", "array" or the result of the `mode()` function.
 
 Dates and formulas are a special class.
 
@@ -77,10 +74,8 @@ Dates and formulas are a special class.
 Formula structures
 ==================
 
--   Independent variables appear as "predictor (variable)", "controlled
-    variable", "feature", etc.
--   Dependent variables are "response variable", "outcome variable"
-    or "label".
+-   Independent variables appear as "predictor (variable)", "controlled variable", "feature (variable)", etc.
+-   Dependent variables are "response variable", "outcome variable" or "label".
 
 <!-- -->
 
@@ -121,8 +116,7 @@ Formulation
 -----------
 
 -   `y ~ x + a + b` where "y is a function of x, a, and b".
--   `Sepal.Width ~ Petal.Width | Species` where "the sepal width is a
-    function of petal width, conditioned on species".
+-   `Sepal.Width ~ Petal.Width | Species` where "the sepal width is a function of petal width, conditioned on species".
 
 <!-- -->
 
@@ -174,13 +168,11 @@ Concatenation
 Operators
 ---------
 
--   `-` for removing terms,
--   `:` for interaction for the variable' interaction, not the variable
-    itself (regression),
--   `*` for crossing: include two variables and their interaction
-    (regression),
--   `%in%` for nesting,
--   `^` for limit crossing to the specified degree,
+-   `-` for removing terms.
+-   `:` for interaction for the variable' interaction, not the variable itself (regression).
+-   `*` for crossing: include two variables and their interaction (regression).
+-   `%in%` for nesting.
+-   `^` for limit crossing to the specified degree.
 -   `-1` for removing the intercept.
 
 <!-- -->
@@ -351,8 +343,7 @@ Get back a data.frame of the fitted object
 Mixed-effect models
 -------------------
 
-The `nlme` and the `lme4` package are dedicated to fitting linear and
-generalized linear mixed-effects models.
+The `nlme` and the `lme4` package are dedicated to fitting linear and generalized linear mixed-effects models.
 
     # Load packages
     library(MASS)
@@ -550,8 +541,7 @@ The `ggplot2` package
 The `ggformula` package
 -----------------------
 
-`ggplot2`, but provides an interface that is based on formulas like the
-`lattice` package. Check out the vignette.
+`ggplot2`, but provides an interface that is based on formulas like the `lattice` package. Check out the vignette.
 
     # Load package
     library(ggformula)
@@ -1344,9 +1334,5 @@ Standard and non-standard evaluation.
 Other packages
 --------------
 
--   `Formula`,
+-   `Formula`.
 -   `formula.tools`.
-
-From R for Data Science by Garrett Grolemund and Hadley Wickham (2017).
-
-------------------------------------------------------------------------

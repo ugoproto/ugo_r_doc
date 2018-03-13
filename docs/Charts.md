@@ -1,9 +1,8 @@
-# Charts & Colors
-
+<!--
 ---
 
 [TOC]
-
+-->
 ---
 
 **Foreword**
