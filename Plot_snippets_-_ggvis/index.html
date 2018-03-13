@@ -1,569 +1,1368 @@
+
+
+
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="Ugo Sparks">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Plot Snippets - ggvis - ugo_r_doc</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../css/highlight.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Plot Snippets - ggvis";
-    var mkdocs_page_input_path = "Plot_snippets_-_ggvis.md";
-    var mkdocs_page_url = "/Plot_snippets_-_ggvis/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
-  
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-93008985-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> ugo_r_doc</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A R documentation website.">
+      
+      
+        <link rel="canonical" href="https://ugoproto.github.io/ugo_r_doc/Plot_snippets_-_ggvis/">
+      
+      
+        <meta name="author" content="Ugo Sparks">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>Plot Snippets - ggvis - ugo_r_doc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#dataset" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://ugoproto.github.io/ugo_r_doc/" title="ugo_r_doc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">layers</i>
+          
+        </a>
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../An Introduction to R/">An Introduction to R</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../R_CS/">R Cheat Sheets</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Intermediate R</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Intermediate_R/">Intermediate R</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">RStudio</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Code___Plot_Chunk_Options/">Code & Plot Chunk Options</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Data Wrangling Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data_Analysis_in_R,_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Plot Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Plot Snippets - ggvis</a>
-    <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#dataset">Dataset</a></li>
-    
-
-    <li class="toctree-l3"><a href="#the-ggvis-package">The ggvis Package</a></li>
-    
-
-    <li class="toctree-l3"><a href="#1-the-grammar-of-graphics">1, The Grammar of Graphics</a></li>
-    
-
-    <li class="toctree-l3"><a href="#2-lines-and-syntax">2, Lines and Syntax</a></li>
-    
-
-    <li class="toctree-l3"><a href="#3-transformations">3, Transformations</a></li>
-    
-
-    <li class="toctree-l3"><a href="#4-interactivity-and-layers">4, Interactivity and Layers</a></li>
-    
-
-    <li class="toctree-l3"><a href="#5-customizing-axes-legends-and-scales">5, Customizing Axes, Legends, and Scales</a></li>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Improved_codes/">Improved codes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Formulas_in_R/">Formulas in R</a>
-                </li>
-    </ul>
-	    </li>
+              <span class="md-header-nav__topic">
+                ugo_r_doc
+              </span>
+              <span class="md-header-nav__topic">
+                Plot Snippets - ggvis
+              </span>
+            
           
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Packages</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../googleVis/">googleVis (embed HTML plots)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../gganimate/">gganimate</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/">Fast-and-Frugal Decision Trees</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Other Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Tables/">Tables</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../embedding/">Embedding HTML into HTML</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../embedding2/">Embedding Rmd into Rmd</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Frequentist_Bayesian/">Frequentist vs. Bayesian</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Parallel computing in R/">Parallel computing in R</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">A Hands-on Introduction to Statistics with R</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/">Statistics with R, Course One, Introduction</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/">Statistics with R, Notes</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Time+Series+in+R+The+Power+of+xts+and+zoo/">Time Series in R, The Power of xts and zoo</a>
-	    </li>
-          
-        </ul>
+        </div>
       </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">ugo_r_doc</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
+      <div class="md-flex__cell md-flex__cell--shrink">
         
-          <li>Plot Snippets &raquo;</li>
-        
-      
-    
-    <li>Plot Snippets - ggvis</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main">
-            <div class="section">
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ugo_r_doc
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">layers</i>
+      
+    </span>
+    ugo_r_doc
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ugo_r_doc
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Basics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../R_CS/" title="R Cheat Sheets" class="md-nav__link">
+      R Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../An Introduction to R/" title="An Introduction to R" class="md-nav__link">
+      An Introduction to R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/" title="Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques" class="md-nav__link">
+      Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formulas_in_R/" title="Formulas in R" class="md-nav__link">
+      Formulas in R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Improved_codes/" title="Improved Codes" class="md-nav__link">
+      Improved Codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Intermediate_R/" title="Intermediate R" class="md-nav__link">
+      Intermediate R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Intermediate_R_-_The_apply_Family/" title="Intermediate R - The apply Family" class="md-nav__link">
+      Intermediate R - The apply Family
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      RStudio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        RStudio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Code___Plot_Chunk_Options/" title="Code & Plot Chunk Options" class="md-nav__link">
+      Code & Plot Chunk Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working_with_RStudio_IDE/" title="Working with the RStudio IDE" class="md-nav__link">
+      Working with the RStudio IDE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Wrangling Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Wrangling Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
+      I/O snippets & Cleaning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Reading_Data_into_R_with_readr/" title="Reading Data into R with readr" class="md-nav__link">
+      Reading Data into R with readr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Analysis_in_R,_the_data.table_Way/" title="Data Analysis in R, the data.table Way" class="md-nav__link">
+      Data Analysis in R, the data.table Way
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Manipulation_in_R_with_dplyr/" title="Data Manipulation in R with dplyr" class="md-nav__link">
+      Data Manipulation in R with dplyr
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Plot Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Plot Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_Basics/" title="Plot Snippets for Exploratory (and some Explanatory) Analyses" class="md-nav__link">
+      Plot Snippets for Exploratory (and some Explanatory) Analyses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_ggplot2/" title="Plot Snippets - ggplot2" class="md-nav__link">
+      Plot Snippets - ggplot2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Plot Snippets - ggvis
+      </label>
+    
+    <a href="./" title="Plot Snippets - ggvis" class="md-nav__link md-nav__link--active">
+      Plot Snippets - ggvis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" title="Dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ggvis-package" title="The ggvis Package" class="md-nav__link">
+    The ggvis Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-grammar-of-graphics" title="The Grammar of Graphics" class="md-nav__link">
+    The Grammar of Graphics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lines-and-syntax" title="Lines and Syntax" class="md-nav__link">
+    Lines and Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformations" title="Transformations" class="md-nav__link">
+    Transformations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactivity-and-layers" title="Interactivity and Layers" class="md-nav__link">
+    Interactivity and Layers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-axes-legends-and-scales" title="Customizing Axes, Legends, and Scales" class="md-nav__link">
+    Customizing Axes, Legends, and Scales
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_Colours/" title="Plot Snippets - Colours" class="md-nav__link">
+      Plot Snippets - Colours
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Packages
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Packages
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../googleVis/" title="googleVis (embed HTML plots)" class="md-nav__link">
+      googleVis (embed HTML plots)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gganimate/" title="gganimate" class="md-nav__link">
+      gganimate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/" title="Fast-and-Frugal Decision Trees" class="md-nav__link">
+      Fast-and-Frugal Decision Trees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Big_Data_Analysis_with_Revolution_R_Enterprise/" title="Big Data Analysis with Revolution R Enterprise" class="md-nav__link">
+      Big Data Analysis with Revolution R Enterprise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Time+Series+in+R+The+Power+of+xts+and+zoo/" title="Time Series in R, The Power of xts and zoo" class="md-nav__link">
+      Time Series in R, The Power of xts and zoo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Parallel computing in R/" title="Parallel computing in R" class="md-nav__link">
+      Parallel computing in R
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Other Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Other Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tables/" title="Tables" class="md-nav__link">
+      Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedding/" title="Embedding HTML into HTML" class="md-nav__link">
+      Embedding HTML into HTML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedding2/" title="Embedding Rmd into Rmd" class="md-nav__link">
+      Embedding Rmd into Rmd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequentist_Bayesian/" title="Frequentist vs. Bayesian" class="md-nav__link">
+      Frequentist vs. Bayesian
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      A Hands-on Introduction to Statistics with R
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        A Hands-on Introduction to Statistics with R
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/" title="Statistics with R, Course One, Introduction" class="md-nav__link">
+      Statistics with R, Course One, Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/" title="Statistics with R, Course Two, Student's t-test" class="md-nav__link">
+      Statistics with R, Course Two, Student's t-test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/" title="Statistics with R, Course Three, Analysis of Variance" class="md-nav__link">
+      Statistics with R, Course Three, Analysis of Variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/" title="Statistics with R, Course Four, Repeated Measures ANOVA" class="md-nav__link">
+      Statistics with R, Course Four, Repeated Measures ANOVA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/" title="Statistics with R, Course Five, Correlation and Regression" class="md-nav__link">
+      Statistics with R, Course Five, Correlation and Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/" title="Statistics with R, Course Six, Multiple Regression" class="md-nav__link">
+      Statistics with R, Course Six, Multiple Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/" title="Statistics with R, Course Seven, Moderation and Mediation" class="md-nav__link">
+      Statistics with R, Course Seven, Moderation and Mediation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/" title="Statistics with R, Notes" class="md-nav__link">
+      Statistics with R, Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dataset" title="Dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ggvis-package" title="The ggvis Package" class="md-nav__link">
+    The ggvis Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-grammar-of-graphics" title="The Grammar of Graphics" class="md-nav__link">
+    The Grammar of Graphics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lines-and-syntax" title="Lines and Syntax" class="md-nav__link">
+    Lines and Syntax
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transformations" title="Transformations" class="md-nav__link">
+    Transformations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactivity-and-layers" title="Interactivity and Layers" class="md-nav__link">
+    Interactivity and Layers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-axes-legends-and-scales" title="Customizing Axes, Legends, and Scales" class="md-nav__link">
+    Customizing Axes, Legends, and Scales
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
-                <ul>
-<li><a href="#documentation">Documentation</a></li>
-<li><a href="#dataset">Dataset</a></li>
-<li><a href="#the-ggvis-package">The <code>ggvis</code> Package</a></li>
-<li><a href="#the-grammar-of-graphics">1, The Grammar of Graphics</a></li>
-<li><a href="#lines-and-syntax">2, Lines and Syntax</a></li>
-<li><a href="#transformations">3, Transformations</a></li>
-<li><a href="#interactivity-and-layers">4, Interactivity and Layers</a></li>
-<li><a href="#customizing-axes-legends-and-scales">5, Customizing Axes, Legends, and<br />
-    Scales</a></li>
-</ul>
+                
+                  <a href="https://github.com/ugoproto/ugo_r_doc.git/edit/master/docs/Plot_snippets_-_ggvis.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Plot Snippets - ggvis</h1>
+                
+                <!--
+-   [Documentation](#documentation)
+-   [Dataset](#dataset)
+-   [The `ggvis` Package](#the-ggvis-package)
+-   [1, The Grammar of Graphics](#the-grammar-of-graphics)
+-   [2, Lines and Syntax](#lines-and-syntax)
+-   [3, Transformations](#transformations)
+-   [4, Interactivity and Layers](#interactivity-and-layers)
+-   [5, Customizing Axes, Legends, and
+    Scales](#customizing-axes-legends-and-scales)
+-->
+
 <hr />
 <p><strong>Foreword</strong></p>
 <ul>
 <li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
 <li>Snippets and results.</li>
-<li><code>ggvis</code> generates html outputs. Graphics presented here are images:<br />
-    .png files; .gif files when specified.</li>
+<li><code class="codehilite">ggvis</code> generates html outputs. Graphics presented here are images: .png files; .gif files when specified.</li>
 </ul>
 <hr />
 <h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="http://ggvis.rstudio.com/"><code>ggvis</code> Overview</a></li>
-<li><a href="http://ggvis.rstudio.com/cookbook.html"><code>ggvis</code> Cookbook</a></li>
+<li><a href="http://ggvis.rstudio.com/"><code class="codehilite">ggvis</code> Overview</a>.</li>
+<li><a href="http://ggvis.rstudio.com/cookbook.html"><code class="codehilite">ggvis</code> Cookbook</a>.</li>
 </ul>
 <h4 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h4>
-<p>For most examples, we use the <code>mtcars</code>, <code>pressure</code>, <code>faithful</code> datasets.</p>
-<h4 id="the-ggvis-package">The <code>ggvis</code> Package<a class="headerlink" href="#the-ggvis-package" title="Permanent link">&para;</a></h4>
-<pre><code class="r">library(ggvis)
-</code></pre>
+<p>For most examples, we use the <code class="codehilite">mtcars</code>, <code class="codehilite">pressure</code>, <code class="codehilite">faithful</code> datasets.</p>
+<h4 id="the-ggvis-package">The <code class="codehilite">ggvis</code> Package<a class="headerlink" href="#the-ggvis-package" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>ggvis<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<h4 id="1-the-grammar-of-graphics">1, The Grammar of Graphics<a class="headerlink" href="#1-the-grammar-of-graphics" title="Permanent link">&para;</a></h4>
-<p><strong>Start to explore </strong></p>
-<pre><code class="r"># change the code below to plot the disp variable of mtcars on the x axis
-mtcars %&gt;%
-  ggvis(~disp, ~mpg) %&gt;%
-  layer_points()
-</code></pre>
+<h4 id="the-grammar-of-graphics">The Grammar of Graphics<a class="headerlink" href="#the-grammar-of-graphics" title="Permanent link">&para;</a></h4>
+<p><strong>Start to explore</strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the code below to plot the disp variable of mtcars on the x axis</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>disp<span class="p">,</span> <span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis1.png" /></p>
-<p><strong><code>ggvis</code> and its capabilities </strong></p>
-<pre><code class="r"># Change the code below to make a graph with red points
-mtcars %&gt;%
-  ggvis(~wt, ~mpg, fill := &quot;red&quot;) %&gt;%
-  layer_points()
-</code></pre>
+<p><strong><code class="codehilite">ggvis</code> and its capabilities</strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the code below to make a graph with red points</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">:=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis2.png" /></p>
-<pre><code class="r"># Change the code below draw smooths instead of points
-mtcars %&gt;%
-  ggvis(~wt, ~mpg) %&gt;%
-  layer_smooths()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the code below draw smooths instead of points</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_smooths<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis3.png" /></p>
-<pre><code class="r"># Change the code below to make a graph containing both points and a smoothed summary line
-mtcars %&gt;%
-  ggvis(~wt, ~mpg) %&gt;%
-  layer_points() %&gt;%
-  layer_smooths()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the code below to make a graph containing both points and a smoothed summary line</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  layer_smooths<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis4.png" /></p>
-<p><strong><code>ggvis</code> grammar ~ graphics grammar</strong></p>
-<pre><code class="r"># Make a scatterplot of the pressure dataset
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
+<p><strong><code class="codehilite">ggvis</code> grammar</strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Make a scatterplot of the pressure dataset</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
   layer_points
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis5.png" /></p>
-<pre><code class="r"># Adapt the code you wrote for the first challenge: show bars instead of points
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Adapt the code you wrote for the first challenge: show bars instead of points</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
   layer_bars
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis6.png" /></p>
-<pre><code class="r"># Adapt the code you wrote for the first challenge: show lines instead of points
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Adapt the code you wrote for the first challenge: show lines instead of points</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
   layer_lines
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis7.png" /></p>
-<pre><code class="r"># Adapt the code you wrote for the first challenge: map the fill property to the temperature variable
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, fill = ~temperature) %&gt;%
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Adapt the code you wrote for the first challenge: map the fill property to the temperature variable</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span>temperature<span class="p">)</span> <span class="o">%&gt;%</span>
   layer_points
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis8.png" /></p>
-<pre><code class="r"># Extend the code you wrote for the previous challenge: map the size property to the pressure variable
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, fill = ~temperature, size = ~pressure) %&gt;%
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Extend the code you wrote for the previous challenge: map the size property to the pressure variable</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span>temperature<span class="p">,</span> size <span class="o">=</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
   layer_points
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis9.png" /></p>
 <p><strong>4 essential components of a graph</strong></p>
-<pre><code class="r">faithful %&gt;%
-    ggvis(~waiting, ~eruptions, fill := &quot;red&quot;) %&gt;%
-    layer_points() %&gt;%
-    add_axis(&quot;y&quot;, title = &quot;Duration of eruption (m)&quot;,
-             values = c(2, 3, 4, 5), subdivide = 9) %&gt;%
-    add_axis(&quot;x&quot;, title = &quot;Time since previous eruption (m)&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>faithful <span class="o">%&gt;%</span>
+    ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> fill <span class="o">:=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+    add_axis<span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> title <span class="o">=</span> <span class="s">&quot;Duration of eruption (m)&quot;</span><span class="p">,</span>
+             values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">),</span> subdivide <span class="o">=</span> <span class="m">9</span><span class="p">)</span> <span class="o">%&gt;%</span>
+    add_axis<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> title <span class="o">=</span> <span class="s">&quot;Time since previous eruption (m)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis10.png" /></p>
-<h4 id="2-lines-and-syntax">2, Lines and Syntax<a class="headerlink" href="#2-lines-and-syntax" title="Permanent link">&para;</a></h4>
-<p><strong>Three operators: <code>%&gt;%</code>, <code>=</code> and <code>:=</code></strong></p>
-<pre><code class="r">layer_points(ggvis(faithful, ~waiting, ~eruptions))
-</code></pre>
+<h4 id="lines-and-syntax">Lines and Syntax<a class="headerlink" href="#lines-and-syntax" title="Permanent link">&para;</a></h4>
+<p><strong>Three operators: <code class="codehilite"><span class="c">%&gt;%</span></code>, <code class="codehilite">=</code> and <code class="codehilite">:=</code></strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>layer_points<span class="p">(</span>ggvis<span class="p">(</span>faithful<span class="p">,</span> <span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis11.png" /></p>
-<pre><code class="r"># Rewrite the code with the pipe operator     
-faithful %&gt;%
-  ggvis(~waiting, ~eruptions) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Rewrite the code with the pipe operator     </span>
+faithful <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis12.png" /></p>
-<pre><code class="r">pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis13.png" /></p>
-<pre><code class="r"># Modify this graph to map the size property to the pressure variable
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, size = ~pressure) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Modify this graph to map the size property to the pressure variable</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> size <span class="o">=</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis14.png" /></p>
-<pre><code class="r">pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis15.png" /></p>
-<pre><code class="r"># Modify this graph by setting the size property
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, size := 100) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Modify this graph by setting the size property</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> size <span class="o">:=</span> <span class="m">100</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis16.png" /></p>
-<pre><code class="r">pressure %&gt;% 
-  ggvis(~temperature, ~pressure, fill = &quot;red&quot;) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pressure <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> fill <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis17.png" /></p>
-<pre><code class="r"># Fix this code to set the fill property to red
-pressure %&gt;% 
-  ggvis(~temperature, ~pressure, fill := &quot;red&quot;) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Fix this code to set the fill property to red</span>
+pressure <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> fill <span class="o">:=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis18.png" /></p>
 <p><strong>Referring to different objects</strong></p>
-<pre><code class="r">red &lt;- &quot;green&quot;
-pressure$red &lt;- pressure$temperature
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>red <span class="o">&lt;-</span> <span class="s">&quot;green&quot;</span>
+pressure<span class="o">$</span>red <span class="o">&lt;-</span> pressure<span class="o">$</span>temperature
 
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, fill := red) %&gt;%
-  layer_points()
-</code></pre>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> fill <span class="o">:=</span> red<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis19.png" /></p>
 <p><strong>Properties for points</strong></p>
-<pre><code class="r"># Change the code to set the fills using pressure$black
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, fill := ~'black') %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the code to set the fills using pressure$black</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> fill <span class="o">:=</span> <span class="o">~</span><span class="s">&#39;black&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis20.png" /></p>
-<pre><code class="r"># Plot the faithful data as described in the second instruction
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions, size = ~eruptions, opacity := 0.5, fill := &quot;blue&quot;, stroke := &quot;black&quot;) %&gt;% 
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Plot the faithful data as described in the second instruction</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> size <span class="o">=</span> <span class="o">~</span>eruptions<span class="p">,</span> opacity <span class="o">:=</span> <span class="m">0.5</span><span class="p">,</span> fill <span class="o">:=</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;black&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis21.png" /></p>
-<pre><code class="r"># Plot the faithful data as described in the third instruction
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions, size := 100, fill := &quot;red&quot;, fillOpacity = ~eruptions, stroke := &quot;red&quot;, shape := &quot;cross&quot;) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Plot the faithful data as described in the third instruction</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> size <span class="o">:=</span> <span class="m">100</span><span class="p">,</span> fill <span class="o">:=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> fillOpacity <span class="o">=</span> <span class="o">~</span>eruptions<span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> shape <span class="o">:=</span> <span class="s">&quot;cross&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis22.png" /></p>
 <p><strong>Properties for lines</strong></p>
-<pre><code class="r"># Change the code below to use the lines mark
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
-  layer_lines()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the code below to use the lines mark</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis23.png" /></p>
-<pre><code class="r"># Set the properties described in the second instruction in the graph below
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, stroke := &quot;red&quot;, strokeWidth := 2, strokeDash := 6) %&gt;%
-  layer_lines()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Set the properties described in the second instruction in the graph below</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> strokeWidth <span class="o">:=</span> <span class="m">2</span><span class="p">,</span> strokeDash <span class="o">:=</span> <span class="m">6</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis24.png" /></p>
 <p><strong>Display model fits</strong></p>
-<p><code>layer_lines()</code> will always connect the points in your plot from the<br />
-leftmost point to the rightmost point. This can be undesirable if you<br />
-are trying to plot a specific shape.</p>
-<p><code>layer_paths()</code>: this mark connects the points in the order that they<br />
-appear in the data set. So the paths mark will connect the point that<br />
-corresponds to the first row of the data to the point that corresponds<br />
-to the second row of data, and so on - no matter where those points<br />
-appear in the graph.</p>
-<pre><code class="r"># change the third line of code to plot a map of Texas
-library(maps)
-library(ggplot2)
+<p><code class="codehilite">layer_lines()</code> will always connect the points in your plot from the leftmost point to the rightmost point. This can be undesirable if you are trying to plot a specific shape.</p>
+<p><code class="codehilite">layer_paths()</code>: this mark connects the points in the order that they appear in the data set. So the paths mark will connect the point that corresponds to the first row of the data to the point that corresponds to the second row of data, and so on - no matter where those points appear in the graph.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the third line of code to plot a map of Texas</span>
+<span class="kn">library</span><span class="p">(</span>maps<span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
 
-texas &lt;- ggplot2::map_data(&quot;state&quot;, region = &quot;texas&quot;)
+texas <span class="o">&lt;-</span> ggplot2<span class="o">::</span>map_data<span class="p">(</span><span class="s">&quot;state&quot;</span><span class="p">,</span> region <span class="o">=</span> <span class="s">&quot;texas&quot;</span><span class="p">)</span>
 
-texas %&gt;%
-  ggvis(~long, ~lat) %&gt;%
-  layer_paths()
-</code></pre>
+texas <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>long<span class="p">,</span> <span class="o">~</span>lat<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_paths<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis25.png" /></p>
-<pre><code class="r"># Same plot, but set the fill property of the texas map to dark orange
-texas %&gt;%
-  ggvis(~long, ~lat, fill := &quot;darkorange&quot;) %&gt;%
-  layer_paths()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Same plot, but set the fill property of the texas map to dark orange</span>
+texas <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>long<span class="p">,</span> <span class="o">~</span>lat<span class="p">,</span> fill <span class="o">:=</span> <span class="s">&quot;darkorange&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_paths<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis26.png" /></p>
-<p><strong><code>compute_smooth()</code> to simplify model fits</strong></p>
-<p><code>compute_model_prediction()</code> is a useful function to use with line<br />
-graphs. It takes a data frame as input and returns a new data frame as<br />
-output. The new data frame will contain the x and y values of a line<br />
-fitted to the data in the original data frame.</p>
+<p><strong><code class="codehilite">compute_smooth()</code> to simplify model fits</strong></p>
+<p><code class="codehilite">compute_model_prediction()</code> is a useful function to use with line graphs. It takes a data frame as input and returns a new data frame as output. The new data frame will contain the x and y values of a line fitted to the data in the original data frame.</p>
 <p>Generate the x and y coordinates for a LOESS smooth line.</p>
-<pre><code class="r">faithful %&gt;%
-  compute_model_prediction(eruptions ~ waiting, model = &quot;lm&quot;) %&gt;%
-  head(10)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>faithful <span class="o">%&gt;%</span>
+  compute_model_prediction<span class="p">(</span>eruptions <span class="o">~</span> waiting<span class="p">,</span> model <span class="o">=</span> <span class="s">&quot;lm&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="kp">head</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>##       pred_    resp_
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       pred_    resp_
 ## 1  43.00000 1.377986
 ## 2  43.67089 1.428724
 ## 3  44.34177 1.479461
@@ -574,14 +1373,30 @@ fitted to the data in the original data frame.</p>
 ## 8  47.69620 1.733150
 ## 9  48.36709 1.783888
 ## 10 49.03797 1.834625
-</code></pre>
-<pre><code class="r"># Compute the x and y coordinates for a loess smooth line that predicts mpg with the wt
-mtcars %&gt;%
-  compute_smooth(mpg ~ wt) %&gt;%
-  head(10)
-</code></pre>
+</pre></div>
+</td></tr></table>
 
-<pre><code>##       pred_    resp_
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Compute the x and y coordinates for a loess smooth line that predicts mpg with the wt</span>
+mtcars <span class="o">%&gt;%</span>
+  compute_smooth<span class="p">(</span>mpg <span class="o">~</span> wt<span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="kp">head</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       pred_    resp_
 ## 1  1.513000 32.08897
 ## 2  1.562506 31.68786
 ## 3  1.612013 31.28163
@@ -592,39 +1407,67 @@ mtcars %&gt;%
 ## 8  1.859544 29.17711
 ## 9  1.909051 28.74224
 ## 10 1.958557 28.30017
-</code></pre>
-<pre><code class="r">#model = &quot;loess&quot; is set by default
-</code></pre>
+</pre></div>
+</td></tr></table>
 
-<h4 id="3-transformations">3, Transformations<a class="headerlink" href="#3-transformations" title="Permanent link">&para;</a></h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#model = &quot;loess&quot; is set by default</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="transformations">Transformations<a class="headerlink" href="#transformations" title="Permanent link">&para;</a></h4>
 <p><strong>Histograms (1)</strong></p>
-<pre><code class="r"># Build a histogram of the waiting variable of the faithful data set.
-faithful %&gt;%
-  ggvis(~waiting) %&gt;%
-  layer_histograms()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Build a histogram of the waiting variable of the faithful data set.</span>
+faithful <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_histograms<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis29.png" /></p>
-<pre><code class="r"># Build the same histogram, but with a binwidth (width argument) of 5 units
-faithful %&gt;%
-  ggvis(~waiting) %&gt;%
-  layer_histograms(width = 5)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Build the same histogram, but with a binwidth (width argument) of 5 units</span>
+faithful <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_histograms<span class="p">(</span>width <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis30.png" /></p>
 <p><strong>Histograms (2)</strong></p>
-<pre><code class="r">faithful %&gt;%
-  ggvis(~waiting) %&gt;%
-  layer_histograms(width = 5)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>faithful <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_histograms<span class="p">(</span>width <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis31.png" /></p>
-<pre><code class="r"># Transform the code: just compute the bins instead of plotting a histogram
-faithful %&gt;%
-  compute_bin(~waiting, width = 5)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Transform the code: just compute the bins instead of plotting a histogram</span>
+faithful <span class="o">%&gt;%</span>
+  compute_bin<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> width <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>##    count_ x_ xmin_ xmax_ width_
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    count_ x_ xmin_ xmax_ width_
 ## 1      13 45  42.5  47.5      5
 ## 2      24 50  47.5  52.5      5
 ## 3      29 55  52.5  57.5      5
@@ -636,452 +1479,713 @@ faithful %&gt;%
 ## 9      38 85  82.5  87.5      5
 ## 10     17 90  87.5  92.5      5
 ## 11      4 95  92.5  97.5      5
-</code></pre>
-<pre><code class="r"># Combine the solution to the first challenge with layer_rects() to build a histogram
-faithful %&gt;%
-  compute_bin(~waiting, width = 5) %&gt;%
-  ggvis(x = ~xmin_, x2 = ~xmax_, y = 0, y2 = ~count_) %&gt;%
-  layer_rects()
-</code></pre>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Combine the solution to the first challenge with layer_rects() to build a histogram</span>
+faithful <span class="o">%&gt;%</span>
+  compute_bin<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> width <span class="o">=</span> <span class="m">5</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span>x <span class="o">=</span> <span class="o">~</span>xmin_<span class="p">,</span> x2 <span class="o">=</span> <span class="o">~</span>xmax_<span class="p">,</span> y <span class="o">=</span> <span class="m">0</span><span class="p">,</span> y2 <span class="o">=</span> <span class="o">~</span>count_<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_rects<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis33.png" /></p>
 <p><strong>Density plots</strong></p>
-<pre><code class="r"># Combine compute_density() with layer_lines() to make a density plot of the waiting variable.
-faithful %&gt;%
-  compute_density(~waiting) %&gt;%
-  ggvis(~pred_,~resp_) %&gt;%
-  layer_lines()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Combine compute_density() with layer_lines() to make a density plot of the waiting variable.</span>
+faithful <span class="o">%&gt;%</span>
+  compute_density<span class="p">(</span><span class="o">~</span>waiting<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>pred_<span class="p">,</span><span class="o">~</span>resp_<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis34.png" /></p>
-<pre><code class="r"># Build a density plot directly using layer_densities. Use the correct variables and properties.
-faithful %&gt;%
-  ggvis(~waiting) %&gt;%
-  layer_densities(fill := &quot;green&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Build a density plot directly using layer_densities. Use the correct variables and properties.</span>
+faithful <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_densities<span class="p">(</span>fill <span class="o">:=</span> <span class="s">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis35.png" /></p>
 <p><strong>Shortcuts</strong></p>
-<pre><code class="r"># Complete the code to plot a bar graph of the cyl factor.
-mtcars %&gt;%
-  ggvis(~factor(cyl)) %&gt;%
-  layer_bars()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Complete the code to plot a bar graph of the cyl factor.</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_bars<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis36.png" /></p>
-<pre><code class="r"># Adapt the solution to the first challenge to just calculate the count values. No plotting!
-mtcars %&gt;%
-  compute_count(~factor(cyl))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Adapt the solution to the first challenge to just calculate the count values. No plotting!</span>
+mtcars <span class="o">%&gt;%</span>
+  compute_count<span class="p">(</span><span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>##   count_ x_
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   count_ x_
 ## 1     11  4
 ## 2      7  6
 ## 3     14  8
-</code></pre>
-<p><strong><code>ggvis</code> and <code>group_by</code></strong></p>
-<pre><code class="r">mtcars %&gt;%
-  group_by(am) %&gt;%
-  ggvis(~mpg, ~wt, stroke = ~factor(am)) %&gt;%
-  layer_smooths()
-</code></pre>
+</pre></div>
+</td></tr></table>
+
+<p><strong><code class="codehilite">ggvis</code> and <code class="codehilite">group_by</code></strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>am<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">,</span> stroke <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>am<span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_smooths<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis38.png" /></p>
-<pre><code class="r"># Change the code to plot a unique smooth line for each value of the cyl variable.
-mtcars %&gt;%
-  group_by(cyl) %&gt;%
-  ggvis(~mpg, ~wt, stroke = ~factor(cyl)) %&gt;%
-  layer_smooths()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the code to plot a unique smooth line for each value of the cyl variable.</span>
+mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>cyl<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">,</span> stroke <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_smooths<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis39.png" /></p>
-<pre><code class="r"># Adapt the graph to contain a separate density for each value of cyl.
-mtcars %&gt;%
-  group_by(cyl) %&gt;%
-  ggvis(~mpg) %&gt;%
-  layer_densities()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Adapt the graph to contain a separate density for each value of cyl.</span>
+mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>cyl<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_densities<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis40.png" /></p>
-<pre><code class="r"># Copy and alter the solution to the second challenge to map the fill property to a categorical version of cyl.
-mtcars %&gt;%
-  group_by(cyl) %&gt;%
-  ggvis(~mpg) %&gt;%
-  layer_densities(fill = ~factor(cyl))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Copy and alter the solution to the second challenge to map the fill property to a categorical version of cyl.</span>
+mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>cyl<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_densities<span class="p">(</span>fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis41.png" /></p>
-<p><strong><code>group_by()</code> versus <code>interaction()</code></strong></p>
-<pre><code class="r">mtcars %&gt;%
-  group_by(cyl) %&gt;%
-  ggvis(~mpg) %&gt;%
-  layer_densities(fill = ~factor(cyl))
-</code></pre>
+<p><strong><code class="codehilite">group_by()</code> versus <code class="codehilite">interaction()</code></strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>cyl<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_densities<span class="p">(</span>fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis42.png" /></p>
-<pre><code class="r"># Alter the graph: separate density for each unique combination of 'cyl' and 'am'.
-mtcars %&gt;%
-  group_by(cyl,am) %&gt;%
-  ggvis(~mpg, fill = ~factor(cyl)) %&gt;%
-  layer_densities()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Alter the graph: separate density for each unique combination of &#39;cyl&#39; and &#39;am&#39;.</span>
+mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>cyl<span class="p">,</span>am<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_densities<span class="p">()</span>
 
-#factor(cyl),factor(am)
-</code></pre>
+<span class="c1">#factor(cyl),factor(am)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis43.png" /></p>
-<pre><code class="r">mtcars %&gt;%
-  group_by(cyl, am) %&gt;%
-  ggvis(~mpg, fill = ~factor(cyl)) %&gt;%
-  layer_densities()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>cyl<span class="p">,</span> am<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_densities<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis44.png" /></p>
-<pre><code class="r"># Update the graph to map `fill` to the unique combinations of the grouping variables.
-mtcars %&gt;%
-  group_by(cyl, am) %&gt;%
-  ggvis(~mpg, fill = ~interaction(cyl,am)) %&gt;% 
-  layer_densities()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Update the graph to map `fill` to the unique combinations of the grouping variables.</span>
+mtcars <span class="o">%&gt;%</span>
+  group_by<span class="p">(</span>cyl<span class="p">,</span> am<span class="p">)</span> <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">interaction</span><span class="p">(</span>cyl<span class="p">,</span>am<span class="p">))</span> <span class="o">%&gt;%</span> 
+  layer_densities<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis45.png" /></p>
 <p><strong>Chaining is a virtue</strong></p>
-<pre><code class="r">mtcars %&gt;%
-    group_by(cyl, am) %&gt;%
-    ggvis(~mpg, fill = ~interaction(cyl, am)) %&gt;%
-    layer_densities()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mtcars <span class="o">%&gt;%</span>
+    group_by<span class="p">(</span>cyl<span class="p">,</span> am<span class="p">)</span> <span class="o">%&gt;%</span>
+    ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">interaction</span><span class="p">(</span>cyl<span class="p">,</span> am<span class="p">))</span> <span class="o">%&gt;%</span>
+    layer_densities<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis46.png" /></p>
-<p>This call is exactly equivalent to the following piece of code that is<br />
-very hard to read:</p>
-<pre><code class="r">layer_densities(ggvis(group_by(mtcars, cyl, am), ~mpg, fill = ~interaction(cyl, am)))
-</code></pre>
+<p>This call is exactly equivalent to the following piece of code that is very hard to read:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>layer_densities<span class="p">(</span>ggvis<span class="p">(</span>group_by<span class="p">(</span>mtcars<span class="p">,</span> cyl<span class="p">,</span> am<span class="p">),</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">interaction</span><span class="p">(</span>cyl<span class="p">,</span> am<span class="p">)))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis47.png" /></p>
-<h4 id="4-interactivity-and-layers">4, Interactivity and Layers<a class="headerlink" href="#4-interactivity-and-layers" title="Permanent link">&para;</a></h4>
+<h4 id="interactivity-and-layers">Interactivity and Layers<a class="headerlink" href="#interactivity-and-layers" title="Permanent link">&para;</a></h4>
 <p><strong>The basics of interactive plots</strong></p>
-<pre><code class="r"># Run this code and inspect the output. Follow the link in the instructions for the interactive version
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions, fillOpacity := 0.5, 
-        shape := input_select(label = &quot;Choose shape:&quot;, choices = c(&quot;circle&quot;, &quot;square&quot;, &quot;cross&quot;, &quot;diamond&quot;, &quot;triangle-up&quot;, &quot;triangle-down&quot;))) %&gt;% 
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Run this code and inspect the output. Follow the link in the instructions for the interactive version</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> fillOpacity <span class="o">:=</span> <span class="m">0.5</span><span class="p">,</span> 
+        shape <span class="o">:=</span> input_select<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose shape:&quot;</span><span class="p">,</span> choices <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;circle&quot;</span><span class="p">,</span> <span class="s">&quot;square&quot;</span><span class="p">,</span> <span class="s">&quot;cross&quot;</span><span class="p">,</span> <span class="s">&quot;diamond&quot;</span><span class="p">,</span> <span class="s">&quot;triangle-up&quot;</span><span class="p">,</span> <span class="s">&quot;triangle-down&quot;</span><span class="p">)))</span> <span class="o">%&gt;%</span> 
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif1.gif" /></p>
-<pre><code class="r"># Copy the first code chunk and alter the code to make the fill property interactive using a select box
-faithful %&gt;%
-  ggvis(~waiting, ~eruptions, fillOpacity := 0.5, shape := input_select(label = &quot;Choose shape:&quot;, choices = c(&quot;circle&quot;, &quot;square&quot;, &quot;cross&quot;, &quot;diamond&quot;, &quot;triangle-up&quot;, &quot;triangle-down&quot;)), fill := input_select(label = &quot;Choose color:&quot;, choices = c(&quot;black&quot;,&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;))) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Copy the first code chunk and alter the code to make the fill property interactive using a select box</span>
+faithful <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> fillOpacity <span class="o">:=</span> <span class="m">0.5</span><span class="p">,</span> shape <span class="o">:=</span> input_select<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose shape:&quot;</span><span class="p">,</span> choices <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;circle&quot;</span><span class="p">,</span> <span class="s">&quot;square&quot;</span><span class="p">,</span> <span class="s">&quot;cross&quot;</span><span class="p">,</span> <span class="s">&quot;diamond&quot;</span><span class="p">,</span> <span class="s">&quot;triangle-up&quot;</span><span class="p">,</span> <span class="s">&quot;triangle-down&quot;</span><span class="p">)),</span> fill <span class="o">:=</span> input_select<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose color:&quot;</span><span class="p">,</span> choices <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="s">&quot;green&quot;</span><span class="p">)))</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif2.gif" /></p>
-<pre><code class="r"># Add radio buttons to control the fill of the plot
-mtcars %&gt;% 
-  ggvis(~mpg, ~wt, fill := input_radiobuttons(label = &quot;Choose color:&quot;, choices = c(&quot;black&quot;,&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;))) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add radio buttons to control the fill of the plot</span>
+mtcars <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">,</span> fill <span class="o">:=</span> input_radiobuttons<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose color:&quot;</span><span class="p">,</span> choices <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">,</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="s">&quot;green&quot;</span><span class="p">)))</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif3.gif" /></p>
 <p><strong>Input widgets in more detail</strong></p>
-<pre><code class="r">mtcars %&gt;%
-  ggvis(~mpg, ~wt, fill := input_radiobuttons(label = &quot;Choose color:&quot;, choices = c(&quot;black&quot;, &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;))) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">,</span> fill <span class="o">:=</span> input_radiobuttons<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose color:&quot;</span><span class="p">,</span> choices <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">)))</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif4.gif" /></p>
-<pre><code class="r"># Change the radiobuttons widget to a text widget 
-mtcars %&gt;%
-  ggvis(~mpg, ~wt, fill := input_text(label = &quot;Choose color:&quot;, value = c(&quot;black&quot;))) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the radiobuttons widget to a text widget </span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">,</span> fill <span class="o">:=</span> input_text<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose color:&quot;</span><span class="p">,</span> value <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">)))</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif5.gif" /></p>
-<pre><code class="r">mtcars %&gt;%
-  ggvis(~mpg, ~wt) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis48.png" /></p>
-<pre><code class="r"># Map the fill property to a select box that returns variable names
-mtcars %&gt;%
-  ggvis(~mpg, ~wt, fill = input_select(label = &quot;Choose fill variable:&quot;, choices = names(mtcars), map = as.name)) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Map the fill property to a select box that returns variable names</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">,</span> fill <span class="o">=</span> input_select<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose fill variable:&quot;</span><span class="p">,</span> choices <span class="o">=</span> <span class="kp">names</span><span class="p">(</span>mtcars<span class="p">),</span> map <span class="o">=</span> <span class="kp">as.name</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif6.gif" /></p>
 <p><strong>Input widgets in more detail (2)</strong></p>
-<pre><code class="r"># Map the fill property to a select box that returns variable names
-mtcars %&gt;%
-  ggvis(~mpg, ~wt, fill = input_select(label = &quot;Choose fill variable:&quot;, choices = names(mtcars), map = as.name)) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Map the fill property to a select box that returns variable names</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">,</span> <span class="o">~</span>wt<span class="p">,</span> fill <span class="o">=</span> input_select<span class="p">(</span>label <span class="o">=</span> <span class="s">&quot;Choose fill variable:&quot;</span><span class="p">,</span> choices <span class="o">=</span> <span class="kp">names</span><span class="p">(</span>mtcars<span class="p">),</span> map <span class="o">=</span> <span class="kp">as.name</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif7.gif" /></p>
 <p><strong>Control parameters and values</strong></p>
-<pre><code class="r"># Map the bindwidth to a numeric field (&quot;Choose a binwidth:&quot;)
-mtcars %&gt;%
-  ggvis(~mpg) %&gt;%
-  layer_histograms(width = input_numeric(value = 1, label = &quot;Choose a binwidth:&quot;))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Map the bindwidth to a numeric field (&quot;Choose a binwidth:&quot;)</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_histograms<span class="p">(</span>width <span class="o">=</span> input_numeric<span class="p">(</span>value <span class="o">=</span> <span class="m">1</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Choose a binwidth:&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif8.gif" /></p>
-<pre><code class="r"># Map the binwidth to a slider bar (&quot;Choose a binwidth:&quot;) with the correct specifications
-mtcars %&gt;%
-  ggvis(~mpg) %&gt;%
-  layer_histograms(width = input_slider(min = 1, max = 20, label = &quot;Choose a binwidth:&quot;))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Map the binwidth to a slider bar (&quot;Choose a binwidth:&quot;) with the correct specifications</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>mpg<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_histograms<span class="p">(</span>width <span class="o">=</span> input_slider<span class="p">(</span>min <span class="o">=</span> <span class="m">1</span><span class="p">,</span> max <span class="o">=</span> <span class="m">20</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Choose a binwidth:&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p>.gif file:</p>
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvisgif9.gif" /></p>
 <p><strong>Multi-layered plots and their properties</strong></p>
-<pre><code class="r"># Add a layer of points to the graph below.
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, stroke := &quot;skyblue&quot;) %&gt;% layer_lines() %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add a layer of points to the graph below.</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;skyblue&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> layer_lines<span class="p">()</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis49.png" /></p>
-<pre><code class="r"># Copy and adapt the solution to the first instruction below so that only the lines layer uses a skyblue stroke.
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
-  layer_lines(stroke := &quot;skyblue&quot;) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Copy and adapt the solution to the first instruction below so that only the lines layer uses a skyblue stroke.</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">(</span>stroke <span class="o">:=</span> <span class="s">&quot;skyblue&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis50.png" /></p>
-<pre><code class="r"># Rewrite the code below so that only the points layer uses the shape property.
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
-  layer_lines(stroke := &quot;skyblue&quot;) %&gt;%
-  layer_points(shape := &quot;triangle-up&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Rewrite the code below so that only the points layer uses the shape property.</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">(</span>stroke <span class="o">:=</span> <span class="s">&quot;skyblue&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">(</span>shape <span class="o">:=</span> <span class="s">&quot;triangle-up&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis51.png" /></p>
-<pre><code class="r"># Refactor the code for the graph below to make it as concise as possible
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, stroke := &quot;skyblue&quot;, strokeOpacity := 0.5, strokeWidth := 5) %&gt;%
-  layer_lines() %&gt;%
-  layer_points(fill = ~temperature, shape := &quot;triangle-up&quot;, size := 300)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Refactor the code for the graph below to make it as concise as possible</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;skyblue&quot;</span><span class="p">,</span> strokeOpacity <span class="o">:=</span> <span class="m">0.5</span><span class="p">,</span> strokeWidth <span class="o">:=</span> <span class="m">5</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">()</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">(</span>fill <span class="o">=</span> <span class="o">~</span>temperature<span class="p">,</span> shape <span class="o">:=</span> <span class="s">&quot;triangle-up&quot;</span><span class="p">,</span> size <span class="o">:=</span> <span class="m">300</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis52.png" /></p>
 <p><strong>Multi-layered plots and their properties (2)</strong></p>
-<pre><code class="r"># Rewrite the code below so that only the points layer uses the shape property.
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
-  layer_lines(stroke := &quot;skyblue&quot;) %&gt;%
-  layer_points(shape := &quot;triangle-up&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Rewrite the code below so that only the points layer uses the shape property.</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">(</span>stroke <span class="o">:=</span> <span class="s">&quot;skyblue&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">(</span>shape <span class="o">:=</span> <span class="s">&quot;triangle-up&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis53.png" /></p>
-<pre><code class="r"># Refactor the code for the graph below to make it as concise as possible
-pressure %&gt;%
-  ggvis(~temperature, ~pressure, stroke := &quot;skyblue&quot;,
-        strokeOpacity := 0.5, strokeWidth := 5) %&gt;%
-  layer_lines() %&gt;%
-  layer_points(fill = ~temperature, shape := &quot;triangle-up&quot;, size := 300)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Refactor the code for the graph below to make it as concise as possible</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;skyblue&quot;</span><span class="p">,</span>
+        strokeOpacity <span class="o">:=</span> <span class="m">0.5</span><span class="p">,</span> strokeWidth <span class="o">:=</span> <span class="m">5</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">()</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">(</span>fill <span class="o">=</span> <span class="o">~</span>temperature<span class="p">,</span> shape <span class="o">:=</span> <span class="s">&quot;triangle-up&quot;</span><span class="p">,</span> size <span class="o">:=</span> <span class="m">300</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis54.png" /></p>
 <p><strong>There is no limit on the number of layers!</strong></p>
-<pre><code class="r"># Create a graph containing a scatterplot, a linear model and a smooth line.
-pressure %&gt;%
-  ggvis(~temperature, ~pressure) %&gt;%
-  layer_points() %&gt;%
-  layer_lines(stroke := &quot;black&quot;, opacity := 0.5) %&gt;%
-  layer_model_predictions(model = &quot;lm&quot;, stroke := &quot;navy&quot;) %&gt;%
-  layer_smooths(stroke := &quot;skyblue&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create a graph containing a scatterplot, a linear model and a smooth line.</span>
+pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">(</span>stroke <span class="o">:=</span> <span class="s">&quot;black&quot;</span><span class="p">,</span> opacity <span class="o">:=</span> <span class="m">0.5</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_model_predictions<span class="p">(</span>model <span class="o">=</span> <span class="s">&quot;lm&quot;</span><span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;navy&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_smooths<span class="p">(</span>stroke <span class="o">:=</span> <span class="s">&quot;skyblue&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis55.png" /></p>
 <p><strong>Taking local and global to the next level</strong></p>
-<pre><code class="r">pressure %&gt;%
-  ggvis(~temperature, ~pressure, stroke := &quot;darkred&quot;) %&gt;%
-  layer_lines(stroke := &quot;orange&quot;, strokeDash := 5, strokeWidth := 5) %&gt;%
-  layer_points(shape := &quot;circle&quot;, size := 100, fill := &quot;lightgreen&quot;) %&gt;%
-  layer_smooths()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pressure <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>temperature<span class="p">,</span> <span class="o">~</span>pressure<span class="p">,</span> stroke <span class="o">:=</span> <span class="s">&quot;darkred&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_lines<span class="p">(</span>stroke <span class="o">:=</span> <span class="s">&quot;orange&quot;</span><span class="p">,</span> strokeDash <span class="o">:=</span> <span class="m">5</span><span class="p">,</span> strokeWidth <span class="o">:=</span> <span class="m">5</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">(</span>shape <span class="o">:=</span> <span class="s">&quot;circle&quot;</span><span class="p">,</span> size <span class="o">:=</span> <span class="m">100</span><span class="p">,</span> fill <span class="o">:=</span> <span class="s">&quot;lightgreen&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_smooths<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis56.png" /></p>
-<h4 id="5-customizing-axes-legends-and-scales">5, Customizing Axes, Legends, and Scales<a class="headerlink" href="#5-customizing-axes-legends-and-scales" title="Permanent link">&para;</a></h4>
+<h4 id="customizing-axes-legends-and-scales">Customizing Axes, Legends, and Scales<a class="headerlink" href="#customizing-axes-legends-and-scales" title="Permanent link">&para;</a></h4>
 <p><strong>Axes</strong></p>
-<pre><code class="r"># add the title of the x axis: &quot;Time since previous eruption (m)&quot;
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions) %&gt;% 
-  layer_points() %&gt;% 
-  add_axis(&quot;y&quot;, title = &quot;Duration of eruption (m)&quot;) %&gt;%
-  add_axis(&quot;x&quot;, title = &quot;Time since previous eruption (m)&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add the title of the x axis: &quot;Time since previous eruption (m)&quot;</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">)</span> <span class="o">%&gt;%</span> 
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span> 
+  add_axis<span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> title <span class="o">=</span> <span class="s">&quot;Duration of eruption (m)&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  add_axis<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> title <span class="o">=</span> <span class="s">&quot;Time since previous eruption (m)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis57.png" /></p>
-<pre><code class="r"># Add to the code to place a labelled tick mark at 50, 60, 70, 80, 90 on the x axis.
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions) %&gt;% 
-  layer_points() %&gt;% 
-  add_axis(&quot;y&quot;, title = &quot;Duration of eruption (m)&quot;, values = c(2, 3, 4, 5), subdivide = 9) %&gt;% 
-  add_axis(&quot;x&quot;, title = &quot;Time since previous eruption (m)&quot;, values = c(50, 60, 70, 80, 90), subdivide = 9)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add to the code to place a labelled tick mark at 50, 60, 70, 80, 90 on the x axis.</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">)</span> <span class="o">%&gt;%</span> 
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span> 
+  add_axis<span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> title <span class="o">=</span> <span class="s">&quot;Duration of eruption (m)&quot;</span><span class="p">,</span> values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">),</span> subdivide <span class="o">=</span> <span class="m">9</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  add_axis<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> title <span class="o">=</span> <span class="s">&quot;Time since previous eruption (m)&quot;</span><span class="p">,</span> values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="m">60</span><span class="p">,</span> <span class="m">70</span><span class="p">,</span> <span class="m">80</span><span class="p">,</span> <span class="m">90</span><span class="p">),</span> subdivide <span class="o">=</span> <span class="m">9</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis58.png" /></p>
-<pre><code class="r"># Add to the code below to change the location of the y axis
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions) %&gt;% 
-  layer_points() %&gt;%
-  add_axis(&quot;x&quot;, orient = &quot;top&quot;) %&gt;% add_axis(&quot;y&quot;, orient = &quot;right&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add to the code below to change the location of the y axis</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">)</span> <span class="o">%&gt;%</span> 
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  add_axis<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> orient <span class="o">=</span> <span class="s">&quot;top&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> add_axis<span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> orient <span class="o">=</span> <span class="s">&quot;right&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis59.png" /></p>
 <p><strong>Legends</strong></p>
-<pre><code class="r"># Add a legend to the plot below: use the correct title and orientation
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions, opacity := 0.6, fill = ~factor(round(eruptions))) %&gt;% 
-  layer_points() %&gt;%
-  add_legend(&quot;fill&quot;, title = &quot;~ duration (m)&quot;, orient = &quot;left&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add a legend to the plot below: use the correct title and orientation</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> opacity <span class="o">:=</span> <span class="m">0.6</span><span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span><span class="kp">round</span><span class="p">(</span>eruptions<span class="p">)))</span> <span class="o">%&gt;%</span> 
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  add_legend<span class="p">(</span><span class="s">&quot;fill&quot;</span><span class="p">,</span> title <span class="o">=</span> <span class="s">&quot;~ duration (m)&quot;</span><span class="p">,</span> orient <span class="o">=</span> <span class="s">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis60.png" /></p>
-<pre><code class="r">#add_legend(vis, scales = NULL, orient = &quot;right&quot;, title = NULL, format = NULL, values = NULL, properties = NULL)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#add_legend(vis, scales = NULL, orient = &quot;right&quot;, title = NULL, format = NULL, values = NULL, properties = NULL)</span>
 
-# Use add_legend() to combine the legends in the plot below. Adjust its properties as instructed.
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions, opacity := 0.6, fill = ~factor(round(eruptions)), shape = ~factor(round(eruptions)), 
-        size = ~round(eruptions))  %&gt;%
-  layer_points() %&gt;%
-  add_legend(c(&quot;fill&quot;, &quot;shape&quot;, &quot;size&quot;), title = &quot;~ duration (m)&quot;, values = c(2,3,4,5))
-</code></pre>
+<span class="c1"># Use add_legend() to combine the legends in the plot below. Adjust its properties as instructed.</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> opacity <span class="o">:=</span> <span class="m">0.6</span><span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span><span class="kp">round</span><span class="p">(</span>eruptions<span class="p">)),</span> shape <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span><span class="kp">round</span><span class="p">(</span>eruptions<span class="p">)),</span> 
+        size <span class="o">=</span> <span class="o">~</span><span class="kp">round</span><span class="p">(</span>eruptions<span class="p">))</span>  <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  add_legend<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;fill&quot;</span><span class="p">,</span> <span class="s">&quot;shape&quot;</span><span class="p">,</span> <span class="s">&quot;size&quot;</span><span class="p">),</span> title <span class="o">=</span> <span class="s">&quot;~ duration (m)&quot;</span><span class="p">,</span> values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis61.png" /></p>
 <p><strong>Legends (2)</strong></p>
-<pre><code class="r"># Fix the legend
-faithful %&gt;% 
-  ggvis(~waiting, ~eruptions, opacity := 0.6, fill = ~factor(round(eruptions)), shape = ~factor(round(eruptions)), 
-        size = ~round(eruptions)) %&gt;% 
-    layer_points() %&gt;% 
-    add_legend(c(&quot;fill&quot;, &quot;shape&quot;, &quot;size&quot;), title = &quot;~ duration (m)&quot;)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Fix the legend</span>
+faithful <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>waiting<span class="p">,</span> <span class="o">~</span>eruptions<span class="p">,</span> opacity <span class="o">:=</span> <span class="m">0.6</span><span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span><span class="kp">round</span><span class="p">(</span>eruptions<span class="p">)),</span> shape <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span><span class="kp">round</span><span class="p">(</span>eruptions<span class="p">)),</span> 
+        size <span class="o">=</span> <span class="o">~</span><span class="kp">round</span><span class="p">(</span>eruptions<span class="p">))</span> <span class="o">%&gt;%</span> 
+    layer_points<span class="p">()</span> <span class="o">%&gt;%</span> 
+    add_legend<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;fill&quot;</span><span class="p">,</span> <span class="s">&quot;shape&quot;</span><span class="p">,</span> <span class="s">&quot;size&quot;</span><span class="p">),</span> title <span class="o">=</span> <span class="s">&quot;~ duration (m)&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis62.png" /></p>
 <p><strong>Scale types</strong></p>
-<pre><code class="r"># Add to the code below to make the stroke color range from &quot;darkred&quot; to &quot;orange&quot;.
-mtcars %&gt;% 
-  ggvis(~wt, ~mpg, fill = ~disp, stroke = ~disp, strokeWidth := 2) %&gt;%
-  layer_points() %&gt;%
-  scale_numeric(&quot;fill&quot;, range = c(&quot;red&quot;, &quot;yellow&quot;)) %&gt;% scale_numeric(&quot;stroke&quot;, range = c(&quot;darkred&quot;, &quot;orange&quot;))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add to the code below to make the stroke color range from &quot;darkred&quot; to &quot;orange&quot;.</span>
+mtcars <span class="o">%&gt;%</span> 
+  ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span>disp<span class="p">,</span> stroke <span class="o">=</span> <span class="o">~</span>disp<span class="p">,</span> strokeWidth <span class="o">:=</span> <span class="m">2</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  scale_numeric<span class="p">(</span><span class="s">&quot;fill&quot;</span><span class="p">,</span> range <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;yellow&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> scale_numeric<span class="p">(</span><span class="s">&quot;stroke&quot;</span><span class="p">,</span> range <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;darkred&quot;</span><span class="p">,</span> <span class="s">&quot;orange&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis63.png" /></p>
-<pre><code class="r"># Change the graph below to make the fill colors range from green to beige.
-mtcars %&gt;% ggvis(~wt, ~mpg, fill = ~hp) %&gt;%
-  layer_points() %&gt;% scale_numeric(&quot;fill&quot;, range = c(&quot;green&quot;, &quot;beige&quot;))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the graph below to make the fill colors range from green to beige.</span>
+mtcars <span class="o">%&gt;%</span> ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span>hp<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span> scale_numeric<span class="p">(</span><span class="s">&quot;fill&quot;</span><span class="p">,</span> range <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">,</span> <span class="s">&quot;beige&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis64.png" /></p>
-<pre><code class="r"># Create a scale that will map `factor(cyl)` to a new range of colors: purple, blue, and green. 
-mtcars %&gt;% ggvis(~wt, ~mpg, fill = ~factor(cyl)) %&gt;%
-  layer_points() %&gt;% scale_nominal(&quot;fill&quot;, range = c(&quot;purple&quot;, &quot;blue&quot;, &quot;green&quot;))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create a scale that will map `factor(cyl)` to a new range of colors: purple, blue, and green. </span>
+mtcars <span class="o">%&gt;%</span> ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">))</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span> scale_nominal<span class="p">(</span><span class="s">&quot;fill&quot;</span><span class="p">,</span> range <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;purple&quot;</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis65.png" /></p>
 <p><strong>Adjust any visual property</strong></p>
-<pre><code class="r"># Add a scale that limits the range of opacity from 0.2 to 1. 
-mtcars %&gt;%
-  ggvis(x = ~wt, y = ~mpg, fill = ~factor(cyl), opacity = ~hp) %&gt;%
-  layer_points() %&gt;%
-  scale_numeric(&quot;opacity&quot;, range = c(0.2,1))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add a scale that limits the range of opacity from 0.2 to 1. </span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span>x <span class="o">=</span> <span class="o">~</span>wt<span class="p">,</span> y <span class="o">=</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> opacity <span class="o">=</span> <span class="o">~</span>hp<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  scale_numeric<span class="p">(</span><span class="s">&quot;opacity&quot;</span><span class="p">,</span> range <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0.2</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis66.png" /></p>
-<pre><code class="r"># Add a second scale that will expand the x axis to cover data values from 0 to 6.
-mtcars %&gt;%
-  ggvis(~wt, ~mpg, fill = ~disp) %&gt;%
-  layer_points() %&gt;%
-  scale_numeric(&quot;y&quot;, domain = c(0, NA)) %&gt;%
-  scale_numeric(&quot;x&quot;, domain = c(0, 6))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add a second scale that will expand the x axis to cover data values from 0 to 6.</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span>disp<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  scale_numeric<span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> domain <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="kc">NA</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  scale_numeric<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> domain <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">6</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis67.png" /></p>
 <p><strong>Adjust any visual property (2)</strong></p>
-<pre><code class="r"># Add a second scale to set domain for x
-mtcars %&gt;%
-  ggvis(~wt, ~mpg, fill = ~disp) %&gt;%
-  layer_points() %&gt;%
-  scale_numeric(&quot;y&quot;, domain = c(0, NA)) %&gt;%
-  scale_numeric(&quot;x&quot;, domain = c(0, 6))
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add a second scale to set domain for x</span>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span><span class="o">~</span>wt<span class="p">,</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span>disp<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span> <span class="o">%&gt;%</span>
+  scale_numeric<span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> domain <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="kc">NA</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  scale_numeric<span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> domain <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">6</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis68.png" /></p>
-<p><strong>&ldquo;<code>=</code>&rdquo; versus &ldquo;<code>:=</code>&ldquo;</strong></p>
-<pre><code class="r"># Set the fill value to the color variable instead of mapping it, and see what happens
-mtcars$color &lt;- c(&quot;red&quot;, &quot;teal&quot;, &quot;#cccccc&quot;, &quot;tan&quot;)
+<p><strong>&ldquo;<code class="codehilite">=</code>&rdquo; versus &ldquo;<code class="codehilite">:=</code>&ldquo;</strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Set the fill value to the color variable instead of mapping it, and see what happens</span>
+mtcars<span class="o">$</span>color <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;teal&quot;</span><span class="p">,</span> <span class="s">&quot;#cccccc&quot;</span><span class="p">,</span> <span class="s">&quot;tan&quot;</span><span class="p">)</span>
 
-mtcars %&gt;%
-  ggvis(x = ~wt, y = ~mpg, fill = ~color) %&gt;%
-  layer_points()
-</code></pre>
+mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span>x <span class="o">=</span> <span class="o">~</span>wt<span class="p">,</span> y <span class="o">=</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">=</span> <span class="o">~</span>color<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis69.png" /></p>
-<pre><code class="r">mtcars %&gt;%
-  ggvis(x = ~wt, y = ~mpg, fill := ~color) %&gt;%
-  layer_points()
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mtcars <span class="o">%&gt;%</span>
+  ggvis<span class="p">(</span>x <span class="o">=</span> <span class="o">~</span>wt<span class="p">,</span> y <span class="o">=</span> <span class="o">~</span>mpg<span class="p">,</span> fill <span class="o">:=</span> <span class="o">~</span>color<span class="p">)</span> <span class="o">%&gt;%</span>
+  layer_points<span class="p">()</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis70.png" /></p>
+                
+                  
+                
               
-            </div>
+              
+                
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../Plot_snippets_-_Colours/" class="btn btn-neutral float-right" title="Plot Snippets - Colours">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../Plot_snippets_-_ggplot2/" class="btn btn-neutral" title="Plot Snippets - ggplot2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Plot_snippets_-_ggplot2/" title="Plot Snippets - ggplot2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Plot Snippets - ggplot2
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Plot_snippets_-_Colours/" title="Plot Snippets - Colours" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Plot Snippets - Colours
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>© Ugo Sparks</p>
-    
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-	  
-        </div>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Ugo Sparks
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
       </div>
-
-    </section>
-    
+      
+        
+      
+    </div>
   </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+</footer>
       
+    </div>
+    
+      <script src="../assets/javascripts/application.8eb9be28.js"></script>
       
-        <span><a href="../Plot_snippets_-_ggplot2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
-        <span style="margin-left: 15px"><a href="../Plot_snippets_-_Colours/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+    
       
-    </span>
-</div>
-    <script src="../js/theme.js"></script>
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-      <script src="../mathjaxhelper.js"></script>
-
-</body>
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
 </html>

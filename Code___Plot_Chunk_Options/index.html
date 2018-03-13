@@ -1,454 +1,1638 @@
+
+
+
+
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="Ugo Sparks">
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Code & Plot Chunk Options - ugo_r_doc</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../css/highlight.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Code & Plot Chunk Options";
-    var mkdocs_page_input_path = "Code___Plot_Chunk_Options.md";
-    var mkdocs_page_url = "/Code___Plot_Chunk_Options/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
-  
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-93008985-1', 'auto');
-      ga('send', 'pageview');
-  </script>
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> ugo_r_doc</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A R documentation website.">
+      
+      
+        <link rel="canonical" href="https://ugoproto.github.io/ugo_r_doc/Code___Plot_Chunk_Options/">
+      
+      
+        <meta name="author" content="Ugo Sparks">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>Code & Plot Chunk Options - ugo_r_doc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#chunks" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://ugoproto.github.io/ugo_r_doc/" title="ugo_r_doc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">layers</i>
+          
+        </a>
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../An Introduction to R/">An Introduction to R</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/">Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../R_CS/">R Cheat Sheets</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Intermediate R</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Intermediate_R/">Intermediate R</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Intermediate_R_-_The_apply_Family/">Intermediate R - The apply Family</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">RStudio</span>
-    <ul class="subnav">
-                <li class=" current">
-                    
-    <a class="current" href="./">Code & Plot Chunk Options</a>
-    <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#2-chunks">2, Chunks</a></li>
-    
-
-    <li class="toctree-l3"><a href="#3-inputting-data">3, Inputting Data</a></li>
-    
-
-    <li class="toctree-l3"><a href="#4-formatting-code-chunks">4, Formatting Code Chunks</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#evaltrue-show-the-results-default">eval=TRUE; show the results (default).</a></li>
-        
-            <li><a class="toctree-l4" href="#evalfalse-or-no-results">eval=FALSE; or no results.</a></li>
-        
-            <li><a class="toctree-l4" href="#resultsmarkup-show-split-coderesultscoderesults-default">results='markup'; show split code/results/code/results (default).</a></li>
-        
-            <li><a class="toctree-l4" href="#evalasis-show-unboxed-results">eval='asis'; show 'unboxed' results.</a></li>
-        
-            <li><a class="toctree-l4" href="#evalhide-show-code-only">eval='hide'; show code only.</a></li>
-        
-            <li><a class="toctree-l4" href="#evalhold-show-code-blockresults-block">eval='hold'; show code block/results block.</a></li>
-        
-            <li><a class="toctree-l4" href="#echotrue-show-the-code-default">echo=TRUE; show the code (default).</a></li>
-        
-            <li><a class="toctree-l4" href="#echofalse-or-no-code">echo=FALSE; or no code.</a></li>
-        
-            <li><a class="toctree-l4" href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report">warning, error, message are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.</a></li>
-        
-            <li><a class="toctree-l4" href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default">tidy=TRUE/FALSE; with the formatR and shiny packages (you manage spaces and indents) (FALSE by default).</a></li>
-        
-            <li><a class="toctree-l4" href="#cachetruefalse-cache-the-results-false-by-default">cache=TRUE/FALSE; cache the results (FALSE by default).</a></li>
-        
-            <li><a class="toctree-l4" href="#comment-the-comments-in-results-by-default">comment='##'; the comments in results (by default).</a></li>
-        
-            <li><a class="toctree-l4" href="#comment-the-new-comments">comment='#'; the new comments.</a></li>
-        
-            <li><a class="toctree-l4" href="#code-chunk-r">code chunk {r}.</a></li>
-        
-            <li><a class="toctree-l4" href="#code-chunk-codenull">code chunk {code=NULL}.</a></li>
-        
-            <li><a class="toctree-l4" href="#code-chunk-text">code chunk {text}.</a></li>
-        
-            <li><a class="toctree-l4" href="#code-chunk-python">code chunk {python}.</a></li>
-        
-            <li><a class="toctree-l4" href="#hightlighttrue-hightlight-the-code-default">hightlight=TRUE; hightlight the code (default).</a></li>
-        
-            <li><a class="toctree-l4" href="#hightlightfalse-or-not">hightlight=FALSE; or not.</a></li>
-        
-            <li><a class="toctree-l4" href="#prompttrue-add-before-the-code">prompt=TRUE; add &gt; before the code.</a></li>
-        
-            <li><a class="toctree-l4" href="#promptfalse-or-not-default">prompt=FALSE; or not (default).</a></li>
-        
-            <li><a class="toctree-l4" href="#stripwhitetrue-remove-white-space-from-the-code-default">strip.white=TRUE; remove white space from the code (default).</a></li>
-        
-            <li><a class="toctree-l4" href="#stripwhitefalse-or-not">strip.white=FALSE; or not.</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#5-formatting-plot-chunk">5, Formatting Plot Chunk</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#figpathfigure-new-file-path-for-this-chunk">fig.path='figure/'; new file path for this chunk.</a></li>
-        
-            <li><a class="toctree-l4" href="#the-device-prints-png-files-by-default">The device prints .png files by default.</a></li>
-        
-            <li><a class="toctree-l4" href="#figwidth-figheight-change-the-box-size-7-by-default">fig.width= , fig.height=; change the box size (=7 by default).</a></li>
-        
-            <li><a class="toctree-l4" href="#figwidth5-figheight5">fig.width=5, fig.height=5.</a></li>
-        
-            <li><a class="toctree-l4" href="#figheight3">fig.height=3.</a></li>
-        
-            <li><a class="toctree-l4" href="#figwidth3">fig.width=3.</a></li>
-        
-            <li><a class="toctree-l4" href="#outheight100-outwidth100-in-pixels">out.height=100, out.width=100; in pixels.</a></li>
-        
-            <li><a class="toctree-l4" href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels">resize.height=200, resize.width=200; resize tike graphics for latex, in pixels.</a></li>
-        
-            <li><a class="toctree-l4" href="#sanitizetrue-sanitize-tike-graphics-for-latex">sanitize=TRUE; sanitize 'tike' graphics for latex.</a></li>
-        
-            <li><a class="toctree-l4" href="#set-the-device-arguments">Set the device arguments:</a></li>
-        
-            <li><a class="toctree-l4" href="#dpi-multiplier-for-html-output-on-retina-screens">dpi multiplier for .html output on retina screens:</a></li>
-        
-            <li><a class="toctree-l4" href="#figalignleft-or-figaligndefault">fig.align='left' or fig.align='default'.</a></li>
-        
-            <li><a class="toctree-l4" href="#figalignright">fig.align='right'.</a></li>
-        
-            <li><a class="toctree-l4" href="#figaligncenter">fig.align='center'.</a></li>
-        
-            <li><a class="toctree-l4" href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex">Figure captions at the bottom of the plot; figure caption in latex:</a></li>
-        
-            <li><a class="toctree-l4" href="#versions">Versions</a></li>
-        
-            <li><a class="toctree-l4" href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex">fig.pos='test'; string to be used as the figure position arrangement in latex.</a></li>
-        
-            <li><a class="toctree-l4" href="#show">Show</a></li>
-        
-        </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Working_with_RStudio_IDE/">Working with the RStudio IDE</a>
-                </li>
-    </ul>
-	    </li>
+              <span class="md-header-nav__topic">
+                ugo_r_doc
+              </span>
+              <span class="md-header-nav__topic">
+                Code & Plot Chunk Options
+              </span>
+            
           
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Data Wrangling Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../IO_snippets___Cleaning/">I/O snippets & Cleaning</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Reading_Data_into_R_with_readr/">Reading Data into R with readr</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data_Analysis_in_R,_the_data.table_Way/">Data Analysis in R, the data.table Way</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data_Manipulation_in_R_with_dplyr/">Data Manipulation in R with dplyr</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Plot Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_Basics/">Plot Snippets for Exploratory (and some Explanatory) Analyses</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_ggplot2/">Plot Snippets - ggplot2</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_ggvis/">Plot Snippets - ggvis</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Plot_snippets_-_Colours/">Plot Snippets - Colours</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Improved_codes/">Improved codes</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Formulas_in_R/">Formulas in R</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Packages</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../googleVis/">googleVis (embed HTML plots)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../gganimate/">gganimate</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/">Fast-and-Frugal Decision Trees</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Other Snippets</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Tables/">Tables</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../embedding/">Embedding HTML into HTML</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../embedding2/">Embedding Rmd into Rmd</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Frequentist_Bayesian/">Frequentist vs. Bayesian</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Parallel computing in R/">Parallel computing in R</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">A Hands-on Introduction to Statistics with R</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/">Statistics with R, Course One, Introduction</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/">Statistics with R, Course Two, Student's t-test</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/">Statistics with R, Course Three, Analysis of Variance</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/">Statistics with R, Course Four, Repeated Measures ANOVA</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/">Statistics with R, Course Five, Correlation and Regression</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/">Statistics with R, Course Six, Multiple Regression</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/">Statistics with R, Course Seven, Moderation and Mediation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/">Statistics with R, Notes</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Big_Data_Analysis_with_Revolution_R_Enterprise/">Big Data Analysis with Revolution R Enterprise</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Time+Series+in+R+The+Power+of+xts+and+zoo/">Time Series in R, The Power of xts and zoo</a>
-	    </li>
-          
-        </ul>
+        </div>
       </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">ugo_r_doc</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
+      <div class="md-flex__cell md-flex__cell--shrink">
         
-          <li>RStudio &raquo;</li>
-        
-      
-    
-    <li>Code & Plot Chunk Options</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main">
-            <div class="section">
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ugo_r_doc
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">layers</i>
+      
+    </span>
+    ugo_r_doc
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ugo_r_doc
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Basics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../R_CS/" title="R Cheat Sheets" class="md-nav__link">
+      R Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../An Introduction to R/" title="An Introduction to R" class="md-nav__link">
+      An Introduction to R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques/" title="Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques" class="md-nav__link">
+      Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Formulas_in_R/" title="Formulas in R" class="md-nav__link">
+      Formulas in R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Improved_codes/" title="Improved Codes" class="md-nav__link">
+      Improved Codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Intermediate_R/" title="Intermediate R" class="md-nav__link">
+      Intermediate R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Intermediate_R_-_The_apply_Family/" title="Intermediate R - The apply Family" class="md-nav__link">
+      Intermediate R - The apply Family
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      RStudio
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        RStudio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Code & Plot Chunk Options
+      </label>
+    
+    <a href="./" title="Code & Plot Chunk Options" class="md-nav__link md-nav__link--active">
+      Code & Plot Chunk Options
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chunks" title="Chunks" class="md-nav__link">
+    Chunks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputting-data" title="Inputting Data" class="md-nav__link">
+    Inputting Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-code-chunks" title="Formatting Code Chunks" class="md-nav__link">
+    Formatting Code Chunks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaltrue-show-the-results-default" title="eval=TRUE; show the results (default)." class="md-nav__link">
+    eval=TRUE; show the results (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalfalse-or-no-results" title="eval=FALSE; or no results." class="md-nav__link">
+    eval=FALSE; or no results.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultsmarkup-show-split-coderesultscoderesults-default" title="results=&#39;markup&#39;; show split code/results/code/results (default)." class="md-nav__link">
+    results=&#39;markup&#39;; show split code/results/code/results (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalasis-show-unboxed-results" title="eval=&#39;asis&#39;; show 'unboxed' results." class="md-nav__link">
+    eval=&#39;asis&#39;; show 'unboxed' results.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalhide-show-code-only" title="eval=&#39;hide&#39;; show code only." class="md-nav__link">
+    eval=&#39;hide&#39;; show code only.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalhold-show-code-blockresults-block" title="eval=&#39;hold&#39;; show code block/results block." class="md-nav__link">
+    eval=&#39;hold&#39;; show code block/results block.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echotrue-show-the-code-default" title="echo=TRUE; show the code (default)." class="md-nav__link">
+    echo=TRUE; show the code (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echofalse-or-no-code" title="echo=FALSE; or no code." class="md-nav__link">
+    echo=FALSE; or no code.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report" title="warning, error, message are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report." class="md-nav__link">
+    warning, error, message are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default" title="tidy=TRUE/FALSE; with the formatR and shiny packages (you manage spaces and indents) (FALSE by default)." class="md-nav__link">
+    tidy=TRUE/FALSE; with the formatR and shiny packages (you manage spaces and indents) (FALSE by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cachetruefalse-cache-the-results-false-by-default" title="cache=TRUE/FALSE; cache the results (FALSE by default)." class="md-nav__link">
+    cache=TRUE/FALSE; cache the results (FALSE by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-the-comments-in-results-by-default" title="comment=&#39;##&#39;; the comments in results (by default)." class="md-nav__link">
+    comment=&#39;##&#39;; the comments in results (by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-the-new-comments" title="comment=&#39;#&#39;; the new comments." class="md-nav__link">
+    comment=&#39;#&#39;; the new comments.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-r" title="code chunk {r}." class="md-nav__link">
+    code chunk {r}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-codenull" title="code chunk {code=NULL}." class="md-nav__link">
+    code chunk {code=NULL}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-text" title="code chunk {text}." class="md-nav__link">
+    code chunk {text}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-python" title="code chunk {python}." class="md-nav__link">
+    code chunk {python}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hightlighttrue-hightlight-the-code-default" title="hightlight=TRUE; hightlight the code (default)." class="md-nav__link">
+    hightlight=TRUE; hightlight the code (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hightlightfalse-or-not" title="hightlight=FALSE; or not." class="md-nav__link">
+    hightlight=FALSE; or not.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompttrue-add-before-the-code" title="prompt=TRUE; add &gt; before the code." class="md-nav__link">
+    prompt=TRUE; add &gt; before the code.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promptfalse-or-not-default" title="prompt=FALSE; or not (default)." class="md-nav__link">
+    prompt=FALSE; or not (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stripwhitetrue-remove-white-space-from-the-code-default" title="strip.white=TRUE; remove white space from the code (default)." class="md-nav__link">
+    strip.white=TRUE; remove white space from the code (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stripwhitefalse-or-not" title="strip.white=FALSE; or not." class="md-nav__link">
+    strip.white=FALSE; or not.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-plot-chunk" title="Formatting Plot Chunk" class="md-nav__link">
+    Formatting Plot Chunk
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figpathfigure-new-file-path-for-this-chunk" title="fig.path=&#39;figure/&#39;; new file path for this chunk." class="md-nav__link">
+    fig.path=&#39;figure/&#39;; new file path for this chunk.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-device-prints-png-files-by-default" title="The device prints .png files by default." class="md-nav__link">
+    The device prints .png files by default.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figwidth-figheight-change-the-box-size-7-by-default" title="fig.width= , fig.height=; change the box size (=7 by default)." class="md-nav__link">
+    fig.width= , fig.height=; change the box size (=7 by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figwidth5-figheight5" title="fig.width=5, fig.height=5." class="md-nav__link">
+    fig.width=5, fig.height=5.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figheight3" title="fig.height=3." class="md-nav__link">
+    fig.height=3.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figwidth3" title="fig.width=3." class="md-nav__link">
+    fig.width=3.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outheight100-outwidth100-in-pixels" title="out.height=100, out.width=100; in pixels." class="md-nav__link">
+    out.height=100, out.width=100; in pixels.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels" title="resize.height=200, resize.width=200; resize tike graphics for latex, in pixels." class="md-nav__link">
+    resize.height=200, resize.width=200; resize tike graphics for latex, in pixels.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanitizetrue-sanitize-tike-graphics-for-latex" title="sanitize=TRUE; sanitize 'tike' graphics for latex." class="md-nav__link">
+    sanitize=TRUE; sanitize 'tike' graphics for latex.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-device-arguments" title="Set the device arguments:" class="md-nav__link">
+    Set the device arguments:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dots-per-inch" title="dots per inch." class="md-nav__link">
+    dots per inch.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpi-multiplier-for-html-output-on-retina-screens" title="dpi multiplier for .html output on retina screens:" class="md-nav__link">
+    dpi multiplier for .html output on retina screens:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figalignleft-or-figaligndefault" title="fig.align=&#39;left&#39; or fig.align=&#39;default&#39;." class="md-nav__link">
+    fig.align=&#39;left&#39; or fig.align=&#39;default&#39;.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figalignright" title="fig.align=&#39;right&#39;." class="md-nav__link">
+    fig.align=&#39;right&#39;.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figaligncenter" title="fig.align=&#39;center&#39;." class="md-nav__link">
+    fig.align=&#39;center&#39;.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex" title="Figure captions at the bottom of the plot; figure caption in latex:" class="md-nav__link">
+    Figure captions at the bottom of the plot; figure caption in latex:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versions" title="Versions" class="md-nav__link">
+    Versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex" title="fig.pos=&#39;test&#39;; string to be used as the figure position arrangement in latex." class="md-nav__link">
+    fig.pos=&#39;test&#39;; string to be used as the figure position arrangement in latex.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show" title="Show" class="md-nav__link">
+    Show
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Working_with_RStudio_IDE/" title="Working with the RStudio IDE" class="md-nav__link">
+      Working with the RStudio IDE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data Wrangling Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data Wrangling Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
+      I/O snippets & Cleaning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Reading_Data_into_R_with_readr/" title="Reading Data into R with readr" class="md-nav__link">
+      Reading Data into R with readr
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Analysis_in_R,_the_data.table_Way/" title="Data Analysis in R, the data.table Way" class="md-nav__link">
+      Data Analysis in R, the data.table Way
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Data_Manipulation_in_R_with_dplyr/" title="Data Manipulation in R with dplyr" class="md-nav__link">
+      Data Manipulation in R with dplyr
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Plot Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Plot Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_Basics/" title="Plot Snippets for Exploratory (and some Explanatory) Analyses" class="md-nav__link">
+      Plot Snippets for Exploratory (and some Explanatory) Analyses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_ggplot2/" title="Plot Snippets - ggplot2" class="md-nav__link">
+      Plot Snippets - ggplot2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_ggvis/" title="Plot Snippets - ggvis" class="md-nav__link">
+      Plot Snippets - ggvis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Plot_snippets_-_Colours/" title="Plot Snippets - Colours" class="md-nav__link">
+      Plot Snippets - Colours
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Packages
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Packages
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../googleVis/" title="googleVis (embed HTML plots)" class="md-nav__link">
+      googleVis (embed HTML plots)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gganimate/" title="gganimate" class="md-nav__link">
+      gganimate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/" title="Fast-and-Frugal Decision Trees" class="md-nav__link">
+      Fast-and-Frugal Decision Trees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Big_Data_Analysis_with_Revolution_R_Enterprise/" title="Big Data Analysis with Revolution R Enterprise" class="md-nav__link">
+      Big Data Analysis with Revolution R Enterprise
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Time+Series+in+R+The+Power+of+xts+and+zoo/" title="Time Series in R, The Power of xts and zoo" class="md-nav__link">
+      Time Series in R, The Power of xts and zoo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Parallel computing in R/" title="Parallel computing in R" class="md-nav__link">
+      Parallel computing in R
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Other Snippets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Other Snippets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Tables/" title="Tables" class="md-nav__link">
+      Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedding/" title="Embedding HTML into HTML" class="md-nav__link">
+      Embedding HTML into HTML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedding2/" title="Embedding Rmd into Rmd" class="md-nav__link">
+      Embedding Rmd into Rmd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Frequentist_Bayesian/" title="Frequentist vs. Bayesian" class="md-nav__link">
+      Frequentist vs. Bayesian
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      A Hands-on Introduction to Statistics with R
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        A Hands-on Introduction to Statistics with R
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/" title="Statistics with R, Course One, Introduction" class="md-nav__link">
+      Statistics with R, Course One, Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/" title="Statistics with R, Course Two, Student's t-test" class="md-nav__link">
+      Statistics with R, Course Two, Student's t-test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/" title="Statistics with R, Course Three, Analysis of Variance" class="md-nav__link">
+      Statistics with R, Course Three, Analysis of Variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/" title="Statistics with R, Course Four, Repeated Measures ANOVA" class="md-nav__link">
+      Statistics with R, Course Four, Repeated Measures ANOVA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/" title="Statistics with R, Course Five, Correlation and Regression" class="md-nav__link">
+      Statistics with R, Course Five, Correlation and Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Six,_Multiple_Regression/" title="Statistics with R, Course Six, Multiple Regression" class="md-nav__link">
+      Statistics with R, Course Six, Multiple Regression
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Course_Seven,_Moderation_and_Mediation/" title="Statistics with R, Course Seven, Moderation and Mediation" class="md-nav__link">
+      Statistics with R, Course Seven, Moderation and Mediation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../A_Hands-on_Introduction_to_Statistics_with_R,_Notes/" title="Statistics with R, Notes" class="md-nav__link">
+      Statistics with R, Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chunks" title="Chunks" class="md-nav__link">
+    Chunks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputting-data" title="Inputting Data" class="md-nav__link">
+    Inputting Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-code-chunks" title="Formatting Code Chunks" class="md-nav__link">
+    Formatting Code Chunks
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaltrue-show-the-results-default" title="eval=TRUE; show the results (default)." class="md-nav__link">
+    eval=TRUE; show the results (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalfalse-or-no-results" title="eval=FALSE; or no results." class="md-nav__link">
+    eval=FALSE; or no results.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultsmarkup-show-split-coderesultscoderesults-default" title="results=&#39;markup&#39;; show split code/results/code/results (default)." class="md-nav__link">
+    results=&#39;markup&#39;; show split code/results/code/results (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalasis-show-unboxed-results" title="eval=&#39;asis&#39;; show 'unboxed' results." class="md-nav__link">
+    eval=&#39;asis&#39;; show 'unboxed' results.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalhide-show-code-only" title="eval=&#39;hide&#39;; show code only." class="md-nav__link">
+    eval=&#39;hide&#39;; show code only.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evalhold-show-code-blockresults-block" title="eval=&#39;hold&#39;; show code block/results block." class="md-nav__link">
+    eval=&#39;hold&#39;; show code block/results block.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echotrue-show-the-code-default" title="echo=TRUE; show the code (default)." class="md-nav__link">
+    echo=TRUE; show the code (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echofalse-or-no-code" title="echo=FALSE; or no code." class="md-nav__link">
+    echo=FALSE; or no code.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report" title="warning, error, message are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report." class="md-nav__link">
+    warning, error, message are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default" title="tidy=TRUE/FALSE; with the formatR and shiny packages (you manage spaces and indents) (FALSE by default)." class="md-nav__link">
+    tidy=TRUE/FALSE; with the formatR and shiny packages (you manage spaces and indents) (FALSE by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cachetruefalse-cache-the-results-false-by-default" title="cache=TRUE/FALSE; cache the results (FALSE by default)." class="md-nav__link">
+    cache=TRUE/FALSE; cache the results (FALSE by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-the-comments-in-results-by-default" title="comment=&#39;##&#39;; the comments in results (by default)." class="md-nav__link">
+    comment=&#39;##&#39;; the comments in results (by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-the-new-comments" title="comment=&#39;#&#39;; the new comments." class="md-nav__link">
+    comment=&#39;#&#39;; the new comments.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-r" title="code chunk {r}." class="md-nav__link">
+    code chunk {r}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-codenull" title="code chunk {code=NULL}." class="md-nav__link">
+    code chunk {code=NULL}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-text" title="code chunk {text}." class="md-nav__link">
+    code chunk {text}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-chunk-python" title="code chunk {python}." class="md-nav__link">
+    code chunk {python}.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hightlighttrue-hightlight-the-code-default" title="hightlight=TRUE; hightlight the code (default)." class="md-nav__link">
+    hightlight=TRUE; hightlight the code (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hightlightfalse-or-not" title="hightlight=FALSE; or not." class="md-nav__link">
+    hightlight=FALSE; or not.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompttrue-add-before-the-code" title="prompt=TRUE; add &gt; before the code." class="md-nav__link">
+    prompt=TRUE; add &gt; before the code.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promptfalse-or-not-default" title="prompt=FALSE; or not (default)." class="md-nav__link">
+    prompt=FALSE; or not (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stripwhitetrue-remove-white-space-from-the-code-default" title="strip.white=TRUE; remove white space from the code (default)." class="md-nav__link">
+    strip.white=TRUE; remove white space from the code (default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stripwhitefalse-or-not" title="strip.white=FALSE; or not." class="md-nav__link">
+    strip.white=FALSE; or not.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-plot-chunk" title="Formatting Plot Chunk" class="md-nav__link">
+    Formatting Plot Chunk
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figpathfigure-new-file-path-for-this-chunk" title="fig.path=&#39;figure/&#39;; new file path for this chunk." class="md-nav__link">
+    fig.path=&#39;figure/&#39;; new file path for this chunk.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-device-prints-png-files-by-default" title="The device prints .png files by default." class="md-nav__link">
+    The device prints .png files by default.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figwidth-figheight-change-the-box-size-7-by-default" title="fig.width= , fig.height=; change the box size (=7 by default)." class="md-nav__link">
+    fig.width= , fig.height=; change the box size (=7 by default).
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figwidth5-figheight5" title="fig.width=5, fig.height=5." class="md-nav__link">
+    fig.width=5, fig.height=5.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figheight3" title="fig.height=3." class="md-nav__link">
+    fig.height=3.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figwidth3" title="fig.width=3." class="md-nav__link">
+    fig.width=3.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outheight100-outwidth100-in-pixels" title="out.height=100, out.width=100; in pixels." class="md-nav__link">
+    out.height=100, out.width=100; in pixels.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels" title="resize.height=200, resize.width=200; resize tike graphics for latex, in pixels." class="md-nav__link">
+    resize.height=200, resize.width=200; resize tike graphics for latex, in pixels.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanitizetrue-sanitize-tike-graphics-for-latex" title="sanitize=TRUE; sanitize 'tike' graphics for latex." class="md-nav__link">
+    sanitize=TRUE; sanitize 'tike' graphics for latex.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-device-arguments" title="Set the device arguments:" class="md-nav__link">
+    Set the device arguments:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dots-per-inch" title="dots per inch." class="md-nav__link">
+    dots per inch.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpi-multiplier-for-html-output-on-retina-screens" title="dpi multiplier for .html output on retina screens:" class="md-nav__link">
+    dpi multiplier for .html output on retina screens:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figalignleft-or-figaligndefault" title="fig.align=&#39;left&#39; or fig.align=&#39;default&#39;." class="md-nav__link">
+    fig.align=&#39;left&#39; or fig.align=&#39;default&#39;.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figalignright" title="fig.align=&#39;right&#39;." class="md-nav__link">
+    fig.align=&#39;right&#39;.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figaligncenter" title="fig.align=&#39;center&#39;." class="md-nav__link">
+    fig.align=&#39;center&#39;.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex" title="Figure captions at the bottom of the plot; figure caption in latex:" class="md-nav__link">
+    Figure captions at the bottom of the plot; figure caption in latex:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versions" title="Versions" class="md-nav__link">
+    Versions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex" title="fig.pos=&#39;test&#39;; string to be used as the figure position arrangement in latex." class="md-nav__link">
+    fig.pos=&#39;test&#39;; string to be used as the figure position arrangement in latex.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show" title="Show" class="md-nav__link">
+    Show
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
-                <ul>
-<li><a href="#preliminary-options">1, Preliminary Options</a></li>
-<li><a href="#chunks">2, Chunks</a></li>
-<li><a href="#inputting-data">3, Inputting Data</a></li>
-<li><a href="#formatting-code-chunks">4, Formatting Code Chunks</a><ul>
-<li><a href="#evaltrue-show-the-results-default."><code>eval=TRUE</code>; show the results (default).</a></li>
-<li><a href="#evalfalse-or-no-results."><code>eval=FALSE</code>; or no results.</a></li>
-<li><a href="#resultsmarkup-show-split-coderesultscoderesults-default."><code>results='markup'</code>; show split code/results/code/results (default).</a></li>
-<li><a href="#evalasis-show-unboxed-results."><code>eval='asis'</code>; show &lsquo;unboxed&rsquo; results.</a></li>
-<li><a href="#evalhide-show-code-only."><code>eval='hide'</code>; show code only.</a></li>
-<li><a href="#evalhold-show-code-blockresults-block."><code>eval='hold'</code>; show code block/results block.</a></li>
-<li><a href="#echotrue-show-the-code-default."><code>echo=TRUE</code>; show the code (default).</a></li>
-<li><a href="#echofalse-or-no-code."><code>echo=FALSE</code>; or no code.</a></li>
-<li><a href="#warning-error-message-are-set-to-true-by-default.-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report."><code>warning</code>, <code>error</code>, <code>message</code> are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.</a></li>
-<li><a href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default."><code>tidy=TRUE/FALSE</code>; with the <code>formatR</code> and <code>shiny</code> packages (you manage spaces and indents) (FALSE by default).</a></li>
-<li><a href="#cachetruefalse-cache-the-results-false-by-default.">cache=TRUE/FALSE; cache the results (FALSE by default).</a></li>
-<li><a href="#comment-the-comments-in-results-by-default."><code>comment='##'</code>; the comments in results (by default).</a></li>
-<li><a href="#comment-the-new-comments."><code>comment='#'</code>; the new comments.</a></li>
-<li><a href="#code-chunk-r.">code chunk <code>{r}</code>.</a></li>
-<li><a href="#code-chunk-codenull.">code chunk <code>{code=NULL}</code>.</a></li>
-<li><a href="#code-chunk-text.">code chunk <code>{text}</code>.</a></li>
-<li><a href="#code-chunk-python.">code chunk <code>{python}</code>.</a></li>
-<li><a href="#hightlighttrue-hightlight-the-code-default."><code>hightlight=TRUE</code>; hightlight the code (default).</a></li>
-<li><a href="#hightlightfalse-or-not."><code>hightlight=FALSE</code>; or not.</a></li>
-<li><a href="#prompttrue-add-before-the-code."><code>prompt=TRUE</code>; add <code>&gt;</code> before the code.</a></li>
-<li><a href="#promptfalse-or-not-default."><code>prompt=FALSE</code>; or not (default).</a></li>
-<li><a href="#strip.whitetrue-remove-white-space-from-the-code-default."><code>strip.white=TRUE</code>; remove white space from the code (default).</a></li>
-<li><a href="#strip.whitefalse-or-not."><code>strip.white=FALSE</code>; or not.</a></li>
-</ul>
-</li>
-<li><a href="#formatting-plot-chunk">5, Formatting Plot Chunk</a><ul>
-<li><a href="#fig.pathfigure-new-file-path-for-this-chunk."><code>fig.path='figure/'</code>; new file path for this chunk.</a></li>
-<li><a href="#the-device-prints-.png-files-by-default.">The device prints .png files by default.</a></li>
-<li><a href="#fig.width-fig.height-change-the-box-size-7-by-default."><code>fig.width= , fig.height=</code>; change the box size (<code>=7</code> by default).</a></li>
-<li><a href="#fig.width5-fig.height5."><code>fig.width=5, fig.height=5</code>.</a></li>
-<li><a href="#fig.height3."><code>fig.height=3</code>.</a></li>
-<li><a href="#fig.width3."><code>fig.width=3</code>.</a></li>
-<li><a href="#out.height100-out.width100-in-pixels."><code>out.height=100, out.width=100</code>; in pixels.</a></li>
-<li><a href="#resize.height200-resize.width200-resize-tike-graphics-for-latex-in-pixels."><code>resize.height=200, resize.width=200</code>; resize tike graphics for latex, in pixels.</a></li>
-<li><a href="#sanitizetrue-sanitize-tike-graphics-for-latex."><code>sanitize=TRUE</code>; sanitize &lsquo;tike&rsquo; graphics for latex.</a></li>
-<li><a href="#set-the-device-arguments">Set the device arguments:</a></li>
-<li><a href="#dpi-multiplier-for-.html-output-on-retina-screens">dpi multiplier for .html output on retina screens:</a></li>
-<li><a href="#fig.alignleft-or-fig.aligndefault."><code>fig.align='left'</code> or <code>fig.align='default'</code>.</a></li>
-<li><a href="#fig.alignright."><code>fig.align='right'</code>.</a></li>
-<li><a href="#fig.aligncenter."><code>fig.align='center'</code>.</a></li>
-<li><a href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex">Figure captions at the bottom of the plot; figure caption in latex:</a></li>
-<li><a href="#versions">Versions</a></li>
-<li><a href="#fig.postest-string-to-be-used-as-the-figure-position-arrangement-in-latex."><code>fig.pos='test'</code>; string to be used as the figure position arrangement in latex.</a></li>
-<li><a href="#show">Show</a></li>
-</ul>
-</li>
-</ul>
+                
+                  <a href="https://github.com/ugoproto/ugo_r_doc.git/edit/master/docs/Code___Plot_Chunk_Options.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Code & Plot Chunk Options</h1>
+                
+                <!--
+-   [1, Preliminary Options](#preliminary-options)
+-   [2, Chunks](#chunks)
+-   [3, Inputting Data](#inputting-data)
+-   [4, Formatting Code Chunks](#formatting-code-chunks)
+    -   [`eval=TRUE`; show the results (default).](#evaltrue-show-the-results-default.)
+    -   [`eval=FALSE`; or no results.](#evalfalse-or-no-results.)
+    -   [`results='markup'`; show split code/results/code/results (default).](#resultsmarkup-show-split-coderesultscoderesults-default.)
+    -   [`eval='asis'`; show 'unboxed' results.](#evalasis-show-unboxed-results.)
+    -   [`eval='hide'`; show code only.](#evalhide-show-code-only.)
+    -   [`eval='hold'`; show code block/results block.](#evalhold-show-code-blockresults-block.)
+    -   [`echo=TRUE`; show the code (default).](#echotrue-show-the-code-default.)
+    -   [`echo=FALSE`; or no code.](#echofalse-or-no-code.)
+    -   [`warning`, `error`, `message` are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.](#warning-error-message-are-set-to-true-by-default.-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report.)
+    -   [`tidy=TRUE/FALSE`; with the `formatR` and `shiny` packages (you manage spaces and indents) (FALSE by default).](#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default.)
+    -   [cache=TRUE/FALSE; cache the results (FALSE by default).](#cachetruefalse-cache-the-results-false-by-default.)
+    -   [`comment='##'`; the comments in results (by default).](#comment-the-comments-in-results-by-default.)
+    -   [`comment='#'`; the new comments.](#comment-the-new-comments.)
+    -   [code chunk `{r}`.](#code-chunk-r.)
+    -   [code chunk `{code=NULL}`.](#code-chunk-codenull.)
+    -   [code chunk `{text}`.](#code-chunk-text.)
+    -   [code chunk `{python}`.](#code-chunk-python.)
+    -   [`hightlight=TRUE`; hightlight the code (default).](#hightlighttrue-hightlight-the-code-default.)
+    -   [`hightlight=FALSE`; or not.](#hightlightfalse-or-not.)
+    -   [`prompt=TRUE`; add `>` before the code.](#prompttrue-add-before-the-code.)
+    -   [`prompt=FALSE`; or not (default).](#promptfalse-or-not-default.)
+    -   [`strip.white=TRUE`; remove white space from the code (default).](#strip.whitetrue-remove-white-space-from-the-code-default.)
+    -   [`strip.white=FALSE`; or not.](#strip.whitefalse-or-not.)
+-   [5, Formatting Plot Chunk](#formatting-plot-chunk)
+    -   [`fig.path='figure/'`; new file path for this chunk.](#fig.pathfigure-new-file-path-for-this-chunk.)
+    -   [The device prints .png files by default.](#the-device-prints-.png-files-by-default.)
+    -   [`fig.width= , fig.height=`; change the box size (`=7` by default).](#fig.width-fig.height-change-the-box-size-7-by-default.)
+    -   [`fig.width=5, fig.height=5`.](#fig.width5-fig.height5.)
+    -   [`fig.height=3`.](#fig.height3.)
+    -   [`fig.width=3`.](#fig.width3.)
+    -   [`out.height=100, out.width=100`; in pixels.](#out.height100-out.width100-in-pixels.)
+    -   [`resize.height=200, resize.width=200`; resize tike graphics for latex, in pixels.](#resize.height200-resize.width200-resize-tike-graphics-for-latex-in-pixels.)
+    -   [`sanitize=TRUE`; sanitize 'tike' graphics for latex.](#sanitizetrue-sanitize-tike-graphics-for-latex.)
+    -   [Set the device arguments:](#set-the-device-arguments)
+    -   [dpi multiplier for .html output on retina screens:](#dpi-multiplier-for-.html-output-on-retina-screens)
+    -   [`fig.align='left'` or `fig.align='default'`.](#fig.alignleft-or-fig.aligndefault.)
+    -   [`fig.align='right'`.](#fig.alignright.)
+    -   [`fig.align='center'`.](#fig.aligncenter.)
+    -   [Figure captions at the bottom of the plot; figure caption in latex:](#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex)
+    -   [Versions](#versions)
+    -   [`fig.pos='test'`; string to be used as the figure position arrangement in latex.](#fig.postest-string-to-be-used-as-the-figure-position-arrangement-in-latex.)
+    -   [Show](#show)
+-->
+
 <hr />
 <p><strong>Foreword</strong></p>
 <ul>
@@ -456,438 +1640,598 @@
 <li>Snippets and results.</li>
 </ul>
 <hr />
-<h4 id="1-preliminary-options">1, Preliminary Options<a class="headerlink" href="#1-preliminary-options" title="Permanent link">&para;</a></h4>
+<h4 id="preliminary-options">Preliminary Options<a class="headerlink" href="#preliminary-options" title="Permanent link">&para;</a></h4>
 <p>Usually, the following code is set to FALSE (not showing in a report). These are the general options. Code and plot chunks overrule the general options.</p>
-<pre><code class="r">knitr::opts_chunk$set(echo=TRUE, eval=TRUE, fig.height=3, fig.width=3)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>knitr<span class="o">::</span>opts_chunk<span class="o">$</span>set<span class="p">(</span>echo<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> eval<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> fig.height<span class="o">=</span><span class="m">3</span><span class="p">,</span> fig.width<span class="o">=</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<h4 id="2-chunks">2, Chunks<a class="headerlink" href="#2-chunks" title="Permanent link">&para;</a></h4>
+<h4 id="chunks">Chunks<a class="headerlink" href="#chunks" title="Permanent link">&para;</a></h4>
 <p>Naming a chunk is including it in the document outline. The outline is a navigation tool to jump though the document.</p>
-<h4 id="3-inputting-data">3, Inputting Data<a class="headerlink" href="#3-inputting-data" title="Permanent link">&para;</a></h4>
+<h4 id="inputting-data">Inputting Data<a class="headerlink" href="#inputting-data" title="Permanent link">&para;</a></h4>
 <p>The dataset comes from the <a href="http://www.census.gov/popest/data/national/totals/2011/index.html">US Census Bureau</a>. On their website, open Excel file &lsquo;NST-EST2011-02&rsquo; about the annual estimates of the resident population.</p>
 <p>The data have become an object: a data frame. Check it out, and add column names:</p>
-<pre><code class="r">head(USstatePops,3)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>USstatePops<span class="p">,</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>##        V1      V2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##        V1      V2
 ## 1 Alabama 4779735
 ## 2  Alaska  710231
 ## 3 Arizona 6392013
-</code></pre>
-<pre><code class="r">colnames(USstatePops) &lt;- c('State', 'Pop')
+</pre></div>
+</td></tr></table>
 
-head(USstatePops, 3)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">colnames</span><span class="p">(</span>USstatePops<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;State&#39;</span><span class="p">,</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 
-<pre><code>##     State     Pop
+<span class="kp">head</span><span class="p">(</span>USstatePops<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     State     Pop
 ## 1 Alabama 4779735
 ## 2  Alaska  710231
 ## 3 Arizona 6392013
-</code></pre>
+</pre></div>
+</td></tr></table>
+
 <p>Check out the data frame:</p>
-<pre><code class="r">str(USstatePops)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>str<span class="p">(</span>USstatePops<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## 'data.frame':    51 obs. of  2 variables:
-##  $ State: Factor w/ 51 levels "Alabama","Alaska",..: 1 2 3 4 5 6 7 8 9 10 ...
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## &#39;data.frame&#39;:    51 obs. of  2 variables:
+##  $ State: Factor w/ 51 levels &quot;Alabama&quot;,&quot;Alaska&quot;,..: 1 2 3 4 5 6 7 8 9 10 ...
 ##  $ Pop  : int  4779735 710231 6392013 2915921 37253956 5029196 3574097 897934 601723 18801311 ...
-</code></pre>
+</pre></div>
+</td></tr></table>
+
 <p>The states should be strings, not factors.</p>
 <p>Extract numbers or strings without any loss from a factor structure:</p>
-<pre><code class="r"># make a copy for safety
-USstatePops2 &lt;- USstatePops
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># make a copy for safety</span>
+USstatePops2 <span class="o">&lt;-</span> USstatePops
 
-USstatePops2$State &lt;- as.character(levels(USstatePops2$State))
-</code></pre>
+USstatePops2<span class="o">$</span>State <span class="o">&lt;-</span> <span class="kp">as.character</span><span class="p">(</span><span class="kp">levels</span><span class="p">(</span>USstatePops2<span class="o">$</span>State<span class="p">))</span>
+</pre></div>
+</td></tr></table>
 
 <p>Check out the new data frame:</p>
-<pre><code class="r">str(USstatePops2)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>str<span class="p">(</span>USstatePops2<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## 'data.frame':    51 obs. of  2 variables:
-##  $ State: chr  "Alabama" "Alaska" "Arizona" "Arkansas" ...
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## &#39;data.frame&#39;:    51 obs. of  2 variables:
+##  $ State: chr  &quot;Alabama&quot; &quot;Alaska&quot; &quot;Arizona&quot; &quot;Arkansas&quot; ...
 ##  $ Pop  : int  4779735 710231 6392013 2915921 37253956 5029196 3574097 897934 601723 18801311 ...
-</code></pre>
-<pre><code class="r">head(USstatePops2, 3)
-</code></pre>
+</pre></div>
+</td></tr></table>
 
-<pre><code>##     State     Pop
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>USstatePops2<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     State     Pop
 ## 1 Alabama 4779735
 ## 2  Alaska  710231
 ## 3 Arizona 6392013
-</code></pre>
-<h4 id="4-formatting-code-chunks">4, Formatting Code Chunks<a class="headerlink" href="#4-formatting-code-chunks" title="Permanent link">&para;</a></h4>
-<h5 id="evaltrue-show-the-results-default"><code>eval=TRUE</code>; show the results (default).<a class="headerlink" href="#evaltrue-show-the-results-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h5 id="evalfalse-or-no-results"><code>eval=FALSE</code>; or no results.<a class="headerlink" href="#evalfalse-or-no-results" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<h4 id="formatting-code-chunks">Formatting Code Chunks<a class="headerlink" href="#formatting-code-chunks" title="Permanent link">&para;</a></h4>
+<h5 id="evaltrue-show-the-results-default"><code class="codehilite">eval=TRUE</code>; show the results (default).<a class="headerlink" href="#evaltrue-show-the-results-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<h5 id="resultsmarkup-show-split-coderesultscoderesults-default"><code>results='markup'</code>; show split code/results/code/results (default).<a class="headerlink" href="#resultsmarkup-show-split-coderesultscoderesults-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<pre><code class="r">median(USstatePops2$Pop)
-</code></pre>
+<h5 id="evalfalse-or-no-results"><code class="codehilite">eval=FALSE</code>; or no results.<a class="headerlink" href="#evalfalse-or-no-results" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 4339362
-</code></pre>
-<h5 id="evalasis-show-unboxed-results"><code>eval='asis'</code>; show &lsquo;unboxed&rsquo; results.<a class="headerlink" href="#evalasis-show-unboxed-results" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<h5 id="resultsmarkup-show-split-coderesultscoderesults-default"><code class="codehilite">results=&#39;markup&#39;</code>; show split code/results/code/results (default).<a class="headerlink" href="#resultsmarkup-show-split-coderesultscoderesults-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<p>
-<script type="math/tex; mode=display">1</script> 6053834</p>
-<pre><code class="r">median(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
 
-<p>
-<script type="math/tex; mode=display">1</script> 4339362</p>
-<h5 id="evalhide-show-code-only"><code>eval='hide'</code>; show code only.<a class="headerlink" href="#evalhide-show-code-only" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-median(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<h5 id="evalhold-show-code-blockresults-block"><code>eval='hold'</code>; show code block/results block.<a class="headerlink" href="#evalhold-show-code-blockresults-block" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-median(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4339362
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
+<h5 id="evalasis-show-unboxed-results"><code class="codehilite">eval=&#39;asis&#39;</code>; show &lsquo;unboxed&rsquo; results.<a class="headerlink" href="#evalasis-show-unboxed-results" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>[1] 6053834</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>[1] 4339362</p>
+<h5 id="evalhide-show-code-only"><code class="codehilite">eval=&#39;hide&#39;</code>; show code only.<a class="headerlink" href="#evalhide-show-code-only" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="evalhold-show-code-blockresults-block"><code class="codehilite">eval=&#39;hold&#39;</code>; show code block/results block.<a class="headerlink" href="#evalhold-show-code-blockresults-block" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
 ## [1] 4339362
-</code></pre>
+</pre></div>
+</td></tr></table>
+
 <hr />
-<h5 id="echotrue-show-the-code-default"><code>echo=TRUE</code>; show the code (default).<a class="headerlink" href="#echotrue-show-the-code-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<h5 id="echotrue-show-the-code-default"><code class="codehilite">echo=TRUE</code>; show the code (default).<a class="headerlink" href="#echotrue-show-the-code-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<pre><code class="r">median(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 4339362
-</code></pre>
-<h5 id="echofalse-or-no-code"><code>echo=FALSE</code>; or no code.<a class="headerlink" href="#echofalse-or-no-code" title="Permanent link">&para;</a></h5>
-<pre><code>## [1] 6053834
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4339362
+</pre></div>
+</td></tr></table>
+
+<h5 id="echofalse-or-no-code"><code class="codehilite">echo=FALSE</code>; or no code.<a class="headerlink" href="#echofalse-or-no-code" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
 
 ## [1] 4339362
-</code></pre>
-<hr />
-<h5 id="warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report"><code>warning</code>, <code>error</code>, <code>message</code> are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.<a class="headerlink" href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report" title="Permanent link">&para;</a></h5>
-<pre><code class="text">{r, warning=TRUE, error=TRUE, message=TRUE}
-</code></pre>
+</pre></div>
+</td></tr></table>
 
 <hr />
-<h5 id="tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default"><code>tidy=TRUE/FALSE</code>; with the <code>formatR</code> and <code>shiny</code> packages (you manage spaces and indents) (FALSE by default).<a class="headerlink" href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default" title="Permanent link">&para;</a></h5>
-<pre><code class="text">{r, tidy=TRUE}
-</code></pre>
+<h5 id="warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report"><code class="codehilite">warning</code>, <code class="codehilite">error</code>, <code class="codehilite">message</code> are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.<a class="headerlink" href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{r, warning=TRUE, error=TRUE, message=TRUE}
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h5 id="tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default"><code class="codehilite">tidy=TRUE/FALSE</code>; with the <code class="codehilite">formatR</code> and <code class="codehilite">shiny</code> packages (you manage spaces and indents) (FALSE by default).<a class="headerlink" href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{r, tidy=TRUE}
+</pre></div>
+</td></tr></table>
 
 <hr />
 <h5 id="cachetruefalse-cache-the-results-false-by-default">cache=TRUE/FALSE; cache the results (FALSE by default).<a class="headerlink" href="#cachetruefalse-cache-the-results-false-by-default" title="Permanent link">&para;</a></h5>
 <p>Can be resused in future knits since it <strong>creates a subdir (the &lsquo;cache&rsquo;)</strong> with a R workspace, .rdb and .rdx files.</p>
-<pre><code class="text">{r, cache=TRUE}
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{r, cache=TRUE}
+</pre></div>
+</td></tr></table>
 
-<p>The <code>cache.path='cache/'</code> can be changed. See <code>cache-comments</code>, <code>cache.lazy</code>, <code>cache.vars</code>, <code>autodep</code>, <code>dependson</code>.</p>
+<p>The <code class="codehilite">cache.path=&#39;cache/&#39;</code> can be changed. See <code class="codehilite">cache-comments</code>, <code class="codehilite">cache.lazy</code>, <code class="codehilite">cache.vars</code>, <code class="codehilite">autodep</code>, <code class="codehilite">dependson</code>.</p>
 <hr />
-<h5 id="comment-the-comments-in-results-by-default"><code>comment='##'</code>; the comments in results (by default).<a class="headerlink" href="#comment-the-comments-in-results-by-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<h5 id="comment-the-comments-in-results-by-default"><code class="codehilite">comment=&#39;##&#39;</code>; the comments in results (by default).<a class="headerlink" href="#comment-the-comments-in-results-by-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h5 id="comment-the-new-comments"><code>comment='#'</code>; the new comments.<a class="headerlink" href="#comment-the-new-comments" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
 
-<pre><code># [1] 6053834
-</code></pre>
+<h5 id="comment-the-new-comments"><code class="codehilite">comment=&#39;#&#39;</code>; the new comments.<a class="headerlink" href="#comment-the-new-comments" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># [1] 6053834
+</pre></div>
+</td></tr></table>
+
 <hr />
-<h5 id="code-chunk-r">code chunk <code>{r}</code>.<a class="headerlink" href="#code-chunk-r" title="Permanent link">&para;</a></h5>
-<pre><code class="r">list &lt;- c(1, 2, 3)
-list
-</code></pre>
+<h5 id="code-chunk-r">code chunk <code class="codehilite">{r}</code>.<a class="headerlink" href="#code-chunk-r" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">list</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kt">list</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 1 2 3
-</code></pre>
-<h5 id="code-chunk-codenull">code chunk <code>{code=NULL}</code>.<a class="headerlink" href="#code-chunk-codenull" title="Permanent link">&para;</a></h5>
-<pre><code class="code">list &lt;- c(1, 2, 3)
-list
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 1 2 3
+</pre></div>
+</td></tr></table>
 
-<h5 id="code-chunk-text">code chunk <code>{text}</code>.<a class="headerlink" href="#code-chunk-text" title="Permanent link">&para;</a></h5>
-<pre><code class="text">list &lt;- c(1, 2, 3)
-list
-</code></pre>
+<h5 id="code-chunk-codenull">code chunk <code class="codehilite">{code=NULL}</code>.<a class="headerlink" href="#code-chunk-codenull" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">list</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<span class="kt">list</span>
+</pre></div>
+</td></tr></table>
 
-<h5 id="code-chunk-python">code chunk <code>{python}</code>.<a class="headerlink" href="#code-chunk-python" title="Permanent link">&para;</a></h5>
-<pre><code class="python">list = [1, 2, 3]
-print(list)
-</code></pre>
+<h5 id="code-chunk-text">code chunk <code class="codehilite">{text}</code>.<a class="headerlink" href="#code-chunk-text" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>list &lt;- c(1, 2, 3)
+list
+</pre></div>
+</td></tr></table>
+
+<h5 id="code-chunk-python">code chunk <code class="codehilite">{python}</code>.<a class="headerlink" href="#code-chunk-python" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p>Set up the new language first.</p>
 <hr />
-<h5 id="hightlighttrue-hightlight-the-code-default"><code>hightlight=TRUE</code>; hightlight the code (default).<a class="headerlink" href="#hightlighttrue-hightlight-the-code-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<h5 id="hightlighttrue-hightlight-the-code-default"><code class="codehilite">hightlight=TRUE</code>; hightlight the code (default).<a class="headerlink" href="#hightlighttrue-hightlight-the-code-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h5 id="hightlightfalse-or-not"><code>hightlight=FALSE</code>; or not.<a class="headerlink" href="#hightlightfalse-or-not" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h5 id="prompttrue-add-before-the-code"><code>prompt=TRUE</code>; add <code>&gt;</code> before the code.<a class="headerlink" href="#prompttrue-add-before-the-code" title="Permanent link">&para;</a></h5>
-<pre><code class="r">&gt; mean(USstatePops2$Pop)
-</code></pre>
+<h5 id="hightlightfalse-or-not"><code class="codehilite">hightlight=FALSE</code>; or not.<a class="headerlink" href="#hightlightfalse-or-not" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h5 id="promptfalse-or-not-default"><code>prompt=FALSE</code>; or not (default).<a class="headerlink" href="#promptfalse-or-not-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h5 id="stripwhitetrue-remove-white-space-from-the-code-default"><code>strip.white=TRUE</code>; remove white space from the code (default).<a class="headerlink" href="#stripwhitetrue-remove-white-space-from-the-code-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<h5 id="prompttrue-add-before-the-code"><code class="codehilite">prompt=TRUE</code>; add <code class="codehilite">&gt;</code> before the code.<a class="headerlink" href="#prompttrue-add-before-the-code" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h5 id="stripwhitefalse-or-not"><code>strip.white=FALSE</code>; or not.<a class="headerlink" href="#stripwhitefalse-or-not" title="Permanent link">&para;</a></h5>
-<pre><code class="r">mean(USstatePops2$Pop)
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
 
-<pre><code>## [1] 6053834
-</code></pre>
-<h4 id="5-formatting-plot-chunk">5, Formatting Plot Chunk<a class="headerlink" href="#5-formatting-plot-chunk" title="Permanent link">&para;</a></h4>
+<h5 id="promptfalse-or-not-default"><code class="codehilite">prompt=FALSE</code>; or not (default).<a class="headerlink" href="#promptfalse-or-not-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
+
+<h5 id="stripwhitetrue-remove-white-space-from-the-code-default"><code class="codehilite">strip.white=TRUE</code>; remove white space from the code (default).<a class="headerlink" href="#stripwhitetrue-remove-white-space-from-the-code-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
+
+<h5 id="stripwhitefalse-or-not"><code class="codehilite">strip.white=FALSE</code>; or not.<a class="headerlink" href="#stripwhitefalse-or-not" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
+</pre></div>
+</td></tr></table>
+
+<h4 id="formatting-plot-chunk">Formatting Plot Chunk<a class="headerlink" href="#formatting-plot-chunk" title="Permanent link">&para;</a></h4>
 <p>Prints the plots in the .html report and and creates a subdir with the plot files (the references).</p>
-<h5 id="figpathfigure-new-file-path-for-this-chunk"><code>fig.path='figure/'</code>; new file path for this chunk.<a class="headerlink" href="#figpathfigure-new-file-path-for-this-chunk" title="Permanent link">&para;</a></h5>
+<h5 id="figpathfigure-new-file-path-for-this-chunk"><code class="codehilite">fig.path=&#39;figure/&#39;</code>; new file path for this chunk.<a class="headerlink" href="#figpathfigure-new-file-path-for-this-chunk" title="Permanent link">&para;</a></h5>
 <p>Otherwise, the path is set in the general options.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-28-1.png" /></p>
 <h5 id="the-device-prints-png-files-by-default">The device prints .png files by default.<a class="headerlink" href="#the-device-prints-png-files-by-default" title="Permanent link">&para;</a></h5>
 <p>It can be changed to other formats.</p>
-<p><code>dev='png'</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">dev=&#39;png&#39;</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-29-1.png" /></p>
-<p><code>dev='jpeg'</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">dev=&#39;jpeg&#39;</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-30-1.jpeg" /></p>
-<p><code>dev='pdf'</code>; <code>'pdf'</code> cannot be printed in the .html report, but only included in the subdir.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">dev=&#39;pdf&#39;</code>; <code class="codehilite">&#39;pdf&#39;</code> cannot be printed in the .html report, but only included in the subdir.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-31-1.pdf" /></p>
 <hr />
-<h5 id="figwidth-figheight-change-the-box-size-7-by-default"><code>fig.width= , fig.height=</code>; change the box size (<code>=7</code> by default).<a class="headerlink" href="#figwidth-figheight-change-the-box-size-7-by-default" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="figwidth-figheight-change-the-box-size-7-by-default"><code class="codehilite">fig.width= , fig.height=</code>; change the box size (<code class="codehilite">=7</code> by default).<a class="headerlink" href="#figwidth-figheight-change-the-box-size-7-by-default" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-32-1.png" /></p>
-<h5 id="figwidth5-figheight5"><code>fig.width=5, fig.height=5</code>.<a class="headerlink" href="#figwidth5-figheight5" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="figwidth5-figheight5"><code class="codehilite">fig.width=5, fig.height=5</code>.<a class="headerlink" href="#figwidth5-figheight5" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-33-1.png" /></p>
-<h5 id="figheight3"><code>fig.height=3</code>.<a class="headerlink" href="#figheight3" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="figheight3"><code class="codehilite">fig.height=3</code>.<a class="headerlink" href="#figheight3" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-34-1.png" /></p>
-<h5 id="figwidth3"><code>fig.width=3</code>.<a class="headerlink" href="#figwidth3" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="figwidth3"><code class="codehilite">fig.width=3</code>.<a class="headerlink" href="#figwidth3" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-35-1.png" /></p>
-<h5 id="outheight100-outwidth100-in-pixels"><code>out.height=100, out.width=100</code>; in pixels.<a class="headerlink" href="#outheight100-outwidth100-in-pixels" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="outheight100-outwidth100-in-pixels"><code class="codehilite">out.height=100, out.width=100</code>; in pixels.<a class="headerlink" href="#outheight100-outwidth100-in-pixels" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-36-1.png" /></p>
 <hr />
-<h5 id="resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels"><code>resize.height=200, resize.width=200</code>; resize tike graphics for latex, in pixels.<a class="headerlink" href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels"><code class="codehilite">resize.height=200, resize.width=200</code>; resize tike graphics for latex, in pixels.<a class="headerlink" href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-37-1.png" /></p>
-<h5 id="sanitizetrue-sanitize-tike-graphics-for-latex"><code>sanitize=TRUE</code>; sanitize &lsquo;tike&rsquo; graphics for latex.<a class="headerlink" href="#sanitizetrue-sanitize-tike-graphics-for-latex" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="sanitizetrue-sanitize-tike-graphics-for-latex"><code class="codehilite">sanitize=TRUE</code>; sanitize &lsquo;tike&rsquo; graphics for latex.<a class="headerlink" href="#sanitizetrue-sanitize-tike-graphics-for-latex" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-38-1.png" /></p>
 <hr />
 <h5 id="set-the-device-arguments">Set the device arguments:<a class="headerlink" href="#set-the-device-arguments" title="Permanent link">&para;</a></h5>
-<p><code>dev.args=list(bg='yellow', pointsize=10)</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">dev.args=list(bg=&#39;yellow&#39;, pointsize=10)</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-39-1.png" /></p>
-<p><code>dev.args=list(pointsize=8), fig.height=3</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">dev.args=list(pointsize=8), fig.height=3</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-40-1.png" /></p>
 <hr />
 <h6 id="dots-per-inch">dots per inch.<a class="headerlink" href="#dots-per-inch" title="Permanent link">&para;</a></h6>
-<p><code>dpi=72</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">dpi=72</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-41-1.png" /></p>
-<p><code>dpi=90</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">dpi=90</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-42-1.png" /></p>
 <h5 id="dpi-multiplier-for-html-output-on-retina-screens">dpi multiplier for .html output on retina screens:<a class="headerlink" href="#dpi-multiplier-for-html-output-on-retina-screens" title="Permanent link">&para;</a></h5>
-<p><code>fig.retina=1</code></p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">fig.retina=1</code></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-43-1.png" /></p>
-<p><code>fig.retina=2</code>; double dpi.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">fig.retina=2</code>; double dpi.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-44-1.png" /></p>
 <hr />
-<h5 id="figalignleft-or-figaligndefault"><code>fig.align='left'</code> or <code>fig.align='default'</code>.<a class="headerlink" href="#figalignleft-or-figaligndefault" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="figalignleft-or-figaligndefault"><code class="codehilite">fig.align=&#39;left&#39;</code> or <code class="codehilite">fig.align=&#39;default&#39;</code>.<a class="headerlink" href="#figalignleft-or-figaligndefault" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-45-1.png" /></p>
-<h5 id="figalignright"><code>fig.align='right'</code>.<a class="headerlink" href="#figalignright" title="Permanent link">&para;</a></h5>
-<h5 id="figaligncenter"><code>fig.align='center'</code>.<a class="headerlink" href="#figaligncenter" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<h5 id="figalignright"><code class="codehilite">fig.align=&#39;right&#39;</code>.<a class="headerlink" href="#figalignright" title="Permanent link">&para;</a></h5>
+<h5 id="figaligncenter"><code class="codehilite">fig.align=&#39;center&#39;</code>.<a class="headerlink" href="#figaligncenter" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><center><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-47-1.png" /></center></p>
 <hr />
 <h5 id="figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex">Figure captions at the bottom of the plot; figure caption in latex:<a class="headerlink" href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex" title="Permanent link">&para;</a></h5>
-<p><code>fig.cap='CAPTION 14'</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">fig.cap=&#39;CAPTION 14&#39;</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="CAPTION 14" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-48-1.png" /></p>
 <p>See:</p>
 <ul>
-<li><code>fig.lp=''</code>; figure caption prefix</li>
-<li><code>fig.scap=''</code>; short figure caption prefix.</li>
-<li><code>fig.subcap=''</code>; subcaption.</li>
-<li><code>fig.env=''</code>; the latex environment for figures.</li>
+<li><code class="codehilite">fig.lp=&#39;&#39;</code>; figure caption prefix</li>
+<li><code class="codehilite">fig.scap=&#39;&#39;</code>; short figure caption prefix.</li>
+<li><code class="codehilite">fig.subcap=&#39;&#39;</code>; subcaption.</li>
+<li><code class="codehilite">fig.env=&#39;&#39;</code>; the latex environment for figures.</li>
 </ul>
 <hr />
 <h5 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h5>
-<p><code>fig.keep='high'</code>; merge low-level changes into high-level plots.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">fig.keep=&#39;high&#39;</code>; merge low-level changes into high-level plots.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-49-1.png" /></p>
 <p>See:</p>
 <ul>
-<li><code>fig.keep='all'</code>; keep all plots (low-level changes may produce new plots).</li>
-<li><code>fig.keep='first'/'last'</code>; keep the first/last plot only.</li>
-<li><code>fig.keep='none'</code>; discard all plots.</li>
+<li><code class="codehilite">fig.keep=&#39;all&#39;</code>; keep all plots (low-level changes may produce new plots).</li>
+<li><code class="codehilite">fig.keep=&#39;first&#39;/&#39;last&#39;</code>; keep the first/last plot only.</li>
+<li><code class="codehilite">fig.keep=&#39;none&#39;</code>; discard all plots.</li>
 </ul>
 <hr />
-<h5 id="figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex"><code>fig.pos='test'</code>; string to be used as the figure position arrangement in latex.<a class="headerlink" href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex" title="Permanent link">&para;</a></h5>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
-</code></pre>
+<h5 id="figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex"><code class="codehilite">fig.pos=&#39;test&#39;</code>; string to be used as the figure position arrangement in latex.<a class="headerlink" href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-50-1.png" /></p>
 <hr />
 <h5 id="show">Show<a class="headerlink" href="#show" title="Permanent link">&para;</a></h5>
-<p><code>fig.show='asis'</code>.</p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 10, main = '', xlab = 'Pop')
-</code></pre>
+<p><code class="codehilite">fig.show=&#39;asis&#39;</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">10</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-51-1.png" /></p>
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-51-2.png" /></p>
 <ul>
-<li><code>fig.show='hold'</code>; display the plots at the very end of the chunk.</li>
+<li><code class="codehilite">fig.show=&#39;hold&#39;</code>; display the plots at the very end of the chunk.</li>
 </ul>
 <!-- -->
 
-<pre><code class="r">hist(USstatePops2$Pop, breaks = 10, main = '', xlab = 'Pop')
-hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
-</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">10</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-52-1.png" /><br />
 <img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-52-2.png" /></p>
 <p>See:</p>
 <ul>
-<li><code>fig.show='hide'</code>; generate the plots, but not in the final document.</li>
-<li><code>fig.show='animate'</code>; combine all of the plots created into an animation. Additional packages and settings are required.</li>
+<li><code class="codehilite">fig.show=&#39;hide&#39;</code>; generate the plots, but not in the final document.</li>
+<li><code class="codehilite">fig.show=&#39;animate&#39;</code>; combine all of the plots created into an animation. Additional packages and settings arerequired.</li>
 </ul>
-<hr />
+                
+                  
+                
               
-            </div>
+              
+                
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../Working_with_RStudio_IDE/" class="btn btn-neutral float-right" title="Working with the RStudio IDE">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../Intermediate_R_-_The_apply_Family/" class="btn btn-neutral" title="Intermediate R - The apply Family"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Intermediate_R_-_The_apply_Family/" title="Intermediate R - The apply Family" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Intermediate R - The apply Family
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Working_with_RStudio_IDE/" title="Working with the RStudio IDE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Working with the RStudio IDE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-      <p>© Ugo Sparks</p>
-    
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-	  
-        </div>
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Ugo Sparks
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
       </div>
-
-    </section>
-    
+      
+        
+      
+    </div>
   </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+</footer>
       
+    </div>
+    
+      <script src="../assets/javascripts/application.8eb9be28.js"></script>
       
-        <span><a href="../Intermediate_R_-_The_apply_Family/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
-        <span style="margin-left: 15px"><a href="../Working_with_RStudio_IDE/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+    
       
-    </span>
-</div>
-    <script src="../js/theme.js"></script>
-      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-      <script src="../mathjaxhelper.js"></script>
-
-</body>
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
 </html>
