@@ -11,7 +11,7 @@ Notes, snippets, and results.
 
 ---
 
-## Embedding HTML outputs in general
+# Embedding HTML outputs in general
 
 - We can embed just about any HTML snippet with `<iframe>` or `<embed>`. 
 - Embedding static visualizations from packages such as `ggplot2`, `ggmap` or `rworldmap`, to name a few, can be done with image outputs (.png, .pdf) or HTML outputs. 
@@ -29,9 +29,9 @@ output:
 
 If the figures are generated with `fig.width=5, fig.height=5`; they should fit in a 520x520px box. In some case, we might need more room...
 
-## Embedding outputs from...
+# Embedding outputs from...
 
-### ...the `leaflet` package
+## ...the `leaflet` package
 
 ```
 <iframe seamless src="../leaflet_frag.html" width=520px height=520px ></iframe>
@@ -45,7 +45,7 @@ If the figures are generated with `fig.width=5, fig.height=5`; they should fit i
 
 <embed seamless src="../leaflet_frag.html" width=520px height=520px ></embed>
 
-### ...the `dygraphs` package
+## ...the `dygraphs` package
 
 ```
 <embed seamless src="../dygraphs_frag.html" width=520px height=520px ></embed>
@@ -53,7 +53,7 @@ If the figures are generated with `fig.width=5, fig.height=5`; they should fit i
 
 <embed seamless src="../dygraphs_frag.html" width=520px height=520px ></embed>
 
-### ...the `plotly` package
+## ...the `plotly` package
 
 ```
 <embed seamless src="../plotly_frag.html" width=520px height=520px ></embed>
@@ -61,7 +61,7 @@ If the figures are generated with `fig.width=5, fig.height=5`; they should fit i
 
 <embed seamless src="../plotly_frag.html" width=520px height=520px ></embed>
 
-### ...the `rbokeh` package
+## ...the `rbokeh` package
 
 ```
 <embed seamless src="../rbokeh_frag.html" width=540px height=540px ></embed>
@@ -69,7 +69,7 @@ If the figures are generated with `fig.width=5, fig.height=5`; they should fit i
 
 <embed seamless src="../rbokeh_frag.html" width=540px height=540px ></embed>
 
-### ...the `highcharters` package
+## ...the `highcharters` package
 
 *Highcharts (www.highcharts.com) is a Highsoft software product which is not free for commercial and Governmental use.*
 
@@ -79,7 +79,7 @@ If the figures are generated with `fig.width=5, fig.height=5`; they should fit i
 
 <embed seamless src="../highcharters_frag.html" width=600px height=600px ></embed>
 
-### ...the `datatables` package
+## ...the `datatables` package
 
 ```
 <embed seamless src="../datatable_frag.html" width=700px height=600px ></embed>

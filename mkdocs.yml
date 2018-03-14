@@ -64,7 +64,7 @@ pages:
     - Code & Plot Chunk Options: 'Code___Plot_Chunk_Options.md'
     - Working with the RStudio IDE: 'Working_with_RStudio_IDE.md'
   - Data Wrangling Snippets:
-    - I/O snippets & Cleaning: 'IO_snippets___Cleaning.md'
+    - I/O Snippets & Cleaning: 'IO_snippets___Cleaning.md'
     - Reading Data into R with readr: 'Reading_Data_into_R_with_readr.md'
     - Data Analysis in R, the data.table Way: 'Data_Analysis_in_R,_the_data.table_Way.md'
     - Data Manipulation in R with dplyr: 'Data_Manipulation_in_R_with_dplyr.md'

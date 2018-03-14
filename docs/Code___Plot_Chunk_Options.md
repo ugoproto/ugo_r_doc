@@ -56,7 +56,7 @@
 ------------------------------------------------------------------------
 
 Preliminary Options
--------------------
+===================
 
 Usually, the following code is set to FALSE (not showing in a report). These are the general options. Code and plot chunks overrule the general options.
 
@@ -65,12 +65,12 @@ knitr::opts_chunk$set(echo=TRUE, eval=TRUE, fig.height=3, fig.width=3)
 ```
 
 Chunks
-------
+======
 
 Naming a chunk is including it in the document outline. The outline is a navigation tool to jump though the document.
 
 Inputting Data
---------------
+==============
 
 The dataset comes from the [US Census Bureau](http://www.census.gov/popest/data/national/totals/2011/index.html). On their website, open Excel file 'NST-EST2011-02' about the annual estimates of the resident population.
 
@@ -137,9 +137,9 @@ head(USstatePops2, 3)
     ## 3 Arizona 6392013
 
 Formatting Code Chunks
-----------------------
+======================
 
-### `eval=TRUE`; show the results (default).
+## `eval=TRUE`; show the results (default).
 
 ``` r
 mean(USstatePops2$Pop)
@@ -147,13 +147,13 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-### `eval=FALSE`; or no results.
+## `eval=FALSE`; or no results.
 
 ``` r
 mean(USstatePops2$Pop)
 ```
 
-### `results='markup'`; show split code/results/code/results (default).
+## `results='markup'`; show split code/results/code/results (default).
 
 ``` r
 mean(USstatePops2$Pop)
@@ -167,7 +167,7 @@ median(USstatePops2$Pop)
 
     ## [1] 4339362
 
-### `eval='asis'`; show 'unboxed' results.
+## `eval='asis'`; show 'unboxed' results.
 
 ``` r
 mean(USstatePops2$Pop)
@@ -181,14 +181,14 @@ median(USstatePops2$Pop)
 
 \[1\] 4339362
 
-### `eval='hide'`; show code only.
+## `eval='hide'`; show code only.
 
 ``` r
 mean(USstatePops2$Pop)
 median(USstatePops2$Pop)
 ```
 
-### `eval='hold'`; show code block/results block.
+## `eval='hold'`; show code block/results block.
 
 ``` r
 mean(USstatePops2$Pop)
@@ -200,7 +200,7 @@ median(USstatePops2$Pop)
 
 ------------------------------------------------------------------------
 
-### `echo=TRUE`; show the code (default).
+## `echo=TRUE`; show the code (default).
 
 ``` r
 mean(USstatePops2$Pop)
@@ -214,7 +214,7 @@ median(USstatePops2$Pop)
 
     ## [1] 4339362
 
-### `echo=FALSE`; or no code.
+## `echo=FALSE`; or no code.
 
     ## [1] 6053834
 
@@ -222,7 +222,7 @@ median(USstatePops2$Pop)
 
 ------------------------------------------------------------------------
 
-### `warning`, `error`, `message` are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.
+## `warning`, `error`, `message` are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.
 
 ``` text
 {r, warning=TRUE, error=TRUE, message=TRUE}
@@ -230,7 +230,7 @@ median(USstatePops2$Pop)
 
 ------------------------------------------------------------------------
 
-### `tidy=TRUE/FALSE`; with the `formatR` and `shiny` packages (you manage spaces and indents) (FALSE by default).
+## `tidy=TRUE/FALSE`; with the `formatR` and `shiny` packages (you manage spaces and indents) (FALSE by default).
 
 ``` text
 {r, tidy=TRUE}
@@ -238,7 +238,7 @@ median(USstatePops2$Pop)
 
 ------------------------------------------------------------------------
 
-### cache=TRUE/FALSE; cache the results (FALSE by default).
+## cache=TRUE/FALSE; cache the results (FALSE by default).
 
 Can be resused in future knits since it **creates a subdir (the 'cache')** with a R workspace, .rdb and .rdx files.
 
@@ -250,7 +250,7 @@ The `cache.path='cache/'` can be changed. See `cache-comments`, `cache.lazy`, `c
 
 ------------------------------------------------------------------------
 
-### `comment='##'`; the comments in results (by default).
+## `comment='##'`; the comments in results (by default).
 
 ``` r
 mean(USstatePops2$Pop)
@@ -258,7 +258,7 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-### `comment='#'`; the new comments.
+## `comment='#'`; the new comments.
 
 ``` r
 mean(USstatePops2$Pop)
@@ -268,7 +268,7 @@ mean(USstatePops2$Pop)
 
 ------------------------------------------------------------------------
 
-### code chunk `{r}`.
+## code chunk `{r}`.
 
 ``` r
 list <- c(1, 2, 3)
@@ -277,21 +277,21 @@ list
 
     ## [1] 1 2 3
 
-### code chunk `{code=NULL}`.
+## code chunk `{code=NULL}`.
 
 ``` code
 list <- c(1, 2, 3)
 list
 ```
 
-### code chunk `{text}`.
+## code chunk `{text}`.
 
 ``` text
 list <- c(1, 2, 3)
 list
 ```
 
-### code chunk `{python}`.
+## code chunk `{python}`.
 
 ``` python
 list = [1, 2, 3]
@@ -302,7 +302,7 @@ Set up the new language first.
 
 ------------------------------------------------------------------------
 
-### `hightlight=TRUE`; hightlight the code (default).
+## `hightlight=TRUE`; hightlight the code (default).
 
 ``` r
 mean(USstatePops2$Pop)
@@ -310,7 +310,7 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-### `hightlight=FALSE`; or not.
+## `hightlight=FALSE`; or not.
 
 ``` r
 mean(USstatePops2$Pop)
@@ -318,7 +318,7 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-### `prompt=TRUE`; add `>` before the code.
+## `prompt=TRUE`; add `>` before the code.
 
 ``` r
 > mean(USstatePops2$Pop)
@@ -326,7 +326,7 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-### `prompt=FALSE`; or not (default).
+## `prompt=FALSE`; or not (default).
 
 ``` r
 mean(USstatePops2$Pop)
@@ -334,7 +334,7 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-### `strip.white=TRUE`; remove white space from the code (default).
+## `strip.white=TRUE`; remove white space from the code (default).
 
 ``` r
 mean(USstatePops2$Pop)
@@ -342,7 +342,7 @@ mean(USstatePops2$Pop)
 
     ## [1] 6053834
 
-### `strip.white=FALSE`; or not.
+## `strip.white=FALSE`; or not.
 
 ``` r
 mean(USstatePops2$Pop)
@@ -351,11 +351,11 @@ mean(USstatePops2$Pop)
     ## [1] 6053834
 
 Formatting Plot Chunk
----------------------
+=====================
 
 Prints the plots in the .html report and and creates a subdir with the plot files (the references).
 
-### `fig.path='figure/'`; new file path for this chunk.
+## `fig.path='figure/'`; new file path for this chunk.
 
 Otherwise, the path is set in the general options.
 
@@ -365,7 +365,7 @@ hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-28-1.png)
 
-### The device prints .png files by default.
+## The device prints .png files by default.
 
 It can be changed to other formats.
 
@@ -395,7 +395,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ------------------------------------------------------------------------
 
-### `fig.width= , fig.height=`; change the box size (`=7` by default).
+## `fig.width= , fig.height=`; change the box size (`=7` by default).
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -403,7 +403,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-32-1.png)
 
-### `fig.width=5, fig.height=5`.
+## `fig.width=5, fig.height=5`.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -411,7 +411,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-33-1.png)
 
-### `fig.height=3`.
+## `fig.height=3`.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -419,7 +419,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-34-1.png)
 
-### `fig.width=3`.
+## `fig.width=3`.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -427,7 +427,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-35-1.png)
 
-### `out.height=100, out.width=100`; in pixels.
+## `out.height=100, out.width=100`; in pixels.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -437,7 +437,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ------------------------------------------------------------------------
 
-### `resize.height=200, resize.width=200`; resize tike graphics for latex, in pixels.
+## `resize.height=200, resize.width=200`; resize tike graphics for latex, in pixels.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -445,7 +445,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-37-1.png)
 
-### `sanitize=TRUE`; sanitize 'tike' graphics for latex.
+## `sanitize=TRUE`; sanitize 'tike' graphics for latex.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -455,7 +455,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ------------------------------------------------------------------------
 
-### Set the device arguments:
+## Set the device arguments:
 
 `dev.args=list(bg='yellow', pointsize=10)`.
 
@@ -475,7 +475,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ------------------------------------------------------------------------
 
-#### dots per inch.
+### dots per inch.
 
 `dpi=72`.
 
@@ -493,7 +493,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-42-1.png)
 
-### dpi multiplier for .html output on retina screens:
+## dpi multiplier for .html output on retina screens:
 
 `fig.retina=1`
 
@@ -513,7 +513,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ------------------------------------------------------------------------
 
-### `fig.align='left'` or `fig.align='default'`.
+## `fig.align='left'` or `fig.align='default'`.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -521,9 +521,9 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ![](img/Code___Plot_Chunk_Options/unnamed-chunk-45-1.png)
 
-### `fig.align='right'`.
+## `fig.align='right'`.
 
-### `fig.align='center'`.
+## `fig.align='center'`.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
@@ -533,7 +533,7 @@ hist(USstatePops2$Pop, breaks = 20, main ='', xlab = 'Pop')
 
 ------------------------------------------------------------------------
 
-### Figure captions at the bottom of the plot; figure caption in latex:
+## Figure captions at the bottom of the plot; figure caption in latex:
 
 `fig.cap='CAPTION 14'`.
 
@@ -552,7 +552,7 @@ See:
 
 ------------------------------------------------------------------------
 
-### Versions
+## Versions
 
 `fig.keep='high'`; merge low-level changes into high-level plots.
 
@@ -570,7 +570,7 @@ See:
 
 ------------------------------------------------------------------------
 
-### `fig.pos='test'`; string to be used as the figure position arrangement in latex.
+## `fig.pos='test'`; string to be used as the figure position arrangement in latex.
 
 ``` r
 hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
@@ -580,7 +580,7 @@ hist(USstatePops2$Pop, breaks = 20, main = '', xlab = 'Pop')
 
 ------------------------------------------------------------------------
 
-### Show
+## Show
 
 `fig.show='asis'`.
 

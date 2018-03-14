@@ -40,7 +40,7 @@
 ------------------------------------------------------------------------
 
 Documentation
--------------
+=============
 
 `data.table`
 
@@ -89,11 +89,11 @@ Documentation
 </table>
 
 `data.table` novice
-----------------------
+===================
 
 Find out more with `?data.table`.
 
-### Create and subset a `data.table`
+## Create and subset a `data.table`
 
 ``` r
 # The data.table package
@@ -121,7 +121,7 @@ DT[2:3]
     ## 1: 2 B
     ## 2: 1 C
 
-### Getting to know a `data.table`
+## Getting to know a `data.table`
 
 Like `head`, `tail`.
 
@@ -158,7 +158,7 @@ DT[c(2, 2, 3)]
 
 `DT` is a data.table/data.frame, but `DT[ , B]` is a vector; `DT[ , .(B)]` is a subsetted data.table.
 
-### Subsetting data tables
+## Subsetting data tables
 
 `DT[i, j, by]` means take `DT`, subset rows using `i`, then calculate `j` grouped by `by`. You can wrap `j` with `.()`.
 
@@ -185,7 +185,7 @@ ans <- data.table(DT[, .(B, val = A * C)])
 ans2 <- data.table(DT[, .(B, val = as.integer(c(6:10, 1:5)))])
 ```
 
-### The `by` basics
+## The `by` basics
 
 ``` r
 # iris and iris3 are already available in the workspace
@@ -211,7 +211,7 @@ DT[, .(mean(Sepal.Length)), by = .(substr(Species, 1,1))]
     ## 1:      s 5.006
     ## 2:      v 6.262
 
-### Using `.N` and `by`
+## Using `.N` and `by`
 
 `.N`, number, in row or column.
 
@@ -238,7 +238,7 @@ DT[, .(Count = .N), by = .(Area = 10 * round(Sepal.Length * Sepal.Width / 10))]
     ## 2:   10    29
     ## 3:   30     4
 
-### Return multiple numbers in `j`
+## Return multiple numbers in `j`
 
 ``` r
 # Create the data.table DT
@@ -259,9 +259,9 @@ DT2[, .(C = tail(C,2)), by=A]
     ## 4: a 8
 
 `data.table` yeoman
-----------------------
+===================
 
-### Chaining, the basics
+## Chaining, the basics
 
 ``` r
 # Build DT
@@ -323,7 +323,7 @@ DT
     ## 149:          6.2         3.4          5.4         2.3 virginica
     ## 150:          5.9         3.0          5.1         1.8 virginica
 
-### Programming time vs readability
+## Programming time vs readability
 
 ``` r
 x <- c(2, 1, 2, 1, 2, 2, 1)
@@ -348,7 +348,7 @@ DT[, lapply(.SD, median), by = .(x)]
     ## 1: 2 7 8
     ## 2: 1 7 8
 
-### Introducing `.SDcols`
+## Introducing `.SDcols`
 
 `.SDcols` specifies the columns of `DT` that are included in `.SD`.
 
@@ -386,7 +386,7 @@ DT[, .SD[-1], .SDcols = 2:4, by = .(grp)]
     ## 2:   8  5  4  5
     ## 3:   8  3  4  2
 
-### Mixing it together: `lapply`, `.SD`, `SDcols` and `.N`
+## Mixing it together: `lapply`, `.SD`, `SDcols` and `.N`
 
 ``` r
 x <- c(2, 1, 2, 1, 2, 2, 1)
@@ -439,7 +439,7 @@ DT[,lapply(.SD, cumsum), .SDcols = 1:2, by = .(by1 = x, by2 = z > 8)][,lapply(.S
     ## 1:   2 4 20
     ## 2:   1 2 13
 
-### Adding, updating, and removing columns
+## Adding, updating, and removing columns
 
 `:=` is defined for use in `j` only.
 
@@ -511,7 +511,7 @@ DT[[3]]
 
     ## [1] NA  6  6  5 NA
 
-### The functional form
+## The functional form
 
 ``` r
 # A data.table DT
@@ -553,7 +553,7 @@ DT[, 2 := NULL]
     ## 4: 2
     ## 5: 2
 
-### Ready, `set`, go!
+## Ready, `set`, go!
 
 The `set` function is used to repeatedly update a data.table by reference. You can think of the `set` function as a loopable.
 
@@ -653,9 +653,9 @@ setcolorder(DT, c('b_2','A2'))
 ```
 
 `data.table` expert
-----------------------
+===================
 
-### Selecting rows the `data.table` way
+## Selecting rows the `data.table` way
 
 ``` r
 # Convert iris to a data.table
@@ -730,7 +730,7 @@ head(iris[Species %in% c('virginica', 'versicolor')], 20)
     ## 19:          6.2         2.2          4.5         1.5 versicolor
     ## 20:          5.6         2.5          3.9         1.1 versicolor
 
-### Removing columns and adapting your column names
+## Removing columns and adapting your column names
 
 Refer to a regex cheat sheet for metacharacter.
 
@@ -776,7 +776,7 @@ iris[, c('Petal.Length', 'Petal.Width') := NULL]
     ## 149:    6.2   3.4 virginica
     ## 150:    5.9   3.0 virginica
 
-### Understanding automatic indexing
+## Understanding automatic indexing
 
 ``` r
 # Cleaned up iris data.table
@@ -844,7 +844,7 @@ iris2[(is_large)] # Also OK
 4:    7.9   3.8 virginica     TRUE
 ```
 
-### Selecting groups or parts of groups
+## Selecting groups or parts of groups
 
 ``` r
 # The 'keyed' data.table DT
@@ -913,7 +913,7 @@ DT[c('b', 'c'), { print(.SD); .SD[c(1, .N)] }, by = .EACHI]
     ## 3: c 6 12
     ## 4: c 9  9
 
-### Rolling joins
+## Rolling joins
 
 **Rolling joins -- part one**
 

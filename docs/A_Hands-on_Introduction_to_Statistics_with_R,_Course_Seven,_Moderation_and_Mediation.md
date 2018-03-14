@@ -12,8 +12,8 @@
 
 ------------------------------------------------------------------------
 
-1, An introduction to moderation
---------------------------------
+An introduction to moderation
+=============================
 
 **Data exploration**
 
@@ -122,8 +122,8 @@ wm_center <- mod$wm - mean(mod$wm)
 all.equal(wm_center, mod$wm.centered)
 ```
 
-2, An introduction to centering predictors
-------------------------------------------
+An introduction to centering predictors
+=======================================
 
 **Centering versus no centering**
 
@@ -203,8 +203,8 @@ anova(model_1, model_2)
  rbind(c(cor_d1d1, cor_d2d2), c(cor_d1d1_centered, cor_d2d2_centered))
 ```
 
-3, An introduction to mediation
--------------------------------
+An introduction to mediation
+============================
 
 **Model with and without mediation**
 

@@ -15,7 +15,7 @@
 ------------------------------------------------------------------------
 
 Documentation
--------------
+=============
 
 -   Microsoft R Server: previously called Revolution R Enterprise for Hadoop, Linux and Teradata and included new Microsoft enterprise support and purchasing options. Microsoft R Server was further made available to students through the Microsoft DreamSpark programme.
 -   Microsoft R Server Developer Edition: a gratis version for developers that with a feature set akin to the commercial edition.
@@ -23,7 +23,7 @@ Documentation
 -   Microsoft R Open: a rebranded version of Revolution R Open.
 
 Introduction
----------------
+============
 
 **Importing data with `rxImport` function**
 
@@ -137,7 +137,7 @@ summary(myLMobj)
 ```
 
 Data Exploration
--------------------
+================
 
 **`RevoScaleR` options**
 
@@ -296,7 +296,7 @@ rxCube(Close ~ DayOfWeek,
 ```
 
 Data Manipulation
---------------------
+=================
 
 **Using `rxDataStep` to transform data**
 
@@ -359,7 +359,7 @@ rxSummary(~ scaledCreditScore,
 ```
 
 Data Analysis
-----------------
+=============
 
 **Preparing data for analysis: import**
 

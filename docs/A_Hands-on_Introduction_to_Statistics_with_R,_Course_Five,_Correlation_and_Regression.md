@@ -12,8 +12,8 @@
 
 ------------------------------------------------------------------------
 
-1, An introduction to Correlation
----------------------------------
+An introduction to Correlation
+==============================
 
 **Manual computation of correlation coefficients - Part 1**
 
@@ -185,8 +185,8 @@ CAUTION:
 -   The magnitude of a correlation is also influenced by measurement of X & Y.
 -   The correlation coefficient is a sample statistic, just like the mean.
 
-2, An introduction to Linear Regression Models
-----------------------------------------------
+An introduction to Linear Regression Models
+===========================================
 
 **Impact experiment**
 
@@ -311,8 +311,8 @@ abline(lm(predicted ~ PE$activeyears), col = 'green')
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Five,_Correlation_and_Regression/unnamed-chunk-11-1.png)</center>
 
-3, Linear Regression Models continued
--------------------------------------
+Linear Regression Models continued
+==================================
 
 **Calculating the sum of squared residuals**
 

@@ -37,9 +37,9 @@
 ------------------------------------------------------------------------
 
 Conditionals and Control Flow
---------------------------------
+=============================
 
-### Equality (or not)
+## Equality (or not)
 
 ``` r
 # Comparison of logicals
@@ -148,7 +148,7 @@ sum(facebook >= linkedin * 2)
 
     ## [1] 2
 
-### `&` and `|`
+## `&` and `|`
 
 ``` r
 # The linkedin and last variable
@@ -215,7 +215,7 @@ sum(extremes)
 
     ## [1] 16
 
-### The `if` statement (and more)
+## The `if` statement (and more)
 
 ``` r
 # Variables related to your last day of recordings
@@ -320,9 +320,9 @@ sms
     ## [1] 24
 
 Loops
---------
+=====
 
-### Write a `while` loop
+## Write a `while` loop
 
 ``` r
 # Initialize the speed variable
@@ -425,7 +425,7 @@ while (i <= 10) {
     ## [1] 21
     ## [1] 24
 
-### Write a `for` loop
+## Write a `for` loop
 
 **Loop over a vector**
 
@@ -519,7 +519,7 @@ for (i in 1:nrow(ttt)) {
     ## [1] "On row 3 and column 2 the board contains  NA"
     ## [1] "On row 3 and column 3 the board contains  X"
 
-### Mix up loops with control flow
+## Mix up loops with control flow
 
 ``` r
 # The linkedin vector
@@ -617,9 +617,9 @@ print(rcount)
     ## [1] 5
 
 Functions
-------------
+=========
 
-### Function documentation
+## Function documentation
 
 ``` r
 # Consult the documentation on the mean() function
@@ -629,7 +629,7 @@ Functions
 args(mean)
 ```
 
-### Use a function
+## Use a function
 
 ``` r
 # The linkedin and facebook vectors
@@ -710,7 +710,7 @@ print(mean(facebook, na.rm = TRUE))
 
     ## [1] 12.16667
 
-### Functions inside functions
+## Functions inside functions
 
 ``` r
 # The linkedin and facebook vectors
@@ -723,7 +723,7 @@ mean((abs(linkedin - facebook)), na.rm = TRUE)
 
     ## [1] 4.8
 
-### Write your own function
+## Write your own function
 
 ``` r
 # Create a function pow_two()
@@ -808,7 +808,7 @@ pow_two(2, FALSE)
 
     ## [1] 4
 
-### R you functional?
+## R you functional?
 
 ``` r
 # The linkedin and facebook vectors
@@ -900,7 +900,7 @@ interpret_all(facebook)
 
     ## [1] 33
 
-### Load an R package
+## Load an R package
 
 ``` r
 # The mtcars vectors have already been prepared for you
@@ -951,9 +951,9 @@ search()
     ## [11] "Autoloads"             "package:base"
 
 The `apply` Family
----------------------
+==================
 
-### Use `lapply` (with a built-in R function)
+## Use `lapply` (with a built-in R function)
 
 ``` r
 # The vector pioneers
@@ -1075,7 +1075,7 @@ names <- lapply(split_low, select_el, i=1)
 years <- lapply(split_low, select_el, 2)
 ```
 
-### Use `sapply`
+## Use `sapply`
 
 ``` r
 temp1 <- c(3, 7, 9, 6, -1)
@@ -1340,7 +1340,7 @@ sapply(temp, print_info)
     ## [[7]]
     ## NULL
 
-### Use `vapply`
+## Use `vapply`
 
 ``` r
 # temp is already available in the workspace
@@ -1414,7 +1414,7 @@ vapply(temp, get_info, y = 5, character(1))
     ## [1] "Pretty cold!"  "Not too cold!" "Pretty cold!"  "Pretty cold!" 
     ## [5] "Not too cold!" "Pretty cold!"  "Pretty cold!"
 
-### Apply your knowledge. Or better yet: `sapply` it?
+## Apply your knowledge. Or better yet: `sapply` it?
 
 ``` r
 # work_todos and fun_todos have already been defined
@@ -1451,9 +1451,9 @@ lapply(todos, sort)
     ## [1] "Make arrangements for summer trip" "Sleep"
 
 Utilities
-------------
+=========
 
-### Mathematical utilities
+## Mathematical utilities
 
 -   `abs`; calculate the absolute value.
 -   `sum`; calculate the sum of all the values in a data structure.
@@ -1474,7 +1474,7 @@ sum(abs(round(errors)))
 
     ## [1] 29
 
-### Find the error
+## Find the error
 
 ``` r
 # Vectors
@@ -1487,7 +1487,7 @@ mean(abs(append(vec1, vec2)))
 
     ## [1] 4.48
 
-### Data utilities
+## Data utilities
 
 -   `seq`; generate sequences, by specifying the from, to and
     by arguments.
@@ -1544,7 +1544,7 @@ print(rep(seq(1, 7, by = 2), times = 7))
 
     ##  [1] 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7
 
-### Beat Gauss using R
+## Beat Gauss using R
 
 ``` r
 # Create first sequence: seq1
@@ -1581,7 +1581,7 @@ print(sum(append(seq1, seq2)))
 
     ## [1] 87029
 
-### `grepl` & `grep` (and the likes)
+## `grepl` & `grep` (and the likes)
 
 -   `grepl`; return TRUE when a pattern is found in the corresponding
     character string.
@@ -1671,7 +1671,7 @@ print(sub(pattern = '@.*\\.edu$', replacement = '@datacamp.edu', x = emails))
     ## [3] "dalai.lama@peace.org"     "invalid.edu"             
     ## [5] "quant@datacamp.edu"       "cookie.monster@sesame.tv"
 
-### Time is of the essence
+## Time is of the essence
 
 **Right here, right now**
 

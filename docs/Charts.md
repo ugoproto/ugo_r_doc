@@ -11,12 +11,12 @@ Notes.
 
 ---
 
-## Charts
+# Charts
 
 ![](img/Charts/Chart_Selection.jpeg)
 
 
-## Colors
+# Colors
 
 ![](img/Charts/ColorChart1.png)
 ![](img/Charts/ColorChart2.png)

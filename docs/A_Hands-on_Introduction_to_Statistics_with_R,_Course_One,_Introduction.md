@@ -14,8 +14,8 @@
 
 ------------------------------------------------------------------------
 
-1, Variables
-------------
+Variables
+============
 
 **Nominal variables in R**
 
@@ -70,8 +70,8 @@ longitudes <- c(10, 20, 30, 40)
 chronos <- c(10.60, 10.12, 9.58, 11.1)
 ```
 
-2, Histograms and Distributions
--------------------------------
+Histograms and Distributions
+============================
 
 **Creating histograms in R**
 
@@ -269,8 +269,8 @@ hist(white_ratings_france, main = 'France white ratings', xlab = 'score')
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-10-1.png)</center>
 
-3, Scales of Measurement
-------------------------
+Scales of Measurement
+========================
 
 **Converting a distribution to Z-scale**
 
@@ -308,8 +308,8 @@ hist(z_scores_australia)
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_One,_Introduction/unnamed-chunk-12-1.png)</center>
 
-4, Measures of Central Tendency
--------------------------------
+Measures of Central Tendency
+============================
 
 **The mean of a Fibonacci sequence**
 
@@ -387,8 +387,8 @@ diff_medians
 
     ## [1] 0
 
-5, Measures of Variability
---------------------------
+Measures of Variability
+=======================
 
 **Michael Jordan's first NBA season - Global overview**
 

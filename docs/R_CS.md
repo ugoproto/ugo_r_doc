@@ -11,7 +11,7 @@ Cheat sheets.
 
 ---
 
-## Basics
+# Basics
 
 - [Base R](baseR-cheat-sheet-3.pdf). PDF.
 
@@ -41,7 +41,7 @@ Cheat sheets.
 ![](img/base_r_cs/R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.png)
 </center>
 
-## Advanced
+# Advanced
 
 - [Advanced R](advancedR.pdf). PDF.
 
@@ -57,7 +57,7 @@ Cheat sheets.
 ![](img/advanced_r_cs/AdvancedRe.png)
 </center>
 
-## RStudio & RMarkdown
+# RStudio & RMarkdown
 
 - [R Markdown Reference Guide](R-Markdown-Reference.pdf). PDF only.
     - *syntax, chunk options, pandoc options, slide formats, LaTeX options*
@@ -79,9 +79,9 @@ Cheat sheets.
 ![](img/rstudio_rmarkdown_cs/rstudiob.png)
 </center>
 
-## Specialization
+# Specialization
 
-### Tydyverse
+## Tydyverse
 
 - [Tidyverse](Tidyverse_for_Beginners.pdf). PDF.
 
@@ -89,7 +89,7 @@ Cheat sheets.
 ![](img/specialization_cs/Tidyverse_for_Beginners.png)
 </center>
 
-### dplyr & tidyr
+## dplyr & tidyr
 
 - [Grammar of dplyr](r-dplyr.pdf). PDF only (explanatory slides).
 - [dplyr](dplyr.pdf). PDF.
@@ -110,7 +110,7 @@ Cheat sheets.
 ![](img/specialization_cs/dplyr-and-tidyr-data-wrangling-Cheatsheetb.png)
 </center>
 
-### data.table
+## data.table
 
 - [data.table Intro](data.table-Intro.pdf). PDF only (explanatory article).
 - [data.table](data.table.pdf) 1. PDF.
@@ -124,7 +124,7 @@ Cheat sheets.
 ![](img/specialization_cs/data+table+cheat+sheet.png)
 </center>
 
-### Caret
+## Caret
 
 - [caret](caret.pdf). PDF.
 
@@ -136,11 +136,11 @@ Cheat sheets.
 ![](img/specialization_cs/Caret-Package-Infographi.jpg)
 </center>
 
-### Probabilities
+## Probabilities
 
 - [Probabilities](probability_cheatsheet.pdf). PDF only.
 
-### Regular Expressions
+## Regular Expressions
 
 - [Basic Regular Expressions](RegExCheatsheet.pdf). PDF.
 
@@ -148,7 +148,7 @@ Cheat sheets.
 ![](img/specialization_cs/RegExCheatsheet.png)
 </center>
 
-### R-Quandl
+## R-Quandl
 
 - [Quandl](R-Quandl-Cheatsheet.pdf).
 
@@ -162,7 +162,7 @@ Cheat sheets.
 ![](img/specialization_cs/R-Quandl-Cheatsheetd.png)
 </center>
 
-### Spark
+## Spark
 
 - [sparklyr](sparklyr-cheatsheet.pdf). PDF.
 
@@ -172,14 +172,14 @@ Cheat sheets.
 ![](img/specialization_cs/sparklyr-cheatsheetb.png)
 </center>
 
-### Time series
+## Time series
 
 - [Time Series](R-FUNCTIONS-FOR-TIME-SERIES-ANALYSIS.pdf). PDF only.
     - *input, decomposition, tests, stochastic, graphics, miscellaneous*
 - [xts](xts_Cheat_Sheet_R.pdf). PDF only.
 - [Time Series in R -- The Power of `xts` and `zoo`](Time+Series+in+R+The+Power+of+xts+and+zoo.html). HTML.
 
-### Survival, regression, data mining, machine learning
+## Survival, regression, data mining, machine learning
 
 - [survminer](survminer_cheatsheet.pdf). PDF only.
     - *curve, ggplot2, cox model*
@@ -190,7 +190,7 @@ Cheat sheets.
 - [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
     - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
 
-## Visualization (ggplot2, ggmap, ggvis, shiny, plotly, Leaflet)
+# Visualization (ggplot2, ggmap, ggvis, shiny, plotly, Leaflet)
 
 - [ggplot2](ggplot2.pdf). PDF.
 
@@ -250,13 +250,13 @@ Cheat sheets.
 ![](img/visualization_cs/leaflet-cheat-sheet.png)
 </center>
 
-### Charts
+## Charts
 
 <center>
 ![](img/visualization_cs/Chart_Selection.jpeg)
 </center>
 
-### Parameters
+## Parameters
 
 **Lines**
 
@@ -270,7 +270,7 @@ Cheat sheets.
 ![](img/visualization_cs/points.png)
 </center>
 
-### Graphs
+## Graphs
 
 - [Graphs](how-big-is-your-graph.pdf).
 
@@ -278,7 +278,7 @@ Cheat sheets.
 ![](img/visualization_cs/how-big-is-your-grapha.png)
 </center>
 
-### Colors
+## Colors
 
 <center>
 ![](img/visualization_cs/ColorChart1.png)

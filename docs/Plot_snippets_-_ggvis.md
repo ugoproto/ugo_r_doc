@@ -20,25 +20,25 @@
 ------------------------------------------------------------------------
 
 Documentation
--------------
+=============
 
 -   [`ggvis` Overview](http://ggvis.rstudio.com/).
 -   [`ggvis` Cookbook](http://ggvis.rstudio.com/cookbook.html).
 
 Dataset
--------
+=======
 
 For most examples, we use the `mtcars`, `pressure`, `faithful` datasets.
 
 The `ggvis` Package
--------------------
+===================
 
 ``` r
 library(ggvis)
 ```
 
 The Grammar of Graphics
---------------------------
+=======================
 
 **Start to explore**
 
@@ -142,7 +142,7 @@ faithful %>%
 ![](img/Plot_snippets_-_ggvis/ggvis10.png)
 
 Lines and Syntax
--------------------
+================
 
 **Three operators: `%>%`, `=` and `:=`**
 
@@ -351,7 +351,7 @@ mtcars %>%
 ```
 
 Transformations
-------------------
+===============
 
 **Histograms (1)**
 
@@ -558,7 +558,7 @@ layer_densities(ggvis(group_by(mtcars, cyl, am), ~mpg, fill = ~interaction(cyl, 
 ![](img/Plot_snippets_-_ggvis/ggvis47.png)
 
 Interactivity and Layers
----------------------------
+========================
 
 **The basics of interactive plots**
 
@@ -766,7 +766,7 @@ pressure %>%
 ![](img/Plot_snippets_-_ggvis/ggvis56.png)
 
 Customizing Axes, Legends, and Scales
-----------------------------------------
+=====================================
 
 **Axes**
 

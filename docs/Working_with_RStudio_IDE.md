@@ -18,19 +18,17 @@
 
 ------------------------------------------------------------------------
 
-**HELP**
-
--   Alt+Shift+k or Tools/Keyboard Shortcuts Help.
+**Help:** ++alt+shift+k++ or Tools/Keyboard Shortcuts Help.
 
 Orientation
---------------
+===========
 
 **Commands**
 
--   Ctrl+Up; command history.
--   Tab; completion for all.
--   Ctrl+L; clear the console.
--   Tools/Global Options... set Up RStudio.
+-   ++ctrl+up++; command history.
+-   ++tab++; completion for all.
+-   ++ctrl+l++; clear the console.
+-   Tools/Global Options... set up RStudio.
 -   `view(dataframe)`; open a spreadsheet, show in new window, sort the
     rows, search, filter the rows.
 
@@ -56,7 +54,7 @@ View(df) # in a new window
 -   Environment pane; load, save, remove objects, read a dataset,
     import dataset.
 -   History pane; idem, clear all or one item at the time, copy the
-    command in the console pane, reload a command with Shift+Enter and
+    command in the console pane, reload a command with ++shift+enter++ and
     run it.
 -   File pane; working directories, files, add a new folder, rename
 -   `getwd()`; get working directory.
@@ -67,13 +65,13 @@ View(df) # in a new window
 -   Viewer pane; more than plots!
 
 Programming
---------------
+===========
 
 **Scripting**
 
--   Ctrl+Shift+m; pipe or `%>%`.
--   Alt+-; `<-`.
--   Ctrl+Shift+C; add/delete a `#` for commenting.
+-   ++ctrl+shift+m++; `%>%`.
+-   ++alt+minus++; `<-`.
+-   ++ctrl+shift+c++; add/delete a `#` for commenting.
 
 <!-- -->
 
@@ -87,7 +85,7 @@ Programming
 
 **Code**
 
--   Ctrl+Alt+i; new chunk.
+-   ++ctrl+alt+i++; new chunk.
 
 -   Convert into a function.
 
@@ -109,16 +107,16 @@ rnorm <- function() {
 }
 ```
 
--   Ctrl+Alt+click; multiple cursors for typing!
+-   ++ctrl+alt+"click"++; multiple cursors for typing!
 -   Switch between Default, Vim and Emacs modes with
     Tools/Global Options/Code/Keybindings.
--   Shift+Alt+g; go to line.
--   Ctrl+f: find/replace in the current document.
--   Alt+o, Alt+Shift+o; fold/unfold the code.
--   Ctrl+p; jump between symbols like (), {}, \[\].
--   Ctrl+Shift+Enter; run and source the code.
--   Ctrl+Enter; run and source the code.
--   Ctrl+Shift+F10; restart, refresh the R session.
+-   ++shift+alt+g++; go to line.
+-   ++ctrl+f++: find/replace in the current document.
+-   ++alt+o++, ++alt+shift+o++; fold/unfold the code.
+-   ++ctrl+p++; jump between symbols like (), {}, \[\].
+-   ++ctrl+shift+enter++; run and source the code.
+-   ++ctrl+enter++; run and source the code.
+-   ++ctrl+shift+f10++; restart, refresh the R session.
 
 **Error handling**
 
@@ -129,7 +127,7 @@ rerun with the bug, watch the right pane for traceback.
 
 Investigate, highlight the next line of code, click in the traceback
 window, click the dropdown menu in the Global Environment (upper-right).
-Stop, continue in the debugger mode, press c, press q.
+Stop, continue in the debugger mode, press ++c++, press ++q++.
 
 Add/remove breakpoints, where the line numbers are.
 
@@ -141,13 +139,13 @@ Add/remove breakpoints, where the line numbers are.
 Add `options(error=browser)` or `options(error=NULL)` at the beginning
 of the script; R automatically open the debugger mode.
 
--   n; next line.
--   step-into icon.
--   Shift+F4; step into.
--   Shift+F6; execute the remainder of the bug.
+-   ++n++; next line.
+-   ++"step-into"++ icon.
+-   ++shift+f4++; step into.
+-   ++shift+f6++; execute the remainder of the bug.
 
 Project
-----------
+=======
 
 -   Create a project with a folder and all the files (Global
     Environment, History, etc.): New Directory, Existing Directory,
@@ -157,8 +155,8 @@ Project
 
 **Commands**
 
--   Ctrl+Shift+f; find in files.
--   Ctrl+F9, F10; go backwards/forwards.
+-   ++ctrl+shift+f++; find in files.
+-   ++ctrl+f9++, ++f10++; go backwards/forwards.
 
 **Packrat**
 
@@ -166,14 +164,14 @@ Packrat is a dependency management system for R. Use one version of a
 package for one project, another version of a package for another
 project. Associate a project with its own set of packages.
 
--   rstudio.github.io/packrat/
+-   [Packrat](rstudio.github.io/packrat/).
 -   Activate Packrat when creating a project or
     Tools/Project Options/Packrat.
 -   The library is virtually separate from R library.
 -   Perfect for collaborating with GitHub
 
 Packages
------------
+========
 
 **Introduction to R packages**
 
@@ -198,7 +196,7 @@ Create a new directory with new files, folders, and meta-information.
 
 RStudio generates the NAMESPACE content for you automatically.
 
-Read r-pkgs.had.co.nz/description.html
+See the book: [R Packages](r-pkgs.had.co.nz/description.html).
 
 **Import & load source files**
 
@@ -210,8 +208,8 @@ Build Tab.
 
 Simulations:
 
--   Ctrl+Shift+L
--   Ctrl+Shift+F10; restart a R session.
+-   ++ctrl+shift+l++
+-   ++ctrl+shift+f10++; restart a R session.
 
 **Packages documentation**
 
@@ -224,7 +222,7 @@ doc, add comments.
 
 First, create a doc skeleton above the function:
 
--   Ctrl+Alt+Shift+R
+-   ++ctrl+alt+shift+r++
 
 <!-- -->
 
@@ -259,7 +257,7 @@ Highlight a section and test it, run it.
 
 Build Tab/build the package.
 
--   Ctrl+Shift+d
+-   ++ctrl+shift+d++
 
 Compile all. Load all. Open the help page with `?function`.
 
@@ -306,11 +304,11 @@ test_that("standardize handles integers", {
 
 Run the tests.
 
--   Ctl+Shift+T
+-   ++ctrl+shift+t++
 
 Get a summary (pass or not pass). Test and retest the package.
 
-Read r-pkgs.had.co.nz/tests.html
+See the book: [R Packages](r-pkgs.had.co.nz/tests.html).
 
 **Time to test your package**
 
@@ -323,7 +321,7 @@ repo. Download and install the package with `install_github()` from the
 `devtools` package. Test the package on GitHub to complete the tests.
 Type `R CMD check` in the terminal. Or Build Tab/Check icon.
 
--   Ctrl+Shift+E
+-   ++ctrl+shift+e++
 
 **Build your package**
 
@@ -331,7 +329,7 @@ A package is a tarball or package bundle.
 
 Build Tab/Build & Reload. Install and load the package.
 
--   Ctrl+Shift+B
+-   ++ctrl+shift+b++
 
 Build and reload will overwrite the existing package. Run
 `devtools::dev_mode()` creates a separate library for development.
@@ -340,14 +338,14 @@ Running the command again cancels it.
 Two formats: source package or binary package (more compresses and
 optimized).
 
-Read r-pkgs.had.co.nz/package.html\#package
+See the book: [R Packages](r-pkgs.had.co.nz/package.html\#package).
 
 **Wrap-up**
 
-Get www.rstudio.com/resources/cheatsheets/
+Get the [cheat sheet](www.rstudio.com/resources/cheatsheets/)
 
 Version Control
-------------------
+===============
 
 **Introduction to Git**
 
@@ -401,7 +399,7 @@ In the Change window, click on the Revert button.
 
 Or, click on Discard chunk.
 
-Or, Ctlr+Z to undo.
+Or, ++ctrl+z++ to undo.
 
 Then, Save the file.
 
@@ -423,7 +421,7 @@ Go to help.github.com
 Go to stackoverflow.com
 
 Reporting
-------------
+=========
 
 **Tools for reporting**
 
@@ -446,11 +444,11 @@ The outline (name the chunks).
 
 Help/Markdown Quick Reference
 
-Add a code chunk wih Ctl+Alt+I
+Add a code chunk wih ++ctrl+alt+i++
 
 **Rendering R Markdown**
 
-Knit or preview. For pdf, need LaTeX (install).
+Knit or preview. For pdf, need $\LaTeX$ (install).
 
 Adding `runtime: shiny` generates a Shiny report. Launch the interactive
 app.
@@ -462,18 +460,18 @@ Publish reports online.
 File/Compile Notebook for R script. The script becomes a report (Word,
 PDF, HTML).
 
-**RStudio's LaTex editor**
+**RStudio's $\LaTeX$ editor**
 
-Install LaTeX from www.latex-project.org
+[Install $\LaTeX$](www.latex-project.org).
 
-Open a .tex file in RStudio. RStudio has limited options to edit LaTeX;
+Open a .tex file in RStudio. RStudio has limited options to edit $\LaTeX$;
 enough to write and compile.
 
 The preview window is linked to the source window. If we click on a
-character in the source window, press Ctrl+click: the corresponding
+character in the source window, press ++ctrl+"click"++: the corresponding
 character is highlighted in the preview window. Vice-versa.
 
-Tools/Global options/Sweave to change the LaTeX options.
+Tools/Global options/Sweave to change the $\LaTeX$ options.
 
 **Shiny**
 
@@ -483,7 +481,7 @@ shiny.rstudio.com
 
 When we create a Shiny app, we create two files: ui.R and server.R
 
-Run App (the app) or Ctrl+Shift+Enter
+Run App (the app) or ++ctrl+shift+enter++
 
 **Publish Shiny apps**
 

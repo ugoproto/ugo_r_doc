@@ -14,7 +14,7 @@ Notes, leads, and ideas on what R can do. More at:
 
 ---
 
-## 1, Introduction and Preliminaries
+# 1, Introduction and Preliminaries
 
 - Run R (CLI).
 	- Quit with `q()`.
@@ -32,9 +32,9 @@ Notes, leads, and ideas on what R can do. More at:
 - `rm(x, y, ink, ...)`; remove stored objects.
 - All commands entered or run are recorded in a file with `.Rhistory` extension.
 
-## 2, Simple Manipulations; Numbers and Vectors
+# 2, Simple Manipulations; Numbers and Vectors
 
-### Create a vector
+## Create a vector
 
 ```r
 x <- c(1, 2) # assignment (universal).
@@ -93,7 +93,7 @@ seq(1, 30, by = 2)
 [1]  1  3  5  7  9 11 13 15 17 19 21 23 25 27 29
 ```
 
-### Repetition
+## Repetition
 
 ```r
 rep(2, times = 5)
@@ -107,11 +107,11 @@ x
 [1] "x" "y" "y" "x" "x" "y" "y" "x" "x" "y" "y" "x" "x" "y" "y" "x"
 ```
 
-### Length (vector)
+## Length (vector)
 
 - `length(vector)`
 
-### Boolean
+## Boolean
 
 - `TRUE` or `T`; `T == 1`.
 - `FALSE` or `F`; `F == 0`.
@@ -131,7 +131,7 @@ x
 -  `||`
 - and many more.
 
-### Missing data and more
+## Missing data and more
 
 - NA; not available.
 - NaN; not a number.
@@ -160,18 +160,18 @@ y
 [1] 1 2 3
 ```
 
-### Extract, subset (vector)
+## Extract, subset (vector)
 
 - `x[i]`; index.
 
-### Backslash use for some characters
+## Backslash use for some characters
 
 - `\\`; backslash.
 - `\n`; new line.
 - `\t`; tab.
 - `\b`; backspace.
 
-### Concatenate, paste (vector)
+## Concatenate, paste (vector)
 
 ```r
 labs <- paste(c("X", "Y"), 1:10, sep = "")
@@ -180,7 +180,7 @@ labs
 [1] "X1"  "Y2"  "X3"  "Y4"  "X5"  "Y6"  "X7"  "Y8"  "X9"  "Y10"
 ```
 
-### A note of data handling and manipulations
+# A note of data handling and manipulations
 
 You can also `split()`, `merge()`, `rbind()`, `cbind() ` vectors. 
 
@@ -190,7 +190,7 @@ There are built-in functions to extract, exclude, subset, replace, transform or 
 
 <sub>slice, extract, exclude, subset, replace, convert,  concatenate, paste, group, bind</sub> 
 
-### Exclude, remove (vector)
+## Exclude, remove (vector)
 
 ```r
 z <- 1:20
@@ -204,7 +204,7 @@ zz
 [1]  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
 ```
 
-### Replace (vector)
+## Replace (vector)
 
 ```r
 x <- c(1, 1, 1, NA)
@@ -219,7 +219,7 @@ x
 # replaces any missing values in x by zeros
 ```
 
-### Absolute value
+## Absolute value
 
 - `y <- abs(y)`.
 
@@ -232,9 +232,9 @@ x
 - `as.character()`.
 -  and many more.
 
-## 3, Objects, their Modes and Attributes
+# 3, Objects, their Modes and Attributes
 
-### Object type
+## Object type
 
 ```r
 obj <- 1
@@ -268,7 +268,7 @@ obj
 [1]  1 NA 17
 ```
 
-### Classes
+## Classes
 
 <sub>class</sub>
 
@@ -290,7 +290,7 @@ unclass(obj)
 [1]  1 NA 17
 ```
 
-## 4, Ordered and Unordered Factors
+# 4, Ordered and Unordered Factors
 
 ```r
 state <- c("tas","qld","sa","sa","sa","vic","nt","act","qld","nsw","wa","nsw","nsw","vic","vic","vic","nsw","qld","qld","vic","nt","wa","wa","qld","sa", "tas","nsw", "nsw", "wa","act")
@@ -405,13 +405,13 @@ sizes
 Levels: small medium large
 ```
 
-### Convert (`.as`)
+## Convert (`.as`)
 
 - `as.factor()`.
 
-## 5, Arrays and Matrices
+# 5, Arrays and Matrices
 
-### Dimension
+## Dimension
 
 ```r
 z <- 1:1500
@@ -512,7 +512,7 @@ b
 [2,]    2    2
 ```
 
-### Extract, subset (matrix)
+## Extract, subset (matrix)
 
 - `a[2, 1]`; rows, columns.
 
@@ -520,7 +520,7 @@ b
 
 - `a[2, 1, 1]`; rows, columns, matrix.
 
-### Cross product vs multiplication
+## Cross product vs multiplication
 
 ```r
 a <- 1:5
@@ -548,7 +548,7 @@ ab
 [5,]   50   45   40   35   30
 ```
 
-### Matrix operation
+## Matrix operation
 
 A et B are 2x2 matrices:
 
@@ -561,7 +561,7 @@ A et B are 2x2 matrices:
 - `ab <- outer(A,B,"-")`; `a - b`.
 - and many more.
 
-### Diagonal and triangle
+## Diagonal and triangle
 
 ```r
 ab
@@ -608,7 +608,7 @@ upper.tri(ab) * ab
 [5,]    0    0    0    0    0
 ```
 
-### Solving a matrix system (and more matrix algebra)
+## Solving a matrix system (and more matrix algebra)
 
 ```r
 b <- A %*% x
@@ -663,7 +663,7 @@ det(ab)
 [1] 0
 ```
 
-### Least square fitting (matrix)
+## Least square fitting (matrix)
 
 - `lsfit()` or least squares estimate of `b` in the model: `y = X b + e`.
 
@@ -698,14 +698,14 @@ Also:
 - `qr.fitted()`.
 - `qr.resid()`.
 
-### Convert (`.as`)
+## Convert (`.as`)
 
 - `as.array()`.
 - `as.matrix()`.
 
-## 6, Lists and Data Frames
+# 6, Lists and Data Frames
 
-### Create a list
+## Create a list
 
 ```r
 Lst <- list(name = "Fred", wife = "Mary", no.children = 3, child.ages = c(4,7,9))
@@ -724,7 +724,7 @@ $child.ages
 [1] 4 7 9
 ```
 
-### Extract, subset (list)
+## Extract, subset (list)
 
 ```r
 Lst$name
@@ -747,7 +747,7 @@ Lst[[4]][1]
 [1] 4
 ```
 
-### Concatenate, paste
+## Concatenate, paste
 
 ```r
 x <- c(1,2)
@@ -804,11 +804,11 @@ list(h, g)
 [2,]    1    1
 ```
 
-### Convert (`as.`)
+## Convert (`as.`)
 
 - `as.matrix()`
 
-### Data frame
+## Data frame
 
 - A data frame can hold other data frames.
 	- A list can hold other lists.
@@ -847,7 +847,7 @@ mode(accountants)
 [1] "list"
 ```
 
-### Concatenate, paste (data frame)
+## Concatenate, paste (data frame)
 
 ```r
 # accountants == acc
@@ -933,11 +933,11 @@ accountants + acc
 ...
 ```
 
-### Convert (`as.`)
+## Convert (`as.`)
 
 - `as.data.frame()`
 
-### Load data into R
+## Load data into R
 
 - `read.table()`; produce a data frame with inputs.
 
@@ -948,7 +948,7 @@ accountants + acc
 - `attach()`; attach an object to .GlobalEnv.
 - `detach()`.
 
-## 7, Reading/Writing Data from/to Files (Input/Output)
+# 7, Reading/Writing Data from/to Files (Input/Output)
 
 A lot more can be found on I/O: depending on the file type, the data format, the desired R object, many commands are available. Depending on a file format, look for the dedicated package on CRAN.
 
@@ -997,11 +997,11 @@ X <- matrix(scan("light.dat", 0), ncol = 5, byrow = TRUE)
 - binary files.
 - and many more (some are up and coming such as julia files).
 
-### Cleaning parameter
+## Cleaning parameter
 
 - `strip.white = TRUE`; remove unnecessary spaces.
 
-### Change the data frame or matrix format
+## Change the data frame or matrix format
 
 - `stack()`; for example, take a 6-column, 4-variable data frame and stack the 4 variables into one long column.
 - `unstack()`; vice-versa.
@@ -1045,7 +1045,7 @@ reshape(zz, idvar = "id", timevar = "var", varying = list(c("V1", "V2", "V3", "V
 - `xnew <- edit(input)`; open and save it as a new dataset.
 - and many more.
 
-### Encoding
+## Encoding
 
 - utf-8 for Linux and OS X.
 - UCS-2LE and UTF-16 for Windows.
@@ -1057,26 +1057,26 @@ readLines("filename.txt", encoding = "UCS2LE")
 read.delim("clipboard", fileEncoding="UTF-16")
 ```
 
-### Output
+## Output
 
 - `write.table()`; many parameters.
 - `write.matrix()`.
 - `write.foreign()`.
 
-### Check a file
+## Check a file
 
 - `readLines("aab.txt")`.
 - `readLines("aab.txt", 1)`.
 - `unlink("aab.txt")`; delete the file on the working directory.
 
-### Directory management
+## Directory management
 
 - `getwd()`; get the current working directory.
 - `setwd()`; set the current working directory.
 - `file.show(filepath)`.
 - `system.file()`
 
-### Spreadsheet editor and edition in R
+## Spreadsheet editor and edition in R
 
 - `fix(c)`; edit object c; a vetor, list, data frame, etc. in a mini-spreadsheet.
 - `data.entry(c, mode=NULL, Names=NULL), dataentry(c), de(c, Modes=list(), Names=NULL)`; idem.
@@ -1086,9 +1086,9 @@ read.delim("clipboard", fileEncoding="UTF-16")
 - `xemacs(file= )`; idem.
 - `xedit(file=)`; idem.
 
-## 8, Probability Distributions
+# 8, Probability Distributions
 
-### Distribution
+## Distribution
 
 - `beta`.
 - `binom`.
@@ -1118,7 +1118,7 @@ read.delim("clipboard", fileEncoding="UTF-16")
 - `q`; quantile.
 - `r`; random deviates or simulation or number generation.
 
-### Distribution operation
+## Distribution operation
 
 Commands, prefix + distribution, examples:
 
@@ -1133,7 +1133,7 @@ Commands, prefix + distribution, examples:
 - `rmultinom()`.
 - etc.
 
-### Descriptive statistics
+## Descriptive statistics
 
 ```r
 # overview
@@ -1178,7 +1178,7 @@ ks.test(cars$speed[10], "pnorm", mean = mean(cars$speed), sd = sqrt(var(cars$spe
 ks.test(cars$speed[40], "pnorm", mean = mean(cars$speed), sd = sqrt(var(cars$speed)))
 ```
 
-### Test
+## Test
 
 - `t.test(A,B)`; true difference of means is not 0, difference means.
 - `var.test(A,B)`; true ratio of variances is not 1, difference variances.
@@ -1186,15 +1186,15 @@ ks.test(cars$speed[40], "pnorm", mean = mean(cars$speed), sd = sqrt(var(cars$spe
 - `wilcox.test(A,B)`; rank sum with continuity correction, continuous distribution.
 - and many more.
 
-### Normality
+## Normality
 
 - `plot(ecdf(A), do.points=FALSE, verticals=TRUE, xlim=range(A, B))`
 - `plot(ecdf(B), do.points=FALSE, verticals=TRUE, add=TRUE)`
 - `ks.test(A,B); maximal vertical distance between the two ecdf`
 
-## 9, Grouping, Loops and Conditional Execution
+# 9, Grouping, Loops and Conditional Execution
 
-### Control flow
+## Control flow
 
 - `&`; AND.
 - `&&`; AND; evaluates left to right, examining only the first element of each vector.
@@ -1204,7 +1204,7 @@ ks.test(cars$speed[40], "pnorm", mean = mean(cars$speed), sd = sqrt(var(cars$spe
 - `isTRUE(x)`; is true if and only if x is a length-one logical vector whose only element is TRUE and which has no attributes.
 - `ifelse(condition, a, b)`; if `condition` is proven true, return `a`, or else, return `b`.
 
-### Loops
+## Loops
 
 <sub>looping</sub>
 
@@ -1214,7 +1214,7 @@ ks.test(cars$speed[40], "pnorm", mean = mean(cars$speed), sd = sqrt(var(cars$spe
 - `break`; break out of a for, while or repeat loop; control is transferred to the first statement outside the inner-most loop.
 - `next`; halt the processing of the current iteration and advance the looping index.
 
-## 10, Writing you own Functions (with examples)
+# 10, Writing you own Functions (with examples)
 
 **Simple custom function**
 
@@ -1281,7 +1281,7 @@ x %!% y
 
 Matrix multiplication operator, `%*%`, and the outer product matrix operator, `%o%`, are other examples of binary operators.
 
-### Function in a function
+## Function in a function
 
 ```r
 # case 1
@@ -1359,7 +1359,7 @@ Add, modify, and remove (with `names(x) <- NA or 0`) names.
 - `colnames()`.
 - `dimnames()`.
 
-### Customizing startup
+## Customizing startup
 
 Customize the R environment through a directory initialization file; commands that you want to execute every time R is started under your system.
 
@@ -1381,7 +1381,7 @@ Sequence in which files are executed is:
 4. .First()
 5. .Last(), if defined, is (normally) executed at the very end of the session.
 
-### List function and method
+## List function and method
 
 - `methods(class = "data.frame")`; list methods associated with the class.
 - `methods(plot)`; list methods specific to the object.
@@ -1420,9 +1420,9 @@ Difference:
 - `plot()`; a generic method.
 - `plot.` ; a specific method such as `plot.ts()` for example.
 
-## 11, Statistical models in R
+# 11, Statistical models in R
 
-### Regression
+## Regression
 
 ```r
 y <- 1:10
@@ -1523,7 +1523,7 @@ smf6 <- update(fm6, sqrt(,) <sub>.)
 
 Select a suitable model by adding or dropping variables and preserving hierarchies. The best model with the smallest AIC (Akaike’s Information Criterion) is discovered with the search.
 
-### Generalized least squares
+## Generalized least squares
 
 <sub>gls, binomial, logit, probit, log, cloglog, gaussian, identity, log, inverse, gamma, identity, inverse, log, inverse.gaussian, 1/mu^2, identity, inverse, log, poisson, identity, log, sqrt, quasi-likelihood, logit, probit</sub>
 
@@ -1531,7 +1531,7 @@ Select a suitable model by adding or dropping variables and preserving hierarchi
 fitted.model <- glm(formula, famili=family.generator, data = data.frame)
 ```
 
-### Nonlinear least squares (MLE, Mixed, Local, Robust, Additive, Tree-based)
+## Nonlinear least squares (MLE, Mixed, Local, Robust, Additive, Tree-based)
 
 <sub>nls</sub>
 
@@ -1573,9 +1573,9 @@ Nonparametric local regression function.
 - `rpart` package.
 - `tree` package.
 
-## 12, Graphical Procedures
+# 12, Graphical Procedures
 
-### Graphic, packages
+## Graphic, packages
 
 - `lattice` package.
 - `ggplot2` package.
@@ -1583,7 +1583,7 @@ Nonparametric local regression function.
 - `ggobi`, `rgl` packages; for interactive graphics, 3D, and surfaces.
 - and many more.
 
-### Basic plot
+## Basic plot
 
 - `plot()`.
 - `boxplot()`..
@@ -1597,19 +1597,19 @@ Nonparametric local regression function.
 - `dotchart(x, ...)`; a case of bar chart.
 - and many more with lots of options.
 
-### Q-Q plot
+## Q-Q plot
 
 - `qqnorm(x)`.
 - `qqline(x)`.
 - `qqplot(x, y)`; comparison.
 
-### Pictures
+## Pictures
 
 - `image(x, y, z, ...)`; grid of rectangles with colors corresponding to the values in z.
 - `contour(x, y, z, ...)`; z add contour lines (even to an existing plot).
 - `persp(x, y, z, ...)`; perspective plots of a surface over the x–y plane.
 
-### Graphic arguments and parameters
+## Graphic arguments and parameters
 
 ```r
 x1 <- rnorm(1000, 0.4, 0.8)
@@ -1689,7 +1689,7 @@ R allows you to create an n by m array of plots on a single page:
 - `fig = c(4, 9, 1, 4) / 10`; position of the current figure on the page. Values are the positions of the left, right, bottom and top edges, respectively, as a percentage of the page measured from the bottom left corner.
 - and many more.
 
-### Geometric shapes
+## Geometric shapes
 
 - `polygon(x, y, ...)`; x, y are vectors containing the coordinates of the vertices of the polygon.
 
@@ -1703,7 +1703,7 @@ R allows you to create an n by m array of plots on a single page:
 - `help(Japanese)`.
 - `demo(Japanese)`.
 
-### Graphic text and mouse
+## Graphic text and mouse
 
 Leave graphic marks and texts.
 
@@ -1713,7 +1713,7 @@ Leave graphic marks and texts.
 - `identify(x, y, labels)`.
 - `identify(x, y, "yes")`.
 
-### Graphic device
+## Graphic device
 
 - `split.screen()`; FALSE or number of regions within the current device which can, to some extent, be treated as separate graphics devices. It is useful for generating multiple plots on a single device.
 - `layout()`; divides the device up into as many rows and columns as there are in matrix mat.
@@ -1743,7 +1743,7 @@ Open a special graphics window.
 - `dev.next()`, `dev.prev()`; return the number and name of the next / previous device in the list of devices.
 - graphics.off(); terminate all devices.
 
-## 13, Packages
+# 13, Packages
 
 - `install.package()`; on the computer.
 - `library()`; load it.
@@ -1757,6 +1757,6 @@ Find out about packages:
 - [www.bioconductor.org](https://www.bioconductor.org/)
 - [www.omegahat.org](http://www.omegahat.org/)
 
-## 14, OS Facilities
+# 14, OS Facilities
 
 Manage files with Linux or Windows or RStudio.

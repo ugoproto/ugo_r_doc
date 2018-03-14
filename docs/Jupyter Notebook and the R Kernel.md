@@ -11,7 +11,7 @@ Notes.
 
 ---
 
-## Distribution
+# Distribution
 
 - [Jupyter.org (Official Website)](http://jupyter.org/)
 - On Windows, use the Anaconda distribution.
@@ -21,7 +21,7 @@ Notes.
 - Anaconda2 has Python 2 by default (root) and Anaconda3, no surprise, has Python 3!
 - However, other kernels can be installed on any distribution (another Python version, R, bash, etc.).
 
-## Implementing the R Kernel (or irkernel)
+# Implementing the R Kernel (or irkernel)
 
 - Start R (admin or sudo mode).
 - Enter the commands:

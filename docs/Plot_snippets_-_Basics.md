@@ -43,7 +43,7 @@
 ------------------------------------------------------------------------
 
 Plotting Packages
------------------
+=================
 
 Graphics:
 
@@ -97,9 +97,9 @@ Others:
 -   `ggvis`.
 
 Data Type & Dataset
--------------------
+===================
 
-### Data Types
+## Data Types
 
 -   continuous vs categorical (or discrete).
 -   continuous: float, x-y-z, 3D, map coordinates, trianguar, lat-long, polar, degree-distance, angle-vector.
@@ -166,7 +166,7 @@ Specialized plots:
 -   regression: scatter plot.
 -   ANOVA: box plots, line plots.
 
-### Functions
+## Functions
 
 **Create a new variable**
 
@@ -187,7 +187,7 @@ head(area, 3)
 
     ## [1] 0.28 0.28 0.26
 
-### Dataset
+## Dataset
 
 For most examples, we use the `mtcars` dataset.
 
@@ -204,9 +204,9 @@ data(gvhd10, package = 'latticeExtra')
 ```
 
 The Basic Package
------------------
+=================
 
-### Basic Plots, Options & Parameters
+## Basic Plots, Options & Parameters
 
 **Standardize the parameters (an example)**
 
@@ -602,7 +602,7 @@ lines(mpg[1:10], type = 'l', col = 'green')
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-29-1.png)
 
-### Univariate Plots
+## Univariate Plots
 
 **Plot; continuous**
 
@@ -933,7 +933,7 @@ lines(density(mtcars$mpg, d1$bw/5), col = 'blue')
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-57-1.png)
 
-### Bivariate (Multivariate) Plots
+## Bivariate (Multivariate) Plots
 
 **Plot, continuous/continuous**
 
@@ -1166,7 +1166,7 @@ mosaicplot(counts, main = 'Title', xlab = 'gearbox', ylab = 'cylinders')
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-74-1.png)
 
-### Multivariate Plots
+## Multivariate Plots
 
 **Pairs**
 
@@ -1232,7 +1232,7 @@ stars(mtcars[1:4, c(1, 4, 6)])
 -   `persp()`.
 -   `symbols()`.
 
-### Times Series
+## Times Series
 
 Add packages: `zoo` and `xts`.
 
@@ -1392,7 +1392,7 @@ legend(xrange[1], yrange[2], 1:ntrees, cex = 0.8, col = colors,
 
 ![](lty.png)
 
-### Regressions and Residual Plots
+## Regressions and Residual Plots
 
 ``` r
 # first
@@ -1442,7 +1442,7 @@ par(mfrow = c(1, 1))
 ```
 
 The `lattice` and `latticeExtra` Packages
------------------------------------------
+=========================================
 
 ``` r
 library(lattice)
@@ -1468,14 +1468,14 @@ show.settings()
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-88-2.png)
 
-### Documentation
+## Documentation
 
 -   [National Park Service, Advanced
     Graphics (Lattice)](http://science.nature.nps.gov/im/datamgmt/statistics/r/graphics/lattice.cfm)
 -   [Treillis
     Plots](https://www.stat.auckland.ac.nz/~ihaka/787/lectures-trellis.pdf)
 
-### A note on reordering the levels (factors)
+## A note on reordering the levels (factors)
 
 ``` r
 # start
@@ -1603,7 +1603,7 @@ barchart(Class ~ Dead + Alive | Sex, Titanic2, stack = TRUE, auto.key = list(col
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-92-2.png)
 
-### Uni-, Bi-, Multivariate Plots
+## Uni-, Bi-, Multivariate Plots
 
 **Barchart**
 
@@ -2195,9 +2195,9 @@ Like `image()`, `contour()`, `filled.contour()`, `persp()`, `symbols()`.
 -   `wireframe()`.
 
 Additional Packages
--------------------
+===================
 
-### The `sm` Package (density)
+## The `sm` Package (density)
 
 ``` r
 library(sm)
@@ -2221,7 +2221,7 @@ legend(25, 0.19, levels(cyl.f), fill = colfill)
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-150-1.png)
 
-### The `car` Package (scatter)
+## The `car` Package (scatter)
 
 ``` r
 library(car)
@@ -2251,7 +2251,7 @@ spm( ~mpg + disp + drat + wt | cyl, data = mtcars, main = 'Title')
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-154-1.png)
 
-### The `vioplot` Package (boxplot)
+## The `vioplot` Package (boxplot)
 
 ``` r
 library(vioplot)
@@ -2271,7 +2271,7 @@ title('Title')
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-156-1.png)
 
-### The `vcd` Package (count, correlation, mosaic)
+## The `vcd` Package (count, correlation, mosaic)
 
 ``` r
 library(vcd)
@@ -2350,7 +2350,7 @@ doubledecker(morekids ~ age + gender1 + gender2, data = Fertility, gp = gpar(fil
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-163-1.png)
 
-### The `hexbin` Package (scatter)
+## The `hexbin` Package (scatter)
 
 ``` r
 library(hexbin)
@@ -2438,7 +2438,7 @@ xyplot(asinh(SSC.H) ~ asinh(FL2.H) | Days, gvhd10, aspect = 1, panel = panel.hex
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-172-1.png)
 
-### The `car` Package (scatter)
+## The `car` Package (scatter)
 
 ``` r
 library(car)
@@ -2453,7 +2453,7 @@ scatterplotMatrix(~mpg + disp + drat + wt | cyl, data = mtcars,
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-174-1.png)
 
-### The `scatterplot3d` Package
+## The `scatterplot3d` Package
 
 ``` r
 library(scatterplot3d)
@@ -2483,7 +2483,7 @@ s3d$plane3d(fit)
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-178-1.png)
 
-### The `rgl` Package (interactive)
+## The `rgl` Package (interactive)
 
 ``` r
 library(rgl)
@@ -2497,7 +2497,7 @@ The plot will open a new window.
 plot3d(wt, disp, mpg, col = 'red', size = 3)
 ```
 
-### The `cluster` Package (dendrogram)
+## The `cluster` Package (dendrogram)
 
 ``` r
 library(cluster)
@@ -2530,7 +2530,7 @@ plot(ai, label = cS)
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-182-1.png)![](img/Plot_snippets_-_Basics/unnamed-chunk-182-2.png)
 
-### The `extracat` Package (splom)
+## The `extracat` Package (splom)
 
 ``` r
 library(extracat)
@@ -2608,7 +2608,7 @@ visna(Pima.tr2, sort = 'b')
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-184-4.png)
 
-### The `ash` Package (density)
+## The `ash` Package (density)
 
 ``` r
 library(ash)
@@ -2624,7 +2624,7 @@ plot(ash1(bin1(mtcars$mpg, nbin = 50)), type = 'l')
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-186-1.png)
 
-### The `KernSmooth` Package (density)
+## The `KernSmooth` Package (density)
 
 ``` r
 library(KernSmooth)
@@ -2642,7 +2642,7 @@ with(mtcars, {
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-188-1.png)
 
-### The `corrplot` Package (correlation)
+## The `corrplot` Package (correlation)
 
 ``` r
 library(corrplot)

@@ -51,7 +51,7 @@
 ------------------------------------------------------------------------
 
 Documentation
--------------
+=============
 
 `data.table`
 
@@ -99,10 +99,10 @@ Documentation
 </tbody>
 </table>
 
-1, Introduction to `dplyr`
---------------------------
+Introduction to `dplyr`
+========================
 
-### Load the `dplyr` and `hflights` package
+## Load the `dplyr` and `hflights` package
 
 ``` r
 # Load the dplyr package
@@ -192,7 +192,7 @@ summary(hflights)
     ##  Max.   :1.000000  
     ## 
 
-### Convert `data.frame` to table
+## Convert `data.frame` to table
 
 ``` r
 # Convert the hflights data.frame into a hflights tbl
@@ -226,7 +226,7 @@ hflights
 carriers <- hflights$UniqueCarrier
 ```
 
-### Changing labels of `hflights`
+## Changing labels of `hflights`
 
 **part 1 of 2**
 
@@ -310,10 +310,10 @@ $ Diverted          <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
 $ Code              <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,...
 ```
 
-2, `select` and `mutate`
-------------------------
+`select` and `mutate`
+=====================
 
-### The five verbs and their meaning
+## The five verbs and their meaning
 
 -   `select`; which returns a subset of the columns.
 -   `filter`; that is able to return a subset of the rows.
@@ -321,7 +321,7 @@ $ Code              <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA,...
 -   `mutate`; used to add columns from existing data.
 -   `summarise`; which reduces each group to a single row by calculating aggregate measures.
 
-### The `select` verb
+## The `select` verb
 
 ``` r
 # Print out a tbl with the four columns of hflights related to delay
@@ -409,7 +409,7 @@ select(hflights, 1:4, 12:21)
     ## #   TaxiIn <int>, TaxiOut <int>, Cancelled <int>, CancellationCode <chr>,
     ## #   Diverted <int>
 
-### Helper functions for variable selection
+## Helper functions for variable selection
 
 `select`:
 
@@ -482,7 +482,7 @@ select(hflights, ends_with('Time'), ends_with('Delay'))
     ## 10    1443    1553                70      45       43       43
     ## # ... with 227,486 more rows
 
-### Comparison to basic R
+## Comparison to basic R
 
 ``` r
 # add
@@ -499,7 +499,7 @@ ex3r <- hflights[c('TailNum','TaxiIn','TaxiOut')]
 ex3d <- select(hflights, TailNum, starts_with('Taxi'))
 ```
 
-### `mutate` is creating
+## `mutate` is creating
 
 ``` r
 # Add the new variable ActualGroundTime to a copy of hflights and save the result as g1
@@ -596,7 +596,7 @@ g3
     ## #   Diverted <int>, ActualGroundTime <int>, GroundTime <int>,
     ## #   AverageSpeed <dbl>
 
-### Add multiple variables using `mutate`
+## Add multiple variables using `mutate`
 
 ``` r
 # Add a second variable loss_percent to the dataset: m1
@@ -637,10 +637,10 @@ glimpse(m3)
     ## $ ActualGroundTime  <int> 20, 15, 22, 31, 18, 19, 27, 19, 30, 25, 28, ...
     ## $ Diff              <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
 
-3, `filter` and `arrange`
--------------------------
+`filter` and `arrange`
+======================
 
-### Logical operators
+## Logical operators
 
 `filter`:
 
@@ -726,7 +726,7 @@ filter(hflights, (TaxiIn + TaxiOut) > AirTime)
     ## #   TaxiIn <int>, TaxiOut <int>, Cancelled <int>, CancellationCode <chr>,
     ## #   Diverted <int>
 
-### Combining tests using boolean operators
+## Combining tests using boolean operators
 
 ``` r
 # All flights that departed before 5am or arrived after 10pm
@@ -824,7 +824,7 @@ filter(hflights, DepDelay > 0 & Cancelled == 1)
     ## #   TaxiIn <int>, TaxiOut <int>, Cancelled <int>, CancellationCode <chr>,
     ## #   Diverted <int>
 
-### Blend together
+## Blend together
 
 ``` r
 # Select the flights that had JFK as their destination: c1
@@ -852,7 +852,7 @@ select(c2, Date, DepTime, ArrTime, TailNum)
     ## 10 2011-1-5    1544    1954  N644JB
     ## # ... with 685 more rows
 
-### Arranging your data
+## Arranging your data
 
 ``` r
 # Definition of dtc
@@ -929,7 +929,7 @@ arrange(dtc, UniqueCarrier, DepDelay)
     ## #   TaxiIn <int>, TaxiOut <int>, Cancelled <int>, CancellationCode <chr>,
     ## #   Diverted <int>
 
-### Reverse the order of arranging
+## Reverse the order of arranging
 
 ``` r
 # Arrange according to carrier and decreasing departure delays
@@ -1003,10 +1003,10 @@ arrange(filter(hflights, Dest == 'DFW' & DepTime<800), desc(AirTime))
     ## #   TaxiIn <int>, TaxiOut <int>, Cancelled <int>, CancellationCode <chr>,
     ## #   Diverted <int>
 
-4, `summarise` and the Pipe Operator
-------------------------------------
+`summarise` and the Pipe Operator
+=================================
 
-### The syntax of `summarise`
+## The syntax of `summarise`
 
 ``` r
 # Print out a summary with variables min_dist and max_dist
@@ -1028,7 +1028,7 @@ summarise(filter(hflights, Diverted == 1), max_div = max(Distance))
     ##     <int>
     ## 1    3904
 
-### Aggregate functions
+## Aggregate functions
 
 `summarise`:
 
@@ -1070,7 +1070,7 @@ summarise(temp2, max_taxi_diff = max(abs(TaxiIn - TaxiOut)))
     ##           <int>
     ## 1           160
 
-### `dplyr` aggregate functions
+## `dplyr` aggregate functions
 
 -   `first(x)`; the first element of vector `x`.
 -   `last(x)`; the last element of vector `x`.
@@ -1169,10 +1169,10 @@ hflights %>%
     ##   <int>
     ## 1  2718
 
-5, `group_by` and working with data
------------------------------------
+`group_by` and working with data
+================================
 
-### Unite and conquer using `group_by`
+## Unite and conquer using `group_by`
 
 ``` r
 # Make an ordered per-carrier summary of hflights
@@ -1223,7 +1223,7 @@ hflights %>%
     ## 6         7 20.93726
     ## 7         6 20.43061
 
-### Combine `group_by` with `mutate`
+## Combine `group_by` with `mutate`
 
 ``` r
 # Solution to first instruction
@@ -1283,7 +1283,7 @@ hflights %>%
     ## 14 Atlantic_Southeast 40.24231    14
     ## 15            JetBlue 45.47744    15
 
-### Advanced `group_by`
+## Advanced `group_by`
 
 ``` r
 # Which plane (by tail number) flew out of Houston the most times? How many times? adv1
@@ -1314,7 +1314,7 @@ adv4 <- hflights %>%
           filter(rank == 1)
 ```
 
-### `dplyr` deals with different types
+## `dplyr` deals with different types
 
 ``` r
 # Use summarise to calculate n_carrier
@@ -1322,7 +1322,7 @@ s2 <- hflights %>%
     summarise(n_carrier = n_distinct(UniqueCarrier))
 ```
 
-### `dplyr` and mySQL databases
+## `dplyr` and mySQL databases
 
 Code only.
 
@@ -1348,7 +1348,7 @@ nycflights %>%
 ```
 
 Adding `tidyr` Functions
-------------------------
+========================
 
 -   `complete`.
 -   `drop_na`.
@@ -1374,7 +1374,7 @@ Adding `tidyr` Functions
 ------------------------------------------------------------------------
 
 Joining Data in R with `dplyr`
-------------------------------
+==============================
 
 *In development*
 

@@ -58,8 +58,8 @@
 
 ------------------------------------------------------------------------
 
-1, Descriptive Statistics
--------------------------
+Descriptive Statistics
+======================
 
 Extract basic, exploratory statistics from datasets with `apply`, `summary`, `fivenum`, `describe`, and `stat.desc`.
 
@@ -405,12 +405,12 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
     ## 4   6  1 19.12500 1.6317169 3.388750 0.1162164
     ## 5   8  0 15.10000 2.5600481 3.999214 0.7594047
 
-2, Frequency Tables, CrossTables, and Independence
---------------------------------------------------
+Frequency Tables, CrossTables, and Independence
+===============================================
 
 Create frequency and contingency tables from categorical variables. Perform tests of independence, measures of association, and graphically display results.
 
-### 2D frequency tables
+## 2D frequency tables
 
 `mytable <- table(A, B)` where A are rows, B are columns.
 
@@ -466,7 +466,7 @@ prop.table(mytable, 2)
     ## [1,] 0.3333333 0.4285714
     ## [2,] 0.6666667 0.5714286
 
-### 3D frequency tables
+## 3D frequency tables
 
 ``` r
 # dataset
@@ -509,7 +509,7 @@ dim(ftable(mytable)) # the printout is immense
 
     ## [1] 84 76
 
-### CrossTable
+## CrossTable
 
 ``` r
 A <- as.numeric(CO2[1:8, 'Plant'])
@@ -568,7 +568,7 @@ CrossTable(A, B) # mydata$myrowvar x mydata$mycolvar
     ## 
     ## 
 
-### Tests of independence
+## Tests of independence
 
 There are more tests of independence in section 10, Resampling Statistics.
 
@@ -746,7 +746,7 @@ loglm(~A + B + C + A * B + A * C + B * C, mytable)
     ## Likelihood Ratio 1.038376 4950        1
     ## Pearson               NaN 4950      NaN
 
-### Measures of association
+## Measures of association
 
 Association between two nominal variables, giving a value between 0 and +1 (inclusive). It is based on Pearson's chi-squared statistic.
 
@@ -825,8 +825,8 @@ kappa(TeaTasting)
 
     ## [1] 2.333333
 
-3, Correlations
----------------
+Correlations
+============
 
 ``` r
 # dataset
@@ -1038,8 +1038,8 @@ hetcor(colors)
     ## dark.hair      0.7465   0.6335      0.7161          
     ## black.hair     0.6582   0.5927      0.6711    0.9873
 
-4, t-tests
-----------
+t-tests
+=======
 
 ``` r
 # independent 2-group t-test
@@ -1128,12 +1128,12 @@ t.test(as.numeric(colors[1,]), mu = 0, alternative="greater") # Ho: mu=<0
 
 For multivariate tests and ANOVA, see sections 8 and 9.
 
-5, Nonparametric statistics
----------------------------
+Nonparametric statistics
+========================
 
 Nonnormal distributions.
 
-### Bivariate tests
+## Bivariate tests
 
 ``` r
 # independent 2-group Mann-Whitney U test
@@ -1172,7 +1172,7 @@ wilcox.test(as.numeric(colors[1,]), as.numeric(colors[2,])) # where y and x are 
 `alternative="less"` or `alternative="greater"` option to specify a one
 tailed test.
 
-### ANOVA
+## ANOVA
 
 ``` r
 # Kruskal Wallis test one-Way ANOVA by ranks
@@ -1208,10 +1208,10 @@ kruskal.test(as.numeric(colors[1,]), as.numeric(colors[2,])) # where y and x are
     ## data:  as.numeric(colors[1, ]) and as.numeric(colors[2, ])
     ## Kruskal-Wallis chi-squared = 4, df = 4, p-value = 0.406
 
-6, Multiple Regressions
------------------------
+Multiple Regressions
+====================
 
-### Fitting the Model
+## Fitting the Model
 
 ``` r
 # multiple linear regression
@@ -1373,7 +1373,7 @@ influence(fit) # regression diagnostics
     ##        1959        1960        1961        1962 
     ## -63.6698197 -46.3175746  16.4025069  16.4288577
 
-### Diagnostic plots
+## Diagnostic plots
 
 ``` r
 # diagnostic plots
@@ -1387,7 +1387,7 @@ plot(fit)
 layout(matrix(c(1,1,1,1),2,2))
 ```
 
-### Comparing two models with ANOVA
+## Comparing two models with ANOVA
 
 ``` r
 # compare models
@@ -1415,7 +1415,7 @@ anova(fit1, fit2)
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-### Cross validation
+## Cross validation
 
 ``` r
 # dataset
@@ -1546,7 +1546,7 @@ CVlm(longley, form.lm = formula(Armed.Forces ~ GNP + Population), m = 3, dots = 
     ##   ms 
     ## 2755
 
-### Variable selection -- Heuristic methods
+## Variable selection -- Heuristic methods
 
 ``` r
 # dataset
@@ -1632,7 +1632,7 @@ step$anova # display results
     ## 1                                 14      70359 138
     ## 2 - Unemployed  1     2287        15      72646 137
 
-### Variable selection -- Graphical methods
+## Variable selection -- Graphical methods
 
 ``` r
 # model
@@ -1712,7 +1712,7 @@ subsets(leaps, statistic = "bic", legend = FALSE) # available criteria are rsq, 
     ## Employed              E
     ## Unemployed            U
 
-### Variable selection -- Relative importance
+## Variable selection -- Relative importance
 
 Model: `fit <- lm(Armed.Forces ~ GNP + Population + Employed + Unemployed, data = longley)`.
 
@@ -1868,15 +1868,16 @@ The .png file.
 <center>
 ![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/relimpResults.png)
 </center>
-### Going further
+
+## Going further
 
 -   The `nls` package provides functions for nonlinear regression.
 -   Perform robust regression with the `rlm` function in the `MASS` package.
 -   The `robust` package provides a comprehensive library of robust methods, including regression.
 -   The `robustbase` package also provides basic robust statistics including model selection methods.
 
-7, Regression diagnostics
--------------------------
+Regression diagnostics
+======================
 
 ``` r
 # assume that we are fitting a multiple linear regression
@@ -1892,7 +1893,7 @@ fit
     ## (Intercept)         disp           hp           wt         drat  
     ##    29.14874      0.00382     -0.03478     -3.47967      1.76805
 
-### Outliers
+## Outliers
 
 ``` r
 library(car)
@@ -1919,7 +1920,7 @@ leveragePlots(fit) # leverage plots
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-60-2.png)</center>
 
-### Influential observations
+## Influential observations
 
 Model: `fit <- lm(mpg ~ disp + hp + wt + drat, data = mtcars)`.
 
@@ -1953,7 +1954,7 @@ influencePlot(fit, id.method = "identify", main = "Influence Plot", sub = "Circl
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-62-1.png)</center>
 
-### Nonnormality
+## Nonnormality
 
 Model: `fit <- lm(mpg ~ disp + hp + wt + drat, data = mtcars)`.
 
@@ -1980,7 +1981,7 @@ lines(xfit, yfit)
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-63-2.png)</center>
 
-### Heteroscedasticity
+## Heteroscedasticity
 
 Nonconstant error variance.
 
@@ -2006,7 +2007,7 @@ spreadLevelPlot(fit)
     ## 
     ## Suggested power transformation:  0.662
 
-### Multicollinearity
+## Multicollinearity
 
 Model: `fit <- lm(mpg ~ disp + hp + wt + drat, data = mtcars)`.
 
@@ -2025,7 +2026,7 @@ sqrt(vif(fit)) > 2 # benchmark = 1.96, rounded to 2
     ##  disp    hp    wt  drat 
     ##  TRUE FALSE  TRUE FALSE
 
-### Nonlinearity
+## Nonlinearity
 
 Model: `fit <- lm(mpg ~ disp + hp + wt + drat, data = mtcars)`.
 
@@ -2044,7 +2045,7 @@ ceresPlots(fit)
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-66-2.png)</center>
 
-### Autocorrelation
+## Autocorrelation
 
 Serial correlation or non-independence of errors.
 
@@ -2059,7 +2060,7 @@ durbinWatsonTest(fit)
     ##    1           0.101          1.74    0.29
     ##  Alternative hypothesis: rho != 0
 
-### Global diagnostic
+## Global diagnostic
 
 Model: `fit <- lm(mpg ~ disp + hp + wt + drat, data = mtcars)`.
 
@@ -2108,8 +2109,8 @@ summary(gvmodel)
     ## Link Function       8.7166 0.00315 Assumptions NOT satisfied!
     ## Heteroscedasticity  0.8947 0.34421    Assumptions acceptable.
 
-8, ANOVA
---------
+ANOVA
+=====
 
 Analysis of variance (ANOVA) is an alternative to regressions among other applications.
 
@@ -2279,7 +2280,7 @@ summary(fit)
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-### Evaluate model effects
+## Evaluate model effects
 
 -   Type I sequential SS: A+B and B+A will produce different results!
 -   Use the `drop1` to produce the familiar Type III results; compare each term with the full model.
@@ -2342,7 +2343,7 @@ drop1(fit2, ~ ., test = "F")
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-### Compare nested models directly
+## Compare nested models directly
 
 ``` r
 fit1 <- aov(uptake ~ Plant + Type, data = CO2)
@@ -2374,7 +2375,7 @@ anova(fit1, fit2)
     ## 1     72 4845                      
     ## 2     72 4845  0         0
 
-### Multiple comparisons
+## Multiple comparisons
 
 -   Tukey HSD tests for post hoc comparisons on each factor in the model.
 -   Factors as an option.
@@ -2464,7 +2465,7 @@ TukeyHSD(fit)
     ## Mc1-Mc2   5.857  -8.95  20.668 0.971
     ## Mc1-Mc3   0.700 -14.11  15.511 1.000
 
-### Visualizing results
+## Visualizing results
 
 ``` r
 # two-way interaction plot
@@ -2494,7 +2495,7 @@ plotmeans(mpg ~ cyl, xlab = "Number of Cylinders", ylab = "Miles Per Gallon", ma
 detach(mtcars)
 ```
 
-### MANOVA
+## MANOVA
 
 Multivariate analysis of variance (MANOVA) With more than one dependent variable Y. We can run several ANOVA over different Y, or one MANOVA with one Y built with several variables.
 
@@ -2593,14 +2594,14 @@ summary(fit2)
 
 `TukeyHSD` and `plot` do work with a MANOVA fit. Run each dependent variable separately to obtain them... or proceed with ANOVA on each dependent variable.
 
-### Going further
+## Going further
 
 Package `lme4` has excellent facilities for fitting linear and generalized linear mixed-effects models.
 
-9, (M)ANOVA Assumptions
------------------------
+(M)ANOVA Assumptions
+====================
 
-### Outliers
+## Outliers
 
 Outliers can severely affect normality and homogeneity of variance.
 
@@ -2660,7 +2661,7 @@ outliers # show list of outliers
 par(mfrow = c(1,1))
 ```
 
-### Univariate normality
+## Univariate normality
 
 ``` r
 # Q-Q plot
@@ -2738,7 +2739,7 @@ sf.test(mtcars$mpg)
     ## data:  mtcars$mpg
     ## W = 1, p-value = 0.1
 
-### Multivariate normality
+## Multivariate normality
 
 ``` r
 head(EuStockMarkets, 3)
@@ -2778,7 +2779,7 @@ abline(a = 0, b = 1)
 
 <center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-84-1.png)</center>
 
-### Heteroscedasticity
+## Heteroscedasticity
 
 Nonconstant error variance or non-homogeneity of variances.
 
@@ -2869,10 +2870,10 @@ boxM(iris[, -5], iris[, 5])
     ## data:  iris[, -5]
     ## Chi-Sq (approx.) = 100, df = 20, p-value <2e-16
 
-10, Resampling Statistics
--------------------------
+Resampling Statistics
+=====================
 
-### Independent k-sample location tests
+## Independent k-sample location tests
 
 ``` r
 # dataset
@@ -2925,7 +2926,7 @@ oneway_test(mpg ~ factor(am), data = mtcars, distribution = approximate(B = 9999
     ## Z = -3, p-value = 5e-04
     ## alternative hypothesis: true mu is not equal to 0
 
-### Symmetry of a response for repeated measurements
+## Symmetry of a response for repeated measurements
 
 ``` r
 # exact Wilcoxon signed rank test
@@ -2950,7 +2951,7 @@ wilcoxsign_test(mpg ~ factor(am), data = mtcars, distribution = "exact")
 friedman_test(y ~ A | B, data = mydata,  distribution = approximate(B = 9999))
 ```
 
-### Independence of two numeric variables
+## Independence of two numeric variables
 
 ``` r
 # Spearman Test of independence based on 9999 Monte-Carlo
@@ -2967,7 +2968,7 @@ spearman_test(mpg ~ am, data = mtcars, distribution = approximate(B = 9999))
     ## Z = 3, p-value = 0.001
     ## alternative hypothesis: true rho is not equal to 0
 
-### Independence in contingency tables
+## Independence in contingency tables
 
 ``` r
 # dataset

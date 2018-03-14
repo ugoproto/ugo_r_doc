@@ -12,8 +12,8 @@
 
 ------------------------------------------------------------------------
 
-1, An introduction to ANOVA
----------------------------
+An introduction to ANOVA
+========================
 
 **Working memory experiment**
 
@@ -285,8 +285,8 @@ leveneTest(wm$iq ~ wm$condition, center = mean)
 
 The assumption of homogeneity of variance hold: the within group variance equivalent for all groups.
 
-2, Post-hoc analysis
---------------------
+Post-hoc analysis
+=================
 
 Post-hoc tests help finding out which groups differ significantly from one other and which do not. More formally, post-hoc tests allow for multiple pairwise comparisons without inflating the type I error.
 
@@ -414,8 +414,8 @@ pairwise.t.test(wm$gain,wm$cond, p.adjust = 'bonferroni')
     ## 
     ## P value adjustment method: bonferroni
 
-3, Between groups factorial ANOVA
----------------------------------
+Between groups factorial ANOVA
+==============================
 
 **Data exploration with a barplot**
 

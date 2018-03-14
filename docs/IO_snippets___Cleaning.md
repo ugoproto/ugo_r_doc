@@ -68,9 +68,9 @@ The packages:
 -   `jsonlite`.
 
 Importing Data from Flat Files
----------------------------------
+==============================
 
-### R functions, by default.
+## R functions, by default.
 
 -   `read.csv`; `sep = ','`, `dec = '.'`.
 -   `read.delim`; .txt, `dec = '.'`.
@@ -133,7 +133,7 @@ sapply(hotdogs, class)
 hotdogs2 <- read.delim('hotdogs.txt', header = FALSE, col.names = c('type', 'calories', 'sodium'), colClasses = c('factor', 'NULL', 'numeric'))
 ```
 
-### The `utils` package
+## The `utils` package
 
 -   `read.table`; `sep = '\t'`, `= ','`, `= ';'`.
 -   Read any tabular as a d.f.
@@ -158,7 +158,7 @@ hotdogs <- read.table(path, header = FALSE, sep = '\t', col.names = c('type', 'c
 
 ------------------------------------------------------------------------
 
-### (from Importing Data from the Web)
+## (from Importing Data from the Web)
 
 ``` r
 # https URL to the swimming_pools csv file.
@@ -170,7 +170,7 @@ pools1 <- read.csv(url_csv)
 
 ------------------------------------------------------------------------
 
-### The `readr` package
+## The `readr` package
 
 -   `read_delim`; `delim = '\t'`, `= ','`.
 -   `read_csv`; read `100.000, 200.000`
@@ -359,7 +359,7 @@ spec_csv('chickwts.csv')
 
 ------------------------------------------------------------------------
 
-### (from Importing Data from the Web)
+## (from Importing Data from the Web)
 
 **Import Flat files from the web**
 
@@ -386,7 +386,7 @@ pools2 <- read_csv(url_csv)
 
 ------------------------------------------------------------------------
 
-### The `data.table` package
+## The `data.table` package
 
 -   `fread` == `read.table`.
 -   .txt files only.
@@ -422,9 +422,9 @@ tasty_potatoes <- subset(potatoes, potatoes$flavor > 3)
 ```
 
 Importing Data from Excel
-----------------------------
+=========================
 
-### The `readxl` package
+## The `readxl` package
 
 -   `excel_sheets`; list.
 -   `read_excel`; import.
@@ -485,7 +485,7 @@ latitude_sel <- read_excel('latitude.xlsx', skip = 21, col_names = FALSE)
 
 ------------------------------------------------------------------------
 
-### (from Importing Data from the Web)
+## (from Importing Data from the Web)
 
 **Import Excel files from the web**
 
@@ -509,7 +509,7 @@ download.file(url_rdata, 'wine_local.RData')
 
 ------------------------------------------------------------------------
 
-### The `XLConnect` package
+## The `XLConnect` package
 
 -   `loadWorkbook`.
 -   `getSheets`.
@@ -599,9 +599,9 @@ impact <- readWorksheetFromFile('A Hands-on Introduction to Statistics with R.xl
 ```
 
 Importing Data from Other Statistical Software
--------------------------------------------------
+==============================================
 
-### The `haven` package
+## The `haven` package
 
 -   `read_sas`; sas7bdat & sas7bcat files.
 -   `read_stata`; version; dta files.
@@ -649,7 +649,7 @@ traits <- read_sav(path)
 work <- read_sav('http://assets.datacamp.com/course/importing_data_into_r/employee.sav')
 ```
 
-### The`foreign` package
+## The`foreign` package
 
 -   Cannot import SAS, see the `sas7bdat` package.
 -   `read.dta`; dta files.
@@ -703,9 +703,9 @@ demo_2 <- read.spss('international.sav', to.data.frame = TRUE, use.value.labels 
 ```
 
 Importing Data from Relational Data
---------------------------------------
+===================================
 
-### The `DBI` package
+## The `DBI` package
 
 -   `dbConnect`.
 -   `dbReadTable`.
@@ -885,9 +885,9 @@ interface.
     as MongoDB.
 
 Importing Data from Relational Data -- More
------------------------------------------------
+===========================================
 
-### `DBI`
+## `DBI`
 
 First, change the working directory with `setwd`. Install the `DBI`
 library.
@@ -937,7 +937,7 @@ dbClearResult(results)
 dbDisconnect(sqlitedb)
 ```
 
-### `RSQLite`
+## `RSQLite`
 
 First, change the working directory with `setwd`. Install the `RSQLite`
 library.
@@ -986,7 +986,7 @@ dbClearResult(results)
 dbDisconnect(sqlitedb)
 ```
 
-### MySQL with `DBI` or `RMySQL`
+## MySQL with `DBI` or `RMySQL`
 
 ``` r
 library(DBI)
@@ -1037,7 +1037,7 @@ dbListTables(mysqldb)
 dbDisconnect(mysqldb)
 ```
 
-### PosgreSQL with `DBI` or `RPostgreSQL`
+## PosgreSQL with `DBI` or `RPostgreSQL`
 
 ``` r
 library(DBI)
@@ -1089,12 +1089,12 @@ dbDisconnect(postgresqldb)
 ```
 
 Importing Data from the Web
-------------------------------
+===========================
 
 The other package above can download files from the web. The next
 packages are web-oriented.
 
-### The `httr` package
+## The `httr` package
 
 -   `GET` pages and files from the web.
 -   Concise.
@@ -1139,7 +1139,7 @@ content(resp, as = 'text')
 content(resp)
 ```
 
-### The `jsonlite` package
+## The `jsonlite` package
 
 -   Robust.
 -   Improve the imported data.
@@ -1242,7 +1242,7 @@ mini_json
 ```
 
 Keyboard Inputting
----------------------
+==================
 
 **Coding**
 
@@ -1265,15 +1265,15 @@ mydata <- edit(mydata)
 ```
 
 Exporting Data
------------------
+==============
 
-### To a Tab-Delimited Text File
+## To a Tab-Delimited Text File
 
 ``` r
 write.table(mydata, 'c:/mydata.txt', sep = "\t")
 ```
 
-### To an Excel Spreadsheet
+## To an Excel Spreadsheet
 
 ``` r
 library(xlsx)
@@ -1336,7 +1336,7 @@ writeWorksheet(my_book, summ, sheet = 'data_summary')
 saveWorkbook(my_book, 'latitude_with_summ.xlsx')
 ```
 
-### To SPSS
+## To SPSS
 
 ``` r
 library(foreign)
@@ -1344,7 +1344,7 @@ library(foreign)
 write.foreign(mydata, "c:/mydata.txt", "c:/mydata.sps", package = "SPSS")
 ```
 
-### To SAS
+## To SAS
 
 ``` r
 library(foreign)
@@ -1352,7 +1352,7 @@ library(foreign)
 write.foreign(mydata, "c:/mydata.txt", "c:/mydata.sas", package = "SAS") 
 ```
 
-### To Stata
+## To Stata
 
 ``` r
 library(foreign)
@@ -1361,9 +1361,9 @@ write.dta(mydata, "c:/mydata.dta")
 ```
 
 Inspecting Data - Missing Data
----------------------------------
+==============================
 
-### Inspecting
+## Inspecting
 
 -   `ls(object)`.
 -   `names(object)`.
@@ -1409,7 +1409,7 @@ mydata[!complete.cases(mydata),]
 newdata <- na.omit(mydata) 
 ```
 
-### The `dplyr` package
+## The `dplyr` package
 
 ``` r
 library(dplyr)
@@ -1419,13 +1419,13 @@ glimpse(iris) # almost like str
 View(iris) # open a spreadsheet
 ```
 
-### For thorough cleaning
+## For thorough cleaning
 
 -   The [Amelia II](http://gking.harvard.edu/amelia/) software.
 -   The `mitools` package.
 
 Labels & Levels
-------------------
+===============
 
 **Basic**
 
@@ -1480,8 +1480,7 @@ describe(iris$Sepal.Length) # not commented
 How to work with Quandl in R
 ============================
 
-Importing Quandl Datasets
-----------------------------
+## Importing Quandl Datasets
 
 [Quandl](https://www.quandl.com/) delivers financial, economic and
 alternative data to the world's top hedge funds, asset managers and
@@ -1541,8 +1540,8 @@ str(results)
 BitCoin <- Quandl('BCHAIN/TOTBC')
 ```
 
-Manipulating Quandl Datasets
--------------------------------
+## Manipulating Quandl Datasets
+
 
 **Manipulating data**
 
@@ -1597,8 +1596,7 @@ The packages used:
 -   `stringr` for regex.
 -   `lubridate` for time and date.
 
-Introduction and Exploring Raw Data
---------------------------------------
+## Introduction and Exploring Raw Data
 
 **Here's what messy data look like**
 
@@ -1671,8 +1669,7 @@ hist(bmi$Y2008)
 plot(bmi$Y1980, bmi$Y2008)
 ```
 
-Tidying Data
----------------
+## Tidying Data
 
 **Gathering columns into key-value pairs**
 
@@ -1759,8 +1756,7 @@ census_long4 <- separate(census_long3, yr_month, c('year', 'month'), '_')
 head(census_long4, 6)
 ```
 
-Preparing Data for Analysis
-------------------------------
+## Preparing Data for Analysis
 
 **Types of variables in R**
 
@@ -1931,8 +1927,7 @@ boxplot(students3$age)
 boxplot(students3$absences)
 ```
 
-Putting it All Together
---------------------------
+## Putting it All Together
 
 **Get a feel for the data**
 

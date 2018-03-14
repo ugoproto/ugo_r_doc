@@ -11,7 +11,7 @@ Notes & snippets.
 
 ---
 
-## Stand-alone .Rdm document
+# Stand-alone .Rdm document
 
 It is one document with a header; the settings determine the output (HTML, Word, PDF) style and appearance:
 
@@ -22,7 +22,7 @@ output: html_document
 ---
 ```
 
-## Embedding .Rmd sub-documents into a .Rmd document
+# Embedding .Rmd sub-documents into a .Rmd document
 
 It is also possible to create sub-documents to be casted in the main document.
 

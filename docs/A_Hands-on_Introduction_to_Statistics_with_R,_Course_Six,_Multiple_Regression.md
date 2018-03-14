@@ -12,8 +12,8 @@
 
 ------------------------------------------------------------------------
 
-1, A gentle introduction to the principles of multiple regression
------------------------------------------------------------------
+A gentle introduction to the principles of multiple regression
+==============================================================
 
 **Multiple regression: visualization of the relationships**
 
@@ -74,8 +74,8 @@ r_squared[3] <- round(summary(model_3)$r.squared,3)
 r_squared
 ```
 
-2, Intuition behind estimation of multiple regression coefficients
-------------------------------------------------------------------
+Intuition behind estimation of multiple regression coefficients
+===============================================================
 
 **Definition of matrices**
 
@@ -168,8 +168,8 @@ SD <- diag(x = diag(C)^(1/2), nrow = 3, ncol = 3)
 R <- solve(SD) %*% C %*% solve(SD)
 ```
 
-3, Dummy coding
----------------
+Dummy coding
+============
 
 **Starting off**
 

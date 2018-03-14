@@ -11,8 +11,8 @@
 
 ------------------------------------------------------------------------
 
-1, Introduction to t-tests
---------------------------
+Introduction to t-tests
+=======================
 
 -   Test p-values for significance with z-tests, t-tests.
 -   Single sample t-test: group of people from a particular geographic region perform on a well-known test of intelligence. In particular, you are interested in finding out whether or not this group scores significantly higher than the overall population on an IQ test. This is a form of Null Hypothesis Significance Testing (NHST), where the null hypothesis is that there's no difference between this group and the overall population.
@@ -273,8 +273,8 @@ cohensD(wm_t$post, wm_t$pre, method = 'paired')
 
     ## [1] 1.620297
 
-2, Independent t-tests
-----------------------
+Independent t-tests
+===================
 
 An independent t-test is appropriate when you want to compare the the means for two independent groups.
 

@@ -27,9 +27,9 @@
 ------------------------------------------------------------------------
 
 Markdown tables
----------------
+===============
 
-### Example 1
+## Example 1
 
     | Right | Left | Default | Center |
     |------:|:-----|---------|:------:|
@@ -71,7 +71,7 @@ Markdown tables
 </tbody>
 </table>
 
-### Example 2
+## Example 2
 
     : Sample grid table.
 
@@ -120,11 +120,11 @@ Markdown tables
 </table>
 
 The `xtable` package
---------------------
+====================
 
 The output is in HTML.
 
-### Example 1
+## Example 1
 
 ``` r
 library(xtable)
@@ -146,11 +146,11 @@ print(xtable(output,
    </table>
 
 The `knitr::kable` function
----------------------------
+===========================
 
 The output is in Markdown.
 
-### Example 1
+## Example 1
 
 ``` r
 library(knitr)
@@ -187,11 +187,11 @@ kable(output,
 We can also write `knitr::kable()` without calling `library(knitr)`.
 
 The `htmlTable` package
------------------------
+=======================
 
 [htmlTable](https://github.com/gforge/htmlTable) on GitHub.
 
-### Example 1
+## Example 1
 
 ``` r
 output <- 
@@ -353,7 +353,8 @@ Content P
 </tfoot>
 </table>
 <!--/html_preserve-->
-### Example 2
+
+## Example 2
 
 ``` r
 library(htmlTable)
@@ -1944,7 +1945,8 @@ Third period
 </tfoot>
 </table>
 <!--/html_preserve-->
-### Example 3
+
+## Example 3
 
 ``` r
 library(htmlTable)
@@ -3536,7 +3538,8 @@ Third period
 </tfoot>
 </table>
 <!--/html_preserve-->
-### Example 4
+
+## Example 4
 
 ``` r
 library(htmlTable)
@@ -5130,7 +5133,8 @@ Third period
 </tfoot>
 </table>
 <!--/html_preserve-->
-### Example 5
+
+## Example 5
 
 ``` r
 library(htmlTable)
@@ -6924,7 +6928,8 @@ Age
 </tfoot>
 </table>
 <!--/html_preserve-->
-### Example 6
+
+## Example 6
 
 ``` r
 library(htmlTable)
@@ -8731,7 +8736,8 @@ Age
 </tfoot>
 </table>
 <!--/html_preserve-->
-### Example 7
+
+## Example 7
 
 ``` r
 library(htmlTable)
@@ -10537,12 +10543,13 @@ Age
 </tfoot>
 </table>
 <!--/html_preserve-->
+
 The `ztable` package
---------------------
+====================
 
 The package can also export to $\LaTeX$.
 
-### Example 1
+## Example 1
 
 ``` r
 library(ztable)

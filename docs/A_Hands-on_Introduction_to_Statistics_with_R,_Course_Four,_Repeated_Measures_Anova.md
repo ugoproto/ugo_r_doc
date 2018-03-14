@@ -11,8 +11,8 @@
 
 ------------------------------------------------------------------------
 
-1, An introduction to repeated measures
----------------------------------------
+An introduction to repeated measures
+====================================
 
 The independent t-test is analogous to between-groups ANOVA and the paired-sample t-test is analogous to repeated measures ANOVA.
 
@@ -181,8 +181,8 @@ Less cost and statistically more powerful
 
 Order effects, counterbalancing, missing data, and an extra assumption
 
-2, Repeated measures ANOVA
---------------------------
+Repeated measures ANOVA
+=======================
 
 **The systematic between groups variance**
 

@@ -27,19 +27,19 @@
 ------------------------------------------------------------------------
 
 Documentation
--------------
+=============
 
 -   [ggplot2](http://docs.ggplot2.org/current/).
 -   [ggthemes](https://github.com/jrnold/ggthemes).
 -   [r4stats](http://r4stats.com/examples/graphics-ggplot2/).
 
 Dataset
--------
+=======
 
 For most examples, we use the `mtcars`, `diamonds`, `iris`, `ChickWeight`, `recess`, `fish`, `Vocab`, `Titanic`, `mamsleep`, `barley`, `adult` datasets.
 
 The `ggplot2` Package
----------------------
+=====================
 
 ``` r
 library(ggplot2)
@@ -74,10 +74,10 @@ library(dplyr)
 Suggested additional packages...
 
 SECTION 1
----------
+=========
 
 Introduction
----------------
+------------
 
 **Exploring `ggplot2`, part 1**
 
@@ -264,7 +264,7 @@ dia_plot +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-33-1.png)
 
 Data
--------
+----
 
 **Base package and `ggplot2`, part 1 - plot**
 
@@ -472,7 +472,7 @@ ggplot(iris.wide, aes(x = Length, y = Width, col = Part)) +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-41-1.png)
 
 Aesthetics
--------------
+----------
 
 **All about aesthetics, part 1**
 
@@ -773,7 +773,7 @@ ggplot(diamonds, aes(x = Clarity, y = Carat, col = PricePerCt)) +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-74-1.png)
 
 Geometries
--------------
+----------
 
 **Scatter plots and jittering (1)**
 
@@ -1153,7 +1153,7 @@ ggplot(fish.tidy, aes(x = Year, y = Capture, col = Species)) +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-113-1.png)
 
 `qplot` and wrap-up
---------------------
+-------------------
 
 **Using `qplot`**
 
@@ -1308,10 +1308,10 @@ ggplot(titanic, aes(x = factor(Pclass), y = Age, col = factor(Sex))) +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-131-1.png)
 
 SECTION 2
----------
+=========
 
 Statistics
--------------
+----------
 
 **Smoothing**
 
@@ -1595,7 +1595,7 @@ wt.cyl.am +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-159-1.png)
 
 Coordinates and Facets
--------------------------
+----------------------
 
 **Zooming In**
 
@@ -1785,7 +1785,7 @@ ggplot(mamsleep, aes(x = time, y = name, col = sleep)) +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-179-1.png)
 
 Themes
----------
+------
 
 **Rectangles**
 
@@ -2014,7 +2014,7 @@ z2 +
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-201-1.png)
 
 Best Practices
------------------
+--------------
 
 **Bar Plots (1)**
 
@@ -2274,7 +2274,7 @@ ggplot(barley, aes(x = year, y = yield, col = site, group = site, fill = site)) 
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-226-1.png)
 
 Case Study
--------------
+----------
 
 **Sort and order**
 
@@ -2671,10 +2671,10 @@ mosaicGG(Vocab, 'education', 'vocabulary')
 ![](img/Plot_snippets_-_ggplot2/unnamed-chunk-253-1.png)
 
 SECTION 3
----------
+=========
 
 SECTION 4 - Cheat List
-----------------------
+======================
 
 ggplot(data, aes(x = , y = ), col = , fill = , size = , labels = , alpha
 = , shape = , line = , position = 'jitter')

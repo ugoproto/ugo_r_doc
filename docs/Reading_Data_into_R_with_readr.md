@@ -12,7 +12,7 @@
 ------------------------------------------------------------------------
 
 Importing data with `readr`
-------------------------------
+===========================
 
 **Reading a .csv file**
 
@@ -210,7 +210,7 @@ identical(trees, trees2)
 ```
 
 Parsing Data with `readr`
-----------------------------
+=========================
 
 **Coercing columns to different data types**
 

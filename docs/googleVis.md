@@ -11,7 +11,7 @@ Notes, snippets, and results.
 
 ---
 
-## The `googleVis` package
+# The `googleVis` package
 
 The package provides an interface to Google's chart tools, allowing users to create interactive charts based on data frames. It included maps.
 
@@ -39,7 +39,7 @@ Always cite the package:
 citation("googleVis")
 ```
 
-## Suppress the message
+# Suppress the message
 
 We normally load the library...
 
@@ -53,7 +53,7 @@ library(googleVis)
 suppressPackageStartupMessages(library(googleVis))
 ```
 
-## Printing
+# Printing
 
 - Generate the chart.
 
@@ -105,7 +105,7 @@ print(M, file="GoogleVis/M.html")
 #cat(M$html$chart, file = "GoogleVis/M.html")
 ```
 
-## Embedding a chart/map into a static website
+# Embedding a chart/map into a static website
 
 The chart can be standing alone as an image file; even be embedded within a text.
 
@@ -350,7 +350,7 @@ style="width: 400; height: 350; float:left;";>
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 
-### Other static websites
+# Other static websites
 
 There is a procedure for embedding graphics in:
 
@@ -361,20 +361,20 @@ There is a procedure for embedding graphics in:
 - Wikipedia.
 - others websites.
 
-### Dynamic websites
+# Dynamic websites
 
 - The `R.rsp` package allows the integration of R code into html code. 
 - The `rApache` and `brew` packages support web application development using R and the Apache HTTP server.
 - Rook is a lightweight web server interface for R.
 - The `shiny` package builds interactive web application with R.
 
-## Charts
+# Charts
 
 Consult the examples (further above); charts are similar to what we find in other packages. 
 
 `gvisMotionChart` is exclusive to `googleVis`.
 
-### `gvisMotionChart`
+## `gvisMotionChart`
 
 <!--  -->
 <!-- M -->
@@ -577,7 +577,7 @@ callbacks.shift()();
 </div>
 <br>
 
-### Embedding with `<iframe>` or `<embed>`
+## Embedding with `<iframe>` or `<embed>`
 
 After we generate the HTML chart or map, save the object as a HTML file.
 
@@ -606,7 +606,7 @@ height=400px ></iframe>
 
 In other words, we can either write the code or embed a file into the HTML/Markdown document.
 
-### Information from the object
+## Information from the object
 
 ```r
 M$type
@@ -618,9 +618,9 @@ M$chartid
 "MotionChartID336e668836ab"
 ```
 
-## Maps
+# Maps
 
-### `gvisGeoChart`
+## `gvisGeoChart`
 
 <!--  -->
 <!-- Geo -->
@@ -1421,7 +1421,7 @@ callbacks.shift()();
 </div>
 <br>
 
-### `gvisMap` or Google Maps
+## `gvisMap` or Google Maps
 
 <!--  -->
 <!-- AndrewMap -->
@@ -1914,7 +1914,7 @@ callbacks.shift()();
 </div>
 <br>
 
-## Tables with `gvisTable`
+# Tables with `gvisTable`
 
 <!--  -->
 <!-- Table -->
@@ -3990,7 +3990,7 @@ callbacks.shift()();
 </div>
 <br>
 
-## Dashboards with `gvisMerge`
+# Dashboards with `gvisMerge`
 
 <!--  -->
 <!-- GT -->
@@ -4558,7 +4558,7 @@ callbacks.shift()();
 </tr>
 </table>
 
-## Options
+# Options
 
 <!--  -->
 <!-- Line -->

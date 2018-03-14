@@ -11,7 +11,7 @@ Course notes and snippets.
 
 ---
 
-## Introduction to eXtensible Time
+# Introduction to eXtensible Time
 
 **What is an `xts` object**
 
@@ -229,7 +229,7 @@ ts_b[index(ts_a)]
          [,1]
 
 
-## First Order of Business - Basic Manipulations
+# First Order of Business - Basic Manipulations
 
 **Converting `xts` objects**
 
@@ -556,7 +556,7 @@ a + merge(b, index(a), fill = 0)
 a + merge(b, index(a), fill = na.locf)
 ```
 
-## Merging and modifying time series
+# Merging and modifying time series
 
 **Combining `xts` by column with `merge`**
 
@@ -675,7 +675,7 @@ diff(AirPass, lag = 12, differences = 1)
 
 What is the key difference in lag between xts and zoo? The `k` argument in `zoo` uses positive values for shifting past observations forward.
 
-## Apply and aggregate by time
+# Apply and aggregate by time
 
 **Find intervals by time in `xts`**
 
@@ -812,7 +812,7 @@ rollapply(x, 10, FUN = max, na.rm = TRUE)
 eq_monthly <- rollapply(EqMktNeutral, 3, FUN = sd)
 ```
 
-## Extra features of `xts`
+# Extra features of `xts`
 
 **Index, attributes, and time zones**
 

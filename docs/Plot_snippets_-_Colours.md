@@ -15,7 +15,7 @@
 ------------------------------------------------------------------------
 
 Default colours
----------------
+===============
 
 ``` r
 # Set
@@ -43,7 +43,7 @@ par(mfrow = c(1, 1))
 ```
 
 Basic colours
--------------
+=============
 
 ``` r
 # 8 types times 9 tones
@@ -130,7 +130,7 @@ par(mfrow = c(1, 1))
 ```
 
 RColorBrewer examples
----------------------
+=====================
 
 ``` r
 library(RColorBrewer)
@@ -213,7 +213,7 @@ pie(rep(1, n), col = darkcols, main = 'Dark2')
 ![](img/Plot_snippets_-_Colours/unnamed-chunk-7-1.png)
 
 Building a palette
-------------------
+==================
 
 ``` r
 # All
@@ -256,7 +256,7 @@ pie(rep(1, n), col = mycols2, main = 'mycols2 (random)')
 ![](img/Plot_snippets_-_Colours/unnamed-chunk-8-2.png)
 
 Grabing colours
----------------
+===============
 
 -   [Grab Website Colors](http://www.colorcombos.com/grabcolors.html).
 -   [RGB Color Codes Chart](http://www.rapidtables.com/web/color/RGB_Color.htm#color%20picker).

@@ -29,7 +29,7 @@
 -   Aggregate or subset the data.
 
 `apply` to Matrices and Arrays
-------------------------------
+==============================
 
 Flatten a matrix into a vector.
 
@@ -169,7 +169,7 @@ apply(Y, 2, toupper)
     ## [1,] "A"  "C" 
     ## [2,] "B"  "D"
 
-### `sweep`
+## `sweep`
 
 **Several steps**
 
@@ -272,7 +272,7 @@ scale(dataPoints)
     ## attr(,"scaled:scale")
     ## [1] 1.290994 1.290994 1.290994
 
-### `aggregate`
+## `aggregate`
 
 ``` r
 # Dataset
@@ -368,7 +368,7 @@ aggregate(Mydf$Qty, by = Mydf["DepPC"], FUN = summary)
     ## 5    93   2.00     11.00    19.00  35.35     27.25 122.00
     ## 6    94   3.00     12.00    20.00  40.10     46.50 123.00
 
-### `by`
+## `by`
 
 An alternative to `aggregate` with pros and cons.
 
@@ -434,7 +434,7 @@ by(Mydf$Qty, Mydf["DepPC"], FUN = summary)
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     ##     3.0    12.0    20.0    40.1    46.5   123.0
 
-### `split`
+## `split`
 
 ``` r
 # Dataset
@@ -513,7 +513,7 @@ split(Mydf$Qty, c(60, 120))
     ## [35]   5   7   9  11  13  15  17  19  21  23  25  27  14  16  18  21  23
     ## [52]  25  27  29   3   2   4   6   8  66
 
-### `strsplit`
+## `strsplit`
 
 ``` r
 # The vector pioneers
@@ -523,7 +523,7 @@ pioneers <- c('GAUSS:1777', 'BAYES:1702', 'PASCAL:1623', 'PEARSON:1857')
 split_math <- strsplit(pioneers, ':')
 ```
 
-### `Vectorize`
+## `Vectorize`
 
 Vectorize a scalar function.
 
@@ -568,7 +568,7 @@ vf(1:3, 1:3)
     ## [1] 3 3
 
 `lapply`: list-apply
---------------------
+====================
 
 For lists, vectors, and data frames.
 
@@ -772,7 +772,7 @@ lapply(Y, toupper)
     ## [[4]]
     ## [1] "D"
 
-### `sapply`: simplify-list-apply
+## `sapply`: simplify-list-apply
 
 A wrapper that simplifies `lapply`.
 
@@ -932,11 +932,11 @@ sapply(Y, toupper)
     ##   a   b   c   d 
     ## "A" "B" "C" "D"
 
-### `vapply`
+## `vapply`
 
 A variant.
 
-### `rapply`: recursive-list-apply
+## `rapply`: recursive-list-apply
 
 ``` r
 # Dataset
@@ -1119,7 +1119,7 @@ rapply(MyList, sqrt, classes = "ANY", how = "unlist")
 -   `how = "replace"` or `"list"`, `"unlist"`
 
 `mapply`: multivariate-apply
-----------------------------
+============================
 
 ``` r
 # Create a 4x4 matrix
@@ -1149,7 +1149,7 @@ Vectorize arguments to a function, `rep`, that is not usually accepting
 vectors as arguments. Applies a function to multiple lists, `1:4`, or
 multiple vector, `c()`, arguments.
 
-### `Vectorize`
+## `Vectorize`
 
 Vectorize a scaler function.
 
@@ -1194,7 +1194,7 @@ vf(1:3, 1:3)
     ## [1] 3 3
 
 And more
---------
+========
 
 -   `tapply`.
 -   `eapply`.
