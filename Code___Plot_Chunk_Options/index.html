@@ -798,8 +798,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
-      I/O snippets & Cleaning
+    <a href="../IO_snippets___Cleaning/" title="I/O Snippets & Cleaning" class="md-nav__link">
+      I/O Snippets & Cleaning
     </a>
   </li>
 
@@ -1640,15 +1640,15 @@
 <li>Snippets and results.</li>
 </ul>
 <hr />
-<h4 id="preliminary-options">Preliminary Options<a class="headerlink" href="#preliminary-options" title="Permanent link">&para;</a></h4>
+<h3 id="preliminary-options">Preliminary Options<a class="headerlink" href="#preliminary-options" title="Permanent link">&para;</a></h3>
 <p>Usually, the following code is set to FALSE (not showing in a report). These are the general options. Code and plot chunks overrule the general options.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>knitr<span class="o">::</span>opts_chunk<span class="o">$</span>set<span class="p">(</span>echo<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> eval<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> fig.height<span class="o">=</span><span class="m">3</span><span class="p">,</span> fig.width<span class="o">=</span><span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<h4 id="chunks">Chunks<a class="headerlink" href="#chunks" title="Permanent link">&para;</a></h4>
+<h3 id="chunks">Chunks<a class="headerlink" href="#chunks" title="Permanent link">&para;</a></h3>
 <p>Naming a chunk is including it in the document outline. The outline is a navigation tool to jump though the document.</p>
-<h4 id="inputting-data">Inputting Data<a class="headerlink" href="#inputting-data" title="Permanent link">&para;</a></h4>
+<h3 id="inputting-data">Inputting Data<a class="headerlink" href="#inputting-data" title="Permanent link">&para;</a></h3>
 <p>The dataset comes from the <a href="http://www.census.gov/popest/data/national/totals/2011/index.html">US Census Bureau</a>. On their website, open Excel file &lsquo;NST-EST2011-02&rsquo; about the annual estimates of the resident population.</p>
 <p>The data have become an object: a data frame. Check it out, and add column names:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>USstatePops<span class="p">,</span><span class="m">3</span><span class="p">)</span>
@@ -1735,8 +1735,8 @@ USstatePops2<span class="o">$</span>State <span class="o">&lt;-</span> <span cla
 </pre></div>
 </td></tr></table>
 
-<h4 id="formatting-code-chunks">Formatting Code Chunks<a class="headerlink" href="#formatting-code-chunks" title="Permanent link">&para;</a></h4>
-<h5 id="evaltrue-show-the-results-default"><code class="codehilite">eval=TRUE</code>; show the results (default).<a class="headerlink" href="#evaltrue-show-the-results-default" title="Permanent link">&para;</a></h5>
+<h3 id="formatting-code-chunks">Formatting Code Chunks<a class="headerlink" href="#formatting-code-chunks" title="Permanent link">&para;</a></h3>
+<h4 id="evaltrue-show-the-results-default"><code class="codehilite">eval=TRUE</code>; show the results (default).<a class="headerlink" href="#evaltrue-show-the-results-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1745,12 +1745,12 @@ USstatePops2<span class="o">$</span>State <span class="o">&lt;-</span> <span cla
 </pre></div>
 </td></tr></table>
 
-<h5 id="evalfalse-or-no-results"><code class="codehilite">eval=FALSE</code>; or no results.<a class="headerlink" href="#evalfalse-or-no-results" title="Permanent link">&para;</a></h5>
+<h4 id="evalfalse-or-no-results"><code class="codehilite">eval=FALSE</code>; or no results.<a class="headerlink" href="#evalfalse-or-no-results" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<h5 id="resultsmarkup-show-split-coderesultscoderesults-default"><code class="codehilite">results=&#39;markup&#39;</code>; show split code/results/code/results (default).<a class="headerlink" href="#resultsmarkup-show-split-coderesultscoderesults-default" title="Permanent link">&para;</a></h5>
+<h4 id="resultsmarkup-show-split-coderesultscoderesults-default"><code class="codehilite">results=&#39;markup&#39;</code>; show split code/results/code/results (default).<a class="headerlink" href="#resultsmarkup-show-split-coderesultscoderesults-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1767,7 +1767,7 @@ USstatePops2<span class="o">$</span>State <span class="o">&lt;-</span> <span cla
 </pre></div>
 </td></tr></table>
 
-<h5 id="evalasis-show-unboxed-results"><code class="codehilite">eval=&#39;asis&#39;</code>; show &lsquo;unboxed&rsquo; results.<a class="headerlink" href="#evalasis-show-unboxed-results" title="Permanent link">&para;</a></h5>
+<h4 id="evalasis-show-unboxed-results"><code class="codehilite">eval=&#39;asis&#39;</code>; show &lsquo;unboxed&rsquo; results.<a class="headerlink" href="#evalasis-show-unboxed-results" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1778,14 +1778,14 @@ USstatePops2<span class="o">$</span>State <span class="o">&lt;-</span> <span cla
 </td></tr></table>
 
 <p>[1] 4339362</p>
-<h5 id="evalhide-show-code-only"><code class="codehilite">eval=&#39;hide&#39;</code>; show code only.<a class="headerlink" href="#evalhide-show-code-only" title="Permanent link">&para;</a></h5>
+<h4 id="evalhide-show-code-only"><code class="codehilite">eval=&#39;hide&#39;</code>; show code only.<a class="headerlink" href="#evalhide-show-code-only" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<h5 id="evalhold-show-code-blockresults-block"><code class="codehilite">eval=&#39;hold&#39;</code>; show code block/results block.<a class="headerlink" href="#evalhold-show-code-blockresults-block" title="Permanent link">&para;</a></h5>
+<h4 id="evalhold-show-code-blockresults-block"><code class="codehilite">eval=&#39;hold&#39;</code>; show code block/results block.<a class="headerlink" href="#evalhold-show-code-blockresults-block" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
@@ -1799,7 +1799,7 @@ median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class
 </td></tr></table>
 
 <hr />
-<h5 id="echotrue-show-the-code-default"><code class="codehilite">echo=TRUE</code>; show the code (default).<a class="headerlink" href="#echotrue-show-the-code-default" title="Permanent link">&para;</a></h5>
+<h4 id="echotrue-show-the-code-default"><code class="codehilite">echo=TRUE</code>; show the code (default).<a class="headerlink" href="#echotrue-show-the-code-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1816,7 +1816,7 @@ median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class
 </pre></div>
 </td></tr></table>
 
-<h5 id="echofalse-or-no-code"><code class="codehilite">echo=FALSE</code>; or no code.<a class="headerlink" href="#echofalse-or-no-code" title="Permanent link">&para;</a></h5>
+<h4 id="echofalse-or-no-code"><code class="codehilite">echo=FALSE</code>; or no code.<a class="headerlink" href="#echofalse-or-no-code" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 6053834
@@ -1826,19 +1826,19 @@ median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class
 </td></tr></table>
 
 <hr />
-<h5 id="warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report"><code class="codehilite">warning</code>, <code class="codehilite">error</code>, <code class="codehilite">message</code> are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.<a class="headerlink" href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report" title="Permanent link">&para;</a></h5>
+<h4 id="warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report"><code class="codehilite">warning</code>, <code class="codehilite">error</code>, <code class="codehilite">message</code> are set to TRUE by default. They can be set of FALSE when running a library() code to avoid polluting the report.<a class="headerlink" href="#warning-error-message-are-set-to-true-by-default-they-can-be-set-of-false-when-running-a-library-code-to-avoid-polluting-the-report" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{r, warning=TRUE, error=TRUE, message=TRUE}
 </pre></div>
 </td></tr></table>
 
 <hr />
-<h5 id="tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default"><code class="codehilite">tidy=TRUE/FALSE</code>; with the <code class="codehilite">formatR</code> and <code class="codehilite">shiny</code> packages (you manage spaces and indents) (FALSE by default).<a class="headerlink" href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default" title="Permanent link">&para;</a></h5>
+<h4 id="tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default"><code class="codehilite">tidy=TRUE/FALSE</code>; with the <code class="codehilite">formatR</code> and <code class="codehilite">shiny</code> packages (you manage spaces and indents) (FALSE by default).<a class="headerlink" href="#tidytruefalse-with-the-formatr-and-shiny-packages-you-manage-spaces-and-indents-false-by-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{r, tidy=TRUE}
 </pre></div>
 </td></tr></table>
 
 <hr />
-<h5 id="cachetruefalse-cache-the-results-false-by-default">cache=TRUE/FALSE; cache the results (FALSE by default).<a class="headerlink" href="#cachetruefalse-cache-the-results-false-by-default" title="Permanent link">&para;</a></h5>
+<h4 id="cachetruefalse-cache-the-results-false-by-default">cache=TRUE/FALSE; cache the results (FALSE by default).<a class="headerlink" href="#cachetruefalse-cache-the-results-false-by-default" title="Permanent link">&para;</a></h4>
 <p>Can be resused in future knits since it <strong>creates a subdir (the &lsquo;cache&rsquo;)</strong> with a R workspace, .rdb and .rdx files.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{r, cache=TRUE}
 </pre></div>
@@ -1846,7 +1846,7 @@ median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class
 
 <p>The <code class="codehilite">cache.path=&#39;cache/&#39;</code> can be changed. See <code class="codehilite">cache-comments</code>, <code class="codehilite">cache.lazy</code>, <code class="codehilite">cache.vars</code>, <code class="codehilite">autodep</code>, <code class="codehilite">dependson</code>.</p>
 <hr />
-<h5 id="comment-the-comments-in-results-by-default"><code class="codehilite">comment=&#39;##&#39;</code>; the comments in results (by default).<a class="headerlink" href="#comment-the-comments-in-results-by-default" title="Permanent link">&para;</a></h5>
+<h4 id="comment-the-comments-in-results-by-default"><code class="codehilite">comment=&#39;##&#39;</code>; the comments in results (by default).<a class="headerlink" href="#comment-the-comments-in-results-by-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1855,7 +1855,7 @@ median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class
 </pre></div>
 </td></tr></table>
 
-<h5 id="comment-the-new-comments"><code class="codehilite">comment=&#39;#&#39;</code>; the new comments.<a class="headerlink" href="#comment-the-new-comments" title="Permanent link">&para;</a></h5>
+<h4 id="comment-the-new-comments"><code class="codehilite">comment=&#39;#&#39;</code>; the new comments.<a class="headerlink" href="#comment-the-new-comments" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1865,7 +1865,7 @@ median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class
 </td></tr></table>
 
 <hr />
-<h5 id="code-chunk-r">code chunk <code class="codehilite">{r}</code>.<a class="headerlink" href="#code-chunk-r" title="Permanent link">&para;</a></h5>
+<h4 id="code-chunk-r">code chunk <code class="codehilite">{r}</code>.<a class="headerlink" href="#code-chunk-r" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">list</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 <span class="kt">list</span>
@@ -1876,21 +1876,21 @@ median<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class
 </pre></div>
 </td></tr></table>
 
-<h5 id="code-chunk-codenull">code chunk <code class="codehilite">{code=NULL}</code>.<a class="headerlink" href="#code-chunk-codenull" title="Permanent link">&para;</a></h5>
+<h4 id="code-chunk-codenull">code chunk <code class="codehilite">{code=NULL}</code>.<a class="headerlink" href="#code-chunk-codenull" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">list</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 <span class="kt">list</span>
 </pre></div>
 </td></tr></table>
 
-<h5 id="code-chunk-text">code chunk <code class="codehilite">{text}</code>.<a class="headerlink" href="#code-chunk-text" title="Permanent link">&para;</a></h5>
+<h4 id="code-chunk-text">code chunk <code class="codehilite">{text}</code>.<a class="headerlink" href="#code-chunk-text" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>list &lt;- c(1, 2, 3)
 list
 </pre></div>
 </td></tr></table>
 
-<h5 id="code-chunk-python">code chunk <code class="codehilite">{python}</code>.<a class="headerlink" href="#code-chunk-python" title="Permanent link">&para;</a></h5>
+<h4 id="code-chunk-python">code chunk <code class="codehilite">{python}</code>.<a class="headerlink" href="#code-chunk-python" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
@@ -1899,7 +1899,7 @@ list
 
 <p>Set up the new language first.</p>
 <hr />
-<h5 id="hightlighttrue-hightlight-the-code-default"><code class="codehilite">hightlight=TRUE</code>; hightlight the code (default).<a class="headerlink" href="#hightlighttrue-hightlight-the-code-default" title="Permanent link">&para;</a></h5>
+<h4 id="hightlighttrue-hightlight-the-code-default"><code class="codehilite">hightlight=TRUE</code>; hightlight the code (default).<a class="headerlink" href="#hightlighttrue-hightlight-the-code-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1908,7 +1908,7 @@ list
 </pre></div>
 </td></tr></table>
 
-<h5 id="hightlightfalse-or-not"><code class="codehilite">hightlight=FALSE</code>; or not.<a class="headerlink" href="#hightlightfalse-or-not" title="Permanent link">&para;</a></h5>
+<h4 id="hightlightfalse-or-not"><code class="codehilite">hightlight=FALSE</code>; or not.<a class="headerlink" href="#hightlightfalse-or-not" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1917,7 +1917,7 @@ list
 </pre></div>
 </td></tr></table>
 
-<h5 id="prompttrue-add-before-the-code"><code class="codehilite">prompt=TRUE</code>; add <code class="codehilite">&gt;</code> before the code.<a class="headerlink" href="#prompttrue-add-before-the-code" title="Permanent link">&para;</a></h5>
+<h4 id="prompttrue-add-before-the-code"><code class="codehilite">prompt=TRUE</code>; add <code class="codehilite">&gt;</code> before the code.<a class="headerlink" href="#prompttrue-add-before-the-code" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1926,7 +1926,7 @@ list
 </pre></div>
 </td></tr></table>
 
-<h5 id="promptfalse-or-not-default"><code class="codehilite">prompt=FALSE</code>; or not (default).<a class="headerlink" href="#promptfalse-or-not-default" title="Permanent link">&para;</a></h5>
+<h4 id="promptfalse-or-not-default"><code class="codehilite">prompt=FALSE</code>; or not (default).<a class="headerlink" href="#promptfalse-or-not-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1935,7 +1935,7 @@ list
 </pre></div>
 </td></tr></table>
 
-<h5 id="stripwhitetrue-remove-white-space-from-the-code-default"><code class="codehilite">strip.white=TRUE</code>; remove white space from the code (default).<a class="headerlink" href="#stripwhitetrue-remove-white-space-from-the-code-default" title="Permanent link">&para;</a></h5>
+<h4 id="stripwhitetrue-remove-white-space-from-the-code-default"><code class="codehilite">strip.white=TRUE</code>; remove white space from the code (default).<a class="headerlink" href="#stripwhitetrue-remove-white-space-from-the-code-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1944,7 +1944,7 @@ list
 </pre></div>
 </td></tr></table>
 
-<h5 id="stripwhitefalse-or-not"><code class="codehilite">strip.white=FALSE</code>; or not.<a class="headerlink" href="#stripwhitefalse-or-not" title="Permanent link">&para;</a></h5>
+<h4 id="stripwhitefalse-or-not"><code class="codehilite">strip.white=FALSE</code>; or not.<a class="headerlink" href="#stripwhitefalse-or-not" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1953,16 +1953,16 @@ list
 </pre></div>
 </td></tr></table>
 
-<h4 id="formatting-plot-chunk">Formatting Plot Chunk<a class="headerlink" href="#formatting-plot-chunk" title="Permanent link">&para;</a></h4>
+<h3 id="formatting-plot-chunk">Formatting Plot Chunk<a class="headerlink" href="#formatting-plot-chunk" title="Permanent link">&para;</a></h3>
 <p>Prints the plots in the .html report and and creates a subdir with the plot files (the references).</p>
-<h5 id="figpathfigure-new-file-path-for-this-chunk"><code class="codehilite">fig.path=&#39;figure/&#39;</code>; new file path for this chunk.<a class="headerlink" href="#figpathfigure-new-file-path-for-this-chunk" title="Permanent link">&para;</a></h5>
+<h4 id="figpathfigure-new-file-path-for-this-chunk"><code class="codehilite">fig.path=&#39;figure/&#39;</code>; new file path for this chunk.<a class="headerlink" href="#figpathfigure-new-file-path-for-this-chunk" title="Permanent link">&para;</a></h4>
 <p>Otherwise, the path is set in the general options.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-28-1.png" /></p>
-<h5 id="the-device-prints-png-files-by-default">The device prints .png files by default.<a class="headerlink" href="#the-device-prints-png-files-by-default" title="Permanent link">&para;</a></h5>
+<h4 id="the-device-prints-png-files-by-default">The device prints .png files by default.<a class="headerlink" href="#the-device-prints-png-files-by-default" title="Permanent link">&para;</a></h4>
 <p>It can be changed to other formats.</p>
 <p><code class="codehilite">dev=&#39;png&#39;</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
@@ -1983,51 +1983,51 @@ list
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-31-1.pdf" /></p>
 <hr />
-<h5 id="figwidth-figheight-change-the-box-size-7-by-default"><code class="codehilite">fig.width= , fig.height=</code>; change the box size (<code class="codehilite">=7</code> by default).<a class="headerlink" href="#figwidth-figheight-change-the-box-size-7-by-default" title="Permanent link">&para;</a></h5>
+<h4 id="figwidth-figheight-change-the-box-size-7-by-default"><code class="codehilite">fig.width= , fig.height=</code>; change the box size (<code class="codehilite">=7</code> by default).<a class="headerlink" href="#figwidth-figheight-change-the-box-size-7-by-default" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-32-1.png" /></p>
-<h5 id="figwidth5-figheight5"><code class="codehilite">fig.width=5, fig.height=5</code>.<a class="headerlink" href="#figwidth5-figheight5" title="Permanent link">&para;</a></h5>
+<h4 id="figwidth5-figheight5"><code class="codehilite">fig.width=5, fig.height=5</code>.<a class="headerlink" href="#figwidth5-figheight5" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-33-1.png" /></p>
-<h5 id="figheight3"><code class="codehilite">fig.height=3</code>.<a class="headerlink" href="#figheight3" title="Permanent link">&para;</a></h5>
+<h4 id="figheight3"><code class="codehilite">fig.height=3</code>.<a class="headerlink" href="#figheight3" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-34-1.png" /></p>
-<h5 id="figwidth3"><code class="codehilite">fig.width=3</code>.<a class="headerlink" href="#figwidth3" title="Permanent link">&para;</a></h5>
+<h4 id="figwidth3"><code class="codehilite">fig.width=3</code>.<a class="headerlink" href="#figwidth3" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-35-1.png" /></p>
-<h5 id="outheight100-outwidth100-in-pixels"><code class="codehilite">out.height=100, out.width=100</code>; in pixels.<a class="headerlink" href="#outheight100-outwidth100-in-pixels" title="Permanent link">&para;</a></h5>
+<h4 id="outheight100-outwidth100-in-pixels"><code class="codehilite">out.height=100, out.width=100</code>; in pixels.<a class="headerlink" href="#outheight100-outwidth100-in-pixels" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-36-1.png" /></p>
 <hr />
-<h5 id="resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels"><code class="codehilite">resize.height=200, resize.width=200</code>; resize tike graphics for latex, in pixels.<a class="headerlink" href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels" title="Permanent link">&para;</a></h5>
+<h4 id="resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels"><code class="codehilite">resize.height=200, resize.width=200</code>; resize tike graphics for latex, in pixels.<a class="headerlink" href="#resizeheight200-resizewidth200-resize-tike-graphics-for-latex-in-pixels" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-37-1.png" /></p>
-<h5 id="sanitizetrue-sanitize-tike-graphics-for-latex"><code class="codehilite">sanitize=TRUE</code>; sanitize &lsquo;tike&rsquo; graphics for latex.<a class="headerlink" href="#sanitizetrue-sanitize-tike-graphics-for-latex" title="Permanent link">&para;</a></h5>
+<h4 id="sanitizetrue-sanitize-tike-graphics-for-latex"><code class="codehilite">sanitize=TRUE</code>; sanitize &lsquo;tike&rsquo; graphics for latex.<a class="headerlink" href="#sanitizetrue-sanitize-tike-graphics-for-latex" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-38-1.png" /></p>
 <hr />
-<h5 id="set-the-device-arguments">Set the device arguments:<a class="headerlink" href="#set-the-device-arguments" title="Permanent link">&para;</a></h5>
+<h4 id="set-the-device-arguments">Set the device arguments:<a class="headerlink" href="#set-the-device-arguments" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">dev.args=list(bg=&#39;yellow&#39;, pointsize=10)</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2041,7 +2041,7 @@ list
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-40-1.png" /></p>
 <hr />
-<h6 id="dots-per-inch">dots per inch.<a class="headerlink" href="#dots-per-inch" title="Permanent link">&para;</a></h6>
+<h5 id="dots-per-inch">dots per inch.<a class="headerlink" href="#dots-per-inch" title="Permanent link">&para;</a></h5>
 <p><code class="codehilite">dpi=72</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2054,7 +2054,7 @@ list
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-42-1.png" /></p>
-<h5 id="dpi-multiplier-for-html-output-on-retina-screens">dpi multiplier for .html output on retina screens:<a class="headerlink" href="#dpi-multiplier-for-html-output-on-retina-screens" title="Permanent link">&para;</a></h5>
+<h4 id="dpi-multiplier-for-html-output-on-retina-screens">dpi multiplier for .html output on retina screens:<a class="headerlink" href="#dpi-multiplier-for-html-output-on-retina-screens" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">fig.retina=1</code></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2068,21 +2068,21 @@ list
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-44-1.png" /></p>
 <hr />
-<h5 id="figalignleft-or-figaligndefault"><code class="codehilite">fig.align=&#39;left&#39;</code> or <code class="codehilite">fig.align=&#39;default&#39;</code>.<a class="headerlink" href="#figalignleft-or-figaligndefault" title="Permanent link">&para;</a></h5>
+<h4 id="figalignleft-or-figaligndefault"><code class="codehilite">fig.align=&#39;left&#39;</code> or <code class="codehilite">fig.align=&#39;default&#39;</code>.<a class="headerlink" href="#figalignleft-or-figaligndefault" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-45-1.png" /></p>
-<h5 id="figalignright"><code class="codehilite">fig.align=&#39;right&#39;</code>.<a class="headerlink" href="#figalignright" title="Permanent link">&para;</a></h5>
-<h5 id="figaligncenter"><code class="codehilite">fig.align=&#39;center&#39;</code>.<a class="headerlink" href="#figaligncenter" title="Permanent link">&para;</a></h5>
+<h4 id="figalignright"><code class="codehilite">fig.align=&#39;right&#39;</code>.<a class="headerlink" href="#figalignright" title="Permanent link">&para;</a></h4>
+<h4 id="figaligncenter"><code class="codehilite">fig.align=&#39;center&#39;</code>.<a class="headerlink" href="#figaligncenter" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-47-1.png" /></center></p>
 <hr />
-<h5 id="figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex">Figure captions at the bottom of the plot; figure caption in latex:<a class="headerlink" href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex" title="Permanent link">&para;</a></h5>
+<h4 id="figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex">Figure captions at the bottom of the plot; figure caption in latex:<a class="headerlink" href="#figure-captions-at-the-bottom-of-the-plot-figure-caption-in-latex" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">fig.cap=&#39;CAPTION 14&#39;</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2097,7 +2097,7 @@ list
 <li><code class="codehilite">fig.env=&#39;&#39;</code>; the latex environment for figures.</li>
 </ul>
 <hr />
-<h5 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h5>
+<h4 id="versions">Versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">fig.keep=&#39;high&#39;</code>; merge low-level changes into high-level plots.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2111,14 +2111,14 @@ list
 <li><code class="codehilite">fig.keep=&#39;none&#39;</code>; discard all plots.</li>
 </ul>
 <hr />
-<h5 id="figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex"><code class="codehilite">fig.pos=&#39;test&#39;</code>; string to be used as the figure position arrangement in latex.<a class="headerlink" href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex" title="Permanent link">&para;</a></h5>
+<h4 id="figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex"><code class="codehilite">fig.pos=&#39;test&#39;</code>; string to be used as the figure position arrangement in latex.<a class="headerlink" href="#figpostest-string-to-be-used-as-the-figure-position-arrangement-in-latex" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">20</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Code___Plot_Chunk_Options/unnamed-chunk-50-1.png" /></p>
 <hr />
-<h5 id="show">Show<a class="headerlink" href="#show" title="Permanent link">&para;</a></h5>
+<h4 id="show">Show<a class="headerlink" href="#show" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">fig.show=&#39;asis&#39;</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>hist<span class="p">(</span>USstatePops2<span class="o">$</span>Pop<span class="p">,</span> breaks <span class="o">=</span> <span class="m">10</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Pop&#39;</span><span class="p">)</span>
 </pre></div>

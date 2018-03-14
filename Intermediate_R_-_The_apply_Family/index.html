@@ -561,8 +561,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
-      I/O snippets & Cleaning
+    <a href="../IO_snippets___Cleaning/" title="I/O Snippets & Cleaning" class="md-nav__link">
+      I/O Snippets & Cleaning
     </a>
   </li>
 
@@ -1140,7 +1140,7 @@
 <li>Avoid explicit use of loop constructs and speed up the code.</li>
 <li>Aggregate or subset the data.</li>
 </ul>
-<h4 id="apply-to-matrices-and-arrays"><code class="codehilite">apply</code> to Matrices and Arrays<a class="headerlink" href="#apply-to-matrices-and-arrays" title="Permanent link">&para;</a></h4>
+<h3 id="apply-to-matrices-and-arrays"><code class="codehilite">apply</code> to Matrices and Arrays<a class="headerlink" href="#apply-to-matrices-and-arrays" title="Permanent link">&para;</a></h3>
 <p>Flatten a matrix into a vector.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1347,7 +1347,7 @@ Y
 </pre></div>
 </td></tr></table>
 
-<h5 id="sweep"><code class="codehilite">sweep</code><a class="headerlink" href="#sweep" title="Permanent link">&para;</a></h5>
+<h4 id="sweep"><code class="codehilite">sweep</code><a class="headerlink" href="#sweep" title="Permanent link">&para;</a></h4>
 <p><strong>Several steps</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1501,7 +1501,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<h5 id="aggregate"><code class="codehilite">aggregate</code><a class="headerlink" href="#aggregate" title="Permanent link">&para;</a></h5>
+<h4 id="aggregate"><code class="codehilite">aggregate</code><a class="headerlink" href="#aggregate" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 <span class="kp">head</span><span class="p">(</span>Mydf<span class="p">,</span> <span class="m">15</span><span class="p">)</span>
@@ -1654,7 +1654,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<h5 id="by"><code class="codehilite">by</code><a class="headerlink" href="#by" title="Permanent link">&para;</a></h5>
+<h4 id="by"><code class="codehilite">by</code><a class="headerlink" href="#by" title="Permanent link">&para;</a></h4>
 <p>An alternative to <code class="codehilite">aggregate</code> with pros and cons.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
@@ -1768,7 +1768,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<h5 id="split"><code class="codehilite">split</code><a class="headerlink" href="#split" title="Permanent link">&para;</a></h5>
+<h4 id="split"><code class="codehilite">split</code><a class="headerlink" href="#split" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 <span class="kp">head</span><span class="p">(</span>Mydf<span class="p">,</span> <span class="m">5</span><span class="p">)</span>
@@ -1903,7 +1903,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<h5 id="strsplit"><code class="codehilite">strsplit</code><a class="headerlink" href="#strsplit" title="Permanent link">&para;</a></h5>
+<h4 id="strsplit"><code class="codehilite">strsplit</code><a class="headerlink" href="#strsplit" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1916,7 +1916,7 @@ split_math <span class="o">&lt;-</span> <span class="kp">strsplit</span><span cl
 </pre></div>
 </td></tr></table>
 
-<h5 id="vectorize"><code class="codehilite">Vectorize</code><a class="headerlink" href="#vectorize" title="Permanent link">&para;</a></h5>
+<h4 id="vectorize"><code class="codehilite">Vectorize</code><a class="headerlink" href="#vectorize" title="Permanent link">&para;</a></h4>
 <p>Vectorize a scalar function.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Scalar function</span>
@@ -1982,7 +1982,7 @@ vf<span class="p">(</span><span class="m">1</span><span class="o">:</span><span 
 </pre></div>
 </td></tr></table>
 
-<h4 id="lapply-list-apply"><code class="codehilite">lapply</code>: list-apply<a class="headerlink" href="#lapply-list-apply" title="Permanent link">&para;</a></h4>
+<h3 id="lapply-list-apply"><code class="codehilite">lapply</code>: list-apply<a class="headerlink" href="#lapply-list-apply" title="Permanent link">&para;</a></h3>
 <p>For lists, vectors, and data frames.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -2322,7 +2322,7 @@ Y
 </pre></div>
 </td></tr></table>
 
-<h5 id="sapply-simplify-list-apply"><code class="codehilite">sapply</code>: simplify-list-apply<a class="headerlink" href="#sapply-simplify-list-apply" title="Permanent link">&para;</a></h5>
+<h4 id="sapply-simplify-list-apply"><code class="codehilite">sapply</code>: simplify-list-apply<a class="headerlink" href="#sapply-simplify-list-apply" title="Permanent link">&para;</a></h4>
 <p>A wrapper that simplifies <code class="codehilite">lapply</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
@@ -2578,9 +2578,9 @@ Y
 </pre></div>
 </td></tr></table>
 
-<h5 id="vapply"><code class="codehilite">vapply</code><a class="headerlink" href="#vapply" title="Permanent link">&para;</a></h5>
+<h4 id="vapply"><code class="codehilite">vapply</code><a class="headerlink" href="#vapply" title="Permanent link">&para;</a></h4>
 <p>A variant.</p>
-<h5 id="rapply-recursive-list-apply"><code class="codehilite">rapply</code>: recursive-list-apply<a class="headerlink" href="#rapply-recursive-list-apply" title="Permanent link">&para;</a></h5>
+<h4 id="rapply-recursive-list-apply"><code class="codehilite">rapply</code>: recursive-list-apply<a class="headerlink" href="#rapply-recursive-list-apply" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 MyList
@@ -2896,7 +2896,7 @@ MyList
     class only.</li>
 <li><code class="codehilite">how = &quot;replace&quot;</code> or <code class="codehilite">&quot;list&quot;</code>, <code class="codehilite">&quot;unlist&quot;</code></li>
 </ul>
-<h4 id="mapply-multivariate-apply"><code class="codehilite">mapply</code>: multivariate-apply<a class="headerlink" href="#mapply-multivariate-apply" title="Permanent link">&para;</a></h4>
+<h3 id="mapply-multivariate-apply"><code class="codehilite">mapply</code>: multivariate-apply<a class="headerlink" href="#mapply-multivariate-apply" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create a 4x4 matrix</span>
@@ -2940,7 +2940,7 @@ Q2
 <p>Vectorize arguments to a function, <code class="codehilite">rep</code>, that is not usually accepting<br />
 vectors as arguments. Applies a function to multiple lists, <code class="codehilite"><span class="mi">1</span><span class="o">:</span><span class="mi">4</span></code>, or<br />
 multiple vector, <code class="codehilite">c()</code>, arguments.</p>
-<h5 id="vectorize_1"><code class="codehilite">Vectorize</code><a class="headerlink" href="#vectorize_1" title="Permanent link">&para;</a></h5>
+<h4 id="vectorize_1"><code class="codehilite">Vectorize</code><a class="headerlink" href="#vectorize_1" title="Permanent link">&para;</a></h4>
 <p>Vectorize a scaler function.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Scalar function</span>
@@ -3006,7 +3006,7 @@ vf<span class="p">(</span><span class="m">1</span><span class="o">:</span><span 
 </pre></div>
 </td></tr></table>
 
-<h4 id="and-more">And more<a class="headerlink" href="#and-more" title="Permanent link">&para;</a></h4>
+<h3 id="and-more">And more<a class="headerlink" href="#and-more" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code class="codehilite">tapply</code>.</li>
 <li><code class="codehilite">eapply</code>.</li>

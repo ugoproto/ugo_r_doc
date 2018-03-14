@@ -431,8 +431,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
-      I/O snippets & Cleaning
+    <a href="../IO_snippets___Cleaning/" title="I/O Snippets & Cleaning" class="md-nav__link">
+      I/O Snippets & Cleaning
     </a>
   </li>
 
@@ -1274,7 +1274,7 @@
 <li>Snippets and results.</li>
 </ul>
 <hr />
-<h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h4>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
 <p><code class="codehilite">data.table</code></p>
 <ul>
 <li>Extension of <code class="codehilite">data.frame</code>.</li>
@@ -1321,9 +1321,9 @@
 </tbody>
 </table>
 
-<h4 id="datatable-novice"><code class="codehilite">data.table</code> novice<a class="headerlink" href="#datatable-novice" title="Permanent link">&para;</a></h4>
+<h3 id="datatable-novice"><code class="codehilite">data.table</code> novice<a class="headerlink" href="#datatable-novice" title="Permanent link">&para;</a></h3>
 <p>Find out more with <code class="codehilite">?data.table</code>.</p>
-<h5 id="create-and-subset-a-datatable">Create and subset a <code class="codehilite">data.table</code><a class="headerlink" href="#create-and-subset-a-datatable" title="Permanent link">&para;</a></h5>
+<h4 id="create-and-subset-a-datatable">Create and subset a <code class="codehilite">data.table</code><a class="headerlink" href="#create-and-subset-a-datatable" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1368,7 +1368,7 @@ DT<span class="p">[</span><span class="m">2</span><span class="o">:</span><span 
 </pre></div>
 </td></tr></table>
 
-<h5 id="getting-to-know-a-datatable">Getting to know a <code class="codehilite">data.table</code><a class="headerlink" href="#getting-to-know-a-datatable" title="Permanent link">&para;</a></h5>
+<h4 id="getting-to-know-a-datatable">Getting to know a <code class="codehilite">data.table</code><a class="headerlink" href="#getting-to-know-a-datatable" title="Permanent link">&para;</a></h4>
 <p>Like <code class="codehilite">head</code>, <code class="codehilite">tail</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Print the penultimate row of DT using .N</span>
@@ -1417,7 +1417,7 @@ DT<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span
 </td></tr></table>
 
 <p><code class="codehilite">DT</code> is a data.table/data.frame, but <code class="codehilite">DT[ , B]</code> is a vector; <code class="codehilite">DT[ , .(B)]</code> is a subsetted data.table.</p>
-<h5 id="subsetting-data-tables">Subsetting data tables<a class="headerlink" href="#subsetting-data-tables" title="Permanent link">&para;</a></h5>
+<h4 id="subsetting-data-tables">Subsetting data tables<a class="headerlink" href="#subsetting-data-tables" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">DT[i, j, by]</code> means take <code class="codehilite">DT</code>, subset rows using <code class="codehilite">i</code>, then calculate <code class="codehilite">j</code> grouped by <code class="codehilite">by</code>. You can wrap <code class="codehilite">j</code> with <code class="codehilite">.()</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1457,7 +1457,7 @@ ans2 <span class="o">&lt;-</span> data.table<span class="p">(</span>DT<span clas
 </pre></div>
 </td></tr></table>
 
-<h5 id="the-by-basics">The <code class="codehilite">by</code> basics<a class="headerlink" href="#the-by-basics" title="Permanent link">&para;</a></h5>
+<h4 id="the-by-basics">The <code class="codehilite">by</code> basics<a class="headerlink" href="#the-by-basics" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1498,7 +1498,7 @@ DT<span class="p">[,</span> <span class="m">.</span><span class="p">(</span><spa
 </pre></div>
 </td></tr></table>
 
-<h5 id="using-n-and-by">Using <code class="codehilite"><span class="na">.N</span></code> and <code class="codehilite">by</code><a class="headerlink" href="#using-n-and-by" title="Permanent link">&para;</a></h5>
+<h4 id="using-n-and-by">Using <code class="codehilite"><span class="na">.N</span></code> and <code class="codehilite">by</code><a class="headerlink" href="#using-n-and-by" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite"><span class="na">.N</span></code>, number, in row or column.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1538,7 +1538,7 @@ DT<span class="p">[,</span> <span class="m">.</span><span class="p">(</span>Coun
 </pre></div>
 </td></tr></table>
 
-<h5 id="return-multiple-numbers-in-j">Return multiple numbers in <code class="codehilite">j</code><a class="headerlink" href="#return-multiple-numbers-in-j" title="Permanent link">&para;</a></h5>
+<h4 id="return-multiple-numbers-in-j">Return multiple numbers in <code class="codehilite">j</code><a class="headerlink" href="#return-multiple-numbers-in-j" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1571,8 +1571,8 @@ DT2<span class="p">[,</span> <span class="m">.</span><span class="p">(</span>C <
 </pre></div>
 </td></tr></table>
 
-<h4 id="datatable-yeoman"><code class="codehilite">data.table</code> yeoman<a class="headerlink" href="#datatable-yeoman" title="Permanent link">&para;</a></h4>
-<h5 id="chaining-the-basics">Chaining, the basics<a class="headerlink" href="#chaining-the-basics" title="Permanent link">&para;</a></h5>
+<h3 id="datatable-yeoman"><code class="codehilite">data.table</code> yeoman<a class="headerlink" href="#datatable-yeoman" title="Permanent link">&para;</a></h3>
+<h4 id="chaining-the-basics">Chaining, the basics<a class="headerlink" href="#chaining-the-basics" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1674,7 +1674,7 @@ DT<span class="p">[,</span> <span class="m">.</span><span class="p">(</span>Sepa
 </pre></div>
 </td></tr></table>
 
-<h5 id="programming-time-vs-readability">Programming time vs readability<a class="headerlink" href="#programming-time-vs-readability" title="Permanent link">&para;</a></h5>
+<h4 id="programming-time-vs-readability">Programming time vs readability<a class="headerlink" href="#programming-time-vs-readability" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1713,7 +1713,7 @@ DT<span class="p">[,</span> <span class="kp">lapply</span><span class="p">(</spa
 </pre></div>
 </td></tr></table>
 
-<h5 id="introducing-sdcols">Introducing <code class="codehilite"><span class="na">.SDcols</span></code><a class="headerlink" href="#introducing-sdcols" title="Permanent link">&para;</a></h5>
+<h4 id="introducing-sdcols">Introducing <code class="codehilite"><span class="na">.SDcols</span></code><a class="headerlink" href="#introducing-sdcols" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite"><span class="na">.SDcols</span></code> specifies the columns of <code class="codehilite">DT</code> that are included in <code class="codehilite"><span class="na">.SD</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1771,7 +1771,7 @@ DT<span class="p">[,</span> <span class="m">.</span>SD<span class="p">[</span><s
 </pre></div>
 </td></tr></table>
 
-<h5 id="mixing-it-together-lapply-sd-sdcols-and-n">Mixing it together: <code class="codehilite">lapply</code>, <code class="codehilite"><span class="na">.SD</span></code>, <code class="codehilite">SDcols</code> and <code class="codehilite"><span class="na">.N</span></code><a class="headerlink" href="#mixing-it-together-lapply-sd-sdcols-and-n" title="Permanent link">&para;</a></h5>
+<h4 id="mixing-it-together-lapply-sd-sdcols-and-n">Mixing it together: <code class="codehilite">lapply</code>, <code class="codehilite"><span class="na">.SD</span></code>, <code class="codehilite">SDcols</code> and <code class="codehilite"><span class="na">.N</span></code><a class="headerlink" href="#mixing-it-together-lapply-sd-sdcols-and-n" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1858,7 +1858,7 @@ DT<span class="p">[,</span><span class="kp">lapply</span><span class="p">(</span
 </pre></div>
 </td></tr></table>
 
-<h5 id="adding-updating-and-removing-columns">Adding, updating, and removing columns<a class="headerlink" href="#adding-updating-and-removing-columns" title="Permanent link">&para;</a></h5>
+<h4 id="adding-updating-and-removing-columns">Adding, updating, and removing columns<a class="headerlink" href="#adding-updating-and-removing-columns" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">:=</code> is defined for use in <code class="codehilite">j</code> only.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -1972,7 +1972,7 @@ DT<span class="p">[[</span><span class="m">3</span><span class="p">]]</span>
 </pre></div>
 </td></tr></table>
 
-<h5 id="the-functional-form">The functional form<a class="headerlink" href="#the-functional-form" title="Permanent link">&para;</a></h5>
+<h4 id="the-functional-form">The functional form<a class="headerlink" href="#the-functional-form" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -2041,7 +2041,7 @@ DT<span class="p">[,</span> <span class="m">2</span> <span class="o">:=</span> <
 </pre></div>
 </td></tr></table>
 
-<h5 id="ready-set-go">Ready, <code class="codehilite">set</code>, go!<a class="headerlink" href="#ready-set-go" title="Permanent link">&para;</a></h5>
+<h4 id="ready-set-go">Ready, <code class="codehilite">set</code>, go!<a class="headerlink" href="#ready-set-go" title="Permanent link">&para;</a></h4>
 <p>The <code class="codehilite">set</code> function is used to repeatedly update a data.table by reference. You can think of the <code class="codehilite">set</code> function as a loopable.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -2206,8 +2206,8 @@ setcolorder<span class="p">(</span>DT<span class="p">,</span> <span class="kt">c
 </pre></div>
 </td></tr></table>
 
-<h4 id="datatable-expert"><code class="codehilite">data.table</code> expert<a class="headerlink" href="#datatable-expert" title="Permanent link">&para;</a></h4>
-<h5 id="selecting-rows-the-datatable-way">Selecting rows the <code class="codehilite">data.table</code> way<a class="headerlink" href="#selecting-rows-the-datatable-way" title="Permanent link">&para;</a></h5>
+<h3 id="datatable-expert"><code class="codehilite">data.table</code> expert<a class="headerlink" href="#datatable-expert" title="Permanent link">&para;</a></h3>
+<h4 id="selecting-rows-the-datatable-way">Selecting rows the <code class="codehilite">data.table</code> way<a class="headerlink" href="#selecting-rows-the-datatable-way" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Convert iris to a data.table</span>
@@ -2342,7 +2342,7 @@ iris
 </pre></div>
 </td></tr></table>
 
-<h5 id="removing-columns-and-adapting-your-column-names">Removing columns and adapting your column names<a class="headerlink" href="#removing-columns-and-adapting-your-column-names" title="Permanent link">&para;</a></h5>
+<h4 id="removing-columns-and-adapting-your-column-names">Removing columns and adapting your column names<a class="headerlink" href="#removing-columns-and-adapting-your-column-names" title="Permanent link">&para;</a></h4>
 <p>Refer to a regex cheat sheet for metacharacter.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -2420,7 +2420,7 @@ iris<span class="p">[,</span> <span class="kt">c</span><span class="p">(</span><
 </pre></div>
 </td></tr></table>
 
-<h5 id="understanding-automatic-indexing">Understanding automatic indexing<a class="headerlink" href="#understanding-automatic-indexing" title="Permanent link">&para;</a></h5>
+<h4 id="understanding-automatic-indexing">Understanding automatic indexing<a class="headerlink" href="#understanding-automatic-indexing" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Cleaned up iris data.table</span>
@@ -2521,7 +2521,7 @@ iris2<span class="p">[</span>is_large <span class="o">==</span> <span class="kc"
 </pre></div>
 </td></tr></table>
 
-<h5 id="selecting-groups-or-parts-of-groups">Selecting groups or parts of groups<a class="headerlink" href="#selecting-groups-or-parts-of-groups" title="Permanent link">&para;</a></h5>
+<h4 id="selecting-groups-or-parts-of-groups">Selecting groups or parts of groups<a class="headerlink" href="#selecting-groups-or-parts-of-groups" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -2636,7 +2636,7 @@ DT<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span
 </pre></div>
 </td></tr></table>
 
-<h5 id="rolling-joins">Rolling joins<a class="headerlink" href="#rolling-joins" title="Permanent link">&para;</a></h5>
+<h4 id="rolling-joins">Rolling joins<a class="headerlink" href="#rolling-joins" title="Permanent link">&para;</a></h4>
 <p><strong>Rolling joins &ndash; part one</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2

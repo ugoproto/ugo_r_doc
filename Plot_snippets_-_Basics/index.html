@@ -429,8 +429,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
-      I/O snippets & Cleaning
+    <a href="../IO_snippets___Cleaning/" title="I/O Snippets & Cleaning" class="md-nav__link">
+      I/O Snippets & Cleaning
     </a>
   </li>
 
@@ -1415,7 +1415,7 @@
 <li>For explaining data, presenting results, reporting and publishing, we can generate prettier graphics with <code class="codehilite">ggvis</code> or <code class="codehilite">ggplot2</code>, and interactive packages such as <code class="codehilite">shiny</code>.</li>
 </ul>
 <hr />
-<h4 id="plotting-packages">Plotting Packages<a class="headerlink" href="#plotting-packages" title="Permanent link">&para;</a></h4>
+<h3 id="plotting-packages">Plotting Packages<a class="headerlink" href="#plotting-packages" title="Permanent link">&para;</a></h3>
 <p>Graphics:</p>
 <ul>
 <li><code class="codehilite">maps</code> for grids and mapping.</li>
@@ -1467,8 +1467,8 @@
 <li><code class="codehilite">shiny</code> for interactive plots.</li>
 <li><code class="codehilite">ggvis</code>.</li>
 </ul>
-<h4 id="data-type-dataset">Data Type &amp; Dataset<a class="headerlink" href="#data-type-dataset" title="Permanent link">&para;</a></h4>
-<h5 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h5>
+<h3 id="data-type-dataset">Data Type &amp; Dataset<a class="headerlink" href="#data-type-dataset" title="Permanent link">&para;</a></h3>
+<h4 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h4>
 <ul>
 <li>continuous vs categorical (or discrete).</li>
 <li>continuous: float, x-y-z, 3D, map coordinates, trianguar, lat-long, polar, degree-distance, angle-vector.</li>
@@ -1535,7 +1535,7 @@
 <li>regression: scatter plot.</li>
 <li>ANOVA: box plots, line plots.</li>
 </ul>
-<h5 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h5>
+<h4 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h4>
 <p><strong>Create a new variable</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>iris2 <span class="o">&lt;-</span> <span class="kp">within</span><span class="p">(</span>iris<span class="p">,</span> area <span class="o">&lt;-</span> Petal.Width<span class="o">*</span>Petal.Length<span class="p">)</span>
@@ -1563,7 +1563,7 @@
 </pre></div>
 </td></tr></table>
 
-<h5 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h5>
+<h4 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h4>
 <p>For most examples, we use the <code class="codehilite">mtcars</code> dataset.</p>
 <p>Prepare the dataset.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">attach</span><span class="p">(</span>mtcars<span class="p">)</span>
@@ -1575,8 +1575,8 @@
 </pre></div>
 </td></tr></table>
 
-<h4 id="the-basic-package">The Basic Package<a class="headerlink" href="#the-basic-package" title="Permanent link">&para;</a></h4>
-<h5 id="basic-plots-options-parameters">Basic Plots, Options &amp; Parameters<a class="headerlink" href="#basic-plots-options-parameters" title="Permanent link">&para;</a></h5>
+<h3 id="the-basic-package">The Basic Package<a class="headerlink" href="#the-basic-package" title="Permanent link">&para;</a></h3>
+<h4 id="basic-plots-options-parameters">Basic Plots, Options &amp; Parameters<a class="headerlink" href="#basic-plots-options-parameters" title="Permanent link">&para;</a></h4>
 <p><strong>Standardize the parameters (an example)</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># color and tick mark text orientation</span>
@@ -2096,7 +2096,7 @@ lines<span class="p">(</span>mpg<span class="p">[</span><span class="m">1</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-29-1.png" /></p>
-<h5 id="univariate-plots">Univariate Plots<a class="headerlink" href="#univariate-plots" title="Permanent link">&para;</a></h5>
+<h4 id="univariate-plots">Univariate Plots<a class="headerlink" href="#univariate-plots" title="Permanent link">&para;</a></h4>
 <p><strong>Plot; continuous</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>plot<span class="p">(</span>mpg<span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;observations&#39;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2465,7 +2465,7 @@ lines<span class="p">(</span>density<span class="p">(</span>mtcars<span class="o
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-57-1.png" /></p>
-<h5 id="bivariate-multivariate-plots">Bivariate (Multivariate) Plots<a class="headerlink" href="#bivariate-multivariate-plots" title="Permanent link">&para;</a></h5>
+<h4 id="bivariate-multivariate-plots">Bivariate (Multivariate) Plots<a class="headerlink" href="#bivariate-multivariate-plots" title="Permanent link">&para;</a></h4>
 <p><strong>Plot, continuous/continuous</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>plot<span class="p">(</span>mpg<span class="p">,</span> hp<span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#39;horsepowers&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2730,7 +2730,7 @@ counts
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-74-1.png" /></p>
-<h5 id="multivariate-plots">Multivariate Plots<a class="headerlink" href="#multivariate-plots" title="Permanent link">&para;</a></h5>
+<h4 id="multivariate-plots">Multivariate Plots<a class="headerlink" href="#multivariate-plots" title="Permanent link">&para;</a></h4>
 <p><strong>Pairs</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pairs<span class="p">(</span> <span class="o">~</span>mpg <span class="o">+</span> disp <span class="o">+</span> hp<span class="p">)</span>
 </pre></div>
@@ -2794,7 +2794,7 @@ plot<span class="p">(</span>iris<span class="p">,</span> col <span class="o">=</
 <li><code class="codehilite">persp()</code>.</li>
 <li><code class="codehilite">symbols()</code>.</li>
 </ul>
-<h5 id="times-series">Times Series<a class="headerlink" href="#times-series" title="Permanent link">&para;</a></h5>
+<h4 id="times-series">Times Series<a class="headerlink" href="#times-series" title="Permanent link">&para;</a></h4>
 <p>Add packages: <code class="codehilite">zoo</code> and <code class="codehilite">xts</code>.</p>
 <p><strong>Basics</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>plot<span class="p">(</span>AirPassengers<span class="p">,</span> type <span class="o">=</span> <span class="s">&#39;l&#39;</span><span class="p">)</span>
@@ -3012,7 +3012,7 @@ legend<span class="p">(</span>xrange<span class="p">[</span><span class="m">1</s
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-85-1.png" /></p>
 <p><strong>Change <code class="codehilite">lty =</code></strong></p>
 <p><img alt="" src="../lty.png" /></p>
-<h5 id="regressions-and-residual-plots">Regressions and Residual Plots<a class="headerlink" href="#regressions-and-residual-plots" title="Permanent link">&para;</a></h5>
+<h4 id="regressions-and-residual-plots">Regressions and Residual Plots<a class="headerlink" href="#regressions-and-residual-plots" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -3085,7 +3085,7 @@ par<span class="p">(</span>mfrow <span class="o">=</span> <span class="kt">c</sp
 </pre></div>
 </td></tr></table>
 
-<h4 id="the-lattice-and-latticeextra-packages">The <code class="codehilite">lattice</code> and <code class="codehilite">latticeExtra</code> Packages<a class="headerlink" href="#the-lattice-and-latticeextra-packages" title="Permanent link">&para;</a></h4>
+<h3 id="the-lattice-and-latticeextra-packages">The <code class="codehilite">lattice</code> and <code class="codehilite">latticeExtra</code> Packages<a class="headerlink" href="#the-lattice-and-latticeextra-packages" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>lattice<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3113,14 +3113,14 @@ show.settings<span class="p">()</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-88-2.png" /></p>
-<h5 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h5>
+<h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="http://science.nature.nps.gov/im/datamgmt/statistics/r/graphics/lattice.cfm">National Park Service, Advanced<br />
     Graphics (Lattice)</a></li>
 <li><a href="https://www.stat.auckland.ac.nz/~ihaka/787/lectures-trellis.pdf">Treillis<br />
     Plots</a></li>
 </ul>
-<h5 id="a-note-on-reordering-the-levels-factors">A note on reordering the levels (factors)<a class="headerlink" href="#a-note-on-reordering-the-levels-factors" title="Permanent link">&para;</a></h5>
+<h4 id="a-note-on-reordering-the-levels-factors">A note on reordering the levels (factors)<a class="headerlink" href="#a-note-on-reordering-the-levels-factors" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -3297,7 +3297,7 @@ barchart<span class="p">(</span>Class <span class="o">~</span> Dead <span class=
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-92-2.png" /></p>
-<h5 id="uni-bi-multivariate-plots">Uni-, Bi-, Multivariate Plots<a class="headerlink" href="#uni-bi-multivariate-plots" title="Permanent link">&para;</a></h5>
+<h4 id="uni-bi-multivariate-plots">Uni-, Bi-, Multivariate Plots<a class="headerlink" href="#uni-bi-multivariate-plots" title="Permanent link">&para;</a></h4>
 <p><strong>Barchart</strong></p>
 <p>Like <code class="codehilite">barplot()</code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -3844,8 +3844,8 @@ splom<span class="p">(</span><span class="o">~</span><span class="kt">data.frame
 <li><code class="codehilite">cloud()</code>.</li>
 <li><code class="codehilite">wireframe()</code>.</li>
 </ul>
-<h4 id="additional-packages">Additional Packages<a class="headerlink" href="#additional-packages" title="Permanent link">&para;</a></h4>
-<h5 id="the-sm-package-density">The <code class="codehilite">sm</code> Package (density)<a class="headerlink" href="#the-sm-package-density" title="Permanent link">&para;</a></h5>
+<h3 id="additional-packages">Additional Packages<a class="headerlink" href="#additional-packages" title="Permanent link">&para;</a></h3>
+<h4 id="the-sm-package-density">The <code class="codehilite">sm</code> Package (density)<a class="headerlink" href="#the-sm-package-density" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>sm<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3876,7 +3876,7 @@ legend<span class="p">(</span><span class="m">25</span><span class="p">,</span> 
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-150-1.png" /></p>
-<h5 id="the-car-package-scatter">The <code class="codehilite">car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter" title="Permanent link">&para;</a></h5>
+<h4 id="the-car-package-scatter">The <code class="codehilite">car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>car<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3899,7 +3899,7 @@ legend<span class="p">(</span><span class="m">25</span><span class="p">,</span> 
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-154-1.png" /></p>
-<h5 id="the-vioplot-package-boxplot">The <code class="codehilite">vioplot</code> Package (boxplot)<a class="headerlink" href="#the-vioplot-package-boxplot" title="Permanent link">&para;</a></h5>
+<h4 id="the-vioplot-package-boxplot">The <code class="codehilite">vioplot</code> Package (boxplot)<a class="headerlink" href="#the-vioplot-package-boxplot" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>vioplot<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3922,7 +3922,7 @@ title<span class="p">(</span><span class="s">&#39;Title&#39;</span><span class="
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-156-1.png" /></p>
-<h5 id="the-vcd-package-count-correlation-mosaic">The <code class="codehilite">vcd</code> Package (count, correlation, mosaic)<a class="headerlink" href="#the-vcd-package-count-correlation-mosaic" title="Permanent link">&para;</a></h5>
+<h4 id="the-vcd-package-count-correlation-mosaic">The <code class="codehilite">vcd</code> Package (count, correlation, mosaic)<a class="headerlink" href="#the-vcd-package-count-correlation-mosaic" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>vcd<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4011,7 +4011,7 @@ doubledecker<span class="p">(</span>morekids <span class="o">~</span> age<span c
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-163-1.png" /></p>
-<h5 id="the-hexbin-package-scatter">The <code class="codehilite">hexbin</code> Package (scatter)<a class="headerlink" href="#the-hexbin-package-scatter" title="Permanent link">&para;</a></h5>
+<h4 id="the-hexbin-package-scatter">The <code class="codehilite">hexbin</code> Package (scatter)<a class="headerlink" href="#the-hexbin-package-scatter" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>hexbin<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4108,7 +4108,7 @@ xyplot<span class="p">(</span><span class="kp">asinh</span><span class="p">(</sp
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-172-1.png" /></p>
-<h5 id="the-car-package-scatter_1">The <code class="codehilite">car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter_1" title="Permanent link">&para;</a></h5>
+<h4 id="the-car-package-scatter_1">The <code class="codehilite">car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter_1" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>car<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4121,7 +4121,7 @@ xyplot<span class="p">(</span><span class="kp">asinh</span><span class="p">(</sp
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-174-1.png" /></p>
-<h5 id="the-scatterplot3d-package">The <code class="codehilite">scatterplot3d</code> Package<a class="headerlink" href="#the-scatterplot3d-package" title="Permanent link">&para;</a></h5>
+<h4 id="the-scatterplot3d-package">The <code class="codehilite">scatterplot3d</code> Package<a class="headerlink" href="#the-scatterplot3d-package" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>scatterplot3d<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4150,7 +4150,7 @@ s3d<span class="o">$</span>plane3d<span class="p">(</span>fit<span class="p">)</
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-178-1.png" /></p>
-<h5 id="the-rgl-package-interactive">The <code class="codehilite">rgl</code> Package (interactive)<a class="headerlink" href="#the-rgl-package-interactive" title="Permanent link">&para;</a></h5>
+<h4 id="the-rgl-package-interactive">The <code class="codehilite">rgl</code> Package (interactive)<a class="headerlink" href="#the-rgl-package-interactive" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>rgl<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4161,7 +4161,7 @@ s3d<span class="o">$</span>plane3d<span class="p">(</span>fit<span class="p">)</
 </pre></div>
 </td></tr></table>
 
-<h5 id="the-cluster-package-dendrogram">The <code class="codehilite">cluster</code> Package (dendrogram)<a class="headerlink" href="#the-cluster-package-dendrogram" title="Permanent link">&para;</a></h5>
+<h4 id="the-cluster-package-dendrogram">The <code class="codehilite">cluster</code> Package (dendrogram)<a class="headerlink" href="#the-cluster-package-dendrogram" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>cluster<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4203,7 +4203,7 @@ plot<span class="p">(</span>ai<span class="p">,</span> label <span class="o">=</
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-182-1.png" /><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-182-2.png" /></p>
-<h5 id="the-extracat-package-splom">The <code class="codehilite">extracat</code> Package (splom)<a class="headerlink" href="#the-extracat-package-splom" title="Permanent link">&para;</a></h5>
+<h4 id="the-extracat-package-splom">The <code class="codehilite">extracat</code> Package (splom)<a class="headerlink" href="#the-extracat-package-splom" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>extracat<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4312,7 +4312,7 @@ visna<span class="p">(</span>Pima.tr2<span class="p">,</span> sort <span class="
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-184-4.png" /></p>
-<h5 id="the-ash-package-density">The <code class="codehilite">ash</code> Package (density)<a class="headerlink" href="#the-ash-package-density" title="Permanent link">&para;</a></h5>
+<h4 id="the-ash-package-density">The <code class="codehilite">ash</code> Package (density)<a class="headerlink" href="#the-ash-package-density" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>ash<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4327,7 +4327,7 @@ visna<span class="p">(</span>Pima.tr2<span class="p">,</span> sort <span class="
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-186-1.png" /></p>
-<h5 id="the-kernsmooth-package-density">The <code class="codehilite">KernSmooth</code> Package (density)<a class="headerlink" href="#the-kernsmooth-package-density" title="Permanent link">&para;</a></h5>
+<h4 id="the-kernsmooth-package-density">The <code class="codehilite">KernSmooth</code> Package (density)<a class="headerlink" href="#the-kernsmooth-package-density" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>KernSmooth<span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4346,7 +4346,7 @@ visna<span class="p">(</span>Pima.tr2<span class="p">,</span> sort <span class="
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-188-1.png" /></p>
-<h5 id="the-corrplot-package-correlation">The <code class="codehilite">corrplot</code> Package (correlation)<a class="headerlink" href="#the-corrplot-package-correlation" title="Permanent link">&para;</a></h5>
+<h4 id="the-corrplot-package-correlation">The <code class="codehilite">corrplot</code> Package (correlation)<a class="headerlink" href="#the-corrplot-package-correlation" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>corrplot<span class="p">)</span>
 </pre></div>
 </td></tr></table>

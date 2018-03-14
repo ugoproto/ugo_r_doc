@@ -373,12 +373,18 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-note-of-data-handling-and-manipulations" title="A note of data handling and manipulations" class="md-nav__link">
     A note of data handling and manipulations
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#exclude-remove-vector" title="Exclude, remove (vector)" class="md-nav__link">
@@ -1028,8 +1034,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
-      I/O snippets & Cleaning
+    <a href="../IO_snippets___Cleaning/" title="I/O Snippets & Cleaning" class="md-nav__link">
+      I/O Snippets & Cleaning
     </a>
   </li>
 
@@ -1517,12 +1523,18 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-note-of-data-handling-and-manipulations" title="A note of data handling and manipulations" class="md-nav__link">
     A note of data handling and manipulations
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#exclude-remove-vector" title="Exclude, remove (vector)" class="md-nav__link">
@@ -2058,7 +2070,7 @@
 <li><a href="https://cran.r-project.org/manuals.html">cran.r-project.org/manuals (series of official manuals)</a></li>
 </ul>
 <hr />
-<h4 id="1-introduction-and-preliminaries">1, Introduction and Preliminaries<a class="headerlink" href="#1-introduction-and-preliminaries" title="Permanent link">&para;</a></h4>
+<h3 id="1-introduction-and-preliminaries">1, Introduction and Preliminaries<a class="headerlink" href="#1-introduction-and-preliminaries" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Run R (CLI).<ul>
 <li>Quit with <code class="codehilite">q()</code>.</li>
@@ -2082,8 +2094,8 @@
 <li><code class="codehilite">rm(x, y, ink, ...)</code>; remove stored objects.</li>
 <li>All commands entered or run are recorded in a file with <code class="codehilite"><span class="na">.Rhistory</span></code> extension.</li>
 </ul>
-<h4 id="2-simple-manipulations-numbers-and-vectors">2, Simple Manipulations; Numbers and Vectors<a class="headerlink" href="#2-simple-manipulations-numbers-and-vectors" title="Permanent link">&para;</a></h4>
-<h5 id="create-a-vector">Create a vector<a class="headerlink" href="#create-a-vector" title="Permanent link">&para;</a></h5>
+<h3 id="2-simple-manipulations-numbers-and-vectors">2, Simple Manipulations; Numbers and Vectors<a class="headerlink" href="#2-simple-manipulations-numbers-and-vectors" title="Permanent link">&para;</a></h3>
+<h4 id="create-a-vector">Create a vector<a class="headerlink" href="#create-a-vector" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2187,7 +2199,7 @@ x
 </pre></div>
 </td></tr></table>
 
-<h5 id="repetition">Repetition<a class="headerlink" href="#repetition" title="Permanent link">&para;</a></h5>
+<h4 id="repetition">Repetition<a class="headerlink" href="#repetition" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rep</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> times <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
 <span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">2</span> <span class="m">2</span> <span class="m">2</span> <span class="m">2</span> <span class="m">2</span>
@@ -2204,11 +2216,11 @@ x
 </pre></div>
 </td></tr></table>
 
-<h5 id="length-vector">Length (vector)<a class="headerlink" href="#length-vector" title="Permanent link">&para;</a></h5>
+<h4 id="length-vector">Length (vector)<a class="headerlink" href="#length-vector" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">length(vector)</code></li>
 </ul>
-<h5 id="boolean">Boolean<a class="headerlink" href="#boolean" title="Permanent link">&para;</a></h5>
+<h4 id="boolean">Boolean<a class="headerlink" href="#boolean" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">TRUE</code> or <code class="codehilite">T</code>; <code class="codehilite">T == 1</code>.</li>
 <li><code class="codehilite">FALSE</code> or <code class="codehilite">F</code>; <code class="codehilite">F == 0</code>.</li>
@@ -2228,7 +2240,7 @@ x
 <li><code class="codehilite">||</code></li>
 <li>and many more.</li>
 </ul>
-<h5 id="missing-data-and-more">Missing data and more<a class="headerlink" href="#missing-data-and-more" title="Permanent link">&para;</a></h5>
+<h4 id="missing-data-and-more">Missing data and more<a class="headerlink" href="#missing-data-and-more" title="Permanent link">&para;</a></h4>
 <ul>
 <li>NA; not available.</li>
 <li>NaN; not a number.</li>
@@ -2268,18 +2280,18 @@ y
 </pre></div>
 </td></tr></table>
 
-<h5 id="extract-subset-vector">Extract, subset (vector)<a class="headerlink" href="#extract-subset-vector" title="Permanent link">&para;</a></h5>
+<h4 id="extract-subset-vector">Extract, subset (vector)<a class="headerlink" href="#extract-subset-vector" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">x[i]</code>; index.</li>
 </ul>
-<h5 id="backslash-use-for-some-characters">Backslash use for some characters<a class="headerlink" href="#backslash-use-for-some-characters" title="Permanent link">&para;</a></h5>
+<h4 id="backslash-use-for-some-characters">Backslash use for some characters<a class="headerlink" href="#backslash-use-for-some-characters" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">\\</code>; backslash.</li>
 <li><code class="codehilite">\n</code>; new line.</li>
 <li><code class="codehilite">\t</code>; tab.</li>
 <li><code class="codehilite">\b</code>; backspace.</li>
 </ul>
-<h5 id="concatenate-paste-vector">Concatenate, paste (vector)<a class="headerlink" href="#concatenate-paste-vector" title="Permanent link">&para;</a></h5>
+<h4 id="concatenate-paste-vector">Concatenate, paste (vector)<a class="headerlink" href="#concatenate-paste-vector" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -2290,12 +2302,12 @@ labs
 </pre></div>
 </td></tr></table>
 
-<h5 id="a-note-of-data-handling-and-manipulations">A note of data handling and manipulations<a class="headerlink" href="#a-note-of-data-handling-and-manipulations" title="Permanent link">&para;</a></h5>
+<h3 id="a-note-of-data-handling-and-manipulations">A note of data handling and manipulations<a class="headerlink" href="#a-note-of-data-handling-and-manipulations" title="Permanent link">&para;</a></h3>
 <p>You can also <code class="codehilite">split()</code>, <code class="codehilite">merge()</code>, <code class="codehilite">rbind()</code>, <code class="codehilite">cbind()</code> vectors. </p>
 <p>It is also possible with other objects such as factors, lists, arrays, matrices, and data frames.</p>
 <p>There are built-in functions to extract, exclude, subset, replace, transform or convert (<code class="codehilite"><span class="na">.as</span></code>), concatenate, paste, group, and bind.</p>
 <p><sub>slice, extract, exclude, subset, replace, convert,  concatenate, paste, group, bind</sub> </p>
-<h5 id="exclude-remove-vector">Exclude, remove (vector)<a class="headerlink" href="#exclude-remove-vector" title="Permanent link">&para;</a></h5>
+<h4 id="exclude-remove-vector">Exclude, remove (vector)<a class="headerlink" href="#exclude-remove-vector" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -2316,7 +2328,7 @@ zz
 </pre></div>
 </td></tr></table>
 
-<h5 id="replace-vector">Replace (vector)<a class="headerlink" href="#replace-vector" title="Permanent link">&para;</a></h5>
+<h4 id="replace-vector">Replace (vector)<a class="headerlink" href="#replace-vector" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2339,7 +2351,7 @@ x
 </pre></div>
 </td></tr></table>
 
-<h5 id="absolute-value">Absolute value<a class="headerlink" href="#absolute-value" title="Permanent link">&para;</a></h5>
+<h4 id="absolute-value">Absolute value<a class="headerlink" href="#absolute-value" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">y <span class="o">&lt;-</span> <span class="kp">abs</span><span class="p">(</span>y<span class="p">)</span></code>.</li>
 </ul>
@@ -2352,8 +2364,8 @@ x
 <li><code class="codehilite">as.character()</code>.</li>
 <li>and many more.</li>
 </ul>
-<h4 id="3-objects-their-modes-and-attributes">3, Objects, their Modes and Attributes<a class="headerlink" href="#3-objects-their-modes-and-attributes" title="Permanent link">&para;</a></h4>
-<h5 id="object-type">Object type<a class="headerlink" href="#object-type" title="Permanent link">&para;</a></h5>
+<h3 id="3-objects-their-modes-and-attributes">3, Objects, their Modes and Attributes<a class="headerlink" href="#3-objects-their-modes-and-attributes" title="Permanent link">&para;</a></h3>
+<h4 id="object-type">Object type<a class="headerlink" href="#object-type" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2414,7 +2426,7 @@ obj
 </pre></div>
 </td></tr></table>
 
-<h5 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h5>
+<h4 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h4>
 <p><sub>class</sub></p>
 <ul>
 <li>&ldquo;numeric&rdquo;.</li>
@@ -2440,7 +2452,7 @@ obj
 </pre></div>
 </td></tr></table>
 
-<h4 id="4-ordered-and-unordered-factors">4, Ordered and Unordered Factors<a class="headerlink" href="#4-ordered-and-unordered-factors" title="Permanent link">&para;</a></h4>
+<h3 id="4-ordered-and-unordered-factors">4, Ordered and Unordered Factors<a class="headerlink" href="#4-ordered-and-unordered-factors" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2655,12 +2667,12 @@ Levels<span class="o">:</span> small medium large
 </pre></div>
 </td></tr></table>
 
-<h5 id="convert-as">Convert (<code class="codehilite"><span class="na">.as</span></code>)<a class="headerlink" href="#convert-as" title="Permanent link">&para;</a></h5>
+<h4 id="convert-as">Convert (<code class="codehilite"><span class="na">.as</span></code>)<a class="headerlink" href="#convert-as" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">as.factor()</code>.</li>
 </ul>
-<h4 id="5-arrays-and-matrices">5, Arrays and Matrices<a class="headerlink" href="#5-arrays-and-matrices" title="Permanent link">&para;</a></h4>
-<h5 id="dimension">Dimension<a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h5>
+<h3 id="5-arrays-and-matrices">5, Arrays and Matrices<a class="headerlink" href="#5-arrays-and-matrices" title="Permanent link">&para;</a></h3>
+<h4 id="dimension">Dimension<a class="headerlink" href="#dimension" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -2848,7 +2860,7 @@ b
 </pre></div>
 </td></tr></table>
 
-<h5 id="extract-subset-matrix">Extract, subset (matrix)<a class="headerlink" href="#extract-subset-matrix" title="Permanent link">&para;</a></h5>
+<h4 id="extract-subset-matrix">Extract, subset (matrix)<a class="headerlink" href="#extract-subset-matrix" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">a[2, 1]</code>; rows, columns.</li>
 </ul>
@@ -2856,7 +2868,7 @@ b
 <ul>
 <li><code class="codehilite">a[2, 1, 1]</code>; rows, columns, matrix.</li>
 </ul>
-<h5 id="cross-product-vs-multiplication">Cross product vs multiplication<a class="headerlink" href="#cross-product-vs-multiplication" title="Permanent link">&para;</a></h5>
+<h4 id="cross-product-vs-multiplication">Cross product vs multiplication<a class="headerlink" href="#cross-product-vs-multiplication" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -2905,7 +2917,7 @@ ab
 </pre></div>
 </td></tr></table>
 
-<h5 id="matrix-operation">Matrix operation<a class="headerlink" href="#matrix-operation" title="Permanent link">&para;</a></h5>
+<h4 id="matrix-operation">Matrix operation<a class="headerlink" href="#matrix-operation" title="Permanent link">&para;</a></h4>
 <p>A et B are 2x2 matrices:</p>
 <ul>
 <li><code class="codehilite">A * B</code>; scalar multiplication.</li>
@@ -2917,7 +2929,7 @@ ab
 <li><code class="codehilite">ab <span class="o">&lt;-</span> <span class="kp">outer</span><span class="p">(</span>A<span class="p">,</span>B<span class="p">,</span><span class="s">&quot;-&quot;</span><span class="p">)</span></code>; <code class="codehilite">a - b</code>.</li>
 <li>and many more.</li>
 </ul>
-<h5 id="diagonal-and-triangle">Diagonal and triangle<a class="headerlink" href="#diagonal-and-triangle" title="Permanent link">&para;</a></h5>
+<h4 id="diagonal-and-triangle">Diagonal and triangle<a class="headerlink" href="#diagonal-and-triangle" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -3004,7 +3016,7 @@ ab
 </pre></div>
 </td></tr></table>
 
-<h5 id="solving-a-matrix-system-and-more-matrix-algebra">Solving a matrix system (and more matrix algebra)<a class="headerlink" href="#solving-a-matrix-system-and-more-matrix-algebra" title="Permanent link">&para;</a></h5>
+<h4 id="solving-a-matrix-system-and-more-matrix-algebra">Solving a matrix system (and more matrix algebra)<a class="headerlink" href="#solving-a-matrix-system-and-more-matrix-algebra" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -3085,7 +3097,7 @@ e
 </pre></div>
 </td></tr></table>
 
-<h5 id="least-square-fitting-matrix">Least square fitting (matrix)<a class="headerlink" href="#least-square-fitting-matrix" title="Permanent link">&para;</a></h5>
+<h4 id="least-square-fitting-matrix">Least square fitting (matrix)<a class="headerlink" href="#least-square-fitting-matrix" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">lsfit()</code> or least squares estimate of <code class="codehilite">b</code> in the model: <code class="codehilite">y = X b + e</code>.</li>
 </ul>
@@ -3137,13 +3149,13 @@ e
 <li><code class="codehilite">qr.fitted()</code>.</li>
 <li><code class="codehilite">qr.resid()</code>.</li>
 </ul>
-<h5 id="convert-as_1">Convert (<code class="codehilite"><span class="na">.as</span></code>)<a class="headerlink" href="#convert-as_1" title="Permanent link">&para;</a></h5>
+<h4 id="convert-as_1">Convert (<code class="codehilite"><span class="na">.as</span></code>)<a class="headerlink" href="#convert-as_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">as.array()</code>.</li>
 <li><code class="codehilite">as.matrix()</code>.</li>
 </ul>
-<h4 id="6-lists-and-data-frames">6, Lists and Data Frames<a class="headerlink" href="#6-lists-and-data-frames" title="Permanent link">&para;</a></h4>
-<h5 id="create-a-list">Create a list<a class="headerlink" href="#create-a-list" title="Permanent link">&para;</a></h5>
+<h3 id="6-lists-and-data-frames">6, Lists and Data Frames<a class="headerlink" href="#6-lists-and-data-frames" title="Permanent link">&para;</a></h3>
+<h4 id="create-a-list">Create a list<a class="headerlink" href="#create-a-list" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -3174,7 +3186,7 @@ Lst
 </pre></div>
 </td></tr></table>
 
-<h5 id="extract-subset-list">Extract, subset (list)<a class="headerlink" href="#extract-subset-list" title="Permanent link">&para;</a></h5>
+<h4 id="extract-subset-list">Extract, subset (list)<a class="headerlink" href="#extract-subset-list" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -3213,7 +3225,7 @@ Lst<span class="p">[[</span><span class="m">4</span><span class="p">]][</span><s
 </pre></div>
 </td></tr></table>
 
-<h5 id="concatenate-paste">Concatenate, paste<a class="headerlink" href="#concatenate-paste" title="Permanent link">&para;</a></h5>
+<h4 id="concatenate-paste">Concatenate, paste<a class="headerlink" href="#concatenate-paste" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -3320,11 +3332,11 @@ g <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</
 </pre></div>
 </td></tr></table>
 
-<h5 id="convert-as_2">Convert (<code class="codehilite">as.</code>)<a class="headerlink" href="#convert-as_2" title="Permanent link">&para;</a></h5>
+<h4 id="convert-as_2">Convert (<code class="codehilite">as.</code>)<a class="headerlink" href="#convert-as_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">as.matrix()</code></li>
 </ul>
-<h5 id="data-frame">Data frame<a class="headerlink" href="#data-frame" title="Permanent link">&para;</a></h5>
+<h4 id="data-frame">Data frame<a class="headerlink" href="#data-frame" title="Permanent link">&para;</a></h4>
 <ul>
 <li>A data frame can hold other data frames.<ul>
 <li>A list can hold other lists.</li>
@@ -3393,7 +3405,7 @@ accountants <span class="o">&lt;-</span> <span class="kt">data.frame</span><span
 </pre></div>
 </td></tr></table>
 
-<h5 id="concatenate-paste-data-frame">Concatenate, paste (data frame)<a class="headerlink" href="#concatenate-paste-data-frame" title="Permanent link">&para;</a></h5>
+<h4 id="concatenate-paste-data-frame">Concatenate, paste (data frame)<a class="headerlink" href="#concatenate-paste-data-frame" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -3558,11 +3570,11 @@ accountants <span class="o">+</span> acc
 </pre></div>
 </td></tr></table>
 
-<h5 id="convert-as_3">Convert (<code class="codehilite">as.</code>)<a class="headerlink" href="#convert-as_3" title="Permanent link">&para;</a></h5>
+<h4 id="convert-as_3">Convert (<code class="codehilite">as.</code>)<a class="headerlink" href="#convert-as_3" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">as.data.frame()</code></li>
 </ul>
-<h5 id="load-data-into-r">Load data into R<a class="headerlink" href="#load-data-into-r" title="Permanent link">&para;</a></h5>
+<h4 id="load-data-into-r">Load data into R<a class="headerlink" href="#load-data-into-r" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">read.table()</code>; produce a data frame with inputs.</li>
 </ul>
@@ -3575,7 +3587,7 @@ accountants <span class="o">+</span> acc
 <li><code class="codehilite">attach()</code>; attach an object to .GlobalEnv.</li>
 <li><code class="codehilite">detach()</code>.</li>
 </ul>
-<h4 id="7-readingwriting-data-fromto-files-inputoutput">7, Reading/Writing Data from/to Files (Input/Output)<a class="headerlink" href="#7-readingwriting-data-fromto-files-inputoutput" title="Permanent link">&para;</a></h4>
+<h3 id="7-readingwriting-data-fromto-files-inputoutput">7, Reading/Writing Data from/to Files (Input/Output)<a class="headerlink" href="#7-readingwriting-data-fromto-files-inputoutput" title="Permanent link">&para;</a></h3>
 <p>A lot more can be found on I/O: depending on the file type, the data format, the desired R object, many commands are available. Depending on a file format, look for the dedicated package on CRAN.</p>
 <p><sub>read, reading, write, writing, input, output, i/o</sub></p>
 <p><strong>Examples</strong></p>
@@ -3640,11 +3652,11 @@ X <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</
 <li>binary files.</li>
 <li>and many more (some are up and coming such as julia files).</li>
 </ul>
-<h5 id="cleaning-parameter">Cleaning parameter<a class="headerlink" href="#cleaning-parameter" title="Permanent link">&para;</a></h5>
+<h4 id="cleaning-parameter">Cleaning parameter<a class="headerlink" href="#cleaning-parameter" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">strip.white = TRUE</code>; remove unnecessary spaces.</li>
 </ul>
-<h5 id="change-the-data-frame-or-matrix-format">Change the data frame or matrix format<a class="headerlink" href="#change-the-data-frame-or-matrix-format" title="Permanent link">&para;</a></h5>
+<h4 id="change-the-data-frame-or-matrix-format">Change the data frame or matrix format<a class="headerlink" href="#change-the-data-frame-or-matrix-format" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">stack()</code>; for example, take a 6-column, 4-variable data frame and stack the 4 variables into one long column.</li>
 <li><code class="codehilite">unstack()</code>; vice-versa.</li>
@@ -3711,7 +3723,7 @@ X11 P <span class="m">23646</span> <span class="m">50333</span> V2
 <li><code class="codehilite">xnew <span class="o">&lt;-</span> edit<span class="p">(</span>input<span class="p">)</span></code>; open and save it as a new dataset.</li>
 <li>and many more.</li>
 </ul>
-<h5 id="encoding">Encoding<a class="headerlink" href="#encoding" title="Permanent link">&para;</a></h5>
+<h4 id="encoding">Encoding<a class="headerlink" href="#encoding" title="Permanent link">&para;</a></h4>
 <ul>
 <li>utf-8 for Linux and OS X.</li>
 <li>UCS-2LE and UTF-16 for Windows.</li>
@@ -3726,26 +3738,26 @@ read.delim<span class="p">(</span><span class="s">&quot;clipboard&quot;</span><s
 </pre></div>
 </td></tr></table>
 
-<h5 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h5>
+<h4 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">write.table()</code>; many parameters.</li>
 <li><code class="codehilite">write.matrix()</code>.</li>
 <li><code class="codehilite">write.foreign()</code>.</li>
 </ul>
-<h5 id="check-a-file">Check a file<a class="headerlink" href="#check-a-file" title="Permanent link">&para;</a></h5>
+<h4 id="check-a-file">Check a file<a class="headerlink" href="#check-a-file" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">readLines(&quot;aab.txt&quot;)</code>.</li>
 <li><code class="codehilite">readLines(&quot;aab.txt&quot;, 1)</code>.</li>
 <li><code class="codehilite">unlink(&quot;aab.txt&quot;)</code>; delete the file on the working directory.</li>
 </ul>
-<h5 id="directory-management">Directory management<a class="headerlink" href="#directory-management" title="Permanent link">&para;</a></h5>
+<h4 id="directory-management">Directory management<a class="headerlink" href="#directory-management" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">getwd()</code>; get the current working directory.</li>
 <li><code class="codehilite">setwd()</code>; set the current working directory.</li>
 <li><code class="codehilite">file.show(filepath)</code>.</li>
 <li><code class="codehilite">system.file()</code></li>
 </ul>
-<h5 id="spreadsheet-editor-and-edition-in-r">Spreadsheet editor and edition in R<a class="headerlink" href="#spreadsheet-editor-and-edition-in-r" title="Permanent link">&para;</a></h5>
+<h4 id="spreadsheet-editor-and-edition-in-r">Spreadsheet editor and edition in R<a class="headerlink" href="#spreadsheet-editor-and-edition-in-r" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">fix(c)</code>; edit object c; a vetor, list, data frame, etc. in a mini-spreadsheet.</li>
 <li><code class="codehilite">data.entry(c, mode=NULL, Names=NULL), dataentry(c), de(c, Modes=list(), Names=NULL)</code>; idem.</li>
@@ -3755,8 +3767,8 @@ read.delim<span class="p">(</span><span class="s">&quot;clipboard&quot;</span><s
 <li><code class="codehilite">xemacs(file= )</code>; idem.</li>
 <li><code class="codehilite">xedit(file=)</code>; idem.</li>
 </ul>
-<h4 id="8-probability-distributions">8, Probability Distributions<a class="headerlink" href="#8-probability-distributions" title="Permanent link">&para;</a></h4>
-<h5 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h5>
+<h3 id="8-probability-distributions">8, Probability Distributions<a class="headerlink" href="#8-probability-distributions" title="Permanent link">&para;</a></h3>
+<h4 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">beta</code>.</li>
 <li><code class="codehilite">binom</code>.</li>
@@ -3786,7 +3798,7 @@ read.delim<span class="p">(</span><span class="s">&quot;clipboard&quot;</span><s
 <li><code class="codehilite">q</code>; quantile.</li>
 <li><code class="codehilite">r</code>; random deviates or simulation or number generation.</li>
 </ul>
-<h5 id="distribution-operation">Distribution operation<a class="headerlink" href="#distribution-operation" title="Permanent link">&para;</a></h5>
+<h4 id="distribution-operation">Distribution operation<a class="headerlink" href="#distribution-operation" title="Permanent link">&para;</a></h4>
 <p>Commands, prefix + distribution, examples:</p>
 <ul>
 <li><code class="codehilite">dbeta(x= )</code>.</li>
@@ -3800,7 +3812,7 @@ read.delim<span class="p">(</span><span class="s">&quot;clipboard&quot;</span><s
 <li><code class="codehilite">rmultinom()</code>.</li>
 <li>etc.</li>
 </ul>
-<h5 id="descriptive-statistics">Descriptive statistics<a class="headerlink" href="#descriptive-statistics" title="Permanent link">&para;</a></h5>
+<h4 id="descriptive-statistics">Descriptive statistics<a class="headerlink" href="#descriptive-statistics" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -3883,7 +3895,7 @@ ks.test<span class="p">(</span>cars<span class="o">$</span>speed<span class="p">
 </pre></div>
 </td></tr></table>
 
-<h5 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h5>
+<h4 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">t.test(A,B)</code>; true difference of means is not 0, difference means.</li>
 <li><code class="codehilite">var.test(A,B)</code>; true ratio of variances is not 1, difference variances.</li>
@@ -3891,14 +3903,14 @@ ks.test<span class="p">(</span>cars<span class="o">$</span>speed<span class="p">
 <li><code class="codehilite">wilcox.test(A,B)</code>; rank sum with continuity correction, continuous distribution.</li>
 <li>and many more.</li>
 </ul>
-<h5 id="normality">Normality<a class="headerlink" href="#normality" title="Permanent link">&para;</a></h5>
+<h4 id="normality">Normality<a class="headerlink" href="#normality" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">plot(ecdf(A), do.points=FALSE, verticals=TRUE, xlim=range(A, B))</code></li>
 <li><code class="codehilite">plot(ecdf(B), do.points=FALSE, verticals=TRUE, add=TRUE)</code></li>
 <li><code class="codehilite">ks.test(A,B); maximal vertical distance between the two ecdf</code></li>
 </ul>
-<h4 id="9-grouping-loops-and-conditional-execution">9, Grouping, Loops and Conditional Execution<a class="headerlink" href="#9-grouping-loops-and-conditional-execution" title="Permanent link">&para;</a></h4>
-<h5 id="control-flow">Control flow<a class="headerlink" href="#control-flow" title="Permanent link">&para;</a></h5>
+<h3 id="9-grouping-loops-and-conditional-execution">9, Grouping, Loops and Conditional Execution<a class="headerlink" href="#9-grouping-loops-and-conditional-execution" title="Permanent link">&para;</a></h3>
+<h4 id="control-flow">Control flow<a class="headerlink" href="#control-flow" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">&amp;</code>; AND.</li>
 <li><code class="codehilite">&amp;&amp;</code>; AND; evaluates left to right, examining only the first element of each vector.</li>
@@ -3908,7 +3920,7 @@ ks.test<span class="p">(</span>cars<span class="o">$</span>speed<span class="p">
 <li><code class="codehilite">isTRUE(x)</code>; is true if and only if x is a length-one logical vector whose only element is TRUE and which has no attributes.</li>
 <li><code class="codehilite">ifelse(condition, a, b)</code>; if <code class="codehilite">condition</code> is proven true, return <code class="codehilite">a</code>, or else, return <code class="codehilite">b</code>.</li>
 </ul>
-<h5 id="loops">Loops<a class="headerlink" href="#loops" title="Permanent link">&para;</a></h5>
+<h4 id="loops">Loops<a class="headerlink" href="#loops" title="Permanent link">&para;</a></h4>
 <p><sub>looping</sub></p>
 <ul>
 <li><code class="codehilite">for(var in seq) expr</code>.</li>
@@ -3917,7 +3929,7 @@ ks.test<span class="p">(</span>cars<span class="o">$</span>speed<span class="p">
 <li><code class="codehilite">break</code>; break out of a for, while or repeat loop; control is transferred to the first statement outside the inner-most loop.</li>
 <li><code class="codehilite">next</code>; halt the processing of the current iteration and advance the looping index.</li>
 </ul>
-<h4 id="10-writing-you-own-functions-with-examples">10, Writing you own Functions (with examples)<a class="headerlink" href="#10-writing-you-own-functions-with-examples" title="Permanent link">&para;</a></h4>
+<h3 id="10-writing-you-own-functions-with-examples">10, Writing you own Functions (with examples)<a class="headerlink" href="#10-writing-you-own-functions-with-examples" title="Permanent link">&para;</a></h3>
 <p><strong>Simple custom function</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -4008,7 +4020,7 @@ x <span class="o">%!%</span> y
 </td></tr></table>
 
 <p>Matrix multiplication operator, <code class="codehilite"><span class="c">%*%</span></code>, and the outer product matrix operator, <code class="codehilite"><span class="nf">%o</span><span class="o">%</span></code>, are other examples of binary operators.</p>
-<h5 id="function-in-a-function">Function in a function<a class="headerlink" href="#function-in-a-function" title="Permanent link">&para;</a></h5>
+<h4 id="function-in-a-function">Function in a function<a class="headerlink" href="#function-in-a-function" title="Permanent link">&para;</a></h4>
 <p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -4148,7 +4160,7 @@ ross<span class="o">$</span>withdraw<span class="p">(</span><span class="m">500<
 <li><code class="codehilite">colnames()</code>.</li>
 <li><code class="codehilite">dimnames()</code>.</li>
 </ul>
-<h5 id="customizing-startup">Customizing startup<a class="headerlink" href="#customizing-startup" title="Permanent link">&para;</a></h5>
+<h4 id="customizing-startup">Customizing startup<a class="headerlink" href="#customizing-startup" title="Permanent link">&para;</a></h4>
 <p>Customize the R environment through a directory initialization file; commands that you want to execute every time R is started under your system.</p>
 <p>R will always source the Rprofile.site file first. </p>
 <p>On Windows, the file is in C:\Program Files\R\R-n.n.n\etc. You can also place a .Rprofile file in any directory that you are going to run R from or in the user home directory. </p>
@@ -4163,7 +4175,7 @@ ross<span class="o">$</span>withdraw<span class="p">(</span><span class="m">500<
 <li>.First()</li>
 <li>.Last(), if defined, is (normally) executed at the very end of the session.</li>
 </ol>
-<h5 id="list-function-and-method">List function and method<a class="headerlink" href="#list-function-and-method" title="Permanent link">&para;</a></h5>
+<h4 id="list-function-and-method">List function and method<a class="headerlink" href="#list-function-and-method" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">methods(class = &quot;data.frame&quot;)</code>; list methods associated with the class.</li>
 <li><code class="codehilite">methods(plot)</code>; list methods specific to the object.</li>
@@ -4227,8 +4239,8 @@ see <span class="s">&#39;?methods&#39;</span> <span class="kr">for</span> access
 <li><code class="codehilite">plot()</code>; a generic method.</li>
 <li><code class="codehilite">plot.</code> ; a specific method such as <code class="codehilite">plot.ts()</code> for example.</li>
 </ul>
-<h4 id="11-statistical-models-in-r">11, Statistical models in R<a class="headerlink" href="#11-statistical-models-in-r" title="Permanent link">&para;</a></h4>
-<h5 id="regression">Regression<a class="headerlink" href="#regression" title="Permanent link">&para;</a></h5>
+<h3 id="11-statistical-models-in-r">11, Statistical models in R<a class="headerlink" href="#11-statistical-models-in-r" title="Permanent link">&para;</a></h3>
+<h4 id="regression">Regression<a class="headerlink" href="#regression" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -4406,13 +4418,13 @@ smf6 <span class="o">&lt;-</span> update<span class="p">(</span>fm6<span class="
 <p><sub>anova, coeficient, coef, deviance, residuals, effects, formula, model, kappa, labels, plot, predict, proj, projection</sub></p>
 <p><strong>Stepwise Regression</strong></p>
 <p>Select a suitable model by adding or dropping variables and preserving hierarchies. The best model with the smallest AIC (Akaike’s Information Criterion) is discovered with the search.</p>
-<h5 id="generalized-least-squares">Generalized least squares<a class="headerlink" href="#generalized-least-squares" title="Permanent link">&para;</a></h5>
+<h4 id="generalized-least-squares">Generalized least squares<a class="headerlink" href="#generalized-least-squares" title="Permanent link">&para;</a></h4>
 <p><sub>gls, binomial, logit, probit, log, cloglog, gaussian, identity, log, inverse, gamma, identity, inverse, log, inverse.gaussian, 1/mu^2, identity, inverse, log, poisson, identity, log, sqrt, quasi-likelihood, logit, probit</sub></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fitted.model <span class="o">&lt;-</span> glm<span class="p">(</span>formula<span class="p">,</span> famili<span class="o">=</span>family.generator<span class="p">,</span> data <span class="o">=</span> <span class="kt">data.frame</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<h5 id="nonlinear-least-squares-mle-mixed-local-robust-additive-tree-based">Nonlinear least squares (MLE, Mixed, Local, Robust, Additive, Tree-based)<a class="headerlink" href="#nonlinear-least-squares-mle-mixed-local-robust-additive-tree-based" title="Permanent link">&para;</a></h5>
+<h4 id="nonlinear-least-squares-mle-mixed-local-robust-additive-tree-based">Nonlinear least squares (MLE, Mixed, Local, Robust, Additive, Tree-based)<a class="headerlink" href="#nonlinear-least-squares-mle-mixed-local-robust-additive-tree-based" title="Permanent link">&para;</a></h4>
 <p><sub>nls</sub></p>
 <ul>
 <li><code class="codehilite">nlm(function)</code></li>
@@ -4447,8 +4459,8 @@ smf6 <span class="o">&lt;-</span> update<span class="p">(</span>fm6<span class="
 <li><code class="codehilite">rpart</code> package.</li>
 <li><code class="codehilite">tree</code> package.</li>
 </ul>
-<h4 id="12-graphical-procedures">12, Graphical Procedures<a class="headerlink" href="#12-graphical-procedures" title="Permanent link">&para;</a></h4>
-<h5 id="graphic-packages">Graphic, packages<a class="headerlink" href="#graphic-packages" title="Permanent link">&para;</a></h5>
+<h3 id="12-graphical-procedures">12, Graphical Procedures<a class="headerlink" href="#12-graphical-procedures" title="Permanent link">&para;</a></h3>
+<h4 id="graphic-packages">Graphic, packages<a class="headerlink" href="#graphic-packages" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">lattice</code> package.</li>
 <li><code class="codehilite">ggplot2</code> package.</li>
@@ -4456,7 +4468,7 @@ smf6 <span class="o">&lt;-</span> update<span class="p">(</span>fm6<span class="
 <li><code class="codehilite">ggobi</code>, <code class="codehilite">rgl</code> packages; for interactive graphics, 3D, and surfaces.</li>
 <li>and many more.</li>
 </ul>
-<h5 id="basic-plot">Basic plot<a class="headerlink" href="#basic-plot" title="Permanent link">&para;</a></h5>
+<h4 id="basic-plot">Basic plot<a class="headerlink" href="#basic-plot" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">plot()</code>.</li>
 <li><code class="codehilite">boxplot()</code>..</li>
@@ -4470,19 +4482,19 @@ smf6 <span class="o">&lt;-</span> update<span class="p">(</span>fm6<span class="
 <li><code class="codehilite">dotchart(x, ...)</code>; a case of bar chart.</li>
 <li>and many more with lots of options.</li>
 </ul>
-<h5 id="q-q-plot">Q-Q plot<a class="headerlink" href="#q-q-plot" title="Permanent link">&para;</a></h5>
+<h4 id="q-q-plot">Q-Q plot<a class="headerlink" href="#q-q-plot" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">qqnorm(x)</code>.</li>
 <li><code class="codehilite">qqline(x)</code>.</li>
 <li><code class="codehilite">qqplot(x, y)</code>; comparison.</li>
 </ul>
-<h5 id="pictures">Pictures<a class="headerlink" href="#pictures" title="Permanent link">&para;</a></h5>
+<h4 id="pictures">Pictures<a class="headerlink" href="#pictures" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">image(x, y, z, ...)</code>; grid of rectangles with colors corresponding to the values in z.</li>
 <li><code class="codehilite">contour(x, y, z, ...)</code>; z add contour lines (even to an existing plot).</li>
 <li><code class="codehilite">persp(x, y, z, ...)</code>; perspective plots of a surface over the x–y plane.</li>
 </ul>
-<h5 id="graphic-arguments-and-parameters">Graphic arguments and parameters<a class="headerlink" href="#graphic-arguments-and-parameters" title="Permanent link">&para;</a></h5>
+<h4 id="graphic-arguments-and-parameters">Graphic arguments and parameters<a class="headerlink" href="#graphic-arguments-and-parameters" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -4569,7 +4581,7 @@ hist<span class="p">(</span>x3<span class="p">,</span> width <span class="o">=</
 <li><code class="codehilite">fig = c(4, 9, 1, 4) / 10</code>; position of the current figure on the page. Values are the positions of the left, right, bottom and top edges, respectively, as a percentage of the page measured from the bottom left corner.</li>
 <li>and many more.</li>
 </ul>
-<h5 id="geometric-shapes">Geometric shapes<a class="headerlink" href="#geometric-shapes" title="Permanent link">&para;</a></h5>
+<h4 id="geometric-shapes">Geometric shapes<a class="headerlink" href="#geometric-shapes" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">polygon(x, y, ...)</code>; x, y are vectors containing the coordinates of the vertices of the polygon.</li>
 </ul>
@@ -4583,7 +4595,7 @@ hist<span class="p">(</span>x3<span class="p">,</span> width <span class="o">=</
 <li><code class="codehilite">help(Japanese)</code>.</li>
 <li><code class="codehilite">demo(Japanese)</code>.</li>
 </ul>
-<h5 id="graphic-text-and-mouse">Graphic text and mouse<a class="headerlink" href="#graphic-text-and-mouse" title="Permanent link">&para;</a></h5>
+<h4 id="graphic-text-and-mouse">Graphic text and mouse<a class="headerlink" href="#graphic-text-and-mouse" title="Permanent link">&para;</a></h4>
 <p>Leave graphic marks and texts.</p>
 <ul>
 <li><code class="codehilite">locator(n, type)</code>; select with mouse a max of n locations to mark on the graph (left click, right click to stop).</li>
@@ -4592,7 +4604,7 @@ hist<span class="p">(</span>x3<span class="p">,</span> width <span class="o">=</
 <li><code class="codehilite">identify(x, y, labels)</code>.</li>
 <li><code class="codehilite">identify(x, y, &quot;yes&quot;)</code>.</li>
 </ul>
-<h5 id="graphic-device">Graphic device<a class="headerlink" href="#graphic-device" title="Permanent link">&para;</a></h5>
+<h4 id="graphic-device">Graphic device<a class="headerlink" href="#graphic-device" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code class="codehilite">split.screen()</code>; FALSE or number of regions within the current device which can, to some extent, be treated as separate graphics devices. It is useful for generating multiple plots on a single device.</li>
 <li><code class="codehilite">layout()</code>; divides the device up into as many rows and columns as there are in matrix mat.</li>
@@ -4625,7 +4637,7 @@ hist<span class="p">(</span>x3<span class="p">,</span> width <span class="o">=</
 <li><code class="codehilite">dev.next()</code>, <code class="codehilite">dev.prev()</code>; return the number and name of the next / previous device in the list of devices.</li>
 <li>graphics.off(); terminate all devices.</li>
 </ul>
-<h4 id="13-packages">13, Packages<a class="headerlink" href="#13-packages" title="Permanent link">&para;</a></h4>
+<h3 id="13-packages">13, Packages<a class="headerlink" href="#13-packages" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code class="codehilite">install.package()</code>; on the computer.</li>
 <li><code class="codehilite">library()</code>; load it.</li>
@@ -4639,7 +4651,7 @@ hist<span class="p">(</span>x3<span class="p">,</span> width <span class="o">=</
 <li><a href="https://www.bioconductor.org/">www.bioconductor.org</a></li>
 <li><a href="http://www.omegahat.org/">www.omegahat.org</a></li>
 </ul>
-<h4 id="14-os-facilities">14, OS Facilities<a class="headerlink" href="#14-os-facilities" title="Permanent link">&para;</a></h4>
+<h3 id="14-os-facilities">14, OS Facilities<a class="headerlink" href="#14-os-facilities" title="Permanent link">&para;</a></h3>
 <p>Manage files with Linux or Windows or RStudio.</p>
                 
                   

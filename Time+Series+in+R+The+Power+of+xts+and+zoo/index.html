@@ -429,8 +429,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../IO_snippets___Cleaning/" title="I/O snippets & Cleaning" class="md-nav__link">
-      I/O snippets & Cleaning
+    <a href="../IO_snippets___Cleaning/" title="I/O Snippets & Cleaning" class="md-nav__link">
+      I/O Snippets & Cleaning
     </a>
   </li>
 
@@ -970,7 +970,7 @@
 <p><strong>Foreword</strong></p>
 <p>Course notes and snippets.</p>
 <hr />
-<h4 id="introduction-to-extensible-time">Introduction to eXtensible Time<a class="headerlink" href="#introduction-to-extensible-time" title="Permanent link">&para;</a></h4>
+<h3 id="introduction-to-extensible-time">Introduction to eXtensible Time<a class="headerlink" href="#introduction-to-extensible-time" title="Permanent link">&para;</a></h3>
 <p><strong>What is an <code class="codehilite">xts</code> object</strong></p>
 <p><code class="codehilite">xts</code>, a constructor or a subclass that inherits behavior from parents. <code class="codehilite">xts</code> (as a subclass) extends the popular <code class="codehilite">zoo</code> class (as a parent). Most <code class="codehilite">zoo</code> methods work for <code class="codehilite">xts</code>. </p>
 <p><code class="codehilite">xts</code> is a matrix objects; subsets always preserve the matrix form. </p>
@@ -1247,7 +1247,7 @@ ts_b<span class="p">[</span>index<span class="p">(</span>ts_a<span class="p">)]<
 </pre></div>
 </td></tr></table>
 
-<h4 id="first-order-of-business-basic-manipulations">First Order of Business - Basic Manipulations<a class="headerlink" href="#first-order-of-business-basic-manipulations" title="Permanent link">&para;</a></h4>
+<h3 id="first-order-of-business-basic-manipulations">First Order of Business - Basic Manipulations<a class="headerlink" href="#first-order-of-business-basic-manipulations" title="Permanent link">&para;</a></h3>
 <p><strong>Converting <code class="codehilite">xts</code> objects</strong></p>
 <p><code class="codehilite">xts</code> provides methods to convert all of the major objects you are likely to come across - suitable native R types like matrix, data.frame, and ts are supported, as well as contributed ones such as <code class="codehilite">timeSeries</code>, <code class="codehilite">fts</code> and of course <code class="codehilite">zoo</code>. <code class="codehilite">as.xts</code> is the workhorse function to do the conversions to <code class="codehilite">xts</code>, and similar functions will provide the reverse behavior.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -1610,7 +1610,7 @@ a <span class="o">+</span> <span class="kp">merge</span><span class="p">(</span>
 </pre></div>
 </td></tr></table>
 
-<h4 id="merging-and-modifying-time-series">Merging and modifying time series<a class="headerlink" href="#merging-and-modifying-time-series" title="Permanent link">&para;</a></h4>
+<h3 id="merging-and-modifying-time-series">Merging and modifying time series<a class="headerlink" href="#merging-and-modifying-time-series" title="Permanent link">&para;</a></h3>
 <p><strong>Combining <code class="codehilite">xts</code> by column with <code class="codehilite">merge</code></strong></p>
 <p><code class="codehilite">xts</code> makes it easy to join data by column and row using a few different functions.  </p>
 <p><code class="codehilite">xts</code> objects must be of identical type (e.g. integer + integer), or be POSIXct dates vector, or be atomic vectors of the same type (e.g. numeric), or be a single NA. It does not work on data.frames with various column types.</p>
@@ -1760,7 +1760,7 @@ AirPass <span class="o">-</span> lag<span class="p">(</span>AirPass<span class="
 </td></tr></table>
 
 <p>What is the key difference in lag between xts and zoo? The <code class="codehilite">k</code> argument in <code class="codehilite">zoo</code> uses positive values for shifting past observations forward.</p>
-<h4 id="apply-and-aggregate-by-time">Apply and aggregate by time<a class="headerlink" href="#apply-and-aggregate-by-time" title="Permanent link">&para;</a></h4>
+<h3 id="apply-and-aggregate-by-time">Apply and aggregate by time<a class="headerlink" href="#apply-and-aggregate-by-time" title="Permanent link">&para;</a></h3>
 <p><strong>Find intervals by time in <code class="codehilite">xts</code></strong></p>
 <p>The main function in xts to facilitate this is endpoints. It takes a time series (or a vector of times) and returns the locations of the last observations in each interval.</p>
 <p>For example, the code below locates the last observation of each year for the <code class="codehilite">AirPass</code> dataset:</p>
@@ -1942,7 +1942,7 @@ eq_monthly <span class="o">&lt;-</span> rollapply<span class="p">(</span>EqMktNe
 </pre></div>
 </td></tr></table>
 
-<h4 id="extra-features-of-xts">Extra features of <code class="codehilite">xts</code><a class="headerlink" href="#extra-features-of-xts" title="Permanent link">&para;</a></h4>
+<h3 id="extra-features-of-xts">Extra features of <code class="codehilite">xts</code><a class="headerlink" href="#extra-features-of-xts" title="Permanent link">&para;</a></h3>
 <p><strong>Index, attributes, and time zones</strong></p>
 <p>All time is stored in seconds since 1970-01-01. Time via <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code> () and <code class="codehilite">index()</code> (raw seconds since 1970-01-01).</p>
 <p><code class="codehilite">index()</code> returns the time of an <code class="codehilite">xts</code> object, as a vector of class <code class="codehilite">indexClass</code>.</p>
