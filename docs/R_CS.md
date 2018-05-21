@@ -250,12 +250,6 @@ Cheat sheets.
 ![](img/visualization_cs/leaflet-cheat-sheet.png)
 </center>
 
-## Charts
-
-<center>
-![](img/visualization_cs/Chart_Selection.jpeg)
-</center>
-
 ## Parameters
 
 **Lines**
@@ -276,6 +270,8 @@ Cheat sheets.
 
 <center>
 ![](img/visualization_cs/how-big-is-your-grapha.png)
+
+![](img/visualization_cs/how-big-is-your-graphb.png)
 </center>
 
 ## Colors

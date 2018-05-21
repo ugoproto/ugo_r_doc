@@ -15,7 +15,7 @@ Notes, leads, and ideas on what R can do. *REF: reference(s) to the book.* From 
 
 ## GUI
 
-- Rcommander; `Rcmdr` pachage.
+- Rcommander; `Rcmdr` package.
 
 - [The R Commander: A Basic-Statistics GUI for R](http://socserv.mcmaster.ca/jfox/Misc/Rcmdr/)
 
