@@ -27,7 +27,7 @@ We add a time dimension with `frame = year`. However, we are not using it and th
 
     p
 
-![](../img/gganimate_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](img/gganimate_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 Dynamising a static chart
 =========================
@@ -51,7 +51,7 @@ Saving the animation
 
 Rendering the animation (.gif):
 
-![](../img/gganimate_files/output.gif)
+![](img/gganimate_files/output.gif)
 
 And again...
 ============
@@ -75,7 +75,7 @@ And again...
 
     Fruits_a
 
-![](../img/gganimate_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](img/gganimate_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
     gganimate(Fruits_a, interval = 5)
 
@@ -83,4 +83,4 @@ And again...
 
 Rendering the animation (.gif):
 
-![](../img/gganimate_files/Fruits_a.gif)
+![](img/gganimate_files/Fruits_a.gif)

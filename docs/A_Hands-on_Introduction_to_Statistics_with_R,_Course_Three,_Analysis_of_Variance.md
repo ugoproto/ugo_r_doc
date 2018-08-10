@@ -86,7 +86,7 @@ describeBy(wm, wm$condition)
 boxplot(wm$iq ~ wm$condition, main="Boxplot", xlab="Group (cond)", ylab="IQ")
 ```
 
-<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-3-1.png)</center>
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/unnamed-chunk-3-1.png)</center>
 
 Notice that the IQ increases as the amount of training sessions increases.
 
@@ -128,7 +128,7 @@ lines(x,y_7, col = 7, 'l')
 legend('topright', title = 'F distributions', c('df = (1,1)', 'df = (3,1)', 'df = (6,1)', 'df = (3,3)', 'df = (6,3)', 'df = (3,6)', 'df = (6,6)'), col = c(1, 2, 3, 4, 5, 6, 7), lty = 1)
 ```
 
-<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-4-1.png)</center>
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/unnamed-chunk-4-1.png)</center>
 
 The F-distribution cannot take negative values, because it is a ratio of variances and variances are always non-negative numbers. The distribution represents the ratio between the variance between groups and the variance within groups.
 
@@ -310,7 +310,7 @@ $$specificity = \frac{number~of~true~negatives}{number~ of~true~negatives + numb
 
 Calculate both the sensitivity and specificity of the test based on numbers displayed in the NHST table?
 
-<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/NHST_1.png)</center>
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/NHST_1.png)</center>
 
 The sensitivity is 0.89 and the specificity is 0.85.
 
@@ -377,7 +377,7 @@ TukeyHSD(anova_wm)
 plot(TukeyHSD(anova_wm))
 ```
 
-<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-11-1.png)</center>
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/unnamed-chunk-11-1.png)</center>
 
 **Bonferroni adjusted p-values**
 
@@ -466,7 +466,7 @@ barplot(ab_groups, beside = TRUE, col = c('orange','blue'), main = 'Driving Erro
 legend('topright', c('Difficult','Easy'), title = 'Driving', fill = c('orange','blue'))
 ```
 
-<center>![](A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-14-1.png)</center>
+<center>![](img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/unnamed-chunk-14-1.png)</center>
 
 The driving errors made during different driving conditions are influenced by the level of conversation demand. In other words, the driving conditions have a different effect on the number of errors made, depending on the level of conversation demand.
 

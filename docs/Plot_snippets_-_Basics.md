@@ -489,11 +489,15 @@ par(mfrow = c(1,1))
 
 **Change `col =`**
 
-![](col.png)
+![](img/Plot_snippets_-_Basics/col.png)
 
 **Change `pch =`**
 
-![](pch.png)
+![](img/Plot_snippets_-_Basics/pch.png)
+
+**Change `lty =`**
+
+![](img/Plot_snippets_-_Basics/lty.png)
 
 ``` r
 par(fig = c(0,0.8,0,0.8))
@@ -1387,10 +1391,6 @@ legend(xrange[1], yrange[2], 1:ntrees, cex = 0.8, col = colors,
 ```
 
 ![](img/Plot_snippets_-_Basics/unnamed-chunk-85-1.png)
-
-**Change `lty =`**
-
-![](lty.png)
 
 ## Regressions and Residual Plots
 

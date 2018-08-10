@@ -52,7 +52,7 @@ theme:
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
-pages:
+nav:
   - Home: 'index.md'
   - Basics:
     - R Cheat Sheets: 'R_CS.md'
@@ -61,7 +61,7 @@ pages:
     - Formulas in R: 'Formulas_in_R.md' 
     - Improved Codes: 'Improved_codes.md'
     - Intermediate R: 'Intermediate_R.md'
-    - Intermediate R - The apply Family: 'Intermediate_R_-_The_apply_Family.md' 
+    - Intermediate R - The apply Family: 'Intermediate_R_-_The_apply_Family.md'
   - RStudio:
     - Code & Plot Chunk Options: 'Code___Plot_Chunk_Options.md'
     - Working with the RStudio IDE: 'Working_with_RStudio_IDE.md'
@@ -70,6 +70,7 @@ pages:
     - Reading Data into R with readr: 'Reading_Data_into_R_with_readr.md'
     - Data Analysis in R, the data.table Way: 'Data_Analysis_in_R,_the_data.table_Way.md'
     - Data Manipulation in R with dplyr: 'Data_Manipulation_in_R_with_dplyr.md'
+    - Data Wrangling: 'Data_Wrangling.md'
   - Plot Snippets:
     - Plot Snippets for Exploratory (and some Explanatory) Analyses: 'Plot_snippets_-_Basics.md'
     - Plot Snippets - ggplot2: 'Plot_snippets_-_ggplot2.md'

@@ -47,7 +47,7 @@ df
 View(df) # in a new window
 ```
 
-![](Viewdf.png)
+![](img/Working_with_RStudio_IDE/Viewdf.png)
 
 **IDE panes**
 
@@ -186,7 +186,7 @@ Process:
 -   Checking compatibility.
 -   Building the package for sharing and using.
 
-See the book: [R Packages](r-pkgs.had.co.nz).
+See the book: [R Packages](http://r-pkgs.had.co.nz).
 
 **Create a new R package**
 
@@ -196,7 +196,7 @@ Create a new directory with new files, folders, and meta-information.
 
 RStudio generates the NAMESPACE content for you automatically.
 
-See the book: [R Packages](r-pkgs.had.co.nz/description.html).
+See the book: [R Packages](http://r-pkgs.had.co.nz/description.html).
 
 **Import & load source files**
 
@@ -308,7 +308,7 @@ Run the tests.
 
 Get a summary (pass or not pass). Test and retest the package.
 
-See the book: [R Packages](r-pkgs.had.co.nz/tests.html).
+See the book: [R Packages](http://r-pkgs.had.co.nz/tests.html).
 
 **Time to test your package**
 
@@ -338,7 +338,7 @@ Running the command again cancels it.
 Two formats: source package or binary package (more compresses and
 optimized).
 
-See the book: [R Packages](r-pkgs.had.co.nz/package.html\#package).
+See the book: [R Packages](http://r-pkgs.had.co.nz/package.html\#package).
 
 **Wrap-up**
 
@@ -462,7 +462,7 @@ PDF, HTML).
 
 **RStudio's $\LaTeX$ editor**
 
-[Install $\LaTeX$](www.latex-project.org).
+[Install $\LaTeX$](https://www.latex-project.org/).
 
 Open a .tex file in RStudio. RStudio has limited options to edit $\LaTeX$;
 enough to write and compile.

@@ -183,7 +183,7 @@ Cheat sheets.
 - [Time Series](R-FUNCTIONS-FOR-TIME-SERIES-ANALYSIS.pdf). PDF only.
     - *input, decomposition, tests, stochastic, graphics, miscellaneous*
 - [xts](xts_Cheat_Sheet_R.pdf). PDF only.
-- [Time Series in R -- The Power of `xts` and `zoo`](Time+Series+in+R+The+Power+of+xts+and+zoo.html). HTML.
+- [Time Series in R -- The Power of `xts` and `zoo`](Time Series in R The Power of xts and zoo.html). HTML.
 
 ## Survival, regression, data mining, machine learning
 

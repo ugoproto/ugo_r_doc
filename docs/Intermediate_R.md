@@ -921,14 +921,13 @@ search()
 ``` r
 # Try the qplot() function with wt and hp
 plot(wt,hp)
-
-# Load the ggplot2 package
-library('ggplot2')
 ```
 
-![](Intermediate_R_files/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-33-1.png)
+![](img/Intermediate_R/unnamed-chunk-34-1.png)
 
 ``` r
+# Load the ggplot2 package
+library('ggplot2')
 # or
 require('ggplot2')
 
@@ -936,7 +935,7 @@ require('ggplot2')
 qplot(wt,hp)
 ```
 
-![](Intermediate_R_files/figure-markdown_strict+backtick_code_blocks+autolink_bare_uris/unnamed-chunk-33-2.png)
+![](img/Intermediate_R/unnamed-chunk-34-2.png)
 
 ``` r
 # Check out the currently attached packages again
