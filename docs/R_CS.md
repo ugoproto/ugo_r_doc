@@ -23,7 +23,13 @@ Cheat sheets.
 
 ---
 
-- [Tidy Data](tidy_data.pdf). PDF only.
+- [Control Structures](R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.pdf). PDF.
+
+<center>
+![](img/base_r_cs/R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.png)
+</center>
+
+---
 
 - [Data Import](data-import.pdf). PDF.
 
@@ -35,11 +41,7 @@ Cheat sheets.
 
 ---
 
-- [Control Structures](R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.pdf). PDF.
-
-<center>
-![](img/base_r_cs/R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.png)
-</center>
+- [Tidy Data](tidy_data.pdf). PDF only.
 
 # Advanced
 
@@ -57,7 +59,9 @@ Cheat sheets.
 ![](img/advanced_r_cs/AdvancedRe.png)
 </center>
 
-# RStudio & RMarkdown
+# Edition & Reporting
+
+## RMarkdown
 
 - [R Markdown Reference Guide](R-Markdown-Reference.pdf). PDF only.
     - *syntax, chunk options, pandoc options, slide formats, LaTeX options*
@@ -69,7 +73,7 @@ Cheat sheets.
 ![](img/rstudio_rmarkdown_cs/rmarkdownb.png)
 </center>
 
----
+## RStudio
 
 - [RStudio](rstudio.pdf). PDF.
 
@@ -79,14 +83,36 @@ Cheat sheets.
 ![](img/rstudio_rmarkdown_cs/rstudiob.png)
 </center>
 
-# Specialization
+# Specializations
 
-## Tydyverse
+## Caret
 
-- [Tidyverse](Tidyverse_for_Beginners.pdf). PDF.
+- [caret](caret.pdf). PDF.
 
 <center>
-![](img/specialization_cs/Tidyverse_for_Beginners.png)
+![](img/specialization_cs/caret.png)
+</center>
+
+---
+
+<center>
+![](img/specialization_cs/Caret-Package-Infographi.jpg)
+</center>
+
+## Data mining
+
+- [Data Mining](R-Reference-Card-for-Data-Mining.pdf). PDF only.
+    - *association rules, sequential patterns, classification & prediction, regression, clustering, outliers, time series, text mining, socila networks, graph mining, spatial data, statistics, graphics, data manipulation, data access, big data, parallel computing, reports, weka, editors, guis*
+
+## data.table
+
+- [data.table Intro](data.table-Intro.pdf). PDF only (explanatory article).
+- [data.table](datatable.pdf). PDF.
+
+<center>
+![](img/specialization_cs/datatablea.png)
+
+![](img/specialization_cs/datatablea.png)
 </center>
 
 ## dplyr & tidyr
@@ -100,6 +126,8 @@ Cheat sheets.
 ![](img/specialization_cs/dplyrb.png)
 </center>
 
+---
+
 - [dplyr & tidyr](dplyr-and-tidyr-data-wrangling-Cheatsheet.pdf). PDF.
     
 <center>
@@ -108,55 +136,56 @@ Cheat sheets.
 ![](img/specialization_cs/dplyr-and-tidyr-data-wrangling-Cheatsheetb.png)
 </center>
 
-## sjmisc
+## Machine Learning
 
-- [sjmisc](sjmisc.pdf). PDF.
-    
+- [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
+    - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
+
+---
+
+- [Machine Learning Modelling in R](Machine_Learning_Modelling_in_R.pdf). PDF.
+
 <center>
-![](img/specialization_cs/sjmisc.png)
+![](img/specialization_cs/Machine_Learning_Modelling_in_R.png)
 </center>
 
-## data.table
+---
 
-- [data.table Intro](data.table-Intro.pdf). PDF only (explanatory article).
-- [data.table](data.table.pdf) 1. PDF.
-- [data.table](data+table+cheat+sheet.pdf) 2. PDF.
+- [Machine Learning with R](mlr.pdf). PDF.
 
 <center>
-![](img/specialization_cs/data.table.png)
+![](img/specialization_cs/mlra.png)
+
+![](img/specialization_cs/mlrb.png)
 </center>
 
+---
+
+- [quanteda](quanteda.pdf) (for NLP). PDF.
+
 <center>
-![](img/specialization_cs/data+table+cheat+sheet.png)
+![](img/specialization_cs/quantedaa.png)
+
+![](img/specialization_cs/quantedab.png)
 </center>
 
-## Caret
+---
 
-- [caret](caret.pdf). PDF.
-
-<center>
-![](img/specialization_cs/caret.png)
-</center>
+- [Keras](keras.pdf). PDF.
 
 <center>
-![](img/specialization_cs/Caret-Package-Infographi.jpg)
+![](img/specialization_cs/kerasa.png)
+
+![](img/specialization_cs/kerasb.png)
 </center>
 
 ## Probabilities
 
 - [Probabilities](probability_cheatsheet.pdf). PDF only.
 
-## Regular Expressions
+## Quandl
 
-- [Basic Regular Expressions](RegExCheatsheet.pdf). PDF.
-
-<center>
-![](img/specialization_cs/RegExCheatsheet.png)
-</center>
-
-## R-Quandl
-
-- [Quandl](R-Quandl-Cheatsheet.pdf).
+- [Quandl](R-Quandl-Cheatsheet.pdf). PDF.
 
 <center>
 ![](img/specialization_cs/R-Quandl-Cheatsheeta.png)
@@ -168,9 +197,25 @@ Cheat sheets.
 ![](img/specialization_cs/R-Quandl-Cheatsheetd.png)
 </center>
 
+## Regular Expressions (regex)
+
+- [Basic Regular Expressions](RegExCheatsheet.pdf). PDF.
+
+<center>
+![](img/specialization_cs/RegExCheatsheet.png)
+</center>
+
+## sjmisc
+
+- [sjmisc](sjmisc.pdf). PDF.
+    
+<center>
+![](img/specialization_cs/sjmisc.png)
+</center>
+
 ## Spark
 
-- [sparklyr](sparklyr-cheatsheet.pdf). PDF.
+- [sparklyr](sparklyr.pdf). PDF.
 
 <center>
 ![](img/specialization_cs/sparklyra.png)
@@ -178,49 +223,59 @@ Cheat sheets.
 ![](img/specialization_cs/sparklyrb.png)
 </center>
 
-## Time series
+## Strings
 
-- [Time Series](R-FUNCTIONS-FOR-TIME-SERIES-ANALYSIS.pdf). PDF only.
-    - *input, decomposition, tests, stochastic, graphics, miscellaneous*
-- [xts](xts_Cheat_Sheet_R.pdf). PDF only.
-- [Time Series in R -- The Power of `xts` and `zoo`](Time Series in R The Power of xts and zoo.html). HTML.
+- [stringr](stringr.pdf). PDF.
 
-## Survival, regression, data mining, machine learning
+<center>
+![](img/specialization_cs/stringra.png)
+
+![](img/specialization_cs/stringrb.png)
+</center>
+
+## Survival Analysis & Regression
 
 - [survminer](survminer_cheatsheet.pdf). PDF only.
     - *curve, ggplot2, cox model*
 - [Regressions](Ricci-refcard-regression.pdf). PDF only.
     - *linear model, variable selection, diagnostics, graphics, tests, variable transformation, ridge, segmented, gls, glm, nls, gnls, loess, splines, robust, structural equation, simultaneous equation, pls, principal components, quantile, linear and nonlinear mixed effects, generalized additive, survival analysis, classification & regression trees, beta*
-- [Data Mining](R-Reference-Card-for-Data-Mining.pdf). PDF only.
-    - *association rules, sequential patterns, classification & prediction, regression, clustering, outliers, time series, text mining, socila networks, graph mining, spatial data, statistics, graphics, data manipulation, data access, big data, parallel computing, reports, weka, editors, guis*
-- [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
-    - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
 
-- [Machine Learning Modelling in R](Machine_Learning_Modelling_in_R.pdf). PDF.
+## Time Series
 
-<center>
-![](img/specialization_cs/Machine_Learning_Modelling_in_R.png)
-</center>
+- [lubridate](lubridate.pdf). PDF only.
+- [Time Series](R-FUNCTIONS-FOR-TIME-SERIES-ANALYSIS.pdf). PDF only.
+    - *input, decomposition, tests, stochastic, graphics, miscellaneous*
+- [xts](xts_Cheat_Sheet_R.pdf). PDF only.
+- [Time Series in R -- The Power of `xts` and `zoo`](Time Series in R The Power of xts and zoo.html). HTML.
 
-- [Machine Learning with R](mlr.pdf). PDF.
 
-<center>
-![](img/specialization_cs/mlra.png)
+## Tydyverse (including Purrr)
 
-![](img/specialization_cs/mlrb.png)
-</center>
-
-# Visualization (ggplot2, ggmap, ggvis, shiny, plotly, Leaflet)
-
-- [ggplot2](ggplot2.pdf). PDF.
+- [Purrr](purrr.pdf). PDF.
 
 <center>
-![](img/visualization_cs/ggplot2a.png)
+![](img/advanced_r_cs/purrra.png)
 
-![](img/visualization_cs/ggplot2b.png)
+![](img/advanced_r_cs/purrrb.png)
 </center>
 
----
+- [Tidyverse](Tidyverse_for_Beginners.pdf). PDF.
+
+<center>
+![](img/specialization_cs/Tidyverse_for_Beginners.png)
+</center>
+
+# Visualization
+
+## cartography
+
+- [cartography](cartography.pdf). PDF.
+
+<center>
+![](img/visualization_cs/cartography.png)
+</center>
+
+## ggmap
 
 - [ggmap](ggmapCheatsheet.pdf). PDF.
 
@@ -230,39 +285,30 @@ Cheat sheets.
 ![](img/visualization_cs/ggmapCheatsheetb.png)
 </center>
 
----
+## ggplot2
 
-- [ggvis](shanly3011_data-visualization-in-r-ggvis.pdf). PDF.
-
-<center>
-![](img/visualization_cs/shanly3011_data-visualization-in-r-ggvis.png)
-</center>
-
----
-
-- [ggvis](shanly3011_data-visualization-in-r-ggvis-continued.pdf). PDF.
+- [ggplot2](ggplot2.pdf). PDF.
 
 <center>
-![](img/visualization_cs/shanly3011_data-visualization-in-r-ggvis-continueda.png)
+![](img/visualization_cs/ggplot2a.png)
 
-![](img/visualization_cs/shanly3011_data-visualization-in-r-ggvis-continuedb.png)
+![](img/visualization_cs/ggplot2b.png)
 </center>
 
----
+## ggvis
 
-- [shiny](shiny-cheatsheet.pdf). PDF.
+- [ggvis](ggvis_.pdf). PDF.
+- [ggvis cont'd](ggvis_c.pdf). PDF.
 
 <center>
-![](img/visualization_cs/shiny-cheatsheeta.png)
+![](img/visualization_cs/ggvis_.png)
 
-![](img/visualization_cs/shiny-cheatsheetb.png)
+![](img/visualization_cs/ggvis_ca.png)
+
+![](img/visualization_cs/ggvis_cb.png)
 </center>
 
----
-
-- [plotly](plotly_r_cheat_sheet.pdf). PDF only.
-
----
+## Leaflet
 
 - [Leaflet](leaflet-cheat-sheet.pdf). PDF.
 
@@ -270,29 +316,27 @@ Cheat sheets.
 ![](img/visualization_cs/leaflet-cheat-sheet.png)
 </center>
 
-## Parameters
+## plotly
 
-**Lines**
-
-<center>
-![](img/visualization_cs/lines.png)
-</center>
-
-**Points**
+- [plotly](plotly_r_cheat_sheet.pdf). PDF.
 
 <center>
-![](img/visualization_cs/points.png)
+![](img/visualization_cs/plotly_r_cheat_sheeta.png)
+
+![](img/visualization_cs/plotly_r_cheat_sheetb.png)
 </center>
 
-## Graphs
+## shiny
 
-- [Graphs](how-big-is-your-graph.pdf).
+- [shiny](shiny.pdf). PDF.
 
 <center>
-![](img/visualization_cs/how-big-is-your-grapha.png)
+![](img/visualization_cs/shinya.png)
 
-![](img/visualization_cs/how-big-is-your-graphb.png)
+![](img/visualization_cs/shinyb.png)
 </center>
+
+# Visualization Parameters
 
 ## Colors
 
@@ -305,4 +349,26 @@ Cheat sheets.
 ![](img/visualization_cs/ColorChart6.png)
 ![](img/visualization_cs/ColorChart7.png)
 ![](img/visualization_cs/ColorChart8.png)
+</center>
+
+## Graphs
+
+- [Graphs](how-big-is-your-graph.pdf). PDF.
+
+<center>
+![](img/visualization_cs/how-big-is-your-grapha.png)
+
+![](img/visualization_cs/how-big-is-your-graphb.png)
+</center>
+
+## Lines
+
+<center>
+![](img/visualization_cs/lines.png)
+</center>
+
+## Points
+
+<center>
+![](img/visualization_cs/points.png)
 </center>
