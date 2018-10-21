@@ -81,7 +81,7 @@ nav:
     - gganimate: 'gganimate.md'
     - Fast-and-Frugal Decision Trees: 'Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees.md'
     - Big Data Analysis with Revolution R Enterprise: 'Big_Data_Analysis_with_Revolution_R_Enterprise.md'
-    - Time Series in R, The Power of xts and zoo: 'Time Series in R The Power of xts and zoo.html' #'Time+Series+in+R+The+Power+of+xts+and+zoo.md'
+    - Time Series in R, The Power of xts and zoo: 'Time Series in R The Power of xts and zoo.md'
     - Parallel computing in R: 'Parallel computing in R.md'
   - Other Snippets: 
     - Tables: 'Tables.md'
