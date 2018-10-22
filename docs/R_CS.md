@@ -138,6 +138,14 @@ Cheat sheets.
 
 ## Machine Learning
 
+- [Machine Learning](super-cheatsheet-machine-learning.pdf). PDF only.
+    - Supervised Learning;
+    - Unsupervised Learning;
+    - Deep Learning;
+    - Machine Learning Tips and Tricks;
+    - Probabilities and Statistics;
+    - Linear Algebra and Calculus.
+
 - [Big Data Machine Learning](4503-rc158-010d-machinelearning_1.pdf). PDF only.
     - *linear regression, logistic regression, regularization (ridge, lasso), neural network, support vector machine, nayesian network and naïve bayes, k-nearest neighbors, decision tree, tree ensembles (bagging or random forest, boosting)*
 
