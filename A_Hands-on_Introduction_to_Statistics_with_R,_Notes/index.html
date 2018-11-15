@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#group-data" tabindex="1" class="md-skip">
+      <a href="#group-data" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1724,7 +1724,7 @@
 <hr />
 <h3 id="descriptive-statistics">Descriptive Statistics<a class="headerlink" href="#descriptive-statistics" title="Permanent link">&para;</a></h3>
 <p>Extract basic, exploratory statistics from datasets with <code class="codehilite">apply</code>, <code class="codehilite">summary</code>, <code class="codehilite">fivenum</code>, <code class="codehilite">describe</code>, and <code class="codehilite">stat.desc</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>longley<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -1740,7 +1740,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># apply a function</span>
 <span class="c1"># excluding missing values</span>
@@ -1758,7 +1758,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># mean, median, 25th and 75th quartiles, min, max</span>
 <span class="kp">summary</span><span class="p">(</span>longley<span class="p">)</span>
 </pre></div>
@@ -1794,7 +1794,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Tukey min, lower-hinge, median, upper-hinge, max</span>
 fivenum<span class="p">(</span>longley<span class="o">$</span>GNP<span class="p">)</span>
 </pre></div>
@@ -1804,7 +1804,7 @@ fivenum<span class="p">(</span>longley<span class="o">$</span>GNP<span class="p"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2022,7 +2022,7 @@ describe<span class="p">(</span>longley<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2096,7 +2096,7 @@ stat.desc<span class="p">(</span>longley<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2142,7 +2142,7 @@ describe<span class="p">(</span>longley<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># with</span>
 <span class="kp">with</span><span class="p">(</span>longley<span class="p">,</span> median<span class="p">(</span>GNP<span class="p">))</span>
 </pre></div>
@@ -2152,7 +2152,7 @@ describe<span class="p">(</span>longley<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># vs.</span>
 median<span class="p">(</span>longley<span class="o">$</span>GNP<span class="p">)</span>
 </pre></div>
@@ -2163,7 +2163,7 @@ median<span class="p">(</span>longley<span class="o">$</span>GNP<span class="p">
 </td></tr></table>
 
 <h5 id="group-data">Group data<a class="headerlink" href="#group-data" title="Permanent link">&para;</a></h5>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>mtcars<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -2179,7 +2179,7 @@ median<span class="p">(</span>longley<span class="o">$</span>GNP<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># variable grouped by one factor to show a function</span>
 <span class="kp">by</span><span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">,</span> mtcars<span class="o">$</span>cyl<span class="p">,</span> FUN <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span> <span class="kt">c</span><span class="p">(</span>m <span class="o">=</span> <span class="kp">mean</span><span class="p">(</span>x<span class="p">),</span> s <span class="o">=</span> sd<span class="p">(</span>x<span class="p">))</span> <span class="p">})</span> 
 </pre></div>
@@ -2209,7 +2209,7 @@ median<span class="p">(</span>longley<span class="o">$</span>GNP<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># description statistics by group</span>
@@ -2327,7 +2327,7 @@ describeBy<span class="p">(</span>mtcars<span class="p">,</span> group <span cla
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2357,7 +2357,7 @@ summaryBy<span class="p">(</span>mpg <span class="o">+</span> wt <span class="o"
 <p>Create frequency and contingency tables from categorical variables. Perform tests of independence, measures of association, and graphically display results.</p>
 <h4 id="2d-frequency-tables">2D frequency tables<a class="headerlink" href="#2d-frequency-tables" title="Permanent link">&para;</a></h4>
 <p><code class="codehilite">mytable <span class="o">&lt;-</span> <span class="kp">table</span><span class="p">(</span>A<span class="p">,</span> B<span class="p">)</span></code> where A are rows, B are columns.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 mytable <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">),</span> nrow <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
@@ -2373,7 +2373,7 @@ mytable
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># A frequencies (summed over columns = 1)</span>
 <span class="kp">margin.table</span><span class="p">(</span>mytable<span class="p">,</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
@@ -2383,7 +2383,7 @@ mytable
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># B frequencies (summed over rows = 2)</span>
 <span class="kp">margin.table</span><span class="p">(</span>mytable<span class="p">,</span> <span class="m">2</span><span class="p">)</span>
 </pre></div>
@@ -2393,7 +2393,7 @@ mytable
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># A/(A + B)</span>
 <span class="c1"># cell percentages</span>
@@ -2409,7 +2409,7 @@ mytable
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># row percentages</span>
 <span class="kp">prop.table</span><span class="p">(</span>mytable<span class="p">,</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
@@ -2423,7 +2423,7 @@ mytable
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># column percentages </span>
 <span class="kp">prop.table</span><span class="p">(</span>mytable<span class="p">,</span> <span class="m">2</span><span class="p">)</span>
 </pre></div>
@@ -2438,7 +2438,7 @@ mytable
 </td></tr></table>
 
 <h4 id="3d-frequency-tables">3D frequency tables<a class="headerlink" href="#3d-frequency-tables" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>CO2<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -2456,7 +2456,7 @@ mytable
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>A <span class="o">&lt;-</span> <span class="kp">as.numeric</span><span class="p">(</span>CO2<span class="p">[,</span> <span class="s">&#39;Plant&#39;</span><span class="p">])</span>
@@ -2466,7 +2466,7 @@ mytable <span class="o">&lt;-</span> <span class="kp">table</span><span class="p
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># several arrays (3D)</span>
 <span class="kp">dim</span><span class="p">(</span>mytable<span class="p">)</span> <span class="c1"># the printout is immense</span>
 </pre></div>
@@ -2476,7 +2476,7 @@ mytable <span class="o">&lt;-</span> <span class="kp">table</span><span class="p
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># folded table (2D)</span>
 <span class="kp">dim</span><span class="p">(</span>ftable<span class="p">(</span>mytable<span class="p">))</span> <span class="c1"># the printout is immense</span>
 </pre></div>
@@ -2486,7 +2486,7 @@ mytable <span class="o">&lt;-</span> <span class="kp">table</span><span class="p
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 3-Way frequency Table</span>
@@ -2501,7 +2501,7 @@ mytable <span class="o">&lt;-</span> xtabs<span class="p">(</span><span class="o
 </td></tr></table>
 
 <h4 id="crosstable">CrossTable<a class="headerlink" href="#crosstable" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>A <span class="o">&lt;-</span> <span class="kp">as.numeric</span><span class="p">(</span>CO2<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">8</span><span class="p">,</span> <span class="s">&#39;Plant&#39;</span><span class="p">])</span>
 A
 </pre></div>
@@ -2511,7 +2511,7 @@ A
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>B <span class="o">&lt;-</span> CO2<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">8</span><span class="p">,</span> <span class="s">&#39;conc&#39;</span><span class="p">]</span>
 B
 </pre></div>
@@ -2521,7 +2521,7 @@ B
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 2-way cross tabulation</span>
@@ -2605,7 +2605,7 @@ CrossTable<span class="p">(</span>A<span class="p">,</span> B<span class="p">)</
 
 <h4 id="tests-of-independence">Tests of independence<a class="headerlink" href="#tests-of-independence" title="Permanent link">&para;</a></h4>
 <p>There are more tests of independence in section 10, Resampling Statistics.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset, a contingency table</span>
 colors
 </pre></div>
@@ -2623,7 +2623,7 @@ colors
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># chi-square test on 2-way tables</span>
 <span class="c1"># test independence of the row and column variables, p-value is calculated from the asymptotic chi-squared distribution of the test statistic</span>
@@ -2639,11 +2639,11 @@ chisq.test<span class="p">(</span>colors<span class="p">)</span>
 ##  Pearson&#39;s Chi-squared test
 ## 
 ## data:  colors
-## X-squared = 1240, df = 12, p-value &lt; 2.2e-16
+## X-squared = 1240, df = 12, p-value &amp;lt; 2.2e-16
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2669,7 +2669,7 @@ TeaTasting
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Fisher exact test</span>
 fisher.test<span class="p">(</span>TeaTasting<span class="p">,</span> alternative <span class="o">=</span> <span class="s">&quot;greater&quot;</span><span class="p">)</span>
 </pre></div>
@@ -2699,7 +2699,7 @@ fisher.test<span class="p">(</span>TeaTasting<span class="p">,</span> alternativ
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2797,7 +2797,7 @@ Rabbits
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Mantel-Haenszel test / Cochran-Mantel-Haenszel chi-squared test, hypothesis that two nominal variables are conditionally independent in each stratum, assuming that there is no three-way interaction.</span>
 mantelhaen.test<span class="p">(</span>Rabbits<span class="p">)</span>
 </pre></div>
@@ -2827,7 +2827,7 @@ mantelhaen.test<span class="p">(</span>Rabbits<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2841,7 +2841,7 @@ mytable <span class="o">&lt;-</span> xtabs<span class="p">(</span><span class="o
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2863,13 +2863,13 @@ loglm<span class="p">(</span><span class="o">~</span>A <span class="o">+</span> 
 ## loglm(formula = ~A + B + C, data = mytable)
 ## 
 ## Statistics:
-##                        X^2   df  P(&gt; X^2)
+##                        X^2   df  P(&amp;gt; X^2)
 ## Likelihood Ratio  720.1035 6291 1.0000000
 ## Pearson          6300.0000 6291 0.4656775
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># conditional independence: A is independent of B, given C</span>
 loglm<span class="p">(</span><span class="o">~</span>A <span class="o">+</span> B <span class="o">+</span> C <span class="o">+</span> A <span class="o">*</span> C <span class="o">+</span> B <span class="o">*</span> C<span class="p">,</span> mytable<span class="p">)</span>
 </pre></div>
@@ -2885,13 +2885,13 @@ loglm<span class="p">(</span><span class="o">~</span>A <span class="o">+</span> 
 ## loglm(formula = ~A + B + C + A * C + B * C, data = mytable)
 ## 
 ## Statistics:
-##                       X^2   df P(&gt; X^2)
+##                       X^2   df P(&amp;gt; X^2)
 ## Likelihood Ratio 12.13685 5016        1
 ## Pearson               NaN 5016      NaN
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># no three-way interaction</span>
 loglm<span class="p">(</span><span class="o">~</span>A <span class="o">+</span> B <span class="o">+</span> C <span class="o">+</span> A <span class="o">*</span> B <span class="o">+</span> A <span class="o">*</span> C <span class="o">+</span> B <span class="o">*</span> C<span class="p">,</span> mytable<span class="p">)</span>
 </pre></div>
@@ -2907,7 +2907,7 @@ loglm<span class="p">(</span><span class="o">~</span>A <span class="o">+</span> 
 ## loglm(formula = ~A + B + C + A * B + A * C + B * C, data = mytable)
 ## 
 ## Statistics:
-##                       X^2   df P(&gt; X^2)
+##                       X^2   df P(&amp;gt; X^2)
 ## Likelihood Ratio 1.038376 4950        1
 ## Pearson               NaN 4950      NaN
 </pre></div>
@@ -2915,7 +2915,7 @@ loglm<span class="p">(</span><span class="o">~</span>A <span class="o">+</span> 
 
 <h4 id="measures-of-association">Measures of association<a class="headerlink" href="#measures-of-association" title="Permanent link">&para;</a></h4>
 <p>Association between two nominal variables, giving a value between 0 and +1 (inclusive). It is based on Pearson&rsquo;s chi-squared statistic.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 str<span class="p">(</span>Arthritis<span class="p">)</span>
 </pre></div>
@@ -2931,11 +2931,11 @@ str<span class="p">(</span>Arthritis<span class="p">)</span>
 ##  $ Treatment: Factor w/ 2 levels &quot;Placebo&quot;,&quot;Treated&quot;: 2 2 2 2 2 2 2 2 2 2 ...
 ##  $ Sex      : Factor w/ 2 levels &quot;Female&quot;,&quot;Male&quot;: 2 2 2 2 2 2 2 2 2 2 ...
 ##  $ Age      : int  27 29 30 32 46 58 59 59 63 63 ...
-##  $ Improved : Ord.factor w/ 3 levels &quot;None&quot;&lt;&quot;Some&quot;&lt;..: 2 1 1 3 3 3 1 3 1 1 ...
+##  $ Improved : Ord.factor w/ 3 levels &quot;None&quot;&amp;lt;&quot;Some&quot;&amp;lt;..: 2 1 1 3 3 3 1 3 1 1 ...
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tab <span class="o">&lt;-</span> xtabs<span class="p">(</span><span class="o">~</span>Improved <span class="o">+</span> Treatment<span class="p">,</span> data <span class="o">=</span> Arthritis<span class="p">)</span>
 tab
 </pre></div>
@@ -2953,7 +2953,7 @@ tab
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>assocstats<span class="p">(</span>tab<span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>assocstats<span class="p">(</span>tab<span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
@@ -2975,7 +2975,7 @@ tab
 ## Number of factors: 2 
 ## Test for independence of all factors:
 ##  Chisq = 13.055, df = 2, p-value = 0.001463
-##                     X^2 df  P(&gt; X^2)
+##                     X^2 df  P(&amp;gt; X^2)
 ## Likelihood Ratio 13.530  2 0.0011536
 ## Pearson          13.055  2 0.0014626
 ## 
@@ -2985,7 +2985,7 @@ tab
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># phi coefficient, contingency coefficient, and Cramér&#39;s V for an 2D table</span>
@@ -3001,7 +3001,7 @@ assocstats<span class="p">(</span>tab<span class="p">)</span>
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                     X^2 df  P(&gt; X^2)
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                     X^2 df  P(&amp;gt; X^2)
 ## Likelihood Ratio 13.530  2 0.0011536
 ## Pearson          13.055  2 0.0014626
 ## 
@@ -3011,7 +3011,7 @@ assocstats<span class="p">(</span>tab<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 TeaTasting
 </pre></div>
@@ -3027,7 +3027,7 @@ TeaTasting
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Cohen&#39;s kappa and weighted kappa for a confusion matrix</span>
@@ -3042,7 +3042,7 @@ TeaTasting
 </td></tr></table>
 
 <h3 id="correlations">Correlations<a class="headerlink" href="#correlations" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>mtcars<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -3058,7 +3058,7 @@ TeaTasting
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># correlations/covariances among numeric variables in</span>
 <span class="c1"># a data frame</span>
@@ -3116,7 +3116,7 @@ cor<span class="p">(</span>mtcars<span class="p">,</span> use <span class="o">=<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cov<span class="p">(</span>mtcars<span class="p">,</span> use <span class="o">=</span> <span class="s">&quot;complete.obs&quot;</span><span class="p">)</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cov<span class="p">(</span>mtcars<span class="p">,</span> use <span class="o">=</span> <span class="s">&quot;complete.obs&quot;</span><span class="p">)</span> 
 </pre></div>
 </td></tr></table>
 
@@ -3194,7 +3194,7 @@ cor<span class="p">(</span>mtcars<span class="p">,</span> use <span class="o">=<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># correlations with significance levels</span>
@@ -3288,7 +3288,7 @@ rcorr<span class="p">(</span><span class="kp">as.matrix</span><span class="p">(<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 x <span class="o">&lt;-</span> mtcars<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
@@ -3296,7 +3296,7 @@ y <span class="o">&lt;-</span> mtcars<span class="p">[</span><span class="m">4</
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># correlation between two vectors</span>
 cor<span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>
 </pre></div>
@@ -3314,7 +3314,7 @@ cor<span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>
 
 <p><strong>Polychoric correlation</strong></p>
 <p>The correlation between two theorised normally distributed continuous latent variables, from two observed ordinal variables.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="c1"># 2-way contingency table of counts</span>
@@ -3334,7 +3334,7 @@ colors
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># polychoric correlation</span>
@@ -3348,7 +3348,7 @@ polychor<span class="p">(</span>colors<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3421,7 +3421,7 @@ hetcor<span class="p">(</span>colors<span class="p">)</span>
 </td></tr></table>
 
 <h3 id="t-tests">t-tests<a class="headerlink" href="#t-tests" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3445,7 +3445,7 @@ t.test<span class="p">(</span>y<span class="p">,</span> mu <span class="o">=</sp
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="c1"># 2-way contingency table</span>
@@ -3465,7 +3465,7 @@ colors
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]))</span> <span class="c1"># row 1 average</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">mean</span><span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]))</span> <span class="c1"># row 1 average</span>
 </pre></div>
 </td></tr></table>
 
@@ -3473,7 +3473,7 @@ colors
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># independent 2-group t-test</span>
 t.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]),</span> <span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">2</span><span class="p">,]))</span> <span class="c1"># where y1 and y2 are numeric </span>
 </pre></div>
@@ -3503,7 +3503,7 @@ t.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># one sample t-test</span>
 t.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]),</span> mu <span class="o">=</span> <span class="m">0</span><span class="p">)</span> <span class="c1"># Ho: mu=0</span>
 </pre></div>
@@ -3533,7 +3533,7 @@ t.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>t.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]),</span> mu <span class="o">=</span> <span class="m">0</span><span class="p">,</span> alternative<span class="o">=</span><span class="s">&quot;greater&quot;</span><span class="p">)</span> <span class="c1"># Ho: mu=&lt;0</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>t.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]),</span> mu <span class="o">=</span> <span class="m">0</span><span class="p">,</span> alternative<span class="o">=</span><span class="s">&quot;greater&quot;</span><span class="p">)</span> <span class="c1"># Ho: mu=&lt;0</span>
 </pre></div>
 </td></tr></table>
 
@@ -3569,7 +3569,7 @@ t.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">
 <h3 id="nonparametric-statistics">Nonparametric statistics<a class="headerlink" href="#nonparametric-statistics" title="Permanent link">&para;</a></h3>
 <p>Nonnormal distributions.</p>
 <h4 id="bivariate-tests">Bivariate tests<a class="headerlink" href="#bivariate-tests" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3587,7 +3587,7 @@ wilcox.test<span class="p">(</span>y1<span class="p">,</span> y2<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 2-way contingency table</span>
 colors
 </pre></div>
@@ -3605,7 +3605,7 @@ colors
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># independent 2-group Mann-Whitney U Test</span>
 wilcox.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]),</span> <span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">2</span><span class="p">,]))</span> <span class="c1"># where y and x are numeric</span>
 </pre></div>
@@ -3628,7 +3628,7 @@ wilcox.test<span class="p">(</span><span class="kp">as.numeric</span><span class
 <p><code class="codehilite">alternative=&quot;less&quot;</code> or <code class="codehilite">alternative=&quot;greater&quot;</code> option to specify a one<br />
 tailed test.</p>
 <h4 id="anova">ANOVA<a class="headerlink" href="#anova" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3646,7 +3646,7 @@ kruskal.test<span class="p">(</span>y<span class="p">,</span> x<span class="p">)
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="c1"># 2-way contingency table</span>
@@ -3666,7 +3666,7 @@ colors
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Kruskal Wallis test one-way ANOVA by ranks</span>
 kruskal.test<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">1</span><span class="p">,]),</span> <span class="kp">as.numeric</span><span class="p">(</span>colors<span class="p">[</span><span class="m">2</span><span class="p">,]))</span> <span class="c1"># where y and x are numeric</span>
 </pre></div>
@@ -3686,7 +3686,7 @@ kruskal.test<span class="p">(</span><span class="kp">as.numeric</span><span clas
 
 <h3 id="multiple-regressions">Multiple Regressions<a class="headerlink" href="#multiple-regressions" title="Permanent link">&para;</a></h3>
 <h4 id="fitting-the-model">Fitting the Model<a class="headerlink" href="#fitting-the-model" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3712,7 +3712,7 @@ influence<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># 
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 str<span class="p">(</span>longley<span class="p">)</span>
 </pre></div>
@@ -3736,7 +3736,7 @@ str<span class="p">(</span>longley<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># multiple linear regression example</span>
 fit <span class="o">&lt;-</span> lm<span class="p">(</span>Armed.Forces <span class="o">~</span> GNP <span class="o">+</span> Population<span class="p">,</span> data <span class="o">=</span> longley<span class="p">)</span>
@@ -3771,7 +3771,7 @@ fit <span class="o">&lt;-</span> lm<span class="p">(</span>Armed.Forces <span cl
 ## -70.349 -33.569   5.076  16.409 104.037 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)   
+##             Estimate Std. Error t value Pr(&amp;gt;|t|)   
 ## (Intercept) 4123.922   1276.579   3.230  0.00657 **
 ## GNP            3.365      0.986   3.413  0.00463 **
 ## Population   -44.011     14.089  -3.124  0.00807 **
@@ -3784,7 +3784,7 @@ fit <span class="o">&lt;-</span> lm<span class="p">(</span>Armed.Forces <span cl
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># other useful functions</span>
 coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># model coefficients</span>
 </pre></div>
@@ -3796,7 +3796,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>confint<span class="p">(</span>fit<span class="p">,</span> level <span class="o">=</span> <span class="m">0.95</span><span class="p">)</span> <span class="c1"># CIs for model parameters</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>confint<span class="p">(</span>fit<span class="p">,</span> level <span class="o">=</span> <span class="m">0.95</span><span class="p">)</span> <span class="c1"># CIs for model parameters</span>
 </pre></div>
 </td></tr></table>
 
@@ -3810,7 +3810,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fitted<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># predicted values</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fitted<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># predicted values</span>
 </pre></div>
 </td></tr></table>
 
@@ -3824,7 +3824,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>residuals<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># residuals</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>residuals<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># residuals</span>
 </pre></div>
 </td></tr></table>
 
@@ -3842,7 +3842,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>anova<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># ANOVA table</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>anova<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># ANOVA table</span>
 </pre></div>
 </td></tr></table>
 
@@ -3857,7 +3857,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Analysis of Variance Table
 ## 
 ## Response: Armed.Forces
-##            Df Sum Sq Mean Sq F value   Pr(&gt;F)   
+##            Df Sum Sq Mean Sq F value   Pr(&amp;gt;F)   
 ## GNP         1  14479 14478.7  5.6649 0.033301 * 
 ## Population  1  24941 24940.8  9.7583 0.008068 **
 ## Residuals  13  33226  2555.9                    
@@ -3866,7 +3866,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vcov<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># covariance matrix for model parameters</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>vcov<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># covariance matrix for model parameters</span>
 </pre></div>
 </td></tr></table>
 
@@ -3880,7 +3880,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>influence<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># regression diagnostics </span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>influence<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># regression diagnostics </span>
 </pre></div>
 </td></tr></table>
 
@@ -3967,7 +3967,7 @@ coefficients<span class="p">(</span>fit<span class="p">)</span> <span class="c1"
 </td></tr></table>
 
 <h4 id="diagnostic-plots">Diagnostic plots<a class="headerlink" href="#diagnostic-plots" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># diagnostic plots</span>
 layout<span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">),</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span> <span class="c1"># optional 4 graphs/page</span>
@@ -3976,12 +3976,12 @@ plot<span class="p">(</span>fit<span class="p">)</span>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-44-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>layout<span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>layout<span class="p">(</span><span class="kt">matrix</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
 <h4 id="comparing-two-models-with-anova">Comparing two models with ANOVA<a class="headerlink" href="#comparing-two-models-with-anova" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3993,7 +3993,7 @@ anova<span class="p">(</span>fit1<span class="p">,</span> fit2<span class="p">)<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4017,7 +4017,7 @@ anova<span class="p">(</span>fit1<span class="p">,</span> fit2<span class="p">)<
 ## 
 ## Model 1: Armed.Forces ~ GNP + Population
 ## Model 2: Armed.Forces ~ GNP
-##   Res.Df   RSS Df Sum of Sq      F   Pr(&gt;F)   
+##   Res.Df   RSS Df Sum of Sq      F   Pr(&amp;gt;F)   
 ## 1     13 33226                                
 ## 2     14 58167 -1    -24941 9.7583 0.008068 **
 ## ---
@@ -4026,7 +4026,7 @@ anova<span class="p">(</span>fit1<span class="p">,</span> fit2<span class="p">)<
 </td></tr></table>
 
 <h4 id="cross-validation">Cross validation<a class="headerlink" href="#cross-validation" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4048,7 +4048,7 @@ data<span class="p">(</span>houseprices<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4070,7 +4070,7 @@ CVlm<span class="p">(</span>houseprices<span class="p">,</span> form.lm <span cl
 8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Analysis of Variance Table
 ## 
 ## Response: sale.price
-##           Df Sum Sq Mean Sq F value Pr(&gt;F)  
+##           Df Sum Sq Mean Sq F value Pr(&amp;gt;F)  
 ## area       1  18566   18566       8  0.014 *
 ## Residuals 13  30179    2321                 
 ## ---
@@ -4149,7 +4149,7 @@ CVlm<span class="p">(</span>houseprices<span class="p">,</span> form.lm <span cl
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>longley<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -4165,7 +4165,7 @@ CVlm<span class="p">(</span>houseprices<span class="p">,</span> form.lm <span cl
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># case 2, # 3 fold cross-validation</span>
 CVlm<span class="p">(</span>longley<span class="p">,</span> form.lm <span class="o">=</span> formula<span class="p">(</span>Armed.Forces <span class="o">~</span> GNP <span class="o">+</span> Population<span class="p">),</span> m <span class="o">=</span> <span class="m">3</span><span class="p">,</span> dots <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> seed <span class="o">=</span> <span class="m">29</span><span class="p">,</span> plotit <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;Observed&quot;</span><span class="p">,</span><span class="s">&quot;Residual&quot;</span><span class="p">),</span> main <span class="o">=</span> <span class="s">&quot;Small symbols show cross-validation predicted values&quot;</span><span class="p">,</span> legend.pos <span class="o">=</span> <span class="s">&quot;topleft&quot;</span><span class="p">,</span> printit <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
@@ -4182,7 +4182,7 @@ CVlm<span class="p">(</span>longley<span class="p">,</span> form.lm <span class=
 9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Analysis of Variance Table
 ## 
 ## Response: Armed.Forces
-##            Df Sum Sq Mean Sq F value Pr(&gt;F)   
+##            Df Sum Sq Mean Sq F value Pr(&amp;gt;F)   
 ## GNP         1  14479   14479    5.66 0.0333 * 
 ## Population  1  24941   24941    9.76 0.0081 **
 ## Residuals  13  33226    2556                  
@@ -4263,7 +4263,7 @@ CVlm<span class="p">(</span>longley<span class="p">,</span> form.lm <span class=
 </td></tr></table>
 
 <h4 id="variable-selection-heuristic-methods">Variable selection &ndash; Heuristic methods<a class="headerlink" href="#variable-selection-heuristic-methods" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>longley<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -4279,7 +4279,7 @@ CVlm<span class="p">(</span>longley<span class="p">,</span> form.lm <span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4303,7 +4303,7 @@ step <span class="o">&lt;-</span> stepAIC<span class="p">(</span>fit<span class=
 ## Armed.Forces ~ GNP + Population + Employed + Unemployed
 ## 
 ##              Df Sum of Sq   RSS AIC
-## &lt;none&gt;                    21655 125
+## &amp;lt;none&amp;gt;                    21655 125
 ## - Unemployed  1      4508 26163 126
 ## - Population  1      5522 27177 127
 ## - Employed    1     10208 31863 130
@@ -4311,7 +4311,7 @@ step <span class="o">&lt;-</span> stepAIC<span class="p">(</span>fit<span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>step<span class="o">$</span>anova <span class="c1"># display results</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>step<span class="o">$</span>anova <span class="c1"># display results</span>
 </pre></div>
 </td></tr></table>
 
@@ -4342,7 +4342,7 @@ step <span class="o">&lt;-</span> stepAIC<span class="p">(</span>fit<span class=
 </td></tr></table>
 
 <p>The goal is to reduce the AIC. Adding variable does not improve the model. Let&rsquo;s opt for the most valuable variable.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fit <span class="o">&lt;-</span> lm<span class="p">(</span>Armed.Forces <span class="o">~</span> Unemployed<span class="p">,</span> data <span class="o">=</span> longley<span class="p">)</span>
 step <span class="o">&lt;-</span> stepAIC<span class="p">(</span>fit<span class="p">,</span> direction <span class="o">=</span> <span class="s">&quot;both&quot;</span><span class="p">)</span>
 </pre></div>
@@ -4365,18 +4365,18 @@ step <span class="o">&lt;-</span> stepAIC<span class="p">(</span>fit<span class=
 ## 
 ##              Df Sum of Sq   RSS AIC
 ## - Unemployed  1      2287 72646 137
-## &lt;none&gt;                    70359 138
+## &amp;lt;none&amp;gt;                    70359 138
 ## 
 ## Step:  AIC=137
 ## Armed.Forces ~ 1
 ## 
 ##              Df Sum of Sq   RSS AIC
-## &lt;none&gt;                    72646 137
+## &amp;lt;none&amp;gt;                    72646 137
 ## + Unemployed  1      2287 70359 138
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>step<span class="o">$</span>anova <span class="c1"># display results</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>step<span class="o">$</span>anova <span class="c1"># display results</span>
 </pre></div>
 </td></tr></table>
 
@@ -4409,13 +4409,13 @@ step <span class="o">&lt;-</span> stepAIC<span class="p">(</span>fit<span class=
 </td></tr></table>
 
 <h4 id="variable-selection-graphical-methods">Variable selection &ndash; Graphical methods<a class="headerlink" href="#variable-selection-graphical-methods" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># model</span>
 fit <span class="o">&lt;-</span> lm<span class="p">(</span>Armed.Forces <span class="o">~</span> GNP <span class="o">+</span> Population <span class="o">+</span> Employed <span class="o">+</span> Unemployed<span class="p">,</span> data <span class="o">=</span> longley<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4487,7 +4487,7 @@ leaps <span class="o">&lt;-</span> regsubsets<span class="p">(</span>Armed.Force
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># plot a table of models showing variables in each model</span>
 <span class="c1"># models are ordered by the selection statistic</span>
@@ -4496,7 +4496,7 @@ plot<span class="p">(</span>leaps<span class="p">,</span> scale <span class="o">
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-55-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># plot statistic by subset size</span>
@@ -4519,7 +4519,7 @@ subsets<span class="p">(</span>leaps<span class="p">,</span> statistic <span cla
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>subsets<span class="p">(</span>leaps<span class="p">,</span> statistic <span class="o">=</span> <span class="s">&quot;bic&quot;</span><span class="p">,</span> legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># available criteria are rsq, rss, adjr2, cp, bic</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>subsets<span class="p">(</span>leaps<span class="p">,</span> statistic <span class="o">=</span> <span class="s">&quot;bic&quot;</span><span class="p">,</span> legend <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># available criteria are rsq, rss, adjr2, cp, bic</span>
 </pre></div>
 </td></tr></table>
 
@@ -4539,7 +4539,7 @@ subsets<span class="p">(</span>leaps<span class="p">,</span> statistic <span cla
 <h4 id="variable-selection-relative-importance">Variable selection &ndash; Relative importance<a class="headerlink" href="#variable-selection-relative-importance" title="Permanent link">&para;</a></h4>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>Armed.Forces <span class="o">~</span> GNP <span class="o">+</span> Population <span class="o">+</span> Employed <span class="o">+</span> Unemployed<span class="p">,</span> data <span class="o">=</span> longley<span class="p">)</span></code>.</p>
 <p>Warning: <code class="codehilite">eval=FALSE</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># calculate the relative importance of each predictor</span>
@@ -4603,7 +4603,7 @@ Unemployed -0.132  -0.511  -0.584  -0.436
 <p><strong>Bootstrapping</strong></p>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>Armed.Forces <span class="o">~</span> GNP <span class="o">+</span> Population <span class="o">+</span> Employed <span class="o">+</span> Unemployed<span class="p">,</span> data <span class="o">=</span> longley<span class="p">)</span></code>.</p>
 <p>Warning: <code class="codehilite">eval=FALSE</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># bootstrap measures of relative importance (1000 samples)</span>
 boot <span class="o">&lt;-</span> boot.relimp<span class="p">(</span>fit<span class="p">,</span> b <span class="o">=</span> <span class="m">1000</span><span class="p">,</span> type <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;lmg&quot;</span><span class="p">,</span> <span class="s">&quot;last&quot;</span><span class="p">,</span> <span class="s">&quot;first&quot;</span><span class="p">,</span> <span class="s">&quot;pratt&quot;</span><span class="p">),</span> rank <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> diff <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> rela <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
@@ -4795,7 +4795,7 @@ CAUTION: Bootstrap confidence intervals can be somewhat liberal.
 </td></tr></table>
 
 <p>Warning: <code class="codehilite">eval=FALSE</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>plot<span class="p">(</span>booteval.relimp<span class="p">(</span>boot<span class="p">,</span> sort <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="c1"># to plot the results</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>plot<span class="p">(</span>booteval.relimp<span class="p">(</span>boot<span class="p">,</span> sort <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="c1"># to plot the results</span>
 </pre></div>
 </td></tr></table>
 
@@ -4811,7 +4811,7 @@ CAUTION: Bootstrap confidence intervals can be somewhat liberal.
 <li>The <code class="codehilite">robustbase</code> package also provides basic robust statistics including model selection methods.</li>
 </ul>
 <h3 id="regression-diagnostics">Regression diagnostics<a class="headerlink" href="#regression-diagnostics" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># assume that we are fitting a multiple linear regression</span>
 fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span>
@@ -4836,7 +4836,7 @@ fit
 </td></tr></table>
 
 <h4 id="outliers">Outliers<a class="headerlink" href="#outliers" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>car<span class="p">)</span>
@@ -4851,26 +4851,26 @@ outlierTest<span class="p">(</span>fit<span class="p">)</span> <span class="c1">
 3
 4
 5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-## No Studentized residuals with Bonferonni p &lt; 0.05
+## No Studentized residuals with Bonferonni p &amp;lt; 0.05
 ## Largest |rstudent|:
 ##                rstudent unadjusted p-value Bonferonni p
 ## Toyota Corolla     2.52             0.0184        0.588
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>qqPlot<span class="p">(</span>fit<span class="p">,</span> main <span class="o">=</span> <span class="s">&quot;QQ Plot&quot;</span><span class="p">)</span> <span class="c1">#qq plot for studentized resid</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>qqPlot<span class="p">(</span>fit<span class="p">,</span> main <span class="o">=</span> <span class="s">&quot;QQ Plot&quot;</span><span class="p">)</span> <span class="c1">#qq plot for studentized resid</span>
 </pre></div>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-60-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>leveragePlots<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># leverage plots</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>leveragePlots<span class="p">(</span>fit<span class="p">)</span> <span class="c1"># leverage plots</span>
 </pre></div>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-60-2.png" /></center></p>
 <h4 id="influential-observations">Influential observations<a class="headerlink" href="#influential-observations" title="Permanent link">&para;</a></h4>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span></code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4883,7 +4883,7 @@ avPlots<span class="p">(</span>fit<span class="p">)</span>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-61-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4899,7 +4899,7 @@ plot<span class="p">(</span>fit<span class="p">,</span> which <span class="o">=<
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-61-2.png" /></center></p>
 <p>Warning: <code class="codehilite">eval=FALSE</code>; interactive function.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># influence plot</span>
 influencePlot<span class="p">(</span>fit<span class="p">,</span> id.method <span class="o">=</span> <span class="s">&quot;identify&quot;</span><span class="p">,</span> main <span class="o">=</span> <span class="s">&quot;Influence Plot&quot;</span><span class="p">,</span> sub <span class="o">=</span> <span class="s">&quot;Circle size is proportial to Cook&#39;s Distance&quot;</span> <span class="p">)</span>
 </pre></div>
@@ -4908,7 +4908,7 @@ influencePlot<span class="p">(</span>fit<span class="p">,</span> id.method <span
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-62-1.png" /></center></p>
 <h4 id="nonnormality">Nonnormality<a class="headerlink" href="#nonnormality" title="Permanent link">&para;</a></h4>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span></code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4921,7 +4921,7 @@ qqPlot<span class="p">(</span>fit<span class="p">,</span> main <span class="o">=
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-63-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4943,7 +4943,7 @@ lines<span class="p">(</span>xfit<span class="p">,</span> yfit<span class="p">)<
 <h4 id="heteroscedasticity">Heteroscedasticity<a class="headerlink" href="#heteroscedasticity" title="Permanent link">&para;</a></h4>
 <p>Nonconstant error variance.</p>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span></code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># evaluate homoscedasticity</span>
 <span class="c1"># non-constant error variance test</span>
@@ -4959,7 +4959,7 @@ ncvTest<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># plot studentized residuals vs. fitted values</span>
 spreadLevelPlot<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
@@ -4974,7 +4974,7 @@ spreadLevelPlot<span class="p">(</span>fit<span class="p">)</span>
 
 <h4 id="multicollinearity">Multicollinearity<a class="headerlink" href="#multicollinearity" title="Permanent link">&para;</a></h4>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span></code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># evaluatecCollinearity</span>
 vif<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
@@ -4986,7 +4986,7 @@ vif<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">sqrt</span><span class="p">(</span>vif<span class="p">(</span>fit<span class="p">))</span> <span class="o">&gt;</span> <span class="m">2</span> <span class="c1"># benchmark = 1.96, rounded to 2</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">sqrt</span><span class="p">(</span>vif<span class="p">(</span>fit<span class="p">))</span> <span class="o">&gt;</span> <span class="m">2</span> <span class="c1"># benchmark = 1.96, rounded to 2</span>
 </pre></div>
 </td></tr></table>
 
@@ -4998,7 +4998,7 @@ vif<span class="p">(</span>fit<span class="p">)</span>
 
 <h4 id="nonlinearity">Nonlinearity<a class="headerlink" href="#nonlinearity" title="Permanent link">&para;</a></h4>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span></code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># evaluate nonlinearity</span>
 <span class="c1"># component + residual plot</span>
@@ -5007,7 +5007,7 @@ crPlots<span class="p">(</span>fit<span class="p">)</span>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-66-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Ceres plots</span>
 ceresPlots<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
@@ -5017,7 +5017,7 @@ ceresPlots<span class="p">(</span>fit<span class="p">)</span>
 <h4 id="autocorrelation">Autocorrelation<a class="headerlink" href="#autocorrelation" title="Permanent link">&para;</a></h4>
 <p>Serial correlation or non-independence of errors.</p>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span></code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># test for autocorrelated errors</span>
 durbinWatsonTest<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
@@ -5033,7 +5033,7 @@ durbinWatsonTest<span class="p">(</span>fit<span class="p">)</span>
 
 <h4 id="global-diagnostic">Global diagnostic<a class="headerlink" href="#global-diagnostic" title="Permanent link">&para;</a></h4>
 <p>Model: <code class="codehilite">fit <span class="o">&lt;-</span> lm<span class="p">(</span>mpg <span class="o">~</span> disp <span class="o">+</span> hp <span class="o">+</span> wt <span class="o">+</span> drat<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span></code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -5089,7 +5089,7 @@ gvmodel <span class="o">&lt;-</span> gvlma<span class="p">(</span>fit<span class
 ## -3.508 -1.905 -0.506  0.982  5.688 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
+##             Estimate Std. Error t value Pr(&amp;gt;|t|)    
 ## (Intercept) 29.14874    6.29359    4.63  8.2e-05 ***
 ## disp         0.00382    0.01080    0.35   0.7268    
 ## hp          -0.03478    0.01160   -3.00   0.0058 ** 
@@ -5121,7 +5121,7 @@ gvmodel <span class="o">&lt;-</span> gvlma<span class="p">(</span>fit<span class
 
 <h3 id="anova_1">ANOVA<a class="headerlink" href="#anova_1" title="Permanent link">&para;</a></h3>
 <p>Analysis of variance (ANOVA) is an alternative to regressions among other applications.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -5153,7 +5153,7 @@ fit <span class="o">&lt;-</span> aov<span class="p">(</span>y <span class="o">~<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>CO2<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -5171,7 +5171,7 @@ fit <span class="o">&lt;-</span> aov<span class="p">(</span>y <span class="o">~<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># one-way ANOVA (completely randomized design)</span>
 fit <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Plant<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5201,7 +5201,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -5209,7 +5209,7 @@ fit
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Plant       11   4862     442    6.57 1.8e-07 ***
 ## Residuals   72   4845      67                    
 ## ---
@@ -5217,7 +5217,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># randomized block design (B is the blocking factor)</span>
 fit <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Plant <span class="o">+</span> Type<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5249,7 +5249,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -5257,7 +5257,7 @@ fit
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Plant       11   4862     442    6.57 1.8e-07 ***
 ## Residuals   72   4845      67                    
 ## ---
@@ -5265,7 +5265,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># two-way factorial design</span>
 fit <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Plant <span class="o">+</span> Type <span class="o">+</span> Plant<span class="o">:</span>Type<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5297,7 +5297,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -5305,7 +5305,7 @@ fit
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Plant       11   4862     442    6.57 1.8e-07 ***
 ## Residuals   72   4845      67                    
 ## ---
@@ -5313,7 +5313,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fit <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Plant<span class="o">*</span>Type<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span> <span class="c1"># same thing</span>
 fit
 </pre></div>
@@ -5343,7 +5343,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -5351,7 +5351,7 @@ fit
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Plant       11   4862     442    6.57 1.8e-07 ***
 ## Residuals   72   4845      67                    
 ## ---
@@ -5359,7 +5359,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Analysis of Covariance</span>
 fit <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> uptake <span class="o">+</span> conc<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5389,7 +5389,7 @@ fit
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">summary</span><span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -5397,7 +5397,7 @@ fit
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## conc         1   2285    2285    25.2 2.9e-06 ***
 ## Residuals   82   7422      91                    
 ## ---
@@ -5412,7 +5412,7 @@ fit
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># display Type I ANOVA table</span>
 fit1 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Plant <span class="o">+</span> Type<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5424,7 +5424,7 @@ fit1 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class=
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Plant       11   4862     442    6.57 1.8e-07 ***
 ## Residuals   72   4845      67                    
 ## ---
@@ -5432,7 +5432,7 @@ fit1 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># display Type I ANOVA table</span>
 fit2 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Type <span class="o">+</span> Plant<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5445,7 +5445,7 @@ fit2 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class=
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##             Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Type         1   3366    3366   50.02 8.1e-10 ***
 ## Plant       10   1497     150    2.22   0.026 *  
 ## Residuals   72   4845      67                    
@@ -5454,7 +5454,7 @@ fit2 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># display type III SS and F tests</span>
 drop1<span class="p">(</span>fit1<span class="p">,</span> <span class="o">~</span> <span class="m">.</span><span class="p">,</span> test <span class="o">=</span> <span class="s">&quot;F&quot;</span><span class="p">)</span>
 </pre></div>
@@ -5473,8 +5473,8 @@ drop1<span class="p">(</span>fit1<span class="p">,</span> <span class="o">~</spa
 ## 
 ## Model:
 ## uptake ~ Plant + Type
-##        Df Sum of Sq  RSS AIC F value Pr(&gt;F)  
-## &lt;none&gt;              4845 365                 
+##        Df Sum of Sq  RSS AIC F value Pr(&amp;gt;F)  
+## &amp;lt;none&amp;gt;              4845 365                 
 ## Plant  10      1497 6341 367    2.22  0.026 *
 ## Type    0         0 4845 365                 
 ## ---
@@ -5482,7 +5482,7 @@ drop1<span class="p">(</span>fit1<span class="p">,</span> <span class="o">~</spa
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>drop1<span class="p">(</span>fit2<span class="p">,</span> <span class="o">~</span> <span class="m">.</span><span class="p">,</span> test <span class="o">=</span> <span class="s">&quot;F&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>drop1<span class="p">(</span>fit2<span class="p">,</span> <span class="o">~</span> <span class="m">.</span><span class="p">,</span> test <span class="o">=</span> <span class="s">&quot;F&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -5499,8 +5499,8 @@ drop1<span class="p">(</span>fit1<span class="p">,</span> <span class="o">~</spa
 ## 
 ## Model:
 ## uptake ~ Type + Plant
-##        Df Sum of Sq  RSS AIC F value Pr(&gt;F)  
-## &lt;none&gt;              4845 365                 
+##        Df Sum of Sq  RSS AIC F value Pr(&amp;gt;F)  
+## &amp;lt;none&amp;gt;              4845 365                 
 ## Type    0         0 4845 365                 
 ## Plant  10      1497 6341 367    2.22  0.026 *
 ## ---
@@ -5509,7 +5509,7 @@ drop1<span class="p">(</span>fit1<span class="p">,</span> <span class="o">~</spa
 </td></tr></table>
 
 <h4 id="compare-nested-models-directly">Compare nested models directly<a class="headerlink" href="#compare-nested-models-directly" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fit1 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Plant <span class="o">+</span> Type<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5529,13 +5529,13 @@ anova<span class="p">(</span>fit1<span class="p">,</span> fit2<span class="p">)<
 ## 
 ## Model 1: uptake ~ Plant + Type
 ## Model 2: uptake ~ Plant
-##   Res.Df  RSS Df Sum of Sq F Pr(&gt;F)
+##   Res.Df  RSS Df Sum of Sq F Pr(&amp;gt;F)
 ## 1     72 4845                      
 ## 2     72 4845  0         0
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>fit2 <span class="o">&lt;-</span> aov<span class="p">(</span>uptake <span class="o">~</span> Plant <span class="o">+</span> Type<span class="p">,</span> data <span class="o">=</span> CO2<span class="p">)</span>
@@ -5555,7 +5555,7 @@ anova<span class="p">(</span>fit1<span class="p">,</span> fit2<span class="p">)<
 ## 
 ## Model 1: uptake ~ Plant
 ## Model 2: uptake ~ Plant + Type
-##   Res.Df  RSS Df Sum of Sq F Pr(&gt;F)
+##   Res.Df  RSS Df Sum of Sq F Pr(&amp;gt;F)
 ## 1     72 4845                      
 ## 2     72 4845  0         0
 </pre></div>
@@ -5569,7 +5569,7 @@ anova<span class="p">(</span>fit1<span class="p">,</span> fit2<span class="p">)<
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -5730,7 +5730,7 @@ TukeyHSD<span class="p">(</span>fit<span class="p">)</span>
 </td></tr></table>
 
 <h4 id="visualizing-results">Visualizing results<a class="headerlink" href="#visualizing-results" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -5753,7 +5753,7 @@ interaction.plot<span class="p">(</span>cyl<span class="p">,</span> gear<span cl
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-75-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># mean plots for single factors, and includes confidence intervals</span>
@@ -5764,13 +5764,13 @@ plotmeans<span class="p">(</span>mpg <span class="o">~</span> cyl<span class="p"
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-75-2.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">detach</span><span class="p">(</span>mtcars<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">detach</span><span class="p">(</span>mtcars<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <h4 id="manova">MANOVA<a class="headerlink" href="#manova" title="Permanent link">&para;</a></h4>
 <p>Multivariate analysis of variance (MANOVA) With more than one dependent variable Y. We can run several ANOVA over different Y, or one MANOVA with one Y built with several variables.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>longley<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>longley<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -5784,7 +5784,7 @@ plotmeans<span class="p">(</span>mpg <span class="o">~</span> cyl<span class="p"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -5808,7 +5808,7 @@ fit <span class="o">&lt;-</span> manova<span class="p">(</span>Y <span class="o"
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                Df Pillai approx F num Df den Df  Pr(&gt;F)    
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                Df Pillai approx F num Df den Df  Pr(&amp;gt;F)    
 ## Population      1  0.997     1074      3     10 7.7e-13 ***
 ## GNP             1  0.888       26      3     10 4.6e-05 ***
 ## Population:GNP  1  0.870       22      3     10 9.4e-05 ***
@@ -5818,7 +5818,7 @@ fit <span class="o">&lt;-</span> manova<span class="p">(</span>Y <span class="o"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># test = &quot;Wilks&quot;, &quot;Hotelling-Lawley&quot;, and &quot;Roy&quot;</span>
@@ -5854,7 +5854,7 @@ summary.aov<span class="p">(</span>fit<span class="p">)</span>
 24
 25
 26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  Response Unemployed :
-##                Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+##                Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Population      1  61739   61739   45.92   2e-05 ***
 ## GNP             1  42841   42841   31.87 0.00011 ***
 ## Population:GNP  1  10270   10270    7.64 0.01715 *  
@@ -5863,7 +5863,7 @@ summary.aov<span class="p">(</span>fit<span class="p">)</span>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ##  Response Armed.Forces :
-##                Df Sum Sq Mean Sq F value Pr(&gt;F)   
+##                Df Sum Sq Mean Sq F value Pr(&amp;gt;F)   
 ## Population      1   9647    9647    4.25 0.0617 . 
 ## GNP             1  29772   29772   13.10 0.0035 **
 ## Population:GNP  1   5958    5958    2.62 0.1314   
@@ -5872,7 +5872,7 @@ summary.aov<span class="p">(</span>fit<span class="p">)</span>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ##  Response Employed :
-##                Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+##                Df Sum Sq Mean Sq F value  Pr(&amp;gt;F)    
 ## Population      1  170.6   170.6  546.45 2.2e-11 ***
 ## GNP             1   10.5    10.5   33.60 8.5e-05 ***
 ## Population:GNP  1    0.1     0.1    0.41    0.54    
@@ -5882,7 +5882,7 @@ summary.aov<span class="p">(</span>fit<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -5900,7 +5900,7 @@ fit2 <span class="o">&lt;-</span> manova<span class="p">(</span>Y <span class="o
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                Df Pillai approx F num Df den Df  Pr(&gt;F)    
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                Df Pillai approx F num Df den Df  Pr(&amp;gt;F)    
 ## Population      1  0.997     1074      3     10 7.7e-13 ***
 ## GNP             1  0.888       26      3     10 4.6e-05 ***
 ## Population:GNP  1  0.870       22      3     10 9.4e-05 ***
@@ -5910,7 +5910,7 @@ fit2 <span class="o">&lt;-</span> manova<span class="p">(</span>Y <span class="o
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># type III Population effect</span>
 <span class="kp">summary</span><span class="p">(</span>fit2<span class="p">)</span>
 </pre></div>
@@ -5922,7 +5922,7 @@ fit2 <span class="o">&lt;-</span> manova<span class="p">(</span>Y <span class="o
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                Df Pillai approx F num Df den Df  Pr(&gt;F)    
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                Df Pillai approx F num Df den Df  Pr(&amp;gt;F)    
 ## GNP             1  0.997     1088      3     10 7.2e-13 ***
 ## Population      1  0.786       12      3     10  0.0011 ** 
 ## GNP:Population  1  0.870       22      3     10 9.4e-05 ***
@@ -5939,7 +5939,7 @@ fit2 <span class="o">&lt;-</span> manova<span class="p">(</span>Y <span class="o
 <h3 id="manova-assumptions">(M)ANOVA Assumptions<a class="headerlink" href="#manova-assumptions" title="Permanent link">&para;</a></h3>
 <h4 id="outliers_1">Outliers<a class="headerlink" href="#outliers_1" title="Permanent link">&para;</a></h4>
 <p>Outliers can severely affect normality and homogeneity of variance.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>mtcars<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -5955,7 +5955,7 @@ fit2 <span class="o">&lt;-</span> manova<span class="p">(</span>Y <span class="o
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -5976,7 +5976,7 @@ aq.plot<span class="p">(</span>mtcars<span class="p">[</span><span class="kt">c<
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-79-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>outliers <span class="c1"># show list of outliers</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>outliers <span class="c1"># show list of outliers</span>
 </pre></div>
 </td></tr></table>
 
@@ -6028,12 +6028,12 @@ aq.plot<span class="p">(</span>mtcars<span class="p">[</span><span class="kt">c<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>par<span class="p">(</span>mfrow <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>par<span class="p">(</span>mfrow <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
 <h4 id="univariate-normality">Univariate normality<a class="headerlink" href="#univariate-normality" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Q-Q plot</span>
 qqnorm<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)</span>
@@ -6042,7 +6042,7 @@ qqline<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-80-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Shapiro-Wilk test of normality</span>
 shapiro.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)</span>
 </pre></div>
@@ -6060,7 +6060,7 @@ shapiro.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>nortest<span class="p">)</span>
@@ -6082,7 +6082,7 @@ ad.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Cramer-von Mises test for normality</span>
 cvm.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)</span>
 </pre></div>
@@ -6100,7 +6100,7 @@ cvm.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Lilliefors (Kolmogorov-Smirnov) test for normality</span>
 lillie.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)</span>
 </pre></div>
@@ -6118,7 +6118,7 @@ lillie.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Pearson chi-square test for normality</span>
 pearson.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)</span>
 </pre></div>
@@ -6136,7 +6136,7 @@ pearson.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Shapiro-Francia test for normality</span>
 sf.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">)</span>
 </pre></div>
@@ -6155,7 +6155,7 @@ sf.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">
 </td></tr></table>
 
 <h4 id="multivariate-normality">Multivariate normality<a class="headerlink" href="#multivariate-normality" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>EuStockMarkets<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>EuStockMarkets<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -6169,7 +6169,7 @@ sf.test<span class="p">(</span>mtcars<span class="o">$</span>mpg<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>mvnormtest<span class="p">)</span>
@@ -6187,12 +6187,12 @@ mshapiro.test<span class="p">(</span><span class="kp">t</span><span class="p">(<
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  Z
-## W = 0.9, p-value &lt;2e-16
+## W = 0.9, p-value &amp;lt;2e-16
 </pre></div>
 </td></tr></table>
 
 <p>With a p x 1 multivariate normal random vector x vector, the squared Mahalanobis distance between x and ?? is going to be chi-square distributed with p degrees of freedom.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6215,7 +6215,7 @@ abline<span class="p">(</span>a <span class="o">=</span> <span class="m">0</span
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-84-1.png" /></center></p>
 <h4 id="heteroscedasticity_1">Heteroscedasticity<a class="headerlink" href="#heteroscedasticity_1" title="Permanent link">&para;</a></h4>
 <p>Nonconstant error variance or non-homogeneity of variances.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>mtcars<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -6231,7 +6231,7 @@ abline<span class="p">(</span>a <span class="o">=</span> <span class="m">0</span
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># y is a numeric variable and G is the grouping variable</span>
 <span class="c1"># Bartlett parametric test of homogeneity of variances</span>
@@ -6251,7 +6251,7 @@ bartlett.test<span class="p">(</span>mpg <span class="o">~</span> cyl<span class
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Figner-Killeen non-parametric test of homogeneity of variances</span>
 fligner.test<span class="p">(</span>mpg <span class="o">~</span> cyl<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span> 
 </pre></div>
@@ -6269,7 +6269,7 @@ fligner.test<span class="p">(</span>mpg <span class="o">~</span> cyl<span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6295,7 +6295,7 @@ hov<span class="p">(</span>mpg <span class="o">~</span> <span class="kp">factor<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># homogeneity of variance plot</span>
 <span class="c1"># graphic test of homogeneity of variances based on Brown-Forsyth</span>
@@ -6305,7 +6305,7 @@ hovPlot<span class="p">(</span>mpg <span class="o">~</span> <span class="kp">fac
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Notes/unnamed-chunk-87-1.png" /></center></p>
 <p><strong>Non-homogeneity of covariance matrices</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>iris<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -6321,7 +6321,7 @@ hovPlot<span class="p">(</span>mpg <span class="o">~</span> <span class="kp">fac
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>biotools<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>biotools<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -6331,7 +6331,7 @@ hovPlot<span class="p">(</span>mpg <span class="o">~</span> <span class="kp">fac
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Box&#39;s M test</span>
 <span class="c1"># very sensitive to violations of normality, leading to rejection in most typical cases</span>
@@ -6347,13 +6347,13 @@ boxM<span class="p">(</span>iris<span class="p">[,</span> <span class="m">-5</sp
 ##  Box&#39;s M-test for Homogeneity of Covariance Matrices
 ## 
 ## data:  iris[, -5]
-## Chi-Sq (approx.) = 100, df = 20, p-value &lt;2e-16
+## Chi-Sq (approx.) = 100, df = 20, p-value &amp;lt;2e-16
 </pre></div>
 </td></tr></table>
 
 <h3 id="resampling-statistics">Resampling Statistics<a class="headerlink" href="#resampling-statistics" title="Permanent link">&para;</a></h3>
 <h4 id="independent-k-sample-location-tests">Independent k-sample location tests<a class="headerlink" href="#independent-k-sample-location-tests" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>mtcars<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
@@ -6369,7 +6369,7 @@ boxM<span class="p">(</span>iris<span class="p">[,</span> <span class="m">-5</sp
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6397,7 +6397,7 @@ wilcox_test<span class="p">(</span>mpg <span class="o">~</span> <span class="kp"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># lower case letters represent numerical variables and upper case letters represent categorical factors</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># lower case letters represent numerical variables and upper case letters represent categorical factors</span>
 </pre></div>
 </td></tr></table>
 
@@ -6407,7 +6407,7 @@ wilcox_test<span class="p">(</span>mpg <span class="o">~</span> <span class="kp"
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6436,7 +6436,7 @@ oneway_test<span class="p">(</span>mpg <span class="o">~</span> <span class="kp"
 </td></tr></table>
 
 <h4 id="symmetry-of-a-response-for-repeated-measurements">Symmetry of a response for repeated measurements<a class="headerlink" href="#symmetry-of-a-response-for-repeated-measurements" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6464,7 +6464,7 @@ wilcoxsign_test<span class="p">(</span>mpg <span class="o">~</span> <span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Freidman Test based on 9999 Monte-Carlo resamplings.</span>
@@ -6475,7 +6475,7 @@ friedman_test<span class="p">(</span>y <span class="o">~</span> A <span class="o
 </td></tr></table>
 
 <h4 id="independence-of-two-numeric-variables">Independence of two numeric variables<a class="headerlink" href="#independence-of-two-numeric-variables" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6502,7 +6502,7 @@ spearman_test<span class="p">(</span>mpg <span class="o">~</span> am<span class=
 </td></tr></table>
 
 <h4 id="independence-in-contingency-tables">Independence in contingency tables<a class="headerlink" href="#independence-in-contingency-tables" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dataset</span>
 <span class="kp">head</span><span class="p">(</span>CO2<span class="p">)</span>
 </pre></div>
@@ -6526,7 +6526,7 @@ spearman_test<span class="p">(</span>mpg <span class="o">~</span> am<span class=
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -6576,7 +6576,7 @@ cochran <span class="o">&lt;-</span> <span class="kt">data.frame</span><span cla
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6597,12 +6597,12 @@ chisq_test<span class="p">(</span>Plant <span class="o">~</span> Type<span class
 ##  Approximative Linear-by-Linear Association Test
 ## 
 ## data:  Plant (ordered) by Type (Quebec, Mississippi)
-## Z = -8, p-value &lt;2e-16
+## Z = -8, p-value &amp;lt;2e-16
 ## alternative hypothesis: two.sided
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Cochran-Mantel-Haenzsel Test of 3-way Contingency Table</span>
@@ -6628,7 +6628,7 @@ mh_test<span class="p">(</span>diphtheria <span class="o">~</span> media <span c
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -6651,7 +6651,7 @@ lbl_test<span class="p">(</span>Plant <span class="o">~</span> Type<span class="
 ##  Approximative Linear-by-Linear Association Test
 ## 
 ## data:  Plant (ordered) by Type (Quebec, Mississippi)
-## Z = -8, p-value &lt;2e-16
+## Z = -8, p-value &amp;lt;2e-16
 ## alternative hypothesis: two.sided
 </pre></div>
 </td></tr></table>

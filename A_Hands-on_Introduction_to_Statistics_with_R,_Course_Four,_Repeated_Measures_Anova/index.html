@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#repeated-measures-anova" tabindex="1" class="md-skip">
+      <a href="#repeated-measures-anova" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -959,7 +959,7 @@
 <p>Use a within-subjects design for for Experiment 1 and between-groups design for Experiment 2.</p>
 <p>Is it always either manipulation between-groups or manipulation within-groups, or are there experiments where you could use either approach? In some cases, either approach is possible.</p>
 <p><strong>Explore the working memory data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Print the data set in the console</span>
 str<span class="p">(</span>wm<span class="p">)</span>
 </pre></div>
@@ -975,7 +975,7 @@ str<span class="p">(</span>wm<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1077,14 +1077,14 @@ describeBy<span class="p">(</span>wm<span class="p">,</span> wm<span class="o">$
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Boxplot IQ versus condition</span>
 boxplot<span class="p">(</span>wm<span class="o">$</span>iq <span class="o">~</span> wm<span class="o">$</span>condition<span class="p">,</span> main <span class="o">=</span> <span class="s">&#39;Boxplot&#39;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&#39;Training sessions&#39;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&#39;IQ&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Four,_Repeated_Measures_Anova/unnamed-chunk-3-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Illustration data, each line represents the development of each subject by number of trainings</span>
 ggplot<span class="p">(</span>data <span class="o">=</span> wm<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wm<span class="o">$</span>condition<span class="p">,</span> y <span class="o">=</span> wm<span class="o">$</span>iq<span class="p">,</span> group <span class="o">=</span> wm<span class="o">$</span>subject<span class="p">,</span> colour <span class="o">=</span> wm<span class="o">$</span>subject<span class="p">))</span> <span class="o">+</span> geom_line<span class="p">()</span> <span class="o">+</span> geom_point<span class="p">()</span>
 </pre></div>
@@ -1115,7 +1115,7 @@ ggplot<span class="p">(</span>data <span class="o">=</span> wm<span class="p">,<
 <p><strong>Understanding sphericity</strong></p>
 <p>The variances of the differences between all possible pairs of groups (i.e. levels of the independent variable) are equal.</p>
 <p><strong>Mauchly&rsquo;s test</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1154,7 +1154,7 @@ mauchly.test<span class="p">(</span>mlm<span class="p">,</span> x <span class="o
 <p><strong>The systematic between groups variance</strong></p>
 <p>To understand everything a bit better, we will calculate the F-ratio for a repeated measures design by ourself in the next exercises.</p>
 <p>First, we will need the systematic between-groups variance. This is the same as in the between-groups design&ndash;the variance due to grouping by condition.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1198,7 +1198,7 @@ ms_cond <span class="o">&lt;-</span> ss_cond<span class="o">/</span>df
 <li>If we subtract these two results, we will get the error term of the repeated measures design.</li>
 </ul>
 <p>The systematic (stable) subject variance will be taken out of the error term, so the error term is reduced in comparison with the between-groups design.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1236,7 +1236,7 @@ ms_subjects <span class="o">&lt;-</span> ss_subjects<span class="o">/</span>df
 
 <p><strong>The unsystematic within groups variance</strong></p>
 <p>To calculate the error term of the repeated measures design, we need the unsystematic within-groups variance: the unsystematic variance or the error term of the between-groups design.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1294,7 +1294,7 @@ ms_sa <span class="o">&lt;-</span> ss_sa<span class="o">/</span>df
 
 <p><strong>The unsystematic variance for the repeated measures design</strong></p>
 <p>Now we can easily calculate the unsystematic variance for the repeated measures design, also called the error term.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1315,7 +1315,7 @@ ms_rm <span class="o">&lt;-</span> ss_rm<span class="o">/</span>df
 <p>Now we&rsquo;ve calculated the error term of the repeated measures design, which is clearly smaller than the error term of the between-groups design because you reduced this one. To complete you can now calculate the F-ratio and the corresponding p-value.</p>
 <p><strong>F-ratio and p-value</strong></p>
 <p>To do the ANOVA analysis we actually need the F-ratio and the corresponding p-value.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1343,7 +1343,7 @@ p <span class="o">&lt;-</span> <span class="m">1</span> <span class="o">-</span>
 <p>The inconsistent individual differences across conditions, the effect of subjects that differ across conditions. So it is an interaction between subjects and condition.</p>
 <p><strong>Anova in R</strong></p>
 <p>ANOVA in R is usually done with the <code class="codehilite">aov</code> function.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1367,11 +1367,11 @@ model <span class="o">&lt;-</span> aov<span class="p">(</span>wm<span class="o">
 10
 11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
 ## Error: wm$subject
-##           Df Sum Sq Mean Sq F value Pr(&gt;F)
+##           Df Sum Sq Mean Sq F value Pr(&amp;gt;F)
 ## Residuals 19  175.6   9.242               
 ## 
 ## Error: wm$subject:wm$condition
-##              Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+##              Df Sum Sq Mean Sq F value   Pr(&amp;gt;F)    
 ## wm$condition  3  196.1   65.36   12.51 2.16e-06 ***
 ## Residuals    57  297.8    5.22                     
 ## ---
@@ -1382,7 +1382,7 @@ model <span class="o">&lt;-</span> aov<span class="p">(</span>wm<span class="o">
 <p>The F-ratio is significant. Therefore, the number of training days does affect the IQ scores.</p>
 <p><strong>Effect size</strong></p>
 <p>Calculate eta-squared, which helps you estimate effect size.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1404,7 +1404,7 @@ eta_sq <span class="o">&lt;-</span> ss_cond <span class="o">/</span> ss_total
 
 <p><strong>Post-hoc test one</strong></p>
 <p>We will now look at a few different procedures for the post-hoc test. Let&rsquo;s start with the Holm procedure.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Post-hoc test: default procedure</span>
 <span class="kp">with</span><span class="p">(</span>wm<span class="p">,</span> pairwise.t.test<span class="p">(</span>iq<span class="p">,</span> condition<span class="p">,</span> paired <span class="o">=</span> <span class="bp">T</span><span class="p">))</span>
 </pre></div>
@@ -1439,7 +1439,7 @@ eta_sq <span class="o">&lt;-</span> ss_cond <span class="o">/</span> ss_total
 <p>We can conclude that all pairwise comparisons are significant, except for the comparison between 19 and 17 and the comparison between 12 and 8.</p>
 <p><strong>Post-hoc test: Bonferroni</strong></p>
 <p>Now we&rsquo;ll take a look at the most conservative procedure, Bonferroni. This procedure will apply the most extreme adjustments to the p-values.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Post-hoc test: Bonferroni procedure</span>
 <span class="kp">with</span><span class="p">(</span>wm<span class="p">,</span> pairwise.t.test<span class="p">(</span>iq<span class="p">,</span> condition<span class="p">,</span> paired <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> p.adjust.method <span class="o">=</span> <span class="s">&#39;bonferroni&#39;</span><span class="p">))</span>
 </pre></div>
@@ -1473,7 +1473,7 @@ eta_sq <span class="o">&lt;-</span> ss_cond <span class="o">/</span> ss_total
 <p><strong>Paired t-test</strong></p>
 <p>Assume that you do not know how to perform an analysis of variance (ANOVA), we may do a number of paired t-tests instead.</p>
 <p>Have a look at just one paired t-test and take, for example, the comparison between 12 days and 17 days.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Define two subsets containing the IQ scores for the condition group &#39;12 days&#39; and &#39;17 days&#39;</span>
@@ -1489,7 +1489,7 @@ cond_12days
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># t-test</span>
 t.test<span class="p">(</span>cond_12days<span class="p">,</span> cond_17days<span class="p">,</span> paired <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>

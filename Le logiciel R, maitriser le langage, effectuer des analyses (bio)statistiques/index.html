@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#gui" tabindex="1" class="md-skip">
+      <a href="#gui" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -2647,7 +2647,7 @@
 <li>and many more.</li>
 </ul>
 <h4 id="array-and-matrix">Array and matrix<a class="headerlink" href="#array-and-matrix" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2724,7 +2724,7 @@
 <li><code class="codehilite"><span class="mi">1</span><span class="o">:</span><span class="mi">3</span></code>.</li>
 </ul>
 <h4 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2748,7 +2748,7 @@
 <li><code class="codehilite">data.frame(name = c(), name = c(), name = c(), etc)</code>; each column is a vector with a name.</li>
 </ul>
 <h4 id="time-series">Time series<a class="headerlink" href="#time-series" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2770,7 +2770,7 @@
 <h4 id="chapter-2-import-export-and-producing-data">Chapter 2, Import-Export and Producing Data<a class="headerlink" href="#chapter-2-import-export-and-producing-data" title="Permanent link">&para;</a></h4>
 <p><sub>import, export, i/o</sub></p>
 <h4 id="input-data-from-files">Input data from files<a class="headerlink" href="#input-data-from-files" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>read.table<span class="p">(</span>file <span class="o">=</span> path<span class="o">/</span>file.txt<span class="p">,</span> header <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> sep<span class="o">=</span> <span class="s">&quot;\t&quot;</span><span class="p">,</span> dec<span class="o">=</span><span class="s">&quot;.&quot;</span><span class="p">,</span> row.names <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>read.table<span class="p">(</span>file <span class="o">=</span> path<span class="o">/</span>file.txt<span class="p">,</span> header <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> sep<span class="o">=</span> <span class="s">&quot;\t&quot;</span><span class="p">,</span> dec<span class="o">=</span><span class="s">&quot;.&quot;</span><span class="p">,</span> row.names <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -2822,7 +2822,7 @@
 <li>and many more.</li>
 </ul>
 <h4 id="measure-computation-time">Measure computation time<a class="headerlink" href="#measure-computation-time" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2842,14 +2842,14 @@ dbsnp <span class="o">&lt;-</span> read.table<span class="p">(</span><span class
 
 <h5 id="produce-by-repetition">Produce by repetition<a class="headerlink" href="#produce-by-repetition" title="Permanent link">&para;</a></h5>
 <p><sub>repeat</sub></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> reach <span class="o">=</span> <span class="m">2</span><span class="p">,</span> len <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
 <span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">1</span> <span class="m">2</span>
 </pre></div>
 </td></tr></table>
 
 <h4 id="produce-random-numbers">Produce random numbers<a class="headerlink" href="#produce-random-numbers" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2865,7 +2865,7 @@ runif<span class="p">(</span><span class="m">5</span><span class="p">,</span> mi
 
 <p>More on random number in Chapter 10, Random Variables, Laws, and Simulation.</p>
 <p><strong>Produce random number following a distribution</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># generate random numbers following the normal distribution</span>
 rnorm<span class="p">(</span><span class="m">5</span><span class="p">)</span>
@@ -2875,7 +2875,7 @@ rnorm<span class="p">(</span><span class="m">5</span><span class="p">)</span>
 
 <p>Generate numbers with other distributions.</p>
 <p><strong>Produce random number by sampling a population</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2925,7 +2925,7 @@ rnorm<span class="p">(</span><span class="m">5</span><span class="p">)</span>
 </ul>
 <h3 id="chapter-3-data-manipulation">Chapter 3, Data Manipulation<a class="headerlink" href="#chapter-3-data-manipulation" title="Permanent link">&para;</a></h3>
 <h4 id="arithmetics">Arithmetics<a class="headerlink" href="#arithmetics" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2970,7 +2970,7 @@ x <span class="o">+</span> y
 <li><code class="codehilite">rbind()</code>.</li>
 </ul>
 <p><em>REF: p.98</em></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3052,7 +3052,7 @@ y
 </ul>
 <p><em>REF: p.99</em></p>
 <h4 id="sweep-functions">Sweep functions<a class="headerlink" href="#sweep-functions" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3101,7 +3101,7 @@ y
 <p><em>REF: p.100-101</em></p>
 <h4 id="stack-functions">Stack functions<a class="headerlink" href="#stack-functions" title="Permanent link">&para;</a></h4>
 <p><sub>stack, unstack</sub></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3173,7 +3173,7 @@ w
 
 <h4 id="aggregation-functions">Aggregation functions<a class="headerlink" href="#aggregation-functions" title="Permanent link">&para;</a></h4>
 <p><sub>aggregate</sub></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3245,7 +3245,7 @@ aggregate<span class="p">(</span>w<span class="p">,</span> by <span class="o">=<
 </ul>
 <p><em>REF: p.126-127</em></p>
 <h4 id="venn-functions">Venn functions<a class="headerlink" href="#venn-functions" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3344,7 +3344,7 @@ B <span class="o">&lt;-</span> <span class="m">3</span><span class="o">:</span><
 </ul>
 <p><em>REF: p.110-113</em></p>
 <h4 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3418,7 +3418,7 @@ x<span class="o">$</span>numb<span class="p">[</span><span class="m">2</span><sp
 
 <p><em>REF: p.113-115</em></p>
 <h4 id="string">String<a class="headerlink" href="#string" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3490,7 +3490,7 @@ x<span class="o">$</span>numb<span class="p">[</span><span class="m">2</span><sp
 </ul>
 <p><em>REF: p.120-123</em></p>
 <h4 id="custom-functions-two-examples">Custom functions (two examples)<a class="headerlink" href="#custom-functions-two-examples" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3555,7 +3555,7 @@ g<span class="p">(</span>a<span class="p">,</span> <span class="kp">abs</span><s
 <li><code class="codehilite">while</code>.</li>
 <li><code class="codehilite">repeat</code>.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3594,7 +3594,7 @@ i <span class="o">&lt;-</span> <span class="m">0</span>
 </td></tr></table>
 
 <p><strong>Loop example</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3653,7 +3653,7 @@ IMC<span class="p">(</span>p<span class="p">,</span> <span class="kp">t</span><s
 </td></tr></table>
 
 <p><strong>Loops increase computation time</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3753,7 +3753,7 @@ stat.ethz.ch/mailman/listinfo/r-annonce</li>
 <li><code class="codehilite">postscript()</code>.</li>
 <li><code class="codehilite">pdf()</code>.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3802,7 +3802,7 @@ dev.off<span class="p">()</span>
 <li><code class="codehilite">par(mfrow = c(3, 2))</code>; create 6 graphic boxes, 3 rows X 2 columns.</li>
 </ul>
 <p><em>REF: p.166-167</em></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3829,7 +3829,7 @@ layout.show<span class="p">(</span><span class="m">5</span><span class="p">)</sp
 <li><code class="codehilite">abline(a = 1, b = 1)</code>.</li>
 </ul>
 <h4 id="random-numbers">Random numbers<a class="headerlink" href="#random-numbers" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3885,7 +3885,7 @@ x
 <li><code class="codehilite">plot(1:40, col = rainbow(n), pch = 19, cex = 2),     grid(col = &quot;grey50&quot;)</code>; show.</li>
 <li><code class="codehilite">RColorBrewer</code> package.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span><span class="s">&#39;RColorBrewer&#39;</span><span class="p">)</span>
 display.brewer.all<span class="p">()</span>
 </pre></div>
@@ -3917,7 +3917,7 @@ plot(1,1); locate area to be annotated with <code class="codehilite">text()</cod
 </ul>
 <p><em>REF: p.190-201</em></p>
 <h3 id="chapter-6-initiation-to-r-programming">Chapter 6, Initiation to R Programming<a class="headerlink" href="#chapter-6-initiation-to-r-programming" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">function</span> <span class="p">(</span><span class="o">&lt;</span>parameters<span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
     <span class="o">&lt;</span><span class="kp">body</span><span class="o">&gt;</span>
@@ -3925,7 +3925,7 @@ plot(1,1); locate area to be annotated with <code class="codehilite">text()</cod
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3975,7 +3975,7 @@ bonjour<span class="p">(</span>l<span class="o">=</span><span class="s">&quot;a&
 
 <p><em>REF: p.218-219</em></p>
 <h4 id="union">Union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3990,7 +3990,7 @@ A <span class="o">%union%</span> B
 </td></tr></table>
 
 <h4 id="class">Class<a class="headerlink" href="#class" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4017,7 +4017,7 @@ A <span class="o">%union%</span> B
 </td></tr></table>
 
 <h4 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>x <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span>
@@ -4049,7 +4049,7 @@ A <span class="o">%union%</span> B
 <li><a href="https://www.rdocumentation.org/taskviews/HighPerformanceComputing?">HighPerformanceComputing list of packages</a>.</li>
 </ul>
 <p><strong>Try parallel computing with a Monte Carlo with the <code class="codehilite">parallel</code> package</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4087,7 +4087,7 @@ A <span class="o">%union%</span> B
 <li>Then, type <code class="codehilite">1</code> in R.</li>
 <li>Enter <code class="codehilite">detectCores()</code> from the <code class="codehilite">parallel</code> package.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4118,7 +4118,7 @@ A <span class="o">%union%</span> B
 <ul>
 <li>The process number (PID) of each computation node (core) in the cluster.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">require</span><span class="p">(</span><span class="s">&quot;parallel&quot;</span><span class="p">)</span>
@@ -4215,7 +4215,7 @@ out <span class="o">&lt;-</span> clusterCall<span class="p">(</span>cl<span clas
 <h4 id="math-functions">Math functions<a class="headerlink" href="#math-functions" title="Permanent link">&para;</a></h4>
 <p><em>REF: p.342</em></p>
 <h4 id="matrix-calculation">Matrix calculation<a class="headerlink" href="#matrix-calculation" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>  1
   2
   3
   4
@@ -4575,7 +4575,7 @@ y
 
 <h4 id="integral-calculus">Integral calculus<a class="headerlink" href="#integral-calculus" title="Permanent link">&para;</a></h4>
 <p><sub>integration</sub></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>myf <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span> <span class="kp">exp</span><span class="p">(</span><span class="o">-</span>x<span class="o">^</span><span class="m">2</span> <span class="o">/</span> <span class="m">2</span><span class="p">)</span> <span class="o">/</span> <span class="kp">sqrt</span><span class="p">(</span><span class="m">2</span>  <span class="o">*</span><span class="kc">pi</span><span class="p">)</span> <span class="p">}</span>
@@ -4587,7 +4587,7 @@ integrate<span class="p">(</span>myf<span class="p">,</span> lower <span class="
 
 <p><strong>Differential calculus</strong></p>
 <p><sub>derivative</sub></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4617,7 +4617,7 @@ f<span class="p">(</span><span class="m">3</span><span class="p">)</span>
 </ul>
 <h4 id="optimisation">Optimisation<a class="headerlink" href="#optimisation" title="Permanent link">&para;</a></h4>
 <p><sub>linear, programming, constraints, min-max</sub></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4637,7 +4637,7 @@ optimize<span class="p">(</span><span class="kr">function</span><span class="p">
 <li>and many more.</li>
 </ul>
 <p><strong>Unit root</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>unitroot<span class="p">(</span>f<span class="o">=</span><span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span> <span class="kp">cos</span><span class="p">(</span>x<span class="o">^</span><span class="m">2</span><span class="p">)</span> <span class="p">},</span> lower <span class="o">=</span> <span class="m">0</span><span class="p">,</span>upper <span class="o">=</span> <span class="m">2</span><span class="p">,</span>tol <span class="o">=</span> <span class="m">0.00001</span><span class="p">)</span><span class="o">$</span>root
 
@@ -4664,7 +4664,7 @@ optimize<span class="p">(</span><span class="kr">function</span><span class="p">
 <li><code class="codehilite">labels(var)</code>; output the labels.</li>
 <li><code class="codehilite">nlevels(var)</code>; output the number of levels.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4804,7 +4804,7 @@ mydata <span class="o">&lt;-</span> <span class="kp">ordered</span><span class="
 <li><code class="codehilite">rnorm(1)</code>; generate a random numbers, following the normal distribution.</li>
 <li>generate random numbers with a randomness function and <code class="codehilite">curve()</code>.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4819,7 +4819,7 @@ plot<span class="p">(</span>density<span class="p">(</span>rnorm<span class="p">
 </td></tr></table>
 
 <p><em>REF: p.422-423</em></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4920,7 +4920,7 @@ plot<span class="p">(</span>density<span class="p">(</span>rnorm<span class="p">
 <p><em>REF: p.498-499</em></p>
 <h4 id="normality">Normality<a class="headerlink" href="#normality" title="Permanent link">&para;</a></h4>
 <p><sub>histogram, test, residual, quantile-quantile, quantile, qq<sub> </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>par<span class="p">(</span>mfrow<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
 hist<span class="p">(</span>residuals<span class="p">(</span>model<span class="p">),</span> main <span class="o">=</span> <span class="s">&quot;Histogram&quot;</span><span class="p">)</span>
 </pre></div>

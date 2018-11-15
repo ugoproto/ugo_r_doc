@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#first-order-of-business-basic-manipulations" tabindex="1" class="md-skip">
+      <a href="#first-order-of-business-basic-manipulations" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -995,7 +995,7 @@
 <p><code class="codehilite">xts</code> are indexed by a formal time object. You can time-stamp the data.</p>
 <p>The main <code class="codehilite">xts</code> constructor two most important arguments are <code class="codehilite">x</code> for the data and <code class="codehilite">order.by</code> for the index. <code class="codehilite">x</code> must be a vector or matrix. <code class="codehilite">order.by</code> is a vector of the same length or number of rows of <code class="codehilite">x</code>; it must be a proper time or date object and it must be in increasing order.</p>
 <p><code class="codehilite">xts</code> also allows you to bind arbitrary key-value attributes to your data. This lets you keep metadata about your object inside your object.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># load zoo</span>
@@ -1006,7 +1006,7 @@
 </td></tr></table>
 
 <p><strong>A first <code class="codehilite">xts</code> object</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1050,7 +1050,7 @@ ex_matrix
 
 <p><strong>More than a matrix</strong></p>
 <p><code class="codehilite">xts</code> objects are normal R matrices, but with special powers.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># View the structure of ex_matrix</span>
 str<span class="p">(</span>ex_matrix<span class="p">)</span>
 </pre></div>
@@ -1068,7 +1068,7 @@ str<span class="p">(</span>ex_matrix<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1089,7 +1089,7 @@ core<span class="p">[</span><span class="m">3</span><span class="p">,</span> <sp
 <p>2</p>
 <p><strong>Your first xts object</strong></p>
 <p>Vector must be of the same length or number of rows as x and, this is very important: it must be a proper time or date object and it must be in increasing order.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1188,7 +1188,7 @@ hayek
 <p><strong>Deconstructing xts</strong></p>
 <p>Separate a time series into its core data and index attributes for additional analysis and manipulation.</p>
 <p>Functions are methods from the <code class="codehilite">zoo</code> class.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1216,7 +1216,7 @@ hayek_index <span class="o">&lt;-</span> index<span class="p">(</span>hayek<span
 <p>&lsquo;Date&rsquo;</p>
 <p><strong>Time-based indices</strong></p>
 <p><code class="codehilite">xts</code> objects get their power from the index attribute that holds the time dimension. One major difference between <code class="codehilite">xts</code> and most other time series objects in R is the ability to use any one of various classes that are used to represent time. Whether <code class="codehilite">POSIXct</code>, <code class="codehilite">Date</code>, or some other class, xts will convert this into an internal form to make subsetting as natural to the user as possible.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1271,7 +1271,7 @@ ts_b<span class="p">[</span>index<span class="p">(</span>ts_a<span class="p">)]<
 <h3 id="first-order-of-business-basic-manipulations">First Order of Business &ndash; Basic Manipulations<a class="headerlink" href="#first-order-of-business-basic-manipulations" title="Permanent link">&para;</a></h3>
 <p><strong>Converting xts objects</strong></p>
 <p><code class="codehilite">xts</code> provides methods to convert all of the major objects you are likely to come across - suitable native R types like matrix, data.frame, and ts are supported, as well as contributed ones such as <code class="codehilite">timeSeries</code>, <code class="codehilite">fts</code> and of course <code class="codehilite">zoo</code>. <code class="codehilite">as.xts</code> is the workhorse function to do the conversions to <code class="codehilite">xts</code>, and similar functions will provide the reverse behavior.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># using a R dataset</span>
 <span class="kp">head</span><span class="p">(</span>austres<span class="p">)</span>
 </pre></div>
@@ -1286,7 +1286,7 @@ ts_b<span class="p">[</span>index<span class="p">(</span>ts_a<span class="p">)]<
     <li>13353.9</li>
 </ol>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1347,7 +1347,7 @@ am2 <span class="o">&lt;-</span> <span class="kp">as.matrix</span><span class="p
 <p><strong>Importing data</strong></p>
 <p>Read raw data from files on disk or the web and convert data to <code class="codehilite">xts</code>.</p>
 <p>Read the same data into a <code class="codehilite">zoo</code> object using read.zoo and convert the <code class="codehilite">zoo</code> into an <code class="codehilite">xts</code> object.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create dat by reading tmp_file</span>
 dat <span class="o">&lt;-</span> <span class="kp">as.matrix</span><span class="p">(</span>read.csv<span class="p">(</span><span class="s">&#39;tmp_file.csv&#39;</span><span class="p">,</span> sep <span class="o">=</span> <span class="s">&#39;,&#39;</span><span class="p">,</span> header <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
@@ -1363,7 +1363,7 @@ dat
 </tbody>
 </table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Convert dat into xts</span>
 xts<span class="p">(</span>dat<span class="p">,</span> order.by <span class="o">=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="kp">rownames</span><span class="p">(</span>dat<span class="p">),</span> <span class="s">&quot;%m%d%Y&quot;</span><span class="p">))</span>
 </pre></div>
@@ -1372,12 +1372,12 @@ xts<span class="p">(</span>dat<span class="p">,</span> order.by <span class="o">
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>     a b
-&lt;NA&gt; 1 3
-&lt;NA&gt; 2 4
+&amp;lt;NA&amp;gt; 1 3
+&amp;lt;NA&amp;gt; 2 4
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Read tmp_file using read.zoo and as.xts</span>
 dat_xts <span class="o">&lt;-</span> as.xts<span class="p">(</span>read.zoo<span class="p">(</span><span class="s">&#39;tmp_file.csv&#39;</span><span class="p">,</span> index.column <span class="o">=</span> <span class="m">0</span><span class="p">,</span> sep <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span> format <span class="o">=</span> <span class="s">&quot;%m/%d/%Y&quot;</span><span class="p">))</span>
@@ -1394,7 +1394,7 @@ dat_xts
 </td></tr></table>
 
 <p><strong>Exporting xts objects</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>sunspots<span class="p">,</span> <span class="m">5</span><span class="p">)</span>
@@ -1412,7 +1412,7 @@ sunspots_xts <span class="o">&lt;-</span> as.xts<span class="p">(</span>sunspots
     <li>85</li>
 </ol>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1429,7 +1429,7 @@ tmp
 </td></tr></table>
 
 <p>&lsquo;/tmp/RtmptS40lc/file18ce2b6bba8&rsquo;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1471,7 +1471,7 @@ mai 1749 85.0
 <p><strong>Querying for dates</strong></p>
 <p>Date ranges can be extracted from xts objects by simply specifying the period(s) you want using special character strings in your subset.</p>
 <p>Code:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1495,7 +1495,7 @@ jan_march <span class="o">&lt;-</span> x<span class="p">[</span><span class="s">
 <p>Most common data &ldquo;in the wild&rdquo; is daily. On ocassion you may find yourself working with intraday data, that is date plus times.</p>
 <p>You can slice days easily by using special notation in the <code class="codehilite">i =</code> argument to the single bracket extraction (i.e. <code class="codehilite">[i,j]</code>).</p>
 <p>Code:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1516,7 +1516,7 @@ morn_2010<span class="p">[</span><span class="s">&quot;2010-01-13&quot;</span><s
 <p><strong>Alternating extraction techniques</strong></p>
 <p>Often times you may need to subset an existing time series with a set of Dates, or time-based objects. These might be from <code class="codehilite">as.Date()</code>, or <code class="codehilite">as.POSIXct()</code>, or a variety of other classes.</p>
 <p>Code:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1530,7 +1530,7 @@ x<span class="p">[</span><span class="kp">as.POSIXct</span><span class="p">(</sp
 
 <p><strong>Extracting recurring intraday intervals</strong></p>
 <p>The most common time series data is daily, intraday data, which contains both dates and times. </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1544,7 +1544,7 @@ morn_2010<span class="p">[</span><span class="s">&quot;2010-01-13&quot;</span><s
 
 <p><strong>Row selection with time objects</strong></p>
 <p>Subset an existing time series with a set of Dates, or time-based objects.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1559,7 +1559,7 @@ x<span class="p">[</span><span class="kp">as.POSIXct</span><span class="p">(</sp
 <p><strong>Update and replace elements</strong></p>
 <p>Replace known intervals or observations with an NA, say due to a malfunctioning sensor on a particular day or a set of outliers given a holiday.</p>
 <p>Code:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1574,7 +1574,7 @@ x<span class="p">[</span><span class="s">&quot;20160609/&quot;</span><span class
 <p><strong>Find the <code class="codehilite">first</code> or <code class="codehilite">last</code> period of time</strong></p>
 <p>Sometimes you need to locate data by relative time. Instead of using an absolute offset, you describe a position relative in time. A simple example would be something like the <em>last 3 weeks</em> of a series, or the <em>first day of current month</em>.</p>
 <p>Code:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1594,7 +1594,7 @@ last<span class="p">(</span>lastweek<span class="p">,</span> <span class="s">&qu
 
 <p><strong>Combining <code class="codehilite">first</code> and <code class="codehilite">last</code></strong></p>
 <p>Code:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1615,7 +1615,7 @@ first<span class="p">(</span>last<span class="p">(</span>first<span class="p">(<
 <li>Reindex your data (before or after the calculation).</li>
 </ol>
 <p><code class="codehilite">xts</code> respects time and will only return the intersection of times when doing various mathematical operations. First option:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1629,7 +1629,7 @@ a <span class="o">+</span> <span class="kp">as.numeric</span><span class="p">(</
 
 <p><strong>Math with non-overlapping indexes</strong></p>
 <p>This third way involves modifying the two series you want by aligning assuring you have some union of dates - the dates you require in your final output. This makes it possibly to preserve dimensionality of the data:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1656,7 +1656,7 @@ a <span class="o">+</span> <span class="kp">merge</span><span class="p">(</span>
 <li>left join</li>
 <li>right join</li>
 </ol>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1680,7 +1680,7 @@ a <span class="o">+</span> <span class="kp">merge</span><span class="p">(</span>
 
 <p><strong>Combining <code class="codehilite">xts</code> by row with <code class="codehilite">rbind</code></strong></p>
 <p>Easy to add new rows to your data.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1695,7 +1695,7 @@ temps3 <span class="o">&lt;-</span> <span class="kp">rbind</span><span class="p"
 <p><strong>Fill missing values using last or previous observation</strong></p>
 <p>The <code class="codehilite">na.locf</code> function takes the last-observation-carried-forward approach.</p>
 <p>The <code class="codehilite">xts</code> package leverages the power of <code class="codehilite">zoo</code> for help with this. <code class="codehilite">zoo</code> provides a variety of missing data handling functions which are usable by <code class="codehilite">xts</code>, and very handy.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1731,7 +1731,7 @@ na.locf<span class="p">(</span>temps<span class="p">,</span> na.rm <span class="
 <p>From <code class="codehilite">zoo</code>.</p>
 <p>On occassion, a simple carry forward approach to missingness isn&rsquo;t appropriate. It may be that a series is missing an observation due to a higher frequency sampling than the generating process. You might also encounter an observation that is in error, yet expected to be somewhere between the values of its neighboring observations.</p>
 <p>Both of these cases are examples of where interpolation is useful.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Interpolate NAs using linear approximation</span>
 na.approx<span class="p">(</span>AirPass<span class="p">)</span>
 </pre></div>
@@ -1739,7 +1739,7 @@ na.approx<span class="p">(</span>AirPass<span class="p">)</span>
 
 <p><strong>Combine a leading and lagging time series</strong></p>
 <p>Another common modification for time series is the ability to lag a series.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1778,7 +1778,7 @@ z <span class="o">&lt;-</span> <span class="kp">merge</span><span class="p">(</s
 <p><strong>Calculate a difference of a series with <code class="codehilite">diff</code></strong></p>
 <p>Another common operation on time series, typically on those that are non-stationary, is to take a difference of the series.</p>
 <p><code class="codehilite">differences</code> is the order of the difference (how many times <code class="codehilite">diff</code> is called). A simple way to view a single (or <em>first order</em>) difference is to see it as <code class="codehilite">x(t) - x(t-k)</code> where <code class="codehilite">k</code> is the number of lags to go back. Higher order differences are simply the reapplication of a difference to each prior result (like a second derivative or a difference of the difference).</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1799,7 +1799,7 @@ AirPass <span class="o">-</span> lag<span class="p">(</span>AirPass<span class="
 <p><strong>Find intervals by time in <code class="codehilite">xts</code></strong></p>
 <p>The main function in xts to facilitate this is endpoints. It takes a time series (or a vector of times) and returns the locations of the last observations in each interval.</p>
 <p>For example, the code below locates the last observation of each year for the <code class="codehilite">AirPass</code> dataset:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1825,7 +1825,7 @@ endpoints<span class="p">(</span>temps<span class="p">,</span> on <span class="o
 
 <p><strong>Apply a function by time period(s)</strong></p>
 <p><code class="codehilite">xts</code> provides <code class="codehilite">period.apply</code>, which takes a time series, an <code class="codehilite">INDEX</code> of endpoints, and a function to <code class="codehilite">apply</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1843,7 +1843,7 @@ period.apply<span class="p">(</span>temps<span class="p">[,</span> <span class="
 
 <p><strong>Using <code class="codehilite">lapply</code> and <code class="codehilite">split</code> to apply functions on intervals</strong></p>
 <p>Often it is useful to physically split your data into disjoint chunks by time and perform some calculation on these periods.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1856,7 +1856,7 @@ temps_weekly <span class="o">&lt;-</span> <span class="kp">split</span><span cla
 </td></tr></table>
 
 <p><strong>Selection by <code class="codehilite">endpoints</code> vs. <code class="codehilite">split-lapply-rbind</code></strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1876,7 +1876,7 @@ T2 <span class="o">&lt;-</span> Temps<span class="p">[</span>last_day_of_weeks<s
 <p>In financial series it is common to find Open-High-Low-Close data calculated over some repeating and regular interval.</p>
 <p>Also known as range bars, aggregating a series based on some regular window can make analysis easier amongst series that have varying frequencies. For example, a weekly economic series and a daily stock series can be compared more easily if the daily is converted to weekly.</p>
 <p>OHLC means Opening, High, Low, Closing values.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1919,7 +1919,7 @@ USDEUR_yearly <span class="o">&lt;-</span> to.period<span class="p">(</span>USDE
 <p><strong>Convert a series to a lower frequency</strong></p>
 <p>Besides converting univariate time series to OHLC series, to.period() also lets you convert OHLC to lower regularized frequency - something like subsampling your data.</p>
 <p>For example, when using the shortcut function <code class="codehilite">to.quarterly()</code> xts will convert your index to the <code class="codehilite">yearqtr</code> class to make periods more obvious.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1935,7 +1935,7 @@ mkt_quarterly2 <span class="o">&lt;-</span> to.quarterly<span class="p">(</span>
 
 <p><strong>Calculate basic rolling value of series by month</strong></p>
 <p>Rolling windows can be discrete: use <code class="codehilite">lapply</code> with (<code class="codehilite">cumsum, cumprod, cummax, cummin</code>) and <code class="codehilite">split</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1967,7 +1967,7 @@ edhec_xts <span class="o">&lt;-</span> <span class="kp">do.call</span><span clas
 
 <p><strong>Calculate the rolling standard deviation of a time series</strong></p>
 <p>Rolling windows can be continuous: use <code class="codehilite">rollapply</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rollapply<span class="p">(</span>x<span class="p">,</span> <span class="m">10</span><span class="p">,</span> FUN <span class="o">=</span> <span class="kp">max</span><span class="p">,</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
@@ -1991,7 +1991,7 @@ eq_monthly <span class="o">&lt;-</span> rollapply<span class="p">(</span>EqMktNe
 <li>The time zone using indexTZ (e.g. from America/Chicago to Europe/London)</li>
 <li>The time format to be displayed via indexFormat (e.g. YYYY/MM/DD)</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2018,7 +2018,7 @@ time<span class="p">(</span>temps<span class="p">)</span>
 <p><strong>Time zones - (and why you should care!)</strong></p>
 <p>R provides time zone support in native classes <code class="codehilite">POSIXct</code> and <code class="codehilite">POSIXlt</code>. xts extends this power to the entire object, allowing you to have multiple timezones across various objects. One very important thing to remember is that some internal operation system functions require a timezone to do date math, and if not set one is chosen for you! Be careful to always set a timezone in your environment to prevent very hard to debug errors when working with dates and times. </p>
 <p><code class="codehilite">xts</code> provides the function <code class="codehilite">tzone</code>. This function allows to you to extract, or set timezones. <code class="codehilite">tzone<span class="p">(</span>x<span class="p">)</span> <span class="o">&lt;-</span> <span class="s">&quot;Time_Zone&quot;</span></code> In this exercise you will work with an object called times to practice constructing your own xts objects with custom time zones.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2044,7 +2044,7 @@ indexTZ<span class="p">(</span>times_xts<span class="p">)</span>
 <p><code class="codehilite">make.index.unique()</code> removes observations from duplicate time stamps.</p>
 <p><strong>Determining periodicity</strong></p>
 <p>The idea of periodicity is pretty simple; with what regularity does your data repeat? For stock market data, you might have hourly prices or maybe daily open-high-low-close bars. For macro economic series, it might be monthly or weekly survey numbers.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2071,7 +2071,7 @@ periodicity<span class="p">(</span>edhec_yearly<span class="p">)</span>
 <p><strong>Find the number of periods in your data</strong></p>
 <p>Often times it is handy to know not just the range of your time series index, but also have an idea of how many discrete irregular periods this covers. xts provides a set of functions to do just that. If you have a time series, it is now easy to see how many days, weeks or years your data contains.</p>
 <p>Count: <code class="codehilite">nseconds()</code>, <code class="codehilite">nminutes()</code>, <code class="codehilite">nhours()</code>, etc.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2092,7 +2092,7 @@ nyears<span class="p">(</span>edhec<span class="p">)</span>
 <p><strong>Secret index tools</strong></p>
 <p>Normally you want to access the times you stored. <code class="codehilite">index()</code> does this magically for you by using your <code class="codehilite">indexClass</code>. To get to the raw vector another function is provided, <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code>. Note the critical dot before the function name.</p>
 <p>More useful than extracting raw seconds is the ability to extract time components similar to the <code class="codehilite">POSIXlt</code> class, which mirrors closely the underlying POSIX internal compiled structure <code class="codehilite">tm</code>. This is provided by a handful of functions such as <code class="codehilite"><span class="na">.indexday</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexmon</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexyear</span><span class="p">()</span></code> and more.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2116,7 +2116,7 @@ temps<span class="p">[</span>index<span class="p">]</span>
 <p>Depending on your field you might encounter higher frequency data - think intraday trading intervals, or sensor data from medical equipment.</p>
 <p>If you find that you have observations with identical timestamps, it might be useful to perturb or remove these times to allow for uniqueness.</p>
 <p>On other ocassions you might find your timestamps a bit too precise. In these instances it might be better to round up to some fixed interval, for example an observation may occur at any point in an hour, but you want to record the latest as of beginning of the next hour.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
