@@ -116,7 +116,8 @@ markdown_extensions:
 ## |Content Cell  | Content Cell |
   - admonition 
 ## https://squidfunk.github.io/mkdocs-material/extensions/admonition/
-  - codehilite(linenums=true)
+  - codehilite:
+      linenums: true
 ## ```python hl_lines="1 2"
 ## a=1
 ## ```
@@ -132,7 +133,11 @@ markdown_extensions:
   - smarty
 ## additional characters: ' "  «  ... -- ---
 ## watch when copy-pasted
-  - toc(title=CONTENT, permalink=true, anchorlink=false, baselevel=3)
+  - toc:
+      title: CONTENT
+      permalink: true
+      anchorlink: false
+      baselevel: 3
 ## permalink link to a subpart of the document
 ## anchorlink causes all headers to link to themselves.
 ## https://python-markdown.github.io/extensions/toc/
@@ -168,7 +173,8 @@ markdown_extensions:
 ## +/-  -->  <--  <-->  =/=  1/4  1st 2nd
   - pymdownx.superfences
 ## nest code blocks under blockquotes
-  - pymdownx.tasklist(clickable_checkbox=true)
+  - pymdownx.tasklist:
+      clickable_checkbox: true
 ## https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
 ## - [ ]  - [x]
   - pymdownx.tilde

@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#importing-data-into-r" tabindex="1" class="md-skip">
+      <a href="#importing-data-into-r" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1745,7 +1745,7 @@
 <li>Needs arguments.</li>
 </ul>
 <p><strong><code class="codehilite">read.csv</code> for .csv files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1760,7 +1760,7 @@ pools <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="
 </td></tr></table>
 
 <p><code class="codehilite">stringsAsFactors</code></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1773,7 +1773,7 @@ pools_factor <span class="o">&lt;-</span> read.csv<span class="p">(</span><span 
 </td></tr></table>
 
 <p><strong><code class="codehilite">read.delim</code> for .txt files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1786,7 +1786,7 @@ hotdogs <span class="o">&lt;-</span> read.delim<span class="p">(</span><span cla
 </td></tr></table>
 
 <p>Arguments.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1804,7 +1804,7 @@ tom <span class="o">&lt;-</span> hotdogs<span class="p">[</span><span class="kp"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1831,12 +1831,12 @@ hotdogs2 <span class="o">&lt;-</span> read.delim<span class="p">(</span><span cl
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>utils<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>utils<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong><code class="codehilite">read.table</code> .txt files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1850,7 +1850,7 @@ hotdogs <span class="o">&lt;-</span> read.table<span class="p">(</span>path<span
 
 <hr />
 <h4 id="from-importing-data-from-the-web">(from Importing Data from the Web)<a class="headerlink" href="#from-importing-data-from-the-web" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1885,19 +1885,19 @@ pools1 <span class="o">&lt;-</span> read.csv<span class="p">(</span>url_csv<span
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>readr<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>readr<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong><code class="codehilite">read_delim</code> .txt files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import potatoes.txt using read_delim(): potatoes</span>
 potatoes <span class="o">&lt;-</span> read_delim<span class="p">(</span><span class="s">&#39;potatoes.txt&#39;</span><span class="p">,</span> delim <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong><code class="codehilite">read_csv</code> .csv files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1930,7 +1930,7 @@ potatoes2<span class="o">$</span>method <span class="o">=</span> <span class="kp
 </td></tr></table>
 
 <p><strong><code class="codehilite">col_types</code>, <code class="codehilite">skip</code> and <code class="codehilite">n_max</code> in .tsv files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1951,7 +1951,7 @@ potatoes_char <span class="o">&lt;-</span> read_tsv<span class="p">(</span><span
 </td></tr></table>
 
 <p><strong>Setting column types</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cols<span class="p">(</span>
@@ -1962,12 +1962,12 @@ potatoes_char <span class="o">&lt;-</span> read_tsv<span class="p">(</span><span
 </td></tr></table>
 
 <p><strong>Removing NA</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>na <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;NA&#39;</span><span class="p">,</span> <span class="s">&#39;null&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>na <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;NA&#39;</span><span class="p">,</span> <span class="s">&#39;null&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong><code class="codehilite">col_types</code> with collectors .tsv files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1990,7 +1990,7 @@ hotdogs_factor <span class="o">&lt;-</span> read_tsv<span class="p">(</span><spa
 </td></tr></table>
 
 <p><strong>Skiping columns</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2003,7 +2003,7 @@ hotdogs_factor <span class="o">&lt;-</span> read_tsv<span class="p">(</span><spa
 </td></tr></table>
 
 <p><strong>Reading an ordinary text file</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2024,7 +2024,7 @@ tweets_all
 </td></tr></table>
 
 <p><strong>Writing .csv and .tsv files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2037,7 +2037,7 @@ write_csv<span class="p">(</span>cwts2<span class="p">,</span> <span class="s">&
 </td></tr></table>
 
 <p><strong>Writing .rds files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2056,14 +2056,14 @@ trees2 <span class="o">&lt;-</span> read_rds<span class="p">(</span><span class=
 </td></tr></table>
 
 <p><strong>Coercing columns to different data types</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Convert all columns to double</span>
 trees2 <span class="o">&lt;-</span> type_convert<span class="p">(</span>trees<span class="p">,</span> col_types <span class="o">=</span> cols<span class="p">(</span>Girth <span class="o">=</span> <span class="s">&#39;d&#39;</span><span class="p">,</span> Height <span class="o">=</span> <span class="s">&#39;d&#39;</span><span class="p">,</span> Volume <span class="o">=</span> <span class="s">&#39;d&#39;</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Coercing character columns into factors</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2076,14 +2076,14 @@ salaries<span class="o">$</span>gender <span class="o">&lt;-</span> parse_factor
 </td></tr></table>
 
 <p><strong>Creating Date objects</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change type of date column</span>
 weather<span class="o">$</span>date <span class="o">&lt;-</span> parse_date<span class="p">(</span>weather<span class="o">$</span><span class="kp">date</span><span class="p">,</span> format <span class="o">=</span> <span class="s">&#39;%m/%d/%Y&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Parsing number formats</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Parse amount column as a number</span>
 debt<span class="o">$</span>amount <span class="o">&lt;-</span> parse_number<span class="p">(</span>debt<span class="o">$</span>amount<span class="p">)</span>
 </pre></div>
@@ -2096,7 +2096,7 @@ debt<span class="o">$</span>amount <span class="o">&lt;-</span> parse_number<spa
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Specifications of chickwts</span>
 spec_csv<span class="p">(</span><span class="s">&#39;chickwts.csv&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2105,7 +2105,7 @@ spec_csv<span class="p">(</span><span class="s">&#39;chickwts.csv&#39;</span><sp
 <hr />
 <h4 id="from-importing-data-from-the-web_1">(from Importing Data from the Web)<a class="headerlink" href="#from-importing-data-from-the-web_1" title="Permanent link">&para;</a></h4>
 <p><strong>Import Flat files from the web</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2130,7 +2130,7 @@ potatoes
 </td></tr></table>
 
 <p><strong>Secure importing</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import the file using read_csv(): pools2</span>
 pools2 <span class="o">&lt;-</span> read_csv<span class="p">(</span>url_csv<span class="p">)</span>
 </pre></div>
@@ -2145,12 +2145,12 @@ pools2 <span class="o">&lt;-</span> read_csv<span class="p">(</span>url_csv<span
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>data.table<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>data.table<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong><code class="codehilite">fread</code> for .txt files</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2169,7 +2169,7 @@ potatoes_part <span class="o">&lt;-</span> fread<span class="p">(</span><span cl
 </td></tr></table>
 
 <p><strong><code class="codehilite">fread</code>: more advanced use</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2190,12 +2190,12 @@ tasty_potatoes <span class="o">&lt;-</span> <span class="kp">subset</span><span 
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>readxl<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>readxl<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>List the sheets of an Excel file</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2208,7 +2208,7 @@ sheets
 </td></tr></table>
 
 <p><strong>Importing an Excel sheet</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2227,14 +2227,14 @@ lat_list <span class="o">&lt;-</span> <span class="kt">list</span><span class="p
 </td></tr></table>
 
 <p><strong>Reading a workbook</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Read all Excel sheets with lapply(): lat_list</span>
 lat_list <span class="o">&lt;-</span> <span class="kp">lapply</span><span class="p">(</span>excel_sheets<span class="p">(</span><span class="s">&#39;latitude.xlsx&#39;</span><span class="p">),</span> read_excel<span class="p">,</span> path <span class="o">=</span> <span class="s">&#39;latitude.xlsx&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>The <code class="codehilite">col_names</code> argument</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2247,7 +2247,7 @@ latitude_4 <span class="o">&lt;-</span> read_excel<span class="p">(</span><span 
 </td></tr></table>
 
 <p><strong>The <code class="codehilite">skip</code> argument</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import the second sheet of latitude.xlsx, skipping the first 21 rows: latitude_sel</span>
 latitude_sel <span class="o">&lt;-</span> read_excel<span class="p">(</span><span class="s">&#39;latitude.xlsx&#39;</span><span class="p">,</span> skip <span class="o">=</span> <span class="m">21</span><span class="p">,</span> col_names <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 </pre></div>
@@ -2256,7 +2256,7 @@ latitude_sel <span class="o">&lt;-</span> read_excel<span class="p">(</span><spa
 <hr />
 <h4 id="from-importing-data-from-the-web_2">(from Importing Data from the Web)<a class="headerlink" href="#from-importing-data-from-the-web_2" title="Permanent link">&para;</a></h4>
 <p><strong>Import Excel files from the web</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2269,7 +2269,7 @@ excel_readxl <span class="o">&lt;-</span> read_excel<span class="p">(</span><spa
 </td></tr></table>
 
 <p><strong>Downloading any file, secure or not</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2299,21 +2299,21 @@ download.file<span class="p">(</span>url_rdata<span class="p">,</span> <span cla
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>XLConnectJars<span class="p">)</span>
 <span class="kn">library</span><span class="p">(</span>XLConnect<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Import a workbook</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Build connection to latitude.xlsx: my_book</span>
 my_book <span class="o">&lt;-</span> loadWorkbook<span class="p">(</span><span class="s">&#39;latitude.xlsx&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>List and read Excel sheets</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2338,7 +2338,7 @@ readWorksheet<span class="p">(</span>my_book<span class="p">,</span> sheet <span
 </td></tr></table>
 
 <p><strong>Add and populate worksheets</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2377,7 +2377,7 @@ saveWorkbook<span class="p">(</span>my_book<span class="p">,</span> <span class=
 </td></tr></table>
 
 <p><strong>One unique function</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2431,26 +2431,26 @@ impact <span class="o">&lt;-</span> readWorksheetFromFile<span class="p">(</span
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>haven<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>haven<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Import SAS data with haven</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import sales.sas7bdat: sales</span>
 sales <span class="o">&lt;-</span> read_sas<span class="p">(</span><span class="s">&#39;sales.sas7bdat&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Import STATA data with haven</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import the data from the URL: sugar</span>
 sugar <span class="o">&lt;-</span> read_dta<span class="p">(</span><span class="s">&#39;http://assets.datacamp.com/course/importing_data_into_r/trade.dta&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Import SPSS data with haven</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2463,7 +2463,7 @@ traits <span class="o">&lt;-</span> read_sav<span class="p">(</span>path<span cl
 </td></tr></table>
 
 <p><strong>Factorize, round two</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import SPSS data from the URL: work</span>
 work <span class="o">&lt;-</span> read_sav<span class="p">(</span><span class="s">&#39;http://assets.datacamp.com/course/importing_data_into_r/employee.sav&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2478,19 +2478,19 @@ work <span class="o">&lt;-</span> read_sav<span class="p">(</span><span class="s
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>foreign<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>foreign<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Import STATA data with foreign (1)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import florida.dta and name the resulting data frame florida</span>
 florida <span class="o">&lt;-</span> read.dta<span class="p">(</span><span class="s">&#39;florida.dta&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Import STATA data with foreign (2)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2515,14 +2515,14 @@ edu_equal_3 <span class="o">&lt;-</span> read.dta<span class="p">(</span>path<sp
 </td></tr></table>
 
 <p><strong>Import SPSS data with foreign (1)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import international.sav as a data frame: demo</span>
 demo <span class="o">&lt;-</span> read.spss<span class="p">(</span><span class="s">&#39;international.sav&#39;</span><span class="p">,</span> to.data.frame <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Import SPSS data with foreign (2)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2545,12 +2545,12 @@ demo_2 <span class="o">&lt;-</span> read.spss<span class="p">(</span><span class
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>DBI<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>DBI<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Step 1: Establish a connection</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Connect to the MySQL database: con</span>
@@ -2561,7 +2561,7 @@ con
 </td></tr></table>
 
 <p><strong>Step 2: List the database tables</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2590,7 +2590,7 @@ str<span class="p">(</span>tables<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Step 3: Import data from a table</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2637,7 +2637,7 @@ comments
 </td></tr></table>
 
 <p><strong>Your very first SQL query</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2672,7 +2672,7 @@ elisabeth
 </td></tr></table>
 
 <p><strong>More advanced SQL queries</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2709,7 +2709,7 @@ short
 </td></tr></table>
 
 <p><strong>Send - Fetch - Clear</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2758,7 +2758,7 @@ dbClearResult<span class="p">(</span>res<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Be polite and &hellip;</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2815,7 +2815,7 @@ interface.</p>
 <p>First, change the working directory with <code class="codehilite">setwd</code>. Install the <code class="codehilite">DBI</code><br />
 library.</p>
 <p><strong>Connect and read preliminary results</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2856,7 +2856,7 @@ dbListTables<span class="p">(</span>sqlitedb<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Extract some data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2874,7 +2874,7 @@ data <span class="o">=</span> fetch<span class="p">(</span>results<span class="p
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2890,7 +2890,7 @@ dbDisconnect<span class="p">(</span>sqlitedb<span class="p">)</span>
 <p>First, change the working directory with <code class="codehilite">setwd</code>. Install the <code class="codehilite">RSQLite</code><br />
 library.</p>
 <p><strong>Connect and read preliminary results</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2921,7 +2921,7 @@ dbListTables<span class="p">(</span>sqlitedb<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Extract some data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2947,7 +2947,7 @@ data <span class="o">=</span> fetch<span class="p">(</span>results<span class="p
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2960,7 +2960,7 @@ dbDisconnect<span class="p">(</span>sqlitedb<span class="p">)</span>
 </td></tr></table>
 
 <h4 id="mysql-with-dbi-or-rmysql">MySQL with <code class="codehilite">DBI</code> or <code class="codehilite">RMySQL</code><a class="headerlink" href="#mysql-with-dbi-or-rmysql" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3010,7 +3010,7 @@ dbDisconnect<span class="p">(</span>mysqldb<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3051,7 +3051,7 @@ dbDisconnect<span class="p">(</span>mysqldb<span class="p">)</span>
 </td></tr></table>
 
 <h4 id="posgresql-with-dbi-or-rpostgresql">PosgreSQL with <code class="codehilite">DBI</code> or <code class="codehilite">RPostgreSQL</code><a class="headerlink" href="#posgresql-with-dbi-or-rpostgresql" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3101,7 +3101,7 @@ dbDisconnect<span class="p">(</span>postgresqldb<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3153,12 +3153,12 @@ packages are web-oriented.</p>
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>httr<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>httr<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>HTTP? <code class="codehilite">httr</code>!</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3182,7 +3182,7 @@ raw_content <span class="o">&lt;-</span> content<span class="p">(</span>resp<spa
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3221,12 +3221,12 @@ content<span class="p">(</span>resp<span class="p">)</span>
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>jsonlite<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>jsonlite<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>From <code class="codehilite">JSON</code> to R</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3250,7 +3250,7 @@ str<span class="p">(</span>quandl_data<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3283,7 +3283,7 @@ fromJSON<span class="p">(</span>json4<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Ask OMDb</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3314,7 +3314,7 @@ sw4<span class="o">$</span>Year <span class="o">&gt;</span> sw3<span class="o">$
 </td></tr></table>
 
 <p><strong>From R to <code class="codehilite">JSON</code></strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3343,7 +3343,7 @@ water_json
 </td></tr></table>
 
 <p><strong><code class="codehilite">Minify</code> and <code class="codehilite">prettify</code></strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3369,7 +3369,7 @@ mini_json
 
 <h3 id="keyboard-inputting">Keyboard Inputting<a class="headerlink" href="#keyboard-inputting" title="Permanent link">&para;</a></h3>
 <p><strong>Coding</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3382,7 +3382,7 @@ mydata <span class="o">&lt;-</span> <span class="kt">data.frame</span><span clas
 </td></tr></table>
 
 <p><strong>Spreadsheet-like</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3396,12 +3396,12 @@ mydata <span class="o">&lt;-</span> edit<span class="p">(</span>mydata<span clas
 
 <h3 id="exporting-data">Exporting Data<a class="headerlink" href="#exporting-data" title="Permanent link">&para;</a></h3>
 <h4 id="to-a-tab-delimited-text-file">To a Tab-Delimited Text File<a class="headerlink" href="#to-a-tab-delimited-text-file" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>write.table<span class="p">(</span>mydata<span class="p">,</span> <span class="s">&#39;c:/mydata.txt&#39;</span><span class="p">,</span> sep <span class="o">=</span> <span class="s">&quot;\t&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>write.table<span class="p">(</span>mydata<span class="p">,</span> <span class="s">&#39;c:/mydata.txt&#39;</span><span class="p">,</span> sep <span class="o">=</span> <span class="s">&quot;\t&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <h4 id="to-an-excel-spreadsheet">To an Excel Spreadsheet<a class="headerlink" href="#to-an-excel-spreadsheet" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>xlsx<span class="p">)</span>
 
@@ -3410,7 +3410,7 @@ write.xlsx<span class="p">(</span>mydata<span class="p">,</span> <span class="s"
 </td></tr></table>
 
 <p><strong>Worksheet</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3439,7 +3439,7 @@ writeWorksheetToFile<span class="p">(</span><span class="s">&#39;XLConnectExampl
 </td></tr></table>
 
 <p><strong>Field</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3460,7 +3460,7 @@ writeNamedRegionToFile<span class="p">(</span><span class="s">&quot;XLConnectExa
 </td></tr></table>
 
 <p><strong>I/O</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3499,7 +3499,7 @@ saveWorkbook<span class="p">(</span>my_book<span class="p">,</span> <span class=
 </td></tr></table>
 
 <h4 id="to-spss">To SPSS<a class="headerlink" href="#to-spss" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>foreign<span class="p">)</span>
 
@@ -3508,7 +3508,7 @@ write.foreign<span class="p">(</span>mydata<span class="p">,</span> <span class=
 </td></tr></table>
 
 <h4 id="to-sas">To SAS<a class="headerlink" href="#to-sas" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>foreign<span class="p">)</span>
 
@@ -3517,7 +3517,7 @@ write.foreign<span class="p">(</span>mydata<span class="p">,</span> <span class=
 </td></tr></table>
 
 <h4 id="to-stata">To Stata<a class="headerlink" href="#to-stata" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>foreign<span class="p">)</span>
 
@@ -3539,14 +3539,14 @@ write.dta<span class="p">(</span>mydata<span class="p">,</span> <span class="s">
 <li><code class="codehilite">tail(object, 20)</code>.</li>
 </ul>
 <p><strong>Testing for Missing Values</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>y <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="kc">NA</span><span class="p">)</span> <span class="c1"># returns TRUE of x is missing</span>
 <span class="kp">is.na</span><span class="p">(</span>y<span class="p">)</span> <span class="c1"># returns a vector (F F F T) </span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Recoding Values to Missing</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># recode 99 to missing for variable v1</span>
 <span class="c1"># select rows where v1 is 99 and recode column v1</span>
@@ -3555,7 +3555,7 @@ mydata<span class="o">$</span>v1<span class="p">[</span>mydata<span class="o">$<
 </td></tr></table>
 
 <p><strong>Excluding Missing Values from Analyses</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kc">NA</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
@@ -3565,20 +3565,20 @@ mydata<span class="o">$</span>v1<span class="p">[</span>mydata<span class="o">$<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># list rows of data that have missing values</span>
 mydata<span class="p">[</span><span class="o">!</span>complete.cases<span class="p">(</span>mydata<span class="p">),]</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># create new dataset without missing data</span>
 newdata <span class="o">&lt;-</span> na.omit<span class="p">(</span>mydata<span class="p">)</span> 
 </pre></div>
 </td></tr></table>
 
 <h4 id="the-dplyr-package">The <code class="codehilite">dplyr</code> package<a class="headerlink" href="#the-dplyr-package" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3597,7 +3597,7 @@ View<span class="p">(</span>iris<span class="p">)</span> <span class="c1"># open
 </ul>
 <h3 id="labels-levels">Labels &amp; Levels<a class="headerlink" href="#labels-levels" title="Permanent link">&para;</a></h3>
 <p><strong>Basic</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3609,7 +3609,7 @@ mydata<span class="o">$</span>v1 <span class="o">&lt;-</span> <span class="kp">f
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3622,7 +3622,7 @@ mydata<span class="o">$</span>v1 <span class="o">&lt;-</span> <span class="kp">o
 </td></tr></table>
 
 <p><strong>Order</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3635,7 +3635,7 @@ factor_temperature_vector <span class="o">&lt;-</span> <span class="kp">factor</
 </td></tr></table>
 
 <p><strong>Add comments to an object</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">names</span><span class="p">(</span>iris<span class="p">)[</span><span class="m">5</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">&quot;This is the label for variable 5&quot;</span>
@@ -3645,7 +3645,7 @@ iris<span class="p">[</span><span class="m">5</span><span class="p">]</span> <sp
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3682,7 +3682,7 @@ investment banks in several formats:</p>
 <li><code class="codehilite">quantmod</code> for plotting.</li>
 </ul>
 <p><strong>Quandl - A first date</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3695,14 +3695,14 @@ mydata <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class="s
 </td></tr></table>
 
 <p><strong>Identifying a dataset with its ID</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Assign the Prague Stock Exchange to:</span>
 PragueStockExchange <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class="s">&#39;PRAGUESE/PX&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Plotting a stock chart</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3721,7 +3721,7 @@ candleChart<span class="p">(</span>Facebook<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Searching a Quandl dataset in R</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3741,14 +3741,14 @@ BitCoin <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class="
 
 <h4 id="manipulating-quandl-datasets">Manipulating Quandl Datasets<a class="headerlink" href="#manipulating-quandl-datasets" title="Permanent link">&para;</a></h4>
 <p><strong>Manipulating data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Assign to the variable Exchange</span>
 Exchange <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class="s">&#39;BNP/USDEUR&#39;</span><span class="p">,</span> start_date <span class="o">=</span> <span class="s">&#39;2013-01-01&#39;</span><span class="p">,</span> end_date <span class="o">=</span> <span class="s">&#39;2013-12-01&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Transforming your Quandl dataset</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3763,14 +3763,14 @@ GDP_Chang <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class
 </td></tr></table>
 
 <p><strong>The magic of frequency collapsing</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># The result:</span>
 eiaQuarterly <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class="s">&#39;DOE/RWTC&#39;</span><span class="p">,</span> collapse <span class="o">=</span> <span class="s">&#39;quarterly&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Truncation and sort</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3783,7 +3783,7 @@ TruSo
 </td></tr></table>
 
 <p><strong>A complex example</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Here you should place the return:</span>
 Final <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class="s">&#39;DOE/RWTC&#39;</span><span class="p">,</span> collapse <span class="o">=</span> <span class="s">&#39;daily&#39;</span><span class="p">,</span> transformation <span class="o">=</span> <span class="s">&#39;rdiff&#39;</span><span class="p">,</span> start_date <span class="o">=</span> <span class="s">&#39;2005-01-01&#39;</span><span class="p">,</span> end_date <span class="o">=</span> <span class="s">&#39;2010-03-01&#39;</span><span class="p">,</span> sort <span class="o">=</span> <span class="s">&#39;asc&#39;</span><span class="p">)</span>
 </pre></div>
@@ -3799,7 +3799,7 @@ Final <span class="o">&lt;-</span> Quandl<span class="p">(</span><span class="s"
 </ul>
 <h4 id="introduction-and-exploring-raw-data">Introduction and Exploring Raw Data<a class="headerlink" href="#introduction-and-exploring-raw-data" title="Permanent link">&para;</a></h4>
 <p><strong>Here&rsquo;s what messy data look like</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3818,7 +3818,7 @@ str<span class="p">(</span>weather<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Getting a feel for your data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3837,7 +3837,7 @@ str<span class="p">(</span>weather<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Viewing the structure of your data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3862,7 +3862,7 @@ glimpse<span class="p">(</span>bmi<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Looking at your data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3893,7 +3893,7 @@ glimpse<span class="p">(</span>bmi<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Visualizing your data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3907,7 +3907,7 @@ plot<span class="p">(</span>bmi<span class="o">$</span>Y1980<span class="p">,</s
 
 <h4 id="tidying-data">Tidying Data<a class="headerlink" href="#tidying-data" title="Permanent link">&para;</a></h4>
 <p><strong>Gathering columns into key-value pairs</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3926,7 +3926,7 @@ bmi_long <span class="o">&lt;-</span> gather<span class="p">(</span>bmi<span cla
 </td></tr></table>
 
 <p><strong>Spreading key-value pairs into columns</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3939,7 +3939,7 @@ bmi_wide <span class="o">&lt;-</span> spread<span class="p">(</span>bmi_long<spa
 </td></tr></table>
 
 <p><strong>Separating columns</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3952,7 +3952,7 @@ bmi_cc_clean <span class="o">&lt;-</span> separate<span class="p">(</span>bmi_cc
 </td></tr></table>
 
 <p><strong>Uniting columns</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3965,7 +3965,7 @@ bmi_cc <span class="o">&lt;-</span> unite<span class="p">(</span>bmi_cc_clean<sp
 </td></tr></table>
 
 <p><strong>Column headers are values, not variable names</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3990,7 +3990,7 @@ census2 <span class="o">&lt;-</span> arrange<span class="p">(</span>census2<span
 </td></tr></table>
 
 <p><strong>Variables are stored in both rows and columns</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4009,7 +4009,7 @@ census_long2 <span class="o">&lt;-</span> spread<span class="p">(</span>census_l
 </td></tr></table>
 
 <p><strong>Multiple values are stored in one column</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4029,7 +4029,7 @@ census_long4 <span class="o">&lt;-</span> separate<span class="p">(</span>census
 
 <h4 id="preparing-data-for-analysis">Preparing Data for Analysis<a class="headerlink" href="#preparing-data-for-analysis" title="Permanent link">&para;</a></h4>
 <p><strong>Types of variables in R</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4060,7 +4060,7 @@ census_long4 <span class="o">&lt;-</span> separate<span class="p">(</span>census
 </td></tr></table>
 
 <p><strong>Common type conversions</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4091,7 +4091,7 @@ str<span class="p">(</span>students<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Working with dates</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4134,7 +4134,7 @@ str<span class="p">(</span>students2<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Trimming and padding strings</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4153,7 +4153,7 @@ str_pad<span class="p">(</span><span class="kt">c</span><span class="p">(</span>
 </td></tr></table>
 
 <p><strong>Upper and lower case</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4174,7 +4174,7 @@ states_upper
 </td></tr></table>
 
 <p><strong>Finding and replacing strings</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4207,7 +4207,7 @@ students2<span class="o">$</span>sex <span class="o">&lt;-</span> str_replace<sp
 </td></tr></table>
 
 <p><strong>Finding missing values</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4234,7 +4234,7 @@ students2<span class="o">$</span>sex <span class="o">&lt;-</span> str_replace<sp
 </td></tr></table>
 
 <p><strong>Dealing with missing values</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4259,7 +4259,7 @@ na.omit<span class="p">(</span>social_df<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Dealing with outliers and obvious errors</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4284,7 +4284,7 @@ hist<span class="p">(</span>students3<span class="o">$</span>absences<span class
 </td></tr></table>
 
 <p><strong>Another look at strange values</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4298,7 +4298,7 @@ boxplot<span class="p">(</span>students3<span class="o">$</span>absences<span cl
 
 <h4 id="putting-it-all-together">Putting it All Together<a class="headerlink" href="#putting-it-all-together" title="Permanent link">&para;</a></h4>
 <p><strong>Get a feel for the data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4317,7 +4317,7 @@ boxplot<span class="p">(</span>students3<span class="o">$</span>absences<span cl
 </td></tr></table>
 
 <p><strong>Summarize the data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4342,7 +4342,7 @@ glimpse<span class="p">(</span>weather<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Take a closer look</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4367,7 +4367,7 @@ glimpse<span class="p">(</span>weather<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Column names are values</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4386,7 +4386,7 @@ weather2 <span class="o">&lt;-</span> gather<span class="p">(</span>weather<span
 </td></tr></table>
 
 <p><strong>Values are variable names</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4405,7 +4405,7 @@ weather3 <span class="o">&lt;-</span> spread<span class="p">(</span>weather2<spa
 </td></tr></table>
 
 <p><strong>Clean up dates</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4446,7 +4446,7 @@ weather5 <span class="o">&lt;-</span> select<span class="p">(</span>weather4<spa
 </td></tr></table>
 
 <p><strong>A closer look at column types</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4465,7 +4465,7 @@ str<span class="p">(</span>weather5<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Column type conversions</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4486,7 +4486,7 @@ str<span class="p">(</span>weather6<span class="p">)</span>
 </td></tr></table>
 
 <p><strong>Find missing values</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4513,7 +4513,7 @@ weather6<span class="p">[</span>ind<span class="p">,</span> <span class="p">]</s
 </td></tr></table>
 
 <p><strong>An obvious error</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4538,7 +4538,7 @@ weather6<span class="o">$</span>Max.Humidity<span class="p">[</span>ind<span cla
 </td></tr></table>
 
 <p><strong>Another obvious error</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4563,7 +4563,7 @@ weather6<span class="o">$</span>Mean.VisibilityMiles<span class="p">[</span>ind<
 </td></tr></table>
 
 <p><strong>Check other extreme values</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4588,7 +4588,7 @@ hist<span class="p">(</span>weather6<span class="o">$</span>Mean.TemperatureF<sp
 </td></tr></table>
 
 <p><strong>Finishing touches</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4

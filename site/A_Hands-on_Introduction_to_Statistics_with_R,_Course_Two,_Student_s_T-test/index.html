@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#independent-t-tests" tabindex="1" class="md-skip">
+      <a href="#independent-t-tests" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -957,7 +957,7 @@
 <li>t-distribution, observed value, expected value, standard error.</li>
 </ul>
 <p><strong>Generate density plots of different t-distributions</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1003,7 +1003,7 @@ legend<span class="p">(</span><span class="s">&#39;topright&#39;</span><span cla
 <p><strong>The working memory dataset</strong></p>
 <p>Conduct a dependent (or paired) t-test on the &ldquo;working memory&rdquo; dataset. This dataset consists of the intelligence scores for subjects before and after training, as well as for a control group. Our goal is to assess whether intelligence training results in significantly different intelligence scores for the individuals.</p>
 <p>The observations of individuals before and after training are two samples from the same group at different points in time, which calls for a dependent t-test. This will test whether or not the difference in mean intelligence scores before and after training are significant.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Print the data set in the console</span>
 <span class="kp">head</span><span class="p">(</span>wm<span class="p">)</span>
 </pre></div>
@@ -1025,7 +1025,7 @@ legend<span class="p">(</span><span class="s">&#39;topright&#39;</span><span cla
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1147,7 +1147,7 @@ describe<span class="p">(</span>wm_t<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create a boxplot with pre- and post-training groups </span>
 boxplot<span class="p">(</span>wm_t<span class="o">$</span>pre<span class="p">,</span> wm_t<span class="o">$</span>post<span class="p">,</span> main <span class="o">=</span> <span class="s">&quot;Boxplot&quot;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&quot;Pre and Post Training&quot;</span><span class="p">,</span> ylab <span class="o">=</span> <span class="s">&quot;Intelligence Score&quot;</span><span class="p">,</span> col <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;green&quot;</span><span class="p">))</span>
 </pre></div>
@@ -1165,7 +1165,7 @@ boxplot<span class="p">(</span>wm_t<span class="o">$</span>pre<span class="p">,<
 </ul>
 <p>We&rsquo;re performing a Null Hypothesis Significance Test (NHST), so our null hypothesis is that there&rsquo;s no effect (i.e. training has no impact on intelligence scores). The alternative hypothesis is that training results in signficantly different  intelligence scores. We&rsquo;ll use a significance level of 0.05, which is very common in statistics.</p>
 <p>Compute the observed t-value.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1207,7 +1207,7 @@ sd_diff2
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sd_diff
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sd_diff
 </pre></div>
 </td></tr></table>
 
@@ -1222,7 +1222,7 @@ sd_diff2
 <p>Furthermore, since our desired significance level (i.e. alpha) is 0.05, our critical value is the point on our t-distribution at which 0.025 (0.05 / 2) of its total area of 1 is to the right and thus 0.975 (1 - 0.025) of its total area is to the left.</p>
 <p>This point is called the 0.975 quantile and is computed for a<br />
 t-distrbution.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1252,7 +1252,7 @@ t_value
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>t_crit
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>t_crit
 </pre></div>
 </td></tr></table>
 
@@ -1260,7 +1260,7 @@ t_value
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Calculate the confidence interval</span>
@@ -1274,7 +1274,7 @@ conf_upper
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>conf_lower
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>conf_lower
 </pre></div>
 </td></tr></table>
 
@@ -1282,7 +1282,7 @@ conf_upper
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Calculate Cohen&#39;s d</span>
 cohens_d <span class="o">&lt;-</span> mean_diff<span class="o">/</span>sd_diff
@@ -1298,7 +1298,7 @@ cohens_d
 <p>The <code class="codehilite">CohensD</code> function (not showns).</p>
 <p>Cohen&rsquo;s d Determine that the difference pre- and post-training is statistically significant; and the effect size, meaning the effect of training on intelligence gains particularly strong or not.</p>
 <p>Cohen&rsquo;s d is unbiased by sample size. Cohen&rsquo;s d provides a standardized difference between two means. Cohen&rsquo;s d is calculated by subtracting one group mean from the other, then dividing by the pooled standard deviation.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Conduct a paired t-test using the t.test function</span>
 t.test<span class="p">(</span>wm_t<span class="o">$</span>post<span class="p">,</span> wm_t<span class="o">$</span>pre<span class="p">,</span> paired <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
@@ -1318,7 +1318,7 @@ t.test<span class="p">(</span>wm_t<span class="o">$</span>post<span class="p">,<
 ##  Paired t-test
 ## 
 ## data:  wm_t$post and wm_t$pre
-## t = 14.492, df = 79, p-value &lt; 2.2e-16
+## t = 14.492, df = 79, p-value &amp;lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
 ##  3.008511 3.966489
@@ -1328,7 +1328,7 @@ t.test<span class="p">(</span>wm_t<span class="o">$</span>post<span class="p">,<
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Calculate Cohen&#39;s d</span>
@@ -1346,7 +1346,7 @@ cohensD<span class="p">(</span>wm_t<span class="o">$</span>post<span class="p">,
 <p>An independent t-test is appropriate when you want to compare the the means for two independent groups.</p>
 <p><strong>Preliminary statistics</strong></p>
 <p>For independent t-tests you will revisit the working memory dataset from the previous chapter. In this dataset, subjects were randomly assigned to four different training groups that trained for 8, 12, 17 and 19 days.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1375,14 +1375,14 @@ wm_t <span class="o">&lt;-</span> readWorksheetFromFile<span class="p">(</span><
 </td></tr></table>
 
 <p>Add statistical functions.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Load the psych(ology) package</span>
 <span class="kn">library</span><span class="p">(</span>psych<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>Levene&rsquo;s test for homogeneity of variance.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1426,7 +1426,7 @@ describe<span class="p">(</span>wm_t08<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>describe<span class="p">(</span>wm_t12<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>describe<span class="p">(</span>wm_t12<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1456,7 +1456,7 @@ describe<span class="p">(</span>wm_t08<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>describe<span class="p">(</span>wm_t17<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>describe<span class="p">(</span>wm_t17<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1486,7 +1486,7 @@ describe<span class="p">(</span>wm_t08<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>describe<span class="p">(</span>wm_t19<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>describe<span class="p">(</span>wm_t19<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1516,14 +1516,14 @@ describe<span class="p">(</span>wm_t08<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create a boxplot of the different training times</span>
 ggplot<span class="p">(</span>wm_t<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cond<span class="p">,</span> y <span class="o">=</span> gain<span class="p">,</span> fill <span class="o">=</span> cond<span class="p">))</span> <span class="o">+</span> geom_boxplot<span class="p">()</span>
 </pre></div>
 </td></tr></table>
 
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Two,_Student_s_T-test/unnamed-chunk-10-1.png" /></center></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Levene&#39;s test</span>
@@ -1537,7 +1537,7 @@ leveneTest<span class="p">(</span>wm_t<span class="o">$</span>gain <span class="
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Levene&#39;s Test for Homogeneity of Variance (center = median)
-##       Df F value Pr(&gt;F)
+##       Df F value Pr(&amp;gt;F)
 ## group  3  1.3134 0.2763
 ##       76
 </pre></div>
@@ -1546,7 +1546,7 @@ leveneTest<span class="p">(</span>wm_t<span class="o">$</span>gain <span class="
 <p><strong>Conducting an independent t-test manually (1)</strong></p>
 <p>Perform an independent t-test the same way we did for the dependent t-test in the previous chapter. Continuing with the working memory example, our null hypothesis is that the difference in intelligence score gain between the group that trained for 8 days and the group that trained for 19 days is equal to zero. If our observed t-value is sufficiently large, we can reject the null in favor of the alternative hypothesis, which would imply a significant difference in intelligence gain between the two training groups.</p>
 <p>Calculation of the observed t-value for an independent t-test is similar to the dependent t-test, but involves slightly  different formulas.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1578,7 +1578,7 @@ se_pooled <span class="o">&lt;-</span> <span class="kp">sqrt</span><span class="
 
 <p><strong>Conducting an independent t-test manually (2)</strong></p>
 <p>Compute the observed t-value. Then we will determine the p-value using the relevant t-distribution. If you recall, in the last chapter we calculated the critical value. The p-value is simply an alternative approach to hypothesis testing and determining the significance of your results. It&rsquo;s good to practice both! Finally, we will finish by calculating effect size via Cohen&rsquo;s d.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1609,7 +1609,7 @@ cohens_d <span class="o">&lt;-</span> mean_diff<span class="o">/</span>pooled_sd
 </td></tr></table>
 
 <p><strong>Letting R do all the dirty work: Independent t-tests</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Conduct an independent t-test </span>
 t.test<span class="p">(</span>wm_t19<span class="o">$</span>gain<span class="p">,</span> wm_t08<span class="o">$</span>gain<span class="p">,</span>var.equal <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
@@ -1639,7 +1639,7 @@ t.test<span class="p">(</span>wm_t19<span class="o">$</span>gain<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Calculate Cohen&#39;s d</span>
 cohensD<span class="p">(</span>wm_t19<span class="o">$</span>gain<span class="p">,</span> wm_t08<span class="o">$</span>gain<span class="p">,</span> method <span class="o">=</span> <span class="s">&#39;pooled&#39;</span><span class="p">)</span>
 </pre></div>

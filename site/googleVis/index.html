@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#suppress-the-message" tabindex="1" class="md-skip">
+      <a href="#suppress-the-message" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1229,18 +1229,18 @@
 <li>In R, run a demo with <code class="codehilite">demo(googleVis)</code>.</li>
 </ul>
 <p>Always cite the package:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>citation<span class="p">(</span><span class="s">&quot;googleVis&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>citation<span class="p">(</span><span class="s">&quot;googleVis&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <h3 id="suppress-the-message">Suppress the message<a class="headerlink" href="#suppress-the-message" title="Permanent link">&para;</a></h3>
 <p>We normally load the library&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>googleVis<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>googleVis<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>&hellip;but we can also suppress the message when loading the package.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">suppressPackageStartupMessages</span><span class="p">(</span><span class="kn">library</span><span class="p">(</span>googleVis<span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">suppressPackageStartupMessages</span><span class="p">(</span><span class="kn">library</span><span class="p">(</span>googleVis<span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
@@ -1248,7 +1248,7 @@
 <ul>
 <li>Generate the chart.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1281,7 +1281,7 @@ M <span class="o">&lt;-</span> gvisMotionChart<span class="p">(</span>Fruits<spa
 <ul>
 <li>Emulate the chart&hellip;</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1341,7 +1341,7 @@ M
 <li>In RStudio, set the working directory with <code class="codehilite">setwd(&#39; &#39;)</code>.</li>
 <li>Set the option to print the output in a html file.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>r<span class="p">,</span> message<span class="o">=</span><span class="kc">FALSE</span><span class="p">}</span>
@@ -1354,14 +1354,14 @@ op <span class="o">&lt;-</span> <span class="kp">options</span><span class="p">(
 <ul>
 <li>Set options back to original options.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">options</span><span class="p">(</span>op<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">options</span><span class="p">(</span>op<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <ul>
 <li>Generate the chart.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1398,7 +1398,7 @@ M <span class="o">&lt;-</span> gvisMotionChart<span class="p">(</span>Fruits<spa
 <ul>
 <li>The file has several parts: JavaScript and HTML. The part that displays the chart is in the end.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1414,7 +1414,7 @@ M <span class="o">&lt;-</span> gvisMotionChart<span class="p">(</span>Fruits<spa
 <li>Following this bullet, in the Markdown document, paste the M.html code. First, open the HTML file to copy the code.</li>
 <li>Modify the markup language with more styling parameters.</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;MotionChartID2cd02805862d&quot;</span> 
 <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 400; height: 350; float:left;&quot;</span><span class="err">;</span><span class="p">&gt;</span>
@@ -1425,7 +1425,7 @@ M <span class="o">&lt;-</span> gvisMotionChart<span class="p">(</span>Fruits<spa
 <ul>
 <li>The HTML snippet must follow the JavaScript snippet in the document. Move the HTML snippet within a text (the text can separate both snippets). </li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1637,11 +1637,11 @@ style="width: 400; height: 350; float:left;";>
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Fruits<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Fruits<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1653,7 +1653,7 @@ style="width: 400; height: 350; float:left;";>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1852,7 +1852,7 @@ callbacks.shift()();
 <p><br></p>
 <h4 id="embedding-with-iframe-or-embed">Embedding with <code class="codehilite">&lt;iframe&gt;</code> or <code class="codehilite">&lt;embed&gt;</code><a class="headerlink" href="#embedding-with-iframe-or-embed" title="Permanent link">&para;</a></h4>
 <p>After we generate the HTML chart or map, save the object as a HTML file.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>htmlwidgets<span class="p">)</span> 
@@ -1863,7 +1863,7 @@ saveWidget<span class="p">(</span>object<span class="p">,</span> <span class="s"
 </td></tr></table>
 
 <p>Add these HTML snippets to the Markdown/HTML document.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">seamless</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../googleVis.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">600px</span> 
 <span class="na">height</span><span class="o">=</span><span class="s">400px</span> <span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </pre></div>
@@ -1872,20 +1872,20 @@ saveWidget<span class="p">(</span>object<span class="p">,</span> <span class="s"
 <iframe seamless src="../googleVis_m.html" width=600px 
 height=400px ></iframe>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">embed</span> <span class="na">seamless</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../googleVis.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">600px</span> <span class="na">height</span><span class="o">=</span><span class="s">400px</span> <span class="p">&gt;&lt;/</span><span class="nt">embed</span><span class="p">&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">embed</span> <span class="na">seamless</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../googleVis.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">600px</span> <span class="na">height</span><span class="o">=</span><span class="s">400px</span> <span class="p">&gt;&lt;/</span><span class="nt">embed</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table>
 
 <p><embed seamless src="../googleVis_m.html" width=600px height=400px ></p>
 <p>In other words, we can either write the code or embed a file into the HTML/Markdown document.</p>
 <h4 id="information-from-the-object">Information from the object<a class="headerlink" href="#information-from-the-object" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>M<span class="o">$</span>type
 M<span class="o">$</span>chartid
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&quot;MotionChart&quot;
 &quot;MotionChartID336e668836ab&quot;
 </pre></div>
@@ -1899,11 +1899,11 @@ M<span class="o">$</span>chartid
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Exports<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Exports<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1915,7 +1915,7 @@ M<span class="o">$</span>chartid
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2067,11 +2067,11 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>CityPopularity<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>CityPopularity<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2083,7 +2083,7 @@ callbacks.shift()();
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2219,7 +2219,7 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2345,11 +2345,11 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Andrew<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Andrew<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2369,7 +2369,7 @@ callbacks.shift()();
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2761,7 +2761,7 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3113,7 +3113,7 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3271,11 +3271,11 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Stock<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Stock<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3287,7 +3287,7 @@ callbacks.shift()();
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Table <span class="o">&lt;-</span> gvisTable<span class="p">(</span>Stock<span class="p">,</span> 
@@ -3475,11 +3475,11 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Population<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">head</span><span class="p">(</span>Population<span class="p">,</span> <span class="m">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3507,7 +3507,7 @@ callbacks.shift()();
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -5376,7 +5376,7 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -5392,7 +5392,7 @@ callbacks.shift()();
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>GT <span class="o">&lt;-</span> gvisMerge<span class="p">(</span>G<span class="p">,</span> <span class="bp">T</span><span class="p">,</span> horizontal<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
 
@@ -5668,7 +5668,7 @@ callbacks.shift()();
 </table>
 
 <p><br></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>G <span class="o">&lt;-</span> gvisGeoChart<span class="p">(</span>Exports<span class="p">,</span>
@@ -5678,7 +5678,7 @@ callbacks.shift()();
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>GT <span class="o">&lt;-</span> gvisMerge<span class="p">(</span>G<span class="p">,</span> <span class="bp">T</span><span class="p">,</span> horizontal<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 
@@ -5958,7 +5958,7 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -6130,7 +6130,7 @@ callbacks.shift()();
 
 <!--  -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4

@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#sweep" tabindex="1" class="md-skip">
+      <a href="#sweep" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1159,7 +1159,7 @@
 </ul>
 <h3 id="apply-to-matrices-and-arrays"><code class="codehilite">apply</code> to Matrices and Arrays<a class="headerlink" href="#apply-to-matrices-and-arrays" title="Permanent link">&para;</a></h3>
 <p>Flatten a matrix into a vector.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 X <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span>rnorm<span class="p">(</span><span class="m">30</span><span class="p">),</span> nrow <span class="o">=</span> <span class="m">4</span><span class="p">,</span> ncol <span class="o">=</span> <span class="m">4</span><span class="p">)</span>
@@ -1179,7 +1179,7 @@ X
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Sum the values of each column</span>
 <span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">sum</span><span class="p">)</span>
 </pre></div>
@@ -1200,7 +1200,7 @@ X
 </ul>
 <!-- -->
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># More examples</span>
 <span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">max</span><span class="p">)</span>
 </pre></div>
@@ -1210,7 +1210,7 @@ X
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">range</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">range</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1222,7 +1222,7 @@ X
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">abs</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">abs</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1238,7 +1238,7 @@ X
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">round</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">round</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1255,7 +1255,7 @@ X
 </td></tr></table>
 
 <p><strong>Lambda &amp; custom function</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 X
 </pre></div>
@@ -1273,7 +1273,7 @@ X
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Built-in function</span>
 <span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">max</span><span class="p">)</span>
 </pre></div>
@@ -1283,7 +1283,7 @@ X
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Lambda function</span>
 <span class="kp">apply</span><span class="p">(</span>X<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> x <span class="o">+</span> <span class="m">10</span><span class="p">)</span>
 </pre></div>
@@ -1301,7 +1301,7 @@ X
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1317,7 +1317,7 @@ select_first <span class="o">&lt;-</span> <span class="kr">function</span><span 
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1334,7 +1334,7 @@ select_el <span class="o">&lt;-</span> <span class="kr">function</span><span cla
 </td></tr></table>
 
 <p><strong>Strings</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 Y <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="s">&#39;d&#39;</span><span class="p">),</span> nrow <span class="o">=</span> <span class="m">2</span><span class="p">,</span> ncol <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
@@ -1350,7 +1350,7 @@ Y
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the format</span>
 <span class="kp">apply</span><span class="p">(</span>Y<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">toupper</span><span class="p">)</span>
 </pre></div>
@@ -1366,7 +1366,7 @@ Y
 
 <h4 id="sweep"><code class="codehilite">sweep</code><a class="headerlink" href="#sweep" title="Permanent link">&para;</a></h4>
 <p><strong>Several steps</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 dataPoints <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="m">4</span><span class="o">:</span><span class="m">15</span><span class="p">,</span> nrow <span class="o">=</span> <span class="m">4</span><span class="p">,</span> ncol <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
@@ -1386,7 +1386,7 @@ dataPoints
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Find means (center) per column with `apply()`</span>
 dataPoints_means <span class="o">&lt;-</span> <span class="kp">apply</span><span class="p">(</span>dataPoints<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kp">mean</span><span class="p">)</span>
@@ -1398,7 +1398,7 @@ dataPoints_means
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Find standard deviation (dispersion) with `apply()`</span>
 dataPoints_sdev <span class="o">&lt;-</span> <span class="kp">apply</span><span class="p">(</span>dataPoints<span class="p">,</span> <span class="m">2</span><span class="p">,</span> sd<span class="p">)</span>
@@ -1410,7 +1410,7 @@ dataPoints_sdev
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Center the points; shift all the points with respect to their center</span>
 dataPoints_Trans1 <span class="o">&lt;-</span> <span class="kp">sweep</span><span class="p">(</span>dataPoints<span class="p">,</span> <span class="m">2</span><span class="p">,</span> dataPoints_means<span class="p">,</span><span class="s">&quot;-&quot;</span><span class="p">)</span>
@@ -1430,7 +1430,7 @@ dataPoints_Trans1
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Normalize</span>
 dataPoints_Trans2 <span class="o">&lt;-</span> <span class="kp">sweep</span><span class="p">(</span>dataPoints_Trans1<span class="p">,</span> <span class="m">2</span><span class="p">,</span> dataPoints_sdev<span class="p">,</span> <span class="s">&quot;/&quot;</span><span class="p">)</span>
@@ -1450,7 +1450,7 @@ dataPoints_Trans2
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">sweep</span><span class="p">(</span>dataPoints<span class="p">,</span> <span class="m">2</span><span class="p">,</span> dataPoints_means<span class="p">,</span> <span class="kp">sum</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">sweep</span><span class="p">(</span>dataPoints<span class="p">,</span> <span class="m">2</span><span class="p">,</span> dataPoints_means<span class="p">,</span> <span class="kp">sum</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1469,7 +1469,7 @@ dataPoints_Trans2
 <code class="codehilite">FUN = function(x) { c(m = mean(x), s = sd(x)) }</code>.</li>
 </ul>
 <p><strong>One step</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Normalize the data with a nested call</span>
@@ -1492,7 +1492,7 @@ dataPoints_Trans
 </td></tr></table>
 
 <p><strong>Even simpler</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Automatic data scaling</span>
 <span class="kp">scale</span><span class="p">(</span>dataPoints<span class="p">)</span>
 </pre></div>
@@ -1519,7 +1519,7 @@ dataPoints_Trans
 </td></tr></table>
 
 <h4 id="aggregate"><code class="codehilite">aggregate</code><a class="headerlink" href="#aggregate" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 <span class="kp">head</span><span class="p">(</span>Mydf<span class="p">,</span> <span class="m">15</span><span class="p">)</span>
 </pre></div>
@@ -1559,7 +1559,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Show data types for each column</span>
 <span class="kp">sapply</span><span class="p">(</span>Mydf<span class="p">,</span> <span class="kp">class</span><span class="p">)</span>
 </pre></div>
@@ -1571,7 +1571,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Return number of rows and columns</span>
 <span class="kp">dim</span><span class="p">(</span>Mydf<span class="p">)</span>
 </pre></div>
@@ -1581,7 +1581,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">nrow</span><span class="p">(</span>Mydf<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">nrow</span><span class="p">(</span>Mydf<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1589,7 +1589,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">ncol</span><span class="p">(</span>Mydf<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">ncol</span><span class="p">(</span>Mydf<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1597,7 +1597,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># How many departments? </span>
 <span class="kp">unique</span><span class="p">(</span>Mydf<span class="o">$</span>DepPC<span class="p">)</span>
 </pre></div>
@@ -1607,7 +1607,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 <span class="kp">head</span><span class="p">(</span>Mydf<span class="p">,</span> <span class="m">5</span><span class="p">)</span>
 </pre></div>
@@ -1627,7 +1627,7 @@ dataPoints_Trans
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Aggregate by a variable (categories) and sum up another variable</span>
 aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> by <span class="o">=</span> Mydf<span class="p">[</span><span class="s">&quot;DepPC&quot;</span><span class="p">],</span> FUN <span class="o">=</span> <span class="kp">sum</span><span class="p">)</span>
 </pre></div>
@@ -1649,7 +1649,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Aggregate by a variable (categories) and extract descriptive stats from another variable</span>
 aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> by <span class="o">=</span> Mydf<span class="p">[</span><span class="s">&quot;DepPC&quot;</span><span class="p">],</span> FUN <span class="o">=</span> <span class="kp">summary</span><span class="p">)</span>
 </pre></div>
@@ -1673,7 +1673,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 
 <h4 id="by"><code class="codehilite">by</code><a class="headerlink" href="#by" title="Permanent link">&para;</a></h4>
 <p>An alternative to <code class="codehilite">aggregate</code> with pros and cons.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 <span class="kp">head</span><span class="p">(</span>Mydf<span class="p">,</span> <span class="m">5</span><span class="p">)</span>
 </pre></div>
@@ -1693,7 +1693,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">by</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> Mydf<span class="p">[</span><span class="s">&quot;DepPC&quot;</span><span class="p">],</span> FUN <span class="o">=</span> <span class="kp">sum</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">by</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> Mydf<span class="p">[</span><span class="s">&quot;DepPC&quot;</span><span class="p">],</span> FUN <span class="o">=</span> <span class="kp">sum</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1733,7 +1733,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">by</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> Mydf<span class="p">[</span><span class="s">&quot;DepPC&quot;</span><span class="p">],</span> FUN <span class="o">=</span> <span class="kp">summary</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">by</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> Mydf<span class="p">[</span><span class="s">&quot;DepPC&quot;</span><span class="p">],</span> FUN <span class="o">=</span> <span class="kp">summary</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1786,7 +1786,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </td></tr></table>
 
 <h4 id="split"><code class="codehilite">split</code><a class="headerlink" href="#split" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 <span class="kp">head</span><span class="p">(</span>Mydf<span class="p">,</span> <span class="m">5</span><span class="p">)</span>
 </pre></div>
@@ -1806,7 +1806,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">nrow</span><span class="p">(</span>Mydf<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">nrow</span><span class="p">(</span>Mydf<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1814,7 +1814,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Split with a variable (categories)</span>
 <span class="kp">split</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> Mydf<span class="p">[</span><span class="s">&quot;DepPC&quot;</span><span class="p">])</span>
 </pre></div>
@@ -1868,7 +1868,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Split by row</span>
 <span class="kp">unlist</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">)</span>
 </pre></div>
@@ -1892,7 +1892,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">split</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="m">60</span><span class="p">,</span> <span class="m">120</span><span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">split</span><span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="m">60</span><span class="p">,</span> <span class="m">120</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
@@ -1921,7 +1921,7 @@ aggregate<span class="p">(</span>Mydf<span class="o">$</span>Qty<span class="p">
 </td></tr></table>
 
 <h4 id="strsplit"><code class="codehilite">strsplit</code><a class="headerlink" href="#strsplit" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1935,7 +1935,7 @@ split_math <span class="o">&lt;-</span> <span class="kp">strsplit</span><span cl
 
 <h4 id="vectorize"><code class="codehilite">Vectorize</code><a class="headerlink" href="#vectorize" title="Permanent link">&para;</a></h4>
 <p>Vectorize a scalar function.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Scalar function</span>
 <span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="m">2</span><span class="p">)</span>
 </pre></div>
@@ -1945,7 +1945,7 @@ split_math <span class="o">&lt;-</span> <span class="kp">strsplit</span><span cl
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Vector function</span>
 vrep <span class="o">&lt;-</span> <span class="kp">Vectorize</span><span class="p">(</span><span class="kp">rep.int</span><span class="p">)</span>
@@ -1961,7 +1961,7 @@ vrep<span class="p">(</span><span class="kt">c</span><span class="p">(</span><sp
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Scalar function</span>
 f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> y<span class="p">)</span> <span class="kt">c</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>
@@ -1973,7 +1973,7 @@ f<span class="p">(</span><span class="m">1</span><span class="o">:</span><span c
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Vector function</span>
 vf <span class="o">&lt;-</span> <span class="kp">Vectorize</span><span class="p">(</span>f<span class="p">,</span> SIMPLIFY <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
@@ -2001,7 +2001,7 @@ vf<span class="p">(</span><span class="m">1</span><span class="o">:</span><span 
 
 <h3 id="lapply-list-apply"><code class="codehilite">lapply</code>: list-apply<a class="headerlink" href="#lapply-list-apply" title="Permanent link">&para;</a></h3>
 <p>For lists, vectors, and data frames.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2055,7 +2055,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Extract values</span>
 MyList<span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
 </pre></div>
@@ -2071,7 +2071,7 @@ MyList<span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">,]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">,]</span>
 </pre></div>
 </td></tr></table>
 
@@ -2079,7 +2079,7 @@ MyList<span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">1</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">1</span><span class="p">]</span>
 </pre></div>
 </td></tr></table>
 
@@ -2087,7 +2087,7 @@ MyList<span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">]</span>
 </pre></div>
 </td></tr></table>
 
@@ -2095,7 +2095,7 @@ MyList<span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Extract the 2nd column from `MyList` with the selection operator `[` with `lapply()`</span>
 <span class="kp">lapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="p">,</span> <span class="m">2</span><span class="p">)</span>
 </pre></div>
@@ -2119,7 +2119,7 @@ MyList<span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Extract the 1st row from `MyList`</span>
 <span class="kp">lapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="p">)</span>
 </pre></div>
@@ -2144,7 +2144,7 @@ MyList<span class="p">[[</span><span class="m">1</span><span class="p">]]</span>
 </td></tr></table>
 
 <p><strong>Lambda &amp; custom function</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 MyList
 </pre></div>
@@ -2186,7 +2186,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Built-in function</span>
 <span class="kp">lapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">max</span><span class="p">)</span>
 </pre></div>
@@ -2210,7 +2210,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Lambda function</span>
 <span class="kp">lapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kp">max</span><span class="p">(</span>x<span class="p">)</span> <span class="o">+</span> <span class="m">10</span><span class="p">)</span>
 </pre></div>
@@ -2234,7 +2234,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2264,7 +2264,7 @@ select_first <span class="o">&lt;-</span> <span class="kr">function</span><span 
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2295,7 +2295,7 @@ select_el <span class="o">&lt;-</span> <span class="kr">function</span><span cla
 </td></tr></table>
 
 <p><strong>Strings</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 Y
 </pre></div>
@@ -2309,7 +2309,7 @@ Y
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the format</span>
 <span class="kp">lapply</span><span class="p">(</span>Y<span class="p">,</span> <span class="kp">toupper</span><span class="p">)</span>
 </pre></div>
@@ -2341,7 +2341,7 @@ Y
 
 <h4 id="sapply-simplify-list-apply"><code class="codehilite">sapply</code>: simplify-list-apply<a class="headerlink" href="#sapply-simplify-list-apply" title="Permanent link">&para;</a></h4>
 <p>A wrapper that simplifies <code class="codehilite">lapply</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 MyList
 </pre></div>
@@ -2383,7 +2383,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Return a list with `lapply()`</span>
 <span class="kp">lapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
@@ -2407,7 +2407,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Return a vector with `sapply()`</span>
 <span class="kp">sapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span> <span class="c1"># same result, but simpler</span>
 </pre></div>
@@ -2417,7 +2417,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Return a list with `sapply()`</span>
 <span class="kp">sapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> simplify <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="c1"># by default</span>
 </pre></div>
@@ -2427,7 +2427,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">sapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> simplify <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">sapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> simplify <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -2449,7 +2449,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Return a vector with `unlist()`</span>
 <span class="kp">unlist</span><span class="p">(</span><span class="kp">lapply</span><span class="p">(</span>MyList<span class="p">,</span><span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span> <span class="c1"># similar</span>
 </pre></div>
@@ -2460,7 +2460,7 @@ MyList
 </td></tr></table>
 
 <p><strong>Lambda &amp; custom function</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 MyList
 </pre></div>
@@ -2502,7 +2502,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Built-in function</span>
 <span class="kp">sapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">max</span><span class="p">)</span>
 </pre></div>
@@ -2512,7 +2512,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Lambda function</span>
 <span class="kp">lapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kp">max</span><span class="p">(</span>x<span class="p">)</span> <span class="o">+</span> <span class="m">10</span><span class="p">)</span>
 </pre></div>
@@ -2536,7 +2536,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2552,7 +2552,7 @@ select_first <span class="o">&lt;-</span> <span class="kr">function</span><span 
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2569,7 +2569,7 @@ select_el <span class="o">&lt;-</span> <span class="kr">function</span><span cla
 </td></tr></table>
 
 <p><strong>Strings</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 Y
 </pre></div>
@@ -2583,7 +2583,7 @@ Y
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change the format</span>
 <span class="kp">sapply</span><span class="p">(</span>Y<span class="p">,</span> <span class="kp">toupper</span><span class="p">)</span>
 </pre></div>
@@ -2598,7 +2598,7 @@ Y
 <h4 id="vapply"><code class="codehilite">vapply</code><a class="headerlink" href="#vapply" title="Permanent link">&para;</a></h4>
 <p>A variant.</p>
 <h4 id="rapply-recursive-list-apply"><code class="codehilite">rapply</code>: recursive-list-apply<a class="headerlink" href="#rapply-recursive-list-apply" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Dataset</span>
 MyList
 </pre></div>
@@ -2640,7 +2640,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Build-in function</span>
 <span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;replace&quot;</span><span class="p">)</span>
 </pre></div>
@@ -2682,7 +2682,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Lambda or custom the function</span>
 <span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> x<span class="o">^</span><span class="m">2</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;replace&quot;</span><span class="p">)</span>
 </pre></div>
@@ -2724,7 +2724,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>select_first <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
@@ -2752,7 +2752,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change classes =</span>
 <span class="kp">class</span><span class="p">(</span>MyList<span class="p">)</span> <span class="c1"># the object</span>
 </pre></div>
@@ -2762,7 +2762,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">class</span><span class="p">(</span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">])</span> <span class="c1"># each entry</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">class</span><span class="p">(</span>MyList<span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="m">1</span><span class="p">])</span> <span class="c1"># each entry</span>
 </pre></div>
 </td></tr></table>
 
@@ -2770,7 +2770,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;list&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;replace&quot;</span><span class="p">)</span> <span class="c1"># not work</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;list&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;replace&quot;</span><span class="p">)</span> <span class="c1"># not work</span>
 </pre></div>
 </td></tr></table>
 
@@ -2810,7 +2810,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;replace&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;replace&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -2850,7 +2850,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change how = </span>
 <span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;list&quot;</span><span class="p">)</span>
 </pre></div>
@@ -2892,7 +2892,7 @@ MyList
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;unlist&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kp">rapply</span><span class="p">(</span>MyList<span class="p">,</span> <span class="kp">sqrt</span><span class="p">,</span> classes <span class="o">=</span> <span class="s">&quot;ANY&quot;</span><span class="p">,</span> how <span class="o">=</span> <span class="s">&quot;unlist&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -2914,7 +2914,7 @@ MyList
 <li><code class="codehilite">how = &quot;replace&quot;</code> or <code class="codehilite">&quot;list&quot;</code>, <code class="codehilite">&quot;unlist&quot;</code></li>
 </ul>
 <h3 id="mapply-multivariate-apply"><code class="codehilite">mapply</code>: multivariate-apply<a class="headerlink" href="#mapply-multivariate-apply" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create a 4x4 matrix</span>
 Q1 <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="kp">rep</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="kp">rep</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="kp">rep</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span> <span class="kp">rep</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">4</span><span class="p">)),</span><span class="m">4</span><span class="p">,</span><span class="m">4</span><span class="p">)</span>
@@ -2934,7 +2934,7 @@ Q1
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Or use `mapply()`</span>
 Q2 <span class="o">&lt;-</span> <span class="kp">mapply</span><span class="p">(</span><span class="kp">rep</span><span class="p">,</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span>
@@ -2959,7 +2959,7 @@ vectors as arguments. Applies a function to multiple lists, <code class="codehil
 multiple vector, <code class="codehilite">c()</code>, arguments.</p>
 <h4 id="vectorize_1"><code class="codehilite">Vectorize</code><a class="headerlink" href="#vectorize_1" title="Permanent link">&para;</a></h4>
 <p>Vectorize a scaler function.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Scalar function</span>
 <span class="kp">rep</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="m">2</span><span class="p">)</span>
 </pre></div>
@@ -2969,7 +2969,7 @@ multiple vector, <code class="codehilite">c()</code>, arguments.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Vector function</span>
 vrep <span class="o">&lt;-</span> <span class="kp">Vectorize</span><span class="p">(</span><span class="kp">rep.int</span><span class="p">)</span>
@@ -2985,7 +2985,7 @@ vrep<span class="p">(</span><span class="kt">c</span><span class="p">(</span><sp
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Scalar function</span>
 f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> y<span class="p">)</span> <span class="kt">c</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>
@@ -2997,7 +2997,7 @@ f<span class="p">(</span><span class="m">1</span><span class="o">:</span><span c
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Vector function</span>
 vf <span class="o">&lt;-</span> <span class="kp">Vectorize</span><span class="p">(</span>f<span class="p">,</span> SIMPLIFY <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>

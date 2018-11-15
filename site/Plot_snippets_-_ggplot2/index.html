@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.5">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#dataset" tabindex="1" class="md-skip">
+      <a href="#dataset" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1205,12 +1205,12 @@
 <h3 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h3>
 <p>For most examples, we use the <code class="codehilite">mtcars</code>, <code class="codehilite">diamonds</code>, <code class="codehilite">iris</code>, <code class="codehilite">ChickWeight</code>, <code class="codehilite">recess</code>, <code class="codehilite">fish</code>, <code class="codehilite">Vocab</code>, <code class="codehilite">Titanic</code>, <code class="codehilite">mamsleep</code>, <code class="codehilite">barley</code>, <code class="codehilite">adult</code> datasets.</p>
 <h3 id="the-ggplot2-package">The <code class="codehilite">ggplot2</code> Package<a class="headerlink" href="#the-ggplot2-package" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">library</span><span class="p">(</span>ggplot2<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>Import additional packages.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1231,7 +1231,7 @@
 </td></tr></table>
 
 <p>For this project, import additional packages.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1251,7 +1251,7 @@
 <h3 id="section-1">SECTION 1<a class="headerlink" href="#section-1" title="Permanent link">&para;</a></h3>
 <h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
 <p><strong>Exploring <code class="codehilite">ggplot2</code>, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># basic plot</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -1261,7 +1261,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-17-1.png" /></p>
 <p><strong>Exploring <code class="codehilite">ggplot2</code>, part 2</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># cyl is a factor</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> y <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -1271,7 +1271,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-18-1.png" /></p>
 <p><strong>Exploring <code class="codehilite">ggplot2</code>, part 3</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -1280,7 +1280,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-19-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add color</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> disp<span class="p">))</span> <span class="o">+</span>
@@ -1289,7 +1289,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-20-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change size</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> size <span class="o">=</span> disp<span class="p">))</span> <span class="o">+</span>
@@ -1299,7 +1299,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-21-1.png" /></p>
 <p><strong>Exploring <code class="codehilite">ggplot2</code>, part 4</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add geom_point() with +</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Carat<span class="p">,</span> y <span class="o">=</span> PricePerCt<span class="p">))</span> <span class="o">+</span>
@@ -1308,7 +1308,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-22-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add geom_point() and geom_smooth() with +</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Carat<span class="p">,</span> y <span class="o">=</span> PricePerCt<span class="p">))</span> <span class="o">+</span>
@@ -1318,7 +1318,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-23-1.png" /></p>
 <p><strong>Exploring <code class="codehilite">ggplot2</code>, part 5</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># only the smooth line</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Carat<span class="p">,</span> y <span class="o">=</span> PricePerCt<span class="p">))</span> <span class="o">+</span>
@@ -1327,7 +1327,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-24-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change col</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Carat<span class="p">,</span> y <span class="o">=</span> PricePerCt<span class="p">,</span> col <span class="o">=</span> Clarity<span class="p">))</span> <span class="o">+</span> 
@@ -1336,7 +1336,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-25-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the alpha</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Carat<span class="p">,</span> y <span class="o">=</span> PricePerCt<span class="p">,</span> col <span class="o">=</span> Clarity<span class="p">))</span> <span class="o">+</span>
@@ -1346,7 +1346,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-26-1.png" /></p>
 <p><strong>Exploring <code class="codehilite">ggplot2</code>, part 6</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1381,7 +1381,7 @@ grid.arrange<span class="p">(</span>a<span class="p">,</span> b<span class="p">,
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-27-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1398,7 +1398,7 @@ ggplot<span class="p">(</span>oly12<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-28-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1418,7 +1418,7 @@ ggplot<span class="p">(</span>oly12S<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-29-1.png" /></p>
 <p><strong>Understanding the grammar, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1433,7 +1433,7 @@ dia_plot <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-30-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add the same geom layer, but with aes() inside</span>
 dia_plot <span class="o">+</span>
@@ -1443,7 +1443,7 @@ dia_plot <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-31-1.png" /></p>
 <p><strong>Understanding the grammar, part 2</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1466,7 +1466,7 @@ dia_plot
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-32-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># plot dia_plot with additional geom_smooth() with se set to FALSE</span>
 dia_plot <span class="o">+</span>
@@ -1477,14 +1477,14 @@ dia_plot <span class="o">+</span>
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-33-1.png" /></p>
 <h4 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h4>
 <p><strong>Base package and <code class="codehilite">ggplot2</code>, part 1 - plot</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># basic plot</span>
 plot<span class="p">(</span>mtcars<span class="o">$</span>wt<span class="p">,</span> mtcars<span class="o">$</span>mpg<span class="p">,</span> col <span class="o">=</span> mtcars<span class="o">$</span>cyl<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-34-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1499,7 +1499,7 @@ plot<span class="p">(</span>mtcars<span class="o">$</span>wt<span class="p">,</s
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-35-1.png" /></p>
 <p><strong>Base package and <code class="codehilite">ggplot2</code>, part 2 - lm</strong></p>
 <p>transfer to other</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1721,7 +1721,7 @@ abline<span class="p">(</span>carModel<span class="p">,</span> lty <span class="
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># draw the legend of the plot</span>
 legend<span class="p">(</span>x <span class="o">=</span> <span class="m">5</span><span class="p">,</span> y <span class="o">=</span> <span class="m">33</span><span class="p">,</span> legend <span class="o">=</span> <span class="kp">levels</span><span class="p">(</span>mtcars<span class="o">$</span>cyl<span class="p">),</span> col <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> pch <span class="o">=</span> <span class="m">1</span><span class="p">,</span> bty <span class="o">=</span> <span class="s">&#39;n&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1729,7 +1729,7 @@ legend<span class="p">(</span>x <span class="o">=</span> <span class="m">5</span
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-36-1.png" /></p>
 <p><strong>Base package and <code class="codehilite">ggplot2</code>, part 3</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span> 
@@ -1738,7 +1738,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-37-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># include the lines of the linear models, per cyl</span>
@@ -1749,7 +1749,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-38-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1763,7 +1763,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-39-1.png" /></p>
 <p><strong>Variables to visuals, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1781,7 +1781,7 @@ ggplot<span class="p">(</span>iris.tidy<span class="p">,</span> aes<span class="
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-40-1.png" /></p>
 <p><strong>Variables to visuals, part 2</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1810,7 +1810,7 @@ ggplot<span class="p">(</span>iris.wide<span class="p">,</span> aes<span class="
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-41-1.png" /></p>
 <h4 id="aesthetics">Aesthetics<a class="headerlink" href="#aesthetics" title="Permanent link">&para;</a></h4>
 <p><strong>All about aesthetics, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to y</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">,</span> y <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1819,7 +1819,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-42-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to x</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>y <span class="o">=</span> mpg<span class="p">,</span> x <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1828,7 +1828,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-43-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to col</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1837,7 +1837,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-44-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change shape and size of the points</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1847,7 +1847,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-45-1.png" /></p>
 <p><strong>All about aesthetics, part 2</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to fill</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1856,7 +1856,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-46-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change shape, size and alpha of the points in the above plot</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1866,7 +1866,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-47-1.png" /></p>
 <p><strong>All about aesthetics, part 3</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to size</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> size <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1875,7 +1875,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-48-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to alpha</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> alpha <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1884,7 +1884,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-49-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to shape </span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> shape <span class="o">=</span> cyl<span class="p">,</span> label <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1893,7 +1893,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-50-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># map cyl to labels</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> label <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1903,7 +1903,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-51-1.png" /></p>
 <p><strong>All about attributes, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1918,7 +1918,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-52-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set the color aesthetic and attribute </span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1927,7 +1927,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-53-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set the fill aesthetic and color, size and shape attributes</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1937,7 +1937,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-54-1.png" /></p>
 <p><strong>All about attributes, part 2</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># draw points with alpha 0.5</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1946,7 +1946,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-55-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># raw points with shape 24 and color yellow</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1955,7 +1955,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-56-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># draw text with label x, color red and size 10</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -1965,7 +1965,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-57-1.png" /></p>
 <p><strong>Going all out</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Map mpg onto x, qsec onto y and factor(cyl) onto col</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">,</span> y <span class="o">=</span> qsec<span class="p">,</span> col <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>cyl<span class="p">)))</span> <span class="o">+</span>
@@ -1974,7 +1974,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-58-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add mapping: factor(am) onto shape</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">,</span> y <span class="o">=</span> qsec<span class="p">,</span> col <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> shape <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>am<span class="p">)))</span> <span class="o">+</span>
@@ -1983,7 +1983,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-59-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add mapping: (hp/wt) onto size</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">,</span> y <span class="o">=</span> qsec<span class="p">,</span> col <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> shape <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>am<span class="p">),</span> size <span class="o">=</span> hp<span class="o">/</span>wt<span class="p">))</span> <span class="o">+</span>
@@ -1992,7 +1992,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-60-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add mapping: rownames(mtcars) onto label</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">,</span> y <span class="o">=</span> qsec<span class="p">,</span> col <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> shape <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>am<span class="p">),</span> size <span class="o">=</span> hp<span class="o">/</span>wt<span class="p">))</span> <span class="o">+</span>
@@ -2002,7 +2002,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-61-1.png" /></p>
 <p><strong>Position</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2017,7 +2017,7 @@ cyl.am <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-62-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># show proportion</span>
 cyl.am <span class="o">+</span> 
@@ -2026,7 +2026,7 @@ cyl.am <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-63-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dodging</span>
 cyl.am <span class="o">+</span> 
@@ -2035,7 +2035,7 @@ cyl.am <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-64-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2055,7 +2055,7 @@ cyl.am <span class="o">+</span> geom_bar<span class="p">(</span>position <span c
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-65-1.png" /></p>
 <p><strong>Setting a dummy aesthetic</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2068,7 +2068,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-66-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the y aesthetic limits</span>
@@ -2080,7 +2080,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-67-1.png" /></p>
 <p><strong>Overplotting 1 - Point shape and transparency</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># basic scatter plot: wt on x-axis and mpg on y-axis; map cyl to col</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -2089,7 +2089,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-68-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># hollow circles - an improvement</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -2098,7 +2098,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-69-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add transparency - very nice</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -2108,7 +2108,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-70-1.png" /></p>
 <p><strong>Overplotting 2 - alpha with large datasets</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot: carat (x), price (y), clarity (col)</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Carat<span class="p">,</span> y <span class="o">=</span> PricePerCt<span class="p">,</span> col <span class="o">=</span> Clarity<span class="p">))</span> <span class="o">+</span>
@@ -2117,7 +2117,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-71-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># adjust for overplotting</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Carat<span class="p">,</span> y <span class="o">=</span> PricePerCt<span class="p">,</span> col <span class="o">=</span> Clarity<span class="p">))</span> <span class="o">+</span>
@@ -2126,7 +2126,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-72-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot: clarity (x), carat (y), price (col)</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Clarity<span class="p">,</span> y <span class="o">=</span> Carat<span class="p">,</span> col <span class="o">=</span> PricePerCt<span class="p">))</span> <span class="o">+</span>
@@ -2135,7 +2135,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-73-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dot plot with jittering</span>
 ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Clarity<span class="p">,</span> y <span class="o">=</span> Carat<span class="p">,</span> col <span class="o">=</span> PricePerCt<span class="p">))</span> <span class="o">+</span>
@@ -2146,7 +2146,7 @@ ggplot<span class="p">(</span>diamonds<span class="p">,</span> aes<span class="p
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-74-1.png" /></p>
 <h4 id="geometries">Geometries<a class="headerlink" href="#geometries" title="Permanent link">&para;</a></h4>
 <p><strong>Scatter plots and jittering (1)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># plot the cyl on the x-axis and wt on the y-axis</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> y <span class="o">=</span> wt<span class="p">))</span> <span class="o">+</span>
@@ -2155,7 +2155,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-75-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Use geom_jitter() instead of geom_point()</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> y <span class="o">=</span> wt<span class="p">))</span> <span class="o">+</span>
@@ -2164,7 +2164,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-76-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2180,7 +2180,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-77-1.png" /></p>
 <p><strong>Scatter plots and jittering (2)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot of vocabulary (y) against education (x). Use geom_point()</span>
 ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> education<span class="p">,</span> y <span class="o">=</span> vocabulary<span class="p">))</span> <span class="o">+</span> 
@@ -2189,7 +2189,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-78-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># use geom_jitter() instead of geom_point()</span>
 ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> education<span class="p">,</span> y <span class="o">=</span> vocabulary<span class="p">))</span> <span class="o">+</span>
@@ -2198,7 +2198,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-79-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set alpha to a very low 0.2</span>
 ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> education<span class="p">,</span> y <span class="o">=</span> vocabulary<span class="p">))</span> <span class="o">+</span>
@@ -2207,7 +2207,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-80-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set the shape to 1</span>
 ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> education<span class="p">,</span> y <span class="o">=</span> vocabulary<span class="p">))</span> <span class="o">+</span>
@@ -2217,7 +2217,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-81-1.png" /></p>
 <p><strong>Histograms</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># univariate histogram</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -2226,7 +2226,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-82-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the bin width to 1</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -2235,7 +2235,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-83-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the y aesthetic to density</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -2244,7 +2244,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-84-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2260,7 +2260,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-85-1.png" /></p>
 <p><strong>Position</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2273,7 +2273,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-86-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the position argument to stack</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2282,7 +2282,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-87-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the position argument to fill</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2291,7 +2291,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-88-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the position argument to dodge</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2301,7 +2301,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-89-1.png" /></p>
 <p><strong>Overlapping bar plots</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># bar plot of cyl, filled according to am</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2310,7 +2310,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-90-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the position argument to &#39;dodge&#39;</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2319,7 +2319,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-91-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2334,7 +2334,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-92-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># use posn_d as position and adjust alpha to 0.6</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2344,7 +2344,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-93-1.png" /></p>
 <p><strong>Overlapping histograms</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># histogram, add coloring defined by cyl </span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -2353,7 +2353,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-94-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change position to identity </span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -2362,7 +2362,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-95-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change geom to freqpoly (position is identity by default) </span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> col <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -2372,7 +2372,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-96-1.png" /></p>
 <p><strong>Facets or splom histograms</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2396,7 +2396,7 @@ ur2 <span class="o">&lt;-</span> melt<span class="p">(</span>uniranks<span class
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2411,7 +2411,7 @@ ggplot<span class="p">(</span>ur2<span class="p">,</span> aes<span class="p">(</
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-98-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2439,7 +2439,7 @@ grid.arrange<span class="p">(</span>h1<span class="p">,</span> h2<span class="p"
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-99-1.png" /></p>
 <p><strong>Bar plots with color ramp, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Example of how to use a brewed color palette</span>
@@ -2450,7 +2450,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-100-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2466,7 +2466,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-101-1.png" /></p>
 <p><strong>Bar plots with color ramp, part 2</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2490,14 +2490,14 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-102-1.png" /></p>
 <p><strong>Overlapping histograms (2)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># histogram</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">))</span> <span class="o">+</span> geom_histogram<span class="p">(</span>binwidth <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-103-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># expand the histogram to fill using am</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2506,7 +2506,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-104-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the position argument to &#39;dodge&#39;</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2515,7 +2515,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-105-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the position argument to &#39;fill&#39;</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2524,7 +2524,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-106-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the position argument to &#39;identity&#39; and set alpha to 0.4</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span>
@@ -2533,7 +2533,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-107-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change fill to cyl</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>mpg<span class="p">,</span> fill <span class="o">=</span> cyl<span class="p">))</span> <span class="o">+</span>
@@ -2543,7 +2543,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-108-1.png" /></p>
 <p><strong>Line plots</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># plot unemploy as a function of date using a line plot</span>
 ggplot<span class="p">(</span>economics<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">date</span><span class="p">,</span> y <span class="o">=</span> unemploy<span class="p">))</span> <span class="o">+</span>
@@ -2552,7 +2552,7 @@ ggplot<span class="p">(</span>economics<span class="p">,</span> aes<span class="
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-109-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># adjust plot to represent the fraction of total population that is unemployed</span>
 ggplot<span class="p">(</span>economics<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">date</span><span class="p">,</span> y <span class="o">=</span> unemploy<span class="o">/</span>pop<span class="p">))</span> <span class="o">+</span>
@@ -2562,7 +2562,7 @@ ggplot<span class="p">(</span>economics<span class="p">,</span> aes<span class="
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-110-1.png" /></p>
 <p><strong>Periods of recession</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># draw the recess periods</span>
@@ -2574,14 +2574,14 @@ ggplot<span class="p">(</span>economics<span class="p">,</span> aes<span class="
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-111-1.png" /></p>
 <p><strong>Multiple time series, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># use gather to go from fish to fish.tidy.</span>
 fish.tidy <span class="o">&lt;-</span> gather<span class="p">(</span>fish<span class="p">,</span> Species<span class="p">,</span> Capture<span class="p">,</span> <span class="o">-</span>Year<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Multiple time series, part 2</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># plot</span>
 ggplot<span class="p">(</span>fish.tidy<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Year<span class="p">,</span> y <span class="o">=</span> Capture<span class="p">,</span> col <span class="o">=</span> Species<span class="p">))</span> <span class="o">+</span>
@@ -2592,14 +2592,14 @@ ggplot<span class="p">(</span>fish.tidy<span class="p">,</span> aes<span class="
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-113-1.png" /></p>
 <h4 id="qplot-and-wrap-up"><code class="codehilite">qplot</code> and wrap-up<a class="headerlink" href="#qplot-and-wrap-up" title="Permanent link">&para;</a></h4>
 <p><strong>Using <code class="codehilite">qplot</code></strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># the old way</span>
 plot<span class="p">(</span>mpg <span class="o">~</span> wt<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-114-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># using ggplot</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -2608,7 +2608,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-115-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Using qplot</span>
 qplot<span class="p">(</span>wt<span class="p">,</span> mpg<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">)</span>
 </pre></div>
@@ -2616,28 +2616,28 @@ qplot<span class="p">(</span>wt<span class="p">,</span> mpg<span class="p">,</sp
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-116-1.png" /></p>
 <p><strong>Using aesthetics</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Categorical: cyl</span>
 qplot<span class="p">(</span>wt<span class="p">,</span> mpg<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">,</span> size <span class="o">=</span> cyl<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-117-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># gear</span>
 qplot<span class="p">(</span>wt<span class="p">,</span> mpg<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">,</span> size <span class="o">=</span> gear<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-118-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Continuous: hp</span>
 qplot<span class="p">(</span>wt<span class="p">,</span> mpg<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">,</span> col <span class="o">=</span> hp<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-119-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># qsec</span>
 qplot<span class="p">(</span>wt<span class="p">,</span> mpg<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">,</span> size <span class="o">=</span> qsec<span class="p">)</span>
 </pre></div>
@@ -2645,21 +2645,21 @@ qplot<span class="p">(</span>wt<span class="p">,</span> mpg<span class="p">,</sp
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-120-1.png" /></p>
 <p><strong>Choosing geoms, part 1</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># qplot() with x only</span>
 qplot<span class="p">(</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> data <span class="o">=</span> mtcars<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-121-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># qplot() with x and y</span>
 qplot<span class="p">(</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> <span class="kp">factor</span><span class="p">(</span>vs<span class="p">),</span> data <span class="o">=</span> mtcars<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-122-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># qplot() with geom set to jitter manually</span>
 qplot<span class="p">(</span><span class="kp">factor</span><span class="p">(</span>cyl<span class="p">),</span> <span class="kp">factor</span><span class="p">(</span>vs<span class="p">),</span> data <span class="o">=</span> mtcars<span class="p">,</span> geom <span class="o">=</span> <span class="s">&#39;jitter&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2667,7 +2667,7 @@ qplot<span class="p">(</span><span class="kp">factor</span><span class="p">(</sp
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-123-1.png" /></p>
 <p><strong>Choosing geoms, part 2 - dotplot</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># make a dot plot with ggplot</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>cyl<span class="p">,</span> wt<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> 
@@ -2676,7 +2676,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-124-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># qplot with geom &#39;dotplot&#39;, binaxis = &#39;y&#39; and stackdir = &#39;center&#39;</span>
 qplot<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(</span>cyl<span class="p">),</span> wt<span class="p">,</span> data <span class="o">=</span> mtcars<span class="p">,</span> fill <span class="o">=</span> am<span class="p">,</span> geom <span class="o">=</span> <span class="s">&#39;dotplot&#39;</span><span class="p">,</span> stackdir <span class="o">=</span> <span class="s">&#39;center&#39;</span><span class="p">,</span> binaxis <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
 </pre></div>
@@ -2684,7 +2684,7 @@ qplot<span class="p">(</span><span class="kp">as.numeric</span><span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-125-1.png" /></p>
 <p><strong>Chicken weight</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># base</span>
 ggplot<span class="p">(</span>ChickWeight<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Time<span class="p">,</span> y <span class="o">=</span> weight<span class="p">))</span> <span class="o">+</span>
@@ -2693,7 +2693,7 @@ ggplot<span class="p">(</span>ChickWeight<span class="p">,</span> aes<span class
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-126-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># color</span>
 ggplot<span class="p">(</span>ChickWeight<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> Time<span class="p">,</span> y <span class="o">=</span> weight<span class="p">,</span> col <span class="o">=</span> Diet<span class="p">))</span> <span class="o">+</span>
@@ -2702,7 +2702,7 @@ ggplot<span class="p">(</span>ChickWeight<span class="p">,</span> aes<span class
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-127-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># lines</span>
@@ -2714,7 +2714,7 @@ ggplot<span class="p">(</span>ChickWeight<span class="p">,</span> aes<span class
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-128-1.png" /></p>
 <p><strong>Titanic</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Use ggplot() for the first instruction</span>
 ggplot<span class="p">(</span>titanic<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>Pclass<span class="p">),</span> fill <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>Sex<span class="p">)))</span> <span class="o">+</span>
@@ -2723,7 +2723,7 @@ ggplot<span class="p">(</span>titanic<span class="p">,</span> aes<span class="p"
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-129-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Use ggplot() for the second instruction</span>
@@ -2734,7 +2734,7 @@ ggplot<span class="p">(</span>titanic<span class="p">,</span> aes<span class="p"
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-130-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2754,7 +2754,7 @@ ggplot<span class="p">(</span>titanic<span class="p">,</span> aes<span class="p"
 <h3 id="section-2">SECTION 2<a class="headerlink" href="#section-2" title="Permanent link">&para;</a></h3>
 <h4 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h4>
 <p><strong>Smoothing</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot with LOESS smooth with a CI ribbon</span>
@@ -2765,7 +2765,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-132-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot with LOESS smooth without CI</span>
@@ -2776,7 +2776,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-133-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot with an OLS linear model</span>
@@ -2787,7 +2787,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-134-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot with an OLS linear model without points</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span>
@@ -2797,7 +2797,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-135-1.png" /></p>
 <p><strong>Grouping variables</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># cyl as a factor variable</span>
@@ -2808,7 +2808,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-136-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set the group aesthetic</span>
@@ -2819,7 +2819,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-137-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2833,7 +2833,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-138-1.png" /></p>
 <p><strong>Modifying <code class="codehilite">stat_smooth</code></strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change the LOESS span</span>
@@ -2844,11 +2844,11 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-139-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># method = &#39;auto&#39; is by default</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># method = &#39;auto&#39; is by default</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2861,7 +2861,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-140-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2874,7 +2874,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-141-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2894,7 +2894,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-142-1.png" /></p>
 <p><strong>Modifying <code class="codehilite">stat_smooth</code> (2)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># jittered scatter plot, add a linear model (lm) smooth</span>
@@ -2905,7 +2905,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-143-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># only lm, colored by year</span>
 ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> education<span class="p">,</span> y <span class="o">=</span> vocabulary<span class="p">,</span> col <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>year<span class="p">)))</span> <span class="o">+</span>
@@ -2914,7 +2914,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-144-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set a color brewer palette</span>
@@ -2925,7 +2925,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-145-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2939,7 +2939,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-146-1.png" /></p>
 <p><strong>Quantiles</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># use stat_quantile instead of stat_smooth</span>
 ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> education<span class="p">,</span> y <span class="o">=</span> vocabulary<span class="p">,</span> col <span class="o">=</span> year<span class="p">,</span> group <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>year<span class="p">)))</span> <span class="o">+</span>  stat_quantile<span class="p">(</span>alpha <span class="o">=</span> <span class="m">0.6</span><span class="p">,</span> size <span class="o">=</span> <span class="m">2</span><span class="p">)</span> <span class="o">+</span> 
@@ -2948,7 +2948,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-147-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set quantile to 0.5</span>
@@ -2960,7 +2960,7 @@ ggplot<span class="p">(</span>Vocab<span class="p">,</span> aes<span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-148-1.png" /></p>
 <p><strong>Sum</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2977,7 +2977,7 @@ p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-149-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add stat_sum (by overall proportion)</span>
 p <span class="o">+</span> 
@@ -2986,11 +2986,11 @@ p <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-150-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#aes(group = 1)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#aes(group = 1)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set size range</span>
@@ -3001,7 +3001,7 @@ p <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-151-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># proportional within years of education; set group aesthetic</span>
 p <span class="o">+</span> 
@@ -3010,7 +3010,7 @@ p <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-152-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set the n</span>
 p <span class="o">+</span> 
@@ -3020,7 +3020,7 @@ p <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-153-1.png" /></p>
 <p><strong>Preparations</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3045,13 +3045,13 @@ wt.cyl.am <span class="o">&lt;-</span> ggplot<span class="p">(</span>mtcars<span
 </td></tr></table>
 
 <p><strong>Plotting variations</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># base layer</span>
 wt.cyl.am <span class="o">&lt;-</span> ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span>  y <span class="o">=</span> wt<span class="p">,</span> col <span class="o">=</span> am<span class="p">,</span> fill <span class="o">=</span> am<span class="p">,</span> group <span class="o">=</span> am<span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># jittered, dodged scatter plot with transparent points</span>
 wt.cyl.am <span class="o">+</span> 
@@ -3060,7 +3060,7 @@ wt.cyl.am <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-156-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># mean and sd</span>
 wt.cyl.am <span class="o">+</span>
@@ -3069,7 +3069,7 @@ wt.cyl.am <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-157-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># mean and 95% CI</span>
@@ -3080,7 +3080,7 @@ wt.cyl.am <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-158-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3095,7 +3095,7 @@ wt.cyl.am <span class="o">+</span>
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-159-1.png" /></p>
 <h4 id="coordinates-and-facets">Coordinates and Facets<a class="headerlink" href="#coordinates-and-facets" title="Permanent link">&para;</a></h4>
 <p><strong>Zooming In</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># basic</span>
@@ -3105,7 +3105,7 @@ p <span class="o">&lt;-</span> ggplot<span class="p">(</span>mtcars<span class="
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add scale_x_continuous</span>
 p <span class="o">+</span> 
@@ -3114,7 +3114,7 @@ p <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-161-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># zoom in</span>
 p <span class="o">+</span> 
@@ -3124,7 +3124,7 @@ p <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-162-1.png" /></p>
 <p><strong>Aspect Ratio</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot</span>
@@ -3134,7 +3134,7 @@ base.plot <span class="o">&lt;-</span> ggplot<span class="p">(</span>iris<span c
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># default aspect ratio</span>
@@ -3145,7 +3145,7 @@ base.plot <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-164-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>base.plot <span class="o">+</span> 
   coord_fixed<span class="p">()</span>
 </pre></div>
@@ -3153,7 +3153,7 @@ base.plot <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-164-2.png" /></p>
 <p><strong>Pie Charts</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3166,7 +3166,7 @@ thin.bar
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-165-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># convert thin.bar to pie chart</span>
 thin.bar <span class="o">+</span> 
@@ -3175,7 +3175,7 @@ thin.bar <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-166-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3188,7 +3188,7 @@ wide.bar
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-167-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Convert wide.bar to pie chart</span>
 wide.bar <span class="o">+</span> coord_polar<span class="p">(</span>theta <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
 </pre></div>
@@ -3196,13 +3196,13 @@ wide.bar <span class="o">+</span> coord_polar<span class="p">(</span>theta <span
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-168-1.png" /></p>
 <p><strong>Facets: the basics</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot</span>
 p <span class="o">&lt;-</span> ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> wt<span class="p">,</span> y <span class="o">=</span> mpg<span class="p">))</span> <span class="o">+</span> geom_point<span class="p">()</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># separate rows according am</span>
@@ -3213,7 +3213,7 @@ p <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-170-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># separate columns according to cyl</span>
 <span class="c1"># facet_grid(rows ~ cols)</span>
@@ -3222,7 +3222,7 @@ p <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-171-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># separate by both columns and rows </span>
@@ -3234,7 +3234,7 @@ p <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-172-1.png" /></p>
 <p><strong>Many variables</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3246,7 +3246,7 @@ myCol <span class="o">&lt;-</span> <span class="kp">rbind</span><span class="p">
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot, add color scale</span>
@@ -3257,7 +3257,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-174-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3270,7 +3270,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-175-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3284,7 +3284,7 @@ ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-176-1.png" /></p>
 <p><strong>Dropping levels</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot</span>
 ggplot<span class="p">(</span>mamsleep<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> time<span class="p">,</span> y <span class="o">=</span> name<span class="p">,</span> col <span class="o">=</span> sleep<span class="p">))</span> <span class="o">+</span> 
@@ -3293,7 +3293,7 @@ ggplot<span class="p">(</span>mamsleep<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-177-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># facet rows according to `vore`</span>
@@ -3304,7 +3304,7 @@ ggplot<span class="p">(</span>mamsleep<span class="p">,</span> aes<span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-178-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># specify scale and space arguments to free up rows</span>
@@ -3317,7 +3317,7 @@ ggplot<span class="p">(</span>mamsleep<span class="p">,</span> aes<span class="p
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-179-1.png" /></p>
 <h4 id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">&para;</a></h4>
 <p><strong>Rectangles</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3348,7 +3348,7 @@ z
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-180-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3361,7 +3361,7 @@ z <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-181-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># adjust the border to be a black line of size 3</span>
 z <span class="o">+</span> 
@@ -3370,7 +3370,7 @@ z <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-182-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># adjust the border to be a black line of size 3</span>
 z <span class="o">+</span> 
@@ -3379,7 +3379,7 @@ z <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-183-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set panel.background, legend.key, legend.background and strip.background to element_blank()</span>
 z <span class="o">+</span> 
@@ -3389,7 +3389,7 @@ z <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-184-1.png" /></p>
 <p><strong>Lines</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Extend z with theme() and three arguments</span>
 z <span class="o">+</span>
@@ -3399,7 +3399,7 @@ z <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-185-1.png" /></p>
 <p><strong>Text</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3413,7 +3413,7 @@ z <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-186-1.png" /></p>
 <p><strong>Legends</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># move legend by position</span>
 z <span class="o">+</span> 
@@ -3422,7 +3422,7 @@ z <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-187-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change direction</span>
 z <span class="o">+</span> 
@@ -3431,7 +3431,7 @@ z <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-188-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change location by name</span>
 z <span class="o">+</span> 
@@ -3440,7 +3440,7 @@ z <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-189-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># remove legend entirely</span>
 z <span class="o">+</span> 
@@ -3450,7 +3450,7 @@ z <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-190-1.png" /></p>
 <p><strong>Positions</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># increase spacing between facets</span>
 z <span class="o">+</span> 
@@ -3459,7 +3459,7 @@ z <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-191-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add code to remove any excess plot margin space</span>
 z <span class="o">+</span> 
@@ -3469,13 +3469,13 @@ z <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-192-1.png" /></p>
 <p><strong>Update Themestheme update</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># theme layer saved as an object, theme_pink</span>
 theme_pink <span class="o">&lt;-</span> theme<span class="p">(</span>panel.background <span class="o">=</span> element_blank<span class="p">(),</span> legend.key <span class="o">=</span> element_blank<span class="p">(),</span> legend.background <span class="o">=</span> element_blank<span class="p">(),</span> strip.background <span class="o">=</span> element_blank<span class="p">(),</span> plot.background <span class="o">=</span> element_rect<span class="p">(</span>fill <span class="o">=</span> myPink<span class="p">,</span> color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> size <span class="o">=</span> <span class="m">3</span><span class="p">),</span> panel.grid <span class="o">=</span> element_blank<span class="p">(),</span> axis.line <span class="o">=</span> element_line<span class="p">(</span>color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">),</span> axis.ticks <span class="o">=</span> element_line<span class="p">(</span>color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">),</span> strip.text <span class="o">=</span> element_text<span class="p">(</span>size <span class="o">=</span> <span class="m">16</span><span class="p">,</span> color <span class="o">=</span> myRed<span class="p">),</span> axis.title.y <span class="o">=</span> element_text<span class="p">(</span>color <span class="o">=</span> myRed<span class="p">,</span> hjust <span class="o">=</span> <span class="m">0</span><span class="p">,</span> face <span class="o">=</span> <span class="s">&#39;italic&#39;</span><span class="p">),</span> axis.title.x <span class="o">=</span> element_text<span class="p">(</span>color <span class="o">=</span> myRed<span class="p">,</span> hjust <span class="o">=</span> <span class="m">0</span><span class="p">,</span> face <span class="o">=</span> <span class="s">&#39;italic&#39;</span><span class="p">),</span> axis.text <span class="o">=</span> element_text<span class="p">(</span>color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">),</span> legend.position <span class="o">=</span> <span class="s">&#39;none&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3488,13 +3488,13 @@ z2 <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-194-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># change code so that old theme is saved as old</span>
 old <span class="o">&lt;-</span> theme_update<span class="p">(</span>panel.background <span class="o">=</span> element_blank<span class="p">(),</span> legend.key <span class="o">=</span> element_blank<span class="p">(),</span> legend.background <span class="o">=</span> element_blank<span class="p">(),</span> strip.background <span class="o">=</span> element_blank<span class="p">(),</span> plot.background <span class="o">=</span> element_rect<span class="p">(</span>fill <span class="o">=</span> myPink<span class="p">,</span> color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">,</span> size <span class="o">=</span> <span class="m">3</span><span class="p">),</span> panel.grid <span class="o">=</span> element_blank<span class="p">(),</span>axis.line <span class="o">=</span> element_line<span class="p">(</span>color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">),</span> axis.ticks <span class="o">=</span> element_line<span class="p">(</span>color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">),</span> strip.text <span class="o">=</span> element_text<span class="p">(</span>size <span class="o">=</span> <span class="m">16</span><span class="p">,</span> color <span class="o">=</span> myRed<span class="p">),</span> axis.title.y <span class="o">=</span> element_text<span class="p">(</span>color <span class="o">=</span> myRed<span class="p">,</span> hjust <span class="o">=</span> <span class="m">0</span><span class="p">,</span> face <span class="o">=</span> <span class="s">&#39;italic&#39;</span><span class="p">),</span> axis.title.x <span class="o">=</span> element_text<span class="p">(</span>color <span class="o">=</span> myRed<span class="p">,</span> hjust <span class="o">=</span> <span class="m">0</span><span class="p">,</span> face <span class="o">=</span> <span class="s">&#39;italic&#39;</span><span class="p">),</span> axis.text <span class="o">=</span> element_text<span class="p">(</span>color <span class="o">=</span> <span class="s">&#39;black&#39;</span><span class="p">),</span> legend.position <span class="o">=</span> <span class="s">&#39;none&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3507,7 +3507,7 @@ z2 <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-196-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># restore the old plot</span>
@@ -3519,7 +3519,7 @@ z2
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-197-1.png" /></p>
 <p><strong>Exploring ggthemes</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3536,7 +3536,7 @@ z2 <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-198-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3557,7 +3557,7 @@ z2 <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-199-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3574,7 +3574,7 @@ z2 <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-200-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3601,13 +3601,13 @@ z2 <span class="o">+</span>
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-201-1.png" /></p>
 <h4 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h4>
 <p><strong>Bar Plots (1)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># base layers</span>
 m <span class="o">&lt;-</span> ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> y <span class="o">=</span> wt<span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dynamite plot</span>
 m <span class="o">+</span> 
@@ -3617,13 +3617,13 @@ m <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-203-1.png" /></p>
 <p><strong>Bar Plots (2)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># base layers</span>
 m <span class="o">&lt;-</span> ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span>y <span class="o">=</span> wt<span class="p">,</span> col <span class="o">=</span> am<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dynamite plot</span>
 m <span class="o">+</span> 
@@ -3632,7 +3632,7 @@ m <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-205-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set position dodge in each `stat` function</span>
 m <span class="o">+</span> 
@@ -3641,13 +3641,13 @@ m <span class="o">+</span>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-206-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set your dodge `posn` manually</span>
 posn.d <span class="o">&lt;-</span> position_dodge<span class="p">(</span><span class="m">0.9</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># redraw dynamite plot</span>
 m <span class="o">+</span> 
@@ -3657,7 +3657,7 @@ m <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-208-1.png" /></p>
 <p><strong>Bar Plots (3)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># base layers</span>
 mtcars.cyl <span class="o">&lt;-</span> mtcars <span class="o">%&gt;%</span> group_by<span class="p">(</span>cyl<span class="p">)</span> <span class="o">%&gt;%</span> summarise<span class="p">(</span>wt.avg <span class="o">=</span> <span class="kp">mean</span><span class="p">(</span>wt<span class="p">))</span>
@@ -3672,21 +3672,21 @@ mtcars.cyl
 5
 6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## # A tibble: 3 × 2
 ##     cyl   wt.avg
-##   &lt;dbl&gt;    &lt;dbl&gt;
+##   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
 ## 1     4 2.285727
 ## 2     6 3.117143
 ## 3     8 3.999214
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>m <span class="o">&lt;-</span> ggplot<span class="p">(</span>mtcars.cyl<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> y <span class="o">=</span> wt.avg<span class="p">))</span>
 m
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-209-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># draw bar plot</span>
 m <span class="o">+</span> 
@@ -3696,35 +3696,35 @@ m <span class="o">+</span>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-210-1.png" /></p>
 <p><strong>Pie Charts (1)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># bar chart to pie chart</span>
 ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-211-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> cyl<span class="p">,</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-212-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-213-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span> <span class="o">+</span> coord_polar<span class="p">(</span>theta <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span> <span class="o">+</span> coord_polar<span class="p">(</span>theta <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-214-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">,</span> width <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span> <span class="o">+</span> coord_polar<span class="p">(</span>theta <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>mtcars<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> fill <span class="o">=</span> am<span class="p">))</span> <span class="o">+</span> geom_bar<span class="p">(</span>position <span class="o">=</span> <span class="s">&#39;fill&#39;</span><span class="p">,</span> width <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span> facet_grid<span class="p">(</span><span class="m">.</span> <span class="o">~</span> cyl<span class="p">)</span> <span class="o">+</span> coord_polar<span class="p">(</span>theta <span class="o">=</span> <span class="s">&#39;y&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-215-1.png" /></p>
 <p><strong>Parallel coordinate plot</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># parallel coordinates plot using `GGally`</span>
@@ -3734,67 +3734,67 @@ my_names_am <span class="o">&lt;-</span> <span class="p">(</span><span class="m"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># parallel plot; each variable plotted as a z-score transformation</span>
 ggparcoord<span class="p">(</span>mtcars<span class="p">,</span> columns <span class="o">=</span> my_names_am<span class="p">,</span> groupColumn <span class="o">=</span> group_by_am<span class="p">,</span> alpha <span class="o">=</span> <span class="m">0.8</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-217-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scaled between 0-1 and most discriminating variable first</span>
 ggparcoord<span class="p">(</span>mtcars<span class="p">,</span> columns <span class="o">=</span> my_names_am<span class="p">,</span> groupColumn <span class="o">=</span> group_by_am<span class="p">,</span> alpha <span class="o">=</span> <span class="m">0.8</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;uniminmax&#39;</span><span class="p">,</span> order <span class="o">=</span> <span class="s">&#39;anyClass&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-218-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">)</span> <span class="c1"># xlab, ylab, scale_x_discrete, them</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">)</span> <span class="c1"># xlab, ylab, scale_x_discrete, them</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;uniminmax&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;uniminmax&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-2.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;globalminmax&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;globalminmax&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-3.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> mapping <span class="o">=</span> aes<span class="p">(</span>size <span class="o">=</span> <span class="m">1</span><span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> mapping <span class="o">=</span> aes<span class="p">(</span>size <span class="o">=</span> <span class="m">1</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-4.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> alphaLines <span class="o">=</span> <span class="m">0.3</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> alphaLines <span class="o">=</span> <span class="m">0.3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-5.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;center&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;center&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-6.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scaleSummary <span class="o">=</span> <span class="s">&#39;median&#39;</span><span class="p">,</span> missing <span class="o">=</span> <span class="s">&#39;exclude&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scaleSummary <span class="o">=</span> <span class="s">&#39;median&#39;</span><span class="p">,</span> missing <span class="o">=</span> <span class="s">&#39;exclude&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-7.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> order <span class="o">=</span> <span class="s">&#39;allClass&#39;</span><span class="p">)</span> <span class="c1"># or custom filter</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> order <span class="o">=</span> <span class="s">&#39;allClass&#39;</span><span class="p">)</span> <span class="c1"># or custom filter</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-8.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;std&#39;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggparcoord<span class="p">(</span>iris<span class="p">,</span> columns <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> groupColumn <span class="o">=</span> <span class="s">&#39;Species&#39;</span><span class="p">,</span> scale <span class="o">=</span> <span class="s">&#39;std&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-219-9.png" /></p>
 <p><strong>Splom</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3810,13 +3810,13 @@ ggpairs<span class="p">(</span>PimaV<span class="p">,</span> diag <span class="o
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-220-1.png" /></p>
 <p><strong>Heat Maps</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># create color palette</span>
 myColors <span class="o">&lt;-</span> brewer.pal<span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="s">&#39;Reds&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># heat map</span>
 ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> year<span class="p">,</span> y <span class="o">=</span> variety<span class="p">,</span> fill <span class="o">=</span> yield<span class="p">))</span> <span class="o">+</span> 
@@ -3825,7 +3825,7 @@ ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-222-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add facet_wrap(~ variable); not like facet_grid(. ~ variable)</span>
@@ -3836,7 +3836,7 @@ ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-223-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># </span>
 ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> year<span class="p">,</span> y <span class="o">=</span> variety<span class="p">,</span> fill <span class="o">=</span> yield<span class="p">))</span> <span class="o">+</span> geom_tile<span class="p">()</span> <span class="o">+</span> facet_wrap<span class="p">(</span> <span class="o">~</span> site<span class="p">,</span> ncol <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span> 
@@ -3846,7 +3846,7 @@ ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-224-1.png" /></p>
 <p><strong>Heat Maps Alternatives (1)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># line plots</span>
 ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> year<span class="p">,</span> y <span class="o">=</span> yield<span class="p">,</span> col <span class="o">=</span> variety<span class="p">,</span> group <span class="o">=</span> variety<span class="p">))</span> <span class="o">+</span> geom_line<span class="p">()</span> <span class="o">+</span> 
@@ -3856,7 +3856,7 @@ ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-225-1.png" /></p>
 <p><strong>Heat Maps Alternatives (2)</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># overlapping ribbon plot</span>
@@ -3869,7 +3869,7 @@ ggplot<span class="p">(</span>barley<span class="p">,</span> aes<span class="p">
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-226-1.png" /></p>
 <h4 id="case-study">Case Study<a class="headerlink" href="#case-study" title="Permanent link">&para;</a></h4>
 <p><strong>Sort and order</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3905,7 +3905,7 @@ Cars93 <span class="o">&lt;-</span> <span class="kp">within</span><span class="p
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ggplot<span class="p">(</span>Cars93<span class="p">,</span> aes<span class="p">(</span>TypeWt<span class="p">,</span> <span class="m">100</span><span class="o">/</span>MPG.city<span class="p">))</span> <span class="o">+</span> 
@@ -3916,7 +3916,7 @@ Cars93 <span class="o">&lt;-</span> <span class="kp">within</span><span class="p
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-227-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3936,7 +3936,7 @@ ggplot<span class="p">(</span>Cars93<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-227-2.png" /></p>
 <p><strong>Ensemble plots</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3992,7 +3992,7 @@ grid.arrange<span class="p">(</span>arrangeGrob<span class="p">(</span>p1<span c
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-228-1.png" /></p>
 <p><strong>Exploring Data</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># histogram</span>
 ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> SRAGE_P<span class="p">))</span> <span class="o">+</span> 
@@ -4001,7 +4001,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-229-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># histogram</span>
 ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> BMI_P<span class="p">))</span> <span class="o">+</span> 
@@ -4010,7 +4010,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-230-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># color, default binwidth</span>
 ggplot<span class="p">(</span>adult<span class="p">,</span>aes<span class="p">(</span>x <span class="o">=</span> SRAGE_P<span class="p">,</span> fill <span class="o">=</span> <span class="kp">factor</span><span class="p">(</span>RBMI<span class="p">)))</span> <span class="o">+</span> 
@@ -4020,7 +4020,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span>aes<span class="p">(<
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-231-1.png" /></p>
 <p><strong>Data Cleaning</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4045,13 +4045,13 @@ adult<span class="o">$</span>RBMI <span class="o">&lt;-</span> <span class="kp">
 </td></tr></table>
 
 <p><strong>Multiple Histograms</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># color palette BMI_fill</span>
 BMI_fill <span class="o">&lt;-</span> scale_fill_brewer<span class="p">(</span><span class="s">&#39;BMI Category&#39;</span><span class="p">,</span> palette <span class="o">=</span> <span class="s">&#39;Reds&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4065,7 +4065,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-234-1.png" /></p>
 <p><strong>Alternatives</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># count histogram</span>
@@ -4076,7 +4076,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-235-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># density histogram</span>
@@ -4087,7 +4087,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-236-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># faceted count histogram</span>
@@ -4098,7 +4098,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-237-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># faceted density histogram</span>
@@ -4109,7 +4109,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-238-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># density histogram with `position = &#39;fill&#39;`</span>
@@ -4120,7 +4120,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes <span class="p">
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-239-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># accurate histogram</span>
@@ -4132,7 +4132,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-240-1.png" /></p>
 <p><strong>Do Things Manually</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4145,7 +4145,7 @@ ggplot<span class="p">(</span>adult<span class="p">,</span> aes<span class="p">(
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-241-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4169,7 +4169,7 @@ DF_melted <span class="o">&lt;-</span> melt<span class="p">(</span>DF_freq<span 
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4183,7 +4183,7 @@ ggplot<span class="p">(</span>DF_melted<span class="p">,</span> aes<span class="
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-243-1.png" /></p>
 <p><strong>Merimeko/Mosaic Plot</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4253,7 +4253,7 @@ ggplot<span class="p">(</span>DF_melted<span class="p">,</span> aes<span class="
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-244-1.png" /></p>
 <p><strong>Adding statistics</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4277,7 +4277,7 @@ DF_all <span class="o">&lt;-</span> <span class="kp">merge</span><span class="p"
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4295,7 +4295,7 @@ ggplot<span class="p">(</span>DF_all<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-246-1.png" /></p>
 <p><strong>Adding text</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -4309,7 +4309,7 @@ DF_all<span class="o">$</span>ytext <span class="o">&lt;-</span> DF_all<span cla
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4333,7 +4333,7 @@ ggplot<span class="p">(</span>DF_all<span class="p">,</span> aes<span class="p">
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-248-1.png" /></p>
 <p><strong>Generalizations</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -4413,28 +4413,28 @@ mosaicGG <span class="o">&lt;-</span> <span class="kr">function</span><span clas
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># BMI described by age (in x)</span>
 mosaicGG<span class="p">(</span>adult<span class="p">,</span> <span class="s">&#39;SRAGE_P&#39;</span><span class="p">,</span><span class="s">&#39;RBMI&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-250-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># poverty described by age (in x)</span>
 mosaicGG<span class="p">(</span>adult<span class="p">,</span> <span class="s">&#39;SRAGE_P&#39;</span><span class="p">,</span> <span class="s">&#39;POVLL&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-251-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># `am` described by `cyl` (in x)</span>
 mosaicGG<span class="p">(</span>mtcars<span class="p">,</span> <span class="s">&#39;cyl&#39;</span><span class="p">,</span> <span class="s">&#39;am&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-252-1.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># `Vocab` described by education</span>
 mosaicGG<span class="p">(</span>Vocab<span class="p">,</span> <span class="s">&#39;education&#39;</span><span class="p">,</span> <span class="s">&#39;vocabulary&#39;</span><span class="p">)</span>
 </pre></div>
