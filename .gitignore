@@ -1,2 +1,4 @@
 /site
 *.txt
+*.pdf
+.gitignore

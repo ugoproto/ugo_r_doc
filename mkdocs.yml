@@ -34,14 +34,17 @@ theme:
 ## default, assets/images/favicon.png
   feature:
     tabs: false 
-## another layer on top of the main navigation for larger screens in the form of tabs.           
-#    social:
-#      - type: 'gitlab'
-#        link: 'w'
-#        type: 'twitter'
-#        link: 'w'
-#      - type: 'linkedin'
-#        link: 'w'
+## another layer on top of the main navigation for larger screens in the form of tabs.
+       
+## Les icônes gitlab, twitter, linkedin dans le bandeau du bas.
+#extra:
+#  social:
+#    - type: 'gitlab'
+#      link: ''
+#    - type: 'twitter'
+#      link: ''
+#    - type: 'linkedin'
+#      link: ''
 #  disqus: 'your-shortname'
 ## https://disqus.com/
 ## repo_icon: 'github' # gitlab, bitbucket
@@ -58,8 +61,6 @@ nav:
     - R Cheat Sheets: 'R_CS.md'
     - An Introduction to R: 'An Introduction to R.md'
     - Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques: 'Le logiciel R, maitriser le langage, effectuer des analyses (bio)statistiques.md'
-    - Formulas in R: 'Formulas_in_R.md' 
-    - Improved Codes: 'Improved_codes.md'
     - Intermediate R: 'Intermediate_R.md'
     - Intermediate R - The apply Family: 'Intermediate_R_-_The_apply_Family.md'
   - RStudio:
