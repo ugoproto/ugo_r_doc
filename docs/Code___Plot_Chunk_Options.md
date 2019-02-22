@@ -167,7 +167,7 @@ median(USstatePops2$Pop)
 
     ## [1] 4339362
 
-## `eval='asis'`; show 'unboxed' results.
+## `results='asis'`; show 'unboxed' results.
 
 ``` r
 mean(USstatePops2$Pop)
@@ -181,14 +181,14 @@ median(USstatePops2$Pop)
 
 \[1\] 4339362
 
-## `eval='hide'`; show code only.
+## `results='hide'`; show code only.
 
 ``` r
 mean(USstatePops2$Pop)
 median(USstatePops2$Pop)
 ```
 
-## `eval='hold'`; show code block/results block.
+## `results='hold'`; show code block/results block.
 
 ``` r
 mean(USstatePops2$Pop)
