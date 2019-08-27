@@ -1,16 +1,3 @@
-<!--
----
-
-[TOC]
--->
----
-
-**Foreword**
-
-Notes, snippets, and results.
-
----
-
 # Embedding HTML outputs in general
 
 - We can embed just about any HTML snippet with `<iframe>` or `<embed>`. 
@@ -34,57 +21,57 @@ If the figures are generated with `fig.width=5, fig.height=5`; they should fit i
 ## ...the `leaflet` package
 
 ```
-<iframe seamless src="../leaflet_frag.html" width=520px height=520px ></iframe>
+<iframe seamless src="../img/leaflet_frag.html" width=520px height=520px ></iframe>
 ```
 
-<iframe seamless src="../leaflet_frag.html" width=520px height=520px ></iframe>
+<iframe seamless src="../img/leaflet_frag.html" width=520px height=520px ></iframe>
 
 ```
-<embed seamless src="../leaflet_frag.html" width=520px height=520px ></embed>
+<embed seamless src="../img/leaflet_frag.html" width=520px height=520px ></embed>
 ```
 
-<embed seamless src="../leaflet_frag.html" width=520px height=520px ></embed>
+<embed seamless src="../img/leaflet_frag.html" width=520px height=520px ></embed>
 
 ## ...the `dygraphs` package
 
 ```
-<embed seamless src="../dygraphs_frag.html" width=520px height=520px ></embed>
+<embed seamless src="../img/dygraphs_frag.html" width=520px height=520px ></embed>
 ```
 
-<embed seamless src="../dygraphs_frag.html" width=520px height=520px ></embed>
+<embed seamless src="../img/dygraphs_frag.html" width=520px height=520px ></embed>
 
 ## ...the `plotly` package
 
 ```
-<embed seamless src="../plotly_frag.html" width=520px height=520px ></embed>
+<embed seamless src="../img/plotly_frag.html" width=520px height=520px ></embed>
 ```
 
-<embed seamless src="../plotly_frag.html" width=520px height=520px ></embed>
+<embed seamless src="../img/plotly_frag.html" width=520px height=520px ></embed>
 
 ## ...the `rbokeh` package
 
 ```
-<embed seamless src="../rbokeh_frag.html" width=540px height=540px ></embed>
+<embed seamless src="../img/rbokeh_frag.html" width=540px height=540px ></embed>
 ```
 
-<embed seamless src="../rbokeh_frag.html" width=540px height=540px ></embed>
+<embed seamless src="../img/rbokeh_frag.html" width=540px height=540px ></embed>
 
 ## ...the `highcharters` package
 
 *Highcharts (www.highcharts.com) is a Highsoft software product which is not free for commercial and Governmental use.*
 
 ```
-<embed seamless src="../highcharters_frag.html" width=600px height=600px ></embed>
+<embed seamless src="../img/highcharters_frag.html" width=600px height=600px ></embed>
 ```
 
-<embed seamless src="../highcharters_frag.html" width=600px height=600px ></embed>
+<embed seamless src="../img/highcharters_frag.html" width=600px height=600px ></embed>
 
 ## ...the `datatables` package
 
 ```
-<embed seamless src="../datatable_frag.html" width=700px height=600px ></embed>
+<embed seamless src="../img/datatable_frag.html" width=700px height=600px ></embed>
 ```
 
-<embed seamless src="../datatable_frag.html" width=700px height=600px ></embed>
+<embed seamless src="../img/datatable_frag.html" width=700px height=600px ></embed>
 
 ---
