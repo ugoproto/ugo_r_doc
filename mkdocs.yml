@@ -53,34 +53,37 @@ extra_css:
 
 nav:
   - Home: 'index.md'
-  - Basics:
-    - R Cheat Sheets: 'r_cs.md'
+  - Cheat Sheets:
+    - Basics Cheat Sheets: 'basics_cs.md'
+    - Specializations Cheat Sheets: 'specializations_cs.md'
+    - Visualization Cheat Sheets: 'visualization_cs.md'
+  - Code and Vade Mecum:
+    - Frequentist vs. Bayesian: 'frequentist_bayesian.md'
     - Intermediate R: 'intermediate_r.md'
     - Intermediate R - The apply Family: 'intermediate_r_the_apply_family.md'
-  - RStudio:
-    - Working with the RStudio IDE: 'working_with_rstudio_ide.md'
   - Data Wrangling Snippets:
     - I/O Snippets & Cleaning: 'io_snippets_cleaning.md'
     - Reading Data into R with readr: 'reading_data_into_r_with_readr.md'
     - Data Analysis in R, the data.table Way: 'data_analysis_in_r_the_data_table_way.md'
     - Data Manipulation in R with dplyr: 'data_manipulation_in_r_with_dplyr.md'
     - Data Wrangling: 'data_wrangling.md'
-  - Plot Snippets:
-    - Plot Snippets for Exploratory (and some Explanatory) Analyses: 'plot_snippets_basics.md'
-    - Plot Snippets - ggplot2: 'plot_snippets_ggplot2.md'
-    - Plot Snippets - ggvis: 'plot_snippets_ggvis.md'
-    - Plot Snippets - Colours: 'plot_snippets_colours.md'
   - Packages:
     - googleVis (embed HTML plots): 'googlevis.md'
     - gganimate: 'gganimate.md'
     - Fast-and-Frugal Decision Trees: 'fast_and_frugal_decision_trees_in_r_with_fftrees.md'
     - Big Data Analysis with Revolution R Enterprise: 'big_data_analysis_with_revolution_r_enterprise.md'
     - Time Series in R, The Power of xts and zoo: 'time_series_in_r_the_power_of_xts_and_zoo.md'
-  - Other Snippets: 
+  - Plot Snippets:
+    - Plot Snippets for Exploratory (and some Explanatory) Analyses: 'plot_snippets_basics.md'
+    - Plot Snippets - ggplot2: 'plot_snippets_ggplot2.md'
+    - Plot Snippets - ggvis: 'plot_snippets_ggvis.md'
+    - Plot Snippets - Colours: 'plot_snippets_colours.md'
+  - RStudio:
+    - Working with the RStudio IDE: 'working_with_rstudio_ide.md'
+  - Tables and Figures: 
     - Tables: 'tables.md'
     - Embedding HTML into HTML: 'embedding.md'
     - Embedding Rmd into Rmd: 'embedding_2.md'
-    - Frequentist vs. Bayesian: 'frequentist_bayesian.md'
   - A Hands-on Introduction to Statistics with R:
     - Statistics with R, Course One, Introduction: 'a_hands-on_introduction_to_statistics_with_r_course_one_introduction.md'
     - Statistics with R, Course Two, Student's t-test: 'a_hands-on_introduction_to_statistics_with_r_course_two_student_s_t-test.md'
