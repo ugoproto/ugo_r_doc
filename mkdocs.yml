@@ -55,7 +55,7 @@ nav:
   - Home: 'index.md'
   - Cheat Sheets:
     - Basics Cheat Sheets: 'basics_cs.md'
-    - Specializations Cheat Sheets: 'specializations_cs.md'
+    - Specialization Cheat Sheets: 'specializations_cs.md'
     - Visualization Cheat Sheets: 'visualization_cs.md'
   - Code and Vade Mecum:
     - Frequentist vs. Bayesian: 'frequentist_bayesian.md'
