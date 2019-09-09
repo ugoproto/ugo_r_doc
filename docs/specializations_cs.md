@@ -100,7 +100,7 @@
 ![](img/specialization_cs/kerasb.png)
 </center>
 
-## Probabilities
+# Probabilities
 
 - [Probabilities](pdf/probability_cheatsheet.pdf). PDF only.
 
@@ -118,7 +118,7 @@
 ![](img/specialization_cs/R-Quandl-Cheatsheetd.png)
 </center>
 
-## Regular Expressions (regex)
+# Regular Expressions (regex)
 
 - [Basic Regular Expressions](pdf/RegExCheatsheet.pdf). PDF.
 
@@ -126,7 +126,7 @@
 ![](img/specialization_cs/RegExCheatsheet.png)
 </center>
 
-## sjmisc
+# sjmisc
 
 - [sjmisc](pdf/sjmisc.pdf). PDF.
     
@@ -168,7 +168,7 @@
     - *input, decomposition, tests, stochastic, graphics, miscellaneous*
 - [xts](pdf/xts_Cheat_Sheet_R.pdf). PDF only.
 
-# Tydyverse (including Purrr)
+# Tydyverse
 
 - [Purrr](pdf/purrr.pdf). PDF.
 

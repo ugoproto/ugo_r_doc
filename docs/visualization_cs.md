@@ -47,7 +47,7 @@
 ![](img/visualization_cs/leaflet-cheat-sheet.png)
 </center>
 
-## plotly
+# plotly
 
 - [plotly](pdf/plotly_r_cheat_sheet.pdf). PDF.
 
