@@ -320,7 +320,7 @@
 
 ## Syntax
 
-- [Syntax](pdf/Syntax.pdf). PDF.
+- [Syntax](pdf/syntax.pdf). PDF.
 
 <center>
 ![](img/specialization_cs/syntaxa.png)
