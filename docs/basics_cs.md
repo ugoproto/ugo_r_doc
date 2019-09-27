@@ -8,17 +8,15 @@
 ![](img/base_r_cs/baseR-cheat-sheet-3b.png)
 </center>
 
----
-
 - [Control Structures](pdf/R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.pdf). PDF.
 
 <center>
 ![](img/base_r_cs/R-Cheat-Sheet-Brief-Introduction-to-Language-Elements-and-Control-Structures.png)
 </center>
 
----
+# Import and Tidy up
 
-- [Data Import](pdf/data-import.pdf). PDF.
+- [readr and tidyr](pdf/data-import.pdf). PDF.
 
 <center>
 ![](img/base_r_cs/data_importa.png)
@@ -26,9 +24,7 @@
 ![](img/base_r_cs/data_importb.png)
 </center>
 
----
-
-- [Tidy Data](pdf/tidy_data.pdf). PDF only.
+- [Tidy Data](pdf/tidy_data.pdf). PDF only (article).
 
 # Advanced
 

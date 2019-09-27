@@ -6,17 +6,19 @@
 ![](img/visualization_cs/cartography.png)
 </center>
 
-# ggmap
+# ggplot2
 
-- [ggmap](pdf/ggmapCheatsheet.pdf). PDF.
+## gganimate
+
+- [gganimate](pdf/gganimate.pdf). PDF.
 
 <center>
-![](img/visualization_cs/ggmapCheatsheeta.png)
+![](img/visualization_cs/gganimatea.png)
 
-![](img/visualization_cs/ggmapCheatsheetb.png)
+![](img/visualization_cs/gganimateb.png)
 </center>
 
-# ggplot2
+## ggplot2
 
 - [ggplot2](pdf/ggplot2.pdf). PDF.
 
@@ -26,17 +28,14 @@
 ![](img/visualization_cs/ggplot2b.png)
 </center>
 
-# ggvis
+## ggmap
 
-- [ggvis](pdf/ggvis_.pdf). PDF.
-- [ggvis cont'd](pdf/ggvis_c.pdf). PDF.
+- [ggmap](pdf/ggmapCheatsheet.pdf). PDF.
 
 <center>
-![](img/visualization_cs/ggvis_.png)
+![](img/visualization_cs/ggmapCheatsheeta.png)
 
-![](img/visualization_cs/ggvis_ca.png)
-
-![](img/visualization_cs/ggvis_cb.png)
+![](img/visualization_cs/ggmapCheatsheetb.png)
 </center>
 
 # Leaflet
@@ -57,6 +56,16 @@
 ![](img/visualization_cs/plotly_r_cheat_sheetb.png)
 </center>
 
+# sf
+
+- [sf](pdf/sf.pdf). PDF.
+
+<center>
+![](img/visualization_cs/sfa.png)
+
+![](img/visualization_cs/sfb.png)
+</center>
+
 # shiny
 
 - [shiny](pdf/shiny.pdf). PDF.
@@ -69,7 +78,7 @@
 
 # Visualization Parameters
 
-# Colors
+## Colors
 
 <center>
 ![](img/visualization_cs/ColorChart1.png)
@@ -82,7 +91,7 @@
 ![](img/visualization_cs/ColorChart8.png)
 </center>
 
-# Graphs
+## Graphs
 
 - [Graphs](pdf/how-big-is-your-graph.pdf). PDF.
 
@@ -92,13 +101,13 @@
 ![](img/visualization_cs/how-big-is-your-graphb.png)
 </center>
 
-# Lines
+## Lines
 
 <center>
 ![](img/visualization_cs/lines.png)
 </center>
 
-# Points
+## Points
 
 <center>
 ![](img/visualization_cs/points.png)
