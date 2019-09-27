@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Plot Snippets - Colours
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -626,35 +631,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-colours" title="Default colours" class="md-nav__link">
+  <a href="#default-colours" class="md-nav__link">
     Default colours
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-colours" title="Basic colours" class="md-nav__link">
+  <a href="#basic-colours" class="md-nav__link">
     Basic colours
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rcolorbrewer-examples" title="RColorBrewer examples" class="md-nav__link">
+  <a href="#rcolorbrewer-examples" class="md-nav__link">
     RColorBrewer examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-a-palette" title="Building a palette" class="md-nav__link">
+  <a href="#building-a-palette" class="md-nav__link">
     Building a palette
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#grabing-colours" title="Grabing colours" class="md-nav__link">
+  <a href="#grabing-colours" class="md-nav__link">
     Grabing colours
   </a>
   
@@ -911,35 +916,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-colours" title="Default colours" class="md-nav__link">
+  <a href="#default-colours" class="md-nav__link">
     Default colours
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-colours" title="Basic colours" class="md-nav__link">
+  <a href="#basic-colours" class="md-nav__link">
     Basic colours
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rcolorbrewer-examples" title="RColorBrewer examples" class="md-nav__link">
+  <a href="#rcolorbrewer-examples" class="md-nav__link">
     RColorBrewer examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-a-palette" title="Building a palette" class="md-nav__link">
+  <a href="#building-a-palette" class="md-nav__link">
     Building a palette
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#grabing-colours" title="Grabing colours" class="md-nav__link">
+  <a href="#grabing-colours" class="md-nav__link">
     Grabing colours
   </a>
   
@@ -991,8 +996,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;black&quot;   &quot;red&quot;     &quot;green3&quot;  &quot;blue&quot;    &quot;cyan&quot;    &quot;magenta&quot; &quot;yellow&quot; 
-## [8] &quot;gray&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;black&quot;</span>   <span class="ss">&quot;red&quot;</span>     <span class="ss">&quot;green3&quot;</span>  <span class="ss">&quot;blue&quot;</span>    <span class="ss">&quot;cyan&quot;</span>    <span class="ss">&quot;magenta&quot;</span> <span class="ss">&quot;yellow&quot;</span> 
+<span class="o">##</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="ss">&quot;gray&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1027,8 +1032,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#FF0000FF&quot; &quot;#FFAA00FF&quot; &quot;#AAFF00FF&quot; &quot;#00FF00FF&quot; &quot;#00FFAAFF&quot; &quot;#00AAFFFF&quot;
-## [7] &quot;#0000FFFF&quot; &quot;#AA00FFFF&quot; &quot;#FF00AAFF&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#FF0000FF&quot;</span> <span class="ss">&quot;#FFAA00FF&quot;</span> <span class="ss">&quot;#AAFF00FF&quot;</span> <span class="ss">&quot;#00FF00FF&quot;</span> <span class="ss">&quot;#00FFAAFF&quot;</span> <span class="ss">&quot;#00AAFFFF&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;#0000FFFF&quot;</span> <span class="ss">&quot;#AA00FFFF&quot;</span> <span class="ss">&quot;#FF00AAFF&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1039,8 +1044,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#1C1C1C&quot; &quot;#393939&quot; &quot;#555555&quot; &quot;#717171&quot; &quot;#8E8E8E&quot; &quot;#AAAAAA&quot; &quot;#C6C6C6&quot;
-## [8] &quot;#E3E3E3&quot; &quot;#FFFFFF&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#1C1C1C&quot;</span> <span class="ss">&quot;#393939&quot;</span> <span class="ss">&quot;#555555&quot;</span> <span class="ss">&quot;#717171&quot;</span> <span class="ss">&quot;#8E8E8E&quot;</span> <span class="ss">&quot;#AAAAAA&quot;</span> <span class="ss">&quot;#C6C6C6&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="ss">&quot;#E3E3E3&quot;</span> <span class="ss">&quot;#FFFFFF&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1049,8 +1054,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#FFAA00FF&quot; &quot;#AAFF00FF&quot; &quot;#00FF00FF&quot; &quot;#00FFAAFF&quot; &quot;#00AAFFFF&quot; &quot;#0000FFFF&quot;
-## [7] &quot;#AA00FFFF&quot; &quot;#FF00AAFF&quot; &quot;#FF0000FF&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#FFAA00FF&quot;</span> <span class="ss">&quot;#AAFF00FF&quot;</span> <span class="ss">&quot;#00FF00FF&quot;</span> <span class="ss">&quot;#00FFAAFF&quot;</span> <span class="ss">&quot;#00AAFFFF&quot;</span> <span class="ss">&quot;#0000FFFF&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;#AA00FFFF&quot;</span> <span class="ss">&quot;#FF00AAFF&quot;</span> <span class="ss">&quot;#FF0000FF&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1059,8 +1064,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#F7FBFF&quot; &quot;#DEEBF7&quot; &quot;#C6DBEF&quot; &quot;#9ECAE1&quot; &quot;#6BAED6&quot; &quot;#4292C6&quot; &quot;#2171B5&quot;
-## [8] &quot;#08519C&quot; &quot;#08306B&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#F7FBFF&quot;</span> <span class="ss">&quot;#DEEBF7&quot;</span> <span class="ss">&quot;#C6DBEF&quot;</span> <span class="ss">&quot;#9ECAE1&quot;</span> <span class="ss">&quot;#6BAED6&quot;</span> <span class="ss">&quot;#4292C6&quot;</span> <span class="ss">&quot;#2171B5&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="ss">&quot;#08519C&quot;</span> <span class="ss">&quot;#08306B&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1069,8 +1074,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#FF0000FF&quot; &quot;#FF2A00FF&quot; &quot;#FF5500FF&quot; &quot;#FF8000FF&quot; &quot;#FFAA00FF&quot; &quot;#FFD500FF&quot;
-## [7] &quot;#FFFF00FF&quot; &quot;#FFFF40FF&quot; &quot;#FFFFBFFF&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#FF0000FF&quot;</span> <span class="ss">&quot;#FF2A00FF&quot;</span> <span class="ss">&quot;#FF5500FF&quot;</span> <span class="ss">&quot;#FF8000FF&quot;</span> <span class="ss">&quot;#FFAA00FF&quot;</span> <span class="ss">&quot;#FFD500FF&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;#FFFF00FF&quot;</span> <span class="ss">&quot;#FFFF40FF&quot;</span> <span class="ss">&quot;#FFFFBFFF&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1079,8 +1084,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#00A600FF&quot; &quot;#3EBB00FF&quot; &quot;#8BD000FF&quot; &quot;#E6E600FF&quot; &quot;#E8C32EFF&quot; &quot;#EBB25EFF&quot;
-## [7] &quot;#EDB48EFF&quot; &quot;#F0C9C0FF&quot; &quot;#F2F2F2FF&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#00A600FF&quot;</span> <span class="ss">&quot;#3EBB00FF&quot;</span> <span class="ss">&quot;#8BD000FF&quot;</span> <span class="ss">&quot;#E6E600FF&quot;</span> <span class="ss">&quot;#E8C32EFF&quot;</span> <span class="ss">&quot;#EBB25EFF&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;#EDB48EFF&quot;</span> <span class="ss">&quot;#F0C9C0FF&quot;</span> <span class="ss">&quot;#F2F2F2FF&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1089,8 +1094,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#80FFFFFF&quot; &quot;#9FFFFFFF&quot; &quot;#BFFFFFFF&quot; &quot;#DFFFFFFF&quot; &quot;#FFFFFFFF&quot; &quot;#FFDFFFFF&quot;
-## [7] &quot;#FFBFFFFF&quot; &quot;#FF9FFFFF&quot; &quot;#FF80FFFF&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#80FFFFFF&quot;</span> <span class="ss">&quot;#9FFFFFFF&quot;</span> <span class="ss">&quot;#BFFFFFFF&quot;</span> <span class="ss">&quot;#DFFFFFFF&quot;</span> <span class="ss">&quot;#FFFFFFFF&quot;</span> <span class="ss">&quot;#FFDFFFFF&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;#FFBFFFFF&quot;</span> <span class="ss">&quot;#FF9FFFFF&quot;</span> <span class="ss">&quot;#FF80FFFF&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1099,8 +1104,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#4C00FFFF&quot; &quot;#004CFFFF&quot; &quot;#00E5FFFF&quot; &quot;#00FF4DFF&quot; &quot;#4DFF00FF&quot; &quot;#E6FF00FF&quot;
-## [7] &quot;#FFFF00FF&quot; &quot;#FFDE59FF&quot; &quot;#FFE0B3FF&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#4C00FFFF&quot;</span> <span class="ss">&quot;#004CFFFF&quot;</span> <span class="ss">&quot;#00E5FFFF&quot;</span> <span class="ss">&quot;#00FF4DFF&quot;</span> <span class="ss">&quot;#4DFF00FF&quot;</span> <span class="ss">&quot;#E6FF00FF&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;#FFFF00FF&quot;</span> <span class="ss">&quot;#FFDE59FF&quot;</span> <span class="ss">&quot;#FFE0B3FF&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1159,8 +1164,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#F7FCFD&quot; &quot;#E0ECF4&quot; &quot;#BFD3E6&quot; &quot;#9EBCDA&quot; &quot;#8C96C6&quot; &quot;#8C6BB1&quot; &quot;#88419D&quot;
-## [8] &quot;#6E016B&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#F7FCFD&quot;</span> <span class="ss">&quot;#E0ECF4&quot;</span> <span class="ss">&quot;#BFD3E6&quot;</span> <span class="ss">&quot;#9EBCDA&quot;</span> <span class="ss">&quot;#8C96C6&quot;</span> <span class="ss">&quot;#8C6BB1&quot;</span> <span class="ss">&quot;#88419D&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="ss">&quot;#6E016B&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1179,8 +1184,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;#FFF7F3&quot; &quot;#FDE0DD&quot; &quot;#FCC5C0&quot; &quot;#FA9FB5&quot; &quot;#F768A1&quot; &quot;#DD3497&quot; &quot;#AE017E&quot;
-## [8] &quot;#7A0177&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;#FFF7F3&quot;</span> <span class="ss">&quot;#FDE0DD&quot;</span> <span class="ss">&quot;#FCC5C0&quot;</span> <span class="ss">&quot;#FA9FB5&quot;</span> <span class="ss">&quot;#F768A1&quot;</span> <span class="ss">&quot;#DD3497&quot;</span> <span class="ss">&quot;#AE017E&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="ss">&quot;#7A0177&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1254,8 +1259,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;white&quot;         &quot;aliceblue&quot;     &quot;antiquewhite&quot;  &quot;antiquewhite1&quot;
-## [5] &quot;antiquewhite2&quot; &quot;antiquewhite3&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;white&quot;</span>         <span class="ss">&quot;aliceblue&quot;</span>     <span class="ss">&quot;antiquewhite&quot;</span>  <span class="ss">&quot;antiquewhite1&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ss">&quot;antiquewhite2&quot;</span> <span class="ss">&quot;antiquewhite3&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1263,7 +1268,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 657
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">657</span>
 </pre></div>
 </td></tr></table>
 
@@ -1373,25 +1378,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

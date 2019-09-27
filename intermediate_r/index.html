@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Intermediate R
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -374,7 +379,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conditionals-and-control-flow" title="Conditionals and Control Flow" class="md-nav__link">
+  <a href="#conditionals-and-control-flow" class="md-nav__link">
     Conditionals and Control Flow
   </a>
   
@@ -382,21 +387,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#equality-or-not" title="Equality (or not)" class="md-nav__link">
+  <a href="#equality-or-not" class="md-nav__link">
     Equality (or not)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#and" title="&amp; and |" class="md-nav__link">
+  <a href="#and" class="md-nav__link">
     &amp; and |
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-if-statement-and-more" title="The if statement (and more)" class="md-nav__link">
+  <a href="#the-if-statement-and-more" class="md-nav__link">
     The if statement (and more)
   </a>
   
@@ -408,7 +413,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#loops" title="Loops" class="md-nav__link">
+  <a href="#loops" class="md-nav__link">
     Loops
   </a>
   
@@ -416,21 +421,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#write-a-while-loop" title="Write a while loop" class="md-nav__link">
+  <a href="#write-a-while-loop" class="md-nav__link">
     Write a while loop
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#write-a-for-loop" title="Write a for loop" class="md-nav__link">
+  <a href="#write-a-for-loop" class="md-nav__link">
     Write a for loop
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mix-up-loops-with-control-flow" title="Mix up loops with control flow" class="md-nav__link">
+  <a href="#mix-up-loops-with-control-flow" class="md-nav__link">
     Mix up loops with control flow
   </a>
   
@@ -442,7 +447,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#functions" title="Functions" class="md-nav__link">
+  <a href="#functions" class="md-nav__link">
     Functions
   </a>
   
@@ -450,42 +455,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-documentation" title="Function documentation" class="md-nav__link">
+  <a href="#function-documentation" class="md-nav__link">
     Function documentation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-a-function" title="Use a function" class="md-nav__link">
+  <a href="#use-a-function" class="md-nav__link">
     Use a function
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#functions-inside-functions" title="Functions inside functions" class="md-nav__link">
+  <a href="#functions-inside-functions" class="md-nav__link">
     Functions inside functions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#write-your-own-function" title="Write your own function" class="md-nav__link">
+  <a href="#write-your-own-function" class="md-nav__link">
     Write your own function
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#r-you-functional" title="R you functional?" class="md-nav__link">
+  <a href="#r-you-functional" class="md-nav__link">
     R you functional?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#load-an-r-package" title="Load an R package" class="md-nav__link">
+  <a href="#load-an-r-package" class="md-nav__link">
     Load an R package
   </a>
   
@@ -497,7 +502,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-apply-family" title="The apply Family" class="md-nav__link">
+  <a href="#the-apply-family" class="md-nav__link">
     The apply Family
   </a>
   
@@ -505,28 +510,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-lapply-with-a-built-in-r-function" title="Use lapply (with a built-in R function)" class="md-nav__link">
+  <a href="#use-lapply-with-a-built-in-r-function" class="md-nav__link">
     Use lapply (with a built-in R function)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-sapply" title="Use sapply" class="md-nav__link">
+  <a href="#use-sapply" class="md-nav__link">
     Use sapply
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-vapply" title="Use vapply" class="md-nav__link">
+  <a href="#use-vapply" class="md-nav__link">
     Use vapply
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#apply-your-knowledge-or-better-yet-sapply-it" title="Apply your knowledge. Or better yet: sapply it?" class="md-nav__link">
+  <a href="#apply-your-knowledge-or-better-yet-sapply-it" class="md-nav__link">
     Apply your knowledge. Or better yet: sapply it?
   </a>
   
@@ -538,7 +543,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#utilities" title="Utilities" class="md-nav__link">
+  <a href="#utilities" class="md-nav__link">
     Utilities
   </a>
   
@@ -546,42 +551,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mathematical-utilities" title="Mathematical utilities" class="md-nav__link">
+  <a href="#mathematical-utilities" class="md-nav__link">
     Mathematical utilities
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#find-the-error" title="Find the error" class="md-nav__link">
+  <a href="#find-the-error" class="md-nav__link">
     Find the error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-utilities" title="Data utilities" class="md-nav__link">
+  <a href="#data-utilities" class="md-nav__link">
     Data utilities
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#beat-gauss-using-r" title="Beat Gauss using R" class="md-nav__link">
+  <a href="#beat-gauss-using-r" class="md-nav__link">
     Beat Gauss using R
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#grepl-grep-and-the-likes" title="grepl &amp; grep (and the likes)" class="md-nav__link">
+  <a href="#grepl-grep-and-the-likes" class="md-nav__link">
     grepl &amp; grep (and the likes)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#time-is-of-the-essence" title="Time is of the essence" class="md-nav__link">
+  <a href="#time-is-of-the-essence" class="md-nav__link">
     Time is of the essence
   </a>
   
@@ -1095,7 +1100,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conditionals-and-control-flow" title="Conditionals and Control Flow" class="md-nav__link">
+  <a href="#conditionals-and-control-flow" class="md-nav__link">
     Conditionals and Control Flow
   </a>
   
@@ -1103,21 +1108,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#equality-or-not" title="Equality (or not)" class="md-nav__link">
+  <a href="#equality-or-not" class="md-nav__link">
     Equality (or not)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#and" title="&amp; and |" class="md-nav__link">
+  <a href="#and" class="md-nav__link">
     &amp; and |
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-if-statement-and-more" title="The if statement (and more)" class="md-nav__link">
+  <a href="#the-if-statement-and-more" class="md-nav__link">
     The if statement (and more)
   </a>
   
@@ -1129,7 +1134,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#loops" title="Loops" class="md-nav__link">
+  <a href="#loops" class="md-nav__link">
     Loops
   </a>
   
@@ -1137,21 +1142,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#write-a-while-loop" title="Write a while loop" class="md-nav__link">
+  <a href="#write-a-while-loop" class="md-nav__link">
     Write a while loop
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#write-a-for-loop" title="Write a for loop" class="md-nav__link">
+  <a href="#write-a-for-loop" class="md-nav__link">
     Write a for loop
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mix-up-loops-with-control-flow" title="Mix up loops with control flow" class="md-nav__link">
+  <a href="#mix-up-loops-with-control-flow" class="md-nav__link">
     Mix up loops with control flow
   </a>
   
@@ -1163,7 +1168,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#functions" title="Functions" class="md-nav__link">
+  <a href="#functions" class="md-nav__link">
     Functions
   </a>
   
@@ -1171,42 +1176,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-documentation" title="Function documentation" class="md-nav__link">
+  <a href="#function-documentation" class="md-nav__link">
     Function documentation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-a-function" title="Use a function" class="md-nav__link">
+  <a href="#use-a-function" class="md-nav__link">
     Use a function
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#functions-inside-functions" title="Functions inside functions" class="md-nav__link">
+  <a href="#functions-inside-functions" class="md-nav__link">
     Functions inside functions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#write-your-own-function" title="Write your own function" class="md-nav__link">
+  <a href="#write-your-own-function" class="md-nav__link">
     Write your own function
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#r-you-functional" title="R you functional?" class="md-nav__link">
+  <a href="#r-you-functional" class="md-nav__link">
     R you functional?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#load-an-r-package" title="Load an R package" class="md-nav__link">
+  <a href="#load-an-r-package" class="md-nav__link">
     Load an R package
   </a>
   
@@ -1218,7 +1223,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-apply-family" title="The apply Family" class="md-nav__link">
+  <a href="#the-apply-family" class="md-nav__link">
     The apply Family
   </a>
   
@@ -1226,28 +1231,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-lapply-with-a-built-in-r-function" title="Use lapply (with a built-in R function)" class="md-nav__link">
+  <a href="#use-lapply-with-a-built-in-r-function" class="md-nav__link">
     Use lapply (with a built-in R function)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-sapply" title="Use sapply" class="md-nav__link">
+  <a href="#use-sapply" class="md-nav__link">
     Use sapply
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-vapply" title="Use vapply" class="md-nav__link">
+  <a href="#use-vapply" class="md-nav__link">
     Use vapply
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#apply-your-knowledge-or-better-yet-sapply-it" title="Apply your knowledge. Or better yet: sapply it?" class="md-nav__link">
+  <a href="#apply-your-knowledge-or-better-yet-sapply-it" class="md-nav__link">
     Apply your knowledge. Or better yet: sapply it?
   </a>
   
@@ -1259,7 +1264,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#utilities" title="Utilities" class="md-nav__link">
+  <a href="#utilities" class="md-nav__link">
     Utilities
   </a>
   
@@ -1267,42 +1272,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mathematical-utilities" title="Mathematical utilities" class="md-nav__link">
+  <a href="#mathematical-utilities" class="md-nav__link">
     Mathematical utilities
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#find-the-error" title="Find the error" class="md-nav__link">
+  <a href="#find-the-error" class="md-nav__link">
     Find the error
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-utilities" title="Data utilities" class="md-nav__link">
+  <a href="#data-utilities" class="md-nav__link">
     Data utilities
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#beat-gauss-using-r" title="Beat Gauss using R" class="md-nav__link">
+  <a href="#beat-gauss-using-r" class="md-nav__link">
     Beat Gauss using R
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#grepl-grep-and-the-likes" title="grepl &amp; grep (and the likes)" class="md-nav__link">
+  <a href="#grepl-grep-and-the-likes" class="md-nav__link">
     grepl &amp; grep (and the likes)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#time-is-of-the-essence" title="Time is of the essence" class="md-nav__link">
+  <a href="#time-is-of-the-essence" class="md-nav__link">
     Time is of the essence
   </a>
   
@@ -1379,7 +1384,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1389,7 +1394,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1399,7 +1404,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1409,7 +1414,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] TRUE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1420,7 +1425,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1430,7 +1435,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] TRUE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1440,7 +1445,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] TRUE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1459,7 +1464,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1]  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1469,7 +1474,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1479,7 +1484,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>  <span class="k">TRUE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1496,9 +1501,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]
-## [1,] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
-## [2,] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">2</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">3</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">4</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">5</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">6</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">7</span><span class="p">]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">,]</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">2</span><span class="p">,]</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1510,9 +1515,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       [,1] [,2] [,3]  [,4] [,5]  [,6] [,7]
-## [1,] FALSE TRUE TRUE  TRUE TRUE FALSE TRUE
-## [2,] FALSE TRUE TRUE FALSE TRUE  TRUE TRUE
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="p">[,</span><span class="mi">1</span><span class="p">]</span> <span class="p">[,</span><span class="mi">2</span><span class="p">]</span> <span class="p">[,</span><span class="mi">3</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">4</span><span class="p">]</span> <span class="p">[,</span><span class="mi">5</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">6</span><span class="p">]</span> <span class="p">[,</span><span class="mi">7</span><span class="p">]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">,]</span> <span class="k">FALSE</span> <span class="k">TRUE</span> <span class="k">TRUE</span>  <span class="k">TRUE</span> <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">TRUE</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">2</span><span class="p">,]</span> <span class="k">FALSE</span> <span class="k">TRUE</span> <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">TRUE</span>  <span class="k">TRUE</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1522,11 +1527,11 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="and"><code class="codehilite">&amp;</code> and <code class="codehilite">|</code><a class="headerlink" href="#and" title="Permanent link">&para;</a></h3>
+<h3 id="and"><code class="codehilite"><span class="o">&amp;</span></code> and <code class="codehilite"><span class="o">|</span></code><a class="headerlink" href="#and" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1541,7 +1546,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] TRUE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1551,7 +1556,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1561,18 +1566,18 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] TRUE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">&amp;</code> and <code class="codehilite">|</code> (2)</strong></p>
+<p><strong><code class="codehilite"><span class="o">&amp;</span></code> and <code class="codehilite"><span class="o">|</span></code> (2)</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># linkedin exceeds 10 but facebook below 10</span>
 <span class="n">linkedin</span> <span class="o">&gt;</span> <span class="m">10</span> <span class="o">&amp;</span> <span class="n">facebook</span> <span class="o">&lt;</span> <span class="m">10</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1582,7 +1587,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1]  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span>  <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1594,9 +1599,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6] [,7]
-## [1,] FALSE FALSE  TRUE FALSE FALSE FALSE TRUE
-## [2,] FALSE FALSE FALSE FALSE FALSE  TRUE TRUE
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">2</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">3</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">4</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">5</span><span class="p">]</span>  <span class="p">[,</span><span class="mi">6</span><span class="p">]</span> <span class="p">[,</span><span class="mi">7</span><span class="p">]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">,]</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">TRUE</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">2</span><span class="p">,]</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -1619,11 +1624,11 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 16
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">16</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="the-if-statement-and-more">The <code class="codehilite">if</code> statement (and more)<a class="headerlink" href="#the-if-statement-and-more" title="Permanent link">&para;</a></h3>
+<h3 id="the-if-statement-and-more">The <code class="codehilite"><span class="k">if</span></code> statement (and more)<a class="headerlink" href="#the-if-statement-and-more" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1642,7 +1647,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Showing LinkedIn information&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Showing LinkedIn information&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1656,7 +1661,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong>Add an <code class="codehilite">else</code></strong></p>
+<p><strong>Add an <code class="codehilite"><span class="k">else</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1679,7 +1684,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Showing LinkedIn information&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Showing LinkedIn information&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1697,11 +1702,11 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Try to be more visible!&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>Customize further: <code class="codehilite">else if</code></strong></p>
+<p><strong>Customize further: <code class="codehilite"><span class="k">else</span> <span class="k">if</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1728,7 +1733,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Showing LinkedIn information&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Showing LinkedIn information&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1750,7 +1755,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Your number of views is average&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Your number of views is average&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1787,12 +1792,12 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 24
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">24</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="loops">Loops<a class="headerlink" href="#loops" title="Permanent link">&para;</a></h2>
-<h3 id="write-a-while-loop">Write a <code class="codehilite">while</code> loop<a class="headerlink" href="#write-a-while-loop" title="Permanent link">&para;</a></h3>
+<h3 id="write-a-while-loop">Write a <code class="codehilite"><span class="k">while</span></code> loop<a class="headerlink" href="#write-a-while-loop" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1815,11 +1820,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Slow down!&quot;
-## [1] &quot;Slow down!&quot;
-## [1] &quot;Slow down!&quot;
-## [1] &quot;Slow down!&quot;
-## [1] &quot;Slow down!&quot;
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down!&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1829,7 +1834,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 29
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">29</span>
 </pre></div>
 </td></tr></table>
 
@@ -1871,18 +1876,18 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Your speed is  64&quot;
-## [1] &quot;Slow down big time!&quot;
-## [1] &quot;Your speed is  53&quot;
-## [1] &quot;Slow down big time!&quot;
-## [1] &quot;Your speed is  42&quot;
-## [1] &quot;Slow down!&quot;
-## [1] &quot;Your speed is  36&quot;
-## [1] &quot;Slow down!&quot;
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Your speed is  64&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down big time!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Your speed is  53&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down big time!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Your speed is  42&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Your speed is  36&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Slow down!&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>Stop the <code class="codehilite">while</code> loop: <code class="codehilite">break</code></strong></p>
+<p><strong>Stop the <code class="codehilite"><span class="k">while</span></code> loop: <code class="codehilite"><span class="k">break</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1915,12 +1920,12 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Your speed is 88&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Your speed is 88&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>Build a <code class="codehilite">while</code> loop from scratch</strong></p>
-<p><code class="codehilite">strsplit</code>; split up in a vector that contains separate letters.</p>
+<p><strong>Build a <code class="codehilite"><span class="k">while</span></code> loop from scratch</strong></p>
+<p><code class="codehilite"><span class="k">strsplit</span></code>; split up in a vector that contains separate letters.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1952,18 +1957,18 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 3
-## [1] 6
-## [1] 9
-## [1] 12
-## [1] 15
-## [1] 18
-## [1] 21
-## [1] 24
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">3</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">6</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">12</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">15</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">18</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">21</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">24</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="write-a-for-loop">Write a <code class="codehilite">for</code> loop<a class="headerlink" href="#write-a-for-loop" title="Permanent link">&para;</a></h3>
+<h3 id="write-a-for-loop">Write a <code class="codehilite"><span class="k">for</span></code> loop<a class="headerlink" href="#write-a-for-loop" title="Permanent link">&para;</a></h3>
 <p><strong>Loop over a vector</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1987,13 +1992,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 16
-## [1] 9
-## [1] 13
-## [1] 5
-## [1] 2
-## [1] 17
-## [1] 14
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">16</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">13</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">17</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">14</span>
 </pre></div>
 </td></tr></table>
 
@@ -2013,18 +2018,18 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 16
-## [1] 9
-## [1] 13
-## [1] 5
-## [1] 2
-## [1] 17
-## [1] 14
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">16</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">13</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">17</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">14</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Loop over a list</strong></p>
-<p><code class="codehilite">[[]]</code>; list of list.</p>
+<p><code class="codehilite"><span class="p">[[]]</span></code>; list of list.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2048,10 +2053,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 8405837
-## [1] &quot;Manhattan&quot;     &quot;Bronx&quot;         &quot;Brooklyn&quot;      &quot;Queens&quot;       
-## [5] &quot;Staten Island&quot;
-## [1] FALSE
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">8405837</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Manhattan&quot;</span>     <span class="ss">&quot;Bronx&quot;</span>         <span class="ss">&quot;Brooklyn&quot;</span>      <span class="ss">&quot;Queens&quot;</span>       
+<span class="o">##</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ss">&quot;Staten Island&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -2068,10 +2073,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 8405837
-## [1] &quot;Manhattan&quot;     &quot;Bronx&quot;         &quot;Brooklyn&quot;      &quot;Queens&quot;       
-## [5] &quot;Staten Island&quot;
-## [1] FALSE
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">8405837</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Manhattan&quot;</span>     <span class="ss">&quot;Bronx&quot;</span>         <span class="ss">&quot;Brooklyn&quot;</span>      <span class="ss">&quot;Queens&quot;</span>       
+<span class="o">##</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ss">&quot;Staten Island&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -2104,15 +2109,15 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;On row 1 and column 1 the board contains  O&quot;
-## [1] &quot;On row 1 and column 2 the board contains  NA&quot;
-## [1] &quot;On row 1 and column 3 the board contains  X&quot;
-## [1] &quot;On row 2 and column 1 the board contains  NA&quot;
-## [1] &quot;On row 2 and column 2 the board contains  O&quot;
-## [1] &quot;On row 2 and column 3 the board contains  O&quot;
-## [1] &quot;On row 3 and column 1 the board contains  X&quot;
-## [1] &quot;On row 3 and column 2 the board contains  NA&quot;
-## [1] &quot;On row 3 and column 3 the board contains  X&quot;
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 1 and column 1 the board contains  O&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 1 and column 2 the board contains  NA&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 1 and column 3 the board contains  X&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 2 and column 1 the board contains  NA&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 2 and column 2 the board contains  O&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 2 and column 3 the board contains  O&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 3 and column 1 the board contains  X&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 3 and column 2 the board contains  NA&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;On row 3 and column 3 the board contains  X&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -2156,20 +2161,20 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;You&#39;re popular!&quot;
-## [1] 16
-## [1] &quot;Be more visible!&quot;
-## [1] 9
-## [1] &quot;You&#39;re popular!&quot;
-## [1] 13
-## [1] &quot;Be more visible!&quot;
-## [1] 5
-## [1] &quot;Be more visible!&quot;
-## [1] 2
-## [1] &quot;You&#39;re popular!&quot;
-## [1] 17
-## [1] &quot;You&#39;re popular!&quot;
-## [1] 14
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">16</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">13</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">17</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">14</span>
 </pre></div>
 </td></tr></table>
 
@@ -2231,18 +2236,18 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;You&#39;re popular!&quot;
-## [1] 16
-## [1] &quot;Be more visible!&quot;
-## [1] 9
-## [1] &quot;You&#39;re popular!&quot;
-## [1] 13
-## [1] &quot;Be more visible!&quot;
-## [1] 5
-## [1] &quot;Be more visible!&quot;
-## [1] &quot;This is too embarrassing!&quot;
-## [1] &quot;You&#39;re popular!&quot;
-## [1] &quot;This is ridiculous, I&#39;m outta here!&quot;
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">16</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">13</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;This is too embarrassing!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;This is ridiculous, I&#39;m outta here!&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -2285,7 +2290,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 5
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -2326,7 +2331,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 10.85714
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">10</span><span class="p">.</span><span class="mi">85714</span>
 </pre></div>
 </td></tr></table>
 
@@ -2334,7 +2339,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 11.42857
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">11</span><span class="p">.</span><span class="mi">42857</span>
 </pre></div>
 </td></tr></table>
 
@@ -2342,7 +2347,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 10.85714
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">10</span><span class="p">.</span><span class="mi">85714</span>
 </pre></div>
 </td></tr></table>
 
@@ -2352,7 +2357,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] -0.5714286
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">5714286</span>
 </pre></div>
 </td></tr></table>
 
@@ -2383,7 +2388,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 22.28571
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">22</span><span class="p">.</span><span class="mi">28571</span>
 </pre></div>
 </td></tr></table>
 
@@ -2391,7 +2396,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 22.6
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">22</span><span class="p">.</span><span class="mi">6</span>
 </pre></div>
 </td></tr></table>
 
@@ -2410,7 +2415,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] NA
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -2420,7 +2425,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 12.16667
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">12</span><span class="p">.</span><span class="mi">16667</span>
 </pre></div>
 </td></tr></table>
 
@@ -2439,7 +2444,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4.8
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span><span class="p">.</span><span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
@@ -2460,7 +2465,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 144
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">144</span>
 </pre></div>
 </td></tr></table>
 
@@ -2480,7 +2485,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 5
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -2505,9 +2510,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Hi there!&quot;
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Hi there!&quot;</span>
 
-## [1] TRUE
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -2535,7 +2540,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 5
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -2543,7 +2548,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## NULL
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="k">NULL</span>
 </pre></div>
 </td></tr></table>
 
@@ -2573,7 +2578,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span>
 </pre></div>
 </td></tr></table>
 
@@ -2614,9 +2619,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;You&#39;re popular!&quot;
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
 
-## [1] 16
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">16</span>
 </pre></div>
 </td></tr></table>
 
@@ -2626,9 +2631,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Try to be more visible!&quot;
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
 
-## [1] 0
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
@@ -2703,15 +2708,15 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;You&#39;re popular!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;You&#39;re popular!&quot;
-## [1] &quot;Try to be more visible!&quot;
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
 
-## [1] 33
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">33</span>
 </pre></div>
 </td></tr></table>
 
@@ -2727,15 +2732,15 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;You&#39;re popular!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;You&#39;re popular!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;Try to be more visible!&quot;
-## [1] &quot;Try to be more visible!&quot;
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;You&#39;re popular!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Try to be more visible!&quot;</span>
 
-## [1] 33
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">33</span>
 </pre></div>
 </td></tr></table>
 
@@ -2759,12 +2764,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] &quot;.GlobalEnv&quot;            &quot;package:XLConnect&quot;    
-##  [3] &quot;package:XLConnectJars&quot; &quot;package:stats&quot;        
-##  [5] &quot;package:graphics&quot;      &quot;package:grDevices&quot;    
-##  [7] &quot;package:utils&quot;         &quot;package:datasets&quot;     
-##  [9] &quot;package:methods&quot;       &quot;Autoloads&quot;            
-## [11] &quot;package:base&quot;
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;.GlobalEnv&quot;</span>            <span class="ss">&quot;package:XLConnect&quot;</span>    
+<span class="o">##</span>  <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ss">&quot;package:XLConnectJars&quot;</span> <span class="ss">&quot;package:stats&quot;</span>        
+<span class="o">##</span>  <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ss">&quot;package:graphics&quot;</span>      <span class="ss">&quot;package:grDevices&quot;</span>    
+<span class="o">##</span>  <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;package:utils&quot;</span>         <span class="ss">&quot;package:datasets&quot;</span>     
+<span class="o">##</span>  <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="ss">&quot;package:methods&quot;</span>       <span class="ss">&quot;Autoloads&quot;</span>            
+<span class="o">##</span> <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="ss">&quot;package:base&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -2803,17 +2808,17 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] &quot;.GlobalEnv&quot;            &quot;package:ggplot2&quot;      
-##  [3] &quot;package:XLConnect&quot;     &quot;package:XLConnectJars&quot;
-##  [5] &quot;package:stats&quot;         &quot;package:graphics&quot;     
-##  [7] &quot;package:grDevices&quot;     &quot;package:utils&quot;        
-##  [9] &quot;package:datasets&quot;      &quot;package:methods&quot;      
-## [11] &quot;Autoloads&quot;             &quot;package:base&quot;
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;.GlobalEnv&quot;</span>            <span class="ss">&quot;package:ggplot2&quot;</span>      
+<span class="o">##</span>  <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="ss">&quot;package:XLConnect&quot;</span>     <span class="ss">&quot;package:XLConnectJars&quot;</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ss">&quot;package:stats&quot;</span>         <span class="ss">&quot;package:graphics&quot;</span>     
+<span class="o">##</span>  <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">&quot;package:grDevices&quot;</span>     <span class="ss">&quot;package:utils&quot;</span>        
+<span class="o">##</span>  <span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="ss">&quot;package:datasets&quot;</span>      <span class="ss">&quot;package:methods&quot;</span>      
+<span class="o">##</span> <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="ss">&quot;Autoloads&quot;</span>             <span class="ss">&quot;package:base&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="the-apply-family">The <code class="codehilite">apply</code> Family<a class="headerlink" href="#the-apply-family" title="Permanent link">&para;</a></h2>
-<h3 id="use-lapply-with-a-built-in-r-function">Use <code class="codehilite">lapply</code> (with a built-in R function)<a class="headerlink" href="#use-lapply-with-a-built-in-r-function" title="Permanent link">&para;</a></h3>
+<h2 id="the-apply-family">The <code class="codehilite"><span class="n">apply</span></code> Family<a class="headerlink" href="#the-apply-family" title="Permanent link">&para;</a></h2>
+<h3 id="use-lapply-with-a-built-in-r-function">Use <code class="codehilite"><span class="n">lapply</span></code> (with a built-in R function)<a class="headerlink" href="#use-lapply-with-a-built-in-r-function" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2842,15 +2847,15 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## List of 4
-##  $ : chr [1:2] &quot;gauss&quot; &quot;1777&quot;
-##  $ : chr [1:2] &quot;bayes&quot; &quot;1702&quot;
-##  $ : chr [1:2] &quot;pascal&quot; &quot;1623&quot;
-##  $ : chr [1:2] &quot;pearson&quot; &quot;1857&quot;
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">List</span> <span class="k">of</span> <span class="mi">4</span>
+<span class="o">##</span>  <span class="err">$</span> <span class="p">:</span> <span class="n">chr</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="ss">&quot;gauss&quot;</span> <span class="ss">&quot;1777&quot;</span>
+<span class="o">##</span>  <span class="err">$</span> <span class="p">:</span> <span class="n">chr</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="ss">&quot;bayes&quot;</span> <span class="ss">&quot;1702&quot;</span>
+<span class="o">##</span>  <span class="err">$</span> <span class="p">:</span> <span class="n">chr</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="ss">&quot;pascal&quot;</span> <span class="ss">&quot;1623&quot;</span>
+<span class="o">##</span>  <span class="err">$</span> <span class="p">:</span> <span class="n">chr</span> <span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="ss">&quot;pearson&quot;</span> <span class="ss">&quot;1857&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>Use <code class="codehilite">lapply</code> with your own function</strong></p>
+<p><strong>Use <code class="codehilite"><span class="n">lapply</span></code> with your own function</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2891,17 +2896,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] &quot;gauss&quot;
-## 
-## [[2]]
-## [1] &quot;bayes&quot;
-## 
-## [[3]]
-## [1] &quot;pascal&quot;
-## 
-## [[4]]
-## [1] &quot;pearson&quot;
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;gauss&quot;</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;bayes&quot;</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;pascal&quot;</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;pearson&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -2933,21 +2938,21 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] &quot;1777&quot;
-## 
-## [[2]]
-## [1] &quot;1702&quot;
-## 
-## [[3]]
-## [1] &quot;1623&quot;
-## 
-## [[4]]
-## [1] &quot;1857&quot;
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;1777&quot;</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;1702&quot;</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;1623&quot;</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;1857&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">lapply</code> and anonymous functions</strong></p>
+<p><strong><code class="codehilite"><span class="n">lapply</span></code> and anonymous functions</strong></p>
 <p>Anonymous function == lambda function.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -2983,7 +2988,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong>Use <code class="codehilite">lapply</code> with additional arguments</strong></p>
+<p><strong>Use <code class="codehilite"><span class="n">lapply</span></code> with additional arguments</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3022,7 +3027,7 @@
 </pre></div>
 </td></tr></table>
 
-<h3 id="use-sapply">Use <code class="codehilite">sapply</code><a class="headerlink" href="#use-sapply" title="Permanent link">&para;</a></h3>
+<h3 id="use-sapply">Use <code class="codehilite"><span class="n">sapply</span></code><a class="headerlink" href="#use-sapply" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3068,26 +3073,26 @@
 17
 18
 19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] -1
-## 
-## [[2]]
-## [1] 5
-## 
-## [[3]]
-## [1] -3
-## 
-## [[4]]
-## [1] -2
-## 
-## [[5]]
-## [1] 2
-## 
-## [[6]]
-## [1] -3
-## 
-## [[7]]
-## [1] 1
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">3</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">2</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">3</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -3097,7 +3102,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] -1  5 -3 -2  2 -3  1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">5</span> <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="mi">2</span>  <span class="mi">2</span> <span class="o">-</span><span class="mi">3</span>  <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -3126,26 +3131,26 @@
 17
 18
 19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] 9
-## 
-## [[2]]
-## [1] 13
-## 
-## [[3]]
-## [1] 8
-## 
-## [[4]]
-## [1] 7
-## 
-## [[5]]
-## [1] 9
-## 
-## [[6]]
-## [1] 9
-## 
-## [[7]]
-## [1] 9
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">13</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">8</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">7</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -3155,11 +3160,11 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1]  9 13  8  7  9  9  9
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="mi">9</span> <span class="mi">13</span>  <span class="mi">8</span>  <span class="mi">7</span>  <span class="mi">9</span>  <span class="mi">9</span>  <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">sapply</code> with your own function</strong></p>
+<p><strong><code class="codehilite"><span class="n">sapply</span></code> with your own function</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3180,7 +3185,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4.0 9.0 2.5 2.5 5.5 3.0 5.0
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span><span class="p">.</span><span class="mi">0</span> <span class="mi">9</span><span class="p">.</span><span class="mi">0</span> <span class="mi">2</span><span class="p">.</span><span class="mi">5</span> <span class="mi">2</span><span class="p">.</span><span class="mi">5</span> <span class="mi">5</span><span class="p">.</span><span class="mi">5</span> <span class="mi">3</span><span class="p">.</span><span class="mi">0</span> <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
@@ -3209,30 +3214,30 @@
 17
 18
 19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] 4
-## 
-## [[2]]
-## [1] 9
-## 
-## [[3]]
-## [1] 2.5
-## 
-## [[4]]
-## [1] 2.5
-## 
-## [[5]]
-## [1] 5.5
-## 
-## [[6]]
-## [1] 3
-## 
-## [[7]]
-## [1] 5
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span><span class="p">.</span><span class="mi">5</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">3</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">sapply</code> with function returning vector</strong></p>
+<p><strong><code class="codehilite"><span class="n">sapply</span></code> with function returning vector</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3255,9 +3260,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
-## [1,]   -1    5   -3   -2    2   -3    1
-## [2,]    9   13    8    7    9    9    9
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>      <span class="p">[,</span><span class="mi">1</span><span class="p">]</span> <span class="p">[,</span><span class="mi">2</span><span class="p">]</span> <span class="p">[,</span><span class="mi">3</span><span class="p">]</span> <span class="p">[,</span><span class="mi">4</span><span class="p">]</span> <span class="p">[,</span><span class="mi">5</span><span class="p">]</span> <span class="p">[,</span><span class="mi">6</span><span class="p">]</span> <span class="p">[,</span><span class="mi">7</span><span class="p">]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">,]</span>   <span class="o">-</span><span class="mi">1</span>    <span class="mi">5</span>   <span class="o">-</span><span class="mi">3</span>   <span class="o">-</span><span class="mi">2</span>    <span class="mi">2</span>   <span class="o">-</span><span class="mi">3</span>    <span class="mi">1</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">2</span><span class="p">,]</span>    <span class="mi">9</span>   <span class="mi">13</span>    <span class="mi">8</span>    <span class="mi">7</span>    <span class="mi">9</span>    <span class="mi">9</span>    <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -3286,30 +3291,30 @@
 17
 18
 19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] -1  9
-## 
-## [[2]]
-## [1]  5 13
-## 
-## [[3]]
-## [1] -3  8
-## 
-## [[4]]
-## [1] -2  7
-## 
-## [[5]]
-## [1] 2 9
-## 
-## [[6]]
-## [1] -3  9
-## 
-## [[7]]
-## [1] 1 9
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">9</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="mi">5</span> <span class="mi">13</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">3</span>  <span class="mi">8</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">2</span>  <span class="mi">7</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span> <span class="mi">9</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="mi">3</span>  <span class="mi">9</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span> <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">sapply</code> can&rsquo;t simplify, now what?</strong></p>
+<p><strong><code class="codehilite"><span class="n">sapply</span></code> can&rsquo;t simplify, now what?</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3346,11 +3351,11 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] TRUE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">sapply</code> with functions that return NULL</strong></p>
+<p><strong><code class="codehilite"><span class="n">sapply</span></code> with functions that return NULL</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3398,34 +3403,34 @@
 25
 26
 27
-28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## The average temperature is 4.8 
-## The average temperature is 9 
-## The average temperature is 2.2 
-## The average temperature is 2.4 
-## The average temperature is 5.4 
-## The average temperature is 4.6 
-## The average temperature is 4.6
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">4</span><span class="p">.</span><span class="mi">8</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">9</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">2</span><span class="p">.</span><span class="mi">2</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">2</span><span class="p">.</span><span class="mi">4</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">5</span><span class="p">.</span><span class="mi">4</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">4</span><span class="p">.</span><span class="mi">6</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>
 
-## [[1]]
-## NULL
-## 
-## [[2]]
-## NULL
-## 
-## [[3]]
-## NULL
-## 
-## [[4]]
-## NULL
-## 
-## [[5]]
-## NULL
-## 
-## [[6]]
-## NULL
-## 
-## [[7]]
-## NULL
+<span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
 </pre></div>
 </td></tr></table>
 
@@ -3462,38 +3467,38 @@
 25
 26
 27
-28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## The average temperature is 4.8 
-## The average temperature is 9 
-## The average temperature is 2.2 
-## The average temperature is 2.4 
-## The average temperature is 5.4 
-## The average temperature is 4.6 
-## The average temperature is 4.6
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">4</span><span class="p">.</span><span class="mi">8</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">9</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">2</span><span class="p">.</span><span class="mi">2</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">2</span><span class="p">.</span><span class="mi">4</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">5</span><span class="p">.</span><span class="mi">4</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">4</span><span class="p">.</span><span class="mi">6</span> 
+<span class="o">##</span> <span class="n">The</span> <span class="n">average</span> <span class="n">temperature</span> <span class="k">is</span> <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>
 
-## [[1]]
-## NULL
-## 
-## [[2]]
-## NULL
-## 
-## [[3]]
-## NULL
-## 
-## [[4]]
-## NULL
-## 
-## [[5]]
-## NULL
-## 
-## [[6]]
-## NULL
-## 
-## [[7]]
-## NULL
+<span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="use-vapply">Use <code class="codehilite">vapply</code><a class="headerlink" href="#use-vapply" title="Permanent link">&para;</a></h3>
+<h3 id="use-vapply">Use <code class="codehilite"><span class="n">vapply</span></code><a class="headerlink" href="#use-vapply" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3517,14 +3522,14 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##         [,1] [,2] [,3] [,4] [,5] [,6] [,7]
-## minimum -1.0    5 -3.0 -2.0  2.0 -3.0  1.0
-## average  4.8    9  2.2  2.4  5.4  4.6  4.6
-## maximum  9.0   13  8.0  7.0  9.0  9.0  9.0
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>         <span class="p">[,</span><span class="mi">1</span><span class="p">]</span> <span class="p">[,</span><span class="mi">2</span><span class="p">]</span> <span class="p">[,</span><span class="mi">3</span><span class="p">]</span> <span class="p">[,</span><span class="mi">4</span><span class="p">]</span> <span class="p">[,</span><span class="mi">5</span><span class="p">]</span> <span class="p">[,</span><span class="mi">6</span><span class="p">]</span> <span class="p">[,</span><span class="mi">7</span><span class="p">]</span>
+<span class="o">##</span> <span class="n">minimum</span> <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">5</span> <span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span> <span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="o">##</span> <span class="n">average</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">8</span>    <span class="mi">9</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">2</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">4</span>  <span class="mi">5</span><span class="p">.</span><span class="mi">4</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="n">maximum</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">13</span>  <span class="mi">8</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">7</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>Use <code class="codehilite">vapply</code> (2)</strong></p>
+<p><strong>Use <code class="codehilite"><span class="n">vapply</span></code> (2)</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3549,15 +3554,15 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##        [,1] [,2] [,3] [,4] [,5] [,6] [,7]
-## min    -1.0    5 -3.0 -2.0  2.0 -3.0  1.0
-## mean    4.8    9  2.2  2.4  5.4  4.6  4.6
-## median  6.0    9  3.0  2.0  5.0  5.0  4.0
-## max     9.0   13  8.0  7.0  9.0  9.0  9.0
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>        <span class="p">[,</span><span class="mi">1</span><span class="p">]</span> <span class="p">[,</span><span class="mi">2</span><span class="p">]</span> <span class="p">[,</span><span class="mi">3</span><span class="p">]</span> <span class="p">[,</span><span class="mi">4</span><span class="p">]</span> <span class="p">[,</span><span class="mi">5</span><span class="p">]</span> <span class="p">[,</span><span class="mi">6</span><span class="p">]</span> <span class="p">[,</span><span class="mi">7</span><span class="p">]</span>
+<span class="o">##</span> <span class="k">min</span>    <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">5</span> <span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span> <span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+<span class="o">##</span> <span class="n">mean</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">8</span>    <span class="mi">9</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">2</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">4</span>  <span class="mi">5</span><span class="p">.</span><span class="mi">4</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="n">median</span>  <span class="mi">6</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">9</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>
+<span class="o">##</span> <span class="k">max</span>     <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">13</span>  <span class="mi">8</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">7</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>From <code class="codehilite">sapply</code> to <code class="codehilite">vapply</code></strong></p>
+<p><strong>From <code class="codehilite"><span class="n">sapply</span></code> to <code class="codehilite"><span class="n">vapply</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3568,7 +3573,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1]  9 13  8  7  9  9  9
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="mi">9</span> <span class="mi">13</span>  <span class="mi">8</span>  <span class="mi">7</span>  <span class="mi">9</span>  <span class="mi">9</span>  <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -3578,7 +3583,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -3607,12 +3612,12 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;Pretty cold!&quot;  &quot;Not too cold!&quot; &quot;Pretty cold!&quot;  &quot;Pretty cold!&quot; 
-## [5] &quot;Not too cold!&quot; &quot;Pretty cold!&quot;  &quot;Pretty cold!&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;Pretty cold!&quot;</span>  <span class="ss">&quot;Not too cold!&quot;</span> <span class="ss">&quot;Pretty cold!&quot;</span>  <span class="ss">&quot;Pretty cold!&quot;</span> 
+<span class="o">##</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="ss">&quot;Not too cold!&quot;</span> <span class="ss">&quot;Pretty cold!&quot;</span>  <span class="ss">&quot;Pretty cold!&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="apply-your-knowledge-or-better-yet-sapply-it">Apply your knowledge. Or better yet: <code class="codehilite">sapply</code> it?<a class="headerlink" href="#apply-your-knowledge-or-better-yet-sapply-it" title="Permanent link">&para;</a></h3>
+<h3 id="apply-your-knowledge-or-better-yet-sapply-it">Apply your knowledge. Or better yet: <code class="codehilite"><span class="n">sapply</span></code> it?<a class="headerlink" href="#apply-your-knowledge-or-better-yet-sapply-it" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3641,13 +3646,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] &quot;Schedule call with team&quot;           
-## [2] &quot;Fix error in Recommendation System&quot;
-## [3] &quot;Respond to Marc from IT&quot;           
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[<span class="mi">1</span>]]
+## [<span class="mi">1</span>] <span class="s2">&quot;</span><span class="s">Schedule call with team</span><span class="s2">&quot;</span>           
+## [<span class="mi">2</span>] <span class="s2">&quot;</span><span class="s">Fix error in Recommendation System</span><span class="s2">&quot;</span>
+## [<span class="mi">3</span>] <span class="s2">&quot;</span><span class="s">Respond to Marc from IT</span><span class="s2">&quot;</span>           
 ## 
-## [[2]]
-## [1] &quot;Sleep&quot;                             &quot;Make arrangements for summer trip&quot;
+## [[<span class="mi">2</span>]]
+## [<span class="mi">1</span>] <span class="s2">&quot;</span><span class="s">Sleep</span><span class="s2">&quot;</span>                             <span class="s2">&quot;</span><span class="s">Make arrangements for summer trip</span><span class="s2">&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -3663,24 +3668,24 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## [1] &quot;Fix error in Recommendation System&quot;
-## [2] &quot;Respond to Marc from IT&quot;           
-## [3] &quot;Schedule call with team&quot;           
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[<span class="mi">1</span>]]
+## [<span class="mi">1</span>] <span class="s2">&quot;</span><span class="s">Fix error in Recommendation System</span><span class="s2">&quot;</span>
+## [<span class="mi">2</span>] <span class="s2">&quot;</span><span class="s">Respond to Marc from IT</span><span class="s2">&quot;</span>           
+## [<span class="mi">3</span>] <span class="s2">&quot;</span><span class="s">Schedule call with team</span><span class="s2">&quot;</span>           
 ## 
-## [[2]]
-## [1] &quot;Make arrangements for summer trip&quot; &quot;Sleep&quot;
+## [[<span class="mi">2</span>]]
+## [<span class="mi">1</span>] <span class="s2">&quot;</span><span class="s">Make arrangements for summer trip</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="s">Sleep</span><span class="s2">&quot;</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="utilities">Utilities<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h2>
 <h3 id="mathematical-utilities">Mathematical utilities<a class="headerlink" href="#mathematical-utilities" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">abs</code>; calculate the absolute value.</li>
-<li><code class="codehilite">sum</code>; calculate the sum of all the values in a data structure.</li>
-<li><code class="codehilite">mean</code>; calculate the arithmetic mean.</li>
-<li><code class="codehilite">round</code>; round the values to 0 decimal places by default. Try out<br />
-<code class="codehilite">?round</code> in the console for variations of <code class="codehilite">round</code> and ways to change<br />
+<li><code class="codehilite"><span class="k">abs</span></code>; calculate the absolute value.</li>
+<li><code class="codehilite"><span class="k">sum</span></code>; calculate the sum of all the values in a data structure.</li>
+<li><code class="codehilite"><span class="n">mean</span></code>; calculate the arithmetic mean.</li>
+<li><code class="codehilite"><span class="n">round</span></code>; round the values to 0 decimal places by default. Try out<br />
+<code class="codehilite"><span class="o">?</span><span class="n">round</span></code> in the console for variations of <code class="codehilite"><span class="n">round</span></code> and ways to change<br />
     the number of digits to round to.</li>
 </ul>
 <!-- -->
@@ -3697,7 +3702,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 29
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">29</span>
 </pre></div>
 </td></tr></table>
 
@@ -3716,24 +3721,24 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4.48
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span><span class="p">.</span><span class="mi">48</span>
 </pre></div>
 </td></tr></table>
 
 <h3 id="data-utilities">Data utilities<a class="headerlink" href="#data-utilities" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">seq</code>; generate sequences, by specifying the from, to and<br />
+<li><code class="codehilite"><span class="n">seq</span></code>; generate sequences, by specifying the from, to and<br />
     by arguments.</li>
-<li><code class="codehilite">rep</code>; replicate elements of vectors and lists.</li>
-<li><code class="codehilite">sort</code>; sort a vector in ascending order. Works on numerics, but<br />
+<li><code class="codehilite"><span class="n">rep</span></code>; replicate elements of vectors and lists.</li>
+<li><code class="codehilite"><span class="n">sort</span></code>; sort a vector in ascending order. Works on numerics, but<br />
     also on character strings and logicals.</li>
-<li><code class="codehilite">rev</code>; reverse the elements in a data structures for which reversal<br />
+<li><code class="codehilite"><span class="n">rev</span></code>; reverse the elements in a data structures for which reversal<br />
     is defined.</li>
-<li><code class="codehilite">str</code>; display the structure of any R object. append; Merge vectors<br />
+<li><code class="codehilite"><span class="n">str</span></code>; display the structure of any R object. append; Merge vectors<br />
     or lists.</li>
-<li><code class="codehilite">is.*</code>; check for the class of an R object.</li>
-<li><code class="codehilite">as.*</code>; convert an R object from one class to another.</li>
-<li><code class="codehilite">unlist</code>; flatten (possibly embedded) lists to produce a vector.</li>
+<li><code class="codehilite"><span class="k">is</span><span class="p">.</span><span class="o">*</span></code>; check for the class of an R object.</li>
+<li><code class="codehilite"><span class="k">as</span><span class="p">.</span><span class="o">*</span></code>; convert an R object from one class to another.</li>
+<li><code class="codehilite"><span class="n">unlist</span></code>; flatten (possibly embedded) lists to produce a vector.</li>
 </ul>
 <!-- -->
 
@@ -3765,7 +3770,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] 17 17 16 16 14 14 13 13  9  8  7  5  5  2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">17</span> <span class="mi">17</span> <span class="mi">16</span> <span class="mi">16</span> <span class="mi">14</span> <span class="mi">14</span> <span class="mi">13</span> <span class="mi">13</span>  <span class="mi">9</span>  <span class="mi">8</span>  <span class="mi">7</span>  <span class="mi">5</span>  <span class="mi">5</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -3776,7 +3781,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 9
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -3786,7 +3791,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span>
 </pre></div>
 </td></tr></table>
 
@@ -3794,7 +3799,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7 1 3 5 7
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span>
 </pre></div>
 </td></tr></table>
 
@@ -3816,16 +3821,16 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   [1]   1   4   7  10  13  16  19  22  25  28  31  34  37  40  43  46  49
-##  [18]  52  55  58  61  64  67  70  73  76  79  82  85  88  91  94  97 100
-##  [35] 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148 151
-##  [52] 154 157 160 163 166 169 172 175 178 181 184 187 190 193 196 199 202
-##  [69] 205 208 211 214 217 220 223 226 229 232 235 238 241 244 247 250 253
-##  [86] 256 259 262 265 268 271 274 277 280 283 286 289 292 295 298 301 304
-## [103] 307 310 313 316 319 322 325 328 331 334 337 340 343 346 349 352 355
-## [120] 358 361 364 367 370 373 376 379 382 385 388 391 394 397 400 403 406
-## [137] 409 412 415 418 421 424 427 430 433 436 439 442 445 448 451 454 457
-## [154] 460 463 466 469 472 475 478 481 484 487 490 493 496 499
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="p">[</span><span class="mi">1</span><span class="p">]</span>   <span class="mi">1</span>   <span class="mi">4</span>   <span class="mi">7</span>  <span class="mi">10</span>  <span class="mi">13</span>  <span class="mi">16</span>  <span class="mi">19</span>  <span class="mi">22</span>  <span class="mi">25</span>  <span class="mi">28</span>  <span class="mi">31</span>  <span class="mi">34</span>  <span class="mi">37</span>  <span class="mi">40</span>  <span class="mi">43</span>  <span class="mi">46</span>  <span class="mi">49</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">18</span><span class="p">]</span>  <span class="mi">52</span>  <span class="mi">55</span>  <span class="mi">58</span>  <span class="mi">61</span>  <span class="mi">64</span>  <span class="mi">67</span>  <span class="mi">70</span>  <span class="mi">73</span>  <span class="mi">76</span>  <span class="mi">79</span>  <span class="mi">82</span>  <span class="mi">85</span>  <span class="mi">88</span>  <span class="mi">91</span>  <span class="mi">94</span>  <span class="mi">97</span> <span class="mi">100</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">35</span><span class="p">]</span> <span class="mi">103</span> <span class="mi">106</span> <span class="mi">109</span> <span class="mi">112</span> <span class="mi">115</span> <span class="mi">118</span> <span class="mi">121</span> <span class="mi">124</span> <span class="mi">127</span> <span class="mi">130</span> <span class="mi">133</span> <span class="mi">136</span> <span class="mi">139</span> <span class="mi">142</span> <span class="mi">145</span> <span class="mi">148</span> <span class="mi">151</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">52</span><span class="p">]</span> <span class="mi">154</span> <span class="mi">157</span> <span class="mi">160</span> <span class="mi">163</span> <span class="mi">166</span> <span class="mi">169</span> <span class="mi">172</span> <span class="mi">175</span> <span class="mi">178</span> <span class="mi">181</span> <span class="mi">184</span> <span class="mi">187</span> <span class="mi">190</span> <span class="mi">193</span> <span class="mi">196</span> <span class="mi">199</span> <span class="mi">202</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">69</span><span class="p">]</span> <span class="mi">205</span> <span class="mi">208</span> <span class="mi">211</span> <span class="mi">214</span> <span class="mi">217</span> <span class="mi">220</span> <span class="mi">223</span> <span class="mi">226</span> <span class="mi">229</span> <span class="mi">232</span> <span class="mi">235</span> <span class="mi">238</span> <span class="mi">241</span> <span class="mi">244</span> <span class="mi">247</span> <span class="mi">250</span> <span class="mi">253</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">86</span><span class="p">]</span> <span class="mi">256</span> <span class="mi">259</span> <span class="mi">262</span> <span class="mi">265</span> <span class="mi">268</span> <span class="mi">271</span> <span class="mi">274</span> <span class="mi">277</span> <span class="mi">280</span> <span class="mi">283</span> <span class="mi">286</span> <span class="mi">289</span> <span class="mi">292</span> <span class="mi">295</span> <span class="mi">298</span> <span class="mi">301</span> <span class="mi">304</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">103</span><span class="p">]</span> <span class="mi">307</span> <span class="mi">310</span> <span class="mi">313</span> <span class="mi">316</span> <span class="mi">319</span> <span class="mi">322</span> <span class="mi">325</span> <span class="mi">328</span> <span class="mi">331</span> <span class="mi">334</span> <span class="mi">337</span> <span class="mi">340</span> <span class="mi">343</span> <span class="mi">346</span> <span class="mi">349</span> <span class="mi">352</span> <span class="mi">355</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">120</span><span class="p">]</span> <span class="mi">358</span> <span class="mi">361</span> <span class="mi">364</span> <span class="mi">367</span> <span class="mi">370</span> <span class="mi">373</span> <span class="mi">376</span> <span class="mi">379</span> <span class="mi">382</span> <span class="mi">385</span> <span class="mi">388</span> <span class="mi">391</span> <span class="mi">394</span> <span class="mi">397</span> <span class="mi">400</span> <span class="mi">403</span> <span class="mi">406</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">137</span><span class="p">]</span> <span class="mi">409</span> <span class="mi">412</span> <span class="mi">415</span> <span class="mi">418</span> <span class="mi">421</span> <span class="mi">424</span> <span class="mi">427</span> <span class="mi">430</span> <span class="mi">433</span> <span class="mi">436</span> <span class="mi">439</span> <span class="mi">442</span> <span class="mi">445</span> <span class="mi">448</span> <span class="mi">451</span> <span class="mi">454</span> <span class="mi">457</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">154</span><span class="p">]</span> <span class="mi">460</span> <span class="mi">463</span> <span class="mi">466</span> <span class="mi">469</span> <span class="mi">472</span> <span class="mi">475</span> <span class="mi">478</span> <span class="mi">481</span> <span class="mi">484</span> <span class="mi">487</span> <span class="mi">490</span> <span class="mi">493</span> <span class="mi">496</span> <span class="mi">499</span>
 </pre></div>
 </td></tr></table>
 
@@ -3840,10 +3845,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] 1200 1193 1186 1179 1172 1165 1158 1151 1144 1137 1130 1123 1116 1109
-## [15] 1102 1095 1088 1081 1074 1067 1060 1053 1046 1039 1032 1025 1018 1011
-## [29] 1004  997  990  983  976  969  962  955  948  941  934  927  920  913
-## [43]  906
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1200</span> <span class="mi">1193</span> <span class="mi">1186</span> <span class="mi">1179</span> <span class="mi">1172</span> <span class="mi">1165</span> <span class="mi">1158</span> <span class="mi">1151</span> <span class="mi">1144</span> <span class="mi">1137</span> <span class="mi">1130</span> <span class="mi">1123</span> <span class="mi">1116</span> <span class="mi">1109</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="mi">1102</span> <span class="mi">1095</span> <span class="mi">1088</span> <span class="mi">1081</span> <span class="mi">1074</span> <span class="mi">1067</span> <span class="mi">1060</span> <span class="mi">1053</span> <span class="mi">1046</span> <span class="mi">1039</span> <span class="mi">1032</span> <span class="mi">1025</span> <span class="mi">1018</span> <span class="mi">1011</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">29</span><span class="p">]</span> <span class="mi">1004</span>  <span class="mi">997</span>  <span class="mi">990</span>  <span class="mi">983</span>  <span class="mi">976</span>  <span class="mi">969</span>  <span class="mi">962</span>  <span class="mi">955</span>  <span class="mi">948</span>  <span class="mi">941</span>  <span class="mi">934</span>  <span class="mi">927</span>  <span class="mi">920</span>  <span class="mi">913</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">43</span><span class="p">]</span>  <span class="mi">906</span>
 </pre></div>
 </td></tr></table>
 
@@ -3853,15 +3858,15 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 87029
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">87029</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="grepl-grep-and-the-likes"><code class="codehilite">grepl</code> &amp; <code class="codehilite">grep</code> (and the likes)<a class="headerlink" href="#grepl-grep-and-the-likes" title="Permanent link">&para;</a></h3>
+<h3 id="grepl-grep-and-the-likes"><code class="codehilite"><span class="n">grepl</span></code> &amp; <code class="codehilite"><span class="n">grep</span></code> (and the likes)<a class="headerlink" href="#grepl-grep-and-the-likes" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">grepl</code>; return TRUE when a pattern is found in the corresponding<br />
+<li><code class="codehilite"><span class="n">grepl</span></code>; return TRUE when a pattern is found in the corresponding<br />
     character string.</li>
-<li><code class="codehilite">grep</code>; return a vector of indices of the character strings that<br />
+<li><code class="codehilite"><span class="n">grep</span></code>; return a vector of indices of the character strings that<br />
     contains the pattern.</li>
 </ul>
 <!-- -->
@@ -3880,7 +3885,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1]  TRUE  TRUE FALSE  TRUE  TRUE FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="k">TRUE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -3892,7 +3897,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 1 2 4 5
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">4</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -3903,12 +3908,12 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;john.doe@ivyleague.edu&quot;   &quot;education@world.gov&quot;     
-## [3] &quot;invalid.edu&quot;              &quot;quant@bigdatacollege.edu&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;john.doe@ivyleague.edu&quot;</span><span class="w">   </span><span class="ss">&quot;education@world.gov&quot;</span><span class="w">     </span>
+<span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;invalid.edu&quot;</span><span class="w">              </span><span class="ss">&quot;quant@bigdatacollege.edu&quot;</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">grepl</code> &amp; <code class="codehilite">grep</code> (2)</strong></p>
+<p><strong><code class="codehilite"><span class="n">grepl</span></code> &amp; <code class="codehilite"><span class="n">grep</span></code> (2)</strong></p>
 <p>Consult a regex character chart for more.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -3924,7 +3929,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 1 5
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -3936,7 +3941,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1]  TRUE FALSE FALSE FALSE  TRUE FALSE
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="k">TRUE</span> <span class="k">FALSE</span> <span class="k">FALSE</span> <span class="k">FALSE</span>  <span class="k">TRUE</span> <span class="k">FALSE</span>
 </pre></div>
 </td></tr></table>
 
@@ -3946,11 +3951,11 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;john.doe@ivyleague.edu&quot;   &quot;quant@bigdatacollege.edu&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;john.doe@ivyleague.edu&quot;</span><span class="w">   </span><span class="ss">&quot;quant@bigdatacollege.edu&quot;</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">sub</code> &amp; <code class="codehilite">gsub</code></strong></p>
+<p><strong><code class="codehilite"><span class="n">sub</span></code> &amp; <code class="codehilite"><span class="n">gsub</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3967,9 +3972,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;john.doedatacamp.edu&quot;     &quot;education@world.gov&quot;     
-## [3] &quot;dalai.lama@peace.org&quot;     &quot;invalid.edu&quot;             
-## [5] &quot;quantdatacamp.edu&quot;        &quot;cookie.monster@sesame.tv&quot;
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;john.doedatacamp.edu&quot;</span><span class="w">     </span><span class="ss">&quot;education@world.gov&quot;</span><span class="w">     </span>
+<span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;dalai.lama@peace.org&quot;</span><span class="w">     </span><span class="ss">&quot;invalid.edu&quot;</span><span class="w">             </span>
+<span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">5</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;quantdatacamp.edu&quot;</span><span class="w">        </span><span class="ss">&quot;cookie.monster@sesame.tv&quot;</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
@@ -3981,9 +3986,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;john.doe@datacamp.edu&quot;    &quot;education@world.gov&quot;     
-## [3] &quot;dalai.lama@peace.org&quot;     &quot;invalid.edu&quot;             
-## [5] &quot;quant@datacamp.edu&quot;       &quot;cookie.monster@sesame.tv&quot;
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;john.doe@datacamp.edu&quot;</span><span class="w">    </span><span class="ss">&quot;education@world.gov&quot;</span><span class="w">     </span>
+<span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;dalai.lama@peace.org&quot;</span><span class="w">     </span><span class="ss">&quot;invalid.edu&quot;</span><span class="w">             </span>
+<span class="err">##</span><span class="w"> </span><span class="o">[</span><span class="n">5</span><span class="o">]</span><span class="w"> </span><span class="ss">&quot;quant@datacamp.edu&quot;</span><span class="w">       </span><span class="ss">&quot;cookie.monster@sesame.tv&quot;</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
@@ -3997,7 +4002,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;2017-04-14&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;2017-04-14&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4007,7 +4012,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 17270
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">17270</span>
 </pre></div>
 </td></tr></table>
 
@@ -4019,7 +4024,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;2017-04-14 08:29:36 EDT&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;2017-04-14 08:29:36 EDT&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4029,7 +4034,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 1492172976
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1492172976</span>
 </pre></div>
 </td></tr></table>
 
@@ -4106,11 +4111,11 @@
 </tbody>
 </table>
 
-<p>Find out more with <code class="codehilite">?strptime</code>.</p>
+<p>Find out more with <code class="codehilite"><span class="o">?</span><span class="n">strptime</span></code>.</p>
 <p>R offer default functions for dealing with time and dates. There are<br />
-better packages: <code class="codehilite">date</code> and <code class="codehilite">lubridate</code>.</p>
-<p><code class="codehilite">lubridate</code> enhances time-series packages such as <code class="codehilite">zoo</code> and <code class="codehilite">xts</code>, and<br />
-works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
+better packages: <code class="codehilite"><span class="nb">date</span></code> and <code class="codehilite"><span class="n">lubridate</span></code>.</p>
+<p><code class="codehilite"><span class="n">lubridate</span></code> enhances time-series packages such as <code class="codehilite"><span class="n">zoo</span></code> and <code class="codehilite"><span class="n">xts</span></code>, and<br />
+works well with <code class="codehilite"><span class="n">dplyr</span></code> for data wrangling.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -4133,7 +4138,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 23May96
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">23</span><span class="n">May96</span>
 </pre></div>
 </td></tr></table>
 
@@ -4143,7 +4148,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;1996-05-22 20:00:00 EDT&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;1996-05-22 20:00:00 EDT&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4153,7 +4158,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 15Mar2012
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">15</span><span class="n">Mar2012</span>
 </pre></div>
 </td></tr></table>
 
@@ -4163,7 +4168,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;2012-03-14 20:00:00 EDT&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;2012-03-14 20:00:00 EDT&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4173,7 +4178,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 30Jan2006
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">30</span><span class="n">Jan2006</span>
 </pre></div>
 </td></tr></table>
 
@@ -4183,7 +4188,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;2006-01-29 19:00:00 EST&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;2006-01-29 19:00:00 EST&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4193,7 +4198,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;mercredi&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;mercredi&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4201,7 +4206,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;14&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;14&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4209,7 +4214,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;janv. 2006&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;janv. 2006&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4221,7 +4226,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;2012-03-14 20:00:00&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;2012-03-14 20:00:00&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4248,7 +4253,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] NA
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -4256,7 +4261,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] NA
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -4281,7 +4286,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Time difference of 11 days
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Time</span> <span class="n">difference</span> <span class="k">of</span> <span class="mi">11</span> <span class="n">days</span>
 </pre></div>
 </td></tr></table>
 
@@ -4300,8 +4305,8 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Time differences in days
-## [1]  -5  11 -13  18
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Time</span> <span class="n">differences</span> <span class="k">in</span> <span class="n">days</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="o">-</span><span class="mi">5</span>  <span class="mi">11</span> <span class="o">-</span><span class="mi">13</span>  <span class="mi">18</span>
 </pre></div>
 </td></tr></table>
 
@@ -4311,7 +4316,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Time difference of 2.75 days
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Time</span> <span class="n">difference</span> <span class="k">of</span> <span class="mi">2</span><span class="p">.</span><span class="mi">75</span> <span class="n">days</span>
 </pre></div>
 </td></tr></table>
 
@@ -4341,8 +4346,8 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Time differences in secs
-## [1] 2305   34  837 2398 1852
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Time</span> <span class="n">differences</span> <span class="k">in</span> <span class="n">secs</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2305</span>   <span class="mi">34</span>  <span class="mi">837</span> <span class="mi">2398</span> <span class="mi">1852</span>
 </pre></div>
 </td></tr></table>
 
@@ -4352,7 +4357,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Time difference of 7426 secs
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Time</span> <span class="n">difference</span> <span class="k">of</span> <span class="mi">7426</span> <span class="n">secs</span>
 </pre></div>
 </td></tr></table>
 
@@ -4362,7 +4367,7 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Time difference of 1485.2 secs
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">Time</span> <span class="n">difference</span> <span class="k">of</span> <span class="mi">1485</span><span class="p">.</span><span class="mi">2</span> <span class="n">secs</span>
 </pre></div>
 </td></tr></table>
                 
@@ -4428,25 +4433,17 @@ works well with <code class="codehilite">dplyr</code> for data wrangling.</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 I/O Snippets & Cleaning
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -422,21 +427,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#datasets" title="Datasets" class="md-nav__link">
+  <a href="#datasets" class="md-nav__link">
     Datasets
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-into-r" title="Importing Data Into R" class="md-nav__link">
+  <a href="#importing-data-into-r" class="md-nav__link">
     Importing Data Into R
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-flat-files" title="Importing Data from Flat Files" class="md-nav__link">
+  <a href="#importing-data-from-flat-files" class="md-nav__link">
     Importing Data from Flat Files
   </a>
   
@@ -444,42 +449,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#r-functions-by-default" title="R functions, by default." class="md-nav__link">
+  <a href="#r-functions-by-default" class="md-nav__link">
     R functions, by default.
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-utils-package" title="The utils package" class="md-nav__link">
+  <a href="#the-utils-package" class="md-nav__link">
     The utils package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-importing-data-from-the-web" title="(from Importing Data from the Web)" class="md-nav__link">
+  <a href="#from-importing-data-from-the-web" class="md-nav__link">
     (from Importing Data from the Web)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-readr-package" title="The readr package" class="md-nav__link">
+  <a href="#the-readr-package" class="md-nav__link">
     The readr package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-importing-data-from-the-web_1" title="(from Importing Data from the Web)" class="md-nav__link">
+  <a href="#from-importing-data-from-the-web_1" class="md-nav__link">
     (from Importing Data from the Web)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-datatable-package" title="The data.table package" class="md-nav__link">
+  <a href="#the-datatable-package" class="md-nav__link">
     The data.table package
   </a>
   
@@ -491,7 +496,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-excel" title="Importing Data from Excel" class="md-nav__link">
+  <a href="#importing-data-from-excel" class="md-nav__link">
     Importing Data from Excel
   </a>
   
@@ -499,21 +504,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-readxl-package" title="The readxl package" class="md-nav__link">
+  <a href="#the-readxl-package" class="md-nav__link">
     The readxl package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-importing-data-from-the-web_2" title="(from Importing Data from the Web)" class="md-nav__link">
+  <a href="#from-importing-data-from-the-web_2" class="md-nav__link">
     (from Importing Data from the Web)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-xlconnect-package" title="The XLConnect package" class="md-nav__link">
+  <a href="#the-xlconnect-package" class="md-nav__link">
     The XLConnect package
   </a>
   
@@ -525,7 +530,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-other-statistical-software" title="Importing Data from Other Statistical Software" class="md-nav__link">
+  <a href="#importing-data-from-other-statistical-software" class="md-nav__link">
     Importing Data from Other Statistical Software
   </a>
   
@@ -533,14 +538,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-haven-package" title="The haven package" class="md-nav__link">
+  <a href="#the-haven-package" class="md-nav__link">
     The haven package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#theforeign-package" title="Theforeign package" class="md-nav__link">
+  <a href="#theforeign-package" class="md-nav__link">
     Theforeign package
   </a>
   
@@ -552,7 +557,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-relational-data" title="Importing Data from Relational Data" class="md-nav__link">
+  <a href="#importing-data-from-relational-data" class="md-nav__link">
     Importing Data from Relational Data
   </a>
   
@@ -560,7 +565,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-dbi-package" title="The DBI package" class="md-nav__link">
+  <a href="#the-dbi-package" class="md-nav__link">
     The DBI package
   </a>
   
@@ -572,7 +577,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-relational-data-more" title="Importing Data from Relational Data -- More" class="md-nav__link">
+  <a href="#importing-data-from-relational-data-more" class="md-nav__link">
     Importing Data from Relational Data -- More
   </a>
   
@@ -580,28 +585,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dbi" title="DBI" class="md-nav__link">
+  <a href="#dbi" class="md-nav__link">
     DBI
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rsqlite" title="RSQLite" class="md-nav__link">
+  <a href="#rsqlite" class="md-nav__link">
     RSQLite
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mysql-with-dbi-or-rmysql" title="MySQL with DBI or RMySQL" class="md-nav__link">
+  <a href="#mysql-with-dbi-or-rmysql" class="md-nav__link">
     MySQL with DBI or RMySQL
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#posgresql-with-dbi-or-rpostgresql" title="PosgreSQL with DBI or RPostgreSQL" class="md-nav__link">
+  <a href="#posgresql-with-dbi-or-rpostgresql" class="md-nav__link">
     PosgreSQL with DBI or RPostgreSQL
   </a>
   
@@ -613,7 +618,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-the-web" title="Importing Data from the Web" class="md-nav__link">
+  <a href="#importing-data-from-the-web" class="md-nav__link">
     Importing Data from the Web
   </a>
   
@@ -621,14 +626,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-httr-package" title="The httr package" class="md-nav__link">
+  <a href="#the-httr-package" class="md-nav__link">
     The httr package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-jsonlite-package" title="The jsonlite package" class="md-nav__link">
+  <a href="#the-jsonlite-package" class="md-nav__link">
     The jsonlite package
   </a>
   
@@ -640,14 +645,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#keyboard-inputting" title="Keyboard Inputting" class="md-nav__link">
+  <a href="#keyboard-inputting" class="md-nav__link">
     Keyboard Inputting
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exporting-data" title="Exporting Data" class="md-nav__link">
+  <a href="#exporting-data" class="md-nav__link">
     Exporting Data
   </a>
   
@@ -655,35 +660,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#to-a-tab-delimited-text-file" title="To a Tab-Delimited Text File" class="md-nav__link">
+  <a href="#to-a-tab-delimited-text-file" class="md-nav__link">
     To a Tab-Delimited Text File
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-an-excel-spreadsheet" title="To an Excel Spreadsheet" class="md-nav__link">
+  <a href="#to-an-excel-spreadsheet" class="md-nav__link">
     To an Excel Spreadsheet
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-spss" title="To SPSS" class="md-nav__link">
+  <a href="#to-spss" class="md-nav__link">
     To SPSS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-sas" title="To SAS" class="md-nav__link">
+  <a href="#to-sas" class="md-nav__link">
     To SAS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-stata" title="To Stata" class="md-nav__link">
+  <a href="#to-stata" class="md-nav__link">
     To Stata
   </a>
   
@@ -695,7 +700,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inspecting-data-missing-data" title="Inspecting Data - Missing Data" class="md-nav__link">
+  <a href="#inspecting-data-missing-data" class="md-nav__link">
     Inspecting Data - Missing Data
   </a>
   
@@ -703,21 +708,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inspecting" title="Inspecting" class="md-nav__link">
+  <a href="#inspecting" class="md-nav__link">
     Inspecting
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-dplyr-package" title="The dplyr package" class="md-nav__link">
+  <a href="#the-dplyr-package" class="md-nav__link">
     The dplyr package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-thorough-cleaning" title="For thorough cleaning" class="md-nav__link">
+  <a href="#for-thorough-cleaning" class="md-nav__link">
     For thorough cleaning
   </a>
   
@@ -729,14 +734,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#labels-levels" title="Labels &amp; Levels" class="md-nav__link">
+  <a href="#labels-levels" class="md-nav__link">
     Labels &amp; Levels
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-work-with-quandl-in-r" title="How to work with Quandl in R" class="md-nav__link">
+  <a href="#how-to-work-with-quandl-in-r" class="md-nav__link">
     How to work with Quandl in R
   </a>
   
@@ -744,14 +749,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#importing-quandl-datasets" title="Importing Quandl Datasets" class="md-nav__link">
+  <a href="#importing-quandl-datasets" class="md-nav__link">
     Importing Quandl Datasets
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#manipulating-quandl-datasets" title="Manipulating Quandl Datasets" class="md-nav__link">
+  <a href="#manipulating-quandl-datasets" class="md-nav__link">
     Manipulating Quandl Datasets
   </a>
   
@@ -763,7 +768,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cleaning-data-in-r" title="Cleaning Data in R" class="md-nav__link">
+  <a href="#cleaning-data-in-r" class="md-nav__link">
     Cleaning Data in R
   </a>
   
@@ -771,28 +776,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-and-exploring-raw-data" title="Introduction and Exploring Raw Data" class="md-nav__link">
+  <a href="#introduction-and-exploring-raw-data" class="md-nav__link">
     Introduction and Exploring Raw Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tidying-data" title="Tidying Data" class="md-nav__link">
+  <a href="#tidying-data" class="md-nav__link">
     Tidying Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preparing-data-for-analysis" title="Preparing Data for Analysis" class="md-nav__link">
+  <a href="#preparing-data-for-analysis" class="md-nav__link">
     Preparing Data for Analysis
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#putting-it-all-together" title="Putting it All Together" class="md-nav__link">
+  <a href="#putting-it-all-together" class="md-nav__link">
     Putting it All Together
   </a>
   
@@ -1258,21 +1263,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#datasets" title="Datasets" class="md-nav__link">
+  <a href="#datasets" class="md-nav__link">
     Datasets
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-into-r" title="Importing Data Into R" class="md-nav__link">
+  <a href="#importing-data-into-r" class="md-nav__link">
     Importing Data Into R
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-flat-files" title="Importing Data from Flat Files" class="md-nav__link">
+  <a href="#importing-data-from-flat-files" class="md-nav__link">
     Importing Data from Flat Files
   </a>
   
@@ -1280,42 +1285,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#r-functions-by-default" title="R functions, by default." class="md-nav__link">
+  <a href="#r-functions-by-default" class="md-nav__link">
     R functions, by default.
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-utils-package" title="The utils package" class="md-nav__link">
+  <a href="#the-utils-package" class="md-nav__link">
     The utils package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-importing-data-from-the-web" title="(from Importing Data from the Web)" class="md-nav__link">
+  <a href="#from-importing-data-from-the-web" class="md-nav__link">
     (from Importing Data from the Web)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-readr-package" title="The readr package" class="md-nav__link">
+  <a href="#the-readr-package" class="md-nav__link">
     The readr package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-importing-data-from-the-web_1" title="(from Importing Data from the Web)" class="md-nav__link">
+  <a href="#from-importing-data-from-the-web_1" class="md-nav__link">
     (from Importing Data from the Web)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-datatable-package" title="The data.table package" class="md-nav__link">
+  <a href="#the-datatable-package" class="md-nav__link">
     The data.table package
   </a>
   
@@ -1327,7 +1332,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-excel" title="Importing Data from Excel" class="md-nav__link">
+  <a href="#importing-data-from-excel" class="md-nav__link">
     Importing Data from Excel
   </a>
   
@@ -1335,21 +1340,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-readxl-package" title="The readxl package" class="md-nav__link">
+  <a href="#the-readxl-package" class="md-nav__link">
     The readxl package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-importing-data-from-the-web_2" title="(from Importing Data from the Web)" class="md-nav__link">
+  <a href="#from-importing-data-from-the-web_2" class="md-nav__link">
     (from Importing Data from the Web)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-xlconnect-package" title="The XLConnect package" class="md-nav__link">
+  <a href="#the-xlconnect-package" class="md-nav__link">
     The XLConnect package
   </a>
   
@@ -1361,7 +1366,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-other-statistical-software" title="Importing Data from Other Statistical Software" class="md-nav__link">
+  <a href="#importing-data-from-other-statistical-software" class="md-nav__link">
     Importing Data from Other Statistical Software
   </a>
   
@@ -1369,14 +1374,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-haven-package" title="The haven package" class="md-nav__link">
+  <a href="#the-haven-package" class="md-nav__link">
     The haven package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#theforeign-package" title="Theforeign package" class="md-nav__link">
+  <a href="#theforeign-package" class="md-nav__link">
     Theforeign package
   </a>
   
@@ -1388,7 +1393,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-relational-data" title="Importing Data from Relational Data" class="md-nav__link">
+  <a href="#importing-data-from-relational-data" class="md-nav__link">
     Importing Data from Relational Data
   </a>
   
@@ -1396,7 +1401,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-dbi-package" title="The DBI package" class="md-nav__link">
+  <a href="#the-dbi-package" class="md-nav__link">
     The DBI package
   </a>
   
@@ -1408,7 +1413,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-relational-data-more" title="Importing Data from Relational Data -- More" class="md-nav__link">
+  <a href="#importing-data-from-relational-data-more" class="md-nav__link">
     Importing Data from Relational Data -- More
   </a>
   
@@ -1416,28 +1421,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dbi" title="DBI" class="md-nav__link">
+  <a href="#dbi" class="md-nav__link">
     DBI
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rsqlite" title="RSQLite" class="md-nav__link">
+  <a href="#rsqlite" class="md-nav__link">
     RSQLite
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mysql-with-dbi-or-rmysql" title="MySQL with DBI or RMySQL" class="md-nav__link">
+  <a href="#mysql-with-dbi-or-rmysql" class="md-nav__link">
     MySQL with DBI or RMySQL
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#posgresql-with-dbi-or-rpostgresql" title="PosgreSQL with DBI or RPostgreSQL" class="md-nav__link">
+  <a href="#posgresql-with-dbi-or-rpostgresql" class="md-nav__link">
     PosgreSQL with DBI or RPostgreSQL
   </a>
   
@@ -1449,7 +1454,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-from-the-web" title="Importing Data from the Web" class="md-nav__link">
+  <a href="#importing-data-from-the-web" class="md-nav__link">
     Importing Data from the Web
   </a>
   
@@ -1457,14 +1462,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-httr-package" title="The httr package" class="md-nav__link">
+  <a href="#the-httr-package" class="md-nav__link">
     The httr package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-jsonlite-package" title="The jsonlite package" class="md-nav__link">
+  <a href="#the-jsonlite-package" class="md-nav__link">
     The jsonlite package
   </a>
   
@@ -1476,14 +1481,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#keyboard-inputting" title="Keyboard Inputting" class="md-nav__link">
+  <a href="#keyboard-inputting" class="md-nav__link">
     Keyboard Inputting
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exporting-data" title="Exporting Data" class="md-nav__link">
+  <a href="#exporting-data" class="md-nav__link">
     Exporting Data
   </a>
   
@@ -1491,35 +1496,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#to-a-tab-delimited-text-file" title="To a Tab-Delimited Text File" class="md-nav__link">
+  <a href="#to-a-tab-delimited-text-file" class="md-nav__link">
     To a Tab-Delimited Text File
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-an-excel-spreadsheet" title="To an Excel Spreadsheet" class="md-nav__link">
+  <a href="#to-an-excel-spreadsheet" class="md-nav__link">
     To an Excel Spreadsheet
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-spss" title="To SPSS" class="md-nav__link">
+  <a href="#to-spss" class="md-nav__link">
     To SPSS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-sas" title="To SAS" class="md-nav__link">
+  <a href="#to-sas" class="md-nav__link">
     To SAS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-stata" title="To Stata" class="md-nav__link">
+  <a href="#to-stata" class="md-nav__link">
     To Stata
   </a>
   
@@ -1531,7 +1536,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inspecting-data-missing-data" title="Inspecting Data - Missing Data" class="md-nav__link">
+  <a href="#inspecting-data-missing-data" class="md-nav__link">
     Inspecting Data - Missing Data
   </a>
   
@@ -1539,21 +1544,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inspecting" title="Inspecting" class="md-nav__link">
+  <a href="#inspecting" class="md-nav__link">
     Inspecting
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-dplyr-package" title="The dplyr package" class="md-nav__link">
+  <a href="#the-dplyr-package" class="md-nav__link">
     The dplyr package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-thorough-cleaning" title="For thorough cleaning" class="md-nav__link">
+  <a href="#for-thorough-cleaning" class="md-nav__link">
     For thorough cleaning
   </a>
   
@@ -1565,14 +1570,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#labels-levels" title="Labels &amp; Levels" class="md-nav__link">
+  <a href="#labels-levels" class="md-nav__link">
     Labels &amp; Levels
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-work-with-quandl-in-r" title="How to work with Quandl in R" class="md-nav__link">
+  <a href="#how-to-work-with-quandl-in-r" class="md-nav__link">
     How to work with Quandl in R
   </a>
   
@@ -1580,14 +1585,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#importing-quandl-datasets" title="Importing Quandl Datasets" class="md-nav__link">
+  <a href="#importing-quandl-datasets" class="md-nav__link">
     Importing Quandl Datasets
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#manipulating-quandl-datasets" title="Manipulating Quandl Datasets" class="md-nav__link">
+  <a href="#manipulating-quandl-datasets" class="md-nav__link">
     Manipulating Quandl Datasets
   </a>
   
@@ -1599,7 +1604,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cleaning-data-in-r" title="Cleaning Data in R" class="md-nav__link">
+  <a href="#cleaning-data-in-r" class="md-nav__link">
     Cleaning Data in R
   </a>
   
@@ -1607,28 +1612,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-and-exploring-raw-data" title="Introduction and Exploring Raw Data" class="md-nav__link">
+  <a href="#introduction-and-exploring-raw-data" class="md-nav__link">
     Introduction and Exploring Raw Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tidying-data" title="Tidying Data" class="md-nav__link">
+  <a href="#tidying-data" class="md-nav__link">
     Tidying Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preparing-data-for-analysis" title="Preparing Data for Analysis" class="md-nav__link">
+  <a href="#preparing-data-for-analysis" class="md-nav__link">
     Preparing Data for Analysis
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#putting-it-all-together" title="Putting it All Together" class="md-nav__link">
+  <a href="#putting-it-all-together" class="md-nav__link">
     Putting it All Together
   </a>
   
@@ -1699,7 +1704,7 @@
 <h3 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html">R Dataset Packages</a>; by default in R.</li>
-<li>Other dataset can be imported with <code class="codehilite">data(Cars93, package = &#39;MASS&#39;)</code> for example.</li>
+<li>Other dataset can be imported with <code class="codehilite"><span class="k">data</span><span class="p">(</span><span class="n">Cars93</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s1">&#39;MASS&#39;</span><span class="p">)</span></code> for example.</li>
 <li><a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html">csv/doc Datasets</a>.</li>
 <li><a href="https://r-dir.com/reference/datasets.html">Free Datasets</a> from the World Bank, Gapminder, Kaggle, Quandl, Reddit, and many more websites.</li>
 <li><a href="https://www.r-bloggers.com/datasets-to-practice-your-data-mining/">Datasets</a> to Practice Your Data Mining.</li>
@@ -1712,28 +1717,28 @@
 <h2 id="importing-data-into-r">Importing Data Into R<a class="headerlink" href="#importing-data-into-r" title="Permanent link">&para;</a></h2>
 <p>The packages:</p>
 <ul>
-<li><code class="codehilite">utils</code>.</li>
-<li><code class="codehilite">readr</code>.</li>
-<li><code class="codehilite">data.table</code>.</li>
-<li><code class="codehilite">readxl</code>.</li>
-<li><code class="codehilite">gdata</code>.</li>
-<li><code class="codehilite">XLConnect</code>.</li>
-<li><code class="codehilite">haven</code>.</li>
-<li><code class="codehilite">foreign</code>.</li>
-<li><code class="codehilite">DBI</code>.</li>
-<li><code class="codehilite">httr</code>.</li>
-<li><code class="codehilite">jsonlite</code>.</li>
+<li><code class="codehilite"><span class="n">utils</span></code>.</li>
+<li><code class="codehilite"><span class="n">readr</span></code>.</li>
+<li><code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code>.</li>
+<li><code class="codehilite"><span class="n">readxl</span></code>.</li>
+<li><code class="codehilite"><span class="n">gdata</span></code>.</li>
+<li><code class="codehilite"><span class="n">XLConnect</span></code>.</li>
+<li><code class="codehilite"><span class="n">haven</span></code>.</li>
+<li><code class="codehilite"><span class="k">foreign</span></code>.</li>
+<li><code class="codehilite"><span class="n">DBI</span></code>.</li>
+<li><code class="codehilite"><span class="n">httr</span></code>.</li>
+<li><code class="codehilite"><span class="n">jsonlite</span></code>.</li>
 </ul>
 <h2 id="importing-data-from-flat-files">Importing Data from Flat Files<a class="headerlink" href="#importing-data-from-flat-files" title="Permanent link">&para;</a></h2>
 <h3 id="r-functions-by-default">R functions, by default.<a class="headerlink" href="#r-functions-by-default" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">read.csv</code>; <code class="codehilite">sep = &#39;,&#39;</code>, <code class="codehilite">dec = &#39;.&#39;</code>.</li>
-<li><code class="codehilite">read.delim</code>; .txt, <code class="codehilite">dec = &#39;.&#39;</code>.</li>
-<li><code class="codehilite">read.csv2</code>; <code class="codehilite">sep = &#39;;&#39;</code>, <code class="codehilite">dec = &#39;,&#39;</code>.</li>
-<li><code class="codehilite">read.delim2</code>; .txt, <code class="codehilite">dec = &#39;,&#39;</code>.</li>
+<li><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">csv</span></code>; <code class="codehilite"><span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span></code>, <code class="codehilite"><span class="nb">dec</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span></code>.</li>
+<li><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">delim</span></code>; .txt, <code class="codehilite"><span class="nb">dec</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span></code>.</li>
+<li><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">csv2</span></code>; <code class="codehilite"><span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;;&#39;</span></code>, <code class="codehilite"><span class="nb">dec</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span></code>.</li>
+<li><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">delim2</span></code>; .txt, <code class="codehilite"><span class="nb">dec</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span></code>.</li>
 <li>Needs arguments.</li>
 </ul>
-<p><strong><code class="codehilite">read.csv</code> for .csv files</strong></p>
+<p><strong><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">csv</span></code> for .csv files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1748,7 +1753,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><code class="codehilite">stringsAsFactors</code></p>
+<p><code class="codehilite"><span class="n">stringsAsFactors</span></code></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1761,7 +1766,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">read.delim</code> for .txt files</strong></p>
+<p><strong><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">delim</span></code> for .txt files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1811,9 +1816,9 @@
 </pre></div>
 </td></tr></table>
 
-<h3 id="the-utils-package">The <code class="codehilite">utils</code> package<a class="headerlink" href="#the-utils-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-utils-package">The <code class="codehilite"><span class="n">utils</span></code> package<a class="headerlink" href="#the-utils-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">read.table</code>; <code class="codehilite">sep = &#39;\t&#39;</code>, <code class="codehilite">= &#39;,&#39;</code>, <code class="codehilite">= &#39;;&#39;</code>.</li>
+<li><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="k">table</span></code>; <code class="codehilite"><span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;\t&#39;</span></code>, <code class="codehilite"><span class="o">=</span> <span class="s1">&#39;,&#39;</span></code>, <code class="codehilite"><span class="o">=</span> <span class="s1">&#39;;&#39;</span></code>.</li>
 <li>Read any tabular as a d.f.</li>
 <li>Needs arguments; lots of argument for precision.</li>
 <li>Slow.</li>
@@ -1824,7 +1829,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">read.table</code> .txt files</strong></p>
+<p><strong><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="k">table</span></code> .txt files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1852,23 +1857,23 @@
 </td></tr></table>
 
 <hr />
-<h3 id="the-readr-package">The <code class="codehilite">readr</code> package<a class="headerlink" href="#the-readr-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-readr-package">The <code class="codehilite"><span class="n">readr</span></code> package<a class="headerlink" href="#the-readr-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">read_delim</code>; <code class="codehilite">delim = &#39;\t&#39;</code>, <code class="codehilite">= &#39;,&#39;</code>.</li>
-<li><code class="codehilite">read_csv</code>; read <code class="codehilite">100.000, 200.000</code></li>
-<li><code class="codehilite">read_tsv</code>; idem.</li>
-<li><code class="codehilite">read_csv2</code>; read <code class="codehilite">100,000; 200,000</code> or European files..</li>
-<li><code class="codehilite">read_tsv2</code>; idem.</li>
-<li><code class="codehilite">read_lines</code>.</li>
-<li><code class="codehilite">read_file</code>.</li>
-<li><code class="codehilite">write_csv</code>.</li>
-<li><code class="codehilite">write_rds</code>.</li>
-<li><code class="codehilite">type_convert</code>.</li>
-<li><code class="codehilite">parse_factor</code>.</li>
-<li><code class="codehilite">parse_date</code>.</li>
-<li><code class="codehilite">parse_number</code>.</li>
-<li><code class="codehilite">spec_csv</code>.</li>
-<li><code class="codehilite">spec_delim</code>.</li>
+<li><code class="codehilite"><span class="n">read_delim</span></code>; <code class="codehilite"><span class="n">delim</span> <span class="o">=</span> <span class="s1">&#39;\t&#39;</span></code>, <code class="codehilite"><span class="o">=</span> <span class="s1">&#39;,&#39;</span></code>.</li>
+<li><code class="codehilite"><span class="n">read_csv</span></code>; read <code class="codehilite"><span class="mi">100</span><span class="p">.</span><span class="mi">000</span><span class="p">,</span> <span class="mi">200</span><span class="p">.</span><span class="mi">000</span></code></li>
+<li><code class="codehilite"><span class="n">read_tsv</span></code>; idem.</li>
+<li><code class="codehilite"><span class="n">read_csv2</span></code>; read <code class="codehilite"><span class="mi">100</span><span class="p">,</span><span class="mi">000</span><span class="p">;</span> <span class="mi">200</span><span class="p">,</span><span class="mi">000</span></code> or European files..</li>
+<li><code class="codehilite"><span class="n">read_tsv2</span></code>; idem.</li>
+<li><code class="codehilite"><span class="n">read_lines</span></code>.</li>
+<li><code class="codehilite"><span class="n">read_file</span></code>.</li>
+<li><code class="codehilite"><span class="n">write_csv</span></code>.</li>
+<li><code class="codehilite"><span class="n">write_rds</span></code>.</li>
+<li><code class="codehilite"><span class="n">type_convert</span></code>.</li>
+<li><code class="codehilite"><span class="n">parse_factor</span></code>.</li>
+<li><code class="codehilite"><span class="n">parse_date</span></code>.</li>
+<li><code class="codehilite"><span class="n">parse_number</span></code>.</li>
+<li><code class="codehilite"><span class="n">spec_csv</span></code>.</li>
+<li><code class="codehilite"><span class="n">spec_delim</span></code>.</li>
 <li>Fast, few arguments.</li>
 <li>Detect data type.</li>
 </ul>
@@ -1878,14 +1883,14 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">read_delim</code> .txt files</strong></p>
+<p><strong><code class="codehilite"><span class="n">read_delim</span></code> .txt files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import potatoes.txt using read_delim(): potatoes</span>
 <span class="n">potatoes</span> <span class="o">&lt;-</span> <span class="nf">read_delim</span><span class="p">(</span><span class="s">&#39;potatoes.txt&#39;</span><span class="p">,</span> <span class="n">delim</span> <span class="o">=</span> <span class="s">&#39;\t&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">read_csv</code> .csv files</strong></p>
+<p><strong><code class="codehilite"><span class="n">read_csv</span></code> .csv files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1918,7 +1923,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">col_types</code>, <code class="codehilite">skip</code> and <code class="codehilite">n_max</code> in .tsv files</strong></p>
+<p><strong><code class="codehilite"><span class="n">col_types</span></code>, <code class="codehilite"><span class="n">skip</span></code> and <code class="codehilite"><span class="n">n_max</span></code> in .tsv files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1955,7 +1960,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">col_types</code> with collectors .tsv files</strong></p>
+<p><strong><code class="codehilite"><span class="n">col_types</span></code> with collectors .tsv files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2080,8 +2085,8 @@
 
 <p><strong>Viewing metadata before importing</strong></p>
 <ul>
-<li><code class="codehilite">spec_csv</code> for .csv and .tsv files.</li>
-<li><code class="codehilite">spec_delim</code> for .txt files (among others).</li>
+<li><code class="codehilite"><span class="n">spec_csv</span></code> for .csv and .tsv files.</li>
+<li><code class="codehilite"><span class="n">spec_delim</span></code> for .txt files (among others).</li>
 </ul>
 <!-- -->
 
@@ -2126,9 +2131,9 @@
 </td></tr></table>
 
 <hr />
-<h3 id="the-datatable-package">The <code class="codehilite">data.table</code> package<a class="headerlink" href="#the-datatable-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-datatable-package">The <code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code> package<a class="headerlink" href="#the-datatable-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">fread</code> == <code class="codehilite">read.table</code>.</li>
+<li><code class="codehilite"><span class="n">fread</span></code> == <code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="k">table</span></code>.</li>
 <li>.txt files only.</li>
 <li>Fast.</li>
 </ul>
@@ -2138,7 +2143,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">fread</code> for .txt files</strong></p>
+<p><strong><code class="codehilite"><span class="n">fread</span></code> for .txt files</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2157,7 +2162,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">fread</code>: more advanced use</strong></p>
+<p><strong><code class="codehilite"><span class="n">fread</span></code>: more advanced use</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2171,10 +2176,10 @@
 </td></tr></table>
 
 <h2 id="importing-data-from-excel">Importing Data from Excel<a class="headerlink" href="#importing-data-from-excel" title="Permanent link">&para;</a></h2>
-<h3 id="the-readxl-package">The <code class="codehilite">readxl</code> package<a class="headerlink" href="#the-readxl-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-readxl-package">The <code class="codehilite"><span class="n">readxl</span></code> package<a class="headerlink" href="#the-readxl-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">excel_sheets</code>; list.</li>
-<li><code class="codehilite">read_excel</code>; import.</li>
+<li><code class="codehilite"><span class="n">excel_sheets</span></code>; list.</li>
+<li><code class="codehilite"><span class="n">read_excel</span></code>; import.</li>
 <li>.xlsx files only.</li>
 </ul>
 <!-- -->
@@ -2222,7 +2227,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong>The <code class="codehilite">col_names</code> argument</strong></p>
+<p><strong>The <code class="codehilite"><span class="n">col_names</span></code> argument</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2235,7 +2240,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong>The <code class="codehilite">skip</code> argument</strong></p>
+<p><strong>The <code class="codehilite"><span class="n">skip</span></code> argument</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import the second sheet of latitude.xlsx, skipping the first 21 rows: latitude_sel</span>
 <span class="n">latitude_sel</span> <span class="o">&lt;-</span> <span class="nf">read_excel</span><span class="p">(</span><span class="s">&#39;latitude.xlsx&#39;</span><span class="p">,</span> <span class="n">skip</span> <span class="o">=</span> <span class="m">21</span><span class="p">,</span> <span class="n">col_names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
@@ -2271,15 +2276,15 @@
 </td></tr></table>
 
 <hr />
-<h3 id="the-xlconnect-package">The <code class="codehilite">XLConnect</code> package<a class="headerlink" href="#the-xlconnect-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-xlconnect-package">The <code class="codehilite"><span class="n">XLConnect</span></code> package<a class="headerlink" href="#the-xlconnect-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">loadWorkbook</code>.</li>
-<li><code class="codehilite">getSheets</code>.</li>
-<li><code class="codehilite">readWorksheet</code>.</li>
-<li><code class="codehilite">readWorksheetFromFile</code></li>
-<li><code class="codehilite">readNamedRegion</code></li>
+<li><code class="codehilite"><span class="n">loadWorkbook</span></code>.</li>
+<li><code class="codehilite"><span class="n">getSheets</span></code>.</li>
+<li><code class="codehilite"><span class="n">readWorksheet</span></code>.</li>
+<li><code class="codehilite"><span class="n">readWorksheetFromFile</span></code></li>
+<li><code class="codehilite"><span class="n">readNamedRegion</span></code></li>
 <li>
-<p><code class="codehilite">readNamedRegionFromFile</code></p>
+<p><code class="codehilite"><span class="n">readNamedRegionFromFile</span></code></p>
 </li>
 <li>
 <p>.xls &amp; .xlsx files.</p>
@@ -2407,14 +2412,14 @@
 </td></tr></table>
 
 <h2 id="importing-data-from-other-statistical-software">Importing Data from Other Statistical Software<a class="headerlink" href="#importing-data-from-other-statistical-software" title="Permanent link">&para;</a></h2>
-<h3 id="the-haven-package">The <code class="codehilite">haven</code> package<a class="headerlink" href="#the-haven-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-haven-package">The <code class="codehilite"><span class="n">haven</span></code> package<a class="headerlink" href="#the-haven-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">read_sas</code>; sas7bdat &amp; sas7bcat files.</li>
-<li><code class="codehilite">read_stata</code>; version; dta files.</li>
-<li><code class="codehilite">read_dta</code>; idem.</li>
-<li><code class="codehilite">read_spss</code>; sav &amp; por files (and see below).</li>
-<li><code class="codehilite">read_por</code>.</li>
-<li><code class="codehilite">read_sav</code>.</li>
+<li><code class="codehilite"><span class="n">read_sas</span></code>; sas7bdat &amp; sas7bcat files.</li>
+<li><code class="codehilite"><span class="n">read_stata</span></code>; version; dta files.</li>
+<li><code class="codehilite"><span class="n">read_dta</span></code>; idem.</li>
+<li><code class="codehilite"><span class="n">read_spss</span></code>; sav &amp; por files (and see below).</li>
+<li><code class="codehilite"><span class="n">read_por</span></code>.</li>
+<li><code class="codehilite"><span class="n">read_sav</span></code>.</li>
 <li>Simple, few arguments.</li>
 <li>Create a d.f.</li>
 </ul>
@@ -2458,11 +2463,11 @@
 </pre></div>
 </td></tr></table>
 
-<h3 id="theforeign-package">The<code class="codehilite">foreign</code> package<a class="headerlink" href="#theforeign-package" title="Permanent link">&para;</a></h3>
+<h3 id="theforeign-package">The<code class="codehilite"><span class="k">foreign</span></code> package<a class="headerlink" href="#theforeign-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Cannot import SAS, see the <code class="codehilite">sas7bdat</code> package.</li>
-<li><code class="codehilite">read.dta</code>; dta files.</li>
-<li><code class="codehilite">read.spss</code>; sav &amp; por files.</li>
+<li>Cannot import SAS, see the <code class="codehilite"><span class="n">sas7bdat</span></code> package.</li>
+<li><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">dta</span></code>; dta files.</li>
+<li><code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">spss</span></code>; sav &amp; por files.</li>
 <li>Comprehensive.</li>
 </ul>
 <!-- -->
@@ -2524,13 +2529,13 @@
 </td></tr></table>
 
 <h2 id="importing-data-from-relational-data">Importing Data from Relational Data<a class="headerlink" href="#importing-data-from-relational-data" title="Permanent link">&para;</a></h2>
-<h3 id="the-dbi-package">The <code class="codehilite">DBI</code> package<a class="headerlink" href="#the-dbi-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-dbi-package">The <code class="codehilite"><span class="n">DBI</span></code> package<a class="headerlink" href="#the-dbi-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">dbConnect</code>.</li>
-<li><code class="codehilite">dbReadTable</code>.</li>
-<li><code class="codehilite">dbGetQuery</code>.</li>
-<li><code class="codehilite">dbFetch</code>.</li>
-<li><code class="codehilite">dbDisconnect</code>.</li>
+<li><code class="codehilite"><span class="n">dbConnect</span></code>.</li>
+<li><code class="codehilite"><span class="n">dbReadTable</span></code>.</li>
+<li><code class="codehilite"><span class="n">dbGetQuery</span></code>.</li>
+<li><code class="codehilite"><span class="n">dbFetch</span></code>.</li>
+<li><code class="codehilite"><span class="n">dbDisconnect</span></code>.</li>
 </ul>
 <!-- -->
 
@@ -2786,22 +2791,22 @@
 </td></tr></table>
 
 <p><strong>Other general packages</strong></p>
-<p>The <code class="codehilite">RODBC</code> package provides access to databases (including Microsoft<br />
+<p>The <code class="codehilite"><span class="n">RODBC</span></code> package provides access to databases (including Microsoft<br />
 Access and Microsoft SQL Server) through an ODBC interface.</p>
-<p>The <code class="codehilite">RJDBC</code> package provides access to databases through a JDBC<br />
+<p>The <code class="codehilite"><span class="n">RJDBC</span></code> package provides access to databases through a JDBC<br />
 interface.</p>
 <p><strong>Specialized packages</strong></p>
 <ul>
-<li><code class="codehilite">ROracle</code> provides an interface for Oracle.</li>
-<li><code class="codehilite">RMySQL</code> provides access to MySQL.</li>
-<li><code class="codehilite">RpostgreSQL</code> to PostgreSQL.</li>
-<li><code class="codehilite">RSQLite</code> to SQLite.</li>
+<li><code class="codehilite"><span class="n">ROracle</span></code> provides an interface for Oracle.</li>
+<li><code class="codehilite"><span class="n">RMySQL</span></code> provides access to MySQL.</li>
+<li><code class="codehilite"><span class="n">RpostgreSQL</span></code> to PostgreSQL.</li>
+<li><code class="codehilite"><span class="n">RSQLite</span></code> to SQLite.</li>
 <li>And there are manu more packages for NoSQL databases such<br />
     as MongoDB.</li>
 </ul>
 <h2 id="importing-data-from-relational-data-more">Importing Data from Relational Data &ndash; More<a class="headerlink" href="#importing-data-from-relational-data-more" title="Permanent link">&para;</a></h2>
-<h3 id="dbi"><code class="codehilite">DBI</code><a class="headerlink" href="#dbi" title="Permanent link">&para;</a></h3>
-<p>First, change the working directory with <code class="codehilite">setwd</code>. Install the <code class="codehilite">DBI</code><br />
+<h3 id="dbi"><code class="codehilite"><span class="n">DBI</span></code><a class="headerlink" href="#dbi" title="Permanent link">&para;</a></h3>
+<p>First, change the working directory with <code class="codehilite"><span class="n">setwd</span></code>. Install the <code class="codehilite"><span class="n">DBI</span></code><br />
 library.</p>
 <p><strong>Connect and read preliminary results</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -2875,8 +2880,8 @@ library.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="rsqlite"><code class="codehilite">RSQLite</code><a class="headerlink" href="#rsqlite" title="Permanent link">&para;</a></h3>
-<p>First, change the working directory with <code class="codehilite">setwd</code>. Install the <code class="codehilite">RSQLite</code><br />
+<h3 id="rsqlite"><code class="codehilite"><span class="n">RSQLite</span></code><a class="headerlink" href="#rsqlite" title="Permanent link">&para;</a></h3>
+<p>First, change the working directory with <code class="codehilite"><span class="n">setwd</span></code>. Install the <code class="codehilite"><span class="n">RSQLite</span></code><br />
 library.</p>
 <p><strong>Connect and read preliminary results</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -2948,7 +2953,7 @@ library.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="mysql-with-dbi-or-rmysql">MySQL with <code class="codehilite">DBI</code> or <code class="codehilite">RMySQL</code><a class="headerlink" href="#mysql-with-dbi-or-rmysql" title="Permanent link">&para;</a></h3>
+<h3 id="mysql-with-dbi-or-rmysql">MySQL with <code class="codehilite"><span class="n">DBI</span></code> or <code class="codehilite"><span class="n">RMySQL</span></code><a class="headerlink" href="#mysql-with-dbi-or-rmysql" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3039,7 +3044,7 @@ library.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="posgresql-with-dbi-or-rpostgresql">PosgreSQL with <code class="codehilite">DBI</code> or <code class="codehilite">RPostgreSQL</code><a class="headerlink" href="#posgresql-with-dbi-or-rpostgresql" title="Permanent link">&para;</a></h3>
+<h3 id="posgresql-with-dbi-or-rpostgresql">PosgreSQL with <code class="codehilite"><span class="n">DBI</span></code> or <code class="codehilite"><span class="n">RPostgreSQL</span></code><a class="headerlink" href="#posgresql-with-dbi-or-rpostgresql" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3133,9 +3138,9 @@ library.</p>
 <h2 id="importing-data-from-the-web">Importing Data from the Web<a class="headerlink" href="#importing-data-from-the-web" title="Permanent link">&para;</a></h2>
 <p>The other package above can download files from the web. The next<br />
 packages are web-oriented.</p>
-<h3 id="the-httr-package">The <code class="codehilite">httr</code> package<a class="headerlink" href="#the-httr-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-httr-package">The <code class="codehilite"><span class="n">httr</span></code> package<a class="headerlink" href="#the-httr-package" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">GET</code> pages and files from the web.</li>
+<li><code class="codehilite"><span class="k">GET</span></code> pages and files from the web.</li>
 <li>Concise.</li>
 <li>Parse JSON files.</li>
 <li>Communicate with APIs.</li>
@@ -3146,7 +3151,7 @@ packages are web-oriented.</p>
 </pre></div>
 </td></tr></table>
 
-<p><strong>HTTP? <code class="codehilite">httr</code>!</strong></p>
+<p><strong>HTTP? <code class="codehilite"><span class="n">httr</span></code>!</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3199,14 +3204,14 @@ packages are web-oriented.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="the-jsonlite-package">The <code class="codehilite">jsonlite</code> package<a class="headerlink" href="#the-jsonlite-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-jsonlite-package">The <code class="codehilite"><span class="n">jsonlite</span></code> package<a class="headerlink" href="#the-jsonlite-package" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Robust.</li>
 <li>Improve the imported data.</li>
-<li><code class="codehilite">fromJSON</code>.</li>
-<li>from an R object to <code class="codehilite">toJSON</code></li>
-<li><code class="codehilite">prettify</code>.</li>
-<li><code class="codehilite">minify</code>.</li>
+<li><code class="codehilite"><span class="n">fromJSON</span></code>.</li>
+<li>from an R object to <code class="codehilite"><span class="n">toJSON</span></code></li>
+<li><code class="codehilite"><span class="n">prettify</span></code>.</li>
+<li><code class="codehilite"><span class="n">minify</span></code>.</li>
 </ul>
 <!-- -->
 
@@ -3214,7 +3219,7 @@ packages are web-oriented.</p>
 </pre></div>
 </td></tr></table>
 
-<p><strong>From <code class="codehilite">JSON</code> to R</strong></p>
+<p><strong>From <code class="codehilite"><span class="n">JSON</span></code> to R</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3302,7 +3307,7 @@ packages are web-oriented.</p>
 </pre></div>
 </td></tr></table>
 
-<p><strong>From R to <code class="codehilite">JSON</code></strong></p>
+<p><strong>From R to <code class="codehilite"><span class="n">JSON</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3331,7 +3336,7 @@ packages are web-oriented.</p>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">Minify</code> and <code class="codehilite">prettify</code></strong></p>
+<p><strong><code class="codehilite"><span class="n">Minify</span></code> and <code class="codehilite"><span class="n">prettify</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -3517,15 +3522,15 @@ packages are web-oriented.</p>
 <h2 id="inspecting-data-missing-data">Inspecting Data - Missing Data<a class="headerlink" href="#inspecting-data-missing-data" title="Permanent link">&para;</a></h2>
 <h3 id="inspecting">Inspecting<a class="headerlink" href="#inspecting" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code class="codehilite">ls(object)</code>.</li>
-<li><code class="codehilite">names(object)</code>.</li>
-<li><code class="codehilite">str(object)</code>.</li>
-<li><code class="codehilite">levels(object$v1)</code>.</li>
-<li><code class="codehilite">dim(object)</code>.</li>
+<li><code class="codehilite"><span class="n">ls</span><span class="p">(</span><span class="k">object</span><span class="p">)</span></code>.</li>
+<li><code class="codehilite"><span class="k">names</span><span class="p">(</span><span class="k">object</span><span class="p">)</span></code>.</li>
+<li><code class="codehilite"><span class="n">str</span><span class="p">(</span><span class="k">object</span><span class="p">)</span></code>.</li>
+<li><code class="codehilite"><span class="n">levels</span><span class="p">(</span><span class="k">object</span><span class="err">$</span><span class="n">v1</span><span class="p">)</span></code>.</li>
+<li><code class="codehilite"><span class="n">dim</span><span class="p">(</span><span class="k">object</span><span class="p">)</span></code>.</li>
 <li><code class="codehilite"><span class="k">class</span>(<span class="n">object</span>)</code>.</li>
-<li><code class="codehilite">print(object)</code>.</li>
-<li><code class="codehilite">head(object, 10)</code>.</li>
-<li><code class="codehilite">tail(object, 20)</code>.</li>
+<li><code class="codehilite"><span class="n">print</span><span class="p">(</span><span class="k">object</span><span class="p">)</span></code>.</li>
+<li><code class="codehilite"><span class="n">head</span><span class="p">(</span><span class="k">object</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span></code>.</li>
+<li><code class="codehilite"><span class="n">tail</span><span class="p">(</span><span class="k">object</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span></code>.</li>
 </ul>
 <p><strong>Testing for Missing Values</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -3566,7 +3571,7 @@ packages are web-oriented.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="the-dplyr-package">The <code class="codehilite">dplyr</code> package<a class="headerlink" href="#the-dplyr-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-dplyr-package">The <code class="codehilite"><span class="n">dplyr</span></code> package<a class="headerlink" href="#the-dplyr-package" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3582,7 +3587,7 @@ packages are web-oriented.</p>
 <h3 id="for-thorough-cleaning">For thorough cleaning<a class="headerlink" href="#for-thorough-cleaning" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The <a href="http://gking.harvard.edu/amelia/">Amelia II</a> software.</li>
-<li>The <code class="codehilite">mitools</code> package.</li>
+<li>The <code class="codehilite"><span class="n">mitools</span></code> package.</li>
 </ul>
 <h2 id="labels-levels">Labels &amp; Levels<a class="headerlink" href="#labels-levels" title="Permanent link">&para;</a></h2>
 <p><strong>Basic</strong></p>
@@ -3667,8 +3672,8 @@ investment banks in several formats:</p>
 </ul>
 <p>The packages used:</p>
 <ul>
-<li><code class="codehilite">Quandl</code>.</li>
-<li><code class="codehilite">quantmod</code> for plotting.</li>
+<li><code class="codehilite"><span class="n">Quandl</span></code>.</li>
+<li><code class="codehilite"><span class="n">quantmod</span></code> for plotting.</li>
 </ul>
 <p><strong>Quandl - A first date</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -3782,9 +3787,9 @@ investment banks in several formats:</p>
 <h2 id="cleaning-data-in-r">Cleaning Data in R<a class="headerlink" href="#cleaning-data-in-r" title="Permanent link">&para;</a></h2>
 <p>The packages used:</p>
 <ul>
-<li><code class="codehilite">dplyr</code> &amp; <code class="codehilite">tidyr</code> for data wrangling.</li>
-<li><code class="codehilite">stringr</code> for regex.</li>
-<li><code class="codehilite">lubridate</code> for time and date.</li>
+<li><code class="codehilite"><span class="n">dplyr</span></code> &amp; <code class="codehilite"><span class="n">tidyr</span></code> for data wrangling.</li>
+<li><code class="codehilite"><span class="n">stringr</span></code> for regex.</li>
+<li><code class="codehilite"><span class="n">lubridate</span></code> for time and date.</li>
 </ul>
 <h3 id="introduction-and-exploring-raw-data">Introduction and Exploring Raw Data<a class="headerlink" href="#introduction-and-exploring-raw-data" title="Permanent link">&para;</a></h3>
 <p><strong>Here&rsquo;s what messy data look like</strong></p>
@@ -4657,25 +4662,17 @@ investment banks in several formats:</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

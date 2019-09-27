@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Statistics with R, Course Two, Student's t-test
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -770,14 +775,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-t-tests" title="Introduction to t-tests" class="md-nav__link">
+  <a href="#introduction-to-t-tests" class="md-nav__link">
     Introduction to t-tests
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#independent-t-tests" title="Independent t-tests" class="md-nav__link">
+  <a href="#independent-t-tests" class="md-nav__link">
     Independent t-tests
   </a>
   
@@ -890,14 +895,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-t-tests" title="Introduction to t-tests" class="md-nav__link">
+  <a href="#introduction-to-t-tests" class="md-nav__link">
     Introduction to t-tests
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#independent-t-tests" title="Independent t-tests" class="md-nav__link">
+  <a href="#independent-t-tests" class="md-nav__link">
     Independent t-tests
   </a>
   
@@ -1004,13 +1009,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   cond pre post gain train
-## 1  t08   8    9    1     1
-## 2  t08   8   10    2     1
-## 3  t08   8    8    0     1
-## 4  t08   8    7   -1     1
-## 5  t08   9   11    2     1
-## 6  t08   9   10    1     1
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">cond</span> <span class="n">pre</span> <span class="n">post</span> <span class="n">gain</span> <span class="n">train</span>
+<span class="o">##</span> <span class="mi">1</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">9</span>    <span class="mi">1</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span>  <span class="n">t08</span>   <span class="mi">8</span>   <span class="mi">10</span>    <span class="mi">2</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">3</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">8</span>    <span class="mi">0</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">4</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">7</span>   <span class="o">-</span><span class="mi">1</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">5</span>  <span class="n">t08</span>   <span class="mi">9</span>   <span class="mi">11</span>    <span class="mi">2</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">6</span>  <span class="n">t08</span>   <span class="mi">9</span>   <span class="mi">10</span>    <span class="mi">1</span>     <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1081,58 +1086,58 @@
 49
 50
 51
-52</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## wm_t 
-## 
-##  5  Variables      80  Observations
-## ---------------------------------------------------------------------------
-## cond 
-##        n  missing distinct 
-##       80        0        4 
-##                               
-## Value       t08  t12  t17  t19
-## Frequency    20   20   20   20
-## Proportion 0.25 0.25 0.25 0.25
-## ---------------------------------------------------------------------------
-## pre 
-##        n  missing distinct     Info     Mean      Gmd 
-##       80        0        5    0.955    10.03    1.551 
-##                                         
-## Value          8     9    10    11    12
-## Frequency     12    20    19    12    17
-## Proportion 0.150 0.250 0.238 0.150 0.212
-## ---------------------------------------------------------------------------
-## post 
-##        n  missing distinct     Info     Mean      Gmd      .05      .10 
-##       80        0       13    0.984    13.51     2.87     9.95    10.00 
-##      .25      .50      .75      .90      .95 
-##    12.00    14.00    15.00    17.00    18.00 
-##                                                                       
-## Value          7     8     9    10    11    12    13    14    15    16
-## Frequency      1     1     2     5     8    11    11    15     8     9
-## Proportion 0.012 0.012 0.025 0.062 0.100 0.138 0.138 0.188 0.100 0.112
-##                             
-## Value         17    18    19
-## Frequency      4     2     3
-## Proportion 0.050 0.025 0.038
-## ---------------------------------------------------------------------------
-## gain 
-##        n  missing distinct     Info     Mean      Gmd      .05      .10 
-##       80        0       10    0.975    3.487    2.415      0.0      1.0 
-##      .25      .50      .75      .90      .95 
-##      2.0      3.0      5.0      6.1      7.0 
-##                                                                       
-## Value         -1     0     1     2     3     4     5     6     7     9
-## Frequency      2     3     7    18    12    16     6     8     6     2
-## Proportion 0.025 0.038 0.088 0.225 0.150 0.200 0.075 0.100 0.075 0.025
-## ---------------------------------------------------------------------------
-## train 
-##        n  missing distinct     Info     Mean      Gmd 
-##       80        0        1        0        1        0 
-##              
-## Value       1
-## Frequency  80
-## Proportion  1
-## ---------------------------------------------------------------------------
+52</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">wm_t</span> 
+<span class="o">##</span> 
+<span class="o">##</span>  <span class="mi">5</span>  <span class="n">Variables</span>      <span class="mi">80</span>  <span class="n">Observations</span>
+<span class="o">##</span> <span class="c1">---------------------------------------------------------------------------</span>
+<span class="o">##</span> <span class="n">cond</span> 
+<span class="o">##</span>        <span class="n">n</span>  <span class="n">missing</span> <span class="k">distinct</span> 
+<span class="o">##</span>       <span class="mi">80</span>        <span class="mi">0</span>        <span class="mi">4</span> 
+<span class="o">##</span>                               
+<span class="o">##</span> <span class="n">Value</span>       <span class="n">t08</span>  <span class="n">t12</span>  <span class="n">t17</span>  <span class="n">t19</span>
+<span class="o">##</span> <span class="n">Frequency</span>    <span class="mi">20</span>   <span class="mi">20</span>   <span class="mi">20</span>   <span class="mi">20</span>
+<span class="o">##</span> <span class="n">Proportion</span> <span class="mi">0</span><span class="p">.</span><span class="mi">25</span> <span class="mi">0</span><span class="p">.</span><span class="mi">25</span> <span class="mi">0</span><span class="p">.</span><span class="mi">25</span> <span class="mi">0</span><span class="p">.</span><span class="mi">25</span>
+<span class="o">##</span> <span class="c1">---------------------------------------------------------------------------</span>
+<span class="o">##</span> <span class="n">pre</span> 
+<span class="o">##</span>        <span class="n">n</span>  <span class="n">missing</span> <span class="k">distinct</span>     <span class="n">Info</span>     <span class="n">Mean</span>      <span class="n">Gmd</span> 
+<span class="o">##</span>       <span class="mi">80</span>        <span class="mi">0</span>        <span class="mi">5</span>    <span class="mi">0</span><span class="p">.</span><span class="mi">955</span>    <span class="mi">10</span><span class="p">.</span><span class="mi">03</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">551</span> 
+<span class="o">##</span>                                         
+<span class="o">##</span> <span class="n">Value</span>          <span class="mi">8</span>     <span class="mi">9</span>    <span class="mi">10</span>    <span class="mi">11</span>    <span class="mi">12</span>
+<span class="o">##</span> <span class="n">Frequency</span>     <span class="mi">12</span>    <span class="mi">20</span>    <span class="mi">19</span>    <span class="mi">12</span>    <span class="mi">17</span>
+<span class="o">##</span> <span class="n">Proportion</span> <span class="mi">0</span><span class="p">.</span><span class="mi">150</span> <span class="mi">0</span><span class="p">.</span><span class="mi">250</span> <span class="mi">0</span><span class="p">.</span><span class="mi">238</span> <span class="mi">0</span><span class="p">.</span><span class="mi">150</span> <span class="mi">0</span><span class="p">.</span><span class="mi">212</span>
+<span class="o">##</span> <span class="c1">---------------------------------------------------------------------------</span>
+<span class="o">##</span> <span class="n">post</span> 
+<span class="o">##</span>        <span class="n">n</span>  <span class="n">missing</span> <span class="k">distinct</span>     <span class="n">Info</span>     <span class="n">Mean</span>      <span class="n">Gmd</span>      <span class="p">.</span><span class="mi">05</span>      <span class="p">.</span><span class="mi">10</span> 
+<span class="o">##</span>       <span class="mi">80</span>        <span class="mi">0</span>       <span class="mi">13</span>    <span class="mi">0</span><span class="p">.</span><span class="mi">984</span>    <span class="mi">13</span><span class="p">.</span><span class="mi">51</span>     <span class="mi">2</span><span class="p">.</span><span class="mi">87</span>     <span class="mi">9</span><span class="p">.</span><span class="mi">95</span>    <span class="mi">10</span><span class="p">.</span><span class="mi">00</span> 
+<span class="o">##</span>      <span class="p">.</span><span class="mi">25</span>      <span class="p">.</span><span class="mi">50</span>      <span class="p">.</span><span class="mi">75</span>      <span class="p">.</span><span class="mi">90</span>      <span class="p">.</span><span class="mi">95</span> 
+<span class="o">##</span>    <span class="mi">12</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">14</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">15</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">17</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">18</span><span class="p">.</span><span class="mi">00</span> 
+<span class="o">##</span>                                                                       
+<span class="o">##</span> <span class="n">Value</span>          <span class="mi">7</span>     <span class="mi">8</span>     <span class="mi">9</span>    <span class="mi">10</span>    <span class="mi">11</span>    <span class="mi">12</span>    <span class="mi">13</span>    <span class="mi">14</span>    <span class="mi">15</span>    <span class="mi">16</span>
+<span class="o">##</span> <span class="n">Frequency</span>      <span class="mi">1</span>     <span class="mi">1</span>     <span class="mi">2</span>     <span class="mi">5</span>     <span class="mi">8</span>    <span class="mi">11</span>    <span class="mi">11</span>    <span class="mi">15</span>     <span class="mi">8</span>     <span class="mi">9</span>
+<span class="o">##</span> <span class="n">Proportion</span> <span class="mi">0</span><span class="p">.</span><span class="mi">012</span> <span class="mi">0</span><span class="p">.</span><span class="mi">012</span> <span class="mi">0</span><span class="p">.</span><span class="mi">025</span> <span class="mi">0</span><span class="p">.</span><span class="mi">062</span> <span class="mi">0</span><span class="p">.</span><span class="mi">100</span> <span class="mi">0</span><span class="p">.</span><span class="mi">138</span> <span class="mi">0</span><span class="p">.</span><span class="mi">138</span> <span class="mi">0</span><span class="p">.</span><span class="mi">188</span> <span class="mi">0</span><span class="p">.</span><span class="mi">100</span> <span class="mi">0</span><span class="p">.</span><span class="mi">112</span>
+<span class="o">##</span>                             
+<span class="o">##</span> <span class="n">Value</span>         <span class="mi">17</span>    <span class="mi">18</span>    <span class="mi">19</span>
+<span class="o">##</span> <span class="n">Frequency</span>      <span class="mi">4</span>     <span class="mi">2</span>     <span class="mi">3</span>
+<span class="o">##</span> <span class="n">Proportion</span> <span class="mi">0</span><span class="p">.</span><span class="mi">050</span> <span class="mi">0</span><span class="p">.</span><span class="mi">025</span> <span class="mi">0</span><span class="p">.</span><span class="mi">038</span>
+<span class="o">##</span> <span class="c1">---------------------------------------------------------------------------</span>
+<span class="o">##</span> <span class="n">gain</span> 
+<span class="o">##</span>        <span class="n">n</span>  <span class="n">missing</span> <span class="k">distinct</span>     <span class="n">Info</span>     <span class="n">Mean</span>      <span class="n">Gmd</span>      <span class="p">.</span><span class="mi">05</span>      <span class="p">.</span><span class="mi">10</span> 
+<span class="o">##</span>       <span class="mi">80</span>        <span class="mi">0</span>       <span class="mi">10</span>    <span class="mi">0</span><span class="p">.</span><span class="mi">975</span>    <span class="mi">3</span><span class="p">.</span><span class="mi">487</span>    <span class="mi">2</span><span class="p">.</span><span class="mi">415</span>      <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>      <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> 
+<span class="o">##</span>      <span class="p">.</span><span class="mi">25</span>      <span class="p">.</span><span class="mi">50</span>      <span class="p">.</span><span class="mi">75</span>      <span class="p">.</span><span class="mi">90</span>      <span class="p">.</span><span class="mi">95</span> 
+<span class="o">##</span>      <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>      <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>      <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>      <span class="mi">6</span><span class="p">.</span><span class="mi">1</span>      <span class="mi">7</span><span class="p">.</span><span class="mi">0</span> 
+<span class="o">##</span>                                                                       
+<span class="o">##</span> <span class="n">Value</span>         <span class="o">-</span><span class="mi">1</span>     <span class="mi">0</span>     <span class="mi">1</span>     <span class="mi">2</span>     <span class="mi">3</span>     <span class="mi">4</span>     <span class="mi">5</span>     <span class="mi">6</span>     <span class="mi">7</span>     <span class="mi">9</span>
+<span class="o">##</span> <span class="n">Frequency</span>      <span class="mi">2</span>     <span class="mi">3</span>     <span class="mi">7</span>    <span class="mi">18</span>    <span class="mi">12</span>    <span class="mi">16</span>     <span class="mi">6</span>     <span class="mi">8</span>     <span class="mi">6</span>     <span class="mi">2</span>
+<span class="o">##</span> <span class="n">Proportion</span> <span class="mi">0</span><span class="p">.</span><span class="mi">025</span> <span class="mi">0</span><span class="p">.</span><span class="mi">038</span> <span class="mi">0</span><span class="p">.</span><span class="mi">088</span> <span class="mi">0</span><span class="p">.</span><span class="mi">225</span> <span class="mi">0</span><span class="p">.</span><span class="mi">150</span> <span class="mi">0</span><span class="p">.</span><span class="mi">200</span> <span class="mi">0</span><span class="p">.</span><span class="mi">075</span> <span class="mi">0</span><span class="p">.</span><span class="mi">100</span> <span class="mi">0</span><span class="p">.</span><span class="mi">075</span> <span class="mi">0</span><span class="p">.</span><span class="mi">025</span>
+<span class="o">##</span> <span class="c1">---------------------------------------------------------------------------</span>
+<span class="o">##</span> <span class="n">train</span> 
+<span class="o">##</span>        <span class="n">n</span>  <span class="n">missing</span> <span class="k">distinct</span>     <span class="n">Info</span>     <span class="n">Mean</span>      <span class="n">Gmd</span> 
+<span class="o">##</span>       <span class="mi">80</span>        <span class="mi">0</span>        <span class="mi">1</span>        <span class="mi">0</span>        <span class="mi">1</span>        <span class="mi">0</span> 
+<span class="o">##</span>              
+<span class="o">##</span> <span class="n">Value</span>       <span class="mi">1</span>
+<span class="o">##</span> <span class="n">Frequency</span>  <span class="mi">80</span>
+<span class="o">##</span> <span class="n">Proportion</span>  <span class="mi">1</span>
+<span class="o">##</span> <span class="c1">---------------------------------------------------------------------------</span>
 </pre></div>
 </td></tr></table>
 
@@ -1192,7 +1197,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4.091149
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span><span class="p">.</span><span class="mi">091149</span>
 </pre></div>
 </td></tr></table>
 
@@ -1200,7 +1205,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 2.152383
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span><span class="p">.</span><span class="mi">152383</span>
 </pre></div>
 </td></tr></table>
 
@@ -1237,7 +1242,7 @@ t-distrbution.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 14.49238
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">14</span><span class="p">.</span><span class="mi">49238</span>
 </pre></div>
 </td></tr></table>
 
@@ -1245,7 +1250,7 @@ t-distrbution.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 1.99045
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span><span class="p">.</span><span class="mi">99045</span>
 </pre></div>
 </td></tr></table>
 
@@ -1259,7 +1264,7 @@ t-distrbution.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 3.966489
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">3</span><span class="p">.</span><span class="mi">966489</span>
 </pre></div>
 </td></tr></table>
 
@@ -1267,7 +1272,7 @@ t-distrbution.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 3.008511
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">3</span><span class="p">.</span><span class="mi">008511</span>
 </pre></div>
 </td></tr></table>
 
@@ -1279,12 +1284,12 @@ t-distrbution.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 1.620297
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span><span class="p">.</span><span class="mi">620297</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Letting R do all the dirty work: Dependent t-tests</strong></p>
-<p>The <code class="codehilite">CohensD</code> function (not showns).</p>
+<p>The <code class="codehilite"><span class="n">CohensD</span></code> function (not showns).</p>
 <p>Cohen&rsquo;s d Determine that the difference pre- and post-training is statistically significant; and the effect size, meaning the effect of training on intelligence gains particularly strong or not.</p>
 <p>Cohen&rsquo;s d is unbiased by sample size. Cohen&rsquo;s d provides a standardized difference between two means. Cohen&rsquo;s d is calculated by subtracting one group mean from the other, then dividing by the pooled standard deviation.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1303,17 +1308,17 @@ t-distrbution.</p>
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Paired t-test
-## 
-## data:  wm_t$post and wm_t$pre
-## t = 14.492, df = 79, p-value &amp;lt; 2.2e-16
-## alternative hypothesis: true difference in means is not equal to 0
-## 95 percent confidence interval:
-##  3.008511 3.966489
-## sample estimates:
-## mean of the differences 
-##                  3.4875
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Paired</span> <span class="n">t</span><span class="o">-</span><span class="n">test</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="k">data</span><span class="p">:</span>  <span class="n">wm_t$post</span> <span class="k">and</span> <span class="n">wm_t$pre</span>
+<span class="o">##</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">14</span><span class="p">.</span><span class="mi">492</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="mi">79</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="n">e</span><span class="o">-</span><span class="mi">16</span>
+<span class="o">##</span> <span class="n">alternative</span> <span class="n">hypothesis</span><span class="p">:</span> <span class="k">true</span> <span class="n">difference</span> <span class="k">in</span> <span class="n">means</span> <span class="k">is</span> <span class="k">not</span> <span class="n">equal</span> <span class="k">to</span> <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">95</span> <span class="n">percent</span> <span class="n">confidence</span> <span class="nb">interval</span><span class="p">:</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">008511</span> <span class="mi">3</span><span class="p">.</span><span class="mi">966489</span>
+<span class="o">##</span> <span class="n">sample</span> <span class="n">estimates</span><span class="p">:</span>
+<span class="o">##</span> <span class="n">mean</span> <span class="k">of</span> <span class="n">the</span> <span class="n">differences</span> 
+<span class="o">##</span>                  <span class="mi">3</span><span class="p">.</span><span class="mi">4875</span>
 </pre></div>
 </td></tr></table>
 
@@ -1327,7 +1332,7 @@ t-distrbution.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 1.620297
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">1</span><span class="p">.</span><span class="mi">620297</span>
 </pre></div>
 </td></tr></table>
 
@@ -1353,13 +1358,13 @@ t-distrbution.</p>
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   cond pre post gain train
-## 1  t08   8    9    1     1
-## 2  t08   8   10    2     1
-## 3  t08   8    8    0     1
-## 4  t08   8    7   -1     1
-## 5  t08   9   11    2     1
-## 6  t08   9   10    1     1
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">cond</span> <span class="n">pre</span> <span class="n">post</span> <span class="n">gain</span> <span class="n">train</span>
+<span class="o">##</span> <span class="mi">1</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">9</span>    <span class="mi">1</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span>  <span class="n">t08</span>   <span class="mi">8</span>   <span class="mi">10</span>    <span class="mi">2</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">3</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">8</span>    <span class="mi">0</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">4</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">7</span>   <span class="o">-</span><span class="mi">1</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">5</span>  <span class="n">t08</span>   <span class="mi">9</span>   <span class="mi">11</span>    <span class="mi">2</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">6</span>  <span class="n">t08</span>   <span class="mi">9</span>   <span class="mi">10</span>    <span class="mi">1</span>     <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1400,18 +1405,18 @@ t-distrbution.</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       vars  n  mean   sd median trimmed  mad min  max range  skew kurtosis
-## cond*    1 20   NaN   NA     NA     NaN   NA Inf -Inf  -Inf    NA       NA
-## pre      2 20 10.05 1.50   10.0   10.06 1.48   8   12     4  0.01    -1.53
-## post     3 20 11.40 2.14   11.5   11.50 2.22   7   15     8 -0.25    -0.84
-## gain     4 20  1.35 1.23    1.0    1.44 1.48  -1    3     4 -0.32    -0.82
-## train    5 20  1.00 0.00    1.0    1.00 0.00   1    1     0   NaN      NaN
-##         se
-## cond*   NA
-## pre   0.34
-## post  0.48
-## gain  0.27
-## train 0.00
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">vars</span>  <span class="n">n</span>  <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span>  <span class="n">skew</span> <span class="n">kurtosis</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>    <span class="mi">1</span> <span class="mi">20</span>   <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span> <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>    <span class="n">NA</span>       <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>      <span class="mi">2</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">05</span> <span class="mi">1</span><span class="p">.</span><span class="mi">50</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">06</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>   <span class="mi">8</span>   <span class="mi">12</span>     <span class="mi">4</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">01</span>    <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">53</span>
+<span class="o">##</span> <span class="n">post</span>     <span class="mi">3</span> <span class="mi">20</span> <span class="mi">11</span><span class="p">.</span><span class="mi">40</span> <span class="mi">2</span><span class="p">.</span><span class="mi">14</span>   <span class="mi">11</span><span class="p">.</span><span class="mi">5</span>   <span class="mi">11</span><span class="p">.</span><span class="mi">50</span> <span class="mi">2</span><span class="p">.</span><span class="mi">22</span>   <span class="mi">7</span>   <span class="mi">15</span>     <span class="mi">8</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">25</span>    <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">84</span>
+<span class="o">##</span> <span class="n">gain</span>     <span class="mi">4</span> <span class="mi">20</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">35</span> <span class="mi">1</span><span class="p">.</span><span class="mi">23</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">44</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>  <span class="o">-</span><span class="mi">1</span>    <span class="mi">3</span>     <span class="mi">4</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">32</span>    <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">82</span>
+<span class="o">##</span> <span class="n">train</span>    <span class="mi">5</span> <span class="mi">20</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">1</span>    <span class="mi">1</span>     <span class="mi">0</span>   <span class="n">NaN</span>      <span class="n">NaN</span>
+<span class="o">##</span>         <span class="n">se</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">34</span>
+<span class="o">##</span> <span class="n">post</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">48</span>
+<span class="o">##</span> <span class="n">gain</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">27</span>
+<span class="o">##</span> <span class="n">train</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
 </pre></div>
 </td></tr></table>
 
@@ -1430,18 +1435,18 @@ t-distrbution.</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       vars  n mean   sd median trimmed  mad min  max range skew kurtosis
-## cond*    1 20  NaN   NA     NA     NaN   NA Inf -Inf  -Inf   NA       NA
-## pre      2 20  9.9 1.45     10    9.88 1.48   8   12     4 0.16    -1.43
-## post     3 20 12.5 1.88     12   12.38 2.22  10   17     7 0.48    -0.54
-## gain     4 20  2.6 1.27      2    2.50 0.00   0    5     5 0.44    -0.54
-## train    5 20  1.0 0.00      1    1.00 0.00   1    1     0  NaN      NaN
-##         se
-## cond*   NA
-## pre   0.32
-## post  0.42
-## gain  0.28
-## train 0.00
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">vars</span>  <span class="n">n</span> <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span> <span class="n">skew</span> <span class="n">kurtosis</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>    <span class="mi">1</span> <span class="mi">20</span>  <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span> <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>   <span class="n">NA</span>       <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>      <span class="mi">2</span> <span class="mi">20</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">9</span> <span class="mi">1</span><span class="p">.</span><span class="mi">45</span>     <span class="mi">10</span>    <span class="mi">9</span><span class="p">.</span><span class="mi">88</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>   <span class="mi">8</span>   <span class="mi">12</span>     <span class="mi">4</span> <span class="mi">0</span><span class="p">.</span><span class="mi">16</span>    <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">43</span>
+<span class="o">##</span> <span class="n">post</span>     <span class="mi">3</span> <span class="mi">20</span> <span class="mi">12</span><span class="p">.</span><span class="mi">5</span> <span class="mi">1</span><span class="p">.</span><span class="mi">88</span>     <span class="mi">12</span>   <span class="mi">12</span><span class="p">.</span><span class="mi">38</span> <span class="mi">2</span><span class="p">.</span><span class="mi">22</span>  <span class="mi">10</span>   <span class="mi">17</span>     <span class="mi">7</span> <span class="mi">0</span><span class="p">.</span><span class="mi">48</span>    <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">54</span>
+<span class="o">##</span> <span class="n">gain</span>     <span class="mi">4</span> <span class="mi">20</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">6</span> <span class="mi">1</span><span class="p">.</span><span class="mi">27</span>      <span class="mi">2</span>    <span class="mi">2</span><span class="p">.</span><span class="mi">50</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">0</span>    <span class="mi">5</span>     <span class="mi">5</span> <span class="mi">0</span><span class="p">.</span><span class="mi">44</span>    <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">54</span>
+<span class="o">##</span> <span class="n">train</span>    <span class="mi">5</span> <span class="mi">20</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>      <span class="mi">1</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">1</span>    <span class="mi">1</span>     <span class="mi">0</span>  <span class="n">NaN</span>      <span class="n">NaN</span>
+<span class="o">##</span>         <span class="n">se</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">post</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">42</span>
+<span class="o">##</span> <span class="n">gain</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">28</span>
+<span class="o">##</span> <span class="n">train</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
 </pre></div>
 </td></tr></table>
 
@@ -1460,18 +1465,18 @@ t-distrbution.</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       vars  n mean   sd median trimmed  mad min  max range skew kurtosis
-## cond*    1 20  NaN   NA     NA     NaN   NA Inf -Inf  -Inf   NA       NA
-## pre      2 20 10.0 1.34     10   10.00 1.48   8   12     4 0.25    -1.34
-## post     3 20 14.4 1.85     14   14.25 1.48  12   19     7 0.63    -0.27
-## gain     4 20  4.4 1.39      4    4.25 1.48   3    7     4 0.64    -1.12
-## train    5 20  1.0 0.00      1    1.00 0.00   1    1     0  NaN      NaN
-##         se
-## cond*   NA
-## pre   0.30
-## post  0.41
-## gain  0.31
-## train 0.00
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">vars</span>  <span class="n">n</span> <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span> <span class="n">skew</span> <span class="n">kurtosis</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>    <span class="mi">1</span> <span class="mi">20</span>  <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span> <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>   <span class="n">NA</span>       <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>      <span class="mi">2</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span> <span class="mi">1</span><span class="p">.</span><span class="mi">34</span>     <span class="mi">10</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">00</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>   <span class="mi">8</span>   <span class="mi">12</span>     <span class="mi">4</span> <span class="mi">0</span><span class="p">.</span><span class="mi">25</span>    <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">34</span>
+<span class="o">##</span> <span class="n">post</span>     <span class="mi">3</span> <span class="mi">20</span> <span class="mi">14</span><span class="p">.</span><span class="mi">4</span> <span class="mi">1</span><span class="p">.</span><span class="mi">85</span>     <span class="mi">14</span>   <span class="mi">14</span><span class="p">.</span><span class="mi">25</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>  <span class="mi">12</span>   <span class="mi">19</span>     <span class="mi">7</span> <span class="mi">0</span><span class="p">.</span><span class="mi">63</span>    <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">27</span>
+<span class="o">##</span> <span class="n">gain</span>     <span class="mi">4</span> <span class="mi">20</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">4</span> <span class="mi">1</span><span class="p">.</span><span class="mi">39</span>      <span class="mi">4</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">25</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>   <span class="mi">3</span>    <span class="mi">7</span>     <span class="mi">4</span> <span class="mi">0</span><span class="p">.</span><span class="mi">64</span>    <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">12</span>
+<span class="o">##</span> <span class="n">train</span>    <span class="mi">5</span> <span class="mi">20</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>      <span class="mi">1</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">1</span>    <span class="mi">1</span>     <span class="mi">0</span>  <span class="n">NaN</span>      <span class="n">NaN</span>
+<span class="o">##</span>         <span class="n">se</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">30</span>
+<span class="o">##</span> <span class="n">post</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">41</span>
+<span class="o">##</span> <span class="n">gain</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">31</span>
+<span class="o">##</span> <span class="n">train</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
 </pre></div>
 </td></tr></table>
 
@@ -1490,18 +1495,18 @@ t-distrbution.</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       vars  n  mean   sd median trimmed  mad min  max range skew kurtosis
-## cond*    1 20   NaN   NA     NA     NaN   NA Inf -Inf  -Inf   NA       NA
-## pre      2 20 10.15 1.27   10.0   10.19 1.48   8   12     4 0.03    -1.10
-## post     3 20 15.75 1.86   16.0   15.69 1.48  13   19     6 0.16    -1.03
-## gain     4 20  5.60 1.73    5.5    5.50 2.22   3    9     6 0.36    -0.76
-## train    5 20  1.00 0.00    1.0    1.00 0.00   1    1     0  NaN      NaN
-##         se
-## cond*   NA
-## pre   0.28
-## post  0.42
-## gain  0.39
-## train 0.00
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">vars</span>  <span class="n">n</span>  <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span> <span class="n">skew</span> <span class="n">kurtosis</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>    <span class="mi">1</span> <span class="mi">20</span>   <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span> <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>   <span class="n">NA</span>       <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>      <span class="mi">2</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">15</span> <span class="mi">1</span><span class="p">.</span><span class="mi">27</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">19</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>   <span class="mi">8</span>   <span class="mi">12</span>     <span class="mi">4</span> <span class="mi">0</span><span class="p">.</span><span class="mi">03</span>    <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">10</span>
+<span class="o">##</span> <span class="n">post</span>     <span class="mi">3</span> <span class="mi">20</span> <span class="mi">15</span><span class="p">.</span><span class="mi">75</span> <span class="mi">1</span><span class="p">.</span><span class="mi">86</span>   <span class="mi">16</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">15</span><span class="p">.</span><span class="mi">69</span> <span class="mi">1</span><span class="p">.</span><span class="mi">48</span>  <span class="mi">13</span>   <span class="mi">19</span>     <span class="mi">6</span> <span class="mi">0</span><span class="p">.</span><span class="mi">16</span>    <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">03</span>
+<span class="o">##</span> <span class="n">gain</span>     <span class="mi">4</span> <span class="mi">20</span>  <span class="mi">5</span><span class="p">.</span><span class="mi">60</span> <span class="mi">1</span><span class="p">.</span><span class="mi">73</span>    <span class="mi">5</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">5</span><span class="p">.</span><span class="mi">50</span> <span class="mi">2</span><span class="p">.</span><span class="mi">22</span>   <span class="mi">3</span>    <span class="mi">9</span>     <span class="mi">6</span> <span class="mi">0</span><span class="p">.</span><span class="mi">36</span>    <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">76</span>
+<span class="o">##</span> <span class="n">train</span>    <span class="mi">5</span> <span class="mi">20</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">1</span>    <span class="mi">1</span>     <span class="mi">0</span>  <span class="n">NaN</span>      <span class="n">NaN</span>
+<span class="o">##</span>         <span class="n">se</span>
+<span class="o">##</span> <span class="n">cond</span><span class="o">*</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">pre</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">28</span>
+<span class="o">##</span> <span class="n">post</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">42</span>
+<span class="o">##</span> <span class="n">gain</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">39</span>
+<span class="o">##</span> <span class="n">train</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
 </pre></div>
 </td></tr></table>
 
@@ -1525,10 +1530,10 @@ t-distrbution.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Levene&#39;s Test for Homogeneity of Variance (center = median)
-##       Df F value Pr(&amp;gt;F)
-## group  3  1.3134 0.2763
-##       76
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## <span class="nv">Levene</span><span class="s1">&#39;</span><span class="s">s Test for Homogeneity of Variance (center = median)</span>
+##       <span class="nv">Df</span> <span class="nv">F</span> <span class="nv">value</span> <span class="nv">Pr</span><span class="ss">(</span><span class="o">&gt;</span><span class="nv">F</span><span class="ss">)</span>
+## <span class="nv">group</span>  <span class="mi">3</span>  <span class="mi">1</span>.<span class="mi">3134</span> <span class="mi">0</span>.<span class="mi">2763</span>
+##       <span class="mi">76</span>
 </pre></div>
 </td></tr></table>
 
@@ -1614,17 +1619,17 @@ t-distrbution.</p>
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Two Sample t-test
-## 
-## data:  wm_t19$gain and wm_t08$gain
-## t = 8.9677, df = 38, p-value = 6.443e-11
-## alternative hypothesis: true difference in means is not equal to 0
-## 95 percent confidence interval:
-##  3.290588 5.209412
-## sample estimates:
-## mean of x mean of y 
-##      5.60      1.35
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Two</span> <span class="n">Sample</span> <span class="n">t</span><span class="o">-</span><span class="n">test</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="k">data</span><span class="p">:</span>  <span class="n">wm_t19$gain</span> <span class="k">and</span> <span class="n">wm_t08$gain</span>
+<span class="o">##</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">8</span><span class="p">.</span><span class="mi">9677</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="mi">38</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="n">value</span> <span class="o">=</span> <span class="mi">6</span><span class="p">.</span><span class="mi">443</span><span class="n">e</span><span class="o">-</span><span class="mi">11</span>
+<span class="o">##</span> <span class="n">alternative</span> <span class="n">hypothesis</span><span class="p">:</span> <span class="k">true</span> <span class="n">difference</span> <span class="k">in</span> <span class="n">means</span> <span class="k">is</span> <span class="k">not</span> <span class="n">equal</span> <span class="k">to</span> <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">95</span> <span class="n">percent</span> <span class="n">confidence</span> <span class="nb">interval</span><span class="p">:</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">290588</span> <span class="mi">5</span><span class="p">.</span><span class="mi">209412</span>
+<span class="o">##</span> <span class="n">sample</span> <span class="n">estimates</span><span class="p">:</span>
+<span class="o">##</span> <span class="n">mean</span> <span class="k">of</span> <span class="n">x</span> <span class="n">mean</span> <span class="k">of</span> <span class="n">y</span> 
+<span class="o">##</span>      <span class="mi">5</span><span class="p">.</span><span class="mi">60</span>      <span class="mi">1</span><span class="p">.</span><span class="mi">35</span>
 </pre></div>
 </td></tr></table>
 
@@ -1634,7 +1639,7 @@ t-distrbution.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 2.835822
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">2</span><span class="p">.</span><span class="mi">835822</span>
 </pre></div>
 </td></tr></table>
                 
@@ -1700,25 +1705,17 @@ t-distrbution.</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

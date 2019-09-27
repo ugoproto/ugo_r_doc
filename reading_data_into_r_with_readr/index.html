@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Reading Data into R with readr
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -434,14 +439,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#importing-data-with-readr" title="Importing data with readr" class="md-nav__link">
+  <a href="#importing-data-with-readr" class="md-nav__link">
     Importing data with readr
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parsing-data-with-readr" title="Parsing Data with readr" class="md-nav__link">
+  <a href="#parsing-data-with-readr" class="md-nav__link">
     Parsing Data with readr
   </a>
   
@@ -890,14 +895,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#importing-data-with-readr" title="Importing data with readr" class="md-nav__link">
+  <a href="#importing-data-with-readr" class="md-nav__link">
     Importing data with readr
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#parsing-data-with-readr" title="Parsing Data with readr" class="md-nav__link">
+  <a href="#parsing-data-with-readr" class="md-nav__link">
     Parsing Data with readr
   </a>
   
@@ -936,11 +941,11 @@
 <li>Snippets and results.</li>
 </ul>
 <hr />
-<h2 id="importing-data-with-readr">Importing data with <code class="codehilite">readr</code><a class="headerlink" href="#importing-data-with-readr" title="Permanent link">&para;</a></h2>
+<h2 id="importing-data-with-readr">Importing data with <code class="codehilite"><span class="n">readr</span></code><a class="headerlink" href="#importing-data-with-readr" title="Permanent link">&para;</a></h2>
 <p><strong>Reading a .csv file</strong></p>
-<p>Your first task will be to master the use of the <code class="codehilite">read_csv()</code> function. There are many arguments available, but the only required argument is <code class="codehilite">file</code>, a path to a CSV file on your computer (or the web).</p>
-<p>One big advantage that <code class="codehilite">read_csv()</code> has over <code class="codehilite">read.csv()</code> is that it doesn&rsquo;t convert strings into factors by default.</p>
-<p><code class="codehilite">read_csv()</code> recognizes 8 different data types (integer, logical, etc.) and leaves anything else as characters. That means you don&rsquo;t have to set <code class="codehilite">stringsAsFactors = FALSE</code> every time you import a CSV file with character strings!</p>
+<p>Your first task will be to master the use of the <code class="codehilite"><span class="n">read_csv</span><span class="p">()</span></code> function. There are many arguments available, but the only required argument is <code class="codehilite"><span class="n">file</span></code>, a path to a CSV file on your computer (or the web).</p>
+<p>One big advantage that <code class="codehilite"><span class="n">read_csv</span><span class="p">()</span></code> has over <code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">csv</span><span class="p">()</span></code> is that it doesn&rsquo;t convert strings into factors by default.</p>
+<p><code class="codehilite"><span class="n">read_csv</span><span class="p">()</span></code> recognizes 8 different data types (integer, logical, etc.) and leaves anything else as characters. That means you don&rsquo;t have to set <code class="codehilite"><span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="k">FALSE</span></code> every time you import a CSV file with character strings!</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -951,7 +956,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;D:/.../Rprojects/Data Wrangling&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;D:/.../Rprojects/Data Wrangling&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -980,20 +985,20 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## # A tibble: 6 × 2
-##   weight      feed
-##    &amp;lt;int&amp;gt;     &amp;lt;chr&amp;gt;
-## 1    179 horsebean
-## 2    160 horsebean
-## 3    136 horsebean
-## 4    227 horsebean
-## 5    217 horsebean
-## 6    168 horsebean
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="o">#</span> <span class="n">A</span> <span class="n">tibble</span><span class="p">:</span> <span class="mi">6</span> <span class="err">×</span> <span class="mi">2</span>
+<span class="o">##</span>   <span class="n">weight</span>      <span class="n">feed</span>
+<span class="o">##</span>    <span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span>     <span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span>
+<span class="o">##</span> <span class="mi">1</span>    <span class="mi">179</span> <span class="n">horsebean</span>
+<span class="o">##</span> <span class="mi">2</span>    <span class="mi">160</span> <span class="n">horsebean</span>
+<span class="o">##</span> <span class="mi">3</span>    <span class="mi">136</span> <span class="n">horsebean</span>
+<span class="o">##</span> <span class="mi">4</span>    <span class="mi">227</span> <span class="n">horsebean</span>
+<span class="o">##</span> <span class="mi">5</span>    <span class="mi">217</span> <span class="n">horsebean</span>
+<span class="o">##</span> <span class="mi">6</span>    <span class="mi">168</span> <span class="n">horsebean</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Reading a (.txt) .tsv file</strong></p>
-<p>Skipping columns with <code class="codehilite">col_skip()</code>.</p>
+<p>Skipping columns with <code class="codehilite"><span class="n">col_skip</span><span class="p">()</span></code>.</p>
 <p>Code only:</p>
 <ul>
 <li>Setting the column type.</li>
@@ -1057,15 +1062,15 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## # A tibble: 6 × 3
-##          X1    X5     X6
-##       &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt;
-## 1      Prof  Male 139750
-## 2      Prof  Male 173200
-## 3  AsstProf  Male  79750
-## 4      Prof  Male 115000
-## 5      Prof  Male 141500
-## 6 AssocProf  Male  97000
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="o">#</span> <span class="n">A</span> <span class="n">tibble</span><span class="p">:</span> <span class="mi">6</span> <span class="err">×</span> <span class="mi">3</span>
+<span class="o">##</span>          <span class="n">X1</span>    <span class="n">X5</span>     <span class="n">X6</span>
+<span class="o">##</span>       <span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span>  <span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span>
+<span class="o">##</span> <span class="mi">1</span>      <span class="n">Prof</span>  <span class="n">Male</span> <span class="mi">139750</span>
+<span class="o">##</span> <span class="mi">2</span>      <span class="n">Prof</span>  <span class="n">Male</span> <span class="mi">173200</span>
+<span class="o">##</span> <span class="mi">3</span>  <span class="n">AsstProf</span>  <span class="n">Male</span>  <span class="mi">79750</span>
+<span class="o">##</span> <span class="mi">4</span>      <span class="n">Prof</span>  <span class="n">Male</span> <span class="mi">115000</span>
+<span class="o">##</span> <span class="mi">5</span>      <span class="n">Prof</span>  <span class="n">Male</span> <span class="mi">141500</span>
+<span class="o">##</span> <span class="mi">6</span> <span class="n">AssocProf</span>  <span class="n">Male</span>  <span class="mi">97000</span>
 </pre></div>
 </td></tr></table>
 
@@ -1083,7 +1088,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 9 3
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">9</span> <span class="mi">3</span>
 </pre></div>
 </td></tr></table>
 
@@ -1099,15 +1104,15 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## # A tibble: 6 × 3
-##   Girth Height Volume
-##   &amp;lt;dbl&amp;gt;  &amp;lt;int&amp;gt;  &amp;lt;dbl&amp;gt;
-## 1    83     70    103
-## 2    86     65    103
-## 3    88     63    102
-## 4   105     72    164
-## 5   107     81    188
-## 6   108     83    197
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="o">#</span> <span class="n">A</span> <span class="n">tibble</span><span class="p">:</span> <span class="mi">6</span> <span class="err">×</span> <span class="mi">3</span>
+<span class="o">##</span>   <span class="n">Girth</span> <span class="n">Height</span> <span class="n">Volume</span>
+<span class="o">##</span>   <span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>  <span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span>  <span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+<span class="o">##</span> <span class="mi">1</span>    <span class="mi">83</span>     <span class="mi">70</span>    <span class="mi">103</span>
+<span class="o">##</span> <span class="mi">2</span>    <span class="mi">86</span>     <span class="mi">65</span>    <span class="mi">103</span>
+<span class="o">##</span> <span class="mi">3</span>    <span class="mi">88</span>     <span class="mi">63</span>    <span class="mi">102</span>
+<span class="o">##</span> <span class="mi">4</span>   <span class="mi">105</span>     <span class="mi">72</span>    <span class="mi">164</span>
+<span class="o">##</span> <span class="mi">5</span>   <span class="mi">107</span>     <span class="mi">81</span>    <span class="mi">188</span>
+<span class="o">##</span> <span class="mi">6</span>   <span class="mi">108</span>     <span class="mi">83</span>    <span class="mi">197</span>
 </pre></div>
 </td></tr></table>
 
@@ -1137,12 +1142,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;carrots  can be eat by most people&quot;                                                                                          
-## [2] &quot;On predisents day we honor the big US man himself: Aberham Liclon.   Tall, skinny, dry, and cruncy - he was america&#39;s carrot&quot;
-## [3] &quot;knock knoc who is there? yup: carosot   ( joke )&quot;                                                                            
-## [4] &quot;it is 2016 time for a carot emoji   please!&quot;                                                                                 
-## [5] &quot;when life give you lemnos ,  have a carrot&quot;                                                                                  
-## [6] &quot;If you squent your eyes real hard a football  look like  a dry brown carrot   Honestly&quot;
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [<span class="mi">1</span>] <span class="s2">&quot;</span><span class="s">carrots  can be eat by most people</span><span class="s2">&quot;</span>                                                                                          
+## [<span class="mi">2</span>] <span class="s2">&quot;</span><span class="s">On predisents day we honor the big US man himself: Aberham Liclon.   Tall, skinny, dry, and cruncy - he was america&#39;s carrot</span><span class="s2">&quot;</span>
+## [<span class="mi">3</span>] <span class="s2">&quot;</span><span class="s">knock knoc who is there? yup: carosot   ( joke )</span><span class="s2">&quot;</span>                                                                            
+## [<span class="mi">4</span>] <span class="s2">&quot;</span><span class="s">it is 2016 time for a carot emoji   please!</span><span class="s2">&quot;</span>                                                                                 
+## [<span class="mi">5</span>] <span class="s2">&quot;</span><span class="s">when life give you lemnos ,  have a carrot</span><span class="s2">&quot;</span>                                                                                  
+## [<span class="mi">6</span>] <span class="s2">&quot;</span><span class="s">If you squent your eyes real hard a football  look like  a dry brown carrot   Honestly</span><span class="s2">&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1156,7 +1161,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;carrots  can be eat by most people\r\nOn predisents day we honor the big US man himself: Aberham Liclon.   Tall, skinny, dry, and cruncy - he was america&#39;s carrot\r\nknock knoc who is there? yup: carosot   ( joke )\r\nit is 2016 time for a carot emoji   please!\r\nwhen life give you lemnos ,  have a carrot\r\nIf you squent your eyes real hard a football  look like  a dry brown carrot   Honestly&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [<span class="mi">1</span>] <span class="s2">&quot;</span><span class="s">carrots  can be eat by most people\r</span><span class="se">\n</span><span class="s">On predisents day we honor the big US man himself: Aberham Liclon.   Tall, skinny, dry, and cruncy - he was america&#39;s carrot\r</span><span class="se">\n</span><span class="s">knock knoc who is there? yup: carosot   ( joke )\r</span><span class="se">\n</span><span class="s">it is 2016 time for a carot emoji   please!\r</span><span class="se">\n</span><span class="s">when life give you lemnos ,  have a carrot\r</span><span class="se">\n</span><span class="s">If you squent your eyes real hard a football  look like  a dry brown carrot   Honestly</span><span class="s2">&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1196,9 +1201,9 @@
 </pre></div>
 </td></tr></table>
 
-<h2 id="parsing-data-with-readr">Parsing Data with <code class="codehilite">readr</code><a class="headerlink" href="#parsing-data-with-readr" title="Permanent link">&para;</a></h2>
+<h2 id="parsing-data-with-readr">Parsing Data with <code class="codehilite"><span class="n">readr</span></code><a class="headerlink" href="#parsing-data-with-readr" title="Permanent link">&para;</a></h2>
 <p><strong>Coercing columns to different data types</strong></p>
-<p><code class="codehilite">readr</code> functions are quite good at guessing the correct data type for each column in a dataset. Of course, they aren&rsquo;t perfect, so sometimes you will need to change the type of a column after importing.</p>
+<p><code class="codehilite"><span class="n">readr</span></code> functions are quite good at guessing the correct data type for each column in a dataset. Of course, they aren&rsquo;t perfect, so sometimes you will need to change the type of a column after importing.</p>
 <p>Code only:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Convert all columns to double</span>
@@ -1207,7 +1212,7 @@
 </td></tr></table>
 
 <p><strong>Coercing character columns into factors</strong></p>
-<p><code class="codehilite">readr</code> import functions is that they don&rsquo;t automatically convert strings into factors like <code class="codehilite">read.csv</code> does.</p>
+<p><code class="codehilite"><span class="n">readr</span></code> import functions is that they don&rsquo;t automatically convert strings into factors like <code class="codehilite"><span class="k">read</span><span class="p">.</span><span class="n">csv</span></code> does.</p>
 <p>Code only:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1222,7 +1227,7 @@
 </td></tr></table>
 
 <p><strong>Creating Date objects</strong></p>
-<p>The <code class="codehilite">readr</code> import functions can automatically recognize dates in standard ISO 8601 format (YYYY-MM-DD) and parse columns accordingly. If you want to import a dataset with dates in other formats, you can use <code class="codehilite">parse_date</code>.</p>
+<p>The <code class="codehilite"><span class="n">readr</span></code> import functions can automatically recognize dates in standard ISO 8601 format (YYYY-MM-DD) and parse columns accordingly. If you want to import a dataset with dates in other formats, you can use <code class="codehilite"><span class="n">parse_date</span></code>.</p>
 <p>Code only:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Change type of date column</span>
@@ -1231,7 +1236,7 @@
 </td></tr></table>
 
 <p><strong>Parsing number formats</strong></p>
-<p>The <code class="codehilite">readr</code> importing functions can sometimes run into trouble parsing a column as numbers when it contains non-numeric symbols in addition to numerals.</p>
+<p>The <code class="codehilite"><span class="n">readr</span></code> importing functions can sometimes run into trouble parsing a column as numbers when it contains non-numeric symbols in addition to numerals.</p>
 <p>Code only:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Parse amount column as a number</span>
@@ -1240,10 +1245,10 @@
 </td></tr></table>
 
 <p><strong>Viewing metadata before importing</strong></p>
-<p>In some cases, it may be easier to get an idea of how <code class="codehilite">readr</code> plans to parse a dataset before you actually import it. When you see the planned column specification, you might decide to change the type of one or more columns, for example.</p>
+<p>In some cases, it may be easier to get an idea of how <code class="codehilite"><span class="n">readr</span></code> plans to parse a dataset before you actually import it. When you see the planned column specification, you might decide to change the type of one or more columns, for example.</p>
 <ul>
-<li><code class="codehilite">spec_csv</code> for .csv and .tsv files.</li>
-<li><code class="codehilite">spec_delim</code> for .txt files (among others).</li>
+<li><code class="codehilite"><span class="n">spec_csv</span></code> for .csv and .tsv files.</li>
+<li><code class="codehilite"><span class="n">spec_delim</span></code> for .txt files (among others).</li>
 </ul>
 <!-- -->
 
@@ -1256,10 +1261,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## cols(
-##   weight = col_integer(),
-##   feed = col_character()
-## )
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">cols</span><span class="p">(</span>
+<span class="o">##</span>   <span class="n">weight</span> <span class="o">=</span> <span class="n">col_integer</span><span class="p">(),</span>
+<span class="o">##</span>   <span class="n">feed</span> <span class="o">=</span> <span class="n">col_character</span><span class="p">()</span>
+<span class="o">##</span> <span class="p">)</span>
 </pre></div>
 </td></tr></table>
                 
@@ -1325,25 +1330,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

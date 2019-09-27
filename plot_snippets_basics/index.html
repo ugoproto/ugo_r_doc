@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Plot Snippets for Exploratory (and some Explanatory) Analyses
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -590,14 +595,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plotting-packages" title="Plotting Packages" class="md-nav__link">
+  <a href="#plotting-packages" class="md-nav__link">
     Plotting Packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-type-dataset" title="Data Type &amp; Dataset" class="md-nav__link">
+  <a href="#data-type-dataset" class="md-nav__link">
     Data Type &amp; Dataset
   </a>
   
@@ -605,21 +610,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-types" title="Data Types" class="md-nav__link">
+  <a href="#data-types" class="md-nav__link">
     Data Types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#functions" title="Functions" class="md-nav__link">
+  <a href="#functions" class="md-nav__link">
     Functions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dataset" title="Dataset" class="md-nav__link">
+  <a href="#dataset" class="md-nav__link">
     Dataset
   </a>
   
@@ -631,7 +636,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-basic-package" title="The Basic Package" class="md-nav__link">
+  <a href="#the-basic-package" class="md-nav__link">
     The Basic Package
   </a>
   
@@ -639,42 +644,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-plots-options-parameters" title="Basic Plots, Options &amp; Parameters" class="md-nav__link">
+  <a href="#basic-plots-options-parameters" class="md-nav__link">
     Basic Plots, Options &amp; Parameters
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#univariate-plots" title="Univariate Plots" class="md-nav__link">
+  <a href="#univariate-plots" class="md-nav__link">
     Univariate Plots
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bivariate-multivariate-plots" title="Bivariate (Multivariate) Plots" class="md-nav__link">
+  <a href="#bivariate-multivariate-plots" class="md-nav__link">
     Bivariate (Multivariate) Plots
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#multivariate-plots" title="Multivariate Plots" class="md-nav__link">
+  <a href="#multivariate-plots" class="md-nav__link">
     Multivariate Plots
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#times-series" title="Times Series" class="md-nav__link">
+  <a href="#times-series" class="md-nav__link">
     Times Series
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#regressions-and-residual-plots" title="Regressions and Residual Plots" class="md-nav__link">
+  <a href="#regressions-and-residual-plots" class="md-nav__link">
     Regressions and Residual Plots
   </a>
   
@@ -686,7 +691,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-lattice-and-latticeextra-packages" title="The lattice and latticeExtra Packages" class="md-nav__link">
+  <a href="#the-lattice-and-latticeextra-packages" class="md-nav__link">
     The lattice and latticeExtra Packages
   </a>
   
@@ -694,28 +699,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#coloring" title="Coloring" class="md-nav__link">
+  <a href="#coloring" class="md-nav__link">
     Coloring
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#a-note-on-reordering-the-levels-factors" title="A note on reordering the levels (factors)" class="md-nav__link">
+  <a href="#a-note-on-reordering-the-levels-factors" class="md-nav__link">
     A note on reordering the levels (factors)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#uni-bi-multivariate-plots" title="Uni-, Bi-, Multivariate Plots" class="md-nav__link">
+  <a href="#uni-bi-multivariate-plots" class="md-nav__link">
     Uni-, Bi-, Multivariate Plots
   </a>
   
@@ -727,7 +732,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-packages" title="Additional Packages" class="md-nav__link">
+  <a href="#additional-packages" class="md-nav__link">
     Additional Packages
   </a>
   
@@ -735,91 +740,91 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-sm-package-density" title="The sm Package (density)" class="md-nav__link">
+  <a href="#the-sm-package-density" class="md-nav__link">
     The sm Package (density)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-car-package-scatter" title="The car Package (scatter)" class="md-nav__link">
+  <a href="#the-car-package-scatter" class="md-nav__link">
     The car Package (scatter)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-vioplot-package-boxplot" title="The vioplot Package (boxplot)" class="md-nav__link">
+  <a href="#the-vioplot-package-boxplot" class="md-nav__link">
     The vioplot Package (boxplot)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-vcd-package-count-correlation-mosaic" title="The vcd Package (count, correlation, mosaic)" class="md-nav__link">
+  <a href="#the-vcd-package-count-correlation-mosaic" class="md-nav__link">
     The vcd Package (count, correlation, mosaic)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-hexbin-package-scatter" title="The hexbin Package (scatter)" class="md-nav__link">
+  <a href="#the-hexbin-package-scatter" class="md-nav__link">
     The hexbin Package (scatter)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-car-package-scatter_1" title="The car Package (scatter)" class="md-nav__link">
+  <a href="#the-car-package-scatter_1" class="md-nav__link">
     The car Package (scatter)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-scatterplot3d-package" title="The scatterplot3d Package" class="md-nav__link">
+  <a href="#the-scatterplot3d-package" class="md-nav__link">
     The scatterplot3d Package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-rgl-package-interactive" title="The rgl Package (interactive)" class="md-nav__link">
+  <a href="#the-rgl-package-interactive" class="md-nav__link">
     The rgl Package (interactive)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-cluster-package-dendrogram" title="The cluster Package (dendrogram)" class="md-nav__link">
+  <a href="#the-cluster-package-dendrogram" class="md-nav__link">
     The cluster Package (dendrogram)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-extracat-package-splom" title="The extracat Package (splom)" class="md-nav__link">
+  <a href="#the-extracat-package-splom" class="md-nav__link">
     The extracat Package (splom)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-ash-package-density" title="The ash Package (density)" class="md-nav__link">
+  <a href="#the-ash-package-density" class="md-nav__link">
     The ash Package (density)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-kernsmooth-package-density" title="The KernSmooth Package (density)" class="md-nav__link">
+  <a href="#the-kernsmooth-package-density" class="md-nav__link">
     The KernSmooth Package (density)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-corrplot-package-correlation" title="The corrplot Package (correlation)" class="md-nav__link">
+  <a href="#the-corrplot-package-correlation" class="md-nav__link">
     The corrplot Package (correlation)
   </a>
   
@@ -1117,14 +1122,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plotting-packages" title="Plotting Packages" class="md-nav__link">
+  <a href="#plotting-packages" class="md-nav__link">
     Plotting Packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-type-dataset" title="Data Type &amp; Dataset" class="md-nav__link">
+  <a href="#data-type-dataset" class="md-nav__link">
     Data Type &amp; Dataset
   </a>
   
@@ -1132,21 +1137,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-types" title="Data Types" class="md-nav__link">
+  <a href="#data-types" class="md-nav__link">
     Data Types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#functions" title="Functions" class="md-nav__link">
+  <a href="#functions" class="md-nav__link">
     Functions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dataset" title="Dataset" class="md-nav__link">
+  <a href="#dataset" class="md-nav__link">
     Dataset
   </a>
   
@@ -1158,7 +1163,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-basic-package" title="The Basic Package" class="md-nav__link">
+  <a href="#the-basic-package" class="md-nav__link">
     The Basic Package
   </a>
   
@@ -1166,42 +1171,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-plots-options-parameters" title="Basic Plots, Options &amp; Parameters" class="md-nav__link">
+  <a href="#basic-plots-options-parameters" class="md-nav__link">
     Basic Plots, Options &amp; Parameters
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#univariate-plots" title="Univariate Plots" class="md-nav__link">
+  <a href="#univariate-plots" class="md-nav__link">
     Univariate Plots
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#bivariate-multivariate-plots" title="Bivariate (Multivariate) Plots" class="md-nav__link">
+  <a href="#bivariate-multivariate-plots" class="md-nav__link">
     Bivariate (Multivariate) Plots
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#multivariate-plots" title="Multivariate Plots" class="md-nav__link">
+  <a href="#multivariate-plots" class="md-nav__link">
     Multivariate Plots
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#times-series" title="Times Series" class="md-nav__link">
+  <a href="#times-series" class="md-nav__link">
     Times Series
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#regressions-and-residual-plots" title="Regressions and Residual Plots" class="md-nav__link">
+  <a href="#regressions-and-residual-plots" class="md-nav__link">
     Regressions and Residual Plots
   </a>
   
@@ -1213,7 +1218,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-lattice-and-latticeextra-packages" title="The lattice and latticeExtra Packages" class="md-nav__link">
+  <a href="#the-lattice-and-latticeextra-packages" class="md-nav__link">
     The lattice and latticeExtra Packages
   </a>
   
@@ -1221,28 +1226,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#coloring" title="Coloring" class="md-nav__link">
+  <a href="#coloring" class="md-nav__link">
     Coloring
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#a-note-on-reordering-the-levels-factors" title="A note on reordering the levels (factors)" class="md-nav__link">
+  <a href="#a-note-on-reordering-the-levels-factors" class="md-nav__link">
     A note on reordering the levels (factors)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#uni-bi-multivariate-plots" title="Uni-, Bi-, Multivariate Plots" class="md-nav__link">
+  <a href="#uni-bi-multivariate-plots" class="md-nav__link">
     Uni-, Bi-, Multivariate Plots
   </a>
   
@@ -1254,7 +1259,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-packages" title="Additional Packages" class="md-nav__link">
+  <a href="#additional-packages" class="md-nav__link">
     Additional Packages
   </a>
   
@@ -1262,91 +1267,91 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-sm-package-density" title="The sm Package (density)" class="md-nav__link">
+  <a href="#the-sm-package-density" class="md-nav__link">
     The sm Package (density)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-car-package-scatter" title="The car Package (scatter)" class="md-nav__link">
+  <a href="#the-car-package-scatter" class="md-nav__link">
     The car Package (scatter)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-vioplot-package-boxplot" title="The vioplot Package (boxplot)" class="md-nav__link">
+  <a href="#the-vioplot-package-boxplot" class="md-nav__link">
     The vioplot Package (boxplot)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-vcd-package-count-correlation-mosaic" title="The vcd Package (count, correlation, mosaic)" class="md-nav__link">
+  <a href="#the-vcd-package-count-correlation-mosaic" class="md-nav__link">
     The vcd Package (count, correlation, mosaic)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-hexbin-package-scatter" title="The hexbin Package (scatter)" class="md-nav__link">
+  <a href="#the-hexbin-package-scatter" class="md-nav__link">
     The hexbin Package (scatter)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-car-package-scatter_1" title="The car Package (scatter)" class="md-nav__link">
+  <a href="#the-car-package-scatter_1" class="md-nav__link">
     The car Package (scatter)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-scatterplot3d-package" title="The scatterplot3d Package" class="md-nav__link">
+  <a href="#the-scatterplot3d-package" class="md-nav__link">
     The scatterplot3d Package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-rgl-package-interactive" title="The rgl Package (interactive)" class="md-nav__link">
+  <a href="#the-rgl-package-interactive" class="md-nav__link">
     The rgl Package (interactive)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-cluster-package-dendrogram" title="The cluster Package (dendrogram)" class="md-nav__link">
+  <a href="#the-cluster-package-dendrogram" class="md-nav__link">
     The cluster Package (dendrogram)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-extracat-package-splom" title="The extracat Package (splom)" class="md-nav__link">
+  <a href="#the-extracat-package-splom" class="md-nav__link">
     The extracat Package (splom)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-ash-package-density" title="The ash Package (density)" class="md-nav__link">
+  <a href="#the-ash-package-density" class="md-nav__link">
     The ash Package (density)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-kernsmooth-package-density" title="The KernSmooth Package (density)" class="md-nav__link">
+  <a href="#the-kernsmooth-package-density" class="md-nav__link">
     The KernSmooth Package (density)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-corrplot-package-correlation" title="The corrplot Package (correlation)" class="md-nav__link">
+  <a href="#the-corrplot-package-correlation" class="md-nav__link">
     The corrplot Package (correlation)
   </a>
   
@@ -1418,60 +1423,60 @@
 <li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
 <li>Code snippets and results.</li>
 <li>Some data might necessitate more specialized packages.</li>
-<li>For explaining data, presenting results, reporting and publishing, we can generate prettier graphics with <code class="codehilite">ggvis</code> or <code class="codehilite">ggplot2</code>, and interactive packages such as <code class="codehilite">shiny</code>.</li>
+<li>For explaining data, presenting results, reporting and publishing, we can generate prettier graphics with <code class="codehilite"><span class="n">ggvis</span></code> or <code class="codehilite"><span class="n">ggplot2</span></code>, and interactive packages such as <code class="codehilite"><span class="n">shiny</span></code>.</li>
 </ul>
 <hr />
 <h2 id="plotting-packages">Plotting Packages<a class="headerlink" href="#plotting-packages" title="Permanent link">&para;</a></h2>
 <p>Graphics:</p>
 <ul>
-<li><code class="codehilite">maps</code> for grids and mapping.</li>
-<li><code class="codehilite">diagram</code> for flow charts.</li>
-<li><code class="codehilite">plotrix</code> for ternary, polar plots.</li>
-<li><code class="codehilite">gplots</code>.</li>
-<li><code class="codehilite">pixmap</code>, <code class="codehilite">png</code>, <code class="codehilite">rtiff</code>, <code class="codehilite">ReadImages</code>, <code class="codehilite">EBImage</code>, <code class="codehilite">RImageJ</code>.</li>
-<li><code class="codehilite">leaflet</code>.</li>
+<li><code class="codehilite"><span class="n">maps</span></code> for grids and mapping.</li>
+<li><code class="codehilite"><span class="n">diagram</span></code> for flow charts.</li>
+<li><code class="codehilite"><span class="n">plotrix</span></code> for ternary, polar plots.</li>
+<li><code class="codehilite"><span class="n">gplots</span></code>.</li>
+<li><code class="codehilite"><span class="n">pixmap</span></code>, <code class="codehilite"><span class="n">png</span></code>, <code class="codehilite"><span class="n">rtiff</span></code>, <code class="codehilite"><span class="n">ReadImages</span></code>, <code class="codehilite"><span class="n">EBImage</span></code>, <code class="codehilite"><span class="n">RImageJ</span></code>.</li>
+<li><code class="codehilite"><span class="n">leaflet</span></code>.</li>
 </ul>
 <p>Grid:</p>
 <ul>
-<li><code class="codehilite">vcd</code> for mosaic, ternary plots.</li>
-<li><code class="codehilite">grImport</code> for vectors.</li>
-<li><code class="codehilite">ggplot2</code> and extensions.</li>
-<li><code class="codehilite">lattice</code> and <code class="codehilite">latticeExtra</code>.</li>
-<li><code class="codehilite">gridBase</code>.</li>
+<li><code class="codehilite"><span class="n">vcd</span></code> for mosaic, ternary plots.</li>
+<li><code class="codehilite"><span class="n">grImport</span></code> for vectors.</li>
+<li><code class="codehilite"><span class="n">ggplot2</span></code> and extensions.</li>
+<li><code class="codehilite"><span class="n">lattice</span></code> and <code class="codehilite"><span class="n">latticeExtra</span></code>.</li>
+<li><code class="codehilite"><span class="n">gridBase</span></code>.</li>
 </ul>
 <p>Devices:</p>
 <ul>
-<li><code class="codehilite">JavaGD</code>.</li>
-<li><code class="codehilite">Cairo</code>.</li>
-<li><code class="codehilite">tikzDevice</code>.</li>
+<li><code class="codehilite"><span class="n">JavaGD</span></code>.</li>
+<li><code class="codehilite"><span class="n">Cairo</span></code>.</li>
+<li><code class="codehilite"><span class="n">tikzDevice</span></code>.</li>
 </ul>
 <p>Interactive:</p>
 <ul>
-<li><code class="codehilite">rgl</code>.</li>
-<li><code class="codehilite">ggvis</code>.</li>
-<li><code class="codehilite">iplots</code>.</li>
-<li><code class="codehilite">rggobi</code>.</li>
+<li><code class="codehilite"><span class="n">rgl</span></code>.</li>
+<li><code class="codehilite"><span class="n">ggvis</span></code>.</li>
+<li><code class="codehilite"><span class="n">iplots</span></code>.</li>
+<li><code class="codehilite"><span class="n">rggobi</span></code>.</li>
 </ul>
 <p>Others:</p>
 <ul>
-<li><code class="codehilite">ash</code> for density plots.</li>
-<li><code class="codehilite">cluster</code> for dendrograms.</li>
-<li><code class="codehilite">copula</code> for multivariate analyses.</li>
-<li><code class="codehilite">corrplot</code> for correlations.</li>
-<li><code class="codehilite">compositions</code> for geometries, ternary plots.</li>
-<li><code class="codehilite">extracat</code> for missing values.</li>
-<li><code class="codehilite">soiltexture</code> for ternary plots and more.</li>
-<li><code class="codehilite">KernSmooth</code> for histograms-density plots.</li>
-<li><code class="codehilite">openair</code> for polar, circular plots.</li>
-<li><code class="codehilite">sm</code> for density plots.</li>
-<li><code class="codehilite">car</code> for scatter plots.</li>
-<li><code class="codehilite">vioplot</code> for boxplots.</li>
-<li><code class="codehilite">vcd</code> for mosaic plots and multivariate analyses.</li>
-<li><code class="codehilite">hexbin</code> for scatter plots.</li>
-<li><code class="codehilite">scatterplot3d</code> for 3D scatter plots.</li>
-<li><code class="codehilite">cluster</code> for dendrograms.</li>
-<li><code class="codehilite">shiny</code> for interactive plots.</li>
-<li><code class="codehilite">ggvis</code>.</li>
+<li><code class="codehilite"><span class="n">ash</span></code> for density plots.</li>
+<li><code class="codehilite"><span class="k">cluster</span></code> for dendrograms.</li>
+<li><code class="codehilite"><span class="n">copula</span></code> for multivariate analyses.</li>
+<li><code class="codehilite"><span class="n">corrplot</span></code> for correlations.</li>
+<li><code class="codehilite"><span class="n">compositions</span></code> for geometries, ternary plots.</li>
+<li><code class="codehilite"><span class="n">extracat</span></code> for missing values.</li>
+<li><code class="codehilite"><span class="n">soiltexture</span></code> for ternary plots and more.</li>
+<li><code class="codehilite"><span class="n">KernSmooth</span></code> for histograms-density plots.</li>
+<li><code class="codehilite"><span class="n">openair</span></code> for polar, circular plots.</li>
+<li><code class="codehilite"><span class="n">sm</span></code> for density plots.</li>
+<li><code class="codehilite"><span class="n">car</span></code> for scatter plots.</li>
+<li><code class="codehilite"><span class="n">vioplot</span></code> for boxplots.</li>
+<li><code class="codehilite"><span class="n">vcd</span></code> for mosaic plots and multivariate analyses.</li>
+<li><code class="codehilite"><span class="n">hexbin</span></code> for scatter plots.</li>
+<li><code class="codehilite"><span class="n">scatterplot3d</span></code> for 3D scatter plots.</li>
+<li><code class="codehilite"><span class="k">cluster</span></code> for dendrograms.</li>
+<li><code class="codehilite"><span class="n">shiny</span></code> for interactive plots.</li>
+<li><code class="codehilite"><span class="n">ggvis</span></code>.</li>
 </ul>
 <h2 id="data-type-dataset">Data Type &amp; Dataset<a class="headerlink" href="#data-type-dataset" title="Permanent link">&para;</a></h2>
 <h3 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h3>
@@ -1552,10 +1557,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species area
-## 1          5.1         3.5          1.4         0.2  setosa 0.28
-## 2          4.9         3.0          1.4         0.2  setosa 0.28
-## 3          4.7         3.2          1.3         0.2  setosa 0.26
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">Sepal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Sepal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Petal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Species</span> <span class="n">area</span>
+<span class="o">##</span> <span class="mi">1</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>  <span class="n">setosa</span> <span class="mi">0</span><span class="p">.</span><span class="mi">28</span>
+<span class="o">##</span> <span class="mi">2</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>  <span class="n">setosa</span> <span class="mi">0</span><span class="p">.</span><span class="mi">28</span>
+<span class="o">##</span> <span class="mi">3</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>  <span class="n">setosa</span> <span class="mi">0</span><span class="p">.</span><span class="mi">26</span>
 </pre></div>
 </td></tr></table>
 
@@ -1565,12 +1570,12 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 0.28 0.28 0.26
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">0</span><span class="p">.</span><span class="mi">28</span> <span class="mi">0</span><span class="p">.</span><span class="mi">28</span> <span class="mi">0</span><span class="p">.</span><span class="mi">26</span>
 </pre></div>
 </td></tr></table>
 
 <h3 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h3>
-<p>For most examples, we use the <code class="codehilite">mtcars</code> dataset.</p>
+<p>For most examples, we use the <code class="codehilite"><span class="n">mtcars</span></code> dataset.</p>
 <p>Prepare the dataset.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">attach</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
 </pre></div>
@@ -1645,9 +1650,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##      [,1] [,2]
-## [1,]    1    2
-## [2,]    1    3
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>      <span class="p">[,</span><span class="mi">1</span><span class="p">]</span> <span class="p">[,</span><span class="mi">2</span><span class="p">]</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">,]</span>    <span class="mi">1</span>    <span class="mi">2</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">2</span><span class="p">,]</span>    <span class="mi">1</span>    <span class="mi">3</span>
 </pre></div>
 </td></tr></table>
 
@@ -1703,7 +1708,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-14-1.png" /></p>
-<p>See the <code class="codehilite">lattice</code> and <code class="codehilite">latticeExtra</code> packages for built-in facet/gridview. <code class="codehilite">ggplot2</code> as well.</p>
+<p>See the <code class="codehilite"><span class="n">lattice</span></code> and <code class="codehilite"><span class="n">latticeExtra</span></code> packages for built-in facet/gridview. <code class="codehilite"><span class="n">ggplot2</span></code> as well.</p>
 <p><strong>Plot and add ablines</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1767,9 +1772,9 @@
 <p><strong>View in a new window</strong></p>
 <p>Typing the function will open a new window to render the plot.</p>
 <ul>
-<li><code class="codehilite">windows()</code> for Windows.</li>
-<li><code class="codehilite">X11()</code> for Linux.</li>
-<li><code class="codehilite">quartz()</code> for OS X.</li>
+<li><code class="codehilite"><span class="n">windows</span><span class="p">()</span></code> for Windows.</li>
+<li><code class="codehilite"><span class="n">X11</span><span class="p">()</span></code> for Linux.</li>
+<li><code class="codehilite"><span class="n">quartz</span><span class="p">()</span></code> for OS X.</li>
 </ul>
 <!-- -->
 
@@ -1809,7 +1814,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-20-1.png" /></p>
-<p>With <code class="codehilite">locator()</code>, use the mouse; with 1 for 1 click, 2 for&hellip; Find the coordinates to be entered in the code. For example (after two clicks):</p>
+<p>With <code class="codehilite"><span class="k">locator</span><span class="p">()</span></code>, use the mouse; with 1 for 1 click, 2 for&hellip; Find the coordinates to be entered in the code. For example (after two clicks):</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1867,7 +1872,7 @@ $y
 </pre></div>
 </td></tr></table>
 
-<p><strong>Combine plots; change <code class="codehilite">pch =</code> &amp; <code class="codehilite">col =</code></strong></p>
+<p><strong>Combine plots; change <code class="codehilite"><span class="n">pch</span> <span class="o">=</span></code> &amp; <code class="codehilite"><span class="n">col</span> <span class="o">=</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1947,11 +1952,11 @@ $y
 </pre></div>
 </td></tr></table>
 
-<p><strong>Change <code class="codehilite">col =</code></strong></p>
+<p><strong>Change <code class="codehilite"><span class="n">col</span> <span class="o">=</span></code></strong></p>
 <p><img alt="" src="../img/Plot_snippets_-_Basics/col.png" /></p>
-<p><strong>Change <code class="codehilite">pch =</code></strong></p>
+<p><strong>Change <code class="codehilite"><span class="n">pch</span> <span class="o">=</span></code></strong></p>
 <p><img alt="" src="../img/Plot_snippets_-_Basics/pch.png" /></p>
-<p><strong>Change <code class="codehilite">lty =</code></strong></p>
+<p><strong>Change <code class="codehilite"><span class="n">lty</span> <span class="o">=</span></code></strong></p>
 <p><img alt="" src="../img/Plot_snippets_-_Basics/lty.png" /></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1988,7 +1993,7 @@ $y
 </pre></div>
 </td></tr></table>
 
-<p><strong>Change <code class="codehilite">type =</code>; without dots</strong></p>
+<p><strong>Change <code class="codehilite"><span class="k">type</span> <span class="o">=</span></code>; without dots</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2022,7 +2027,7 @@ $y
 </pre></div>
 </td></tr></table>
 
-<p><strong>Change <code class="codehilite">type =</code>; with dots</strong></p>
+<p><strong>Change <code class="codehilite"><span class="k">type</span> <span class="o">=</span></code>; with dots</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2154,7 +2159,7 @@ $y
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-37-1.png" /></p>
 <p><strong>Barplots options</strong></p>
-<p>Group with <code class="codehilite">table()</code>.</p>
+<p>Group with <code class="codehilite"><span class="k">table</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">table</span><span class="p">(</span><span class="n">cyl</span><span class="p">)</span>
 <span class="n">counts</span>
@@ -2163,9 +2168,9 @@ $y
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## cyl
-##  4  6  8 
-## 11  7 14
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="n">cyl</span>
+<span class="o">##</span>  <span class="mi">4</span>  <span class="mi">6</span>  <span class="mi">8</span> 
+<span class="o">##</span> <span class="mi">11</span>  <span class="mi">7</span> <span class="mi">14</span>
 </pre></div>
 </td></tr></table>
 
@@ -2183,10 +2188,10 @@ $y
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    gear
-## vs   3  4  5
-##   0 12  2  4
-##   1  3 10  1
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">gear</span>
+<span class="o">##</span> <span class="n">vs</span>   <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>
+<span class="o">##</span>   <span class="mi">0</span> <span class="mi">12</span>  <span class="mi">2</span>  <span class="mi">4</span>
+<span class="o">##</span>   <span class="mi">1</span>  <span class="mi">3</span> <span class="mi">10</span>  <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -2204,10 +2209,10 @@ $y
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    gear
-## vs   3  4  5
-##   0 12  2  4
-##   1  3 10  1
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">gear</span>
+<span class="o">##</span> <span class="n">vs</span>   <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>
+<span class="o">##</span>   <span class="mi">0</span> <span class="mi">12</span>  <span class="mi">2</span>  <span class="mi">4</span>
+<span class="o">##</span>   <span class="mi">1</span>  <span class="mi">3</span> <span class="mi">10</span>  <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -2216,7 +2221,7 @@ $y
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-40-1.png" /></p>
-<p>Group with <code class="codehilite">aggregate()</code>.</p>
+<p>Group with <code class="codehilite"><span class="k">aggregate</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">aggregate</span><span class="p">(</span><span class="n">mtcars</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">cyl</span><span class="p">,</span> <span class="n">vs</span><span class="p">),</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -2232,18 +2237,18 @@ $y
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   Group.1 Group.2      mpg cyl   disp       hp     drat       wt     qsec
-## 1       4       0 26.00000   4 120.30  91.0000 4.430000 2.140000 16.70000
-## 2       6       0 20.56667   6 155.00 131.6667 3.806667 2.755000 16.32667
-## 3       8       0 15.10000   8 353.10 209.2143 3.229286 3.999214 16.77214
-## 4       4       1 26.73000   4 103.62  81.8000 4.035000 2.300300 19.38100
-## 5       6       1 19.12500   6 204.55 115.2500 3.420000 3.388750 19.21500
-##   vs        am     gear     carb
-## 1  0 1.0000000 5.000000 2.000000
-## 2  0 1.0000000 4.333333 4.666667
-## 3  0 0.1428571 3.285714 3.500000
-## 4  1 0.7000000 4.000000 1.500000
-## 5  1 0.0000000 3.500000 2.500000
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="k">Group</span><span class="p">.</span><span class="mi">1</span> <span class="k">Group</span><span class="p">.</span><span class="mi">2</span>      <span class="n">mpg</span> <span class="n">cyl</span>   <span class="n">disp</span>       <span class="n">hp</span>     <span class="n">drat</span>       <span class="n">wt</span>     <span class="n">qsec</span>
+<span class="o">##</span> <span class="mi">1</span>       <span class="mi">4</span>       <span class="mi">0</span> <span class="mi">26</span><span class="p">.</span><span class="mi">00000</span>   <span class="mi">4</span> <span class="mi">120</span><span class="p">.</span><span class="mi">30</span>  <span class="mi">91</span><span class="p">.</span><span class="mi">0000</span> <span class="mi">4</span><span class="p">.</span><span class="mi">430000</span> <span class="mi">2</span><span class="p">.</span><span class="mi">140000</span> <span class="mi">16</span><span class="p">.</span><span class="mi">70000</span>
+<span class="o">##</span> <span class="mi">2</span>       <span class="mi">6</span>       <span class="mi">0</span> <span class="mi">20</span><span class="p">.</span><span class="mi">56667</span>   <span class="mi">6</span> <span class="mi">155</span><span class="p">.</span><span class="mi">00</span> <span class="mi">131</span><span class="p">.</span><span class="mi">6667</span> <span class="mi">3</span><span class="p">.</span><span class="mi">806667</span> <span class="mi">2</span><span class="p">.</span><span class="mi">755000</span> <span class="mi">16</span><span class="p">.</span><span class="mi">32667</span>
+<span class="o">##</span> <span class="mi">3</span>       <span class="mi">8</span>       <span class="mi">0</span> <span class="mi">15</span><span class="p">.</span><span class="mi">10000</span>   <span class="mi">8</span> <span class="mi">353</span><span class="p">.</span><span class="mi">10</span> <span class="mi">209</span><span class="p">.</span><span class="mi">2143</span> <span class="mi">3</span><span class="p">.</span><span class="mi">229286</span> <span class="mi">3</span><span class="p">.</span><span class="mi">999214</span> <span class="mi">16</span><span class="p">.</span><span class="mi">77214</span>
+<span class="o">##</span> <span class="mi">4</span>       <span class="mi">4</span>       <span class="mi">1</span> <span class="mi">26</span><span class="p">.</span><span class="mi">73000</span>   <span class="mi">4</span> <span class="mi">103</span><span class="p">.</span><span class="mi">62</span>  <span class="mi">81</span><span class="p">.</span><span class="mi">8000</span> <span class="mi">4</span><span class="p">.</span><span class="mi">035000</span> <span class="mi">2</span><span class="p">.</span><span class="mi">300300</span> <span class="mi">19</span><span class="p">.</span><span class="mi">38100</span>
+<span class="o">##</span> <span class="mi">5</span>       <span class="mi">6</span>       <span class="mi">1</span> <span class="mi">19</span><span class="p">.</span><span class="mi">12500</span>   <span class="mi">6</span> <span class="mi">204</span><span class="p">.</span><span class="mi">55</span> <span class="mi">115</span><span class="p">.</span><span class="mi">2500</span> <span class="mi">3</span><span class="p">.</span><span class="mi">420000</span> <span class="mi">3</span><span class="p">.</span><span class="mi">388750</span> <span class="mi">19</span><span class="p">.</span><span class="mi">21500</span>
+<span class="o">##</span>   <span class="n">vs</span>        <span class="n">am</span>     <span class="n">gear</span>     <span class="n">carb</span>
+<span class="o">##</span> <span class="mi">1</span>  <span class="mi">0</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0000000</span> <span class="mi">5</span><span class="p">.</span><span class="mi">000000</span> <span class="mi">2</span><span class="p">.</span><span class="mi">000000</span>
+<span class="o">##</span> <span class="mi">2</span>  <span class="mi">0</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0000000</span> <span class="mi">4</span><span class="p">.</span><span class="mi">333333</span> <span class="mi">4</span><span class="p">.</span><span class="mi">666667</span>
+<span class="o">##</span> <span class="mi">3</span>  <span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1428571</span> <span class="mi">3</span><span class="p">.</span><span class="mi">285714</span> <span class="mi">3</span><span class="p">.</span><span class="mi">500000</span>
+<span class="o">##</span> <span class="mi">4</span>  <span class="mi">1</span> <span class="mi">0</span><span class="p">.</span><span class="mi">7000000</span> <span class="mi">4</span><span class="p">.</span><span class="mi">000000</span> <span class="mi">1</span><span class="p">.</span><span class="mi">500000</span>
+<span class="o">##</span> <span class="mi">5</span>  <span class="mi">1</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000000</span> <span class="mi">3</span><span class="p">.</span><span class="mi">500000</span> <span class="mi">2</span><span class="p">.</span><span class="mi">500000</span>
 </pre></div>
 </td></tr></table>
 
@@ -2331,7 +2336,7 @@ $y
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-47-1.png" /></p>
-<p>More with the <code class="codehilite">hmisc</code> package and <code class="codehilite">panel.dotplot()</code> and in the <code class="codehilite">lattice</code><br />
+<p>More with the <code class="codehilite"><span class="n">hmisc</span></code> package and <code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">dotplot</span><span class="p">()</span></code> and in the <code class="codehilite"><span class="n">lattice</span></code><br />
 package section.</p>
 <p><strong>Boxplot; continuous</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">boxplot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;observations&#39;</span><span class="p">)</span>
@@ -2358,21 +2363,21 @@ package section.</p>
 12
 13
 14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##   The decimal point is at the |
-## 
-##   10 | 44
-##   12 | 3
-##   14 | 3702258
-##   16 | 438
-##   18 | 17227
-##   20 | 00445
-##   22 | 88
-##   24 | 4
-##   26 | 03
-##   28 | 
-##   30 | 44
-##   32 | 49
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>   <span class="n">The</span> <span class="nb">decimal</span> <span class="n">point</span> <span class="k">is</span> <span class="k">at</span> <span class="n">the</span> <span class="o">|</span>
+<span class="o">##</span> 
+<span class="o">##</span>   <span class="mi">10</span> <span class="o">|</span> <span class="mi">44</span>
+<span class="o">##</span>   <span class="mi">12</span> <span class="o">|</span> <span class="mi">3</span>
+<span class="o">##</span>   <span class="mi">14</span> <span class="o">|</span> <span class="mi">3702258</span>
+<span class="o">##</span>   <span class="mi">16</span> <span class="o">|</span> <span class="mi">438</span>
+<span class="o">##</span>   <span class="mi">18</span> <span class="o">|</span> <span class="mi">17227</span>
+<span class="o">##</span>   <span class="mi">20</span> <span class="o">|</span> <span class="mi">00445</span>
+<span class="o">##</span>   <span class="mi">22</span> <span class="o">|</span> <span class="mi">88</span>
+<span class="o">##</span>   <span class="mi">24</span> <span class="o">|</span> <span class="mi">4</span>
+<span class="o">##</span>   <span class="mi">26</span> <span class="o">|</span> <span class="mi">03</span>
+<span class="o">##</span>   <span class="mi">28</span> <span class="o">|</span> 
+<span class="o">##</span>   <span class="mi">30</span> <span class="o">|</span> <span class="mi">44</span>
+<span class="o">##</span>   <span class="mi">32</span> <span class="o">|</span> <span class="mi">49</span>
 </pre></div>
 </td></tr></table>
 
@@ -2581,11 +2586,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     cyl
-## gear  4  6  8
-##    3  1  2 12
-##    4  8  4  0
-##    5  2  1  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">cyl</span>
+<span class="o">##</span> <span class="n">gear</span>  <span class="mi">4</span>  <span class="mi">6</span>  <span class="mi">8</span>
+<span class="o">##</span>    <span class="mi">3</span>  <span class="mi">1</span>  <span class="mi">2</span> <span class="mi">12</span>
+<span class="o">##</span>    <span class="mi">4</span>  <span class="mi">8</span>  <span class="mi">4</span>  <span class="mi">0</span>
+<span class="o">##</span>    <span class="mi">5</span>  <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2604,11 +2609,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    gear
-## cyl  3  4  5
-##   4  1  8  2
-##   6  2  4  1
-##   8 12  0  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">gear</span>
+<span class="o">##</span> <span class="n">cyl</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">5</span>
+<span class="o">##</span>   <span class="mi">4</span>  <span class="mi">1</span>  <span class="mi">8</span>  <span class="mi">2</span>
+<span class="o">##</span>   <span class="mi">6</span>  <span class="mi">2</span>  <span class="mi">4</span>  <span class="mi">1</span>
+<span class="o">##</span>   <span class="mi">8</span> <span class="mi">12</span>  <span class="mi">0</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2629,11 +2634,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     cyl
-## gear  4  6  8
-##    3  1  2 12
-##    4  8  4  0
-##    5  2  1  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">cyl</span>
+<span class="o">##</span> <span class="n">gear</span>  <span class="mi">4</span>  <span class="mi">6</span>  <span class="mi">8</span>
+<span class="o">##</span>    <span class="mi">3</span>  <span class="mi">1</span>  <span class="mi">2</span> <span class="mi">12</span>
+<span class="o">##</span>    <span class="mi">4</span>  <span class="mi">8</span>  <span class="mi">4</span>  <span class="mi">0</span>
+<span class="o">##</span>    <span class="mi">5</span>  <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2658,11 +2663,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     cyl
-## gear  4  6  8
-##    3  1  2 12
-##    4  8  4  0
-##    5  2  1  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">cyl</span>
+<span class="o">##</span> <span class="n">gear</span>  <span class="mi">4</span>  <span class="mi">6</span>  <span class="mi">8</span>
+<span class="o">##</span>    <span class="mi">3</span>  <span class="mi">1</span>  <span class="mi">2</span> <span class="mi">12</span>
+<span class="o">##</span>    <span class="mi">4</span>  <span class="mi">8</span>  <span class="mi">4</span>  <span class="mi">0</span>
+<span class="o">##</span>    <span class="mi">5</span>  <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2681,11 +2686,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     cyl
-## gear  4  6  8
-##    3  1  2 12
-##    4  8  4  0
-##    5  2  1  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">cyl</span>
+<span class="o">##</span> <span class="n">gear</span>  <span class="mi">4</span>  <span class="mi">6</span>  <span class="mi">8</span>
+<span class="o">##</span>    <span class="mi">3</span>  <span class="mi">1</span>  <span class="mi">2</span> <span class="mi">12</span>
+<span class="o">##</span>    <span class="mi">4</span>  <span class="mi">8</span>  <span class="mi">4</span>  <span class="mi">0</span>
+<span class="o">##</span>    <span class="mi">5</span>  <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2725,11 +2730,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     cyl
-## gear  4  6  8
-##    3  1  2 12
-##    4  8  4  0
-##    5  2  1  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">cyl</span>
+<span class="o">##</span> <span class="n">gear</span>  <span class="mi">4</span>  <span class="mi">6</span>  <span class="mi">8</span>
+<span class="o">##</span>    <span class="mi">3</span>  <span class="mi">1</span>  <span class="mi">2</span> <span class="mi">12</span>
+<span class="o">##</span>    <span class="mi">4</span>  <span class="mi">8</span>  <span class="mi">4</span>  <span class="mi">0</span>
+<span class="o">##</span>    <span class="mi">5</span>  <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2781,11 +2786,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                 mpg  hp    wt
-## Mazda RX4      21.0 110 2.620
-## Mazda RX4 Wag  21.0 110 2.875
-## Datsun 710     22.8  93 2.320
-## Hornet 4 Drive 21.4 110 3.215
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>                 <span class="n">mpg</span>  <span class="n">hp</span>    <span class="n">wt</span>
+<span class="o">##</span> <span class="n">Mazda</span> <span class="n">RX4</span>      <span class="mi">21</span><span class="p">.</span><span class="mi">0</span> <span class="mi">110</span> <span class="mi">2</span><span class="p">.</span><span class="mi">620</span>
+<span class="o">##</span> <span class="n">Mazda</span> <span class="n">RX4</span> <span class="n">Wag</span>  <span class="mi">21</span><span class="p">.</span><span class="mi">0</span> <span class="mi">110</span> <span class="mi">2</span><span class="p">.</span><span class="mi">875</span>
+<span class="o">##</span> <span class="n">Datsun</span> <span class="mi">710</span>     <span class="mi">22</span><span class="p">.</span><span class="mi">8</span>  <span class="mi">93</span> <span class="mi">2</span><span class="p">.</span><span class="mi">320</span>
+<span class="o">##</span> <span class="n">Hornet</span> <span class="mi">4</span> <span class="n">Drive</span> <span class="mi">21</span><span class="p">.</span><span class="mi">4</span> <span class="mi">110</span> <span class="mi">3</span><span class="p">.</span><span class="mi">215</span>
 </pre></div>
 </td></tr></table>
 
@@ -2796,21 +2801,21 @@ package section.</p>
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-79-1.png" /></p>
 <p><strong>Trivariate plots</strong></p>
 <ul>
-<li><code class="codehilite">image()</code>.</li>
-<li><code class="codehilite">contour()</code>.</li>
-<li><code class="codehilite">filled.contour()</code>.</li>
-<li><code class="codehilite">persp()</code>.</li>
-<li><code class="codehilite">symbols()</code>.</li>
+<li><code class="codehilite"><span class="n">image</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">contour</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">filled</span><span class="p">.</span><span class="n">contour</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">persp</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">symbols</span><span class="p">()</span></code>.</li>
 </ul>
 <h3 id="times-series">Times Series<a class="headerlink" href="#times-series" title="Permanent link">&para;</a></h3>
-<p>Add packages: <code class="codehilite">zoo</code> and <code class="codehilite">xts</code>.</p>
+<p>Add packages: <code class="codehilite"><span class="n">zoo</span></code> and <code class="codehilite"><span class="n">xts</span></code>.</p>
 <p><strong>Basics</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">AirPassengers</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&#39;l&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-80-1.png" /></p>
-<p><strong>Change the <code class="codehilite">type =</code></strong></p>
+<p><strong>Change the <code class="codehilite"><span class="k">type</span> <span class="o">=</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2949,13 +2954,13 @@ package section.</p>
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   Tree  age circumference
-## 1    1  118            30
-## 2    1  484            58
-## 3    1  664            87
-## 4    1 1004           115
-## 5    1 1231           120
-## 6    1 1372           142
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">Tree</span>  <span class="n">age</span> <span class="n">circumference</span>
+<span class="o">##</span> <span class="mi">1</span>    <span class="mi">1</span>  <span class="mi">118</span>            <span class="mi">30</span>
+<span class="o">##</span> <span class="mi">2</span>    <span class="mi">1</span>  <span class="mi">484</span>            <span class="mi">58</span>
+<span class="o">##</span> <span class="mi">3</span>    <span class="mi">1</span>  <span class="mi">664</span>            <span class="mi">87</span>
+<span class="o">##</span> <span class="mi">4</span>    <span class="mi">1</span> <span class="mi">1004</span>           <span class="mi">115</span>
+<span class="o">##</span> <span class="mi">5</span>    <span class="mi">1</span> <span class="mi">1231</span>           <span class="mi">120</span>
+<span class="o">##</span> <span class="mi">6</span>    <span class="mi">1</span> <span class="mi">1372</span>           <span class="mi">142</span>
 </pre></div>
 </td></tr></table>
 
@@ -3046,24 +3051,24 @@ package section.</p>
 15
 16
 17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-## Call:
-## lm(formula = mpg ~ hp)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -5.7121 -2.1122 -0.8854  1.5819  8.2360 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(&amp;gt;|t|)    
-## (Intercept) 30.09886    1.63392  18.421  &amp;lt; 2e-16 ***
-## hp          -0.06823    0.01012  -6.742 1.79e-07 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 3.863 on 30 degrees of freedom
-## Multiple R-squared:  0.6024, Adjusted R-squared:  0.5892 
-## F-statistic: 45.46 on 1 and 30 DF,  p-value: 1.788e-07
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span> <span class="k">Call</span><span class="p">:</span>
+<span class="o">##</span> <span class="n">lm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">mpg</span> <span class="o">~</span> <span class="n">hp</span><span class="p">)</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Residuals</span><span class="p">:</span>
+<span class="o">##</span>     <span class="k">Min</span>      <span class="mi">1</span><span class="n">Q</span>  <span class="n">Median</span>      <span class="mi">3</span><span class="n">Q</span>     <span class="k">Max</span> 
+<span class="o">##</span> <span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">7121</span> <span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">1122</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">8854</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">5819</span>  <span class="mi">8</span><span class="p">.</span><span class="mi">2360</span> 
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Coefficients</span><span class="p">:</span>
+<span class="o">##</span>             <span class="n">Estimate</span> <span class="n">Std</span><span class="p">.</span> <span class="n">Error</span> <span class="n">t</span> <span class="n">value</span> <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;|</span><span class="n">t</span><span class="o">|</span><span class="p">)</span>    
+<span class="o">##</span> <span class="p">(</span><span class="n">Intercept</span><span class="p">)</span> <span class="mi">30</span><span class="p">.</span><span class="mi">09886</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">63392</span>  <span class="mi">18</span><span class="p">.</span><span class="mi">421</span>  <span class="o">&lt;</span> <span class="mi">2</span><span class="n">e</span><span class="o">-</span><span class="mi">16</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">hp</span>          <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">06823</span>    <span class="mi">0</span><span class="p">.</span><span class="mi">01012</span>  <span class="o">-</span><span class="mi">6</span><span class="p">.</span><span class="mi">742</span> <span class="mi">1</span><span class="p">.</span><span class="mi">79</span><span class="n">e</span><span class="o">-</span><span class="mi">07</span> <span class="o">***</span>
+<span class="o">##</span> <span class="c1">---</span>
+<span class="o">##</span> <span class="n">Signif</span><span class="p">.</span> <span class="n">codes</span><span class="p">:</span>  <span class="mi">0</span> <span class="s1">&#39;***&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">001</span> <span class="s1">&#39;**&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="s1">&#39;*&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span> <span class="s1">&#39;.&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="s1">&#39; &#39;</span> <span class="mi">1</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Residual</span> <span class="n">standard</span> <span class="n">error</span><span class="p">:</span> <span class="mi">3</span><span class="p">.</span><span class="mi">863</span> <span class="k">on</span> <span class="mi">30</span> <span class="n">degrees</span> <span class="k">of</span> <span class="n">freedom</span>
+<span class="o">##</span> <span class="n">Multiple</span> <span class="n">R</span><span class="o">-</span><span class="n">squared</span><span class="p">:</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">6024</span><span class="p">,</span> <span class="n">Adjusted</span> <span class="n">R</span><span class="o">-</span><span class="n">squared</span><span class="p">:</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">5892</span> 
+<span class="o">##</span> <span class="n">F</span><span class="o">-</span><span class="n">statistic</span><span class="p">:</span> <span class="mi">45</span><span class="p">.</span><span class="mi">46</span> <span class="k">on</span> <span class="mi">1</span> <span class="k">and</span> <span class="mi">30</span> <span class="n">DF</span><span class="p">,</span>  <span class="n">p</span><span class="o">-</span><span class="n">value</span><span class="p">:</span> <span class="mi">1</span><span class="p">.</span><span class="mi">788</span><span class="n">e</span><span class="o">-</span><span class="mi">07</span>
 </pre></div>
 </td></tr></table>
 
@@ -3091,7 +3096,7 @@ package section.</p>
 </pre></div>
 </td></tr></table>
 
-<h2 id="the-lattice-and-latticeextra-packages">The <code class="codehilite">lattice</code> and <code class="codehilite">latticeExtra</code> Packages<a class="headerlink" href="#the-lattice-and-latticeextra-packages" title="Permanent link">&para;</a></h2>
+<h2 id="the-lattice-and-latticeextra-packages">The <code class="codehilite"><span class="n">lattice</span></code> and <code class="codehilite"><span class="n">latticeExtra</span></code> Packages<a class="headerlink" href="#the-lattice-and-latticeextra-packages" title="Permanent link">&para;</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">lattice</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3138,8 +3143,8 @@ package section.</p>
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] 6 6 4 6 8 6 8 4 4 6 6 8 8 8 8 8 8 4 4 4 4 8 8 8 8 4 4 4 8 6 8 4
-## Levels: 4 6 8
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">6</span> <span class="mi">6</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">8</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">4</span>
+<span class="o">##</span> <span class="n">Levels</span><span class="p">:</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
@@ -3147,7 +3152,7 @@ package section.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;4&quot; &quot;6&quot; &quot;8&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;4&quot;</span> <span class="ss">&quot;6&quot;</span> <span class="ss">&quot;8&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -3163,7 +3168,7 @@ package section.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;8&quot; &quot;6&quot; &quot;4&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;8&quot;</span> <span class="ss">&quot;6&quot;</span> <span class="ss">&quot;4&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -3179,7 +3184,7 @@ package section.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;8&quot; &quot;6&quot; &quot;4&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;8&quot;</span> <span class="ss">&quot;6&quot;</span> <span class="ss">&quot;4&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -3265,23 +3270,23 @@ package section.</p>
 14
 15
 16
-17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    Class    Sex Survived Freq
-## 1    1st   Male       No  118
-## 2    2nd   Male       No  154
-## 3    3rd   Male       No  387
-## 4   Crew   Male       No  670
-## 5    1st Female       No    4
-## 6    2nd Female       No   13
-## 7    3rd Female       No   89
-## 8   Crew Female       No    3
-## 9    1st   Male      Yes   57
-## 10   2nd   Male      Yes   14
-## 11   3rd   Male      Yes   75
-## 12  Crew   Male      Yes  192
-## 13   1st Female      Yes  140
-## 14   2nd Female      Yes   80
-## 15   3rd Female      Yes   76
-## 16  Crew Female      Yes   20
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="k">Class</span>    <span class="n">Sex</span> <span class="n">Survived</span> <span class="n">Freq</span>
+<span class="o">##</span> <span class="mi">1</span>    <span class="mi">1</span><span class="n">st</span>   <span class="n">Male</span>       <span class="k">No</span>  <span class="mi">118</span>
+<span class="o">##</span> <span class="mi">2</span>    <span class="mi">2</span><span class="n">nd</span>   <span class="n">Male</span>       <span class="k">No</span>  <span class="mi">154</span>
+<span class="o">##</span> <span class="mi">3</span>    <span class="mi">3</span><span class="n">rd</span>   <span class="n">Male</span>       <span class="k">No</span>  <span class="mi">387</span>
+<span class="o">##</span> <span class="mi">4</span>   <span class="n">Crew</span>   <span class="n">Male</span>       <span class="k">No</span>  <span class="mi">670</span>
+<span class="o">##</span> <span class="mi">5</span>    <span class="mi">1</span><span class="n">st</span> <span class="n">Female</span>       <span class="k">No</span>    <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">6</span>    <span class="mi">2</span><span class="n">nd</span> <span class="n">Female</span>       <span class="k">No</span>   <span class="mi">13</span>
+<span class="o">##</span> <span class="mi">7</span>    <span class="mi">3</span><span class="n">rd</span> <span class="n">Female</span>       <span class="k">No</span>   <span class="mi">89</span>
+<span class="o">##</span> <span class="mi">8</span>   <span class="n">Crew</span> <span class="n">Female</span>       <span class="k">No</span>    <span class="mi">3</span>
+<span class="o">##</span> <span class="mi">9</span>    <span class="mi">1</span><span class="n">st</span>   <span class="n">Male</span>      <span class="n">Yes</span>   <span class="mi">57</span>
+<span class="o">##</span> <span class="mi">10</span>   <span class="mi">2</span><span class="n">nd</span>   <span class="n">Male</span>      <span class="n">Yes</span>   <span class="mi">14</span>
+<span class="o">##</span> <span class="mi">11</span>   <span class="mi">3</span><span class="n">rd</span>   <span class="n">Male</span>      <span class="n">Yes</span>   <span class="mi">75</span>
+<span class="o">##</span> <span class="mi">12</span>  <span class="n">Crew</span>   <span class="n">Male</span>      <span class="n">Yes</span>  <span class="mi">192</span>
+<span class="o">##</span> <span class="mi">13</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Female</span>      <span class="n">Yes</span>  <span class="mi">140</span>
+<span class="o">##</span> <span class="mi">14</span>   <span class="mi">2</span><span class="n">nd</span> <span class="n">Female</span>      <span class="n">Yes</span>   <span class="mi">80</span>
+<span class="o">##</span> <span class="mi">15</span>   <span class="mi">3</span><span class="n">rd</span> <span class="n">Female</span>      <span class="n">Yes</span>   <span class="mi">76</span>
+<span class="o">##</span> <span class="mi">16</span>  <span class="n">Crew</span> <span class="n">Female</span>      <span class="n">Yes</span>   <span class="mi">20</span>
 </pre></div>
 </td></tr></table>
 
@@ -3305,7 +3310,7 @@ package section.</p>
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-92-2.png" /></p>
 <h3 id="uni-bi-multivariate-plots">Uni-, Bi-, Multivariate Plots<a class="headerlink" href="#uni-bi-multivariate-plots" title="Permanent link">&para;</a></h3>
 <p><strong>Barchart</strong></p>
-<p>Like <code class="codehilite">barplot()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">barplot</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># y ~ x</span>
 <span class="nf">barchart</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">hp</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;horsepowers&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">)</span>
@@ -3334,7 +3339,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-96-1.png" /></p>
-<p><strong>Change <code class="codehilite">layout = c(x, y, page)</code></strong></p>
+<p><strong>Change <code class="codehilite"><span class="n">layout</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">barchart</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">hp</span> <span class="o">|</span> <span class="nf">factor</span><span class="p">(</span><span class="n">cyl</span><span class="p">),</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;horsepowers&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;cylinders - miles per gallon&#39;</span><span class="p">,</span> <span class="n">layout</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
@@ -3345,8 +3350,8 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-98-1.png" /></p>
-<p><strong>Change <code class="codehilite">aspect = 1</code></strong></p>
-<p><code class="codehilite">1</code> for square.</p>
+<p><strong>Change <code class="codehilite"><span class="n">aspect</span> <span class="o">=</span> <span class="mi">1</span></code></strong></p>
+<p><code class="codehilite"><span class="mi">1</span></code> for square.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">barchart</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">hp</span> <span class="o">|</span> <span class="nf">factor</span><span class="p">(</span><span class="n">cyl</span><span class="p">),</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;horsepowers&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">,</span> <span class="n">layout</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> <span class="n">aspect</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3359,11 +3364,11 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-100-1.png" /></p>
 <ul>
-<li><code class="codehilite">shingle()</code>; control the ranges.</li>
-<li><code class="codehilite">equal.count()</code>; grid.</li>
+<li><code class="codehilite"><span class="n">shingle</span><span class="p">()</span></code>; control the ranges.</li>
+<li><code class="codehilite"><span class="n">equal</span><span class="p">.</span><span class="k">count</span><span class="p">()</span></code>; grid.</li>
 </ul>
 <p><strong>Dotplot</strong></p>
-<p>Like <code class="codehilite">dotchart()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">dotchart</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">dotplot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3394,7 +3399,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-106-1.png" /></p>
-<p>Set <code class="codehilite">auto.key</code>.</p>
+<p>Set <code class="codehilite"><span class="n">auto</span><span class="p">.</span><span class="k">key</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3415,7 +3420,7 @@ package section.</p>
 </pre></div>
 </td></tr></table>
 
-<p>Use <code class="codehilite">auto.key</code>.</p>
+<p>Use <code class="codehilite"><span class="n">auto</span><span class="p">.</span><span class="k">key</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">dotplot</span><span class="p">(</span><span class="nf">factor</span><span class="p">(</span><span class="n">cyl</span><span class="p">)</span> <span class="o">~</span> <span class="n">mpg</span> <span class="o">|</span> <span class="nf">factor</span><span class="p">(</span><span class="n">gear</span><span class="p">),</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;gearbox - cylinders&#39;</span><span class="p">,</span> <span class="n">layout</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">),</span> <span class="n">groups</span> <span class="o">=</span> <span class="n">vs</span><span class="p">,</span> <span class="n">auto.key</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">space</span> <span class="o">=</span> <span class="s">&#39;right&#39;</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
@@ -3463,7 +3468,7 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-112-1.png" /></p>
 <p><strong>Stripplot</strong></p>
-<p>Like <code class="codehilite">stripchart()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">stripchart</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">stripplot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3490,7 +3495,7 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-117-1.png" /></p>
 <p><strong>Histogram</strong></p>
-<p>Like <code class="codehilite">hist()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">hist</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">histogram</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3502,7 +3507,7 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-119-1.png" /></p>
 <p><strong>Densityplot</strong></p>
-<p>Like <code class="codehilite">plot.density()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">plot</span><span class="p">.</span><span class="n">density</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">densityplot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;density&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3524,7 +3529,7 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-122-1.png" /></p>
 <p><strong>BWplot</strong></p>
-<p>Like <code class="codehilite">boxplot</code>.</p>
+<p>Like <code class="codehilite"><span class="n">boxplot</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">bwplot</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;density&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3546,14 +3551,14 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-126-1.png" /></p>
 <p><strong>QQmath</strong></p>
-<p>Like <code class="codehilite">qqnorm()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">qqnorm</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">qqmath</span><span class="p">(</span><span class="n">mpg</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;miles per gallon&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-127-1.png" /></p>
 <p><strong>XYplot</strong></p>
-<p>Like <code class="codehilite">plot()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">plot</span><span class="p">()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">xyplot</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">disp</span> <span class="o">|</span> <span class="nf">factor</span><span class="p">(</span><span class="n">cyl</span><span class="p">),</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">,</span> <span class="n">xlab</span> <span class="o">=</span> <span class="s">&#39;horsepower&#39;</span><span class="p">,</span> <span class="n">ylab</span> <span class="o">=</span> <span class="s">&#39;cylinders - miles per gallon&#39;</span><span class="p">,</span> <span class="n">layout</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
@@ -3604,26 +3609,26 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-133-1.png" /></p>
 <ul>
-<li><code class="codehilite">panel.points()</code>.</li>
-<li><code class="codehilite">panel.lines()</code>.</li>
-<li><code class="codehilite">panel.segments()</code>.</li>
-<li><code class="codehilite">panel.arrows()</code>.</li>
-<li><code class="codehilite">panel.rect()</code>.</li>
-<li><code class="codehilite">panel.polygon()</code>.</li>
-<li><code class="codehilite">panel.text()</code>.</li>
-<li><code class="codehilite">panel.abline()</code>.</li>
-<li><code class="codehilite">panel.lmline()</code>.</li>
-<li><code class="codehilite">panel.xyplot()</code>.</li>
-<li><code class="codehilite">panel.curve()</code>.</li>
-<li><code class="codehilite">panel.rug()</code>.</li>
-<li><code class="codehilite">panel.grid()</code>.</li>
-<li><code class="codehilite">panel.bwplot()</code>.</li>
-<li><code class="codehilite">panel.histogram()</code>.</li>
-<li><code class="codehilite">panel.loess()</code>.</li>
-<li><code class="codehilite">panel.violin()</code>.</li>
-<li><code class="codehilite">panel.smoothScatter()</code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">points</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">lines</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">segments</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">arrows</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">rect</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">polygon</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="nb">text</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">abline</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">lmline</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">xyplot</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">curve</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">rug</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">grid</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">bwplot</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">histogram</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">loess</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">violin</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">panel</span><span class="p">.</span><span class="n">smoothScatter</span><span class="p">()</span></code>.</li>
 <li>&hellip;</li>
-<li><code class="codehilite">par.settings</code>.</li>
+<li><code class="codehilite"><span class="n">par</span><span class="p">.</span><span class="n">settings</span></code>.</li>
 <li>&hellip;</li>
 </ul>
 <!-- -->
@@ -3843,15 +3848,15 @@ package section.</p>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-148-5.png" /></p>
 <p><strong>Trivariate plots</strong></p>
-<p>Like <code class="codehilite">image()</code>, <code class="codehilite">contour()</code>, <code class="codehilite">filled.contour()</code>, <code class="codehilite">persp()</code>, <code class="codehilite">symbols()</code>.</p>
+<p>Like <code class="codehilite"><span class="n">image</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">contour</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">filled</span><span class="p">.</span><span class="n">contour</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">persp</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">symbols</span><span class="p">()</span></code>.</p>
 <ul>
-<li><code class="codehilite">levelplot()</code>.</li>
-<li><code class="codehilite">contourplot()</code>.</li>
-<li><code class="codehilite">cloud()</code>.</li>
-<li><code class="codehilite">wireframe()</code>.</li>
+<li><code class="codehilite"><span class="n">levelplot</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">contourplot</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">cloud</span><span class="p">()</span></code>.</li>
+<li><code class="codehilite"><span class="n">wireframe</span><span class="p">()</span></code>.</li>
 </ul>
 <h2 id="additional-packages">Additional Packages<a class="headerlink" href="#additional-packages" title="Permanent link">&para;</a></h2>
-<h3 id="the-sm-package-density">The <code class="codehilite">sm</code> Package (density)<a class="headerlink" href="#the-sm-package-density" title="Permanent link">&para;</a></h3>
+<h3 id="the-sm-package-density">The <code class="codehilite"><span class="n">sm</span></code> Package (density)<a class="headerlink" href="#the-sm-package-density" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3882,7 +3887,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-150-1.png" /></p>
-<h3 id="the-car-package-scatter">The <code class="codehilite">car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter" title="Permanent link">&para;</a></h3>
+<h3 id="the-car-package-scatter">The <code class="codehilite"><span class="n">car</span></code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3899,13 +3904,13 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-153-1.png" /></p>
-<p><code class="codehilite">scatterplotMatrix == spm</code>.</p>
+<p><code class="codehilite"><span class="n">scatterplotMatrix</span> <span class="o">==</span> <span class="n">spm</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">spm</span><span class="p">(</span> <span class="o">~</span><span class="n">mpg</span> <span class="o">+</span> <span class="n">disp</span> <span class="o">+</span> <span class="n">drat</span> <span class="o">+</span> <span class="n">wt</span> <span class="o">|</span> <span class="n">cyl</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">mtcars</span><span class="p">,</span> <span class="n">main</span> <span class="o">=</span> <span class="s">&#39;Title&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-154-1.png" /></p>
-<h3 id="the-vioplot-package-boxplot">The <code class="codehilite">vioplot</code> Package (boxplot)<a class="headerlink" href="#the-vioplot-package-boxplot" title="Permanent link">&para;</a></h3>
+<h3 id="the-vioplot-package-boxplot">The <code class="codehilite"><span class="n">vioplot</span></code> Package (boxplot)<a class="headerlink" href="#the-vioplot-package-boxplot" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vioplot</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3928,7 +3933,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-156-1.png" /></p>
-<h3 id="the-vcd-package-count-correlation-mosaic">The <code class="codehilite">vcd</code> Package (count, correlation, mosaic)<a class="headerlink" href="#the-vcd-package-count-correlation-mosaic" title="Permanent link">&para;</a></h3>
+<h3 id="the-vcd-package-count-correlation-mosaic">The <code class="codehilite"><span class="n">vcd</span></code> Package (count, correlation, mosaic)<a class="headerlink" href="#the-vcd-package-count-correlation-mosaic" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">vcd</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -3945,11 +3950,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     cyl
-## gear  8  6  4
-##    3 12  2  1
-##    4  0  4  8
-##    5  2  1  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">cyl</span>
+<span class="o">##</span> <span class="n">gear</span>  <span class="mi">8</span>  <span class="mi">6</span>  <span class="mi">4</span>
+<span class="o">##</span>    <span class="mi">3</span> <span class="mi">12</span>  <span class="mi">2</span>  <span class="mi">1</span>
+<span class="o">##</span>    <span class="mi">4</span>  <span class="mi">0</span>  <span class="mi">4</span>  <span class="mi">8</span>
+<span class="o">##</span>    <span class="mi">5</span>  <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -3969,11 +3974,11 @@ package section.</p>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     cyl
-## gear  8  6  4
-##    3 12  2  1
-##    4  0  4  8
-##    5  2  1  2
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">cyl</span>
+<span class="o">##</span> <span class="n">gear</span>  <span class="mi">8</span>  <span class="mi">6</span>  <span class="mi">4</span>
+<span class="o">##</span>    <span class="mi">3</span> <span class="mi">12</span>  <span class="mi">2</span>  <span class="mi">1</span>
+<span class="o">##</span>    <span class="mi">4</span>  <span class="mi">0</span>  <span class="mi">4</span>  <span class="mi">8</span>
+<span class="o">##</span>    <span class="mi">5</span>  <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -4017,7 +4022,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-163-1.png" /></p>
-<h3 id="the-hexbin-package-scatter">The <code class="codehilite">hexbin</code> Package (scatter)<a class="headerlink" href="#the-hexbin-package-scatter" title="Permanent link">&para;</a></h3>
+<h3 id="the-hexbin-package-scatter">The <code class="codehilite"><span class="n">hexbin</span></code> Package (scatter)<a class="headerlink" href="#the-hexbin-package-scatter" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">hexbin</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4099,7 +4104,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-170-1.png" /></p>
-<p><strong>Mix <code class="codehilite">lattice</code> and <code class="codehilite">hexbin</code></strong></p>
+<p><strong>Mix <code class="codehilite"><span class="n">lattice</span></code> and <code class="codehilite"><span class="n">hexbin</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">data</span><span class="p">(</span><span class="n">gvhd10</span><span class="p">,</span> <span class="n">package</span> <span class="o">=</span> <span class="s">&#39;latticeExtra&#39;</span><span class="p">)</span>
@@ -4114,7 +4119,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-172-1.png" /></p>
-<h3 id="the-car-package-scatter_1">The <code class="codehilite">car</code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter_1" title="Permanent link">&para;</a></h3>
+<h3 id="the-car-package-scatter_1">The <code class="codehilite"><span class="n">car</span></code> Package (scatter)<a class="headerlink" href="#the-car-package-scatter_1" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4127,7 +4132,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-174-1.png" /></p>
-<h3 id="the-scatterplot3d-package">The <code class="codehilite">scatterplot3d</code> Package<a class="headerlink" href="#the-scatterplot3d-package" title="Permanent link">&para;</a></h3>
+<h3 id="the-scatterplot3d-package">The <code class="codehilite"><span class="n">scatterplot3d</span></code> Package<a class="headerlink" href="#the-scatterplot3d-package" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">scatterplot3d</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4156,7 +4161,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-178-1.png" /></p>
-<h3 id="the-rgl-package-interactive">The <code class="codehilite">rgl</code> Package (interactive)<a class="headerlink" href="#the-rgl-package-interactive" title="Permanent link">&para;</a></h3>
+<h3 id="the-rgl-package-interactive">The <code class="codehilite"><span class="n">rgl</span></code> Package (interactive)<a class="headerlink" href="#the-rgl-package-interactive" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">rgl</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4167,13 +4172,13 @@ package section.</p>
 </pre></div>
 </td></tr></table>
 
-<h3 id="the-cluster-package-dendrogram">The <code class="codehilite">cluster</code> Package (dendrogram)<a class="headerlink" href="#the-cluster-package-dendrogram" title="Permanent link">&para;</a></h3>
+<h3 id="the-cluster-package-dendrogram">The <code class="codehilite"><span class="k">cluster</span></code> Package (dendrogram)<a class="headerlink" href="#the-cluster-package-dendrogram" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Dendrogram</strong></p>
-<p>Use the <code class="codehilite">iris</code> dataset.</p>
+<p>Use the <code class="codehilite"><span class="n">iris</span></code> dataset.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">subset</span> <span class="o">&lt;-</span> <span class="nf">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">150</span><span class="p">,</span> <span class="m">20</span><span class="p">)</span>
@@ -4185,10 +4190,10 @@ package section.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] &quot;setosa&quot;     &quot;versicolor&quot; &quot;setosa&quot;     &quot;virginica&quot;  &quot;virginica&quot; 
-##  [6] &quot;setosa&quot;     &quot;setosa&quot;     &quot;setosa&quot;     &quot;virginica&quot;  &quot;setosa&quot;    
-## [11] &quot;versicolor&quot; &quot;versicolor&quot; &quot;virginica&quot;  &quot;setosa&quot;     &quot;versicolor&quot;
-## [16] &quot;versicolor&quot; &quot;setosa&quot;     &quot;virginica&quot;  &quot;versicolor&quot; &quot;versicolor&quot;
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;setosa&quot;</span>     <span class="ss">&quot;versicolor&quot;</span> <span class="ss">&quot;setosa&quot;</span>     <span class="ss">&quot;virginica&quot;</span>  <span class="ss">&quot;virginica&quot;</span> 
+<span class="o">##</span>  <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="ss">&quot;setosa&quot;</span>     <span class="ss">&quot;setosa&quot;</span>     <span class="ss">&quot;setosa&quot;</span>     <span class="ss">&quot;virginica&quot;</span>  <span class="ss">&quot;setosa&quot;</span>    
+<span class="o">##</span> <span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="ss">&quot;versicolor&quot;</span> <span class="ss">&quot;versicolor&quot;</span> <span class="ss">&quot;virginica&quot;</span>  <span class="ss">&quot;setosa&quot;</span>     <span class="ss">&quot;versicolor&quot;</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="ss">&quot;versicolor&quot;</span> <span class="ss">&quot;setosa&quot;</span>     <span class="ss">&quot;virginica&quot;</span>  <span class="ss">&quot;versicolor&quot;</span> <span class="ss">&quot;versicolor&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -4209,7 +4214,7 @@ package section.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-182-1.png" /><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-182-2.png" /></p>
-<h3 id="the-extracat-package-splom">The <code class="codehilite">extracat</code> Package (splom)<a class="headerlink" href="#the-extracat-package-splom" title="Permanent link">&para;</a></h3>
+<h3 id="the-extracat-package-splom">The <code class="codehilite"><span class="n">extracat</span></code> Package (splom)<a class="headerlink" href="#the-extracat-package-splom" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">extracat</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4248,22 +4253,22 @@ marginal distribution of NA.</p>
 13
 14
 15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    log_virus           age            income          healthy     
-##  Min.   : 0.000   Min.   :21.00   Min.   : 1.000   Min.   :16.67  
-##  1st Qu.: 0.000   1st Qu.:37.00   1st Qu.: 2.000   1st Qu.:35.00  
-##  Median : 0.000   Median :43.00   Median : 3.000   Median :45.37  
-##  Mean   : 4.324   Mean   :42.56   Mean   : 3.377   Mean   :44.40  
-##  3rd Qu.: 9.105   3rd Qu.:48.00   3rd Qu.: 5.000   3rd Qu.:54.89  
-##  Max.   :13.442   Max.   :70.00   Max.   :10.000   Max.   :70.11  
-##  NA&#39;s   :179      NA&#39;s   :24      NA&#39;s   :38       NA&#39;s   :24     
-##      mental           damage        treatment     
-##  Min.   :0.0000   Min.   :1.000   Min.   :0.0000  
-##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:0.0000  
-##  Median :0.0000   Median :4.000   Median :1.0000  
-##  Mean   :0.2717   Mean   :3.578   Mean   :0.8602  
-##  3rd Qu.:1.0000   3rd Qu.:5.000   3rd Qu.:2.0000  
-##  Max.   :1.0000   Max.   :5.000   Max.   :2.0000  
-##  NA&#39;s   :24       NA&#39;s   :63      NA&#39;s   :24
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">log_virus</span>           <span class="n">age</span>            <span class="n">income</span>          <span class="n">healthy</span>     
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">000</span>   <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">21</span><span class="p">.</span><span class="mi">00</span>   <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span> <span class="mi">1</span><span class="p">.</span><span class="mi">000</span>   <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">16</span><span class="p">.</span><span class="mi">67</span>  
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">000</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">37</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">000</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">35</span><span class="p">.</span><span class="mi">00</span>  
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">000</span>   <span class="n">Median</span> <span class="p">:</span><span class="mi">43</span><span class="p">.</span><span class="mi">00</span>   <span class="n">Median</span> <span class="p">:</span> <span class="mi">3</span><span class="p">.</span><span class="mi">000</span>   <span class="n">Median</span> <span class="p">:</span><span class="mi">45</span><span class="p">.</span><span class="mi">37</span>  
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span> <span class="mi">4</span><span class="p">.</span><span class="mi">324</span>   <span class="n">Mean</span>   <span class="p">:</span><span class="mi">42</span><span class="p">.</span><span class="mi">56</span>   <span class="n">Mean</span>   <span class="p">:</span> <span class="mi">3</span><span class="p">.</span><span class="mi">377</span>   <span class="n">Mean</span>   <span class="p">:</span><span class="mi">44</span><span class="p">.</span><span class="mi">40</span>  
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">9</span><span class="p">.</span><span class="mi">105</span>   <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">48</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">5</span><span class="p">.</span><span class="mi">000</span>   <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">54</span><span class="p">.</span><span class="mi">89</span>  
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">13</span><span class="p">.</span><span class="mi">442</span>   <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">70</span><span class="p">.</span><span class="mi">00</span>   <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">10</span><span class="p">.</span><span class="mi">000</span>   <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">70</span><span class="p">.</span><span class="mi">11</span>  
+<span class="o">##</span>  <span class="n">NA</span><span class="s1">&#39;s   :179      NA&#39;</span><span class="n">s</span>   <span class="p">:</span><span class="mi">24</span>      <span class="n">NA</span><span class="s1">&#39;s   :38       NA&#39;</span><span class="n">s</span>   <span class="p">:</span><span class="mi">24</span>     
+<span class="o">##</span>      <span class="n">mental</span>           <span class="n">damage</span>        <span class="n">treatment</span>     
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">0000</span>   <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">000</span>   <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">0000</span>  
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">0000</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">3</span><span class="p">.</span><span class="mi">000</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">0000</span>  
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">0000</span>   <span class="n">Median</span> <span class="p">:</span><span class="mi">4</span><span class="p">.</span><span class="mi">000</span>   <span class="n">Median</span> <span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0000</span>  
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">2717</span>   <span class="n">Mean</span>   <span class="p">:</span><span class="mi">3</span><span class="p">.</span><span class="mi">578</span>   <span class="n">Mean</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">8602</span>  
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0000</span>   <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">5</span><span class="p">.</span><span class="mi">000</span>   <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">2</span><span class="p">.</span><span class="mi">0000</span>  
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0000</span>   <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">5</span><span class="p">.</span><span class="mi">000</span>   <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">2</span><span class="p">.</span><span class="mi">0000</span>  
+<span class="o">##</span>  <span class="n">NA</span><span class="s1">&#39;s   :24       NA&#39;</span><span class="n">s</span>   <span class="p">:</span><span class="mi">63</span>      <span class="n">NA</span><span class="err">&#39;</span><span class="n">s</span>   <span class="p">:</span><span class="mi">24</span>
 </pre></div>
 </td></tr></table>
 
@@ -4303,7 +4308,7 @@ marginal distribution of NA.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-184-3.png" /></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## viewport[base]
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">##</span><span class="w"> </span><span class="n">viewport</span><span class="o">[</span><span class="n">base</span><span class="o">]</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
@@ -4318,7 +4323,7 @@ marginal distribution of NA.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-184-4.png" /></p>
-<h3 id="the-ash-package-density">The <code class="codehilite">ash</code> Package (density)<a class="headerlink" href="#the-ash-package-density" title="Permanent link">&para;</a></h3>
+<h3 id="the-ash-package-density">The <code class="codehilite"><span class="n">ash</span></code> Package (density)<a class="headerlink" href="#the-ash-package-density" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ash</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4328,12 +4333,12 @@ marginal distribution of NA.</p>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;ash estimate nonzero outside interval ab&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;ash estimate nonzero outside interval ab&quot;</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-186-1.png" /></p>
-<h3 id="the-kernsmooth-package-density">The <code class="codehilite">KernSmooth</code> Package (density)<a class="headerlink" href="#the-kernsmooth-package-density" title="Permanent link">&para;</a></h3>
+<h3 id="the-kernsmooth-package-density">The <code class="codehilite"><span class="n">KernSmooth</span></code> Package (density)<a class="headerlink" href="#the-kernsmooth-package-density" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">KernSmooth</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4352,7 +4357,7 @@ marginal distribution of NA.</p>
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_Basics/unnamed-chunk-188-1.png" /></p>
-<h3 id="the-corrplot-package-correlation">The <code class="codehilite">corrplot</code> Package (correlation)<a class="headerlink" href="#the-corrplot-package-correlation" title="Permanent link">&para;</a></h3>
+<h3 id="the-corrplot-package-correlation">The <code class="codehilite"><span class="n">corrplot</span></code> Package (correlation)<a class="headerlink" href="#the-corrplot-package-correlation" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">corrplot</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -4432,25 +4437,17 @@ marginal distribution of NA.</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

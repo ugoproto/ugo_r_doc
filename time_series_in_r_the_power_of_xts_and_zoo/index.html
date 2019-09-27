@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Time Series in R, The Power of xts and zoo
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -554,35 +559,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-extensible-time" title="Introduction to eXtensible Time" class="md-nav__link">
+  <a href="#introduction-to-extensible-time" class="md-nav__link">
     Introduction to eXtensible Time
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-order-of-business-basic-manipulations" title="First Order of Business -- Basic Manipulations" class="md-nav__link">
+  <a href="#first-order-of-business-basic-manipulations" class="md-nav__link">
     First Order of Business -- Basic Manipulations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#merging-and-modifying-time-series" title="Merging and modifying time series" class="md-nav__link">
+  <a href="#merging-and-modifying-time-series" class="md-nav__link">
     Merging and modifying time series
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-aggregate-by-time" title="Apply and aggregate by time" class="md-nav__link">
+  <a href="#apply-and-aggregate-by-time" class="md-nav__link">
     Apply and aggregate by time
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-features-of-xts" title="Extra features of xts" class="md-nav__link">
+  <a href="#extra-features-of-xts" class="md-nav__link">
     Extra features of xts
   </a>
   
@@ -911,35 +916,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-extensible-time" title="Introduction to eXtensible Time" class="md-nav__link">
+  <a href="#introduction-to-extensible-time" class="md-nav__link">
     Introduction to eXtensible Time
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-order-of-business-basic-manipulations" title="First Order of Business -- Basic Manipulations" class="md-nav__link">
+  <a href="#first-order-of-business-basic-manipulations" class="md-nav__link">
     First Order of Business -- Basic Manipulations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#merging-and-modifying-time-series" title="Merging and modifying time series" class="md-nav__link">
+  <a href="#merging-and-modifying-time-series" class="md-nav__link">
     Merging and modifying time series
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apply-and-aggregate-by-time" title="Apply and aggregate by time" class="md-nav__link">
+  <a href="#apply-and-aggregate-by-time" class="md-nav__link">
     Apply and aggregate by time
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-features-of-xts" title="Extra features of xts" class="md-nav__link">
+  <a href="#extra-features-of-xts" class="md-nav__link">
     Extra features of xts
   </a>
   
@@ -969,16 +974,16 @@
                 <p><strong>Foreword</strong></p>
 <ul>
 <li>Snippets and results.</li>
-<li>Source: &lsquo;Time Series in R, The Power of <code class="codehilite">xts</code> and <code class="codehilite">zoo</code>&lsquo; from DataCamp fitted into Jupyter/IPython using the IRkernel.</li>
+<li>Source: &lsquo;Time Series in R, The Power of <code class="codehilite"><span class="n">xts</span></code> and <code class="codehilite"><span class="n">zoo</span></code>&lsquo; from DataCamp fitted into Jupyter/IPython using the IRkernel.</li>
 </ul>
 <hr />
 <h2 id="introduction-to-extensible-time">Introduction to eXtensible Time<a class="headerlink" href="#introduction-to-extensible-time" title="Permanent link">&para;</a></h2>
-<p><strong>What is an <code class="codehilite">xts</code> object</strong></p>
-<p><code class="codehilite">xts</code>, a constructor or a subclass that inherits behavior from parents. <code class="codehilite">xts</code> (as a subclass) extends the popular <code class="codehilite">zoo</code> class (as a parent). Most <code class="codehilite">zoo</code> methods work for <code class="codehilite">xts</code>. </p>
-<p><code class="codehilite">xts</code> is a matrix objects; subsets always preserve the matrix form. </p>
-<p><code class="codehilite">xts</code> are indexed by a formal time object. You can time-stamp the data.</p>
-<p>The main <code class="codehilite">xts</code> constructor two most important arguments are <code class="codehilite">x</code> for the data and <code class="codehilite">order.by</code> for the index. <code class="codehilite">x</code> must be a vector or matrix. <code class="codehilite">order.by</code> is a vector of the same length or number of rows of <code class="codehilite">x</code>; it must be a proper time or date object and it must be in increasing order.</p>
-<p><code class="codehilite">xts</code> also allows you to bind arbitrary key-value attributes to your data. This lets you keep metadata about your object inside your object.</p>
+<p><strong>What is an <code class="codehilite"><span class="n">xts</span></code> object</strong></p>
+<p><code class="codehilite"><span class="n">xts</span></code>, a constructor or a subclass that inherits behavior from parents. <code class="codehilite"><span class="n">xts</span></code> (as a subclass) extends the popular <code class="codehilite"><span class="n">zoo</span></code> class (as a parent). Most <code class="codehilite"><span class="n">zoo</span></code> methods work for <code class="codehilite"><span class="n">xts</span></code>. </p>
+<p><code class="codehilite"><span class="n">xts</span></code> is a matrix objects; subsets always preserve the matrix form. </p>
+<p><code class="codehilite"><span class="n">xts</span></code> are indexed by a formal time object. You can time-stamp the data.</p>
+<p>The main <code class="codehilite"><span class="n">xts</span></code> constructor two most important arguments are <code class="codehilite"><span class="n">x</span></code> for the data and <code class="codehilite"><span class="k">order</span><span class="p">.</span><span class="k">by</span></code> for the index. <code class="codehilite"><span class="n">x</span></code> must be a vector or matrix. <code class="codehilite"><span class="k">order</span><span class="p">.</span><span class="k">by</span></code> is a vector of the same length or number of rows of <code class="codehilite"><span class="n">x</span></code>; it must be a proper time or date object and it must be in increasing order.</p>
+<p><code class="codehilite"><span class="n">xts</span></code> also allows you to bind arbitrary key-value attributes to your data. This lets you keep metadata about your object inside your object.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -989,7 +994,7 @@
 </pre></div>
 </td></tr></table>
 
-<p><strong>A first <code class="codehilite">xts</code> object</strong></p>
+<p><strong>A first <code class="codehilite"><span class="n">xts</span></code> object</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1025,15 +1030,15 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           [,1] [,2]
-2016-06-01    1    2
-2016-06-02    1    2
-2016-06-03    1    2
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           <span class="p">[,</span><span class="mi">1</span><span class="p">]</span> <span class="p">[,</span><span class="mi">2</span><span class="p">]</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">01</span>    <span class="mi">1</span>    <span class="mi">2</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">02</span>    <span class="mi">1</span>    <span class="mi">2</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">03</span>    <span class="mi">1</span>    <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>More than a matrix</strong></p>
-<p><code class="codehilite">xts</code> objects are normal R matrices, but with special powers.</p>
+<p><code class="codehilite"><span class="n">xts</span></code> objects are normal R matrices, but with special powers.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># View the structure of ex_matrix</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">ex_matrix</span><span class="p">)</span>
@@ -1044,11 +1049,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>An ‘xts’ object on 2016-06-01/2016-06-03 containing:
-  Data: num [1:3, 1:2] 1 1 1 2 2 2
-  Indexed by objects of class: [Date] TZ: UTC
-  xts Attributes:  
- NULL
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">An</span><span class="w"> </span><span class="err">‘</span><span class="n">xts</span><span class="err">’</span><span class="w"> </span><span class="k">object</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">01</span><span class="o">/</span><span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">03</span><span class="w"> </span><span class="nl">containing</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="k">Data</span><span class="err">:</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">[</span><span class="n">1:3, 1:2</span><span class="o">]</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">  </span><span class="n">Indexed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">objects</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">class</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">Date</span><span class="o">]</span><span class="w"> </span><span class="nl">TZ</span><span class="p">:</span><span class="w"> </span><span class="n">UTC</span><span class="w"></span>
+<span class="w">  </span><span class="n">xts</span><span class="w"> </span><span class="nl">Attributes</span><span class="p">:</span><span class="w">  </span>
+<span class="w"> </span><span class="k">NULL</span><span class="w"></span>
 </pre></div>
 </td></tr></table>
 
@@ -1065,8 +1070,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           [,1]
-2016-06-03    2
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">03</span>    <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -1147,31 +1152,31 @@
 16
 17
 18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>                 [,1]
-2016-01-01  0.2261174
-2016-01-02 -0.2142610
-2016-01-03 -0.1993476
-2016-01-04  0.1339522
-2016-01-05  0.9605763
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>                 <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">2261174</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">2142610</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">03</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">1993476</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">04</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">1339522</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">05</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">9605763</span>
 
 
 
-[1] &quot;1899-05-08 EST&quot;
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;1899-05-08 EST&quot;</span>
 
 
 
-                 [,1]
-2016-01-01  0.2261174
-2016-01-02 -0.2142610
-2016-01-03 -0.1993476
-2016-01-04  0.1339522
-2016-01-05  0.9605763
+                 <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">2261174</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">2142610</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">03</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">1993476</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">04</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">1339522</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">05</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">9605763</span>
 </pre></div>
 </td></tr></table>
 
 <p><strong>Deconstructing xts</strong></p>
 <p>Separate a time series into its core data and index attributes for additional analysis and manipulation.</p>
-<p>Functions are methods from the <code class="codehilite">zoo</code> class.</p>
+<p>Functions are methods from the <code class="codehilite"><span class="n">zoo</span></code> class.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1199,7 +1204,7 @@
 <p>&lsquo;matrix&rsquo;</p>
 <p>&lsquo;Date&rsquo;</p>
 <p><strong>Time-based indices</strong></p>
-<p><code class="codehilite">xts</code> objects get their power from the index attribute that holds the time dimension. One major difference between <code class="codehilite">xts</code> and most other time series objects in R is the ability to use any one of various classes that are used to represent time. Whether <code class="codehilite">POSIXct</code>, <code class="codehilite">Date</code>, or some other class, xts will convert this into an internal form to make subsetting as natural to the user as possible.</p>
+<p><code class="codehilite"><span class="n">xts</span></code> objects get their power from the index attribute that holds the time dimension. One major difference between <code class="codehilite"><span class="n">xts</span></code> and most other time series objects in R is the ability to use any one of various classes that are used to represent time. Whether <code class="codehilite"><span class="n">POSIXct</span></code>, <code class="codehilite"><span class="nb">Date</span></code>, or some other class, xts will convert this into an internal form to make subsetting as natural to the user as possible.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1239,22 +1244,22 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           [,1]
-2016-01-01    1
-2016-01-02    2
-2016-01-03    3
-2016-01-04    4
-2016-01-05    5
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span>    <span class="mi">1</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span>    <span class="mi">2</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">03</span>    <span class="mi">3</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">04</span>    <span class="mi">4</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">05</span>    <span class="mi">5</span>
 
 
 
-     [,1]
+     <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="first-order-of-business-basic-manipulations">First Order of Business &ndash; Basic Manipulations<a class="headerlink" href="#first-order-of-business-basic-manipulations" title="Permanent link">&para;</a></h2>
 <p><strong>Converting xts objects</strong></p>
-<p><code class="codehilite">xts</code> provides methods to convert all of the major objects you are likely to come across - suitable native R types like matrix, data.frame, and ts are supported, as well as contributed ones such as <code class="codehilite">timeSeries</code>, <code class="codehilite">fts</code> and of course <code class="codehilite">zoo</code>. <code class="codehilite">as.xts</code> is the workhorse function to do the conversions to <code class="codehilite">xts</code>, and similar functions will provide the reverse behavior.</p>
+<p><code class="codehilite"><span class="n">xts</span></code> provides methods to convert all of the major objects you are likely to come across - suitable native R types like matrix, data.frame, and ts are supported, as well as contributed ones such as <code class="codehilite"><span class="n">timeSeries</span></code>, <code class="codehilite"><span class="n">fts</span></code> and of course <code class="codehilite"><span class="n">zoo</span></code>. <code class="codehilite"><span class="k">as</span><span class="p">.</span><span class="n">xts</span></code> is the workhorse function to do the conversions to <code class="codehilite"><span class="n">xts</span></code>, and similar functions will provide the reverse behavior.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># using a R dataset</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">austres</span><span class="p">)</span>
@@ -1299,12 +1304,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           [,1]
-1971 Q2 13067.3
-1971 Q3 13130.5
-1971 Q4 13198.4
-1972 Q1 13254.2
-1972 Q2 13303.7
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
+<span class="mi">1971</span> <span class="n">Q2</span> <span class="mi">13067</span><span class="p">.</span><span class="mi">3</span>
+<span class="mi">1971</span> <span class="n">Q3</span> <span class="mi">13130</span><span class="p">.</span><span class="mi">5</span>
+<span class="mi">1971</span> <span class="n">Q4</span> <span class="mi">13198</span><span class="p">.</span><span class="mi">4</span>
+<span class="mi">1972</span> <span class="n">Q1</span> <span class="mi">13254</span><span class="p">.</span><span class="mi">2</span>
+<span class="mi">1972</span> <span class="n">Q2</span> <span class="mi">13303</span><span class="p">.</span><span class="mi">7</span>
 </pre></div>
 </td></tr></table>
 
@@ -1329,8 +1334,8 @@
 </table>
 
 <p><strong>Importing data</strong></p>
-<p>Read raw data from files on disk or the web and convert data to <code class="codehilite">xts</code>.</p>
-<p>Read the same data into a <code class="codehilite">zoo</code> object using read.zoo and convert the <code class="codehilite">zoo</code> into an <code class="codehilite">xts</code> object.</p>
+<p>Read raw data from files on disk or the web and convert data to <code class="codehilite"><span class="n">xts</span></code>.</p>
+<p>Read the same data into a <code class="codehilite"><span class="n">zoo</span></code> object using read.zoo and convert the <code class="codehilite"><span class="n">zoo</span></code> into an <code class="codehilite"><span class="n">xts</span></code> object.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create dat by reading tmp_file</span>
@@ -1355,9 +1360,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>     a b
-&amp;lt;NA&amp;gt; 1 3
-&amp;lt;NA&amp;gt; 2 4
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>     <span class="n">a</span> <span class="n">b</span>
+<span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span> <span class="mi">1</span> <span class="mi">3</span>
+<span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span> <span class="mi">2</span> <span class="mi">4</span>
 </pre></div>
 </td></tr></table>
 
@@ -1371,9 +1376,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           a b
-2015-01-02 1 3
-2015-02-03 2 4
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>           <span class="n">a</span> <span class="n">b</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span> <span class="mi">1</span> <span class="mi">3</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">03</span> <span class="mi">2</span> <span class="mi">4</span>
 </pre></div>
 </td></tr></table>
 
@@ -1434,12 +1439,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>         [,1]
-jan 1749 58.0
-fév 1749 62.6
-mar 1749 70.0
-avr 1749 55.7
-mai 1749 85.0
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>         <span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">jan</span> <span class="mi">1749</span> <span class="mi">58</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">fév</span> <span class="mi">1749</span> <span class="mi">62</span><span class="p">.</span><span class="mi">6</span>
+<span class="n">mar</span> <span class="mi">1749</span> <span class="mi">70</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">avr</span> <span class="mi">1749</span> <span class="mi">55</span><span class="p">.</span><span class="mi">7</span>
+<span class="n">mai</span> <span class="mi">1749</span> <span class="mi">85</span><span class="p">.</span><span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
@@ -1477,7 +1482,7 @@ mai 1749 85.0
 
 <p><strong>Extracting recurring intraday intervals</strong></p>
 <p>Most common data &ldquo;in the wild&rdquo; is daily. On ocassion you may find yourself working with intraday data, that is date plus times.</p>
-<p>You can slice days easily by using special notation in the <code class="codehilite">i =</code> argument to the single bracket extraction (i.e. <code class="codehilite">[i,j]</code>).</p>
+<p>You can slice days easily by using special notation in the <code class="codehilite"><span class="n">i</span> <span class="o">=</span></code> argument to the single bracket extraction (i.e. <code class="codehilite"><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span></code>).</p>
 <p>Code:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1498,7 +1503,7 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Alternating extraction techniques</strong></p>
-<p>Often times you may need to subset an existing time series with a set of Dates, or time-based objects. These might be from <code class="codehilite">as.Date()</code>, or <code class="codehilite">as.POSIXct()</code>, or a variety of other classes.</p>
+<p>Often times you may need to subset an existing time series with a set of Dates, or time-based objects. These might be from <code class="codehilite"><span class="k">as</span><span class="p">.</span><span class="nb">Date</span><span class="p">()</span></code>, or <code class="codehilite"><span class="k">as</span><span class="p">.</span><span class="n">POSIXct</span><span class="p">()</span></code>, or a variety of other classes.</p>
 <p>Code:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1555,7 +1560,7 @@ mai 1749 85.0
 </pre></div>
 </td></tr></table>
 
-<p><strong>Find the <code class="codehilite">first</code> or <code class="codehilite">last</code> period of time</strong></p>
+<p><strong>Find the <code class="codehilite"><span class="k">first</span></code> or <code class="codehilite"><span class="k">last</span></code> period of time</strong></p>
 <p>Sometimes you need to locate data by relative time. Instead of using an absolute offset, you describe a position relative in time. A simple example would be something like the <em>last 3 weeks</em> of a series, or the <em>first day of current month</em>.</p>
 <p>Code:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1576,7 +1581,7 @@ mai 1749 85.0
 </pre></div>
 </td></tr></table>
 
-<p><strong>Combining <code class="codehilite">first</code> and <code class="codehilite">last</code></strong></p>
+<p><strong>Combining <code class="codehilite"><span class="k">first</span></code> and <code class="codehilite"><span class="k">last</span></code></strong></p>
 <p>Code:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1598,7 +1603,7 @@ mai 1749 85.0
 <li>Manually shift index values - i.e. use lag().</li>
 <li>Reindex your data (before or after the calculation).</li>
 </ol>
-<p><code class="codehilite">xts</code> respects time and will only return the intersection of times when doing various mathematical operations. First option:</p>
+<p><code class="codehilite"><span class="n">xts</span></code> respects time and will only return the intersection of times when doing various mathematical operations. First option:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1630,10 +1635,10 @@ mai 1749 85.0
 </td></tr></table>
 
 <h2 id="merging-and-modifying-time-series">Merging and modifying time series<a class="headerlink" href="#merging-and-modifying-time-series" title="Permanent link">&para;</a></h2>
-<p><strong>Combining <code class="codehilite">xts</code> by column with <code class="codehilite">merge</code></strong></p>
-<p><code class="codehilite">xts</code> makes it easy to join data by column and row using a few different functions.  </p>
-<p><code class="codehilite">xts</code> objects must be of identical type (e.g. integer + integer), or be POSIXct dates vector, or be atomic vectors of the same type (e.g. numeric), or be a single NA. It does not work on data.frames with various column types.</p>
-<p>One of the most important functions to accomplish this is <code class="codehilite">merge</code>. It works like a <code class="codehilite">cbind</code> or and SQL <code class="codehilite">join</code>:</p>
+<p><strong>Combining <code class="codehilite"><span class="n">xts</span></code> by column with <code class="codehilite"><span class="n">merge</span></code></strong></p>
+<p><code class="codehilite"><span class="n">xts</span></code> makes it easy to join data by column and row using a few different functions.  </p>
+<p><code class="codehilite"><span class="n">xts</span></code> objects must be of identical type (e.g. integer + integer), or be POSIXct dates vector, or be atomic vectors of the same type (e.g. numeric), or be a single NA. It does not work on data.frames with various column types.</p>
+<p>One of the most important functions to accomplish this is <code class="codehilite"><span class="n">merge</span></code>. It works like a <code class="codehilite"><span class="n">cbind</span></code> or and SQL <code class="codehilite"><span class="k">join</span></code>:</p>
 <ol>
 <li>inner join (and)</li>
 <li>outer join (or)</li>
@@ -1662,7 +1667,7 @@ mai 1749 85.0
 </pre></div>
 </td></tr></table>
 
-<p><strong>Combining <code class="codehilite">xts</code> by row with <code class="codehilite">rbind</code></strong></p>
+<p><strong>Combining <code class="codehilite"><span class="n">xts</span></code> by row with <code class="codehilite"><span class="n">rbind</span></code></strong></p>
 <p>Easy to add new rows to your data.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1677,8 +1682,8 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Fill missing values using last or previous observation</strong></p>
-<p>The <code class="codehilite">na.locf</code> function takes the last-observation-carried-forward approach.</p>
-<p>The <code class="codehilite">xts</code> package leverages the power of <code class="codehilite">zoo</code> for help with this. <code class="codehilite">zoo</code> provides a variety of missing data handling functions which are usable by <code class="codehilite">xts</code>, and very handy.</p>
+<p>The <code class="codehilite"><span class="n">na</span><span class="p">.</span><span class="n">locf</span></code> function takes the last-observation-carried-forward approach.</p>
+<p>The <code class="codehilite"><span class="n">xts</span></code> package leverages the power of <code class="codehilite"><span class="n">zoo</span></code> for help with this. <code class="codehilite"><span class="n">zoo</span></code> provides a variety of missing data handling functions which are usable by <code class="codehilite"><span class="n">xts</span></code>, and very handy.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1712,7 +1717,7 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>NA interpolation</strong></p>
-<p>From <code class="codehilite">zoo</code>.</p>
+<p>From <code class="codehilite"><span class="n">zoo</span></code>.</p>
 <p>On occassion, a simple carry forward approach to missingness isn&rsquo;t appropriate. It may be that a series is missing an observation due to a higher frequency sampling than the generating process. You might also encounter an observation that is in error, yet expected to be somewhere between the values of its neighboring observations.</p>
 <p>Both of these cases are examples of where interpolation is useful.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1759,9 +1764,9 @@ mai 1749 85.0
 </pre></div>
 </td></tr></table>
 
-<p><strong>Calculate a difference of a series with <code class="codehilite">diff</code></strong></p>
+<p><strong>Calculate a difference of a series with <code class="codehilite"><span class="n">diff</span></code></strong></p>
 <p>Another common operation on time series, typically on those that are non-stationary, is to take a difference of the series.</p>
-<p><code class="codehilite">differences</code> is the order of the difference (how many times <code class="codehilite">diff</code> is called). A simple way to view a single (or <em>first order</em>) difference is to see it as <code class="codehilite">x(t) - x(t-k)</code> where <code class="codehilite">k</code> is the number of lags to go back. Higher order differences are simply the reapplication of a difference to each prior result (like a second derivative or a difference of the difference).</p>
+<p><code class="codehilite"><span class="n">differences</span></code> is the order of the difference (how many times <code class="codehilite"><span class="n">diff</span></code> is called). A simple way to view a single (or <em>first order</em>) difference is to see it as <code class="codehilite"><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">k</span><span class="p">)</span></code> where <code class="codehilite"><span class="n">k</span></code> is the number of lags to go back. Higher order differences are simply the reapplication of a difference to each prior result (like a second derivative or a difference of the difference).</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1778,11 +1783,11 @@ mai 1749 85.0
 </pre></div>
 </td></tr></table>
 
-<p>What is the key difference in lag between xts and zoo? The <code class="codehilite">k</code> argument in <code class="codehilite">zoo</code> uses positive values for shifting past observations forward.</p>
+<p>What is the key difference in lag between xts and zoo? The <code class="codehilite"><span class="n">k</span></code> argument in <code class="codehilite"><span class="n">zoo</span></code> uses positive values for shifting past observations forward.</p>
 <h2 id="apply-and-aggregate-by-time">Apply and aggregate by time<a class="headerlink" href="#apply-and-aggregate-by-time" title="Permanent link">&para;</a></h2>
-<p><strong>Find intervals by time in <code class="codehilite">xts</code></strong></p>
+<p><strong>Find intervals by time in <code class="codehilite"><span class="n">xts</span></code></strong></p>
 <p>The main function in xts to facilitate this is endpoints. It takes a time series (or a vector of times) and returns the locations of the last observations in each interval.</p>
-<p>For example, the code below locates the last observation of each year for the <code class="codehilite">AirPass</code> dataset:</p>
+<p>For example, the code below locates the last observation of each year for the <code class="codehilite"><span class="n">AirPass</span></code> dataset:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1808,7 +1813,7 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Apply a function by time period(s)</strong></p>
-<p><code class="codehilite">xts</code> provides <code class="codehilite">period.apply</code>, which takes a time series, an <code class="codehilite">INDEX</code> of endpoints, and a function to <code class="codehilite">apply</code>:</p>
+<p><code class="codehilite"><span class="n">xts</span></code> provides <code class="codehilite"><span class="n">period</span><span class="p">.</span><span class="n">apply</span></code>, which takes a time series, an <code class="codehilite"><span class="k">INDEX</span></code> of endpoints, and a function to <code class="codehilite"><span class="n">apply</span></code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1825,7 +1830,7 @@ mai 1749 85.0
 </pre></div>
 </td></tr></table>
 
-<p><strong>Using <code class="codehilite">lapply</code> and <code class="codehilite">split</code> to apply functions on intervals</strong></p>
+<p><strong>Using <code class="codehilite"><span class="n">lapply</span></code> and <code class="codehilite"><span class="n">split</span></code> to apply functions on intervals</strong></p>
 <p>Often it is useful to physically split your data into disjoint chunks by time and perform some calculation on these periods.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1839,7 +1844,7 @@ mai 1749 85.0
 </pre></div>
 </td></tr></table>
 
-<p><strong>Selection by <code class="codehilite">endpoints</code> vs. <code class="codehilite">split-lapply-rbind</code></strong></p>
+<p><strong>Selection by <code class="codehilite"><span class="n">endpoints</span></code> vs. <code class="codehilite"><span class="n">split</span><span class="o">-</span><span class="n">lapply</span><span class="o">-</span><span class="n">rbind</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1902,7 +1907,7 @@ mai 1749 85.0
 
 <p><strong>Convert a series to a lower frequency</strong></p>
 <p>Besides converting univariate time series to OHLC series, to.period() also lets you convert OHLC to lower regularized frequency - something like subsampling your data.</p>
-<p>For example, when using the shortcut function <code class="codehilite">to.quarterly()</code> xts will convert your index to the <code class="codehilite">yearqtr</code> class to make periods more obvious.</p>
+<p>For example, when using the shortcut function <code class="codehilite"><span class="k">to</span><span class="p">.</span><span class="n">quarterly</span><span class="p">()</span></code> xts will convert your index to the <code class="codehilite"><span class="n">yearqtr</span></code> class to make periods more obvious.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1918,7 +1923,7 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Calculate basic rolling value of series by month</strong></p>
-<p>Rolling windows can be discrete: use <code class="codehilite">lapply</code> with (<code class="codehilite">cumsum, cumprod, cummax, cummin</code>) and <code class="codehilite">split</code>:</p>
+<p>Rolling windows can be discrete: use <code class="codehilite"><span class="n">lapply</span></code> with (<code class="codehilite"><span class="n">cumsum</span><span class="p">,</span> <span class="n">cumprod</span><span class="p">,</span> <span class="n">cummax</span><span class="p">,</span> <span class="n">cummin</span></code>) and <code class="codehilite"><span class="n">split</span></code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1950,7 +1955,7 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Calculate the rolling standard deviation of a time series</strong></p>
-<p>Rolling windows can be continuous: use <code class="codehilite">rollapply</code>:</p>
+<p>Rolling windows can be continuous: use <code class="codehilite"><span class="n">rollapply</span></code>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1963,12 +1968,12 @@ mai 1749 85.0
 
 <h2 id="extra-features-of-xts">Extra features of xts<a class="headerlink" href="#extra-features-of-xts" title="Permanent link">&para;</a></h2>
 <p><strong>Index, attributes, and time zones</strong></p>
-<p>All time is stored in seconds since 1970-01-01. Time via <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code> () and <code class="codehilite">index()</code> (raw seconds since 1970-01-01).</p>
-<p><code class="codehilite">index()</code> returns the time of an <code class="codehilite">xts</code> object, as a vector of class <code class="codehilite">indexClass</code>.</p>
-<p><code class="codehilite">Sys.setenv()</code>.</p>
-<p><strong>Class attributes - <code class="codehilite">tclass</code>, <code class="codehilite">tzone</code> and <code class="codehilite">tformat</code></strong></p>
-<p><code class="codehilite">xts</code> objects are somewhat tricky when it comes to times. Internally, we have now seen that the index attribute is really a vector of numeric values corresponding to the seconds since the UNIX epoch (1970-01-01).</p>
-<p>How these values are displayed on printing and how they are returned to the user when using the <code class="codehilite">index()</code> function is dependent on a few key internal attributes.</p>
+<p>All time is stored in seconds since 1970-01-01. Time via <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code> () and <code class="codehilite"><span class="k">index</span><span class="p">()</span></code> (raw seconds since 1970-01-01).</p>
+<p><code class="codehilite"><span class="k">index</span><span class="p">()</span></code> returns the time of an <code class="codehilite"><span class="n">xts</span></code> object, as a vector of class <code class="codehilite"><span class="n">indexClass</span></code>.</p>
+<p><code class="codehilite"><span class="nv">Sys</span>.<span class="k">setenv</span><span class="ss">()</span></code>.</p>
+<p><strong>Class attributes - <code class="codehilite"><span class="n">tclass</span></code>, <code class="codehilite"><span class="n">tzone</span></code> and <code class="codehilite"><span class="n">tformat</span></code></strong></p>
+<p><code class="codehilite"><span class="n">xts</span></code> objects are somewhat tricky when it comes to times. Internally, we have now seen that the index attribute is really a vector of numeric values corresponding to the seconds since the UNIX epoch (1970-01-01).</p>
+<p>How these values are displayed on printing and how they are returned to the user when using the <code class="codehilite"><span class="k">index</span><span class="p">()</span></code> function is dependent on a few key internal attributes.</p>
 <p>The information that controls this behavior can be viewed and even changed through a set of accessor functions detailed below:</p>
 <ul>
 <li>The index class using indexClass (e.g. from Date to chron)</li>
@@ -2000,8 +2005,8 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Time zones - (and why you should care!)</strong></p>
-<p>R provides time zone support in native classes <code class="codehilite">POSIXct</code> and <code class="codehilite">POSIXlt</code>. xts extends this power to the entire object, allowing you to have multiple timezones across various objects. One very important thing to remember is that some internal operation system functions require a timezone to do date math, and if not set one is chosen for you! Be careful to always set a timezone in your environment to prevent very hard to debug errors when working with dates and times. </p>
-<p><code class="codehilite">xts</code> provides the function <code class="codehilite">tzone</code>. This function allows to you to extract, or set timezones. <code class="codehilite"><span class="nf">tzone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="s">&quot;Time_Zone&quot;</span></code> In this exercise you will work with an object called times to practice constructing your own xts objects with custom time zones.</p>
+<p>R provides time zone support in native classes <code class="codehilite"><span class="n">POSIXct</span></code> and <code class="codehilite"><span class="n">POSIXlt</span></code>. xts extends this power to the entire object, allowing you to have multiple timezones across various objects. One very important thing to remember is that some internal operation system functions require a timezone to do date math, and if not set one is chosen for you! Be careful to always set a timezone in your environment to prevent very hard to debug errors when working with dates and times. </p>
+<p><code class="codehilite"><span class="n">xts</span></code> provides the function <code class="codehilite"><span class="n">tzone</span></code>. This function allows to you to extract, or set timezones. <code class="codehilite"><span class="nf">tzone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="s">&quot;Time_Zone&quot;</span></code> In this exercise you will work with an object called times to practice constructing your own xts objects with custom time zones.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2021,11 +2026,11 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Periods, periodicity, and timestamps</strong></p>
-<p>Periods (yearly or intradays time index?): <code class="codehilite">periodicity()</code></p>
-<p>Broken downtime with <code class="codehilite"><span class="na">.index</span><span class="p">*</span></code>, <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexmday</span><span class="p">()</span></code>, <code class="codehilite">indexyday()</code>, <code class="codehilite">indexyear()</code>.</p>
+<p>Periods (yearly or intradays time index?): <code class="codehilite"><span class="n">periodicity</span><span class="p">()</span></code></p>
+<p>Broken downtime with <code class="codehilite"><span class="na">.index</span><span class="p">*</span></code>, <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexmday</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">indexyday</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">indexyear</span><span class="p">()</span></code>.</p>
 <p>Timestamps.</p>
-<p><code class="codehilite">align.time()</code> round time stamps to another period.</p>
-<p><code class="codehilite">make.index.unique()</code> removes observations from duplicate time stamps.</p>
+<p><code class="codehilite"><span class="n">align</span><span class="p">.</span><span class="n">time</span><span class="p">()</span></code> round time stamps to another period.</p>
+<p><code class="codehilite"><span class="n">make</span><span class="p">.</span><span class="k">index</span><span class="p">.</span><span class="k">unique</span><span class="p">()</span></code> removes observations from duplicate time stamps.</p>
 <p><strong>Determining periodicity</strong></p>
 <p>The idea of periodicity is pretty simple; with what regularity does your data repeat? For stock market data, you might have hourly prices or maybe daily open-high-low-close bars. For macro economic series, it might be monthly or weekly survey numbers.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
@@ -2054,7 +2059,7 @@ mai 1749 85.0
 
 <p><strong>Find the number of periods in your data</strong></p>
 <p>Often times it is handy to know not just the range of your time series index, but also have an idea of how many discrete irregular periods this covers. xts provides a set of functions to do just that. If you have a time series, it is now easy to see how many days, weeks or years your data contains.</p>
-<p>Count: <code class="codehilite">nseconds()</code>, <code class="codehilite">nminutes()</code>, <code class="codehilite">nhours()</code>, etc.</p>
+<p>Count: <code class="codehilite"><span class="n">nseconds</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">nminutes</span><span class="p">()</span></code>, <code class="codehilite"><span class="n">nhours</span><span class="p">()</span></code>, etc.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2074,8 +2079,8 @@ mai 1749 85.0
 </td></tr></table>
 
 <p><strong>Secret index tools</strong></p>
-<p>Normally you want to access the times you stored. <code class="codehilite">index()</code> does this magically for you by using your <code class="codehilite">indexClass</code>. To get to the raw vector another function is provided, <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code>. Note the critical dot before the function name.</p>
-<p>More useful than extracting raw seconds is the ability to extract time components similar to the <code class="codehilite">POSIXlt</code> class, which mirrors closely the underlying POSIX internal compiled structure <code class="codehilite">tm</code>. This is provided by a handful of functions such as <code class="codehilite"><span class="na">.indexday</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexmon</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexyear</span><span class="p">()</span></code> and more.</p>
+<p>Normally you want to access the times you stored. <code class="codehilite"><span class="k">index</span><span class="p">()</span></code> does this magically for you by using your <code class="codehilite"><span class="n">indexClass</span></code>. To get to the raw vector another function is provided, <code class="codehilite"><span class="na">.index</span><span class="p">()</span></code>. Note the critical dot before the function name.</p>
+<p>More useful than extracting raw seconds is the ability to extract time components similar to the <code class="codehilite"><span class="n">POSIXlt</span></code> class, which mirrors closely the underlying POSIX internal compiled structure <code class="codehilite"><span class="n">tm</span></code>. This is provided by a handful of functions such as <code class="codehilite"><span class="na">.indexday</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexmon</span><span class="p">()</span></code>, <code class="codehilite"><span class="na">.indexyear</span><span class="p">()</span></code> and more.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2188,25 +2193,17 @@ mai 1749 85.0
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

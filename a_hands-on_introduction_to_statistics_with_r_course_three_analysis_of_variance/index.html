@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Statistics with R, Course Three, Analysis of Variance
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -782,21 +787,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-introduction-to-anova" title="An introduction to ANOVA" class="md-nav__link">
+  <a href="#an-introduction-to-anova" class="md-nav__link">
     An introduction to ANOVA
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-hoc-analysis" title="Post-hoc analysis" class="md-nav__link">
+  <a href="#post-hoc-analysis" class="md-nav__link">
     Post-hoc analysis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#between-groups-factorial-anova" title="Between groups factorial ANOVA" class="md-nav__link">
+  <a href="#between-groups-factorial-anova" class="md-nav__link">
     Between groups factorial ANOVA
   </a>
   
@@ -897,21 +902,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-introduction-to-anova" title="An introduction to ANOVA" class="md-nav__link">
+  <a href="#an-introduction-to-anova" class="md-nav__link">
     An introduction to ANOVA
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#post-hoc-analysis" title="Post-hoc analysis" class="md-nav__link">
+  <a href="#post-hoc-analysis" class="md-nav__link">
     Post-hoc analysis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#between-groups-factorial-anova" title="Between groups factorial ANOVA" class="md-nav__link">
+  <a href="#between-groups-factorial-anova" class="md-nav__link">
     Between groups factorial ANOVA
   </a>
   
@@ -966,13 +971,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   subject condition   iq
-## 1       1    8 days 12.4
-## 2       2    8 days 11.8
-## 3       3    8 days 14.6
-## 4       4    8 days  7.7
-## 5       5    8 days 15.7
-## 6       6    8 days 11.6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">subject</span> <span class="n">condition</span>   <span class="n">iq</span>
+<span class="o">##</span> <span class="mi">1</span>       <span class="mi">1</span>    <span class="mi">8</span> <span class="n">days</span> <span class="mi">12</span><span class="p">.</span><span class="mi">4</span>
+<span class="o">##</span> <span class="mi">2</span>       <span class="mi">2</span>    <span class="mi">8</span> <span class="n">days</span> <span class="mi">11</span><span class="p">.</span><span class="mi">8</span>
+<span class="o">##</span> <span class="mi">3</span>       <span class="mi">3</span>    <span class="mi">8</span> <span class="n">days</span> <span class="mi">14</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="mi">4</span>       <span class="mi">4</span>    <span class="mi">8</span> <span class="n">days</span>  <span class="mi">7</span><span class="p">.</span><span class="mi">7</span>
+<span class="o">##</span> <span class="mi">5</span>       <span class="mi">5</span>    <span class="mi">8</span> <span class="n">days</span> <span class="mi">15</span><span class="p">.</span><span class="mi">7</span>
+<span class="o">##</span> <span class="mi">6</span>       <span class="mi">6</span>    <span class="mi">8</span> <span class="n">days</span> <span class="mi">11</span><span class="p">.</span><span class="mi">6</span>
 </pre></div>
 </td></tr></table>
 
@@ -1026,47 +1031,47 @@
 38
 39
 40
-41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Descriptive statistics by group 
-## group: 12 days
-##            vars  n mean   sd median trimmed  mad  min  max range skew
-## subject       1 20 30.5 5.92  30.50   30.50 7.41 21.0 40.0  19.0 0.00
-## condition*    2 20  NaN   NA     NA     NaN   NA  Inf -Inf  -Inf   NA
-## iq            3 20 11.7 2.58  11.65   11.69 2.89  6.9 16.1   9.2 0.05
-##            kurtosis   se
-## subject       -1.38 1.32
-## condition*       NA   NA
-## iq            -1.06 0.58
-## -------------------------------------------------------- 
-## group: 17 days
-##            vars  n mean   sd median trimmed  mad  min  max range skew
-## subject       1 20 50.5 5.92   50.5    50.5 7.41 41.0 60.0  19.0 0.00
-## condition*    2 20  NaN   NA     NA     NaN   NA  Inf -Inf  -Inf   NA
-## iq            3 20 13.9 2.26   13.6    13.9 2.00  9.8 18.1   8.3 0.11
-##            kurtosis   se
-## subject       -1.38 1.32
-## condition*       NA   NA
-## iq            -0.85 0.50
-## -------------------------------------------------------- 
-## group: 19 days
-##            vars  n  mean   sd median trimmed  mad  min  max range  skew
-## subject       1 20 70.50 5.92   70.5   70.50 7.41 61.0 80.0  19.0  0.00
-## condition*    2 20   NaN   NA     NA     NaN   NA  Inf -Inf  -Inf    NA
-## iq            3 20 14.75 2.50   15.3   14.71 2.15 10.4 19.2   8.8 -0.09
-##            kurtosis   se
-## subject       -1.38 1.32
-## condition*       NA   NA
-## iq            -0.99 0.56
-## -------------------------------------------------------- 
-## group: 8 days
-##            vars  n  mean   sd median trimmed  mad min  max range  skew
-## subject       1 20 10.50 5.92   10.5   10.50 7.41 1.0 20.0  19.0  0.00
-## condition*    2 20   NaN   NA     NA     NaN   NA Inf -Inf  -Inf    NA
-## iq            3 20 10.91 2.63   11.3   10.97 2.67 5.4 15.7  10.3 -0.21
-##            kurtosis   se
-## subject       -1.38 1.32
-## condition*       NA   NA
-## iq            -0.70 0.59
+41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Descriptive</span> <span class="k">statistics</span> <span class="k">by</span> <span class="k">group</span> 
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">12</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span> <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span>  <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span> <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="mi">1</span> <span class="mi">20</span> <span class="mi">30</span><span class="p">.</span><span class="mi">5</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>  <span class="mi">30</span><span class="p">.</span><span class="mi">50</span>   <span class="mi">30</span><span class="p">.</span><span class="mi">50</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span> <span class="mi">21</span><span class="p">.</span><span class="mi">0</span> <span class="mi">40</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>  <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span>  <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">11</span><span class="p">.</span><span class="mi">7</span> <span class="mi">2</span><span class="p">.</span><span class="mi">58</span>  <span class="mi">11</span><span class="p">.</span><span class="mi">65</span>   <span class="mi">11</span><span class="p">.</span><span class="mi">69</span> <span class="mi">2</span><span class="p">.</span><span class="mi">89</span>  <span class="mi">6</span><span class="p">.</span><span class="mi">9</span> <span class="mi">16</span><span class="p">.</span><span class="mi">1</span>   <span class="mi">9</span><span class="p">.</span><span class="mi">2</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>       <span class="n">NA</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">06</span> <span class="mi">0</span><span class="p">.</span><span class="mi">58</span>
+<span class="o">##</span> <span class="c1">-------------------------------------------------------- </span>
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">17</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span> <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span>  <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span> <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="mi">1</span> <span class="mi">20</span> <span class="mi">50</span><span class="p">.</span><span class="mi">5</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>   <span class="mi">50</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">50</span><span class="p">.</span><span class="mi">5</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span> <span class="mi">41</span><span class="p">.</span><span class="mi">0</span> <span class="mi">60</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>  <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span>  <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">13</span><span class="p">.</span><span class="mi">9</span> <span class="mi">2</span><span class="p">.</span><span class="mi">26</span>   <span class="mi">13</span><span class="p">.</span><span class="mi">6</span>    <span class="mi">13</span><span class="p">.</span><span class="mi">9</span> <span class="mi">2</span><span class="p">.</span><span class="mi">00</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">8</span> <span class="mi">18</span><span class="p">.</span><span class="mi">1</span>   <span class="mi">8</span><span class="p">.</span><span class="mi">3</span> <span class="mi">0</span><span class="p">.</span><span class="mi">11</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>       <span class="n">NA</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">85</span> <span class="mi">0</span><span class="p">.</span><span class="mi">50</span>
+<span class="o">##</span> <span class="c1">-------------------------------------------------------- </span>
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">19</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span>  <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span>  <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span>  <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="mi">1</span> <span class="mi">20</span> <span class="mi">70</span><span class="p">.</span><span class="mi">50</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>   <span class="mi">70</span><span class="p">.</span><span class="mi">5</span>   <span class="mi">70</span><span class="p">.</span><span class="mi">50</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span> <span class="mi">61</span><span class="p">.</span><span class="mi">0</span> <span class="mi">80</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>   <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span>  <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>    <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">14</span><span class="p">.</span><span class="mi">75</span> <span class="mi">2</span><span class="p">.</span><span class="mi">50</span>   <span class="mi">15</span><span class="p">.</span><span class="mi">3</span>   <span class="mi">14</span><span class="p">.</span><span class="mi">71</span> <span class="mi">2</span><span class="p">.</span><span class="mi">15</span> <span class="mi">10</span><span class="p">.</span><span class="mi">4</span> <span class="mi">19</span><span class="p">.</span><span class="mi">2</span>   <span class="mi">8</span><span class="p">.</span><span class="mi">8</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">09</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>       <span class="n">NA</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">99</span> <span class="mi">0</span><span class="p">.</span><span class="mi">56</span>
+<span class="o">##</span> <span class="c1">-------------------------------------------------------- </span>
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">8</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span>  <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span>  <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="mi">1</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">50</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">5</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">50</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">20</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>   <span class="n">NaN</span>   <span class="n">NA</span>     <span class="n">NA</span>     <span class="n">NaN</span>   <span class="n">NA</span> <span class="n">Inf</span> <span class="o">-</span><span class="n">Inf</span>  <span class="o">-</span><span class="n">Inf</span>    <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">91</span> <span class="mi">2</span><span class="p">.</span><span class="mi">63</span>   <span class="mi">11</span><span class="p">.</span><span class="mi">3</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">97</span> <span class="mi">2</span><span class="p">.</span><span class="mi">67</span> <span class="mi">5</span><span class="p">.</span><span class="mi">4</span> <span class="mi">15</span><span class="p">.</span><span class="mi">7</span>  <span class="mi">10</span><span class="p">.</span><span class="mi">3</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">21</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span>       <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>       <span class="n">NA</span>   <span class="n">NA</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">70</span> <span class="mi">0</span><span class="p">.</span><span class="mi">59</span>
 </pre></div>
 </td></tr></table>
 
@@ -1151,7 +1156,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 11.700 13.905 14.750 10.910
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">11</span><span class="p">.</span><span class="mi">700</span> <span class="mi">13</span><span class="p">.</span><span class="mi">905</span> <span class="mi">14</span><span class="p">.</span><span class="mi">750</span> <span class="mi">10</span><span class="p">.</span><span class="mi">910</span>
 </pre></div>
 </td></tr></table>
 
@@ -1163,7 +1168,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 12.81625
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">12</span><span class="p">.</span><span class="mi">81625</span>
 </pre></div>
 </td></tr></table>
 
@@ -1175,7 +1180,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 196.0914
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">196</span><span class="p">.</span><span class="mi">0914</span>
 </pre></div>
 </td></tr></table>
 
@@ -1294,16 +1299,16 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Call:
-##    aov(formula = wm$iq ~ wm$condition)
-## 
-## Terms:
-##                 wm$condition Residuals
-## Sum of Squares      196.0914  473.4175
-## Deg. of Freedom            3        76
-## 
-## Residual standard error: 2.495832
-## Estimated effects may be unbalanced
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="k">Call</span><span class="p">:</span>
+<span class="o">##</span>    <span class="n">aov</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">wm$iq</span> <span class="o">~</span> <span class="n">wm$condition</span><span class="p">)</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Terms</span><span class="p">:</span>
+<span class="o">##</span>                 <span class="n">wm$condition</span> <span class="n">Residuals</span>
+<span class="o">##</span> <span class="k">Sum</span> <span class="k">of</span> <span class="n">Squares</span>      <span class="mi">196</span><span class="p">.</span><span class="mi">0914</span>  <span class="mi">473</span><span class="p">.</span><span class="mi">4175</span>
+<span class="o">##</span> <span class="n">Deg</span><span class="p">.</span> <span class="k">of</span> <span class="n">Freedom</span>            <span class="mi">3</span>        <span class="mi">76</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Residual</span> <span class="n">standard</span> <span class="n">error</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">495832</span>
+<span class="o">##</span> <span class="n">Estimated</span> <span class="n">effects</span> <span class="n">may</span> <span class="n">be</span> <span class="n">unbalanced</span>
 </pre></div>
 </td></tr></table>
 
@@ -1317,11 +1322,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##              Df Sum Sq Mean Sq F value   Pr(&amp;gt;F)    
-## wm$condition  3  196.1   65.36   10.49 7.47e-06 ***
-## Residuals    76  473.4    6.23                     
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>              <span class="n">Df</span> <span class="k">Sum</span> <span class="n">Sq</span> <span class="n">Mean</span> <span class="n">Sq</span> <span class="n">F</span> <span class="n">value</span>   <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>    
+<span class="o">##</span> <span class="n">wm$condition</span>  <span class="mi">3</span>  <span class="mi">196</span><span class="p">.</span><span class="mi">1</span>   <span class="mi">65</span><span class="p">.</span><span class="mi">36</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">49</span> <span class="mi">7</span><span class="p">.</span><span class="mi">47</span><span class="n">e</span><span class="o">-</span><span class="mi">06</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">Residuals</span>    <span class="mi">76</span>  <span class="mi">473</span><span class="p">.</span><span class="mi">4</span>    <span class="mi">6</span><span class="p">.</span><span class="mi">23</span>                     
+<span class="o">##</span> <span class="c1">---</span>
+<span class="o">##</span> <span class="n">Signif</span><span class="p">.</span> <span class="n">codes</span><span class="p">:</span>  <span class="mi">0</span> <span class="s1">&#39;***&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">001</span> <span class="s1">&#39;**&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="s1">&#39;*&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span> <span class="s1">&#39;.&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="s1">&#39; &#39;</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1341,10 +1346,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Levene&#39;s Test for Homogeneity of Variance (center = median)
-##       Df F value Pr(&amp;gt;F)
-## group  3  0.1405 0.9355
-##       76
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## <span class="nv">Levene</span><span class="s1">&#39;</span><span class="s">s Test for Homogeneity of Variance (center = median)</span>
+##       <span class="nv">Df</span> <span class="nv">F</span> <span class="nv">value</span> <span class="nv">Pr</span><span class="ss">(</span><span class="o">&gt;</span><span class="nv">F</span><span class="ss">)</span>
+## <span class="nv">group</span>  <span class="mi">3</span>  <span class="mi">0</span>.<span class="mi">1405</span> <span class="mi">0</span>.<span class="mi">9355</span>
+##       <span class="mi">76</span>
 </pre></div>
 </td></tr></table>
 
@@ -1357,10 +1362,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Levene&#39;s Test for Homogeneity of Variance (center = mean)
-##       Df F value Pr(&amp;gt;F)
-## group  3  0.1598  0.923
-##       76
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## <span class="nv">Levene</span><span class="s1">&#39;</span><span class="s">s Test for Homogeneity of Variance (center = mean)</span>
+##       <span class="nv">Df</span> <span class="nv">F</span> <span class="nv">value</span> <span class="nv">Pr</span><span class="ss">(</span><span class="o">&gt;</span><span class="nv">F</span><span class="ss">)</span>
+## <span class="nv">group</span>  <span class="mi">3</span>  <span class="mi">0</span>.<span class="mi">1598</span>  <span class="mi">0</span>.<span class="mi">923</span>
+##       <span class="mi">76</span>
 </pre></div>
 </td></tr></table>
 
@@ -1405,13 +1410,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   cond pre post gain train
-## 1  t08   8    9    1     1
-## 2  t08   8   10    2     1
-## 3  t08   8    8    0     1
-## 4  t08   8    7   -1     1
-## 5  t08   9   11    2     1
-## 6  t08   9   10    1     1
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">cond</span> <span class="n">pre</span> <span class="n">post</span> <span class="n">gain</span> <span class="n">train</span>
+<span class="o">##</span> <span class="mi">1</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">9</span>    <span class="mi">1</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span>  <span class="n">t08</span>   <span class="mi">8</span>   <span class="mi">10</span>    <span class="mi">2</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">3</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">8</span>    <span class="mi">0</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">4</span>  <span class="n">t08</span>   <span class="mi">8</span>    <span class="mi">7</span>   <span class="o">-</span><span class="mi">1</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">5</span>  <span class="n">t08</span>   <span class="mi">9</span>   <span class="mi">11</span>    <span class="mi">2</span>     <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">6</span>  <span class="n">t08</span>   <span class="mi">9</span>   <span class="mi">10</span>    <span class="mi">1</span>     <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1431,11 +1436,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##              Df Sum Sq Mean Sq F value Pr(&amp;gt;F)    
-## wm$cond       4  274.0   68.51   34.57 &amp;lt;2e-16 ***
-## Residuals   115  227.9    1.98                   
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>              <span class="n">Df</span> <span class="k">Sum</span> <span class="n">Sq</span> <span class="n">Mean</span> <span class="n">Sq</span> <span class="n">F</span> <span class="n">value</span> <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>    
+<span class="o">##</span> <span class="n">wm$cond</span>       <span class="mi">4</span>  <span class="mi">274</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">68</span><span class="p">.</span><span class="mi">51</span>   <span class="mi">34</span><span class="p">.</span><span class="mi">57</span> <span class="o">&lt;</span><span class="mi">2</span><span class="n">e</span><span class="o">-</span><span class="mi">16</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">Residuals</span>   <span class="mi">115</span>  <span class="mi">227</span><span class="p">.</span><span class="mi">9</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">98</span>                   
+<span class="o">##</span> <span class="c1">---</span>
+<span class="o">##</span> <span class="n">Signif</span><span class="p">.</span> <span class="n">codes</span><span class="p">:</span>  <span class="mi">0</span> <span class="s1">&#39;***&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">001</span> <span class="s1">&#39;**&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="s1">&#39;*&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span> <span class="s1">&#39;.&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="s1">&#39; &#39;</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1461,23 +1466,23 @@
 14
 15
 16
-17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   Tukey multiple comparisons of means
-##     95% family-wise confidence level
-## 
-## Fit: aov(formula = wm$gain ~ wm$cond)
-## 
-## $`wm$cond`
-##               diff         lwr       upr     p adj
-## t08-control -0.625 -1.69355785 0.4435578 0.4871216
-## t12-control  0.625 -0.44355785 1.6935578 0.4871216
-## t17-control  2.425  1.35644215 3.4935578 0.0000001
-## t19-control  3.625  2.55644215 4.6935578 0.0000000
-## t12-t08      1.250  0.01613568 2.4838643 0.0454650
-## t17-t08      3.050  1.81613568 4.2838643 0.0000000
-## t19-t08      4.250  3.01613568 5.4838643 0.0000000
-## t17-t12      1.800  0.56613568 3.0338643 0.0008953
-## t19-t12      3.000  1.76613568 4.2338643 0.0000000
-## t19-t17      1.200 -0.03386432 2.4338643 0.0607853
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">Tukey</span> <span class="n">multiple</span> <span class="n">comparisons</span> <span class="k">of</span> <span class="n">means</span>
+<span class="o">##</span>     <span class="mi">95</span><span class="o">%</span> <span class="n">family</span><span class="o">-</span><span class="n">wise</span> <span class="n">confidence</span> <span class="k">level</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Fit</span><span class="p">:</span> <span class="n">aov</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">wm$gain</span> <span class="o">~</span> <span class="n">wm$cond</span><span class="p">)</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="err">$</span><span class="o">`</span><span class="n">wm$cond</span><span class="o">`</span>
+<span class="o">##</span>               <span class="n">diff</span>         <span class="n">lwr</span>       <span class="n">upr</span>     <span class="n">p</span> <span class="n">adj</span>
+<span class="o">##</span> <span class="n">t08</span><span class="o">-</span><span class="n">control</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">625</span> <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">69355785</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4435578</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4871216</span>
+<span class="o">##</span> <span class="n">t12</span><span class="o">-</span><span class="n">control</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">625</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">44355785</span> <span class="mi">1</span><span class="p">.</span><span class="mi">6935578</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4871216</span>
+<span class="o">##</span> <span class="n">t17</span><span class="o">-</span><span class="n">control</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">425</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">35644215</span> <span class="mi">3</span><span class="p">.</span><span class="mi">4935578</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000001</span>
+<span class="o">##</span> <span class="n">t19</span><span class="o">-</span><span class="n">control</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">625</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">55644215</span> <span class="mi">4</span><span class="p">.</span><span class="mi">6935578</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000000</span>
+<span class="o">##</span> <span class="n">t12</span><span class="o">-</span><span class="n">t08</span>      <span class="mi">1</span><span class="p">.</span><span class="mi">250</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">01613568</span> <span class="mi">2</span><span class="p">.</span><span class="mi">4838643</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0454650</span>
+<span class="o">##</span> <span class="n">t17</span><span class="o">-</span><span class="n">t08</span>      <span class="mi">3</span><span class="p">.</span><span class="mi">050</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">81613568</span> <span class="mi">4</span><span class="p">.</span><span class="mi">2838643</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000000</span>
+<span class="o">##</span> <span class="n">t19</span><span class="o">-</span><span class="n">t08</span>      <span class="mi">4</span><span class="p">.</span><span class="mi">250</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">01613568</span> <span class="mi">5</span><span class="p">.</span><span class="mi">4838643</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000000</span>
+<span class="o">##</span> <span class="n">t17</span><span class="o">-</span><span class="n">t12</span>      <span class="mi">1</span><span class="p">.</span><span class="mi">800</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">56613568</span> <span class="mi">3</span><span class="p">.</span><span class="mi">0338643</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0008953</span>
+<span class="o">##</span> <span class="n">t19</span><span class="o">-</span><span class="n">t12</span>      <span class="mi">3</span><span class="p">.</span><span class="mi">000</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">76613568</span> <span class="mi">4</span><span class="p">.</span><span class="mi">2338643</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000000</span>
+<span class="o">##</span> <span class="n">t19</span><span class="o">-</span><span class="n">t17</span>      <span class="mi">1</span><span class="p">.</span><span class="mi">200</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">03386432</span> <span class="mi">2</span><span class="p">.</span><span class="mi">4338643</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0607853</span>
 </pre></div>
 </td></tr></table>
 
@@ -1504,7 +1509,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 0.04
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">0</span><span class="p">.</span><span class="mi">04</span>
 </pre></div>
 </td></tr></table>
 
@@ -1525,18 +1530,18 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Pairwise comparisons using t tests with pooled SD 
-## 
-## data:  wm$gain and wm$cond 
-## 
-##     control t08     t12     t17    
-## t08 1.00000 -       -       -      
-## t12 1.00000 0.05862 -       -      
-## t17 5.9e-08 3.8e-09 0.00096 -      
-## t19 6.4e-15 2.9e-15 6.7e-09 0.08084
-## 
-## P value adjustment method: bonferroni
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Pairwise</span> <span class="n">comparisons</span> <span class="k">using</span> <span class="n">t</span> <span class="n">tests</span> <span class="k">with</span> <span class="n">pooled</span> <span class="n">SD</span> 
+<span class="o">##</span> 
+<span class="o">##</span> <span class="k">data</span><span class="p">:</span>  <span class="n">wm$gain</span> <span class="k">and</span> <span class="n">wm$cond</span> 
+<span class="o">##</span> 
+<span class="o">##</span>     <span class="n">control</span> <span class="n">t08</span>     <span class="n">t12</span>     <span class="n">t17</span>    
+<span class="o">##</span> <span class="n">t08</span> <span class="mi">1</span><span class="p">.</span><span class="mi">00000</span> <span class="o">-</span>       <span class="o">-</span>       <span class="o">-</span>      
+<span class="o">##</span> <span class="n">t12</span> <span class="mi">1</span><span class="p">.</span><span class="mi">00000</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05862</span> <span class="o">-</span>       <span class="o">-</span>      
+<span class="o">##</span> <span class="n">t17</span> <span class="mi">5</span><span class="p">.</span><span class="mi">9</span><span class="n">e</span><span class="o">-</span><span class="mi">08</span> <span class="mi">3</span><span class="p">.</span><span class="mi">8</span><span class="n">e</span><span class="o">-</span><span class="mi">09</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00096</span> <span class="o">-</span>      
+<span class="o">##</span> <span class="n">t19</span> <span class="mi">6</span><span class="p">.</span><span class="mi">4</span><span class="n">e</span><span class="o">-</span><span class="mi">15</span> <span class="mi">2</span><span class="p">.</span><span class="mi">9</span><span class="n">e</span><span class="o">-</span><span class="mi">15</span> <span class="mi">6</span><span class="p">.</span><span class="mi">7</span><span class="n">e</span><span class="o">-</span><span class="mi">09</span> <span class="mi">0</span><span class="p">.</span><span class="mi">08084</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">P</span> <span class="n">value</span> <span class="n">adjustment</span> <span class="k">method</span><span class="p">:</span> <span class="n">bonferroni</span>
 </pre></div>
 </td></tr></table>
 
@@ -1577,21 +1582,21 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   subject conversation driving errors error
-## 1       1         None    Easy     20    20
-## 2       2         None    Easy     19    19
-## 3       3         None    Easy     31    31
-## 4       4         None    Easy     27    27
-## 5       5         None    Easy     31    31
-## 6       6         None    Easy     17    17
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">subject</span> <span class="n">conversation</span> <span class="n">driving</span> <span class="n">errors</span> <span class="n">error</span>
+<span class="o">##</span> <span class="mi">1</span>       <span class="mi">1</span>         <span class="k">None</span>    <span class="n">Easy</span>     <span class="mi">20</span>    <span class="mi">20</span>
+<span class="o">##</span> <span class="mi">2</span>       <span class="mi">2</span>         <span class="k">None</span>    <span class="n">Easy</span>     <span class="mi">19</span>    <span class="mi">19</span>
+<span class="o">##</span> <span class="mi">3</span>       <span class="mi">3</span>         <span class="k">None</span>    <span class="n">Easy</span>     <span class="mi">31</span>    <span class="mi">31</span>
+<span class="o">##</span> <span class="mi">4</span>       <span class="mi">4</span>         <span class="k">None</span>    <span class="n">Easy</span>     <span class="mi">27</span>    <span class="mi">27</span>
+<span class="o">##</span> <span class="mi">5</span>       <span class="mi">5</span>         <span class="k">None</span>    <span class="n">Easy</span>     <span class="mi">31</span>    <span class="mi">31</span>
+<span class="o">##</span> <span class="mi">6</span>       <span class="mi">6</span>         <span class="k">None</span>    <span class="n">Easy</span>     <span class="mi">17</span>    <span class="mi">17</span>
 </pre></div>
 </td></tr></table>
 
 <p>Each of the subjects was randomly assigned to one of six conditions formed by combining different values of the independent variables.</p>
 <ul>
-<li><code class="codehilite">subject</code>: unique identifier for each subject conversation: level of conversation difficulty.</li>
-<li><code class="codehilite">driving</code> : level of driving difficulty in the simulator.</li>
-<li><code class="codehilite">errors</code>: number of driving errors made.</li>
+<li><code class="codehilite"><span class="n">subject</span></code>: unique identifier for each subject conversation: level of conversation difficulty.</li>
+<li><code class="codehilite"><span class="n">driving</span></code> : level of driving difficulty in the simulator.</li>
+<li><code class="codehilite"><span class="n">errors</span></code>: number of driving errors made.</li>
 </ul>
 <!-- -->
 
@@ -1616,7 +1621,7 @@
 <p><center><img alt="" src="../img/A_Hands-on_Introduction_to_Statistics_with_R,_Course_Three,_Analysis_of_Variance/unnamed-chunk-14-1.png" /></center></p>
 <p>The driving errors made during different driving conditions are influenced by the level of conversation demand. In other words, the driving conditions have a different effect on the number of errors made, depending on the level of conversation demand.</p>
 <p><strong>The homogeneity of variance assumption</strong></p>
-<p>Before we do factorial ANOVA, we need to test the homogeneity of the variance assumption. When studying one-way ANOVA, we tested this assumption with the <code class="codehilite">leveneTest</code> function.</p>
+<p>Before we do factorial ANOVA, we need to test the homogeneity of the variance assumption. When studying one-way ANOVA, we tested this assumption with the <code class="codehilite"><span class="n">leveneTest</span></code> function.</p>
 <p>We now have two independent variables instead of just one.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Test the homogeneity of variance assumption</span>
@@ -1627,21 +1632,21 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## Levene&#39;s Test for Homogeneity of Variance (center = median)
-##        Df F value Pr(&amp;gt;F)
-## group   5  0.5206 0.7602
-##       114
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## <span class="nv">Levene</span><span class="s1">&#39;</span><span class="s">s Test for Homogeneity of Variance (center = median)</span>
+##        <span class="nv">Df</span> <span class="nv">F</span> <span class="nv">value</span> <span class="nv">Pr</span><span class="ss">(</span><span class="o">&gt;</span><span class="nv">F</span><span class="ss">)</span>
+## <span class="nv">group</span>   <span class="mi">5</span>  <span class="mi">0</span>.<span class="mi">5206</span> <span class="mi">0</span>.<span class="mi">7602</span>
+##       <span class="mi">114</span>
 </pre></div>
 </td></tr></table>
 
 <p>The homogeneity of variance assumption holds.</p>
-<p>By performing a <code class="codehilite">leveneTest</code>, we can check whether or not the homogeneity of variance assumption holds for a given dataset. The assumption must hold for the results of an ANOVA analysis to be valid.</p>
+<p>By performing a <code class="codehilite"><span class="n">leveneTest</span></code>, we can check whether or not the homogeneity of variance assumption holds for a given dataset. The assumption must hold for the results of an ANOVA analysis to be valid.</p>
 <p>Recall from the first chapter that ANOVA makes use of F-statistics, or F-ratios, in which two types of degrees of freedom are involved.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">ab</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 120   5
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">120</span>   <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -1649,7 +1654,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  Factor w/ 3 levels &quot;High demand&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="n">Factor</span> <span class="n">w</span><span class="o">/</span> <span class="mi">3</span> <span class="n">levels</span> <span class="ss">&quot;High demand&quot;</span><span class="p">,..:</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span> <span class="p">...</span>
 </pre></div>
 </td></tr></table>
 
@@ -1657,7 +1662,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  Factor w/ 2 levels &quot;Difficult&quot;,&quot;Easy&quot;: 2 2 2 2 2 2 2 2 2 2 ...
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="n">Factor</span> <span class="n">w</span><span class="o">/</span> <span class="mi">2</span> <span class="n">levels</span> <span class="ss">&quot;Difficult&quot;</span><span class="p">,</span><span class="ss">&quot;Easy&quot;</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="p">...</span>
 </pre></div>
 </td></tr></table>
 
@@ -1681,20 +1686,20 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                             Df Sum Sq Mean Sq F value   Pr(&amp;gt;F)    
-## ab$conversation              2   4416    2208   36.14 6.98e-13 ***
-## ab$driving                   1   5782    5782   94.64  &amp;lt; 2e-16 ***
-## ab$conversation:ab$driving   2   1639     820   13.41 5.86e-06 ***
-## Residuals                  114   6965      61                     
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>                             <span class="n">Df</span> <span class="k">Sum</span> <span class="n">Sq</span> <span class="n">Mean</span> <span class="n">Sq</span> <span class="n">F</span> <span class="n">value</span>   <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>    
+<span class="o">##</span> <span class="n">ab$conversation</span>              <span class="mi">2</span>   <span class="mi">4416</span>    <span class="mi">2208</span>   <span class="mi">36</span><span class="p">.</span><span class="mi">14</span> <span class="mi">6</span><span class="p">.</span><span class="mi">98</span><span class="n">e</span><span class="o">-</span><span class="mi">13</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">ab$driving</span>                   <span class="mi">1</span>   <span class="mi">5782</span>    <span class="mi">5782</span>   <span class="mi">94</span><span class="p">.</span><span class="mi">64</span>  <span class="o">&lt;</span> <span class="mi">2</span><span class="n">e</span><span class="o">-</span><span class="mi">16</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">ab$conversation</span><span class="p">:</span><span class="n">ab$driving</span>   <span class="mi">2</span>   <span class="mi">1639</span>     <span class="mi">820</span>   <span class="mi">13</span><span class="p">.</span><span class="mi">41</span> <span class="mi">5</span><span class="p">.</span><span class="mi">86</span><span class="n">e</span><span class="o">-</span><span class="mi">06</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">Residuals</span>                  <span class="mi">114</span>   <span class="mi">6965</span>      <span class="mi">61</span>                     
+<span class="o">##</span> <span class="c1">---</span>
+<span class="o">##</span> <span class="n">Signif</span><span class="p">.</span> <span class="n">codes</span><span class="p">:</span>  <span class="mi">0</span> <span class="s1">&#39;***&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">001</span> <span class="s1">&#39;**&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="s1">&#39;*&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span> <span class="s1">&#39;.&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="s1">&#39; &#39;</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
 <p>Based on the summary table of the factorial ANOVA, the main effect for driving difficulty, the main effect for conversation difficulty and the interaction effect are all significant.</p>
 <p><strong>The interaction effect</strong></p>
 <p>Now it&rsquo;s time to explore the interaction effect. You will do this with the help of a simple effects analysis.</p>
-<p>Why a simple effects analysis? Well, remember what we had to do when you had a significant main effect in a one-way ANOVA? There, you just had to perform some post-hoc tests to see from which level of the categorical variable the main effect was coming. With an interaction effect, it is quite similar. Conduct a simple effects analysis of the variable <code class="codehilite">conversation</code> on the outcome variable <code class="codehilite">errors</code> at each level of <code class="codehilite">driving</code>.</p>
+<p>Why a simple effects analysis? Well, remember what we had to do when you had a significant main effect in a one-way ANOVA? There, you just had to perform some post-hoc tests to see from which level of the categorical variable the main effect was coming. With an interaction effect, it is quite similar. Conduct a simple effects analysis of the variable <code class="codehilite"><span class="n">conversation</span></code> on the outcome variable <code class="codehilite"><span class="n">errors</span></code> at each level of <code class="codehilite"><span class="n">driving</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1721,11 +1726,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                   Df Sum Sq Mean Sq F value Pr(&amp;gt;F)  
-## ab_1$conversation  2  504.7   252.3   4.928 0.0106 *
-## Residuals         57 2918.5    51.2                 
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>                   <span class="n">Df</span> <span class="k">Sum</span> <span class="n">Sq</span> <span class="n">Mean</span> <span class="n">Sq</span> <span class="n">F</span> <span class="n">value</span> <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>  
+<span class="o">##</span> <span class="n">ab_1$conversation</span>  <span class="mi">2</span>  <span class="mi">504</span><span class="p">.</span><span class="mi">7</span>   <span class="mi">252</span><span class="p">.</span><span class="mi">3</span>   <span class="mi">4</span><span class="p">.</span><span class="mi">928</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0106</span> <span class="o">*</span>
+<span class="o">##</span> <span class="n">Residuals</span>         <span class="mi">57</span> <span class="mi">2918</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">51</span><span class="p">.</span><span class="mi">2</span>                 
+<span class="o">##</span> <span class="c1">---</span>
+<span class="o">##</span> <span class="n">Signif</span><span class="p">.</span> <span class="n">codes</span><span class="p">:</span>  <span class="mi">0</span> <span class="s1">&#39;***&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">001</span> <span class="s1">&#39;**&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="s1">&#39;*&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span> <span class="s1">&#39;.&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="s1">&#39; &#39;</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1737,19 +1742,19 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                   Df Sum Sq Mean Sq F value   Pr(&amp;gt;F)    
-## ab_2$conversation  2   5551    2776   39.09 2.05e-11 ***
-## Residuals         57   4047      71                     
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>                   <span class="n">Df</span> <span class="k">Sum</span> <span class="n">Sq</span> <span class="n">Mean</span> <span class="n">Sq</span> <span class="n">F</span> <span class="n">value</span>   <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>    
+<span class="o">##</span> <span class="n">ab_2$conversation</span>  <span class="mi">2</span>   <span class="mi">5551</span>    <span class="mi">2776</span>   <span class="mi">39</span><span class="p">.</span><span class="mi">09</span> <span class="mi">2</span><span class="p">.</span><span class="mi">05</span><span class="n">e</span><span class="o">-</span><span class="mi">11</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">Residuals</span>         <span class="mi">57</span>   <span class="mi">4047</span>      <span class="mi">71</span>                     
+<span class="o">##</span> <span class="c1">---</span>
+<span class="o">##</span> <span class="n">Signif</span><span class="p">.</span> <span class="n">codes</span><span class="p">:</span>  <span class="mi">0</span> <span class="s1">&#39;***&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">001</span> <span class="s1">&#39;**&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="s1">&#39;*&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span> <span class="s1">&#39;.&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="s1">&#39; &#39;</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
-<p>There a significant simple effect for the easy driving condition based on the summary table of <code class="codehilite">aov_ab_1</code>.</p>
-<p>There a significant simple effect for the difficult driving condition based on the summary table of <code class="codehilite">aov_ab_2</code>.</p>
+<p>There a significant simple effect for the easy driving condition based on the summary table of <code class="codehilite"><span class="n">aov_ab_1</span></code>.</p>
+<p>There a significant simple effect for the difficult driving condition based on the summary table of <code class="codehilite"><span class="n">aov_ab_2</span></code>.</p>
 <p><strong>The effect sizes</strong></p>
 <p>The definition of an interaction effect states that the effect of one variable changes across levels of the other variable. For example, we might expect the effect of conversation to be greater when driving conditions are difficult than when they are relatively easy.</p>
-<p>Unfortunately, it is not quite that simple. In order to really understand the different effect sizes, you should make use of the <code class="codehilite">etaSquared</code> function.</p>
+<p>Unfortunately, it is not quite that simple. In order to really understand the different effect sizes, you should make use of the <code class="codehilite"><span class="n">etaSquared</span></code> function.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1769,12 +1774,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                     eta.sq eta.sq.part      SS df        MS        F
-## ab_1$conversation 0.147433    0.147433  504.70  2 252.35000 4.928458
-## Residuals         0.852567          NA 2918.55 57  51.20263       NA
-##                            p
-## ab_1$conversation 0.01061116
-## Residuals                 NA
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>                     <span class="n">eta</span><span class="p">.</span><span class="n">sq</span> <span class="n">eta</span><span class="p">.</span><span class="n">sq</span><span class="p">.</span><span class="n">part</span>      <span class="n">SS</span> <span class="n">df</span>        <span class="n">MS</span>        <span class="n">F</span>
+<span class="o">##</span> <span class="n">ab_1$conversation</span> <span class="mi">0</span><span class="p">.</span><span class="mi">147433</span>    <span class="mi">0</span><span class="p">.</span><span class="mi">147433</span>  <span class="mi">504</span><span class="p">.</span><span class="mi">70</span>  <span class="mi">2</span> <span class="mi">252</span><span class="p">.</span><span class="mi">35000</span> <span class="mi">4</span><span class="p">.</span><span class="mi">928458</span>
+<span class="o">##</span> <span class="n">Residuals</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">852567</span>          <span class="n">NA</span> <span class="mi">2918</span><span class="p">.</span><span class="mi">55</span> <span class="mi">57</span>  <span class="mi">51</span><span class="p">.</span><span class="mi">20263</span>       <span class="n">NA</span>
+<span class="o">##</span>                            <span class="n">p</span>
+<span class="o">##</span> <span class="n">ab_1$conversation</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01061116</span>
+<span class="o">##</span> <span class="n">Residuals</span>                 <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -1789,16 +1794,16 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##                      eta.sq eta.sq.part       SS df         MS        F
-## ab_2$conversation 0.5783571   0.5783571 5551.033  2 2775.51667 39.09275
-## Residuals         0.4216429          NA 4046.900 57   70.99825       NA
-##                              p
-## ab_2$conversation 2.046097e-11
-## Residuals                   NA
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>                      <span class="n">eta</span><span class="p">.</span><span class="n">sq</span> <span class="n">eta</span><span class="p">.</span><span class="n">sq</span><span class="p">.</span><span class="n">part</span>       <span class="n">SS</span> <span class="n">df</span>         <span class="n">MS</span>        <span class="n">F</span>
+<span class="o">##</span> <span class="n">ab_2$conversation</span> <span class="mi">0</span><span class="p">.</span><span class="mi">5783571</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">5783571</span> <span class="mi">5551</span><span class="p">.</span><span class="mi">033</span>  <span class="mi">2</span> <span class="mi">2775</span><span class="p">.</span><span class="mi">51667</span> <span class="mi">39</span><span class="p">.</span><span class="mi">09275</span>
+<span class="o">##</span> <span class="n">Residuals</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">4216429</span>          <span class="n">NA</span> <span class="mi">4046</span><span class="p">.</span><span class="mi">900</span> <span class="mi">57</span>   <span class="mi">70</span><span class="p">.</span><span class="mi">99825</span>       <span class="n">NA</span>
+<span class="o">##</span>                              <span class="n">p</span>
+<span class="o">##</span> <span class="n">ab_2$conversation</span> <span class="mi">2</span><span class="p">.</span><span class="mi">046097</span><span class="n">e</span><span class="o">-</span><span class="mi">11</span>
+<span class="o">##</span> <span class="n">Residuals</span>                   <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
-<p>Based on the output of the <code class="codehilite">etaSquared</code> function for the easy driving condition, the percentage of variance explained by the conversation variable is 14.7%; the percentage of variance explained by the conversation variable is 57.8%.</p>
+<p>Based on the output of the <code class="codehilite"><span class="n">etaSquared</span></code> function for the easy driving condition, the percentage of variance explained by the conversation variable is 14.7%; the percentage of variance explained by the conversation variable is 57.8%.</p>
 <p><strong>Pairwise comparisons</strong></p>
 <p>Finally, let us look at pairwise comparisons for the simple effects. You can do this with the Tukey post-hoc test.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1816,16 +1821,16 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   Tukey multiple comparisons of means
-##     95% family-wise confidence level
-## 
-## Fit: aov(formula = ab_1$errors ~ ab_1$conversation)
-## 
-## $`ab_1$conversation`
-##                         diff        lwr        upr     p adj
-## Low demand-High demand -6.05 -11.495243 -0.6047574 0.0260458
-## None-High demand       -6.25 -11.695243 -0.8047574 0.0207614
-## None-Low demand        -0.20  -5.645243  5.2452426 0.9957026
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">Tukey</span> <span class="n">multiple</span> <span class="n">comparisons</span> <span class="k">of</span> <span class="n">means</span>
+<span class="o">##</span>     <span class="mi">95</span><span class="o">%</span> <span class="n">family</span><span class="o">-</span><span class="n">wise</span> <span class="n">confidence</span> <span class="k">level</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Fit</span><span class="p">:</span> <span class="n">aov</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">ab_1$errors</span> <span class="o">~</span> <span class="n">ab_1$conversation</span><span class="p">)</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="err">$</span><span class="o">`</span><span class="n">ab_1$conversation</span><span class="o">`</span>
+<span class="o">##</span>                         <span class="n">diff</span>        <span class="n">lwr</span>        <span class="n">upr</span>     <span class="n">p</span> <span class="n">adj</span>
+<span class="o">##</span> <span class="n">Low</span> <span class="n">demand</span><span class="o">-</span><span class="n">High</span> <span class="n">demand</span> <span class="o">-</span><span class="mi">6</span><span class="p">.</span><span class="mi">05</span> <span class="o">-</span><span class="mi">11</span><span class="p">.</span><span class="mi">495243</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">6047574</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0260458</span>
+<span class="o">##</span> <span class="k">None</span><span class="o">-</span><span class="n">High</span> <span class="n">demand</span>       <span class="o">-</span><span class="mi">6</span><span class="p">.</span><span class="mi">25</span> <span class="o">-</span><span class="mi">11</span><span class="p">.</span><span class="mi">695243</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">8047574</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0207614</span>
+<span class="o">##</span> <span class="k">None</span><span class="o">-</span><span class="n">Low</span> <span class="n">demand</span>        <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">20</span>  <span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">645243</span>  <span class="mi">5</span><span class="p">.</span><span class="mi">2452426</span> <span class="mi">0</span><span class="p">.</span><span class="mi">9957026</span>
 </pre></div>
 </td></tr></table>
 
@@ -1844,16 +1849,16 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   Tukey multiple comparisons of means
-##     95% family-wise confidence level
-## 
-## Fit: aov(formula = ab_2$errors ~ ab_2$conversation)
-## 
-## $`ab_2$conversation`
-##                          diff       lwr        upr     p adj
-## Low demand-High demand  -9.75 -16.16202  -3.337979 0.0015849
-## None-High demand       -23.45 -29.86202 -17.037979 0.0000000
-## None-Low demand        -13.70 -20.11202  -7.287979 0.0000103
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">Tukey</span> <span class="n">multiple</span> <span class="n">comparisons</span> <span class="k">of</span> <span class="n">means</span>
+<span class="o">##</span>     <span class="mi">95</span><span class="o">%</span> <span class="n">family</span><span class="o">-</span><span class="n">wise</span> <span class="n">confidence</span> <span class="k">level</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Fit</span><span class="p">:</span> <span class="n">aov</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">ab_2$errors</span> <span class="o">~</span> <span class="n">ab_2$conversation</span><span class="p">)</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="err">$</span><span class="o">`</span><span class="n">ab_2$conversation</span><span class="o">`</span>
+<span class="o">##</span>                          <span class="n">diff</span>       <span class="n">lwr</span>        <span class="n">upr</span>     <span class="n">p</span> <span class="n">adj</span>
+<span class="o">##</span> <span class="n">Low</span> <span class="n">demand</span><span class="o">-</span><span class="n">High</span> <span class="n">demand</span>  <span class="o">-</span><span class="mi">9</span><span class="p">.</span><span class="mi">75</span> <span class="o">-</span><span class="mi">16</span><span class="p">.</span><span class="mi">16202</span>  <span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">337979</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0015849</span>
+<span class="o">##</span> <span class="k">None</span><span class="o">-</span><span class="n">High</span> <span class="n">demand</span>       <span class="o">-</span><span class="mi">23</span><span class="p">.</span><span class="mi">45</span> <span class="o">-</span><span class="mi">29</span><span class="p">.</span><span class="mi">86202</span> <span class="o">-</span><span class="mi">17</span><span class="p">.</span><span class="mi">037979</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000000</span>
+<span class="o">##</span> <span class="k">None</span><span class="o">-</span><span class="n">Low</span> <span class="n">demand</span>        <span class="o">-</span><span class="mi">13</span><span class="p">.</span><span class="mi">70</span> <span class="o">-</span><span class="mi">20</span><span class="p">.</span><span class="mi">11202</span>  <span class="o">-</span><span class="mi">7</span><span class="p">.</span><span class="mi">287979</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0000103</span>
 </pre></div>
 </td></tr></table>
 
@@ -1922,25 +1927,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

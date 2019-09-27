@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 googleVis (embed HTML plots)
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -506,49 +511,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-googlevis-package" title="The googleVis package" class="md-nav__link">
+  <a href="#the-googlevis-package" class="md-nav__link">
     The googleVis package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suppress-the-message" title="Suppress the message" class="md-nav__link">
+  <a href="#suppress-the-message" class="md-nav__link">
     Suppress the message
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#printing" title="Printing" class="md-nav__link">
+  <a href="#printing" class="md-nav__link">
     Printing
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#embedding-a-chartmap-into-a-static-website" title="Embedding a chart/map into a static website" class="md-nav__link">
+  <a href="#embedding-a-chartmap-into-a-static-website" class="md-nav__link">
     Embedding a chart/map into a static website
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-static-websites" title="Other static websites" class="md-nav__link">
+  <a href="#other-static-websites" class="md-nav__link">
     Other static websites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamic-websites" title="Dynamic websites" class="md-nav__link">
+  <a href="#dynamic-websites" class="md-nav__link">
     Dynamic websites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#charts" title="Charts" class="md-nav__link">
+  <a href="#charts" class="md-nav__link">
     Charts
   </a>
   
@@ -556,21 +561,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gvismotionchart" title="gvisMotionChart" class="md-nav__link">
+  <a href="#gvismotionchart" class="md-nav__link">
     gvisMotionChart
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#embedding-with-iframe-or-embed" title="Embedding with &lt;iframe&gt; or &lt;embed&gt;" class="md-nav__link">
+  <a href="#embedding-with-iframe-or-embed" class="md-nav__link">
     Embedding with &lt;iframe&gt; or &lt;embed&gt;
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#information-from-the-object" title="Information from the object" class="md-nav__link">
+  <a href="#information-from-the-object" class="md-nav__link">
     Information from the object
   </a>
   
@@ -582,7 +587,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#maps" title="Maps" class="md-nav__link">
+  <a href="#maps" class="md-nav__link">
     Maps
   </a>
   
@@ -590,21 +595,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gvisgeochart" title="gvisGeoChart" class="md-nav__link">
+  <a href="#gvisgeochart" class="md-nav__link">
     gvisGeoChart
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gvismap-or-google-maps" title="gvisMap or Google Maps" class="md-nav__link">
+  <a href="#gvismap-or-google-maps" class="md-nav__link">
     gvisMap or Google Maps
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#editor" title="Editor" class="md-nav__link">
+  <a href="#editor" class="md-nav__link">
     Editor
   </a>
   
@@ -616,21 +621,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tables-with-gvistable" title="Tables with gvisTable" class="md-nav__link">
+  <a href="#tables-with-gvistable" class="md-nav__link">
     Tables with gvisTable
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dashboards-with-gvismerge" title="Dashboards with gvisMerge" class="md-nav__link">
+  <a href="#dashboards-with-gvismerge" class="md-nav__link">
     Dashboards with gvisMerge
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
+  <a href="#options" class="md-nav__link">
     Options
   </a>
   
@@ -638,7 +643,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apostrophes" title="Apostrophes" class="md-nav__link">
+  <a href="#apostrophes" class="md-nav__link">
     Apostrophes
   </a>
   
@@ -1020,49 +1025,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-googlevis-package" title="The googleVis package" class="md-nav__link">
+  <a href="#the-googlevis-package" class="md-nav__link">
     The googleVis package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suppress-the-message" title="Suppress the message" class="md-nav__link">
+  <a href="#suppress-the-message" class="md-nav__link">
     Suppress the message
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#printing" title="Printing" class="md-nav__link">
+  <a href="#printing" class="md-nav__link">
     Printing
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#embedding-a-chartmap-into-a-static-website" title="Embedding a chart/map into a static website" class="md-nav__link">
+  <a href="#embedding-a-chartmap-into-a-static-website" class="md-nav__link">
     Embedding a chart/map into a static website
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-static-websites" title="Other static websites" class="md-nav__link">
+  <a href="#other-static-websites" class="md-nav__link">
     Other static websites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dynamic-websites" title="Dynamic websites" class="md-nav__link">
+  <a href="#dynamic-websites" class="md-nav__link">
     Dynamic websites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#charts" title="Charts" class="md-nav__link">
+  <a href="#charts" class="md-nav__link">
     Charts
   </a>
   
@@ -1070,21 +1075,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gvismotionchart" title="gvisMotionChart" class="md-nav__link">
+  <a href="#gvismotionchart" class="md-nav__link">
     gvisMotionChart
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#embedding-with-iframe-or-embed" title="Embedding with &lt;iframe&gt; or &lt;embed&gt;" class="md-nav__link">
+  <a href="#embedding-with-iframe-or-embed" class="md-nav__link">
     Embedding with &lt;iframe&gt; or &lt;embed&gt;
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#information-from-the-object" title="Information from the object" class="md-nav__link">
+  <a href="#information-from-the-object" class="md-nav__link">
     Information from the object
   </a>
   
@@ -1096,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#maps" title="Maps" class="md-nav__link">
+  <a href="#maps" class="md-nav__link">
     Maps
   </a>
   
@@ -1104,21 +1109,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gvisgeochart" title="gvisGeoChart" class="md-nav__link">
+  <a href="#gvisgeochart" class="md-nav__link">
     gvisGeoChart
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gvismap-or-google-maps" title="gvisMap or Google Maps" class="md-nav__link">
+  <a href="#gvismap-or-google-maps" class="md-nav__link">
     gvisMap or Google Maps
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#editor" title="Editor" class="md-nav__link">
+  <a href="#editor" class="md-nav__link">
     Editor
   </a>
   
@@ -1130,21 +1135,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tables-with-gvistable" title="Tables with gvisTable" class="md-nav__link">
+  <a href="#tables-with-gvistable" class="md-nav__link">
     Tables with gvisTable
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dashboards-with-gvismerge" title="Dashboards with gvisMerge" class="md-nav__link">
+  <a href="#dashboards-with-gvismerge" class="md-nav__link">
     Dashboards with gvisMerge
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
+  <a href="#options" class="md-nav__link">
     Options
   </a>
   
@@ -1152,7 +1157,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apostrophes" title="Apostrophes" class="md-nav__link">
+  <a href="#apostrophes" class="md-nav__link">
     Apostrophes
   </a>
   
@@ -1184,7 +1189,7 @@
                 
                   <h1>googleVis (embed HTML plots)</h1>
                 
-                <h2 id="the-googlevis-package">The <code class="codehilite">googleVis</code> package<a class="headerlink" href="#the-googlevis-package" title="Permanent link">&para;</a></h2>
+                <h2 id="the-googlevis-package">The <code class="codehilite"><span class="n">googleVis</span></code> package<a class="headerlink" href="#the-googlevis-package" title="Permanent link">&para;</a></h2>
 <p>The package provides an interface to Google&rsquo;s chart tools, allowing users to create interactive charts based on data frames. It included maps.</p>
 <p>The interactive maps are displayed in a browser. We can plot a complete set of interactive graphs and embed them into a web page.</p>
 <p>Some motion charts cannot be displays in tablets and mobile phones (using HTML5) because they are rendered with Flash; Flash has to be installed on a PC.</p>
@@ -1205,7 +1210,7 @@
 <li><a href="https://cran.r-project.org/web/packages/googleVis/vignettes/Using_Roles_via_googleVis.html">Roles</a>.</li>
 <li><a href="https://cran.r-project.org/web/packages/googleVis/vignettes/Using_Trendlines_with_googleVis.html">Trendlines</a>.</li>
 <li><a href="https://cran.r-project.org/web/packages/googleVis/vignettes/Using_googleVis_with_knitr.html">Markdown</a>.</li>
-<li>In R, run a demo with <code class="codehilite">demo(googleVis)</code>.</li>
+<li>In R, run a demo with <code class="codehilite"><span class="n">demo</span><span class="p">(</span><span class="n">googleVis</span><span class="p">)</span></code>.</li>
 </ul>
 <p>Always cite the package:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">citation</span><span class="p">(</span><span class="s">&quot;googleVis&quot;</span><span class="p">)</span>
@@ -1317,7 +1322,7 @@
 <h2 id="embedding-a-chartmap-into-a-static-website">Embedding a chart/map into a static website<a class="headerlink" href="#embedding-a-chartmap-into-a-static-website" title="Permanent link">&para;</a></h2>
 <p>The chart can be standing alone as an image file; even be embedded within a text.</p>
 <ul>
-<li>In RStudio, set the working directory with <code class="codehilite">setwd(&#39; &#39;)</code>.</li>
+<li>In RStudio, set the working directory with <code class="codehilite"><span class="n">setwd</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span></code>.</li>
 <li>Set the option to print the output in a html file.</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
@@ -1601,15 +1606,15 @@ style="width: 400; height: 350; float:left;";>
 </ul>
 <h2 id="dynamic-websites">Dynamic websites<a class="headerlink" href="#dynamic-websites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The <code class="codehilite">R.rsp</code> package allows the integration of R code into html code. </li>
-<li>The <code class="codehilite">rApache</code> and <code class="codehilite">brew</code> packages support web application development using R and the Apache HTTP server.</li>
+<li>The <code class="codehilite"><span class="n">R</span><span class="p">.</span><span class="n">rsp</span></code> package allows the integration of R code into html code. </li>
+<li>The <code class="codehilite"><span class="n">rApache</span></code> and <code class="codehilite"><span class="n">brew</span></code> packages support web application development using R and the Apache HTTP server.</li>
 <li>Rook is a lightweight web server interface for R.</li>
-<li>The <code class="codehilite">shiny</code> package builds interactive web application with R.</li>
+<li>The <code class="codehilite"><span class="n">shiny</span></code> package builds interactive web application with R.</li>
 </ul>
 <h2 id="charts">Charts<a class="headerlink" href="#charts" title="Permanent link">&para;</a></h2>
 <p>Consult the examples (further above); charts are similar to what we find in other packages. </p>
-<p><code class="codehilite">gvisMotionChart</code> is exclusive to <code class="codehilite">googleVis</code>.</p>
-<h3 id="gvismotionchart"><code class="codehilite">gvisMotionChart</code><a class="headerlink" href="#gvismotionchart" title="Permanent link">&para;</a></h3>
+<p><code class="codehilite"><span class="n">gvisMotionChart</span></code> is exclusive to <code class="codehilite"><span class="n">googleVis</span></code>.</p>
+<h3 id="gvismotionchart"><code class="codehilite"><span class="n">gvisMotionChart</span></code><a class="headerlink" href="#gvismotionchart" title="Permanent link">&para;</a></h3>
 <!--  -->
 
 <!-- M -->
@@ -1624,11 +1629,11 @@ style="width: 400; height: 350; float:left;";>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Output
-   Fruit Year Location Sales Expenses Profit       Date
-1 Apples 2008     West    98       78     20 2008-12-31
-2 Apples 2009     West   111       79     32 2009-12-31
-3 Apples 2010     West    89       76     13 2010-12-31
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Output</span>
+   <span class="n">Fruit</span> <span class="k">Year</span> <span class="k">Location</span> <span class="n">Sales</span> <span class="n">Expenses</span> <span class="n">Profit</span>       <span class="nb">Date</span>
+<span class="mi">1</span> <span class="n">Apples</span> <span class="mi">2008</span>     <span class="n">West</span>    <span class="mi">98</span>       <span class="mi">78</span>     <span class="mi">20</span> <span class="mi">2008</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">2</span> <span class="n">Apples</span> <span class="mi">2009</span>     <span class="n">West</span>   <span class="mi">111</span>       <span class="mi">79</span>     <span class="mi">32</span> <span class="mi">2009</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">3</span> <span class="n">Apples</span> <span class="mi">2010</span>     <span class="n">West</span>    <span class="mi">89</span>       <span class="mi">76</span>     <span class="mi">13</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span>
 </pre></div>
 </td></tr></table>
 
@@ -1829,7 +1834,7 @@ callbacks.shift()();
 </div>
 
 <p><br></p>
-<h3 id="embedding-with-iframe-or-embed">Embedding with <code class="codehilite">&lt;iframe&gt;</code> or <code class="codehilite">&lt;embed&gt;</code><a class="headerlink" href="#embedding-with-iframe-or-embed" title="Permanent link">&para;</a></h3>
+<h3 id="embedding-with-iframe-or-embed">Embedding with <code class="codehilite"><span class="o">&lt;</span><span class="n">iframe</span><span class="o">&gt;</span></code> or <code class="codehilite"><span class="o">&lt;</span><span class="n">embed</span><span class="o">&gt;</span></code><a class="headerlink" href="#embedding-with-iframe-or-embed" title="Permanent link">&para;</a></h3>
 <p>After we generate the HTML chart or map, save the object as a HTML file.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1865,13 +1870,13 @@ height=400px ></iframe>
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&quot;MotionChart&quot;
-&quot;MotionChartID336e668836ab&quot;
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ss">&quot;MotionChart&quot;</span>
+<span class="ss">&quot;MotionChartID336e668836ab&quot;</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="maps">Maps<a class="headerlink" href="#maps" title="Permanent link">&para;</a></h2>
-<h3 id="gvisgeochart"><code class="codehilite">gvisGeoChart</code><a class="headerlink" href="#gvisgeochart" title="Permanent link">&para;</a></h3>
+<h3 id="gvisgeochart"><code class="codehilite"><span class="n">gvisGeoChart</span></code><a class="headerlink" href="#gvisgeochart" title="Permanent link">&para;</a></h3>
 <!--  -->
 
 <!-- Geo -->
@@ -1886,11 +1891,11 @@ height=400px ></iframe>
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Output
-        Country Profit Online
-1       Germany      3   TRUE
-2        Brazil      4  FALSE
-3 United States      5   TRUE
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Output</span>
+        <span class="n">Country</span> <span class="n">Profit</span> <span class="n">Online</span>
+<span class="mi">1</span>       <span class="n">Germany</span>      <span class="mi">3</span>   <span class="k">TRUE</span>
+<span class="mi">2</span>        <span class="n">Brazil</span>      <span class="mi">4</span>  <span class="k">FALSE</span>
+<span class="mi">3</span> <span class="n">United</span> <span class="n">States</span>      <span class="mi">5</span>   <span class="k">TRUE</span>
 </pre></div>
 </td></tr></table>
 
@@ -2054,11 +2059,11 @@ callbacks.shift()();
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Output
-      City Popularity
-1 New York        200
-2   Boston        300
-3    Miami        400
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Output</span>
+      <span class="n">City</span> <span class="n">Popularity</span>
+<span class="mi">1</span> <span class="k">New</span> <span class="n">York</span>        <span class="mi">200</span>
+<span class="mi">2</span>   <span class="n">Boston</span>        <span class="mi">300</span>
+<span class="mi">3</span>    <span class="n">Miami</span>        <span class="mi">400</span>
 </pre></div>
 </td></tr></table>
 
@@ -2336,7 +2341,7 @@ callbacks.shift()();
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Output</span>
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s s-Atom">#</span> <span class="nv">Output</span>
         <span class="nv">Date</span><span class="o">/</span><span class="nv">Time</span> <span class="nv">UTC</span>  <span class="nv">Lat</span>  <span class="nv">Long</span> <span class="nv">Pressure_mb</span> <span class="nv">Speed_kt</span>            <span class="nv">Category</span>
 <span class="mi">1</span> <span class="mi">1992</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">16</span> <span class="mi">18</span><span class="s s-Atom">:</span><span class="mi">00</span><span class="s s-Atom">:</span><span class="mi">00</span> <span class="mf">10.8</span> <span class="o">-</span><span class="mf">35.5</span>        <span class="mi">1010</span>       <span class="mi">25</span> <span class="nv">Tropical</span> <span class="nv">Depression</span>
 <span class="mi">2</span> <span class="mi">1992</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">17</span> <span class="mi">00</span><span class="s s-Atom">:</span><span class="mi">00</span><span class="s s-Atom">:</span><span class="mi">00</span> <span class="mf">11.2</span> <span class="o">-</span><span class="mf">37.4</span>        <span class="mi">1009</span>       <span class="mi">30</span> <span class="nv">Tropical</span> <span class="nv">Depression</span>
@@ -2733,7 +2738,7 @@ callbacks.shift()();
 </div>
 
 <p><br></p>
-<h3 id="gvismap-or-google-maps"><code class="codehilite">gvisMap</code> or Google Maps<a class="headerlink" href="#gvismap-or-google-maps" title="Permanent link">&para;</a></h3>
+<h3 id="gvismap-or-google-maps"><code class="codehilite"><span class="n">gvisMap</span></code> or Google Maps<a class="headerlink" href="#gvismap-or-google-maps" title="Permanent link">&para;</a></h3>
 <!--  -->
 
 <!-- AndrewMap -->
@@ -3243,7 +3248,7 @@ callbacks.shift()();
   style="width: 556; height: 347;"><br />
 </div><br />
 <br></p>
-<h2 id="tables-with-gvistable">Tables with <code class="codehilite">gvisTable</code><a class="headerlink" href="#tables-with-gvistable" title="Permanent link">&para;</a></h2>
+<h2 id="tables-with-gvistable">Tables with <code class="codehilite"><span class="n">gvisTable</span></code><a class="headerlink" href="#tables-with-gvistable" title="Permanent link">&para;</a></h2>
 <!--  -->
 
 <!-- Table -->
@@ -3258,11 +3263,11 @@ callbacks.shift()();
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Output
-        Date  Device Value Title Annotation
-1 2008-01-01 Pencils  3000  &lt;NA&gt;       &lt;NA&gt;
-2 2008-01-02 Pencils 14045  &lt;NA&gt;       &lt;NA&gt;
-3 2008-01-03 Pencils  5502  &lt;NA&gt;       &lt;NA&gt;
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Output</span>
+        <span class="nb">Date</span>  <span class="n">Device</span> <span class="n">Value</span> <span class="n">Title</span> <span class="n">Annotation</span>
+<span class="mi">1</span> <span class="mi">2008</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="n">Pencils</span>  <span class="mi">3000</span>  <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>       <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>
+<span class="mi">2</span> <span class="mi">2008</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span> <span class="n">Pencils</span> <span class="mi">14045</span>  <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>       <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>
+<span class="mi">3</span> <span class="mi">2008</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">03</span> <span class="n">Pencils</span>  <span class="mi">5502</span>  <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>       <span class="o">&lt;</span><span class="n">NA</span><span class="o">&gt;</span>
 </pre></div>
 </td></tr></table>
 
@@ -3470,19 +3475,19 @@ callbacks.shift()();
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Output
-                                                                                 Rank       Country Population % of World Population
-1    1         China 1339940000                0.1950
-2    2         India 1188650000                0.1730
-3    3 United States  310438000                0.0452
-                                                                                                                                                                     Flag
-1 &lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/22px-Flag_of_the_People%27s_Republic_of_China.svg.png&quot;&gt;
-2                                                       &lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/22px-Flag_of_India.svg.png&quot;&gt;
-3                               &lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png&quot;&gt;
-  Mode       Date
-1 TRUE 2010-10-09
-2 TRUE 2010-10-09
-3 TRUE 2010-10-09
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Output</span>
+                                                                                 <span class="n">Rank</span>       <span class="n">Country</span> <span class="n">Population</span> <span class="o">%</span> <span class="k">of</span> <span class="n">World</span> <span class="n">Population</span>
+<span class="mi">1</span>    <span class="mi">1</span>         <span class="n">China</span> <span class="mi">1339940000</span>                <span class="mi">0</span><span class="p">.</span><span class="mi">1950</span>
+<span class="mi">2</span>    <span class="mi">2</span>         <span class="n">India</span> <span class="mi">1188650000</span>                <span class="mi">0</span><span class="p">.</span><span class="mi">1730</span>
+<span class="mi">3</span>    <span class="mi">3</span> <span class="n">United</span> <span class="n">States</span>  <span class="mi">310438000</span>                <span class="mi">0</span><span class="p">.</span><span class="mi">0452</span>
+                                                                                                                                                                     <span class="n">Flag</span>
+<span class="mi">1</span> <span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="ss">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/22px-Flag_of_the_People%27s_Republic_of_China.svg.png&quot;</span><span class="o">&gt;</span>
+<span class="mi">2</span>                                                       <span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="ss">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/22px-Flag_of_India.svg.png&quot;</span><span class="o">&gt;</span>
+<span class="mi">3</span>                               <span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="ss">&quot;http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png&quot;</span><span class="o">&gt;</span>
+  <span class="k">Mode</span>       <span class="nb">Date</span>
+<span class="mi">1</span> <span class="k">TRUE</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">09</span>
+<span class="mi">2</span> <span class="k">TRUE</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">09</span>
+<span class="mi">3</span> <span class="k">TRUE</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">09</span>
 </pre></div>
 </td></tr></table>
 
@@ -5348,7 +5353,7 @@ callbacks.shift()();
 </div>
 
 <p><br></p>
-<h2 id="dashboards-with-gvismerge">Dashboards with <code class="codehilite">gvisMerge</code><a class="headerlink" href="#dashboards-with-gvismerge" title="Permanent link">&para;</a></h2>
+<h2 id="dashboards-with-gvismerge">Dashboards with <code class="codehilite"><span class="n">gvisMerge</span></code><a class="headerlink" href="#dashboards-with-gvismerge" title="Permanent link">&para;</a></h2>
 <!--  -->
 
 <!-- GT -->
@@ -6289,25 +6294,17 @@ callbacks.shift()();
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

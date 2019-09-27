@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Data Analysis in R, the data.table Way
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -446,14 +451,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#datatable-novice" title="data.table novice" class="md-nav__link">
+  <a href="#datatable-novice" class="md-nav__link">
     data.table novice
   </a>
   
@@ -461,42 +466,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-and-subset-a-datatable" title="Create and subset a data.table" class="md-nav__link">
+  <a href="#create-and-subset-a-datatable" class="md-nav__link">
     Create and subset a data.table
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#getting-to-know-a-datatable" title="Getting to know a data.table" class="md-nav__link">
+  <a href="#getting-to-know-a-datatable" class="md-nav__link">
     Getting to know a data.table
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#subsetting-data-tables" title="Subsetting data tables" class="md-nav__link">
+  <a href="#subsetting-data-tables" class="md-nav__link">
     Subsetting data tables
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-by-basics" title="The by basics" class="md-nav__link">
+  <a href="#the-by-basics" class="md-nav__link">
     The by basics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-n-and-by" title="Using .N and by" class="md-nav__link">
+  <a href="#using-n-and-by" class="md-nav__link">
     Using .N and by
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#return-multiple-numbers-in-j" title="Return multiple numbers in j" class="md-nav__link">
+  <a href="#return-multiple-numbers-in-j" class="md-nav__link">
     Return multiple numbers in j
   </a>
   
@@ -508,7 +513,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datatable-yeoman" title="data.table yeoman" class="md-nav__link">
+  <a href="#datatable-yeoman" class="md-nav__link">
     data.table yeoman
   </a>
   
@@ -516,49 +521,49 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#chaining-the-basics" title="Chaining, the basics" class="md-nav__link">
+  <a href="#chaining-the-basics" class="md-nav__link">
     Chaining, the basics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#programming-time-vs-readability" title="Programming time vs readability" class="md-nav__link">
+  <a href="#programming-time-vs-readability" class="md-nav__link">
     Programming time vs readability
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#introducing-sdcols" title="Introducing .SDcols" class="md-nav__link">
+  <a href="#introducing-sdcols" class="md-nav__link">
     Introducing .SDcols
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mixing-it-together-lapply-sd-sdcols-and-n" title="Mixing it together: lapply, .SD, SDcols and .N" class="md-nav__link">
+  <a href="#mixing-it-together-lapply-sd-sdcols-and-n" class="md-nav__link">
     Mixing it together: lapply, .SD, SDcols and .N
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-updating-and-removing-columns" title="Adding, updating, and removing columns" class="md-nav__link">
+  <a href="#adding-updating-and-removing-columns" class="md-nav__link">
     Adding, updating, and removing columns
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-functional-form" title="The functional form" class="md-nav__link">
+  <a href="#the-functional-form" class="md-nav__link">
     The functional form
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ready-set-go" title="Ready, set, go!" class="md-nav__link">
+  <a href="#ready-set-go" class="md-nav__link">
     Ready, set, go!
   </a>
   
@@ -570,7 +575,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datatable-expert" title="data.table expert" class="md-nav__link">
+  <a href="#datatable-expert" class="md-nav__link">
     data.table expert
   </a>
   
@@ -578,35 +583,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#selecting-rows-the-datatable-way" title="Selecting rows the data.table way" class="md-nav__link">
+  <a href="#selecting-rows-the-datatable-way" class="md-nav__link">
     Selecting rows the data.table way
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#removing-columns-and-adapting-your-column-names" title="Removing columns and adapting your column names" class="md-nav__link">
+  <a href="#removing-columns-and-adapting-your-column-names" class="md-nav__link">
     Removing columns and adapting your column names
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-automatic-indexing" title="Understanding automatic indexing" class="md-nav__link">
+  <a href="#understanding-automatic-indexing" class="md-nav__link">
     Understanding automatic indexing
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#selecting-groups-or-parts-of-groups" title="Selecting groups or parts of groups" class="md-nav__link">
+  <a href="#selecting-groups-or-parts-of-groups" class="md-nav__link">
     Selecting groups or parts of groups
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rolling-joins" title="Rolling joins" class="md-nav__link">
+  <a href="#rolling-joins" class="md-nav__link">
     Rolling joins
   </a>
   
@@ -1048,14 +1053,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#datatable-novice" title="data.table novice" class="md-nav__link">
+  <a href="#datatable-novice" class="md-nav__link">
     data.table novice
   </a>
   
@@ -1063,42 +1068,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-and-subset-a-datatable" title="Create and subset a data.table" class="md-nav__link">
+  <a href="#create-and-subset-a-datatable" class="md-nav__link">
     Create and subset a data.table
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#getting-to-know-a-datatable" title="Getting to know a data.table" class="md-nav__link">
+  <a href="#getting-to-know-a-datatable" class="md-nav__link">
     Getting to know a data.table
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#subsetting-data-tables" title="Subsetting data tables" class="md-nav__link">
+  <a href="#subsetting-data-tables" class="md-nav__link">
     Subsetting data tables
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-by-basics" title="The by basics" class="md-nav__link">
+  <a href="#the-by-basics" class="md-nav__link">
     The by basics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-n-and-by" title="Using .N and by" class="md-nav__link">
+  <a href="#using-n-and-by" class="md-nav__link">
     Using .N and by
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#return-multiple-numbers-in-j" title="Return multiple numbers in j" class="md-nav__link">
+  <a href="#return-multiple-numbers-in-j" class="md-nav__link">
     Return multiple numbers in j
   </a>
   
@@ -1110,7 +1115,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datatable-yeoman" title="data.table yeoman" class="md-nav__link">
+  <a href="#datatable-yeoman" class="md-nav__link">
     data.table yeoman
   </a>
   
@@ -1118,49 +1123,49 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#chaining-the-basics" title="Chaining, the basics" class="md-nav__link">
+  <a href="#chaining-the-basics" class="md-nav__link">
     Chaining, the basics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#programming-time-vs-readability" title="Programming time vs readability" class="md-nav__link">
+  <a href="#programming-time-vs-readability" class="md-nav__link">
     Programming time vs readability
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#introducing-sdcols" title="Introducing .SDcols" class="md-nav__link">
+  <a href="#introducing-sdcols" class="md-nav__link">
     Introducing .SDcols
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mixing-it-together-lapply-sd-sdcols-and-n" title="Mixing it together: lapply, .SD, SDcols and .N" class="md-nav__link">
+  <a href="#mixing-it-together-lapply-sd-sdcols-and-n" class="md-nav__link">
     Mixing it together: lapply, .SD, SDcols and .N
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-updating-and-removing-columns" title="Adding, updating, and removing columns" class="md-nav__link">
+  <a href="#adding-updating-and-removing-columns" class="md-nav__link">
     Adding, updating, and removing columns
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-functional-form" title="The functional form" class="md-nav__link">
+  <a href="#the-functional-form" class="md-nav__link">
     The functional form
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ready-set-go" title="Ready, set, go!" class="md-nav__link">
+  <a href="#ready-set-go" class="md-nav__link">
     Ready, set, go!
   </a>
   
@@ -1172,7 +1177,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#datatable-expert" title="data.table expert" class="md-nav__link">
+  <a href="#datatable-expert" class="md-nav__link">
     data.table expert
   </a>
   
@@ -1180,35 +1185,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#selecting-rows-the-datatable-way" title="Selecting rows the data.table way" class="md-nav__link">
+  <a href="#selecting-rows-the-datatable-way" class="md-nav__link">
     Selecting rows the data.table way
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#removing-columns-and-adapting-your-column-names" title="Removing columns and adapting your column names" class="md-nav__link">
+  <a href="#removing-columns-and-adapting-your-column-names" class="md-nav__link">
     Removing columns and adapting your column names
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-automatic-indexing" title="Understanding automatic indexing" class="md-nav__link">
+  <a href="#understanding-automatic-indexing" class="md-nav__link">
     Understanding automatic indexing
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#selecting-groups-or-parts-of-groups" title="Selecting groups or parts of groups" class="md-nav__link">
+  <a href="#selecting-groups-or-parts-of-groups" class="md-nav__link">
     Selecting groups or parts of groups
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rolling-joins" title="Rolling joins" class="md-nav__link">
+  <a href="#rolling-joins" class="md-nav__link">
     Rolling joins
   </a>
   
@@ -1281,17 +1286,17 @@
 </ul>
 <hr />
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
-<p><code class="codehilite">data.table</code></p>
+<p><code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code></p>
 <ul>
-<li>Extension of <code class="codehilite">data.frame</code>.</li>
+<li>Extension of <code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="n">frame</span></code>.</li>
 <li>Fast aggregation of large data (e.g. 100GB in RAM), fast ordered     joins, fast add/modify/delete of columns by group using no copies at     all, list columns, a fast friendly file reader and parallel file writer. Offers a natural and flexible syntax, for faster development.</li>
 </ul>
-<p><code class="codehilite">dplyr</code></p>
+<p><code class="codehilite"><span class="n">dplyr</span></code></p>
 <ul>
 <li>A fast, consistent tool for working with data frame like objects, both in memory and out of memory.</li>
 <li>Pipelines.</li>
 </ul>
-<p><code class="codehilite">tidyr</code></p>
+<p><code class="codehilite"><span class="n">tidyr</span></code></p>
 <ul>
 <li>An evolution of &lsquo;reshape2&rsquo;. It&rsquo;s designed specifically for data tidying (not general reshaping or aggregating) and works well with dplyr data pipelines.</li>
 </ul>
@@ -1327,9 +1332,9 @@
 </tbody>
 </table>
 
-<h2 id="datatable-novice"><code class="codehilite">data.table</code> novice<a class="headerlink" href="#datatable-novice" title="Permanent link">&para;</a></h2>
-<p>Find out more with <code class="codehilite">?data.table</code>.</p>
-<h3 id="create-and-subset-a-datatable">Create and subset a <code class="codehilite">data.table</code><a class="headerlink" href="#create-and-subset-a-datatable" title="Permanent link">&para;</a></h3>
+<h2 id="datatable-novice"><code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code> novice<a class="headerlink" href="#datatable-novice" title="Permanent link">&para;</a></h2>
+<p>Find out more with <code class="codehilite"><span class="o">?</span><span class="k">data</span><span class="p">.</span><span class="k">table</span></code>.</p>
+<h3 id="create-and-subset-a-datatable">Create and subset a <code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code><a class="headerlink" href="#create-and-subset-a-datatable" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1355,8 +1360,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    a b
-## 1: 1 C
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">a</span> <span class="n">b</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span> <span class="k">C</span>
 </pre></div>
 </td></tr></table>
 
@@ -1368,14 +1373,14 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    a b
-## 1: 2 B
-## 2: 1 C
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">a</span> <span class="n">b</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span> <span class="n">B</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span> <span class="k">C</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="getting-to-know-a-datatable">Getting to know a <code class="codehilite">data.table</code><a class="headerlink" href="#getting-to-know-a-datatable" title="Permanent link">&para;</a></h3>
-<p>Like <code class="codehilite">head</code>, <code class="codehilite">tail</code>.</p>
+<h3 id="getting-to-know-a-datatable">Getting to know a <code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code><a class="headerlink" href="#getting-to-know-a-datatable" title="Permanent link">&para;</a></h3>
+<p>Like <code class="codehilite"><span class="n">head</span></code>, <code class="codehilite"><span class="n">tail</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Print the penultimate row of DT using .N</span>
 <span class="n">DT[.N</span> <span class="o">-</span> <span class="m">1</span><span class="n">]</span>
@@ -1383,8 +1388,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    a b
-## 1: 1 C
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">a</span> <span class="n">b</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span> <span class="k">C</span>
 </pre></div>
 </td></tr></table>
 
@@ -1394,7 +1399,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;a&quot; &quot;b&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;a&quot;</span> <span class="ss">&quot;b&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1402,7 +1407,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4 2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span> <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -1415,16 +1420,16 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    a b
-## 1: 2 B
-## 2: 2 B
-## 3: 1 C
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">a</span> <span class="n">b</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span> <span class="n">B</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">2</span> <span class="n">B</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span> <span class="k">C</span>
 </pre></div>
 </td></tr></table>
 
-<p><code class="codehilite">DT</code> is a data.table/data.frame, but <code class="codehilite">DT[ , B]</code> is a vector; <code class="codehilite">DT[ , .(B)]</code> is a subsetted data.table.</p>
+<p><code class="codehilite"><span class="n">DT</span></code> is a data.table/data.frame, but <code class="codehilite"><span class="n">DT</span><span class="p">[</span> <span class="p">,</span> <span class="n">B</span><span class="p">]</span></code> is a vector; <code class="codehilite"><span class="n">DT</span><span class="p">[</span> <span class="p">,</span> <span class="p">.(</span><span class="n">B</span><span class="p">)]</span></code> is a subsetted data.table.</p>
 <h3 id="subsetting-data-tables">Subsetting data tables<a class="headerlink" href="#subsetting-data-tables" title="Permanent link">&para;</a></h3>
-<p><code class="codehilite">DT[i, j, by]</code> means take <code class="codehilite">DT</code>, subset rows using <code class="codehilite">i</code>, then calculate <code class="codehilite">j</code> grouped by <code class="codehilite">by</code>. You can wrap <code class="codehilite">j</code> with <code class="codehilite">.()</code>.</p>
+<p><code class="codehilite"><span class="n">DT</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="k">by</span><span class="p">]</span></code> means take <code class="codehilite"><span class="n">DT</span></code>, subset rows using <code class="codehilite"><span class="n">i</span></code>, then calculate <code class="codehilite"><span class="n">j</span></code> grouped by <code class="codehilite"><span class="k">by</span></code>. You can wrap <code class="codehilite"><span class="n">j</span></code> with <code class="codehilite"><span class="p">.()</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1443,9 +1448,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    B C
-## 1: a 6
-## 2: c 8
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">B</span> <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">a</span> <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="k">c</span> <span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
@@ -1463,7 +1468,7 @@
 </pre></div>
 </td></tr></table>
 
-<h3 id="the-by-basics">The <code class="codehilite">by</code> basics<a class="headerlink" href="#the-by-basics" title="Permanent link">&para;</a></h3>
+<h3 id="the-by-basics">The <code class="codehilite"><span class="k">by</span></code> basics<a class="headerlink" href="#the-by-basics" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1483,10 +1488,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       Species    V1
-## 1:     setosa 5.006
-## 2: versicolor 5.936
-## 3:  virginica 6.588
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">Species</span>    <span class="n">V1</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>     <span class="n">setosa</span> <span class="mi">5</span><span class="p">.</span><span class="mi">006</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">versicolor</span> <span class="mi">5</span><span class="p">.</span><span class="mi">936</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>  <span class="n">virginica</span> <span class="mi">6</span><span class="p">.</span><span class="mi">588</span>
 </pre></div>
 </td></tr></table>
 
@@ -1498,13 +1503,13 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    substr    V1
-## 1:      s 5.006
-## 2:      v 6.262
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">substr</span>    <span class="n">V1</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>      <span class="n">s</span> <span class="mi">5</span><span class="p">.</span><span class="mi">006</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>      <span class="n">v</span> <span class="mi">6</span><span class="p">.</span><span class="mi">262</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="using-n-and-by">Using <code class="codehilite"><span class="na">.N</span></code> and <code class="codehilite">by</code><a class="headerlink" href="#using-n-and-by" title="Permanent link">&para;</a></h3>
+<h3 id="using-n-and-by">Using <code class="codehilite"><span class="na">.N</span></code> and <code class="codehilite"><span class="k">by</span></code><a class="headerlink" href="#using-n-and-by" title="Permanent link">&para;</a></h3>
 <p><code class="codehilite"><span class="na">.N</span></code>, number, in row or column.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1521,10 +1526,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    round   N
-## 1:    20 117
-## 2:    10  29
-## 3:    30   4
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">round</span>   <span class="n">N</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>    <span class="mi">20</span> <span class="mi">117</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>    <span class="mi">10</span>  <span class="mi">29</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>    <span class="mi">30</span>   <span class="mi">4</span>
 </pre></div>
 </td></tr></table>
 
@@ -1537,14 +1542,14 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    Area Count
-## 1:   20   117
-## 2:   10    29
-## 3:   30     4
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">Area</span> <span class="k">Count</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>   <span class="mi">20</span>   <span class="mi">117</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>   <span class="mi">10</span>    <span class="mi">29</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>   <span class="mi">30</span>     <span class="mi">4</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="return-multiple-numbers-in-j">Return multiple numbers in <code class="codehilite">j</code><a class="headerlink" href="#return-multiple-numbers-in-j" title="Permanent link">&para;</a></h3>
+<h3 id="return-multiple-numbers-in-j">Return multiple numbers in <code class="codehilite"><span class="n">j</span></code><a class="headerlink" href="#return-multiple-numbers-in-j" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1569,15 +1574,15 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A C
-## 1: b 4
-## 2: b 9
-## 3: a 2
-## 4: a 8
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="mi">9</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">a</span> <span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="datatable-yeoman"><code class="codehilite">data.table</code> yeoman<a class="headerlink" href="#datatable-yeoman" title="Permanent link">&para;</a></h2>
+<h2 id="datatable-yeoman"><code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code> yeoman<a class="headerlink" href="#datatable-yeoman" title="Permanent link">&para;</a></h2>
 <h3 id="chaining-the-basics">Chaining, the basics<a class="headerlink" href="#chaining-the-basics" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1597,15 +1602,15 @@
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B C
-## 1: b 1 3
-## 2: b 1 8
-## 3: b 2 4
-## 4: b 2 5
-## 5: a 3 1
-## 6: a 3 7
-## 7: a 4 2
-## 8: a 4 6
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span> <span class="mi">3</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span> <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">b</span> <span class="mi">2</span> <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">b</span> <span class="mi">2</span> <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">6</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span> <span class="mi">7</span>
+<span class="o">##</span> <span class="mi">7</span><span class="p">:</span> <span class="n">a</span> <span class="mi">4</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">8</span><span class="p">:</span> <span class="n">a</span> <span class="mi">4</span> <span class="mi">6</span>
 </pre></div>
 </td></tr></table>
 
@@ -1621,15 +1626,15 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A C
-## 1: b 4
-## 2: b 9
-## 3: a 2
-## 4: a 8
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="mi">9</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">a</span> <span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>Chaining your <code class="codehilite">iris</code> dataset</strong></p>
+<p><strong>Chaining your <code class="codehilite"><span class="n">iris</span></code> dataset</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1643,10 +1648,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       Species Sepal.Length Sepal.Width Petal.Length Petal.Width
-## 1:  virginica          6.5         3.0         5.55         2.0
-## 2: versicolor          5.9         2.8         4.35         1.3
-## 3:     setosa          5.0         3.4         1.50         0.2
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">Species</span> <span class="n">Sepal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Sepal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Petal</span><span class="p">.</span><span class="n">Width</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>  <span class="n">virginica</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">5</span><span class="p">.</span><span class="mi">55</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">versicolor</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">8</span>         <span class="mi">4</span><span class="p">.</span><span class="mi">35</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">3</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>     <span class="n">setosa</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">50</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -1665,18 +1670,18 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##   1:          5.1         3.5          1.4         0.2    setosa
-##   2:          4.9         3.0          1.4         0.2    setosa
-##   3:          4.7         3.2          1.3         0.2    setosa
-##   4:          4.6         3.1          1.5         0.2    setosa
-##   5:          5.0         3.6          1.4         0.2    setosa
-##  ---                                                            
-## 146:          6.7         3.0          5.2         2.3 virginica
-## 147:          6.3         2.5          5.0         1.9 virginica
-## 148:          6.5         3.0          5.2         2.0 virginica
-## 149:          6.2         3.4          5.4         2.3 virginica
-## 150:          5.9         3.0          5.1         1.8 virginica
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>      <span class="n">Sepal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Sepal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Petal</span><span class="p">.</span><span class="n">Width</span>   <span class="n">Species</span>
+<span class="o">##</span>   <span class="mi">1</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">2</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">3</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">4</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">1</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">5</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">6</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>  <span class="c1">---                                                            </span>
+<span class="o">##</span> <span class="mi">146</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">147</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">9</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">148</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">149</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">4</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">150</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">8</span> <span class="n">virginica</span>
 </pre></div>
 </td></tr></table>
 
@@ -1699,9 +1704,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    x        y        z
-## 1: 2 6.500000 7.500000
-## 2: 1 7.666667 8.666667
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">x</span>        <span class="n">y</span>        <span class="n">z</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">6</span><span class="p">.</span><span class="mi">500000</span> <span class="mi">7</span><span class="p">.</span><span class="mi">500000</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">7</span><span class="p">.</span><span class="mi">666667</span> <span class="mi">8</span><span class="p">.</span><span class="mi">666667</span>
 </pre></div>
 </td></tr></table>
 
@@ -1713,14 +1718,14 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    x y z
-## 1: 2 7 8
-## 2: 1 7 8
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">x</span> <span class="n">y</span> <span class="n">z</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">7</span> <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">7</span> <span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
 <h3 id="introducing-sdcols">Introducing <code class="codehilite"><span class="na">.SDcols</span></code><a class="headerlink" href="#introducing-sdcols" title="Permanent link">&para;</a></h3>
-<p><code class="codehilite"><span class="na">.SDcols</span></code> specifies the columns of <code class="codehilite">DT</code> that are included in <code class="codehilite"><span class="na">.SD</span></code>.</p>
+<p><code class="codehilite"><span class="na">.SDcols</span></code> specifies the columns of <code class="codehilite"><span class="n">DT</span></code> that are included in <code class="codehilite"><span class="na">.SD</span></code>.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1744,8 +1749,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    Q1 Q2 Q3
-## 1: 18 14 16
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">Q1</span> <span class="n">Q2</span> <span class="n">Q3</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">18</span> <span class="mi">14</span> <span class="mi">16</span>
 </pre></div>
 </td></tr></table>
 
@@ -1756,8 +1761,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    H1 H2
-## 1: 12 15
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">H1</span> <span class="n">H2</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">12</span> <span class="mi">15</span>
 </pre></div>
 </td></tr></table>
 
@@ -1770,14 +1775,14 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    grp Q1 Q2 Q3
-## 1:   6  3  4  1
-## 2:   8  5  4  5
-## 3:   8  3  4  2
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">grp</span> <span class="n">Q1</span> <span class="n">Q2</span> <span class="n">Q3</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>   <span class="mi">6</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>   <span class="mi">8</span>  <span class="mi">5</span>  <span class="mi">4</span>  <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>   <span class="mi">8</span>  <span class="mi">3</span>  <span class="mi">4</span>  <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="mixing-it-together-lapply-sd-sdcols-and-n">Mixing it together: <code class="codehilite">lapply</code>, <code class="codehilite"><span class="na">.SD</span></code>, <code class="codehilite">SDcols</code> and <code class="codehilite"><span class="na">.N</span></code><a class="headerlink" href="#mixing-it-together-lapply-sd-sdcols-and-n" title="Permanent link">&para;</a></h3>
+<h3 id="mixing-it-together-lapply-sd-sdcols-and-n">Mixing it together: <code class="codehilite"><span class="n">lapply</span></code>, <code class="codehilite"><span class="na">.SD</span></code>, <code class="codehilite"><span class="n">SDcols</span></code> and <code class="codehilite"><span class="na">.N</span></code><a class="headerlink" href="#mixing-it-together-lapply-sd-sdcols-and-n" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1803,14 +1808,14 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    x  y  z
-## 1: 2  1  2
-## 2: 1  3  4
-## 3: 2  5  6
-## 4: 1  7  8
-## 5: 2  9 10
-## 6: 2 11 12
-## 7: 1 13 14
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">x</span>  <span class="n">y</span>  <span class="n">z</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span>  <span class="mi">1</span>  <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span>  <span class="mi">3</span>  <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">2</span>  <span class="mi">5</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">1</span>  <span class="mi">7</span>  <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">2</span>  <span class="mi">9</span> <span class="mi">10</span>
+<span class="o">##</span> <span class="mi">6</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">11</span> <span class="mi">12</span>
+<span class="o">##</span> <span class="mi">7</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">13</span> <span class="mi">14</span>
 </pre></div>
 </td></tr></table>
 
@@ -1820,9 +1825,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    x x  y  z N
-## 1: 2 8 26 30 4
-## 2: 1 3 23 26 3
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">x</span> <span class="n">x</span>  <span class="n">y</span>  <span class="n">z</span> <span class="n">N</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">8</span> <span class="mi">26</span> <span class="mi">30</span> <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">23</span> <span class="mi">26</span> <span class="mi">3</span>
 </pre></div>
 </td></tr></table>
 
@@ -1839,14 +1844,14 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    by1   by2 x  y
-## 1:   2 FALSE 2  1
-## 2:   2 FALSE 4  6
-## 3:   1 FALSE 1  3
-## 4:   1 FALSE 2 10
-## 5:   2  TRUE 2  9
-## 6:   2  TRUE 4 20
-## 7:   1  TRUE 1 13
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">by1</span>   <span class="n">by2</span> <span class="n">x</span>  <span class="n">y</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>   <span class="mi">2</span> <span class="k">FALSE</span> <span class="mi">2</span>  <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>   <span class="mi">2</span> <span class="k">FALSE</span> <span class="mi">4</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>   <span class="mi">1</span> <span class="k">FALSE</span> <span class="mi">1</span>  <span class="mi">3</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span>   <span class="mi">1</span> <span class="k">FALSE</span> <span class="mi">2</span> <span class="mi">10</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span>   <span class="mi">2</span>  <span class="k">TRUE</span> <span class="mi">2</span>  <span class="mi">9</span>
+<span class="o">##</span> <span class="mi">6</span><span class="p">:</span>   <span class="mi">2</span>  <span class="k">TRUE</span> <span class="mi">4</span> <span class="mi">20</span>
+<span class="o">##</span> <span class="mi">7</span><span class="p">:</span>   <span class="mi">1</span>  <span class="k">TRUE</span> <span class="mi">1</span> <span class="mi">13</span>
 </pre></div>
 </td></tr></table>
 
@@ -1858,14 +1863,14 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    by1 x  y
-## 1:   2 4 20
-## 2:   1 2 13
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">by1</span> <span class="n">x</span>  <span class="n">y</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>   <span class="mi">2</span> <span class="mi">4</span> <span class="mi">20</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>   <span class="mi">1</span> <span class="mi">2</span> <span class="mi">13</span>
 </pre></div>
 </td></tr></table>
 
 <h3 id="adding-updating-and-removing-columns">Adding, updating, and removing columns<a class="headerlink" href="#adding-updating-and-removing-columns" title="Permanent link">&para;</a></h3>
-<p><code class="codehilite">:=</code> is defined for use in <code class="codehilite">j</code> only.</p>
+<p><code class="codehilite"><span class="p">:</span><span class="o">=</span></code> is defined for use in <code class="codehilite"><span class="n">j</span></code> only.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># The data.table DT</span>
@@ -1879,12 +1884,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B
-## 1: a 1
-## 2: a 2
-## 3: a 3
-## 4: b 4
-## 5: b 5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">a</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">b</span> <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -1899,12 +1904,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B Total
-## 1: a 1     6
-## 2: a 2     6
-## 3: a 3     6
-## 4: b 4     9
-## 5: b 5     9
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="n">Total</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>     <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">a</span> <span class="mi">2</span>     <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>     <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">b</span> <span class="mi">4</span>     <span class="mi">9</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>     <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -1919,12 +1924,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B Total
-## 1: a 1     6
-## 2: a 3     6
-## 3: a 3     6
-## 4: b 5     9
-## 5: b 5     9
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="n">Total</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>     <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>     <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>     <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>     <span class="mi">9</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>     <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -1939,12 +1944,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B Total Total2
-## 1: a 1     6     NA
-## 2: a 3     6      6
-## 3: a 3     6      6
-## 4: b 5     9      5
-## 5: b 5     9     NA
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="n">Total</span> <span class="n">Total2</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>     <span class="mi">6</span>     <span class="n">NA</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>     <span class="mi">6</span>      <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>     <span class="mi">6</span>      <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>     <span class="mi">9</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>     <span class="mi">9</span>     <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -1959,12 +1964,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B Total2
-## 1: a 1     NA
-## 2: a 3      6
-## 3: a 3      6
-## 4: b 5      5
-## 5: b 5     NA
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="n">Total2</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>     <span class="n">NA</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>      <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">3</span>      <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>     <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -1974,7 +1979,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] NA  6  6  5 NA
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">NA</span>  <span class="mi">6</span>  <span class="mi">6</span>  <span class="mi">5</span> <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -1996,12 +2001,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B C D
-## 1: 1 2 2 2
-## 2: 1 3 3 2
-## 3: 1 4 4 2
-## 4: 2 5 6 2
-## 5: 2 6 7 2
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="k">C</span> <span class="n">D</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2018,12 +2023,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A D
-## 1: 1 2
-## 2: 1 2
-## 3: 1 2
-## 4: 2 2
-## 5: 2 2
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">D</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
@@ -2038,17 +2043,17 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A
-## 1: 1
-## 2: 1
-## 3: 1
-## 4: 2
-## 5: 2
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">2</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">2</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="ready-set-go">Ready, <code class="codehilite">set</code>, go!<a class="headerlink" href="#ready-set-go" title="Permanent link">&para;</a></h3>
-<p>The <code class="codehilite">set</code> function is used to repeatedly update a data.table by reference. You can think of the <code class="codehilite">set</code> function as a loopable.</p>
+<h3 id="ready-set-go">Ready, <code class="codehilite"><span class="k">set</span></code>, go!<a class="headerlink" href="#ready-set-go" title="Permanent link">&para;</a></h3>
+<p>The <code class="codehilite"><span class="k">set</span></code> function is used to repeatedly update a data.table by reference. You can think of the <code class="codehilite"><span class="k">set</span></code> function as a loopable.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -2083,17 +2088,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     A B C D
-##  1: 2 2 5 3
-##  2: 2 1 2 3
-##  3: 3 4 4 3
-##  4: 5 2 1 1
-##  5: 2 4 2 5
-##  6: 5 3 2 4
-##  7: 5 4 1 4
-##  8: 4 5 2 1
-##  9: 4 2 5 4
-## 10: 1 4 2 3
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">A</span> <span class="n">B</span> <span class="k">C</span> <span class="n">D</span>
+<span class="o">##</span>  <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">5</span> <span class="mi">3</span>
+<span class="o">##</span>  <span class="mi">2</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">:</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">3</span>
+<span class="o">##</span>  <span class="mi">4</span><span class="p">:</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span>
+<span class="o">##</span>  <span class="mi">5</span><span class="p">:</span> <span class="mi">2</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">5</span>
+<span class="o">##</span>  <span class="mi">6</span><span class="p">:</span> <span class="mi">5</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">4</span>
+<span class="o">##</span>  <span class="mi">7</span><span class="p">:</span> <span class="mi">5</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">4</span>
+<span class="o">##</span>  <span class="mi">8</span><span class="p">:</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">2</span> <span class="mi">1</span>
+<span class="o">##</span>  <span class="mi">9</span><span class="p">:</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">5</span> <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">3</span>
 </pre></div>
 </td></tr></table>
 
@@ -2125,21 +2130,21 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     a  b  c  d
-##  1: 2  2  5  3
-##  2: 2  1 NA  3
-##  3: 3 NA  4  3
-##  4: 5 NA  1  1
-##  5: 2 NA  2  5
-##  6: 5  3  2 NA
-##  7: 5  4  1  4
-##  8: 4  5 NA  1
-##  9: 4  2  5 NA
-## 10: 1  4 NA NA
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">a</span>  <span class="n">b</span>  <span class="k">c</span>  <span class="n">d</span>
+<span class="o">##</span>  <span class="mi">1</span><span class="p">:</span> <span class="mi">2</span>  <span class="mi">2</span>  <span class="mi">5</span>  <span class="mi">3</span>
+<span class="o">##</span>  <span class="mi">2</span><span class="p">:</span> <span class="mi">2</span>  <span class="mi">1</span> <span class="n">NA</span>  <span class="mi">3</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">:</span> <span class="mi">3</span> <span class="n">NA</span>  <span class="mi">4</span>  <span class="mi">3</span>
+<span class="o">##</span>  <span class="mi">4</span><span class="p">:</span> <span class="mi">5</span> <span class="n">NA</span>  <span class="mi">1</span>  <span class="mi">1</span>
+<span class="o">##</span>  <span class="mi">5</span><span class="p">:</span> <span class="mi">2</span> <span class="n">NA</span>  <span class="mi">2</span>  <span class="mi">5</span>
+<span class="o">##</span>  <span class="mi">6</span><span class="p">:</span> <span class="mi">5</span>  <span class="mi">3</span>  <span class="mi">2</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">7</span><span class="p">:</span> <span class="mi">5</span>  <span class="mi">4</span>  <span class="mi">1</span>  <span class="mi">4</span>
+<span class="o">##</span>  <span class="mi">8</span><span class="p">:</span> <span class="mi">4</span>  <span class="mi">5</span> <span class="n">NA</span>  <span class="mi">1</span>
+<span class="o">##</span>  <span class="mi">9</span><span class="p">:</span> <span class="mi">4</span>  <span class="mi">2</span>  <span class="mi">5</span> <span class="n">NA</span>
+<span class="o">##</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">1</span>  <span class="mi">4</span> <span class="n">NA</span> <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong>The <code class="codehilite">set</code> family</strong></p>
+<p><strong>The <code class="codehilite"><span class="k">set</span></code> family</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Define DT</span>
@@ -2153,12 +2158,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    a b
-## 1: a 1
-## 2: a 1
-## 3: a 1
-## 4: b 1
-## 5: b 1
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">a</span> <span class="n">b</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">a</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -2175,12 +2180,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    a_2 b_2
-## 1:   a   1
-## 2:   a   1
-## 3:   a   1
-## 4:   b   1
-## 5:   b   1
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">a_2</span> <span class="n">b_2</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>   <span class="n">a</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>   <span class="n">a</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>   <span class="n">a</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span>   <span class="n">b</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span>   <span class="n">b</span>   <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -2197,12 +2202,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A2 b_2
-## 1:  a   1
-## 2:  a   1
-## 3:  a   1
-## 4:  b   1
-## 5:  b   1
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A2</span> <span class="n">b_2</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span>  <span class="n">a</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span>  <span class="n">a</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span>  <span class="n">a</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span>  <span class="n">b</span>   <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span>  <span class="n">b</span>   <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -2212,8 +2217,8 @@
 </pre></div>
 </td></tr></table>
 
-<h2 id="datatable-expert"><code class="codehilite">data.table</code> expert<a class="headerlink" href="#datatable-expert" title="Permanent link">&para;</a></h2>
-<h3 id="selecting-rows-the-datatable-way">Selecting rows the <code class="codehilite">data.table</code> way<a class="headerlink" href="#selecting-rows-the-datatable-way" title="Permanent link">&para;</a></h3>
+<h2 id="datatable-expert"><code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code> expert<a class="headerlink" href="#datatable-expert" title="Permanent link">&para;</a></h2>
+<h3 id="selecting-rows-the-datatable-way">Selecting rows the <code class="codehilite"><span class="k">data</span><span class="p">.</span><span class="k">table</span></code> way<a class="headerlink" href="#selecting-rows-the-datatable-way" title="Permanent link">&para;</a></h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Convert iris to a data.table</span>
@@ -2233,18 +2238,18 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##   1:          5.1         3.5          1.4         0.2    setosa
-##   2:          4.9         3.0          1.4         0.2    setosa
-##   3:          4.7         3.2          1.3         0.2    setosa
-##   4:          4.6         3.1          1.5         0.2    setosa
-##   5:          5.0         3.6          1.4         0.2    setosa
-##  ---                                                            
-## 146:          6.7         3.0          5.2         2.3 virginica
-## 147:          6.3         2.5          5.0         1.9 virginica
-## 148:          6.5         3.0          5.2         2.0 virginica
-## 149:          6.2         3.4          5.4         2.3 virginica
-## 150:          5.9         3.0          5.1         1.8 virginica
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>      <span class="n">Sepal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Sepal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Petal</span><span class="p">.</span><span class="n">Width</span>   <span class="n">Species</span>
+<span class="o">##</span>   <span class="mi">1</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">2</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">3</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">4</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">1</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">5</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">6</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>  <span class="c1">---                                                            </span>
+<span class="o">##</span> <span class="mi">146</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">147</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">9</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">148</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">149</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">4</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">150</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">8</span> <span class="n">virginica</span>
 </pre></div>
 </td></tr></table>
 
@@ -2274,27 +2279,27 @@
 18
 19
 20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##  1:          6.3         3.3          6.0         2.5 virginica
-##  2:          5.8         2.7          5.1         1.9 virginica
-##  3:          7.1         3.0          5.9         2.1 virginica
-##  4:          6.3         2.9          5.6         1.8 virginica
-##  5:          6.5         3.0          5.8         2.2 virginica
-##  6:          7.6         3.0          6.6         2.1 virginica
-##  7:          4.9         2.5          4.5         1.7 virginica
-##  8:          7.3         2.9          6.3         1.8 virginica
-##  9:          6.7         2.5          5.8         1.8 virginica
-## 10:          7.2         3.6          6.1         2.5 virginica
-## 11:          6.5         3.2          5.1         2.0 virginica
-## 12:          6.4         2.7          5.3         1.9 virginica
-## 13:          6.8         3.0          5.5         2.1 virginica
-## 14:          5.7         2.5          5.0         2.0 virginica
-## 15:          5.8         2.8          5.1         2.4 virginica
-## 16:          6.4         3.2          5.3         2.3 virginica
-## 17:          6.5         3.0          5.5         1.8 virginica
-## 18:          7.7         3.8          6.7         2.2 virginica
-## 19:          7.7         2.6          6.9         2.3 virginica
-## 20:          6.0         2.2          5.0         1.5 virginica
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">Sepal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Sepal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Petal</span><span class="p">.</span><span class="n">Width</span>   <span class="n">Species</span>
+<span class="o">##</span>  <span class="mi">1</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">3</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">2</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">8</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">7</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">9</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">:</span>          <span class="mi">7</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">1</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">4</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">9</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">8</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">5</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">8</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">2</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">6</span><span class="p">:</span>          <span class="mi">7</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">1</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">7</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">7</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">8</span><span class="p">:</span>          <span class="mi">7</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">9</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">8</span> <span class="n">virginica</span>
+<span class="o">##</span>  <span class="mi">9</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">8</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">8</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">10</span><span class="p">:</span>          <span class="mi">7</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">6</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">11</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">12</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">7</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">9</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">13</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">8</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">1</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">14</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">15</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">8</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">8</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">4</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">16</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">17</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">8</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">18</span><span class="p">:</span>          <span class="mi">7</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">8</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">2</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">19</span><span class="p">:</span>          <span class="mi">7</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">6</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">20</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">5</span> <span class="n">virginica</span>
 </pre></div>
 </td></tr></table>
 
@@ -2324,27 +2329,27 @@
 18
 19
 20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-##  1:          7.0         3.2          4.7         1.4 versicolor
-##  2:          6.4         3.2          4.5         1.5 versicolor
-##  3:          6.9         3.1          4.9         1.5 versicolor
-##  4:          5.5         2.3          4.0         1.3 versicolor
-##  5:          6.5         2.8          4.6         1.5 versicolor
-##  6:          5.7         2.8          4.5         1.3 versicolor
-##  7:          6.3         3.3          4.7         1.6 versicolor
-##  8:          4.9         2.4          3.3         1.0 versicolor
-##  9:          6.6         2.9          4.6         1.3 versicolor
-## 10:          5.2         2.7          3.9         1.4 versicolor
-## 11:          5.0         2.0          3.5         1.0 versicolor
-## 12:          5.9         3.0          4.2         1.5 versicolor
-## 13:          6.0         2.2          4.0         1.0 versicolor
-## 14:          6.1         2.9          4.7         1.4 versicolor
-## 15:          5.6         2.9          3.6         1.3 versicolor
-## 16:          6.7         3.1          4.4         1.4 versicolor
-## 17:          5.6         3.0          4.5         1.5 versicolor
-## 18:          5.8         2.7          4.1         1.0 versicolor
-## 19:          6.2         2.2          4.5         1.5 versicolor
-## 20:          5.6         2.5          3.9         1.1 versicolor
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">Sepal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Sepal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Petal</span><span class="p">.</span><span class="n">Width</span>    <span class="n">Species</span>
+<span class="o">##</span>  <span class="mi">1</span><span class="p">:</span>          <span class="mi">7</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">4</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">2</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">5</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">1</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">5</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">4</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">3</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">5</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">8</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">5</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">6</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">8</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">3</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">7</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">3</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">6</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">8</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">4</span>          <span class="mi">3</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="n">versicolor</span>
+<span class="o">##</span>  <span class="mi">9</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">9</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">3</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">10</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">7</span>          <span class="mi">3</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">4</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">11</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">3</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">12</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">5</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">13</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">14</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">9</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">4</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">15</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">9</span>          <span class="mi">3</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">3</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">16</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">1</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">4</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">17</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">5</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">18</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">8</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">7</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">19</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">5</span> <span class="n">versicolor</span>
+<span class="o">##</span> <span class="mi">20</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">3</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">1</span> <span class="n">versicolor</span>
 </pre></div>
 </td></tr></table>
 
@@ -2369,18 +2374,18 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##      Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-##   1:          5.1         3.5          1.4         0.2    setosa
-##   2:          4.9         3.0          1.4         0.2    setosa
-##   3:          4.7         3.2          1.3         0.2    setosa
-##   4:          4.6         3.1          1.5         0.2    setosa
-##   5:          5.0         3.6          1.4         0.2    setosa
-##  ---                                                            
-## 146:          6.7         3.0          5.2         2.3 virginica
-## 147:          6.3         2.5          5.0         1.9 virginica
-## 148:          6.5         3.0          5.2         2.0 virginica
-## 149:          6.2         3.4          5.4         2.3 virginica
-## 150:          5.9         3.0          5.1         1.8 virginica
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>      <span class="n">Sepal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Sepal</span><span class="p">.</span><span class="n">Width</span> <span class="n">Petal</span><span class="p">.</span><span class="k">Length</span> <span class="n">Petal</span><span class="p">.</span><span class="n">Width</span>   <span class="n">Species</span>
+<span class="o">##</span>   <span class="mi">1</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">2</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">3</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">4</span><span class="p">:</span>          <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">1</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">5</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">6</span>          <span class="mi">1</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">0</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>  <span class="c1">---                                                            </span>
+<span class="o">##</span> <span class="mi">146</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">7</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">147</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">5</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">9</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">148</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">149</span><span class="p">:</span>          <span class="mi">6</span><span class="p">.</span><span class="mi">2</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">4</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">4</span>         <span class="mi">2</span><span class="p">.</span><span class="mi">3</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">150</span><span class="p">:</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">9</span>         <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>          <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>         <span class="mi">1</span><span class="p">.</span><span class="mi">8</span> <span class="n">virginica</span>
 </pre></div>
 </td></tr></table>
 
@@ -2411,18 +2416,18 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##      Length Width   Species
-##   1:    5.1   3.5    setosa
-##   2:    4.9   3.0    setosa
-##   3:    4.7   3.2    setosa
-##   4:    4.6   3.1    setosa
-##   5:    5.0   3.6    setosa
-##  ---                       
-## 146:    6.7   3.0 virginica
-## 147:    6.3   2.5 virginica
-## 148:    6.5   3.0 virginica
-## 149:    6.2   3.4 virginica
-## 150:    5.9   3.0 virginica
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>      <span class="k">Length</span> <span class="n">Width</span>   <span class="n">Species</span>
+<span class="o">##</span>   <span class="mi">1</span><span class="p">:</span>    <span class="mi">5</span><span class="p">.</span><span class="mi">1</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">5</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">2</span><span class="p">:</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">9</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">3</span><span class="p">:</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">7</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">2</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">4</span><span class="p">:</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">6</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">1</span>    <span class="n">setosa</span>
+<span class="o">##</span>   <span class="mi">5</span><span class="p">:</span>    <span class="mi">5</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">6</span>    <span class="n">setosa</span>
+<span class="o">##</span>  <span class="c1">---                       </span>
+<span class="o">##</span> <span class="mi">146</span><span class="p">:</span>    <span class="mi">6</span><span class="p">.</span><span class="mi">7</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">147</span><span class="p">:</span>    <span class="mi">6</span><span class="p">.</span><span class="mi">3</span>   <span class="mi">2</span><span class="p">.</span><span class="mi">5</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">148</span><span class="p">:</span>    <span class="mi">6</span><span class="p">.</span><span class="mi">5</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">149</span><span class="p">:</span>    <span class="mi">6</span><span class="p">.</span><span class="mi">2</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">4</span> <span class="n">virginica</span>
+<span class="o">##</span> <span class="mi">150</span><span class="p">:</span>    <span class="mi">5</span><span class="p">.</span><span class="mi">9</span>   <span class="mi">3</span><span class="p">.</span><span class="mi">0</span> <span class="n">virginica</span>
 </pre></div>
 </td></tr></table>
 
@@ -2549,10 +2554,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B  C
-## 1: b 1  8
-## 2: b 5  6
-## 3: b 8 11
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">b</span> <span class="mi">8</span> <span class="mi">11</span>
 </pre></div>
 </td></tr></table>
 
@@ -2567,12 +2572,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B  C
-## 1: b 1  8
-## 2: b 5  6
-## 3: b 8 11
-## 4: c 6 12
-## 5: c 9  9
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="mi">5</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="n">b</span> <span class="mi">8</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="k">c</span> <span class="mi">6</span> <span class="mi">12</span>
+<span class="o">##</span> <span class="mi">5</span><span class="p">:</span> <span class="k">c</span> <span class="mi">9</span>  <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -2584,9 +2589,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B  C
-## 1: b 1  8
-## 2: c 6 12
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="k">c</span> <span class="mi">6</span> <span class="mi">12</span>
 </pre></div>
 </td></tr></table>
 
@@ -2600,11 +2605,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B  C
-## 1: b 1  8
-## 2: b 8 11
-## 3: c 6 12
-## 4: c 9  9
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="mi">8</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="k">c</span> <span class="mi">6</span> <span class="mi">12</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="k">c</span> <span class="mi">9</span>  <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -2626,19 +2631,19 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    B  C
-## 1: 1  8
-## 2: 5  6
-## 3: 8 11
-##    B  C
-## 1: 6 12
-## 2: 9  9
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">5</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">8</span> <span class="mi">11</span>
+<span class="o">##</span>    <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">6</span> <span class="mi">12</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">9</span>  <span class="mi">9</span>
 
-##    A B  C
-## 1: b 1  8
-## 2: b 8 11
-## 3: c 6 12
-## 4: c 9  9
+<span class="o">##</span>    <span class="n">A</span> <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span> <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="mi">8</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">3</span><span class="p">:</span> <span class="k">c</span> <span class="mi">6</span> <span class="mi">12</span>
+<span class="o">##</span> <span class="mi">4</span><span class="p">:</span> <span class="k">c</span> <span class="mi">9</span>  <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -2660,7 +2665,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;A&quot; &quot;B&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;A&quot;</span> <span class="ss">&quot;B&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -2673,8 +2678,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B  C
-## 1: b 6 NA
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">6</span> <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -2685,8 +2690,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B C
-## 1: b 6 6
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">6</span> <span class="mi">6</span>
 </pre></div>
 </td></tr></table>
 
@@ -2697,8 +2702,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    A B C
-## 1: b 6 6
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">A</span> <span class="n">B</span> <span class="k">C</span>
+<span class="o">##</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="mi">6</span> <span class="mi">6</span>
 </pre></div>
 </td></tr></table>
 
@@ -2732,20 +2737,20 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     A  B  C
-##  1: b -2 NA
-##  2: b -1 NA
-##  3: b  0 NA
-##  4: b  1  8
-##  5: b  2 NA
-##  6: b  3 NA
-##  7: b  4 NA
-##  8: b  5  6
-##  9: b  6 NA
-## 10: b  7 NA
-## 11: b  8 11
-## 12: b  9 NA
-## 13: b 10 NA
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">A</span>  <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span>  <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="o">-</span><span class="mi">2</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="o">-</span><span class="mi">1</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">0</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">4</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">5</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">2</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">6</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">3</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">7</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">4</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">8</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">5</span>  <span class="mi">6</span>
+<span class="o">##</span>  <span class="mi">9</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">6</span> <span class="n">NA</span>
+<span class="o">##</span> <span class="mi">10</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">7</span> <span class="n">NA</span>
+<span class="o">##</span> <span class="mi">11</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">8</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">12</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">9</span> <span class="n">NA</span>
+<span class="o">##</span> <span class="mi">13</span><span class="p">:</span> <span class="n">b</span> <span class="mi">10</span> <span class="n">NA</span>
 </pre></div>
 </td></tr></table>
 
@@ -2768,20 +2773,20 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     A  B  C
-##  1: b -2 NA
-##  2: b -1 NA
-##  3: b  0 NA
-##  4: b  1  8
-##  5: b  2  8
-##  6: b  3  8
-##  7: b  4  8
-##  8: b  5  6
-##  9: b  6  6
-## 10: b  7  6
-## 11: b  8 11
-## 12: b  9 11
-## 13: b 10 11
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">A</span>  <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span>  <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="o">-</span><span class="mi">2</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="o">-</span><span class="mi">1</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">0</span> <span class="n">NA</span>
+<span class="o">##</span>  <span class="mi">4</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">5</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">2</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">6</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">3</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">7</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">4</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">8</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">5</span>  <span class="mi">6</span>
+<span class="o">##</span>  <span class="mi">9</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">6</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">10</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">7</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">11</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">8</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">12</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">9</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">13</span><span class="p">:</span> <span class="n">b</span> <span class="mi">10</span> <span class="mi">11</span>
 </pre></div>
 </td></tr></table>
 
@@ -2804,20 +2809,20 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     A  B  C
-##  1: b -2  8
-##  2: b -1  8
-##  3: b  0  8
-##  4: b  1  8
-##  5: b  2  8
-##  6: b  3  8
-##  7: b  4  8
-##  8: b  5  6
-##  9: b  6  6
-## 10: b  7  6
-## 11: b  8 11
-## 12: b  9 11
-## 13: b 10 11
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">A</span>  <span class="n">B</span>  <span class="k">C</span>
+<span class="o">##</span>  <span class="mi">1</span><span class="p">:</span> <span class="n">b</span> <span class="o">-</span><span class="mi">2</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">2</span><span class="p">:</span> <span class="n">b</span> <span class="o">-</span><span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">3</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">0</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">4</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">1</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">5</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">2</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">6</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">3</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">7</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">4</span>  <span class="mi">8</span>
+<span class="o">##</span>  <span class="mi">8</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">5</span>  <span class="mi">6</span>
+<span class="o">##</span>  <span class="mi">9</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">6</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">10</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">7</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">11</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">8</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">12</span><span class="p">:</span> <span class="n">b</span>  <span class="mi">9</span> <span class="mi">11</span>
+<span class="o">##</span> <span class="mi">13</span><span class="p">:</span> <span class="n">b</span> <span class="mi">10</span> <span class="mi">11</span>
 </pre></div>
 </td></tr></table>
                 
@@ -2883,25 +2888,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

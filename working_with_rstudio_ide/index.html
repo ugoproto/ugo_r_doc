@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Working with the RStudio IDE
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -662,42 +667,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#orientation" title="Orientation" class="md-nav__link">
+  <a href="#orientation" class="md-nav__link">
     Orientation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#programming" title="Programming" class="md-nav__link">
+  <a href="#programming" class="md-nav__link">
     Programming
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project" title="Project" class="md-nav__link">
+  <a href="#project" class="md-nav__link">
     Project
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#packages" title="Packages" class="md-nav__link">
+  <a href="#packages" class="md-nav__link">
     Packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#version-control" title="Version Control" class="md-nav__link">
+  <a href="#version-control" class="md-nav__link">
     Version Control
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reporting" title="Reporting" class="md-nav__link">
+  <a href="#reporting" class="md-nav__link">
     Reporting
   </a>
   
@@ -918,42 +923,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#orientation" title="Orientation" class="md-nav__link">
+  <a href="#orientation" class="md-nav__link">
     Orientation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#programming" title="Programming" class="md-nav__link">
+  <a href="#programming" class="md-nav__link">
     Programming
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project" title="Project" class="md-nav__link">
+  <a href="#project" class="md-nav__link">
     Project
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#packages" title="Packages" class="md-nav__link">
+  <a href="#packages" class="md-nav__link">
     Packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#version-control" title="Version Control" class="md-nav__link">
+  <a href="#version-control" class="md-nav__link">
     Version Control
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reporting" title="Reporting" class="md-nav__link">
+  <a href="#reporting" class="md-nav__link">
     Reporting
   </a>
   
@@ -1007,7 +1012,7 @@
 <li><span class="keys"><kbd class="key-tab">Tab</kbd></span>; completion for all.</li>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span>; clear the console.</li>
 <li>Tools/Global Options&hellip; set up RStudio.</li>
-<li><code class="codehilite">view(dataframe)</code>; open a spreadsheet, show in new window, sort the<br />
+<li><code class="codehilite"><span class="k">view</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span></code>; open a spreadsheet, show in new window, sort the<br />
     rows, search, filter the rows.</li>
 </ul>
 <!-- -->
@@ -1020,9 +1025,9 @@
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   colA colB
-## 1    1    3
-## 2    2    6
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">colA</span> <span class="n">colB</span>
+<span class="o">##</span> <span class="mi">1</span>    <span class="mi">1</span>    <span class="mi">3</span>
+<span class="o">##</span> <span class="mi">2</span>    <span class="mi">2</span>    <span class="mi">6</span>
 </pre></div>
 </td></tr></table>
 
@@ -1039,8 +1044,8 @@
     command in the console pane, reload a command with <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> and<br />
     run it.</li>
 <li>File pane; working directories, files, add a new folder, rename</li>
-<li><code class="codehilite">getwd()</code>; get working directory.</li>
-<li><code class="codehilite">setwd()</code>; set working directory.</li>
+<li><code class="codehilite"><span class="n">getwd</span><span class="p">()</span></code>; get working directory.</li>
+<li><code class="codehilite"><span class="n">setwd</span><span class="p">()</span></code>; set working directory.</li>
 <li>Plot pane; save (extension, size, resolution).</li>
 <li>Package pane; update.</li>
 <li>Help pane; pages.</li>
@@ -1050,8 +1055,8 @@
 <p><strong>Scripting</strong></p>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span>; <code class="codehilite"><span class="c">%&gt;%</span></code>.</li>
-<li><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-minus">-</kbd></span>; <code class="codehilite">&lt;-</code>.</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-c">C</kbd></span>; add/delete a <code class="codehilite">#</code> for commenting.</li>
+<li><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-minus">-</kbd></span>; <code class="codehilite"><span class="o">&lt;-</span></code>.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-c">C</kbd></span>; add/delete a <code class="codehilite"><span class="o">#</span></code> for commenting.</li>
 </ul>
 <!-- -->
 
@@ -1116,12 +1121,12 @@ window, click the dropdown menu in the Global Environment (upper-right).<br />
 Stop, continue in the debugger mode, press <span class="keys"><kbd class="key-c">C</kbd></span>, press <span class="keys"><kbd class="key-q">Q</kbd></span>.</p>
 <p>Add/remove breakpoints, where the line numbers are.</p>
 <ul>
-<li><code class="codehilite">debugonce</code>; automatically call the debugger when the function is<br />
+<li><code class="codehilite"><span class="n">debugonce</span></code>; automatically call the debugger when the function is<br />
     called, but only once.</li>
-<li><code class="codehilite">debug</code>, <code class="codehilite">undebug</code>; automatically call the debugger when the<br />
+<li><code class="codehilite"><span class="n">debug</span></code>, <code class="codehilite"><span class="n">undebug</span></code>; automatically call the debugger when the<br />
     function is called.</li>
 </ul>
-<p>Add <code class="codehilite">options(error=browser)</code> or <code class="codehilite">options(error=NULL)</code> at the beginning<br />
+<p>Add <code class="codehilite"><span class="k">options</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="n">browser</span><span class="p">)</span></code> or <code class="codehilite"><span class="k">options</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="k">NULL</span><span class="p">)</span></code> at the beginning<br />
 of the script; R automatically open the debugger mode.</p>
 <ul>
 <li><span class="keys"><kbd class="key-n">N</kbd></span>; next line.</li>
@@ -1183,7 +1188,7 @@ Build Tab.</p>
 </ul>
 <p><strong>Packages documentation</strong></p>
 <p>Create a help page (.Rd file). Written in HTML.</p>
-<p>Use the <code class="codehilite">roxigen</code> <a href="http://roxygen.org/">package</a> to document.</p>
+<p>Use the <code class="codehilite"><span class="n">roxigen</span></code> <a href="http://roxygen.org/">package</a> to document.</p>
 <p>Tools/Project Optons/Build Tools/Generate documentation. Generate the<br />
 doc, add comments.</p>
 <p>First, create a doc skeleton above the function:</p>
@@ -1219,9 +1224,9 @@ cEnter &lt;- function(x) {
 <p>Fill in the blanks.</p>
 <p><strong>Package documentation (2)</strong></p>
 <p>Title of the help page. Text on how to use.</p>
-<p>The 4 tags (<code class="codehilite">@</code>) help organizing the doc: <code class="codehilite">@export</code> (tells R that this<br />
+<p>The 4 tags (<code class="codehilite"><span class="o">@</span></code>) help organizing the doc: <code class="codehilite"><span class="nv">@export</span><span class="w"></span></code> (tells R that this<br />
 function should be made available to people who load your package. ),<br />
-<code class="codehilite">@params</code>, <code class="codehilite">@return</code>, and <code class="codehilite">@examples</code>. There are many more advanced<br />
+<code class="codehilite"><span class="nv">@params</span><span class="w"></span></code>, <code class="codehilite">@<span class="k">return</span></code>, and <code class="codehilite"><span class="nv">@examples</span><span class="w"></span></code>. There are many more advanced<br />
 tags.</p>
 <p>Highlight a section and test it, run it.</p>
 <p><strong>Package documentation (3)</strong></p>
@@ -1229,16 +1234,16 @@ tags.</p>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-d">D</kbd></span></li>
 </ul>
-<p>Compile all. Load all. Open the help page with <code class="codehilite">?function</code>.</p>
-<p>Learn the <code class="codehilite">roxigen</code> workflow to ease the work.</p>
+<p>Compile all. Load all. Open the help page with <code class="codehilite"><span class="o">?</span><span class="k">function</span></code>.</p>
+<p>Learn the <code class="codehilite"><span class="n">roxigen</span></code> workflow to ease the work.</p>
 <p><strong>Test your package</strong></p>
-<p>With the <code class="codehilite">testthat</code> (and <code class="codehilite">devtools</code>) package.</p>
-<p>Install both packages. Run <code class="codehilite">devtools::use_testthat()</code> and a now<br />
+<p>With the <code class="codehilite"><span class="n">testthat</span></code> (and <code class="codehilite"><span class="n">devtools</span></code>) package.</p>
+<p>Install both packages. Run <code class="codehilite"><span class="n">devtools</span><span class="p">::</span><span class="n">use_testthat</span><span class="p">()</span></code> and a now<br />
 directory with subdir appears in the package. This is where we save<br />
 tests.</p>
 <p><strong>Test your package (2)</strong></p>
 <p>Ready. Write tests. Open a new R script and save it to the tests<br />
-directory. Create a <code class="codehilite">context</code> function. Add <code class="codehilite">test_that</code> functions with<br />
+directory. Create a <code class="codehilite"><span class="n">context</span></code> function. Add <code class="codehilite"><span class="n">test_that</span></code> functions with<br />
 arguments.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1293,9 +1298,9 @@ test_that(&quot;standardize handles integers&quot;, {
 <p>Run the test with Build Tab/Test package.</p>
 <p><strong>Check your package</strong></p>
 <p>Upload the package to GitHub. Recreate the package structure in the<br />
-repo. Download and install the package with <code class="codehilite">install_github()</code> from the<br />
-<code class="codehilite">devtools</code> package. Test the package on GitHub to complete the tests.<br />
-Type <code class="codehilite">R CMD check</code> in the terminal. Or Build Tab/Check icon.</p>
+repo. Download and install the package with <code class="codehilite"><span class="n">install_github</span><span class="p">()</span></code> from the<br />
+<code class="codehilite"><span class="n">devtools</span></code> package. Test the package on GitHub to complete the tests.<br />
+Type <code class="codehilite"><span class="n">R</span> <span class="n">CMD</span> <span class="k">check</span></code> in the terminal. Or Build Tab/Check icon.</p>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-e">E</kbd></span></li>
 </ul>
@@ -1306,7 +1311,7 @@ Type <code class="codehilite">R CMD check</code> in the terminal. Or Build Tab/C
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-b">B</kbd></span></li>
 </ul>
 <p>Build and reload will overwrite the existing package. Run<br />
-<code class="codehilite">devtools::dev_mode()</code> creates a separate library for development.<br />
+<code class="codehilite"><span class="n">devtools</span><span class="p">::</span><span class="n">dev_mode</span><span class="p">()</span></code> creates a separate library for development.<br />
 Running the command again cancels it.</p>
 <p>Two formats: source package or binary package (more compresses and<br />
 optimized).</p>
@@ -1338,7 +1343,7 @@ branch or another.</p>
 <p>Checkout command. Go back to a previous commit. The commit stays in the<br />
 history (not deleted).</p>
 <p>Run it in the shell: Tools/shell.</p>
-<p><code class="codehilite">git checkout sha# nameofthefile</code> and Git will reverse the commit. The<br />
+<p><code class="codehilite"><span class="n">git</span> <span class="n">checkout</span> <span class="n">sha</span><span class="o">#</span> <span class="n">nameofthefile</span></code> and Git will reverse the commit. The<br />
 file is in the stage area as before the commit.</p>
 <p><strong>Undo uncommited changes</strong></p>
 <p>The file is in the stage area, ready to commit. Cancel the addition.</p>
@@ -1348,8 +1353,8 @@ file is in the stage area as before the commit.</p>
 <p>Then, Save the file.</p>
 <p><strong>Introduction to GitHub</strong></p>
 <p>Centralize, host, track issues, track metrics.</p>
-<p>Install a R package From GitHub with <code class="codehilite">install_github</code> from the the<br />
-<code class="codehilite">devtools</code> packages.</p>
+<p>Install a R package From GitHub with <code class="codehilite"><span class="n">install_github</span></code> from the the<br />
+<code class="codehilite"><span class="n">devtools</span></code> packages.</p>
 <p><strong>Pull &amp; Push</strong></p>
 <p>Local and GitHub</p>
 <p><strong>Wrap-up</strong></p>
@@ -1360,10 +1365,10 @@ file is in the stage area as before the commit.</p>
 <p>R Markdown and Shiny (over the web).</p>
 <p><strong>Introduction to R Markdown</strong></p>
 <p>Text and code.</p>
-<p>Web link: <code class="codehilite">&lt;http://www&gt;</code></p>
+<p>Web link: <code class="codehilite"><span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">&gt;</span></code></p>
 <p><strong>R Markdown in RStudio</strong></p>
 <p>Report (HTML, PDF, Word) or presentation(slide).</p>
-<p>Create a template. Load in new templates. The <code class="codehilite">rticles</code> package has<br />
+<p>Create a template. Load in new templates. The <code class="codehilite"><span class="n">rticles</span></code> package has<br />
 templates for academic journals.</p>
 <p>The outline (name the chunks).</p>
 <p>Help/Markdown Quick Reference</p>
@@ -1390,8 +1395,8 @@ character is highlighted in the preview window. Vice-versa.</p>
 <p>When we create a Shiny app, we create two files: ui.R and server.R</p>
 <p>Run App (the app) or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></p>
 <p><strong>Publish Shiny apps</strong></p>
-<p>Need an account and the <code class="codehilite">shinyapps</code> package.</p>
-<p><code class="codehilite">devtools::install_github(&quot;rstudio/shinyapps&quot;)</code></p>
+<p>Need an account and the <code class="codehilite"><span class="n">shinyapps</span></code> package.</p>
+<p><code class="codehilite"><span class="n">devtools</span><span class="p">::</span><span class="n">install_github</span><span class="p">(</span><span class="ss">&quot;rstudio/shinyapps&quot;</span><span class="p">)</span></code></p>
 <p>Deploy the local app online. Unique URL. Monitor usage, view logs,<br />
 archive or delete the app. Max 5 apps at a time for free. Paid account.</p>
                 
@@ -1457,25 +1462,17 @@ archive or delete the app. Max 5 apps at a time for free. Paid account.</p>
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

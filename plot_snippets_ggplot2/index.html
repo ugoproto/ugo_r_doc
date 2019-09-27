@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Plot Snippets - ggplot2
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -602,28 +607,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dataset" title="Dataset" class="md-nav__link">
+  <a href="#dataset" class="md-nav__link">
     Dataset
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-ggplot2-package" title="The ggplot2 Package" class="md-nav__link">
+  <a href="#the-ggplot2-package" class="md-nav__link">
     The ggplot2 Package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-1" title="SECTION 1" class="md-nav__link">
+  <a href="#section-1" class="md-nav__link">
     SECTION 1
   </a>
   
@@ -631,35 +636,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data" title="Data" class="md-nav__link">
+  <a href="#data" class="md-nav__link">
     Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#aesthetics" title="Aesthetics" class="md-nav__link">
+  <a href="#aesthetics" class="md-nav__link">
     Aesthetics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#geometries" title="Geometries" class="md-nav__link">
+  <a href="#geometries" class="md-nav__link">
     Geometries
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#qplot-and-wrap-up" title="qplot and wrap-up" class="md-nav__link">
+  <a href="#qplot-and-wrap-up" class="md-nav__link">
     qplot and wrap-up
   </a>
   
@@ -671,7 +676,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-2" title="SECTION 2" class="md-nav__link">
+  <a href="#section-2" class="md-nav__link">
     SECTION 2
   </a>
   
@@ -679,35 +684,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statistics" title="Statistics" class="md-nav__link">
+  <a href="#statistics" class="md-nav__link">
     Statistics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#coordinates-and-facets" title="Coordinates and Facets" class="md-nav__link">
+  <a href="#coordinates-and-facets" class="md-nav__link">
     Coordinates and Facets
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#themes" title="Themes" class="md-nav__link">
+  <a href="#themes" class="md-nav__link">
     Themes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#best-practices" title="Best Practices" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     Best Practices
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#case-study" title="Case Study" class="md-nav__link">
+  <a href="#case-study" class="md-nav__link">
     Case Study
   </a>
   
@@ -719,14 +724,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-3" title="SECTION 3" class="md-nav__link">
+  <a href="#section-3" class="md-nav__link">
     SECTION 3
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-4-cheat-list" title="SECTION 4 - Cheat List" class="md-nav__link">
+  <a href="#section-4-cheat-list" class="md-nav__link">
     SECTION 4 - Cheat List
   </a>
   
@@ -1007,28 +1012,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dataset" title="Dataset" class="md-nav__link">
+  <a href="#dataset" class="md-nav__link">
     Dataset
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-ggplot2-package" title="The ggplot2 Package" class="md-nav__link">
+  <a href="#the-ggplot2-package" class="md-nav__link">
     The ggplot2 Package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-1" title="SECTION 1" class="md-nav__link">
+  <a href="#section-1" class="md-nav__link">
     SECTION 1
   </a>
   
@@ -1036,35 +1041,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data" title="Data" class="md-nav__link">
+  <a href="#data" class="md-nav__link">
     Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#aesthetics" title="Aesthetics" class="md-nav__link">
+  <a href="#aesthetics" class="md-nav__link">
     Aesthetics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#geometries" title="Geometries" class="md-nav__link">
+  <a href="#geometries" class="md-nav__link">
     Geometries
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#qplot-and-wrap-up" title="qplot and wrap-up" class="md-nav__link">
+  <a href="#qplot-and-wrap-up" class="md-nav__link">
     qplot and wrap-up
   </a>
   
@@ -1076,7 +1081,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-2" title="SECTION 2" class="md-nav__link">
+  <a href="#section-2" class="md-nav__link">
     SECTION 2
   </a>
   
@@ -1084,35 +1089,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#statistics" title="Statistics" class="md-nav__link">
+  <a href="#statistics" class="md-nav__link">
     Statistics
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#coordinates-and-facets" title="Coordinates and Facets" class="md-nav__link">
+  <a href="#coordinates-and-facets" class="md-nav__link">
     Coordinates and Facets
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#themes" title="Themes" class="md-nav__link">
+  <a href="#themes" class="md-nav__link">
     Themes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#best-practices" title="Best Practices" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     Best Practices
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#case-study" title="Case Study" class="md-nav__link">
+  <a href="#case-study" class="md-nav__link">
     Case Study
   </a>
   
@@ -1124,14 +1129,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-3" title="SECTION 3" class="md-nav__link">
+  <a href="#section-3" class="md-nav__link">
     SECTION 3
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-4-cheat-list" title="SECTION 4 - Cheat List" class="md-nav__link">
+  <a href="#section-4-cheat-list" class="md-nav__link">
     SECTION 4 - Cheat List
   </a>
   
@@ -1192,8 +1197,8 @@
 <li><a href="http://r4stats.com/examples/graphics-ggplot2/">r4stats</a>.</li>
 </ul>
 <h2 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h2>
-<p>For most examples, we use the <code class="codehilite">mtcars</code>, <code class="codehilite">diamonds</code>, <code class="codehilite">iris</code>, <code class="codehilite">ChickWeight</code>, <code class="codehilite">recess</code>, <code class="codehilite">fish</code>, <code class="codehilite">Vocab</code>, <code class="codehilite">Titanic</code>, <code class="codehilite">mamsleep</code>, <code class="codehilite">barley</code>, <code class="codehilite">adult</code> datasets.</p>
-<h2 id="the-ggplot2-package">The <code class="codehilite">ggplot2</code> Package<a class="headerlink" href="#the-ggplot2-package" title="Permanent link">&para;</a></h2>
+<p>For most examples, we use the <code class="codehilite"><span class="n">mtcars</span></code>, <code class="codehilite"><span class="n">diamonds</span></code>, <code class="codehilite"><span class="n">iris</span></code>, <code class="codehilite"><span class="n">ChickWeight</span></code>, <code class="codehilite"><span class="n">recess</span></code>, <code class="codehilite"><span class="n">fish</span></code>, <code class="codehilite"><span class="n">Vocab</span></code>, <code class="codehilite"><span class="n">Titanic</span></code>, <code class="codehilite"><span class="n">mamsleep</span></code>, <code class="codehilite"><span class="n">barley</span></code>, <code class="codehilite"><span class="n">adult</span></code> datasets.</p>
+<h2 id="the-ggplot2-package">The <code class="codehilite"><span class="n">ggplot2</span></code> Package<a class="headerlink" href="#the-ggplot2-package" title="Permanent link">&para;</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1239,7 +1244,7 @@
 <p>Suggested additional packages&hellip;</p>
 <h2 id="section-1">SECTION 1<a class="headerlink" href="#section-1" title="Permanent link">&para;</a></h2>
 <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
-<p><strong>Exploring <code class="codehilite">ggplot2</code>, part 1</strong></p>
+<p><strong>Exploring <code class="codehilite"><span class="n">ggplot2</span></code>, part 1</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># basic plot</span>
@@ -1249,7 +1254,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-17-1.png" /></p>
-<p><strong>Exploring <code class="codehilite">ggplot2</code>, part 2</strong></p>
+<p><strong>Exploring <code class="codehilite"><span class="n">ggplot2</span></code>, part 2</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># cyl is a factor</span>
@@ -1259,7 +1264,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-18-1.png" /></p>
-<p><strong>Exploring <code class="codehilite">ggplot2</code>, part 3</strong></p>
+<p><strong>Exploring <code class="codehilite"><span class="n">ggplot2</span></code>, part 3</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot</span>
@@ -1287,7 +1292,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-21-1.png" /></p>
-<p><strong>Exploring <code class="codehilite">ggplot2</code>, part 4</strong></p>
+<p><strong>Exploring <code class="codehilite"><span class="n">ggplot2</span></code>, part 4</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Add geom_point() with +</span>
@@ -1306,7 +1311,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-23-1.png" /></p>
-<p><strong>Exploring <code class="codehilite">ggplot2</code>, part 5</strong></p>
+<p><strong>Exploring <code class="codehilite"><span class="n">ggplot2</span></code>, part 5</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># only the smooth line</span>
@@ -1334,7 +1339,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-26-1.png" /></p>
-<p><strong>Exploring <code class="codehilite">ggplot2</code>, part 6</strong></p>
+<p><strong>Exploring <code class="codehilite"><span class="n">ggplot2</span></code>, part 6</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1465,7 +1470,7 @@
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-33-1.png" /></p>
 <h3 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
-<p><strong>Base package and <code class="codehilite">ggplot2</code>, part 1 - plot</strong></p>
+<p><strong>Base package and <code class="codehilite"><span class="n">ggplot2</span></code>, part 1 - plot</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># basic plot</span>
 <span class="nf">plot</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">wt</span><span class="p">,</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">mpg</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="n">mtcars</span><span class="o">$</span><span class="n">cyl</span><span class="p">)</span>
@@ -1486,7 +1491,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-35-1.png" /></p>
-<p><strong>Base package and <code class="codehilite">ggplot2</code>, part 2 - lm</strong></p>
+<p><strong>Base package and <code class="codehilite"><span class="n">ggplot2</span></code>, part 2 - lm</strong></p>
 <p>transfer to other</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1612,101 +1617,101 @@
 92
 93
 94
-95</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [[1]]
-## NULL
-## 
-## [[2]]
-## NULL
-## 
-## [[3]]
-## NULL
-## 
-## [[4]]
-## NULL
-## 
-## [[5]]
-## NULL
-## 
-## [[6]]
-## NULL
-## 
-## [[7]]
-## NULL
-## 
-## [[8]]
-## NULL
-## 
-## [[9]]
-## NULL
-## 
-## [[10]]
-## NULL
-## 
-## [[11]]
-## NULL
-## 
-## [[12]]
-## NULL
-## 
-## [[13]]
-## NULL
-## 
-## [[14]]
-## NULL
-## 
-## [[15]]
-## NULL
-## 
-## [[16]]
-## NULL
-## 
-## [[17]]
-## NULL
-## 
-## [[18]]
-## NULL
-## 
-## [[19]]
-## NULL
-## 
-## [[20]]
-## NULL
-## 
-## [[21]]
-## NULL
-## 
-## [[22]]
-## NULL
-## 
-## [[23]]
-## NULL
-## 
-## [[24]]
-## NULL
-## 
-## [[25]]
-## NULL
-## 
-## [[26]]
-## NULL
-## 
-## [[27]]
-## NULL
-## 
-## [[28]]
-## NULL
-## 
-## [[29]]
-## NULL
-## 
-## [[30]]
-## NULL
-## 
-## [[31]]
-## NULL
-## 
-## [[32]]
-## NULL
+95</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">6</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">7</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">8</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">9</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">10</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">11</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">12</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">13</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">14</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">15</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">16</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">17</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">18</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">19</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">20</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">21</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">22</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">23</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">24</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">25</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">26</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">27</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">28</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">29</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">30</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">31</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="p">[[</span><span class="mi">32</span><span class="p">]]</span>
+<span class="o">##</span> <span class="k">NULL</span>
 </pre></div>
 </td></tr></table>
 
@@ -1717,7 +1722,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-36-1.png" /></p>
-<p><strong>Base package and <code class="codehilite">ggplot2</code>, part 3</strong></p>
+<p><strong>Base package and <code class="codehilite"><span class="n">ggplot2</span></code>, part 3</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># scatter plot</span>
@@ -2579,8 +2584,8 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-113-1.png" /></p>
-<h3 id="qplot-and-wrap-up"><code class="codehilite">qplot</code> and wrap-up<a class="headerlink" href="#qplot-and-wrap-up" title="Permanent link">&para;</a></h3>
-<p><strong>Using <code class="codehilite">qplot</code></strong></p>
+<h3 id="qplot-and-wrap-up"><code class="codehilite"><span class="n">qplot</span></code> and wrap-up<a class="headerlink" href="#qplot-and-wrap-up" title="Permanent link">&para;</a></h3>
+<p><strong>Using <code class="codehilite"><span class="n">qplot</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># the old way</span>
 <span class="nf">plot</span><span class="p">(</span><span class="n">mpg</span> <span class="o">~</span> <span class="n">wt</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">mtcars</span><span class="p">)</span>
@@ -2821,7 +2826,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-138-1.png" /></p>
-<p><strong>Modifying <code class="codehilite">stat_smooth</code></strong></p>
+<p><strong>Modifying <code class="codehilite"><span class="n">stat_smooth</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2882,7 +2887,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggplot2/unnamed-chunk-142-1.png" /></p>
-<p><strong>Modifying <code class="codehilite">stat_smooth</code> (2)</strong></p>
+<p><strong>Modifying <code class="codehilite"><span class="n">stat_smooth</span></code> (2)</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -3659,12 +3664,12 @@
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## # A tibble: 3 × 2
-##     cyl   wt.avg
-##   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
-## 1     4 2.285727
-## 2     6 3.117143
-## 3     8 3.999214
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="o">#</span> <span class="n">A</span> <span class="n">tibble</span><span class="p">:</span> <span class="mi">3</span> <span class="err">×</span> <span class="mi">2</span>
+<span class="o">##</span>     <span class="n">cyl</span>   <span class="n">wt</span><span class="p">.</span><span class="k">avg</span>
+<span class="o">##</span>   <span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>    <span class="o">&lt;</span><span class="n">dbl</span><span class="o">&gt;</span>
+<span class="o">##</span> <span class="mi">1</span>     <span class="mi">4</span> <span class="mi">2</span><span class="p">.</span><span class="mi">285727</span>
+<span class="o">##</span> <span class="mi">2</span>     <span class="mi">6</span> <span class="mi">3</span><span class="p">.</span><span class="mi">117143</span>
+<span class="o">##</span> <span class="mi">3</span>     <span class="mi">8</span> <span class="mi">3</span><span class="p">.</span><span class="mi">999214</span>
 </pre></div>
 </td></tr></table>
 
@@ -3883,14 +3888,14 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##          Type1
-## TypeWt    Small Sporty Compact Midsize Large Van
-##   Small      21      0       0       0     0   0
-##   Sporty      0     14       0       0     0   0
-##   Compact     0      0      16       0     0   0
-##   Midsize     0      0       0      22     0   0
-##   Large       0      0       0       0    11   0
-##   Van         0      0       0       0     0   9
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>          <span class="n">Type1</span>
+<span class="o">##</span> <span class="n">TypeWt</span>    <span class="n">Small</span> <span class="n">Sporty</span> <span class="n">Compact</span> <span class="n">Midsize</span> <span class="k">Large</span> <span class="n">Van</span>
+<span class="o">##</span>   <span class="n">Small</span>      <span class="mi">21</span>      <span class="mi">0</span>       <span class="mi">0</span>       <span class="mi">0</span>     <span class="mi">0</span>   <span class="mi">0</span>
+<span class="o">##</span>   <span class="n">Sporty</span>      <span class="mi">0</span>     <span class="mi">14</span>       <span class="mi">0</span>       <span class="mi">0</span>     <span class="mi">0</span>   <span class="mi">0</span>
+<span class="o">##</span>   <span class="n">Compact</span>     <span class="mi">0</span>      <span class="mi">0</span>      <span class="mi">16</span>       <span class="mi">0</span>     <span class="mi">0</span>   <span class="mi">0</span>
+<span class="o">##</span>   <span class="n">Midsize</span>     <span class="mi">0</span>      <span class="mi">0</span>       <span class="mi">0</span>      <span class="mi">22</span>     <span class="mi">0</span>   <span class="mi">0</span>
+<span class="o">##</span>   <span class="k">Large</span>       <span class="mi">0</span>      <span class="mi">0</span>       <span class="mi">0</span>       <span class="mi">0</span>    <span class="mi">11</span>   <span class="mi">0</span>
+<span class="o">##</span>   <span class="n">Van</span>         <span class="mi">0</span>      <span class="mi">0</span>       <span class="mi">0</span>       <span class="mi">0</span>     <span class="mi">0</span>   <span class="mi">9</span>
 </pre></div>
 </td></tr></table>
 
@@ -4446,35 +4451,35 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>+ geom_point()
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
 
-+ geom_point(aes(), col = , position = posn.j)
+<span class="o">+</span> <span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(),</span> <span class="n">col</span> <span class="o">=</span> <span class="p">,</span> <span class="k">position</span> <span class="o">=</span> <span class="n">posn</span><span class="p">.</span><span class="n">j</span><span class="p">)</span>
 
-+ geom_jitter()
+<span class="o">+</span> <span class="n">geom_jitter</span><span class="p">()</span>
 
-+ facet_grid(. ~ x) # y ~ x
+<span class="o">+</span> <span class="n">facet_grid</span><span class="p">(.</span> <span class="o">~</span> <span class="n">x</span><span class="p">)</span> <span class="o">#</span> <span class="n">y</span> <span class="o">~</span> <span class="n">x</span>
 
-+ scale_x_continous(&#39;Sepal Length&#39;, limits = c(2, 8), breaks = seq(2, 8, 3))
+<span class="o">+</span> <span class="n">scale_x_continous</span><span class="p">(</span><span class="s1">&#39;Sepal Length&#39;</span><span class="p">,</span> <span class="n">limits</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">breaks</span> <span class="o">=</span> <span class="n">seq</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 
-+ scale_color_discrete(&#39;Species&#39;, labels = c(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;))
+<span class="o">+</span> <span class="n">scale_color_discrete</span><span class="p">(</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="k">c</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">))</span>
 
-+ labs(x = , y = , col = )
+<span class="o">+</span> <span class="n">labs</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>posn.j &lt;- position_jitter(width = 0.1)</p>
 <p><strong>Data</strong></p>
 <ul>
-<li><code class="codehilite">diamonds</code>, prices of 50,000 round cut diamonds.</li>
-<li><code class="codehilite">economics</code>, economics_long, US economic time series.</li>
-<li><code class="codehilite">faithfuld</code>, 2d density estimate of Old Faithful data.</li>
-<li><code class="codehilite">luv_colours</code>, colors().</li>
-<li><code class="codehilite">midwest</code>, midwest demographics.</li>
-<li><code class="codehilite">mpg</code>, fuel economy data from 1999 and 2008 for 38 popular models of car.</li>
-<li><code class="codehilite">msleep</code>, an updated and expanded version of the mammals  sleep dataset.</li>
-<li><code class="codehilite">presidential</code>, terms of 11 presidents from Eisenhower to Obama.</li>
-<li><code class="codehilite">seals</code>, vector field of seal movements.</li>
-<li><code class="codehilite">txhousing</code>, Housing sales in TX.</li>
+<li><code class="codehilite"><span class="n">diamonds</span></code>, prices of 50,000 round cut diamonds.</li>
+<li><code class="codehilite"><span class="n">economics</span></code>, economics_long, US economic time series.</li>
+<li><code class="codehilite"><span class="n">faithfuld</span></code>, 2d density estimate of Old Faithful data.</li>
+<li><code class="codehilite"><span class="n">luv_colours</span></code>, colors().</li>
+<li><code class="codehilite"><span class="n">midwest</span></code>, midwest demographics.</li>
+<li><code class="codehilite"><span class="n">mpg</span></code>, fuel economy data from 1999 and 2008 for 38 popular models of car.</li>
+<li><code class="codehilite"><span class="n">msleep</span></code>, an updated and expanded version of the mammals  sleep dataset.</li>
+<li><code class="codehilite"><span class="n">presidential</span></code>, terms of 11 presidents from Eisenhower to Obama.</li>
+<li><code class="codehilite"><span class="n">seals</span></code>, vector field of seal movements.</li>
+<li><code class="codehilite"><span class="n">txhousing</span></code>, Housing sales in TX.</li>
 </ul>
 <p><strong>Aesthetics</strong></p>
 <ul>
@@ -4487,44 +4492,44 @@
 <li>alpha.</li>
 <li>shape (points).</li>
 <li>linetype (lines).</li>
-<li><code class="codehilite">aes</code>, Define aesth.etic mappings.</li>
-<li><code class="codehilite">aes_</code> (aes_q, aes_string), Define aesthetic mappings from strings, or quoted calls and formulas.</li>
-<li><code class="codehilite">aes_all</code>, Given a character vector, create a set of    identity mappings.</li>
-<li><code class="codehilite">aes_auto</code>, Automatic aesthetic mapping.</li>
-<li><code class="codehilite">aes_colour_fill_alpha</code> (color, colour, fill), Colour related aesthetics: colour, fill and alpha.</li>
-<li><code class="codehilite">aes_group_order</code> (group), Aesthetics: group. aes_linetype_size_shape (linetype, shape, size), Differentiation related aesthetics: linetype, size, shape.</li>
-<li><code class="codehilite">aes_position</code> (x, xend, xmax, xmin, y, yend, ymax, ymin), Position related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend.</li>
+<li><code class="codehilite"><span class="n">aes</span></code>, Define aesth.etic mappings.</li>
+<li><code class="codehilite"><span class="n">aes_</span></code> (aes_q, aes_string), Define aesthetic mappings from strings, or quoted calls and formulas.</li>
+<li><code class="codehilite"><span class="n">aes_all</span></code>, Given a character vector, create a set of    identity mappings.</li>
+<li><code class="codehilite"><span class="n">aes_auto</span></code>, Automatic aesthetic mapping.</li>
+<li><code class="codehilite"><span class="n">aes_colour_fill_alpha</span></code> (color, colour, fill), Colour related aesthetics: colour, fill and alpha.</li>
+<li><code class="codehilite"><span class="n">aes_group_order</span></code> (group), Aesthetics: group. aes_linetype_size_shape (linetype, shape, size), Differentiation related aesthetics: linetype, size, shape.</li>
+<li><code class="codehilite"><span class="n">aes_position</span></code> (x, xend, xmax, xmin, y, yend, ymax, ymin), Position related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend.</li>
 </ul>
 <p><strong>Position</strong></p>
 <ul>
-<li><code class="codehilite">position_dodge</code>, Adjust position by dodging overlaps to the side.</li>
-<li><code class="codehilite">position_fill</code> (position_stack), Stack overlapping objects on top of one another.</li>
-<li><code class="codehilite">position_identity</code>, Don&rsquo;t adjust position</li>
-<li><code class="codehilite">position_nudge</code>, Nudge points.</li>
-<li><code class="codehilite">position_jitter</code>, Jitter points to avoid overplotting.</li>
-<li><code class="codehilite">position_jitterdodge</code>, Adjust position by simultaneously dodging and jittering.</li>
+<li><code class="codehilite"><span class="n">position_dodge</span></code>, Adjust position by dodging overlaps to the side.</li>
+<li><code class="codehilite"><span class="n">position_fill</span></code> (position_stack), Stack overlapping objects on top of one another.</li>
+<li><code class="codehilite"><span class="n">position_identity</span></code>, Don&rsquo;t adjust position</li>
+<li><code class="codehilite"><span class="n">position_nudge</span></code>, Nudge points.</li>
+<li><code class="codehilite"><span class="n">position_jitter</span></code>, Jitter points to avoid overplotting.</li>
+<li><code class="codehilite"><span class="n">position_jitterdodge</span></code>, Adjust position by simultaneously dodging and jittering.</li>
 </ul>
 <p><strong>Scales</strong></p>
 <ul>
-<li><code class="codehilite">expand_limits</code>, Expand the plot limits with data.</li>
-<li><code class="codehilite">guides</code>, Set guides for each scale.</li>
-<li><code class="codehilite">guide_legend</code>, Legend guide.</li>
-<li><code class="codehilite">guide_colourbar</code> (guide_colorbar), Continuous colour bar guide.</li>
-<li><code class="codehilite">lims</code> (xlim, ylim), Convenience functions to set the axis limits.</li>
-<li><code class="codehilite">scale_alpha</code> (scale_alpha_continuous, scale_alpha_discrete), Alpha scales.</li>
-<li><code class="codehilite">scale_colour_brewer</code> (scale_color_brewer, scale_color_distiller, scale_colour_distiller, scale_fill_brewer, scale_fill_distiller), Sequential, diverging and qualitative colour scales from colorbrewer.org</li>
-<li><code class="codehilite">scale_colour_gradient</code> (scale_color_continuous, scale_color_gradient, scale_color_gradient2, scale_color_gradientn, scale_colour_continuous, scale_colour_date, scale_colour_datetime, scale_colour_gradient2, scale_colour_gradientn, scale_fill_continuous, scale_fill_date, scale_fill_datetime, scale_fill_gradient, scale_fill_gradient2, scale_fill_gradientn).</li>
-<li><code class="codehilite">scale_colour_grey</code> (scale_color_grey, scale_fill_grey), Sequential grey colour scale.</li>
-<li><code class="codehilite">scale_colour_hue</code> (scale_color_discrete, scale_color_hue, scale_colour_discrete, scale_fill_discrete, scale_fill_hue), Qualitative colour scale with evenly spaced hues.</li>
-<li><code class="codehilite">scale_identity</code> (scale_alpha_identity, scale_color_identity, scale_colour_identity, scale_fill_identity, scale_linetype_identity, scale_shape_identity, scale_size_identity), Use values without scaling.</li>
-<li><code class="codehilite">scale_manual</code> (scale_alpha_manual, scale_color_manual, scale_colour_manual, scale_fill_manual, scale_linetype_manual, scale_shape_manual, scale_size_manual), Create your own discrete scale.</li>
-<li><code class="codehilite">scale_linetype</code> (scale_linetype_continuous, scale_linetype_discrete), Scale for line patterns.</li>
-<li><code class="codehilite">scale_shape</code> (scale_shape_continuous, scale_shape_discrete), Scale for shapes, aka glyphs.</li>
-<li><code class="codehilite">scale_size</code> (scale_radius, scale_size_area,<br />
+<li><code class="codehilite"><span class="n">expand_limits</span></code>, Expand the plot limits with data.</li>
+<li><code class="codehilite"><span class="n">guides</span></code>, Set guides for each scale.</li>
+<li><code class="codehilite"><span class="n">guide_legend</span></code>, Legend guide.</li>
+<li><code class="codehilite"><span class="n">guide_colourbar</span></code> (guide_colorbar), Continuous colour bar guide.</li>
+<li><code class="codehilite"><span class="n">lims</span></code> (xlim, ylim), Convenience functions to set the axis limits.</li>
+<li><code class="codehilite"><span class="n">scale_alpha</span></code> (scale_alpha_continuous, scale_alpha_discrete), Alpha scales.</li>
+<li><code class="codehilite"><span class="n">scale_colour_brewer</span></code> (scale_color_brewer, scale_color_distiller, scale_colour_distiller, scale_fill_brewer, scale_fill_distiller), Sequential, diverging and qualitative colour scales from colorbrewer.org</li>
+<li><code class="codehilite"><span class="n">scale_colour_gradient</span></code> (scale_color_continuous, scale_color_gradient, scale_color_gradient2, scale_color_gradientn, scale_colour_continuous, scale_colour_date, scale_colour_datetime, scale_colour_gradient2, scale_colour_gradientn, scale_fill_continuous, scale_fill_date, scale_fill_datetime, scale_fill_gradient, scale_fill_gradient2, scale_fill_gradientn).</li>
+<li><code class="codehilite"><span class="n">scale_colour_grey</span></code> (scale_color_grey, scale_fill_grey), Sequential grey colour scale.</li>
+<li><code class="codehilite"><span class="n">scale_colour_hue</span></code> (scale_color_discrete, scale_color_hue, scale_colour_discrete, scale_fill_discrete, scale_fill_hue), Qualitative colour scale with evenly spaced hues.</li>
+<li><code class="codehilite"><span class="n">scale_identity</span></code> (scale_alpha_identity, scale_color_identity, scale_colour_identity, scale_fill_identity, scale_linetype_identity, scale_shape_identity, scale_size_identity), Use values without scaling.</li>
+<li><code class="codehilite"><span class="n">scale_manual</span></code> (scale_alpha_manual, scale_color_manual, scale_colour_manual, scale_fill_manual, scale_linetype_manual, scale_shape_manual, scale_size_manual), Create your own discrete scale.</li>
+<li><code class="codehilite"><span class="n">scale_linetype</span></code> (scale_linetype_continuous, scale_linetype_discrete), Scale for line patterns.</li>
+<li><code class="codehilite"><span class="n">scale_shape</span></code> (scale_shape_continuous, scale_shape_discrete), Scale for shapes, aka glyphs.</li>
+<li><code class="codehilite"><span class="n">scale_size</span></code> (scale_radius, scale_size_area,<br />
     scale_size_continuous, scale_size_date, scale_size_datetime, scale_size_discrete), Scale size (area or radius).</li>
-<li><code class="codehilite">scale_x_discrete</code> (scale_y_discrete), Discrete position.</li>
-<li><code class="codehilite">labs</code> (ggtitle, xlab, ylab), Change axis labels and legend titles.</li>
-<li><code class="codehilite">update_labels</code>, Update axis/legend labels.</li>
+<li><code class="codehilite"><span class="n">scale_x_discrete</span></code> (scale_y_discrete), Discrete position.</li>
+<li><code class="codehilite"><span class="n">labs</span></code> (ggtitle, xlab, ylab), Change axis labels and legend titles.</li>
+<li><code class="codehilite"><span class="n">update_labels</span></code>, Update axis/legend labels.</li>
 </ul>
 <p><strong>Geometries</strong></p>
 <ul>
@@ -4533,63 +4538,63 @@
 <li>histogram.</li>
 <li>bar.</li>
 <li>boxplot.</li>
-<li><code class="codehilite">geom_abline</code> (geom_hline, geom_vline), Lines: horizontal,<br />
+<li><code class="codehilite"><span class="n">geom_abline</span></code> (geom_hline, geom_vline), Lines: horizontal,<br />
     vertical, and specified by slope and intercept.</li>
-<li><code class="codehilite">geom_bar</code> (stat_count), Bars, rectangles with bases on x-axis</li>
-<li><code class="codehilite">geom_bin2d</code> (stat_bin2d, stat_bin_2d), Add heatmap of 2d bin counts.</li>
-<li><code class="codehilite">geom_blank</code>, Blank, draws nothing.</li>
-<li><code class="codehilite">geom_boxplot</code> (stat_boxplot), Box and whiskers plot.</li>
-<li><code class="codehilite">geom_contour</code> (stat_contour), Display contours of a 3d surface in 2d.</li>
-<li><code class="codehilite">geom_count</code>(stat_sum), Count the number of observations at each location.</li>
-<li><code class="codehilite">geom_crossbar</code> (geom_errorbar, geom_linerange, geom_pointrange), Vertical intervals: lines, crossbars &amp; errorbars.</li>
-<li><code class="codehilite">geom_density</code> (stat_density), Display a smooth density estimate.</li>
-<li><code class="codehilite">geom_density_2d</code> (geom_density2d, stat_density2d,    stat_density_2d), Contours from a 2d density estimate.</li>
-<li><code class="codehilite">geom_dotplot</code>, Dot plot</li>
-<li><code class="codehilite">geom_errorbarh</code>, Horizontal error bars.</li>
-<li><code class="codehilite">geom_freqpoly</code> (geom_histogram, stat_bin), Histograms and frequency polygons.</li>
-<li><code class="codehilite">geom_hex</code> (stat_bin_hex, stat_binhex), Hexagon binning.</li>
-<li><code class="codehilite">geom_jitter</code>, Points, jittered to reduce overplotting.</li>
-<li><code class="codehilite">geom_label</code> (geom_text), Textual annotations.</li>
-<li><code class="codehilite">geom_map</code>, Polygons from a reference map.</li>
-<li><code class="codehilite">geom_path</code> (geom_line, geom_step), Connect observations.</li>
-<li><code class="codehilite">geom_point</code>, Points, as for a scatterplot.</li>
-<li><code class="codehilite">geom_polygon</code>, Polygon, a filled path.</li>
-<li><code class="codehilite">geom_quantile</code> (stat_quantile), Add quantile lines from a quantile regression.</li>
-<li><code class="codehilite">geom_raster</code> (geom_rect, geom_tile), Draw rectangles.</li>
-<li><code class="codehilite">geom_ribbon</code> (geom_area), Ribbons and area plots.</li>
-<li><code class="codehilite">geom_rug</code>, Marginal rug plots.</li>
-<li><code class="codehilite">geom_segment</code> (geom_curve), Line segments and curves.</li>
-<li><code class="codehilite">geom_smooth</code> (stat_smooth), Add a smoothed conditional mean.</li>
-<li><code class="codehilite">geom_violin</code> (stat_ydensity), Violin plot.</li>
+<li><code class="codehilite"><span class="n">geom_bar</span></code> (stat_count), Bars, rectangles with bases on x-axis</li>
+<li><code class="codehilite"><span class="n">geom_bin2d</span></code> (stat_bin2d, stat_bin_2d), Add heatmap of 2d bin counts.</li>
+<li><code class="codehilite"><span class="n">geom_blank</span></code>, Blank, draws nothing.</li>
+<li><code class="codehilite"><span class="n">geom_boxplot</span></code> (stat_boxplot), Box and whiskers plot.</li>
+<li><code class="codehilite"><span class="n">geom_contour</span></code> (stat_contour), Display contours of a 3d surface in 2d.</li>
+<li><code class="codehilite"><span class="n">geom_count</span></code>(stat_sum), Count the number of observations at each location.</li>
+<li><code class="codehilite"><span class="n">geom_crossbar</span></code> (geom_errorbar, geom_linerange, geom_pointrange), Vertical intervals: lines, crossbars &amp; errorbars.</li>
+<li><code class="codehilite"><span class="n">geom_density</span></code> (stat_density), Display a smooth density estimate.</li>
+<li><code class="codehilite"><span class="n">geom_density_2d</span></code> (geom_density2d, stat_density2d,    stat_density_2d), Contours from a 2d density estimate.</li>
+<li><code class="codehilite"><span class="n">geom_dotplot</span></code>, Dot plot</li>
+<li><code class="codehilite"><span class="n">geom_errorbarh</span></code>, Horizontal error bars.</li>
+<li><code class="codehilite"><span class="n">geom_freqpoly</span></code> (geom_histogram, stat_bin), Histograms and frequency polygons.</li>
+<li><code class="codehilite"><span class="n">geom_hex</span></code> (stat_bin_hex, stat_binhex), Hexagon binning.</li>
+<li><code class="codehilite"><span class="n">geom_jitter</span></code>, Points, jittered to reduce overplotting.</li>
+<li><code class="codehilite"><span class="n">geom_label</span></code> (geom_text), Textual annotations.</li>
+<li><code class="codehilite"><span class="n">geom_map</span></code>, Polygons from a reference map.</li>
+<li><code class="codehilite"><span class="n">geom_path</span></code> (geom_line, geom_step), Connect observations.</li>
+<li><code class="codehilite"><span class="n">geom_point</span></code>, Points, as for a scatterplot.</li>
+<li><code class="codehilite"><span class="n">geom_polygon</span></code>, Polygon, a filled path.</li>
+<li><code class="codehilite"><span class="n">geom_quantile</span></code> (stat_quantile), Add quantile lines from a quantile regression.</li>
+<li><code class="codehilite"><span class="n">geom_raster</span></code> (geom_rect, geom_tile), Draw rectangles.</li>
+<li><code class="codehilite"><span class="n">geom_ribbon</span></code> (geom_area), Ribbons and area plots.</li>
+<li><code class="codehilite"><span class="n">geom_rug</span></code>, Marginal rug plots.</li>
+<li><code class="codehilite"><span class="n">geom_segment</span></code> (geom_curve), Line segments and curves.</li>
+<li><code class="codehilite"><span class="n">geom_smooth</span></code> (stat_smooth), Add a smoothed conditional mean.</li>
+<li><code class="codehilite"><span class="n">geom_violin</span></code> (stat_ydensity), Violin plot.</li>
 </ul>
 <p><strong>Facets</strong></p>
 <ul>
 <li>columns.</li>
 <li>rows.</li>
-<li><code class="codehilite">facet_grid</code>, Lay out panels in a grid.</li>
-<li><code class="codehilite">facet_null</code>, Facet specification: a single panel.</li>
-<li><code class="codehilite">facet_wrap</code>, Wrap a 1d ribbon of panels into 2d.</li>
-<li><code class="codehilite">labeller</code>, Generic labeller function for facets.</li>
-<li><code class="codehilite">label_bquote</code>, Backquoted labeller.</li>
+<li><code class="codehilite"><span class="n">facet_grid</span></code>, Lay out panels in a grid.</li>
+<li><code class="codehilite"><span class="n">facet_null</span></code>, Facet specification: a single panel.</li>
+<li><code class="codehilite"><span class="n">facet_wrap</span></code>, Wrap a 1d ribbon of panels into 2d.</li>
+<li><code class="codehilite"><span class="n">labeller</span></code>, Generic labeller function for facets.</li>
+<li><code class="codehilite"><span class="n">label_bquote</span></code>, Backquoted labeller.</li>
 </ul>
 <p><strong>Annotation</strong></p>
 <ul>
-<li><code class="codehilite">annotate</code>, Create an annotation layer.</li>
-<li><code class="codehilite">annotation_custom</code>, Annotation: Custom grob.</li>
-<li><code class="codehilite">annotation_logticks</code>, Annotation: log tick marks.</li>
-<li><code class="codehilite">annotation_map</code>, Annotation: maps.</li>
-<li><code class="codehilite">annotation_raster</code>, Annotation: High-performance<br />
+<li><code class="codehilite"><span class="n">annotate</span></code>, Create an annotation layer.</li>
+<li><code class="codehilite"><span class="n">annotation_custom</span></code>, Annotation: Custom grob.</li>
+<li><code class="codehilite"><span class="n">annotation_logticks</span></code>, Annotation: log tick marks.</li>
+<li><code class="codehilite"><span class="n">annotation_map</span></code>, Annotation: maps.</li>
+<li><code class="codehilite"><span class="n">annotation_raster</span></code>, Annotation: High-performance<br />
     rectangular tiling.</li>
-<li><code class="codehilite">borders</code>, Create a layer of map borders.</li>
+<li><code class="codehilite"><span class="n">borders</span></code>, Create a layer of map borders.</li>
 </ul>
 <p><strong>Fortify</strong></p>
 <ul>
-<li><code class="codehilite">fortify</code>, Fortify a model with data.</li>
-<li><code class="codehilite">fortify-multcomp</code> (fortify.cld, fortify.confint.glht, fortify.glht, fortify.summary.glht), Fortify methods for objects produced by.</li>
-<li><code class="codehilite">fortify.lm</code>, Supplement the data fitted to a linear model with model fit statistics.</li>
-<li><code class="codehilite">fortify.map</code>, Fortify method for map objects.</li>
-<li><code class="codehilite">fortify.sp</code> (fortify.Line, fortify.Lines, fortify.Polygon, fortify.Polygons, fortify.SpatialLinesDataFrame, fortify.SpatialPolygons, fortify.SpatialPolygonsDataFrame), Fortify method for classes from the sp package.</li>
-<li><code class="codehilite">map_data</code>, Create a data frame of map data.</li>
+<li><code class="codehilite"><span class="n">fortify</span></code>, Fortify a model with data.</li>
+<li><code class="codehilite"><span class="n">fortify</span><span class="o">-</span><span class="n">multcomp</span></code> (fortify.cld, fortify.confint.glht, fortify.glht, fortify.summary.glht), Fortify methods for objects produced by.</li>
+<li><code class="codehilite"><span class="n">fortify</span><span class="p">.</span><span class="n">lm</span></code>, Supplement the data fitted to a linear model with model fit statistics.</li>
+<li><code class="codehilite"><span class="n">fortify</span><span class="p">.</span><span class="k">map</span></code>, Fortify method for map objects.</li>
+<li><code class="codehilite"><span class="n">fortify</span><span class="p">.</span><span class="n">sp</span></code> (fortify.Line, fortify.Lines, fortify.Polygon, fortify.Polygons, fortify.SpatialLinesDataFrame, fortify.SpatialPolygons, fortify.SpatialPolygonsDataFrame), Fortify method for classes from the sp package.</li>
+<li><code class="codehilite"><span class="n">map_data</span></code>, Create a data frame of map data.</li>
 </ul>
 <p><strong>Statistics</strong></p>
 <ul>
@@ -4597,33 +4602,33 @@
 <li>smoothing.</li>
 <li>descriptive.</li>
 <li>inferential.</li>
-<li><code class="codehilite">stat_ecdf</code>, Empirical Cumulative Density Function.</li>
-<li><code class="codehilite">stat_ellipse</code>, Plot data ellipses.</li>
-<li><code class="codehilite">stat_function</code>, Superimpose a function.</li>
-<li><code class="codehilite">stat_identity</code>, Identity statistic.</li>
-<li><code class="codehilite">stat_qq</code> (geom_qq), Calculation for quantile-quantile plot.</li>
-<li><code class="codehilite">stat_summary_2d</code> (stat_summary2d, stat_summary_hex), Bin and summarise in 2d (rectangle &amp; hexagons)</li>
-<li><code class="codehilite">stat_unique</code>, Remove duplicates.</li>
+<li><code class="codehilite"><span class="n">stat_ecdf</span></code>, Empirical Cumulative Density Function.</li>
+<li><code class="codehilite"><span class="n">stat_ellipse</span></code>, Plot data ellipses.</li>
+<li><code class="codehilite"><span class="n">stat_function</span></code>, Superimpose a function.</li>
+<li><code class="codehilite"><span class="n">stat_identity</span></code>, Identity statistic.</li>
+<li><code class="codehilite"><span class="n">stat_qq</span></code> (geom_qq), Calculation for quantile-quantile plot.</li>
+<li><code class="codehilite"><span class="n">stat_summary_2d</span></code> (stat_summary2d, stat_summary_hex), Bin and summarise in 2d (rectangle &amp; hexagons)</li>
+<li><code class="codehilite"><span class="n">stat_unique</span></code>, Remove duplicates.</li>
 <li>Coordinates.</li>
 <li>cartesian.</li>
 <li>fixes.</li>
 <li>polar.</li>
 <li>limites.</li>
-<li><code class="codehilite">coord_cartesian</code>, Cartesian coordinates.</li>
-<li><code class="codehilite">coord_fixed</code> (coord_equal), Cartesian coordinates with fixed<br />
+<li><code class="codehilite"><span class="n">coord_cartesian</span></code>, Cartesian coordinates.</li>
+<li><code class="codehilite"><span class="n">coord_fixed</span></code> (coord_equal), Cartesian coordinates with fixed<br />
     relationship between x and y scales.</li>
-<li><code class="codehilite">coord_flip</code>, Flipped cartesian coordinates.</li>
-<li><code class="codehilite">coord_map</code> (coord_quickmap), Map projections.</li>
-<li><code class="codehilite">coord_polar</code>, Polar coordinates.</li>
-<li><code class="codehilite">coord_trans</code>, Transformed cartesian coordinate system.</li>
+<li><code class="codehilite"><span class="n">coord_flip</span></code>, Flipped cartesian coordinates.</li>
+<li><code class="codehilite"><span class="n">coord_map</span></code> (coord_quickmap), Map projections.</li>
+<li><code class="codehilite"><span class="n">coord_polar</span></code>, Polar coordinates.</li>
+<li><code class="codehilite"><span class="n">coord_trans</span></code>, Transformed cartesian coordinate system.</li>
 </ul>
 <p><strong>Themes</strong></p>
 <ul>
-<li><code class="codehilite">theme_bw</code></li>
-<li><code class="codehilite">theme_grey</code></li>
-<li><code class="codehilite">theme_classic</code></li>
-<li><code class="codehilite">theme_minimal</code></li>
-<li><code class="codehilite">ggthemes</code></li>
+<li><code class="codehilite"><span class="n">theme_bw</span></code></li>
+<li><code class="codehilite"><span class="n">theme_grey</span></code></li>
+<li><code class="codehilite"><span class="n">theme_classic</span></code></li>
+<li><code class="codehilite"><span class="n">theme_minimal</span></code></li>
+<li><code class="codehilite"><span class="n">ggthemes</span></code></li>
 </ul>
                 
                   
@@ -4688,25 +4693,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

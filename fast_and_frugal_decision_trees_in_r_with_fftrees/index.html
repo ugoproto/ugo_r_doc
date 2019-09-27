@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Fast-and-Frugal Decision Trees
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -530,49 +535,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why" title="Why?" class="md-nav__link">
+  <a href="#why" class="md-nav__link">
     Why?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore-the-heart-disease-data" title="Explore the Heart Disease Data" class="md-nav__link">
+  <a href="#explore-the-heart-disease-data" class="md-nav__link">
     Explore the Heart Disease Data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-an-fftrees-object" title="Create an FFTrees object" class="md-nav__link">
+  <a href="#create-an-fftrees-object" class="md-nav__link">
     Create an FFTrees object
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plotting-fast-and-frugal-trees" title="Plotting Fast-And-Frugal Trees" class="md-nav__link">
+  <a href="#plotting-fast-and-frugal-trees" class="md-nav__link">
     Plotting Fast-And-Frugal Trees
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-and-testing-a-custom-tree" title="Creating and Testing a Custom Tree" class="md-nav__link">
+  <a href="#creating-and-testing-a-custom-tree" class="md-nav__link">
     Creating and Testing a Custom Tree
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#more" title="More" class="md-nav__link">
+  <a href="#more" class="md-nav__link">
     More
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" title="Summary" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     Summary
   </a>
   
@@ -925,49 +930,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why" title="Why?" class="md-nav__link">
+  <a href="#why" class="md-nav__link">
     Why?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explore-the-heart-disease-data" title="Explore the Heart Disease Data" class="md-nav__link">
+  <a href="#explore-the-heart-disease-data" class="md-nav__link">
     Explore the Heart Disease Data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-an-fftrees-object" title="Create an FFTrees object" class="md-nav__link">
+  <a href="#create-an-fftrees-object" class="md-nav__link">
     Create an FFTrees object
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plotting-fast-and-frugal-trees" title="Plotting Fast-And-Frugal Trees" class="md-nav__link">
+  <a href="#plotting-fast-and-frugal-trees" class="md-nav__link">
     Plotting Fast-And-Frugal Trees
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-and-testing-a-custom-tree" title="Creating and Testing a Custom Tree" class="md-nav__link">
+  <a href="#creating-and-testing-a-custom-tree" class="md-nav__link">
     Creating and Testing a Custom Tree
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#more" title="More" class="md-nav__link">
+  <a href="#more" class="md-nav__link">
     More
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" title="Summary" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     Summary
   </a>
   
@@ -1004,7 +1009,7 @@
 <p>Quickly decide: use an algorithm that can quickly understand and apply with minimal effort. For this reason, complex algorithms such as random forests, and even regression are not viable.</p>
 <p>A fast-and-frugal tree is an extremely simple decision tree that anyone can easily understand, learn, and use to make fast decisions with minimal effort.</p>
 <h2 id="explore-the-heart-disease-data">Explore the Heart Disease Data<a class="headerlink" href="#explore-the-heart-disease-data" title="Permanent link">&para;</a></h2>
-<p>The <code class="codehilite">FFTrees</code> package contains two datasets: <code class="codehilite">heart.train</code> to create (aka. train) fast-and-frugal trees, and <code class="codehilite">heart.test</code> to test their prediction performance.</p>
+<p>The <code class="codehilite"><span class="n">FFTrees</span></code> package contains two datasets: <code class="codehilite"><span class="n">heart</span><span class="p">.</span><span class="n">train</span></code> to create (aka. train) fast-and-frugal trees, and <code class="codehilite"><span class="n">heart</span><span class="p">.</span><span class="n">test</span></code> to test their prediction performance.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1018,25 +1023,25 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Load the package
-library(&quot;FFTrees&quot;)
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="k">Load</span> <span class="n">the</span> <span class="n">package</span>
+<span class="n">library</span><span class="p">(</span><span class="ss">&quot;FFTrees&quot;</span><span class="p">)</span>
 
-# Print the first few rows of the training dataframe
-head(heart.train, 3)
+<span class="o">#</span> <span class="n">Print</span> <span class="n">the</span> <span class="k">first</span> <span class="n">few</span> <span class="k">rows</span> <span class="k">of</span> <span class="n">the</span> <span class="n">training</span> <span class="n">dataframe</span>
+<span class="n">head</span><span class="p">(</span><span class="n">heart</span><span class="p">.</span><span class="n">train</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-##     age sex cp trestbps chol fbs     restecg thalach exang oldpeak slope
-## 94   44   0 np      108  141   0      normal     175     0     0.6  flat
-## 78   51   0 np      140  308   0 hypertrophy     142     0     1.5    up
-## 167  52   1 np      138  223   0      normal     169     0     0.0    up
-##     ca   thal diagnosis
-## 94   0 normal         0
-## 78   1 normal         0
-## 167  1 normal         0
+<span class="o">##</span>     <span class="n">age</span> <span class="n">sex</span> <span class="n">cp</span> <span class="n">trestbps</span> <span class="n">chol</span> <span class="n">fbs</span>     <span class="n">restecg</span> <span class="n">thalach</span> <span class="n">exang</span> <span class="n">oldpeak</span> <span class="n">slope</span>
+<span class="o">##</span> <span class="mi">94</span>   <span class="mi">44</span>   <span class="mi">0</span> <span class="n">np</span>      <span class="mi">108</span>  <span class="mi">141</span>   <span class="mi">0</span>      <span class="n">normal</span>     <span class="mi">175</span>     <span class="mi">0</span>     <span class="mi">0</span><span class="p">.</span><span class="mi">6</span>  <span class="n">flat</span>
+<span class="o">##</span> <span class="mi">78</span>   <span class="mi">51</span>   <span class="mi">0</span> <span class="n">np</span>      <span class="mi">140</span>  <span class="mi">308</span>   <span class="mi">0</span> <span class="n">hypertrophy</span>     <span class="mi">142</span>     <span class="mi">0</span>     <span class="mi">1</span><span class="p">.</span><span class="mi">5</span>    <span class="n">up</span>
+<span class="o">##</span> <span class="mi">167</span>  <span class="mi">52</span>   <span class="mi">1</span> <span class="n">np</span>      <span class="mi">138</span>  <span class="mi">223</span>   <span class="mi">0</span>      <span class="n">normal</span>     <span class="mi">169</span>     <span class="mi">0</span>     <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>    <span class="n">up</span>
+<span class="o">##</span>     <span class="n">ca</span>   <span class="n">thal</span> <span class="n">diagnosis</span>
+<span class="o">##</span> <span class="mi">94</span>   <span class="mi">0</span> <span class="n">normal</span>         <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">78</span>   <span class="mi">1</span> <span class="n">normal</span>         <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">167</span>  <span class="mi">1</span> <span class="n">normal</span>         <span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
-<p>The train dataframe contains data from several patients, each categorized by demographic features such as age and sex, as well as the results of medical tests and measures such as their cholesterol level (<code class="codehilite">chol</code>) and their type of chest pain (<code class="codehilite">cp</code>). The key variable you want to predict is <code class="codehilite">diagnosis</code>, which is 1 for patients who are truly having heart attacks, and 0 for those who are not. The goal of your fast-and-frugal tree will be to find a few key variables in the data that can quickly and accurately predict diagnosis.</p>
-<h2 id="create-an-fftrees-object">Create an <code class="codehilite">FFTrees</code> object<a class="headerlink" href="#create-an-fftrees-object" title="Permanent link">&para;</a></h2>
+<p>The train dataframe contains data from several patients, each categorized by demographic features such as age and sex, as well as the results of medical tests and measures such as their cholesterol level (<code class="codehilite"><span class="n">chol</span></code>) and their type of chest pain (<code class="codehilite"><span class="n">cp</span></code>). The key variable you want to predict is <code class="codehilite"><span class="n">diagnosis</span></code>, which is 1 for patients who are truly having heart attacks, and 0 for those who are not. The goal of your fast-and-frugal tree will be to find a few key variables in the data that can quickly and accurately predict diagnosis.</p>
+<h2 id="create-an-fftrees-object">Create an <code class="codehilite"><span class="n">FFTrees</span></code> object<a class="headerlink" href="#create-an-fftrees-object" title="Permanent link">&para;</a></h2>
 <p>As with any algorithm, we need a function (formula), a train set, and a test set. We add a title and labels to the results.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1064,42 +1069,42 @@ head(heart.train, 3)
 24
 25
 26
-27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Create an FFTrees object called `heart_FFT`
-heart_FFT &amp;lt;- FFTrees(formula = diagnosis ~ .,
-                     data = heart.train,
-                     data.test = heart.test,
-                     main = &quot;ER Decisions&quot;,
-                     decision.labels = c(&quot;Stable&quot;, &quot;H Attack&quot;))
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># <span class="nv">Create</span> <span class="nv">an</span> <span class="nv">FFTrees</span> <span class="nv">object</span> <span class="nv">called</span> `<span class="nv">heart_FFT</span>`
+<span class="nv">heart_FFT</span> <span class="o">&lt;-</span> <span class="nv">FFTrees</span><span class="ss">(</span><span class="nv">formula</span> <span class="o">=</span> <span class="nv">diagnosis</span> <span class="o">~</span> .,
+                     <span class="nv">data</span> <span class="o">=</span> <span class="nv">heart</span>.<span class="nv">train</span>,
+                     <span class="nv">data</span>.<span class="nv">test</span> <span class="o">=</span> <span class="nv">heart</span>.<span class="nv">test</span>,
+                     <span class="nv">main</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">ER Decisions</span><span class="s2">&quot;</span>,
+                     <span class="nv">decision</span>.<span class="nv">labels</span> <span class="o">=</span> <span class="nv">c</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Stable</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">H Attack</span><span class="s2">&quot;</span><span class="ss">))</span>
 
-# Print the summary statistics
-heart_FFT
+# <span class="nv">Print</span> <span class="nv">the</span> <span class="nv">summary</span> <span class="nv">statistics</span>
+<span class="nv">heart_FFT</span>
 
-## ER Decisions
-## FFT #1 predicts diagnosis using 3 cues: {thal,cp,ca}
+## <span class="nv">ER</span> <span class="nv">Decisions</span>
+## <span class="nv">FFT</span> <span class="sc">#1</span> <span class="nv">predicts</span> <span class="nv">diagnosis</span> <span class="nv">using</span> <span class="mi">3</span> <span class="nv">cues</span>: {<span class="nv">thal</span>,<span class="nv">cp</span>,<span class="nv">ca</span>}
 ## 
-## [1] If thal = {rd,fd}, predict H Attack.
-## [2] If cp != {a}, predict Stable.
-## [3] If ca &amp;lt;= 0, predict Stable, otherwise, predict H Attack.
+## [<span class="mi">1</span>] <span class="k">If</span> <span class="nv">thal</span> <span class="o">=</span> {<span class="nv">rd</span>,<span class="nv">fd</span>}, <span class="nv">predict</span> <span class="nv">H</span> <span class="nv">Attack</span>.
+## [<span class="mi">2</span>] <span class="k">If</span> <span class="nv">cp</span> <span class="o">!=</span> {<span class="nv">a</span>}, <span class="nv">predict</span> <span class="nv">Stable</span>.
+## [<span class="mi">3</span>] <span class="k">If</span> <span class="nv">ca</span> <span class="o">&lt;=</span> <span class="mi">0</span>, <span class="nv">predict</span> <span class="nv">Stable</span>, <span class="nv">otherwise</span>, <span class="nv">predict</span> <span class="nv">H</span> <span class="nv">Attack</span>.
 ## 
-##                    train   test
-## cases       :n    150.00 153.00
-## speed       :mcu    1.74   1.73
-## frugality   :pci    0.88   0.88
-## accuracy    :acc    0.80   0.82
-## weighted    :wacc   0.80   0.82
-## sensitivity :sens   0.82   0.88
-## specificity :spec   0.79   0.76
+##                    <span class="nv">train</span>   <span class="nv">test</span>
+## <span class="nv">cases</span>       :<span class="nv">n</span>    <span class="mi">150</span>.<span class="mi">00</span> <span class="mi">153</span>.<span class="mi">00</span>
+## <span class="nv">speed</span>       :<span class="nv">mcu</span>    <span class="mi">1</span>.<span class="mi">74</span>   <span class="mi">1</span>.<span class="mi">73</span>
+## <span class="nv">frugality</span>   :<span class="nv">pci</span>    <span class="mi">0</span>.<span class="mi">88</span>   <span class="mi">0</span>.<span class="mi">88</span>
+## <span class="nv">accuracy</span>    :<span class="nv">acc</span>    <span class="mi">0</span>.<span class="mi">80</span>   <span class="mi">0</span>.<span class="mi">82</span>
+## <span class="nv">weighted</span>    :<span class="nv">wacc</span>   <span class="mi">0</span>.<span class="mi">80</span>   <span class="mi">0</span>.<span class="mi">82</span>
+## <span class="nv">sensitivity</span> :<span class="nv">sens</span>   <span class="mi">0</span>.<span class="mi">82</span>   <span class="mi">0</span>.<span class="mi">88</span>
+## <span class="nv">specificity</span> :<span class="nv">spec</span>   <span class="mi">0</span>.<span class="mi">79</span>   <span class="mi">0</span>.<span class="mi">76</span>
 ## 
-## pars: algorithm = &#39;ifan&#39;, goal = &#39;wacc&#39;, goal.chase = &#39;bacc&#39;, sens.w = 0.5, max.levels = 4
+## <span class="nv">pars</span>: <span class="nv">algorithm</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">ifan</span><span class="s1">&#39;</span>, <span class="nv">goal</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">wacc</span><span class="s1">&#39;</span>, <span class="nv">goal</span>.<span class="nv">chase</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">bacc</span><span class="s1">&#39;</span>, <span class="nv">sens</span>.<span class="nv">w</span> <span class="o">=</span> <span class="mi">0</span>.<span class="mi">5</span>, <span class="nv">max</span>.<span class="nv">levels</span> <span class="o">=</span> <span class="mi">4</span>
 </pre></div>
 </td></tr></table>
 
-<p><code class="codehilite">thal</code> is either <code class="codehilite">rd</code> or <code class="codehilite">fd</code>, the dependent variable <code class="codehilite">H Attack</code>. <code class="codehilite">cp</code> is not equal to <code class="codehilite">a</code> and the model has converged towards an optimum (<code class="codehilite">Stable</code>). The tree used an average of 1.74 pieces of information to classify cases with the train set. The tree has then an accuracy of 82% with the test set.</p>
+<p><code class="codehilite"><span class="n">thal</span></code> is either <code class="codehilite"><span class="n">rd</span></code> or <code class="codehilite"><span class="n">fd</span></code>, the dependent variable <code class="codehilite"><span class="n">H</span> <span class="n">Attack</span></code>. <code class="codehilite"><span class="n">cp</span></code> is not equal to <code class="codehilite"><span class="n">a</span></code> and the model has converged towards an optimum (<code class="codehilite"><span class="k">Stable</span></code>). The tree used an average of 1.74 pieces of information to classify cases with the train set. The tree has then an accuracy of 82% with the test set.</p>
 <h2 id="plotting-fast-and-frugal-trees">Plotting Fast-And-Frugal Trees<a class="headerlink" href="#plotting-fast-and-frugal-trees" title="Permanent link">&para;</a></h2>
 <p>The visualization greatly improves the understanding.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Visualise the tree applied to the test data heart.test
-plot(heart_FFT, data = &quot;test&quot;)
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">Visualise</span> <span class="n">the</span> <span class="n">tree</span> <span class="n">applied</span> <span class="k">to</span> <span class="n">the</span> <span class="n">test</span> <span class="k">data</span> <span class="n">heart</span><span class="p">.</span><span class="n">test</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">heart_FFT</span><span class="p">,</span> <span class="k">data</span> <span class="o">=</span> <span class="ss">&quot;test&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1151,49 +1156,49 @@ plot(heart_FFT, data = &quot;test&quot;)
 30
 31
 32
-33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Create Heidi&#39;s custom FFT
-custom_FFT &amp;lt;- FFTrees(formula = diagnosis ~ .,               
-                      data = heart.train,                    
-                      data.test = heart.test,                
-                      main = &quot;Heidi&#39;s Tree&quot;,                  
-                      decision.labels = c(&quot;Stable&quot;, &quot;Attack&quot;),
-                      my.tree = &quot;If chol &amp;gt; 300, predict Attack.
-                                 If age &amp;lt; 50, predict Stable.
-                                 If slope = {up, flat} predict Attack. Otherwise, predict Stable.&quot;)
+33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># <span class="nv">Create</span> <span class="nv">Heidi</span><span class="s1">&#39;</span><span class="s">s custom FFT</span>
+<span class="nv">custom_FFT</span> <span class="o">&lt;-</span> <span class="nv">FFTrees</span><span class="ss">(</span><span class="nv">formula</span> <span class="o">=</span> <span class="nv">diagnosis</span> <span class="o">~</span> .,               
+                      <span class="nv">data</span> <span class="o">=</span> <span class="nv">heart</span>.<span class="nv">train</span>,                    
+                      <span class="nv">data</span>.<span class="nv">test</span> <span class="o">=</span> <span class="nv">heart</span>.<span class="nv">test</span>,                
+                      <span class="nv">main</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Heidi&#39;s Tree</span><span class="s2">&quot;</span>,                  
+                      <span class="nv">decision</span>.<span class="nv">labels</span> <span class="o">=</span> <span class="nv">c</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Stable</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">Attack</span><span class="s2">&quot;</span><span class="ss">)</span>,
+                      <span class="nv">my</span>.<span class="nv">tree</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">If chol &gt; 300, predict Attack.</span>
+                                 <span class="k">If</span> <span class="nv">age</span> <span class="o">&lt;</span> <span class="mi">50</span>, <span class="nv">predict</span> <span class="nv">Stable</span>.
+                                 <span class="k">If</span> <span class="nv">slope</span> <span class="o">=</span> {<span class="nv">up</span>, <span class="nv">flat</span>} <span class="nv">predict</span> <span class="nv">Attack</span>. <span class="nv">Otherwise</span>, <span class="nv">predict</span> <span class="nv">Stable</span>.<span class="s2">&quot;</span><span class="s">)</span>
 
-# Print the summary statistics
-custom_FFT
+# <span class="nv">Print</span> <span class="nv">the</span> <span class="nv">summary</span> <span class="nv">statistics</span>
+<span class="nv">custom_FFT</span>
 
-## Heidi&#39;s Tree
-## FFT #1 predicts diagnosis using 3 cues: {chol,age,slope}
+## <span class="nv">Heidi</span><span class="s1">&#39;</span><span class="s">s Tree</span>
+## <span class="nv">FFT</span> <span class="sc">#1</span> <span class="nv">predicts</span> <span class="nv">diagnosis</span> <span class="nv">using</span> <span class="mi">3</span> <span class="nv">cues</span>: {<span class="nv">chol</span>,<span class="nv">age</span>,<span class="nv">slope</span>}
 ## 
-## [1] If chol &amp;gt; 300, predict Attack.
-## [2] If age &amp;lt; 50, predict Stable.
-## [3] If slope != {up,flat}, predict Stable, otherwise, predict Attack.
+## [<span class="mi">1</span>] <span class="k">If</span> <span class="nv">chol</span> <span class="o">&gt;</span> <span class="mi">300</span>, <span class="nv">predict</span> <span class="nv">Attack</span>.
+## [<span class="mi">2</span>] <span class="k">If</span> <span class="nv">age</span> <span class="o">&lt;</span> <span class="mi">50</span>, <span class="nv">predict</span> <span class="nv">Stable</span>.
+## [<span class="mi">3</span>] <span class="k">If</span> <span class="nv">slope</span> <span class="o">!=</span> {<span class="nv">up</span>,<span class="nv">flat</span>}, <span class="nv">predict</span> <span class="nv">Stable</span>, <span class="nv">otherwise</span>, <span class="nv">predict</span> <span class="nv">Attack</span>.
 ## 
-##                    train   test
-## cases       :n    150.00 153.00
-## speed       :mcu    2.41   2.49
-## frugality   :pci    0.83   0.82
-## accuracy    :acc    0.59   0.54
-## weighted    :wacc   0.61   0.55
-## sensitivity :sens   0.80   0.77
-## specificity :spec   0.42   0.34
+##                    <span class="nv">train</span>   <span class="nv">test</span>
+## <span class="nv">cases</span>       :<span class="nv">n</span>    <span class="mi">150</span>.<span class="mi">00</span> <span class="mi">153</span>.<span class="mi">00</span>
+## <span class="nv">speed</span>       :<span class="nv">mcu</span>    <span class="mi">2</span>.<span class="mi">41</span>   <span class="mi">2</span>.<span class="mi">49</span>
+## <span class="nv">frugality</span>   :<span class="nv">pci</span>    <span class="mi">0</span>.<span class="mi">83</span>   <span class="mi">0</span>.<span class="mi">82</span>
+## <span class="nv">accuracy</span>    :<span class="nv">acc</span>    <span class="mi">0</span>.<span class="mi">59</span>   <span class="mi">0</span>.<span class="mi">54</span>
+## <span class="nv">weighted</span>    :<span class="nv">wacc</span>   <span class="mi">0</span>.<span class="mi">61</span>   <span class="mi">0</span>.<span class="mi">55</span>
+## <span class="nv">sensitivity</span> :<span class="nv">sens</span>   <span class="mi">0</span>.<span class="mi">80</span>   <span class="mi">0</span>.<span class="mi">77</span>
+## <span class="nv">specificity</span> :<span class="nv">spec</span>   <span class="mi">0</span>.<span class="mi">42</span>   <span class="mi">0</span>.<span class="mi">34</span>
 ## 
-## pars: algorithm = &#39;ifan&#39;, goal = &#39;wacc&#39;, goal.chase = &#39;bacc&#39;, sens.w = 0.5, max.levels = 4
+## <span class="nv">pars</span>: <span class="nv">algorithm</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">ifan</span><span class="s1">&#39;</span>, <span class="nv">goal</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">wacc</span><span class="s1">&#39;</span>, <span class="nv">goal</span>.<span class="nv">chase</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">bacc</span><span class="s1">&#39;</span>, <span class="nv">sens</span>.<span class="nv">w</span> <span class="o">=</span> <span class="mi">0</span>.<span class="mi">5</span>, <span class="nv">max</span>.<span class="nv">levels</span> <span class="o">=</span> <span class="mi">4</span>
 
-# Plot Heidi&#39;s tree and accuracy statistics
-plot(custom_FFT, data = &quot;test&quot;)
+# <span class="nv">Plot</span> <span class="nv">Heidi</span><span class="s1">&#39;</span><span class="s">s tree and accuracy statistics</span>
+<span class="nv">plot</span><span class="ss">(</span><span class="nv">custom_FFT</span>, <span class="nv">data</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">test</span><span class="s2">&quot;</span><span class="ss">)</span>
 </pre></div>
 </td></tr></table>
 
 <p><img alt="" src="../img/Fast-and-Frugal_Decision_Trees_in_R_with_FFTrees/unnamed-chunk-5-1.png" /></p>
 <p>The new tree is much, much worse than the tree the internal algorithm came up with. While the tree generated by FFTrees had an overall accuracy of 82%, the new tree is only 54% accurate!</p>
-<p>Moreover, you can see very few patients (only 21) are classified as having a heart attack after the first node based on their cholesterol level, and of those, only 12 / 21 (57%) were really having heart attacks. In contrast, for the tree created by <code class="codehilite">FFTrees</code>, a full 72 patients are classified after the first node based on their value of <code class="codehilite">thal</code>, and of these, 75% were truly having heart attacks.</p>
+<p>Moreover, you can see very few patients (only 21) are classified as having a heart attack after the first node based on their cholesterol level, and of those, only 12 / 21 (57%) were really having heart attacks. In contrast, for the tree created by <code class="codehilite"><span class="n">FFTrees</span></code>, a full 72 patients are classified after the first node based on their value of <code class="codehilite"><span class="n">thal</span></code>, and of these, 75% were truly having heart attacks.</p>
 <h2 id="more">More<a class="headerlink" href="#more" title="Permanent link">&para;</a></h2>
 <p>We can use trees to predict classes (and their probabilities) for new datasets, and create trees that minimise different classification error costs (for example, when the cost of a miss is much higher than the cost of a false alarm).</p>
-<p>Check out the package vignette by running <code class="codehilite">FFTrees.guide()</code>.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>FFTrees.guide()
+<p>Check out the package vignette by running <code class="codehilite"><span class="n">FFTrees</span><span class="p">.</span><span class="n">guide</span><span class="p">()</span></code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">FFTrees</span><span class="p">.</span><span class="n">guide</span><span class="p">()</span>
 </pre></div>
 </td></tr></table>
 
@@ -1271,25 +1276,17 @@ plot(custom_FFT, data = &quot;test&quot;)
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

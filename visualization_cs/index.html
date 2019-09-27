@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Visualization Cheat Sheets
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -326,86 +331,112 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cartography" title="cartography" class="md-nav__link">
+  <a href="#cartography" class="md-nav__link">
     cartography
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ggmap" title="ggmap" class="md-nav__link">
-    ggmap
+  <a href="#ggplot2" class="md-nav__link">
+    ggplot2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gganimate" class="md-nav__link">
+    gganimate
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ggplot2" title="ggplot2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ggplot2_1" class="md-nav__link">
     ggplot2
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ggvis" title="ggvis" class="md-nav__link">
-    ggvis
+        
+          <li class="md-nav__item">
+  <a href="#ggmap" class="md-nav__link">
+    ggmap
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#leaflet" title="Leaflet" class="md-nav__link">
+  <a href="#leaflet" class="md-nav__link">
     Leaflet
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plotly" title="plotly" class="md-nav__link">
+  <a href="#plotly" class="md-nav__link">
     plotly
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shiny" title="shiny" class="md-nav__link">
+  <a href="#sf" class="md-nav__link">
+    sf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shiny" class="md-nav__link">
     shiny
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualization-parameters" title="Visualization Parameters" class="md-nav__link">
+  <a href="#visualization-parameters" class="md-nav__link">
     Visualization Parameters
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#colors" title="Colors" class="md-nav__link">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
     Colors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#graphs" title="Graphs" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
     Graphs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lines" title="Lines" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
     Lines
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#points" title="Points" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#points" class="md-nav__link">
     Points
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -960,86 +991,112 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cartography" title="cartography" class="md-nav__link">
+  <a href="#cartography" class="md-nav__link">
     cartography
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ggmap" title="ggmap" class="md-nav__link">
-    ggmap
+  <a href="#ggplot2" class="md-nav__link">
+    ggplot2
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gganimate" class="md-nav__link">
+    gganimate
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ggplot2" title="ggplot2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ggplot2_1" class="md-nav__link">
     ggplot2
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ggvis" title="ggvis" class="md-nav__link">
-    ggvis
+        
+          <li class="md-nav__item">
+  <a href="#ggmap" class="md-nav__link">
+    ggmap
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#leaflet" title="Leaflet" class="md-nav__link">
+  <a href="#leaflet" class="md-nav__link">
     Leaflet
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#plotly" title="plotly" class="md-nav__link">
+  <a href="#plotly" class="md-nav__link">
     plotly
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#shiny" title="shiny" class="md-nav__link">
+  <a href="#sf" class="md-nav__link">
+    sf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shiny" class="md-nav__link">
     shiny
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualization-parameters" title="Visualization Parameters" class="md-nav__link">
+  <a href="#visualization-parameters" class="md-nav__link">
     Visualization Parameters
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#colors" title="Colors" class="md-nav__link">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
     Colors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#graphs" title="Graphs" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
     Graphs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lines" title="Lines" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
     Lines
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#points" title="Points" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#points" class="md-nav__link">
     Points
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1071,15 +1128,16 @@
 <p><center><br />
 <img alt="" src="../img/visualization_cs/cartography.png" /><br />
 </center></p>
-<h2 id="ggmap">ggmap<a class="headerlink" href="#ggmap" title="Permanent link">&para;</a></h2>
+<h2 id="ggplot2">ggplot2<a class="headerlink" href="#ggplot2" title="Permanent link">&para;</a></h2>
+<h3 id="gganimate">gganimate<a class="headerlink" href="#gganimate" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../pdf/ggmapCheatsheet.pdf">ggmap</a>. PDF.</li>
+<li><a href="../pdf/gganimate.pdf">gganimate</a>. PDF.</li>
 </ul>
 <p><center><br />
-<img alt="" src="../img/visualization_cs/ggmapCheatsheeta.png" /></p>
-<p><img alt="" src="../img/visualization_cs/ggmapCheatsheetb.png" /><br />
+<img alt="" src="../img/visualization_cs/gganimatea.png" /></p>
+<p><img alt="" src="../img/visualization_cs/gganimateb.png" /><br />
 </center></p>
-<h2 id="ggplot2">ggplot2<a class="headerlink" href="#ggplot2" title="Permanent link">&para;</a></h2>
+<h3 id="ggplot2_1">ggplot2<a class="headerlink" href="#ggplot2_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../pdf/ggplot2.pdf">ggplot2</a>. PDF.</li>
 </ul>
@@ -1087,15 +1145,13 @@
 <img alt="" src="../img/visualization_cs/ggplot2a.png" /></p>
 <p><img alt="" src="../img/visualization_cs/ggplot2b.png" /><br />
 </center></p>
-<h2 id="ggvis">ggvis<a class="headerlink" href="#ggvis" title="Permanent link">&para;</a></h2>
+<h3 id="ggmap">ggmap<a class="headerlink" href="#ggmap" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../pdf/ggvis_.pdf">ggvis</a>. PDF.</li>
-<li><a href="../pdf/ggvis_c.pdf">ggvis cont&rsquo;d</a>. PDF.</li>
+<li><a href="../pdf/ggmapCheatsheet.pdf">ggmap</a>. PDF.</li>
 </ul>
 <p><center><br />
-<img alt="" src="../img/visualization_cs/ggvis_.png" /></p>
-<p><img alt="" src="../img/visualization_cs/ggvis_ca.png" /></p>
-<p><img alt="" src="../img/visualization_cs/ggvis_cb.png" /><br />
+<img alt="" src="../img/visualization_cs/ggmapCheatsheeta.png" /></p>
+<p><img alt="" src="../img/visualization_cs/ggmapCheatsheetb.png" /><br />
 </center></p>
 <h2 id="leaflet">Leaflet<a class="headerlink" href="#leaflet" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1112,6 +1168,14 @@
 <img alt="" src="../img/visualization_cs/plotly_r_cheat_sheeta.png" /></p>
 <p><img alt="" src="../img/visualization_cs/plotly_r_cheat_sheetb.png" /><br />
 </center></p>
+<h2 id="sf">sf<a class="headerlink" href="#sf" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../pdf/sf.pdf">sf</a>. PDF.</li>
+</ul>
+<p><center><br />
+<img alt="" src="../img/visualization_cs/sfa.png" /></p>
+<p><img alt="" src="../img/visualization_cs/sfb.png" /><br />
+</center></p>
 <h2 id="shiny">shiny<a class="headerlink" href="#shiny" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../pdf/shiny.pdf">shiny</a>. PDF.</li>
@@ -1121,7 +1185,7 @@
 <p><img alt="" src="../img/visualization_cs/shinyb.png" /><br />
 </center></p>
 <h2 id="visualization-parameters">Visualization Parameters<a class="headerlink" href="#visualization-parameters" title="Permanent link">&para;</a></h2>
-<h2 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">&para;</a></h2>
+<h3 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">&para;</a></h3>
 <p><center><br />
 <img alt="" src="../img/visualization_cs/ColorChart1.png" /><br />
 <img alt="" src="../img/visualization_cs/ColorChart2.png" /><br />
@@ -1132,7 +1196,7 @@
 <img alt="" src="../img/visualization_cs/ColorChart7.png" /><br />
 <img alt="" src="../img/visualization_cs/ColorChart8.png" /><br />
 </center></p>
-<h2 id="graphs">Graphs<a class="headerlink" href="#graphs" title="Permanent link">&para;</a></h2>
+<h3 id="graphs">Graphs<a class="headerlink" href="#graphs" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="../pdf/how-big-is-your-graph.pdf">Graphs</a>. PDF.</li>
 </ul>
@@ -1140,11 +1204,11 @@
 <img alt="" src="../img/visualization_cs/how-big-is-your-grapha.png" /></p>
 <p><img alt="" src="../img/visualization_cs/how-big-is-your-graphb.png" /><br />
 </center></p>
-<h2 id="lines">Lines<a class="headerlink" href="#lines" title="Permanent link">&para;</a></h2>
+<h3 id="lines">Lines<a class="headerlink" href="#lines" title="Permanent link">&para;</a></h3>
 <p><center><br />
 <img alt="" src="../img/visualization_cs/lines.png" /><br />
 </center></p>
-<h2 id="points">Points<a class="headerlink" href="#points" title="Permanent link">&para;</a></h2>
+<h3 id="points">Points<a class="headerlink" href="#points" title="Permanent link">&para;</a></h3>
 <p><center><br />
 <img alt="" src="../img/visualization_cs/points.png" /><br />
 </center></p>
@@ -1211,25 +1275,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

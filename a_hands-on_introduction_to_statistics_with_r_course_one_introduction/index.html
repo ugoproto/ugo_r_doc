@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Statistics with R, Course One, Introduction
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -758,35 +763,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables" title="Variables" class="md-nav__link">
+  <a href="#variables" class="md-nav__link">
     Variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#histograms-and-distributions" title="Histograms and Distributions" class="md-nav__link">
+  <a href="#histograms-and-distributions" class="md-nav__link">
     Histograms and Distributions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scales-of-measurement" title="Scales of Measurement" class="md-nav__link">
+  <a href="#scales-of-measurement" class="md-nav__link">
     Scales of Measurement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#measures-of-central-tendency" title="Measures of Central Tendency" class="md-nav__link">
+  <a href="#measures-of-central-tendency" class="md-nav__link">
     Measures of Central Tendency
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#measures-of-variability" title="Measures of Variability" class="md-nav__link">
+  <a href="#measures-of-variability" class="md-nav__link">
     Measures of Variability
   </a>
   
@@ -911,35 +916,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#variables" title="Variables" class="md-nav__link">
+  <a href="#variables" class="md-nav__link">
     Variables
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#histograms-and-distributions" title="Histograms and Distributions" class="md-nav__link">
+  <a href="#histograms-and-distributions" class="md-nav__link">
     Histograms and Distributions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scales-of-measurement" title="Scales of Measurement" class="md-nav__link">
+  <a href="#scales-of-measurement" class="md-nav__link">
     Scales of Measurement
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#measures-of-central-tendency" title="Measures of Central Tendency" class="md-nav__link">
+  <a href="#measures-of-central-tendency" class="md-nav__link">
     Measures of Central Tendency
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#measures-of-variability" title="Measures of Variability" class="md-nav__link">
+  <a href="#measures-of-variability" class="md-nav__link">
     Measures of Variability
   </a>
   
@@ -995,7 +1000,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;numeric&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;numeric&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1011,7 +1016,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;factor&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;factor&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1024,7 +1029,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] &quot;High&quot;   &quot;Low&quot;    &quot;High&quot;   &quot;Low&quot;    &quot;Medium&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">&quot;High&quot;</span>   <span class="ss">&quot;Low&quot;</span>    <span class="ss">&quot;High&quot;</span>   <span class="ss">&quot;Low&quot;</span>    <span class="ss">&quot;Medium&quot;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1037,8 +1042,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">##</span> <span class="cp">[</span><span class="mi">1</span><span class="cp">]</span> <span class="nt">High</span>   <span class="nt">Low</span>    <span class="nt">High</span>   <span class="nt">Low</span>    <span class="nt">Medium</span>
-<span class="err">##</span> <span class="nt">Levels</span><span class="o">:</span> <span class="nt">Low</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span> <span class="nt">Medium</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span> <span class="nt">High</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">High</span>   <span class="n">Low</span>    <span class="n">High</span>   <span class="n">Low</span>    <span class="n">Medium</span>
+<span class="o">##</span> <span class="n">Levels</span><span class="p">:</span> <span class="n">Low</span> <span class="o">&lt;</span> <span class="n">Medium</span> <span class="o">&lt;</span> <span class="n">High</span>
 </pre></div>
 </td></tr></table>
 
@@ -1101,41 +1106,41 @@
 32
 33
 34
-35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   subject condition verbal_memory_baseline visual_memory_baseline
-## 1       1   control                     95                     88
-## 2       2   control                     90                     82
-## 3       3   control                     87                     77
-## 4       4   control                     84                     72
-## 5       5   control                     92                     77
-## 6       6   control                     89                     79
-##   visual.motor_speed_baseline reaction_time_baseline
-## 1                       35.29                   0.42
-## 2                       31.47                   0.63
-## 3                       30.87                   0.56
-## 4                       41.87                   0.66
-## 5                       33.28                   0.56
-## 6                       40.73                   0.81
-##   impulse_control_baseline total_symptom_baseline verbal_memory_retest
-## 1                       11                      0                   97
-## 2                        7                      0                   86
-## 3                        8                      0                   90
-## 4                        7                      0                   85
-## 5                        7                      1                   87
-## 6                        6                      0                   91
-##   visual_memory_retest visual.motor_speed_retest reaction_time_retest
-## 1                   86                     35.61                 0.65
-## 2                   80                     37.01                 0.49
-## 3                   79                     20.15                 0.75
-## 4                   70                     33.26                 0.19
-## 5                   77                     28.34                 0.59
-## 6                   85                     33.47                 0.48
-##   impulse_control_retest total_symptom_retest
-## 1                     10                    0
-## 2                      7                    0
-## 3                      9                    0
-## 4                      8                    0
-## 5                      8                    1
-## 6                      5                    0
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">subject</span> <span class="n">condition</span> <span class="n">verbal_memory_baseline</span> <span class="n">visual_memory_baseline</span>
+<span class="o">##</span> <span class="mi">1</span>       <span class="mi">1</span>   <span class="n">control</span>                     <span class="mi">95</span>                     <span class="mi">88</span>
+<span class="o">##</span> <span class="mi">2</span>       <span class="mi">2</span>   <span class="n">control</span>                     <span class="mi">90</span>                     <span class="mi">82</span>
+<span class="o">##</span> <span class="mi">3</span>       <span class="mi">3</span>   <span class="n">control</span>                     <span class="mi">87</span>                     <span class="mi">77</span>
+<span class="o">##</span> <span class="mi">4</span>       <span class="mi">4</span>   <span class="n">control</span>                     <span class="mi">84</span>                     <span class="mi">72</span>
+<span class="o">##</span> <span class="mi">5</span>       <span class="mi">5</span>   <span class="n">control</span>                     <span class="mi">92</span>                     <span class="mi">77</span>
+<span class="o">##</span> <span class="mi">6</span>       <span class="mi">6</span>   <span class="n">control</span>                     <span class="mi">89</span>                     <span class="mi">79</span>
+<span class="o">##</span>   <span class="n">visual</span><span class="p">.</span><span class="n">motor_speed_baseline</span> <span class="n">reaction_time_baseline</span>
+<span class="o">##</span> <span class="mi">1</span>                       <span class="mi">35</span><span class="p">.</span><span class="mi">29</span>                   <span class="mi">0</span><span class="p">.</span><span class="mi">42</span>
+<span class="o">##</span> <span class="mi">2</span>                       <span class="mi">31</span><span class="p">.</span><span class="mi">47</span>                   <span class="mi">0</span><span class="p">.</span><span class="mi">63</span>
+<span class="o">##</span> <span class="mi">3</span>                       <span class="mi">30</span><span class="p">.</span><span class="mi">87</span>                   <span class="mi">0</span><span class="p">.</span><span class="mi">56</span>
+<span class="o">##</span> <span class="mi">4</span>                       <span class="mi">41</span><span class="p">.</span><span class="mi">87</span>                   <span class="mi">0</span><span class="p">.</span><span class="mi">66</span>
+<span class="o">##</span> <span class="mi">5</span>                       <span class="mi">33</span><span class="p">.</span><span class="mi">28</span>                   <span class="mi">0</span><span class="p">.</span><span class="mi">56</span>
+<span class="o">##</span> <span class="mi">6</span>                       <span class="mi">40</span><span class="p">.</span><span class="mi">73</span>                   <span class="mi">0</span><span class="p">.</span><span class="mi">81</span>
+<span class="o">##</span>   <span class="n">impulse_control_baseline</span> <span class="n">total_symptom_baseline</span> <span class="n">verbal_memory_retest</span>
+<span class="o">##</span> <span class="mi">1</span>                       <span class="mi">11</span>                      <span class="mi">0</span>                   <span class="mi">97</span>
+<span class="o">##</span> <span class="mi">2</span>                        <span class="mi">7</span>                      <span class="mi">0</span>                   <span class="mi">86</span>
+<span class="o">##</span> <span class="mi">3</span>                        <span class="mi">8</span>                      <span class="mi">0</span>                   <span class="mi">90</span>
+<span class="o">##</span> <span class="mi">4</span>                        <span class="mi">7</span>                      <span class="mi">0</span>                   <span class="mi">85</span>
+<span class="o">##</span> <span class="mi">5</span>                        <span class="mi">7</span>                      <span class="mi">1</span>                   <span class="mi">87</span>
+<span class="o">##</span> <span class="mi">6</span>                        <span class="mi">6</span>                      <span class="mi">0</span>                   <span class="mi">91</span>
+<span class="o">##</span>   <span class="n">visual_memory_retest</span> <span class="n">visual</span><span class="p">.</span><span class="n">motor_speed_retest</span> <span class="n">reaction_time_retest</span>
+<span class="o">##</span> <span class="mi">1</span>                   <span class="mi">86</span>                     <span class="mi">35</span><span class="p">.</span><span class="mi">61</span>                 <span class="mi">0</span><span class="p">.</span><span class="mi">65</span>
+<span class="o">##</span> <span class="mi">2</span>                   <span class="mi">80</span>                     <span class="mi">37</span><span class="p">.</span><span class="mi">01</span>                 <span class="mi">0</span><span class="p">.</span><span class="mi">49</span>
+<span class="o">##</span> <span class="mi">3</span>                   <span class="mi">79</span>                     <span class="mi">20</span><span class="p">.</span><span class="mi">15</span>                 <span class="mi">0</span><span class="p">.</span><span class="mi">75</span>
+<span class="o">##</span> <span class="mi">4</span>                   <span class="mi">70</span>                     <span class="mi">33</span><span class="p">.</span><span class="mi">26</span>                 <span class="mi">0</span><span class="p">.</span><span class="mi">19</span>
+<span class="o">##</span> <span class="mi">5</span>                   <span class="mi">77</span>                     <span class="mi">28</span><span class="p">.</span><span class="mi">34</span>                 <span class="mi">0</span><span class="p">.</span><span class="mi">59</span>
+<span class="o">##</span> <span class="mi">6</span>                   <span class="mi">85</span>                     <span class="mi">33</span><span class="p">.</span><span class="mi">47</span>                 <span class="mi">0</span><span class="p">.</span><span class="mi">48</span>
+<span class="o">##</span>   <span class="n">impulse_control_retest</span> <span class="n">total_symptom_retest</span>
+<span class="o">##</span> <span class="mi">1</span>                     <span class="mi">10</span>                    <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">2</span>                      <span class="mi">7</span>                    <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">3</span>                      <span class="mi">9</span>                    <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">4</span>                      <span class="mi">8</span>                    <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">5</span>                      <span class="mi">8</span>                    <span class="mi">1</span>
+<span class="o">##</span> <span class="mi">6</span>                      <span class="mi">5</span>                    <span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
@@ -1181,41 +1186,41 @@
 32
 33
 34
-35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     subject       condition         verbal_memory_baseline
-##  Min.   : 1.00   Length:40          Min.   :75.00         
-##  1st Qu.:10.75   Class :character   1st Qu.:85.00         
-##  Median :20.50   Mode  :character   Median :91.00         
-##  Mean   :20.50                      Mean   :89.75         
-##  3rd Qu.:30.25                      3rd Qu.:95.00         
-##  Max.   :40.00                      Max.   :98.00         
-##  visual_memory_baseline visual.motor_speed_baseline reaction_time_baseline
-##  Min.   :59.00          Min.   :26.29               Min.   :0.4200        
-##  1st Qu.:68.75          1st Qu.:31.59               1st Qu.:0.5675        
-##  Median :75.00          Median :33.50               Median :0.6500        
-##  Mean   :74.88          Mean   :34.03               Mean   :0.6670        
-##  3rd Qu.:81.25          3rd Qu.:36.44               3rd Qu.:0.7325        
-##  Max.   :91.00          Max.   :41.87               Max.   :1.2000        
-##  impulse_control_baseline total_symptom_baseline verbal_memory_retest
-##  Min.   : 2.000           Min.   :0.00           Min.   :59          
-##  1st Qu.: 7.000           1st Qu.:0.00           1st Qu.:74          
-##  Median : 8.500           Median :0.00           Median :85          
-##  Mean   : 8.275           Mean   :0.05           Mean   :82          
-##  3rd Qu.:10.000           3rd Qu.:0.00           3rd Qu.:91          
-##  Max.   :12.000           Max.   :1.00           Max.   :97          
-##  visual_memory_retest visual.motor_speed_retest reaction_time_retest
-##  Min.   :54.00        Min.   :20.15             Min.   :0.1900      
-##  1st Qu.:66.75        1st Qu.:30.33             1st Qu.:0.5575      
-##  Median :72.00        Median :35.15             Median :0.6500      
-##  Mean   :71.90        Mean   :35.83             Mean   :0.6730      
-##  3rd Qu.:79.00        3rd Qu.:39.41             3rd Qu.:0.7325      
-##  Max.   :86.00        Max.   :60.77             Max.   :1.3000      
-##  impulse_control_retest total_symptom_retest
-##  Min.   : 1.00          Min.   : 0.00       
-##  1st Qu.: 5.00          1st Qu.: 0.00       
-##  Median : 7.00          Median : 7.00       
-##  Mean   : 6.75          Mean   :13.88       
-##  3rd Qu.: 9.00          3rd Qu.:27.00       
-##  Max.   :12.00          Max.   :43.00
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">subject</span>       <span class="n">condition</span>         <span class="n">verbal_memory_baseline</span>
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span> <span class="mi">1</span><span class="p">.</span><span class="mi">00</span>   <span class="k">Length</span><span class="p">:</span><span class="mi">40</span>          <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">75</span><span class="p">.</span><span class="mi">00</span>         
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">10</span><span class="p">.</span><span class="mi">75</span>   <span class="k">Class</span> <span class="p">:</span><span class="nb">character</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">85</span><span class="p">.</span><span class="mi">00</span>         
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span><span class="mi">20</span><span class="p">.</span><span class="mi">50</span>   <span class="k">Mode</span>  <span class="p">:</span><span class="nb">character</span>   <span class="n">Median</span> <span class="p">:</span><span class="mi">91</span><span class="p">.</span><span class="mi">00</span>         
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span><span class="mi">20</span><span class="p">.</span><span class="mi">50</span>                      <span class="n">Mean</span>   <span class="p">:</span><span class="mi">89</span><span class="p">.</span><span class="mi">75</span>         
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">30</span><span class="p">.</span><span class="mi">25</span>                      <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">95</span><span class="p">.</span><span class="mi">00</span>         
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">40</span><span class="p">.</span><span class="mi">00</span>                      <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">98</span><span class="p">.</span><span class="mi">00</span>         
+<span class="o">##</span>  <span class="n">visual_memory_baseline</span> <span class="n">visual</span><span class="p">.</span><span class="n">motor_speed_baseline</span> <span class="n">reaction_time_baseline</span>
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">59</span><span class="p">.</span><span class="mi">00</span>          <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">26</span><span class="p">.</span><span class="mi">29</span>               <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">4200</span>        
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">68</span><span class="p">.</span><span class="mi">75</span>          <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">31</span><span class="p">.</span><span class="mi">59</span>               <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">5675</span>        
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span><span class="mi">75</span><span class="p">.</span><span class="mi">00</span>          <span class="n">Median</span> <span class="p">:</span><span class="mi">33</span><span class="p">.</span><span class="mi">50</span>               <span class="n">Median</span> <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">6500</span>        
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span><span class="mi">74</span><span class="p">.</span><span class="mi">88</span>          <span class="n">Mean</span>   <span class="p">:</span><span class="mi">34</span><span class="p">.</span><span class="mi">03</span>               <span class="n">Mean</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">6670</span>        
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">81</span><span class="p">.</span><span class="mi">25</span>          <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">36</span><span class="p">.</span><span class="mi">44</span>               <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">7325</span>        
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">91</span><span class="p">.</span><span class="mi">00</span>          <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">41</span><span class="p">.</span><span class="mi">87</span>               <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">2000</span>        
+<span class="o">##</span>  <span class="n">impulse_control_baseline</span> <span class="n">total_symptom_baseline</span> <span class="n">verbal_memory_retest</span>
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">000</span>           <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span>           <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">59</span>          
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">7</span><span class="p">.</span><span class="mi">000</span>           <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span>           <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">74</span>          
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span> <span class="mi">8</span><span class="p">.</span><span class="mi">500</span>           <span class="n">Median</span> <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span>           <span class="n">Median</span> <span class="p">:</span><span class="mi">85</span>          
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span> <span class="mi">8</span><span class="p">.</span><span class="mi">275</span>           <span class="n">Mean</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span>           <span class="n">Mean</span>   <span class="p">:</span><span class="mi">82</span>          
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">10</span><span class="p">.</span><span class="mi">000</span>           <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span>           <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">91</span>          
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">12</span><span class="p">.</span><span class="mi">000</span>           <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">00</span>           <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">97</span>          
+<span class="o">##</span>  <span class="n">visual_memory_retest</span> <span class="n">visual</span><span class="p">.</span><span class="n">motor_speed_retest</span> <span class="n">reaction_time_retest</span>
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">54</span><span class="p">.</span><span class="mi">00</span>        <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">20</span><span class="p">.</span><span class="mi">15</span>             <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">1900</span>      
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">66</span><span class="p">.</span><span class="mi">75</span>        <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">30</span><span class="p">.</span><span class="mi">33</span>             <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">5575</span>      
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span><span class="mi">72</span><span class="p">.</span><span class="mi">00</span>        <span class="n">Median</span> <span class="p">:</span><span class="mi">35</span><span class="p">.</span><span class="mi">15</span>             <span class="n">Median</span> <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">6500</span>      
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span><span class="mi">71</span><span class="p">.</span><span class="mi">90</span>        <span class="n">Mean</span>   <span class="p">:</span><span class="mi">35</span><span class="p">.</span><span class="mi">83</span>             <span class="n">Mean</span>   <span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">6730</span>      
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">79</span><span class="p">.</span><span class="mi">00</span>        <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">39</span><span class="p">.</span><span class="mi">41</span>             <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">0</span><span class="p">.</span><span class="mi">7325</span>      
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">86</span><span class="p">.</span><span class="mi">00</span>        <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">60</span><span class="p">.</span><span class="mi">77</span>             <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">3000</span>      
+<span class="o">##</span>  <span class="n">impulse_control_retest</span> <span class="n">total_symptom_retest</span>
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span> <span class="mi">1</span><span class="p">.</span><span class="mi">00</span>          <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>       
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">5</span><span class="p">.</span><span class="mi">00</span>          <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>       
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span> <span class="mi">7</span><span class="p">.</span><span class="mi">00</span>          <span class="n">Median</span> <span class="p">:</span> <span class="mi">7</span><span class="p">.</span><span class="mi">00</span>       
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span> <span class="mi">6</span><span class="p">.</span><span class="mi">75</span>          <span class="n">Mean</span>   <span class="p">:</span><span class="mi">13</span><span class="p">.</span><span class="mi">88</span>       
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span> <span class="mi">9</span><span class="p">.</span><span class="mi">00</span>          <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">27</span><span class="p">.</span><span class="mi">00</span>       
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">12</span><span class="p">.</span><span class="mi">00</span>          <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">43</span><span class="p">.</span><span class="mi">00</span>
 </pre></div>
 </td></tr></table>
 
@@ -1228,8 +1233,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] 95 90 87 84 92 89 78 97 93 90 89 97 79 86 85 85 98 95 96 92 79 85 97
-## [24] 89 75 75 84 93 88 97 93 96 84 89 95 95 97 95 92 95
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">95</span> <span class="mi">90</span> <span class="mi">87</span> <span class="mi">84</span> <span class="mi">92</span> <span class="mi">89</span> <span class="mi">78</span> <span class="mi">97</span> <span class="mi">93</span> <span class="mi">90</span> <span class="mi">89</span> <span class="mi">97</span> <span class="mi">79</span> <span class="mi">86</span> <span class="mi">85</span> <span class="mi">85</span> <span class="mi">98</span> <span class="mi">95</span> <span class="mi">96</span> <span class="mi">92</span> <span class="mi">79</span> <span class="mi">85</span> <span class="mi">97</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">24</span><span class="p">]</span> <span class="mi">89</span> <span class="mi">75</span> <span class="mi">75</span> <span class="mi">84</span> <span class="mi">93</span> <span class="mi">88</span> <span class="mi">97</span> <span class="mi">93</span> <span class="mi">96</span> <span class="mi">84</span> <span class="mi">89</span> <span class="mi">95</span> <span class="mi">95</span> <span class="mi">97</span> <span class="mi">95</span> <span class="mi">92</span> <span class="mi">95</span>
 </pre></div>
 </td></tr></table>
 
@@ -1259,13 +1264,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   subject condition Ratings
-## 1       1 Australia      77
-## 2       2 Australia      82
-## 3       3 Australia      75
-## 4       4 Australia      92
-## 5       5 Australia      83
-## 6       6 Australia      75
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">subject</span> <span class="n">condition</span> <span class="n">Ratings</span>
+<span class="o">##</span> <span class="mi">1</span>       <span class="mi">1</span> <span class="n">Australia</span>      <span class="mi">77</span>
+<span class="o">##</span> <span class="mi">2</span>       <span class="mi">2</span> <span class="n">Australia</span>      <span class="mi">82</span>
+<span class="o">##</span> <span class="mi">3</span>       <span class="mi">3</span> <span class="n">Australia</span>      <span class="mi">75</span>
+<span class="o">##</span> <span class="mi">4</span>       <span class="mi">4</span> <span class="n">Australia</span>      <span class="mi">92</span>
+<span class="o">##</span> <span class="mi">5</span>       <span class="mi">5</span> <span class="n">Australia</span>      <span class="mi">83</span>
+<span class="o">##</span> <span class="mi">6</span>       <span class="mi">6</span> <span class="n">Australia</span>      <span class="mi">75</span>
 </pre></div>
 </td></tr></table>
 
@@ -1283,13 +1288,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##     subject       condition            Ratings     
-##  Min.   :  1.0   Length:400         Min.   :39.00  
-##  1st Qu.:100.8   Class :character   1st Qu.:67.00  
-##  Median :200.5   Mode  :character   Median :74.00  
-##  Mean   :200.5                      Mean   :73.94  
-##  3rd Qu.:300.2                      3rd Qu.:81.00  
-##  Max.   :400.0                      Max.   :98.00
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>     <span class="n">subject</span>       <span class="n">condition</span>            <span class="n">Ratings</span>     
+<span class="o">##</span>  <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>   <span class="k">Length</span><span class="p">:</span><span class="mi">400</span>         <span class="k">Min</span><span class="p">.</span>   <span class="p">:</span><span class="mi">39</span><span class="p">.</span><span class="mi">00</span>  
+<span class="o">##</span>  <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">100</span><span class="p">.</span><span class="mi">8</span>   <span class="k">Class</span> <span class="p">:</span><span class="nb">character</span>   <span class="mi">1</span><span class="n">st</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">67</span><span class="p">.</span><span class="mi">00</span>  
+<span class="o">##</span>  <span class="n">Median</span> <span class="p">:</span><span class="mi">200</span><span class="p">.</span><span class="mi">5</span>   <span class="k">Mode</span>  <span class="p">:</span><span class="nb">character</span>   <span class="n">Median</span> <span class="p">:</span><span class="mi">74</span><span class="p">.</span><span class="mi">00</span>  
+<span class="o">##</span>  <span class="n">Mean</span>   <span class="p">:</span><span class="mi">200</span><span class="p">.</span><span class="mi">5</span>                      <span class="n">Mean</span>   <span class="p">:</span><span class="mi">73</span><span class="p">.</span><span class="mi">94</span>  
+<span class="o">##</span>  <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">300</span><span class="p">.</span><span class="mi">2</span>                      <span class="mi">3</span><span class="n">rd</span> <span class="n">Qu</span><span class="p">.:</span><span class="mi">81</span><span class="p">.</span><span class="mi">00</span>  
+<span class="o">##</span>  <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">400</span><span class="p">.</span><span class="mi">0</span>                      <span class="k">Max</span><span class="p">.</span>   <span class="p">:</span><span class="mi">98</span><span class="p">.</span><span class="mi">00</span>
 </pre></div>
 </td></tr></table>
 
@@ -1357,13 +1362,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   condition Ratings
-## 1 Australia    85.6
-## 2 Australia    85.6
-## 3 Australia    85.6
-## 4 Australia    85.6
-## 5 Australia    85.6
-## 6 Australia    85.6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">condition</span> <span class="n">Ratings</span>
+<span class="o">##</span> <span class="mi">1</span> <span class="n">Australia</span>    <span class="mi">85</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="mi">2</span> <span class="n">Australia</span>    <span class="mi">85</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span> <span class="n">Australia</span>    <span class="mi">85</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="mi">4</span> <span class="n">Australia</span>    <span class="mi">85</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="mi">5</span> <span class="n">Australia</span>    <span class="mi">85</span><span class="p">.</span><span class="mi">6</span>
+<span class="o">##</span> <span class="mi">6</span> <span class="n">Australia</span>    <span class="mi">85</span><span class="p">.</span><span class="mi">6</span>
 </pre></div>
 </td></tr></table>
 
@@ -1420,11 +1425,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   [1] 77 82 75 92 83 75 84 86 85 79 92 84 77 65 89 81 81 88 87 85 87 86 82
-##  [24] 67 85 81 80 71 78 84 91 80 84 81 71 78 78 81 89 86 80 79 86 85 76 76
-##  [47] 84 86 80 87 84 77 83 73 91 95 78 74 85 80 98 81 86 81 76 82 68 91 82
-##  [70] 96 84 76 85 74 72 83 78 81 82 77 77 80 89 70 85 83 88 79 84 83 77 89
-##  [93] 89 86 92 85 72 77 72 78
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">77</span> <span class="mi">82</span> <span class="mi">75</span> <span class="mi">92</span> <span class="mi">83</span> <span class="mi">75</span> <span class="mi">84</span> <span class="mi">86</span> <span class="mi">85</span> <span class="mi">79</span> <span class="mi">92</span> <span class="mi">84</span> <span class="mi">77</span> <span class="mi">65</span> <span class="mi">89</span> <span class="mi">81</span> <span class="mi">81</span> <span class="mi">88</span> <span class="mi">87</span> <span class="mi">85</span> <span class="mi">87</span> <span class="mi">86</span> <span class="mi">82</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">24</span><span class="p">]</span> <span class="mi">67</span> <span class="mi">85</span> <span class="mi">81</span> <span class="mi">80</span> <span class="mi">71</span> <span class="mi">78</span> <span class="mi">84</span> <span class="mi">91</span> <span class="mi">80</span> <span class="mi">84</span> <span class="mi">81</span> <span class="mi">71</span> <span class="mi">78</span> <span class="mi">78</span> <span class="mi">81</span> <span class="mi">89</span> <span class="mi">86</span> <span class="mi">80</span> <span class="mi">79</span> <span class="mi">86</span> <span class="mi">85</span> <span class="mi">76</span> <span class="mi">76</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">47</span><span class="p">]</span> <span class="mi">84</span> <span class="mi">86</span> <span class="mi">80</span> <span class="mi">87</span> <span class="mi">84</span> <span class="mi">77</span> <span class="mi">83</span> <span class="mi">73</span> <span class="mi">91</span> <span class="mi">95</span> <span class="mi">78</span> <span class="mi">74</span> <span class="mi">85</span> <span class="mi">80</span> <span class="mi">98</span> <span class="mi">81</span> <span class="mi">86</span> <span class="mi">81</span> <span class="mi">76</span> <span class="mi">82</span> <span class="mi">68</span> <span class="mi">91</span> <span class="mi">82</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">70</span><span class="p">]</span> <span class="mi">96</span> <span class="mi">84</span> <span class="mi">76</span> <span class="mi">85</span> <span class="mi">74</span> <span class="mi">72</span> <span class="mi">83</span> <span class="mi">78</span> <span class="mi">81</span> <span class="mi">82</span> <span class="mi">77</span> <span class="mi">77</span> <span class="mi">80</span> <span class="mi">89</span> <span class="mi">70</span> <span class="mi">85</span> <span class="mi">83</span> <span class="mi">88</span> <span class="mi">79</span> <span class="mi">84</span> <span class="mi">83</span> <span class="mi">77</span> <span class="mi">89</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">93</span><span class="p">]</span> <span class="mi">89</span> <span class="mi">86</span> <span class="mi">92</span> <span class="mi">85</span> <span class="mi">72</span> <span class="mi">77</span> <span class="mi">72</span> <span class="mi">78</span>
 </pre></div>
 </td></tr></table>
 
@@ -1469,7 +1474,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4.125
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span><span class="p">.</span><span class="mi">125</span>
 </pre></div>
 </td></tr></table>
 
@@ -1481,7 +1486,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 4.125
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">4</span><span class="p">.</span><span class="mi">125</span>
 </pre></div>
 </td></tr></table>
 
@@ -1502,13 +1507,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   condition Ratings
-## 1       Red      77
-## 2       Red      82
-## 3       Red      75
-## 4       Red      92
-## 5       Red      83
-## 6       Red      75
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">condition</span> <span class="n">Ratings</span>
+<span class="o">##</span> <span class="mi">1</span>       <span class="n">Red</span>      <span class="mi">77</span>
+<span class="o">##</span> <span class="mi">2</span>       <span class="n">Red</span>      <span class="mi">82</span>
+<span class="o">##</span> <span class="mi">3</span>       <span class="n">Red</span>      <span class="mi">75</span>
+<span class="o">##</span> <span class="mi">4</span>       <span class="n">Red</span>      <span class="mi">92</span>
+<span class="o">##</span> <span class="mi">5</span>       <span class="n">Red</span>      <span class="mi">83</span>
+<span class="o">##</span> <span class="mi">6</span>       <span class="n">Red</span>      <span class="mi">75</span>
 </pre></div>
 </td></tr></table>
 
@@ -1552,7 +1557,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 0.8093069
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">0</span><span class="p">.</span><span class="mi">8093069</span>
 </pre></div>
 </td></tr></table>
 
@@ -1566,7 +1571,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 0
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">0</span>
 </pre></div>
 </td></tr></table>
 
@@ -1588,13 +1593,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   game points
-## 1    1     16
-## 2    2     21
-## 3    3     37
-## 4    4     25
-## 5    5     17
-## 6    6     25
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">game</span> <span class="n">points</span>
+<span class="o">##</span> <span class="mi">1</span>    <span class="mi">1</span>     <span class="mi">16</span>
+<span class="o">##</span> <span class="mi">2</span>    <span class="mi">2</span>     <span class="mi">21</span>
+<span class="o">##</span> <span class="mi">3</span>    <span class="mi">3</span>     <span class="mi">37</span>
+<span class="o">##</span> <span class="mi">4</span>    <span class="mi">4</span>     <span class="mi">25</span>
+<span class="o">##</span> <span class="mi">5</span>    <span class="mi">5</span>     <span class="mi">17</span>
+<span class="o">##</span> <span class="mi">6</span>    <span class="mi">6</span>     <span class="mi">25</span>
 </pre></div>
 </td></tr></table>
 
@@ -1632,7 +1637,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 66.73427
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">66</span><span class="p">.</span><span class="mi">73427</span>
 </pre></div>
 </td></tr></table>
 
@@ -1642,7 +1647,7 @@
 </pre></div>
 </td></tr></table>
 
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## [1] 66.73427
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">66</span><span class="p">.</span><span class="mi">73427</span>
 </pre></div>
 </td></tr></table>
                 
@@ -1708,25 +1713,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

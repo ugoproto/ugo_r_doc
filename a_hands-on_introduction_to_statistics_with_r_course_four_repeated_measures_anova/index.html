@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Statistics with R, Course Four, Repeated Measures ANOVA
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -794,14 +799,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-introduction-to-repeated-measures" title="An introduction to repeated measures" class="md-nav__link">
+  <a href="#an-introduction-to-repeated-measures" class="md-nav__link">
     An introduction to repeated measures
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#repeated-measures-anova" title="Repeated measures ANOVA" class="md-nav__link">
+  <a href="#repeated-measures-anova" class="md-nav__link">
     Repeated measures ANOVA
   </a>
   
@@ -890,14 +895,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-introduction-to-repeated-measures" title="An introduction to repeated measures" class="md-nav__link">
+  <a href="#an-introduction-to-repeated-measures" class="md-nav__link">
     An introduction to repeated measures
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#repeated-measures-anova" title="Repeated measures ANOVA" class="md-nav__link">
+  <a href="#repeated-measures-anova" class="md-nav__link">
     Repeated measures ANOVA
   </a>
   
@@ -957,10 +962,10 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## &#39;data.frame&#39;:    80 obs. of  3 variables:
-##  $ subject  : num  1 2 3 4 5 6 7 8 9 10 ...
-##  $ condition: Factor w/ 4 levels &quot;12 days&quot;,&quot;17 days&quot;,..: 4 4 4 4 4 4 4 4 4 4 ...
-##  $ iq       : num  12.4 11.8 14.6 7.7 15.7 11.6 7 8.4 10.7 10.6 ...
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> <span class="s1">&#39;data.frame&#39;</span><span class="p">:</span>    <span class="mi">80</span> <span class="n">obs</span><span class="p">.</span> <span class="k">of</span>  <span class="mi">3</span> <span class="n">variables</span><span class="p">:</span>
+<span class="o">##</span>  <span class="err">$</span> <span class="n">subject</span>  <span class="p">:</span> <span class="n">num</span>  <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span> <span class="p">...</span>
+<span class="o">##</span>  <span class="err">$</span> <span class="n">condition</span><span class="p">:</span> <span class="n">Factor</span> <span class="n">w</span><span class="o">/</span> <span class="mi">4</span> <span class="n">levels</span> <span class="ss">&quot;12 days&quot;</span><span class="p">,</span><span class="ss">&quot;17 days&quot;</span><span class="p">,..:</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span> <span class="p">...</span>
+<span class="o">##</span>  <span class="err">$</span> <span class="n">iq</span>       <span class="p">:</span> <span class="n">num</span>  <span class="mi">12</span><span class="p">.</span><span class="mi">4</span> <span class="mi">11</span><span class="p">.</span><span class="mi">8</span> <span class="mi">14</span><span class="p">.</span><span class="mi">6</span> <span class="mi">7</span><span class="p">.</span><span class="mi">7</span> <span class="mi">15</span><span class="p">.</span><span class="mi">7</span> <span class="mi">11</span><span class="p">.</span><span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">.</span><span class="mi">4</span> <span class="mi">10</span><span class="p">.</span><span class="mi">7</span> <span class="mi">10</span><span class="p">.</span><span class="mi">6</span> <span class="p">...</span>
 </pre></div>
 </td></tr></table>
 
@@ -1022,47 +1027,47 @@
 38
 39
 40
-41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Descriptive statistics by group 
-## group: 12 days
-##            vars  n mean   sd median trimmed  mad min  max range skew
-## subject*      1 20 10.5 5.92  10.50   10.50 7.41 1.0 20.0  19.0 0.00
-## condition*    2 20  1.0 0.00   1.00    1.00 0.00 1.0  1.0   0.0  NaN
-## iq            3 20 11.7 2.58  11.65   11.69 2.89 6.9 16.1   9.2 0.05
-##            kurtosis   se
-## subject*      -1.38 1.32
-## condition*      NaN 0.00
-## iq            -1.06 0.58
-## -------------------------------------------------------- 
-## group: 17 days
-##            vars  n mean   sd median trimmed  mad min  max range skew
-## subject*      1 20 10.5 5.92   10.5    10.5 7.41 1.0 20.0  19.0 0.00
-## condition*    2 20  2.0 0.00    2.0     2.0 0.00 2.0  2.0   0.0  NaN
-## iq            3 20 13.9 2.26   13.6    13.9 2.00 9.8 18.1   8.3 0.11
-##            kurtosis   se
-## subject*      -1.38 1.32
-## condition*      NaN 0.00
-## iq            -0.85 0.50
-## -------------------------------------------------------- 
-## group: 19 days
-##            vars  n  mean   sd median trimmed  mad  min  max range  skew
-## subject*      1 20 10.50 5.92   10.5   10.50 7.41  1.0 20.0  19.0  0.00
-## condition*    2 20  3.00 0.00    3.0    3.00 0.00  3.0  3.0   0.0   NaN
-## iq            3 20 14.75 2.50   15.3   14.71 2.15 10.4 19.2   8.8 -0.09
-##            kurtosis   se
-## subject*      -1.38 1.32
-## condition*      NaN 0.00
-## iq            -0.99 0.56
-## -------------------------------------------------------- 
-## group: 8 days
-##            vars  n  mean   sd median trimmed  mad min  max range  skew
-## subject*      1 20 10.50 5.92   10.5   10.50 7.41 1.0 20.0  19.0  0.00
-## condition*    2 20  4.00 0.00    4.0    4.00 0.00 4.0  4.0   0.0   NaN
-## iq            3 20 10.91 2.63   11.3   10.97 2.67 5.4 15.7  10.3 -0.21
-##            kurtosis   se
-## subject*      -1.38 1.32
-## condition*      NaN 0.00
-## iq            -0.70 0.59
+41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Descriptive</span> <span class="k">statistics</span> <span class="k">by</span> <span class="k">group</span> 
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">12</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span> <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span> <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="mi">1</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">5</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>  <span class="mi">10</span><span class="p">.</span><span class="mi">50</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">50</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">20</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>   <span class="mi">1</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">1</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>  <span class="n">NaN</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">11</span><span class="p">.</span><span class="mi">7</span> <span class="mi">2</span><span class="p">.</span><span class="mi">58</span>  <span class="mi">11</span><span class="p">.</span><span class="mi">65</span>   <span class="mi">11</span><span class="p">.</span><span class="mi">69</span> <span class="mi">2</span><span class="p">.</span><span class="mi">89</span> <span class="mi">6</span><span class="p">.</span><span class="mi">9</span> <span class="mi">16</span><span class="p">.</span><span class="mi">1</span>   <span class="mi">9</span><span class="p">.</span><span class="mi">2</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>      <span class="n">NaN</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">06</span> <span class="mi">0</span><span class="p">.</span><span class="mi">58</span>
+<span class="o">##</span> <span class="c1">-------------------------------------------------------- </span>
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">17</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span> <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span> <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="mi">1</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">5</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">5</span>    <span class="mi">10</span><span class="p">.</span><span class="mi">5</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">20</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>     <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>  <span class="n">NaN</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">13</span><span class="p">.</span><span class="mi">9</span> <span class="mi">2</span><span class="p">.</span><span class="mi">26</span>   <span class="mi">13</span><span class="p">.</span><span class="mi">6</span>    <span class="mi">13</span><span class="p">.</span><span class="mi">9</span> <span class="mi">2</span><span class="p">.</span><span class="mi">00</span> <span class="mi">9</span><span class="p">.</span><span class="mi">8</span> <span class="mi">18</span><span class="p">.</span><span class="mi">1</span>   <span class="mi">8</span><span class="p">.</span><span class="mi">3</span> <span class="mi">0</span><span class="p">.</span><span class="mi">11</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>      <span class="n">NaN</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">85</span> <span class="mi">0</span><span class="p">.</span><span class="mi">50</span>
+<span class="o">##</span> <span class="c1">-------------------------------------------------------- </span>
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">19</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span>  <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span>  <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span>  <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="mi">1</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">50</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">5</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">50</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">20</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">3</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">3</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>   <span class="n">NaN</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">14</span><span class="p">.</span><span class="mi">75</span> <span class="mi">2</span><span class="p">.</span><span class="mi">50</span>   <span class="mi">15</span><span class="p">.</span><span class="mi">3</span>   <span class="mi">14</span><span class="p">.</span><span class="mi">71</span> <span class="mi">2</span><span class="p">.</span><span class="mi">15</span> <span class="mi">10</span><span class="p">.</span><span class="mi">4</span> <span class="mi">19</span><span class="p">.</span><span class="mi">2</span>   <span class="mi">8</span><span class="p">.</span><span class="mi">8</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">09</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>      <span class="n">NaN</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">99</span> <span class="mi">0</span><span class="p">.</span><span class="mi">56</span>
+<span class="o">##</span> <span class="c1">-------------------------------------------------------- </span>
+<span class="o">##</span> <span class="k">group</span><span class="p">:</span> <span class="mi">8</span> <span class="n">days</span>
+<span class="o">##</span>            <span class="n">vars</span>  <span class="n">n</span>  <span class="n">mean</span>   <span class="n">sd</span> <span class="n">median</span> <span class="n">trimmed</span>  <span class="n">mad</span> <span class="k">min</span>  <span class="k">max</span> <span class="n">range</span>  <span class="n">skew</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="mi">1</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">50</span> <span class="mi">5</span><span class="p">.</span><span class="mi">92</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">5</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">50</span> <span class="mi">7</span><span class="p">.</span><span class="mi">41</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="mi">20</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">19</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>    <span class="mi">2</span> <span class="mi">20</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>    <span class="mi">4</span><span class="p">.</span><span class="mi">00</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>  <span class="mi">4</span><span class="p">.</span><span class="mi">0</span>   <span class="mi">0</span><span class="p">.</span><span class="mi">0</span>   <span class="n">NaN</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="mi">3</span> <span class="mi">20</span> <span class="mi">10</span><span class="p">.</span><span class="mi">91</span> <span class="mi">2</span><span class="p">.</span><span class="mi">63</span>   <span class="mi">11</span><span class="p">.</span><span class="mi">3</span>   <span class="mi">10</span><span class="p">.</span><span class="mi">97</span> <span class="mi">2</span><span class="p">.</span><span class="mi">67</span> <span class="mi">5</span><span class="p">.</span><span class="mi">4</span> <span class="mi">15</span><span class="p">.</span><span class="mi">7</span>  <span class="mi">10</span><span class="p">.</span><span class="mi">3</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">21</span>
+<span class="o">##</span>            <span class="n">kurtosis</span>   <span class="n">se</span>
+<span class="o">##</span> <span class="n">subject</span><span class="o">*</span>      <span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">38</span> <span class="mi">1</span><span class="p">.</span><span class="mi">32</span>
+<span class="o">##</span> <span class="n">condition</span><span class="o">*</span>      <span class="n">NaN</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00</span>
+<span class="o">##</span> <span class="n">iq</span>            <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">70</span> <span class="mi">0</span><span class="p">.</span><span class="mi">59</span>
 </pre></div>
 </td></tr></table>
 
@@ -1091,7 +1096,7 @@
 (A3, A1, A2)</p>
 <p><strong>Number of order conditions?</strong></p>
 <p>Assume the number of levels of the independent variable goes up and you want to completely counterbalance. What will happen to the number of order conditions you&rsquo;ll need?</p>
-<p>The number becomes really large. An independent variable with n levels will have <code class="codehilite">n!=n*(n???1)*(n???2)*...</code> order conditions.</p>
+<p>The number becomes really large. An independent variable with n levels will have <code class="codehilite"><span class="n">n</span><span class="o">!=</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">???</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">???</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">...</span></code> order conditions.</p>
 <p><strong>Latin Squares design</strong></p>
 <p>As you hopefully realized in the previous exercise, completely counterbalancing is not always a practical solution for taking into account order effects. This is because the number of different orders required gets really large as the number of possible conditions increases.</p>
 <p>The most common workaround to this problem is the Latin Squares design, in which you do not completely counterbalance, but instead put each condition at every position (at least) once.</p>
@@ -1126,11 +1131,11 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Mauchly&#39;s test of sphericity
-## 
-## data:  SSD matrix from lm(formula = iq ~ 1)
-## W = 0.81725, p-value = 0.9407
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Mauchly</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">test</span> <span class="k">of</span> <span class="n">sphericity</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="k">data</span><span class="p">:</span>  <span class="n">SSD</span> <span class="n">matrix</span> <span class="k">from</span> <span class="n">lm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">iq</span> <span class="o">~</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">##</span> <span class="n">W</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">81725</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">9407</span>
 </pre></div>
 </td></tr></table>
 
@@ -1331,7 +1336,7 @@
 <p><strong>Error term in a repeated measures design?</strong></p>
 <p>The inconsistent individual differences across conditions, the effect of subjects that differ across conditions. So it is an interaction between subjects and condition.</p>
 <p><strong>Anova in R</strong></p>
-<p>ANOVA in R is usually done with the <code class="codehilite">aov</code> function.</p>
+<p>ANOVA in R is usually done with the <code class="codehilite"><span class="n">aov</span></code> function.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1354,17 +1359,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-## Error: wm$subject
-##           Df Sum Sq Mean Sq F value Pr(&amp;gt;F)
-## Residuals 19  175.6   9.242               
-## 
-## Error: wm$subject:wm$condition
-##              Df Sum Sq Mean Sq F value   Pr(&amp;gt;F)    
-## wm$condition  3  196.1   65.36   12.51 2.16e-06 ***
-## Residuals    57  297.8    5.22                     
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span> <span class="n">Error</span><span class="p">:</span> <span class="n">wm$subject</span>
+<span class="o">##</span>           <span class="n">Df</span> <span class="k">Sum</span> <span class="n">Sq</span> <span class="n">Mean</span> <span class="n">Sq</span> <span class="n">F</span> <span class="n">value</span> <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>
+<span class="o">##</span> <span class="n">Residuals</span> <span class="mi">19</span>  <span class="mi">175</span><span class="p">.</span><span class="mi">6</span>   <span class="mi">9</span><span class="p">.</span><span class="mi">242</span>               
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">Error</span><span class="p">:</span> <span class="n">wm$subject</span><span class="p">:</span><span class="n">wm$condition</span>
+<span class="o">##</span>              <span class="n">Df</span> <span class="k">Sum</span> <span class="n">Sq</span> <span class="n">Mean</span> <span class="n">Sq</span> <span class="n">F</span> <span class="n">value</span>   <span class="n">Pr</span><span class="p">(</span><span class="o">&gt;</span><span class="n">F</span><span class="p">)</span>    
+<span class="o">##</span> <span class="n">wm$condition</span>  <span class="mi">3</span>  <span class="mi">196</span><span class="p">.</span><span class="mi">1</span>   <span class="mi">65</span><span class="p">.</span><span class="mi">36</span>   <span class="mi">12</span><span class="p">.</span><span class="mi">51</span> <span class="mi">2</span><span class="p">.</span><span class="mi">16</span><span class="n">e</span><span class="o">-</span><span class="mi">06</span> <span class="o">***</span>
+<span class="o">##</span> <span class="n">Residuals</span>    <span class="mi">57</span>  <span class="mi">297</span><span class="p">.</span><span class="mi">8</span>    <span class="mi">5</span><span class="p">.</span><span class="mi">22</span>                     
+<span class="o">##</span> <span class="c1">---</span>
+<span class="o">##</span> <span class="n">Signif</span><span class="p">.</span> <span class="n">codes</span><span class="p">:</span>  <span class="mi">0</span> <span class="s1">&#39;***&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">001</span> <span class="s1">&#39;**&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="s1">&#39;*&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span> <span class="s1">&#39;.&#39;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="s1">&#39; &#39;</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1409,17 +1414,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Pairwise comparisons using paired t tests 
-## 
-## data:  iq and condition 
-## 
-##         12 days 17 days 19 days
-## 17 days 0.01955 -       -      
-## 19 days 0.00270 0.40038 -      
-## 8 days  0.40038 0.00244 0.00054
-## 
-## P value adjustment method: holm
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Pairwise</span> <span class="n">comparisons</span> <span class="k">using</span> <span class="n">paired</span> <span class="n">t</span> <span class="n">tests</span> 
+<span class="o">##</span> 
+<span class="o">##</span> <span class="k">data</span><span class="p">:</span>  <span class="n">iq</span> <span class="k">and</span> <span class="n">condition</span> 
+<span class="o">##</span> 
+<span class="o">##</span>         <span class="mi">12</span> <span class="n">days</span> <span class="mi">17</span> <span class="n">days</span> <span class="mi">19</span> <span class="n">days</span>
+<span class="o">##</span> <span class="mi">17</span> <span class="n">days</span> <span class="mi">0</span><span class="p">.</span><span class="mi">01955</span> <span class="o">-</span>       <span class="o">-</span>      
+<span class="o">##</span> <span class="mi">19</span> <span class="n">days</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00270</span> <span class="mi">0</span><span class="p">.</span><span class="mi">40038</span> <span class="o">-</span>      
+<span class="o">##</span> <span class="mi">8</span> <span class="n">days</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">40038</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00244</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00054</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">P</span> <span class="n">value</span> <span class="n">adjustment</span> <span class="k">method</span><span class="p">:</span> <span class="n">holm</span>
 </pre></div>
 </td></tr></table>
 
@@ -1444,17 +1449,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Pairwise comparisons using paired t tests 
-## 
-## data:  iq and condition 
-## 
-##         12 days 17 days 19 days
-## 17 days 0.03910 -       -      
-## 19 days 0.00405 1.00000 -      
-## 8 days  1.00000 0.00293 0.00054
-## 
-## P value adjustment method: bonferroni
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Pairwise</span> <span class="n">comparisons</span> <span class="k">using</span> <span class="n">paired</span> <span class="n">t</span> <span class="n">tests</span> 
+<span class="o">##</span> 
+<span class="o">##</span> <span class="k">data</span><span class="p">:</span>  <span class="n">iq</span> <span class="k">and</span> <span class="n">condition</span> 
+<span class="o">##</span> 
+<span class="o">##</span>         <span class="mi">12</span> <span class="n">days</span> <span class="mi">17</span> <span class="n">days</span> <span class="mi">19</span> <span class="n">days</span>
+<span class="o">##</span> <span class="mi">17</span> <span class="n">days</span> <span class="mi">0</span><span class="p">.</span><span class="mi">03910</span> <span class="o">-</span>       <span class="o">-</span>      
+<span class="o">##</span> <span class="mi">19</span> <span class="n">days</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00405</span> <span class="mi">1</span><span class="p">.</span><span class="mi">00000</span> <span class="o">-</span>      
+<span class="o">##</span> <span class="mi">8</span> <span class="n">days</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">00000</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00293</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00054</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="n">P</span> <span class="n">value</span> <span class="n">adjustment</span> <span class="k">method</span><span class="p">:</span> <span class="n">bonferroni</span>
 </pre></div>
 </td></tr></table>
 
@@ -1473,8 +1478,8 @@
 </td></tr></table>
 
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##  [1] 12.5 11.6  8.9  8.3 10.9 13.4 12.3  8.7  9.7  9.7  6.9 10.5 11.6 13.8
-## [15] 15.6 11.7 16.1 11.7 15.0 15.1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="mi">12</span><span class="p">.</span><span class="mi">5</span> <span class="mi">11</span><span class="p">.</span><span class="mi">6</span>  <span class="mi">8</span><span class="p">.</span><span class="mi">9</span>  <span class="mi">8</span><span class="p">.</span><span class="mi">3</span> <span class="mi">10</span><span class="p">.</span><span class="mi">9</span> <span class="mi">13</span><span class="p">.</span><span class="mi">4</span> <span class="mi">12</span><span class="p">.</span><span class="mi">3</span>  <span class="mi">8</span><span class="p">.</span><span class="mi">7</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">7</span>  <span class="mi">9</span><span class="p">.</span><span class="mi">7</span>  <span class="mi">6</span><span class="p">.</span><span class="mi">9</span> <span class="mi">10</span><span class="p">.</span><span class="mi">5</span> <span class="mi">11</span><span class="p">.</span><span class="mi">6</span> <span class="mi">13</span><span class="p">.</span><span class="mi">8</span>
+<span class="o">##</span> <span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="mi">15</span><span class="p">.</span><span class="mi">6</span> <span class="mi">11</span><span class="p">.</span><span class="mi">7</span> <span class="mi">16</span><span class="p">.</span><span class="mi">1</span> <span class="mi">11</span><span class="p">.</span><span class="mi">7</span> <span class="mi">15</span><span class="p">.</span><span class="mi">0</span> <span class="mi">15</span><span class="p">.</span><span class="mi">1</span>
 </pre></div>
 </td></tr></table>
 
@@ -1494,17 +1499,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>## 
-##  Paired t-test
-## 
-## data:  cond_12days and cond_17days
-## t = -3.0549, df = 19, p-value = 0.006517
-## alternative hypothesis: true difference in means is not equal to 0
-## 95 percent confidence interval:
-##  -3.7157116 -0.6942884
-## sample estimates:
-## mean of the differences 
-##                  -2.205
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span> 
+<span class="o">##</span>  <span class="n">Paired</span> <span class="n">t</span><span class="o">-</span><span class="n">test</span>
+<span class="o">##</span> 
+<span class="o">##</span> <span class="k">data</span><span class="p">:</span>  <span class="n">cond_12days</span> <span class="k">and</span> <span class="n">cond_17days</span>
+<span class="o">##</span> <span class="n">t</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">0549</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="mi">19</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">006517</span>
+<span class="o">##</span> <span class="n">alternative</span> <span class="n">hypothesis</span><span class="p">:</span> <span class="k">true</span> <span class="n">difference</span> <span class="k">in</span> <span class="n">means</span> <span class="k">is</span> <span class="k">not</span> <span class="n">equal</span> <span class="k">to</span> <span class="mi">0</span>
+<span class="o">##</span> <span class="mi">95</span> <span class="n">percent</span> <span class="n">confidence</span> <span class="nb">interval</span><span class="p">:</span>
+<span class="o">##</span>  <span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">7157116</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">6942884</span>
+<span class="o">##</span> <span class="n">sample</span> <span class="n">estimates</span><span class="p">:</span>
+<span class="o">##</span> <span class="n">mean</span> <span class="k">of</span> <span class="n">the</span> <span class="n">differences</span> 
+<span class="o">##</span>                  <span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">205</span>
 </pre></div>
 </td></tr></table>
 
@@ -1579,25 +1584,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>

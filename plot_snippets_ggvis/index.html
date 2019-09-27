@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.8c900955.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -66,6 +66,34 @@
     
     
       <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-93008985-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,24 +106,7 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="__github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -124,22 +135,21 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ugo_r_doc
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              ugo_r_doc
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Plot Snippets - ggvis
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -162,7 +172,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -173,20 +182,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
           </div>
         </div>
       
@@ -199,7 +206,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -222,20 +229,18 @@
 
   
 
-
-  <a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ugo_r_doc
+<a href="https://github.com/ugoproto/ugo_r_doc.git/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ugo_r_doc
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -614,56 +619,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dataset" title="Dataset" class="md-nav__link">
+  <a href="#dataset" class="md-nav__link">
     Dataset
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-ggvis-package" title="The ggvis Package" class="md-nav__link">
+  <a href="#the-ggvis-package" class="md-nav__link">
     The ggvis Package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-grammar-of-graphics" title="The Grammar of Graphics" class="md-nav__link">
+  <a href="#the-grammar-of-graphics" class="md-nav__link">
     The Grammar of Graphics
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lines-and-syntax" title="Lines and Syntax" class="md-nav__link">
+  <a href="#lines-and-syntax" class="md-nav__link">
     Lines and Syntax
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#transformations" title="Transformations" class="md-nav__link">
+  <a href="#transformations" class="md-nav__link">
     Transformations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactivity-and-layers" title="Interactivity and Layers" class="md-nav__link">
+  <a href="#interactivity-and-layers" class="md-nav__link">
     Interactivity and Layers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#customizing-axes-legends-and-scales" title="Customizing Axes, Legends, and Scales" class="md-nav__link">
+  <a href="#customizing-axes-legends-and-scales" class="md-nav__link">
     Customizing Axes, Legends, and Scales
   </a>
   
@@ -932,56 +937,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation" title="Documentation" class="md-nav__link">
+  <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dataset" title="Dataset" class="md-nav__link">
+  <a href="#dataset" class="md-nav__link">
     Dataset
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-ggvis-package" title="The ggvis Package" class="md-nav__link">
+  <a href="#the-ggvis-package" class="md-nav__link">
     The ggvis Package
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-grammar-of-graphics" title="The Grammar of Graphics" class="md-nav__link">
+  <a href="#the-grammar-of-graphics" class="md-nav__link">
     The Grammar of Graphics
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lines-and-syntax" title="Lines and Syntax" class="md-nav__link">
+  <a href="#lines-and-syntax" class="md-nav__link">
     Lines and Syntax
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#transformations" title="Transformations" class="md-nav__link">
+  <a href="#transformations" class="md-nav__link">
     Transformations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactivity-and-layers" title="Interactivity and Layers" class="md-nav__link">
+  <a href="#interactivity-and-layers" class="md-nav__link">
     Interactivity and Layers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#customizing-axes-legends-and-scales" title="Customizing Axes, Legends, and Scales" class="md-nav__link">
+  <a href="#customizing-axes-legends-and-scales" class="md-nav__link">
     Customizing Axes, Legends, and Scales
   </a>
   
@@ -1025,17 +1030,17 @@
 <ul>
 <li>Output options: the &lsquo;tango&rsquo; syntax and the &lsquo;readable&rsquo; theme.</li>
 <li>Snippets and results.</li>
-<li><code class="codehilite">ggvis</code> generates html outputs. Graphics presented here are images: .png files; .gif files when specified.</li>
+<li><code class="codehilite"><span class="n">ggvis</span></code> generates html outputs. Graphics presented here are images: .png files; .gif files when specified.</li>
 </ul>
 <hr />
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://ggvis.rstudio.com/"><code class="codehilite">ggvis</code> Overview</a>.</li>
-<li><a href="http://ggvis.rstudio.com/cookbook.html"><code class="codehilite">ggvis</code> Cookbook</a>.</li>
+<li><a href="http://ggvis.rstudio.com/"><code class="codehilite"><span class="n">ggvis</span></code> Overview</a>.</li>
+<li><a href="http://ggvis.rstudio.com/cookbook.html"><code class="codehilite"><span class="n">ggvis</span></code> Cookbook</a>.</li>
 </ul>
 <h2 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h2>
-<p>For most examples, we use the <code class="codehilite">mtcars</code>, <code class="codehilite">pressure</code>, <code class="codehilite">faithful</code> datasets.</p>
-<h2 id="the-ggvis-package">The <code class="codehilite">ggvis</code> Package<a class="headerlink" href="#the-ggvis-package" title="Permanent link">&para;</a></h2>
+<p>For most examples, we use the <code class="codehilite"><span class="n">mtcars</span></code>, <code class="codehilite"><span class="n">pressure</span></code>, <code class="codehilite"><span class="n">faithful</span></code> datasets.</p>
+<h2 id="the-ggvis-package">The <code class="codehilite"><span class="n">ggvis</span></code> Package<a class="headerlink" href="#the-ggvis-package" title="Permanent link">&para;</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggvis</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1053,7 +1058,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis1.png" /></p>
-<p><strong><code class="codehilite">ggvis</code> and its capabilities</strong></p>
+<p><strong><code class="codehilite"><span class="n">ggvis</span></code> and its capabilities</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1089,7 +1094,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis4.png" /></p>
-<p><strong><code class="codehilite">ggvis</code> grammar</strong></p>
+<p><strong><code class="codehilite"><span class="n">ggvis</span></code> grammar</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1162,7 +1167,7 @@
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis10.png" /></p>
 <h2 id="lines-and-syntax">Lines and Syntax<a class="headerlink" href="#lines-and-syntax" title="Permanent link">&para;</a></h2>
-<p><strong>Three operators: <code class="codehilite"><span class="c">%&gt;%</span></code>, <code class="codehilite">=</code> and <code class="codehilite">:=</code></strong></p>
+<p><strong>Three operators: <code class="codehilite"><span class="c">%&gt;%</span></code>, <code class="codehilite"><span class="o">=</span></code> and <code class="codehilite"><span class="p">:</span><span class="o">=</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nf">layer_points</span><span class="p">(</span><span class="nf">ggvis</span><span class="p">(</span><span class="n">faithful</span><span class="p">,</span> <span class="o">~</span><span class="n">waiting</span><span class="p">,</span> <span class="o">~</span><span class="n">eruptions</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
@@ -1313,8 +1318,8 @@
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis24.png" /></p>
 <p><strong>Display model fits</strong></p>
-<p><code class="codehilite">layer_lines()</code> will always connect the points in your plot from the leftmost point to the rightmost point. This can be undesirable if you are trying to plot a specific shape.</p>
-<p><code class="codehilite">layer_paths()</code>: this mark connects the points in the order that they appear in the data set. So the paths mark will connect the point that corresponds to the first row of the data to the point that corresponds to the second row of data, and so on - no matter where those points appear in the graph.</p>
+<p><code class="codehilite"><span class="n">layer_lines</span><span class="p">()</span></code> will always connect the points in your plot from the leftmost point to the rightmost point. This can be undesirable if you are trying to plot a specific shape.</p>
+<p><code class="codehilite"><span class="n">layer_paths</span><span class="p">()</span></code>: this mark connects the points in the order that they appear in the data set. So the paths mark will connect the point that corresponds to the first row of the data to the point that corresponds to the second row of data, and so on - no matter where those points appear in the graph.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1347,8 +1352,8 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis26.png" /></p>
-<p><strong><code class="codehilite">compute_smooth()</code> to simplify model fits</strong></p>
-<p><code class="codehilite">compute_model_prediction()</code> is a useful function to use with line graphs. It takes a data frame as input and returns a new data frame as output. The new data frame will contain the x and y values of a line fitted to the data in the original data frame.</p>
+<p><strong><code class="codehilite"><span class="n">compute_smooth</span><span class="p">()</span></code> to simplify model fits</strong></p>
+<p><code class="codehilite"><span class="n">compute_model_prediction</span><span class="p">()</span></code> is a useful function to use with line graphs. It takes a data frame as input and returns a new data frame as output. The new data frame will contain the x and y values of a line fitted to the data in the original data frame.</p>
 <p>Generate the x and y coordinates for a LOESS smooth line.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -1368,17 +1373,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       pred_    resp_
-## 1  43.00000 1.377986
-## 2  43.67089 1.428724
-## 3  44.34177 1.479461
-## 4  45.01266 1.530199
-## 5  45.68354 1.580937
-## 6  46.35443 1.631674
-## 7  47.02532 1.682412
-## 8  47.69620 1.733150
-## 9  48.36709 1.783888
-## 10 49.03797 1.834625
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">pred_</span>    <span class="n">resp_</span>
+<span class="o">##</span> <span class="mi">1</span>  <span class="mi">43</span><span class="p">.</span><span class="mi">00000</span> <span class="mi">1</span><span class="p">.</span><span class="mi">377986</span>
+<span class="o">##</span> <span class="mi">2</span>  <span class="mi">43</span><span class="p">.</span><span class="mi">67089</span> <span class="mi">1</span><span class="p">.</span><span class="mi">428724</span>
+<span class="o">##</span> <span class="mi">3</span>  <span class="mi">44</span><span class="p">.</span><span class="mi">34177</span> <span class="mi">1</span><span class="p">.</span><span class="mi">479461</span>
+<span class="o">##</span> <span class="mi">4</span>  <span class="mi">45</span><span class="p">.</span><span class="mi">01266</span> <span class="mi">1</span><span class="p">.</span><span class="mi">530199</span>
+<span class="o">##</span> <span class="mi">5</span>  <span class="mi">45</span><span class="p">.</span><span class="mi">68354</span> <span class="mi">1</span><span class="p">.</span><span class="mi">580937</span>
+<span class="o">##</span> <span class="mi">6</span>  <span class="mi">46</span><span class="p">.</span><span class="mi">35443</span> <span class="mi">1</span><span class="p">.</span><span class="mi">631674</span>
+<span class="o">##</span> <span class="mi">7</span>  <span class="mi">47</span><span class="p">.</span><span class="mi">02532</span> <span class="mi">1</span><span class="p">.</span><span class="mi">682412</span>
+<span class="o">##</span> <span class="mi">8</span>  <span class="mi">47</span><span class="p">.</span><span class="mi">69620</span> <span class="mi">1</span><span class="p">.</span><span class="mi">733150</span>
+<span class="o">##</span> <span class="mi">9</span>  <span class="mi">48</span><span class="p">.</span><span class="mi">36709</span> <span class="mi">1</span><span class="p">.</span><span class="mi">783888</span>
+<span class="o">##</span> <span class="mi">10</span> <span class="mi">49</span><span class="p">.</span><span class="mi">03797</span> <span class="mi">1</span><span class="p">.</span><span class="mi">834625</span>
 </pre></div>
 </td></tr></table>
 
@@ -1402,17 +1407,17 @@
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##       pred_    resp_
-## 1  1.513000 32.08897
-## 2  1.562506 31.68786
-## 3  1.612013 31.28163
-## 4  1.661519 30.87037
-## 5  1.711025 30.45419
-## 6  1.760532 30.03318
-## 7  1.810038 29.60745
-## 8  1.859544 29.17711
-## 9  1.909051 28.74224
-## 10 1.958557 28.30017
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>       <span class="n">pred_</span>    <span class="n">resp_</span>
+<span class="o">##</span> <span class="mi">1</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">513000</span> <span class="mi">32</span><span class="p">.</span><span class="mi">08897</span>
+<span class="o">##</span> <span class="mi">2</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">562506</span> <span class="mi">31</span><span class="p">.</span><span class="mi">68786</span>
+<span class="o">##</span> <span class="mi">3</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">612013</span> <span class="mi">31</span><span class="p">.</span><span class="mi">28163</span>
+<span class="o">##</span> <span class="mi">4</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">661519</span> <span class="mi">30</span><span class="p">.</span><span class="mi">87037</span>
+<span class="o">##</span> <span class="mi">5</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">711025</span> <span class="mi">30</span><span class="p">.</span><span class="mi">45419</span>
+<span class="o">##</span> <span class="mi">6</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">760532</span> <span class="mi">30</span><span class="p">.</span><span class="mi">03318</span>
+<span class="o">##</span> <span class="mi">7</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">810038</span> <span class="mi">29</span><span class="p">.</span><span class="mi">60745</span>
+<span class="o">##</span> <span class="mi">8</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">859544</span> <span class="mi">29</span><span class="p">.</span><span class="mi">17711</span>
+<span class="o">##</span> <span class="mi">9</span>  <span class="mi">1</span><span class="p">.</span><span class="mi">909051</span> <span class="mi">28</span><span class="p">.</span><span class="mi">74224</span>
+<span class="o">##</span> <span class="mi">10</span> <span class="mi">1</span><span class="p">.</span><span class="mi">958557</span> <span class="mi">28</span><span class="p">.</span><span class="mi">30017</span>
 </pre></div>
 </td></tr></table>
 
@@ -1473,18 +1478,18 @@
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##    count_ x_ xmin_ xmax_ width_
-## 1      13 45  42.5  47.5      5
-## 2      24 50  47.5  52.5      5
-## 3      29 55  52.5  57.5      5
-## 4      21 60  57.5  62.5      5
-## 5      13 65  62.5  67.5      5
-## 6      13 70  67.5  72.5      5
-## 7      42 75  72.5  77.5      5
-## 8      58 80  77.5  82.5      5
-## 9      38 85  82.5  87.5      5
-## 10     17 90  87.5  92.5      5
-## 11      4 95  92.5  97.5      5
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>    <span class="n">count_</span> <span class="n">x_</span> <span class="n">xmin_</span> <span class="n">xmax_</span> <span class="n">width_</span>
+<span class="o">##</span> <span class="mi">1</span>      <span class="mi">13</span> <span class="mi">45</span>  <span class="mi">42</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">47</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">2</span>      <span class="mi">24</span> <span class="mi">50</span>  <span class="mi">47</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">52</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">3</span>      <span class="mi">29</span> <span class="mi">55</span>  <span class="mi">52</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">57</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">4</span>      <span class="mi">21</span> <span class="mi">60</span>  <span class="mi">57</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">62</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">5</span>      <span class="mi">13</span> <span class="mi">65</span>  <span class="mi">62</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">67</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">6</span>      <span class="mi">13</span> <span class="mi">70</span>  <span class="mi">67</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">72</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">7</span>      <span class="mi">42</span> <span class="mi">75</span>  <span class="mi">72</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">77</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">8</span>      <span class="mi">58</span> <span class="mi">80</span>  <span class="mi">77</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">82</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">9</span>      <span class="mi">38</span> <span class="mi">85</span>  <span class="mi">82</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">87</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">10</span>     <span class="mi">17</span> <span class="mi">90</span>  <span class="mi">87</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">92</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
+<span class="o">##</span> <span class="mi">11</span>      <span class="mi">4</span> <span class="mi">95</span>  <span class="mi">92</span><span class="p">.</span><span class="mi">5</span>  <span class="mi">97</span><span class="p">.</span><span class="mi">5</span>      <span class="mi">5</span>
 </pre></div>
 </td></tr></table>
 
@@ -1549,14 +1554,14 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>##   count_ x_
-## 1     11  4
-## 2      7  6
-## 3     14  8
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">##</span>   <span class="n">count_</span> <span class="n">x_</span>
+<span class="o">##</span> <span class="mi">1</span>     <span class="mi">11</span>  <span class="mi">4</span>
+<span class="o">##</span> <span class="mi">2</span>      <span class="mi">7</span>  <span class="mi">6</span>
+<span class="o">##</span> <span class="mi">3</span>     <span class="mi">14</span>  <span class="mi">8</span>
 </pre></div>
 </td></tr></table>
 
-<p><strong><code class="codehilite">ggvis</code> and <code class="codehilite">group_by</code></strong></p>
+<p><strong><code class="codehilite"><span class="n">ggvis</span></code> and <code class="codehilite"><span class="n">group_by</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1607,7 +1612,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis41.png" /></p>
-<p><strong><code class="codehilite">group_by()</code> versus <code class="codehilite">interaction()</code></strong></p>
+<p><strong><code class="codehilite"><span class="n">group_by</span><span class="p">()</span></code> versus <code class="codehilite"><span class="n">interaction</span><span class="p">()</span></code></strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2083,7 +2088,7 @@
 </td></tr></table>
 
 <p><img alt="" src="../img/Plot_snippets_-_ggvis/ggvis68.png" /></p>
-<p><strong>&ldquo;<code class="codehilite">=</code>&rdquo; versus &ldquo;<code class="codehilite">:=</code>&ldquo;</strong></p>
+<p><strong>&ldquo;<code class="codehilite"><span class="o">=</span></code>&rdquo; versus &ldquo;<code class="codehilite"><span class="p">:</span><span class="o">=</span></code>&ldquo;</strong></p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -2171,25 +2176,17 @@
           Material for MkDocs</a>
       </div>
       
-        
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b41f3d20.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-    
-    
-      
-        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-93008985-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>
