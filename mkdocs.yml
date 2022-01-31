@@ -6,32 +6,32 @@ repo_url: 'https://github.com/ugoproto/ugo_r_doc.git'
 site_description: 'A R documentation website.'
 #site_author:
 #copyright:
-google_analytics: 
-  - 'UA-93008985-1'
-  - 'auto'
 
 theme: 
   name: 'material' # 'readthedocs'
-  language: 'en'
-  search:
-    language: 'en, fr' 
+  locale: 'en'
+  analytics: 
+    gtag: 'UA-93008985-1'
 ## 'Volkorn' 'Libre Baskerville' 'Merriweather'
 ## https://fonts.google.com
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
-## https://fonts.google.com
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
   palette:
     primary: 'blue'
     accent: 'red'
 ## red, pink, purple, deep purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey and blue-grey
-  logo:
-    icon: 'layers'
-## https://material.io/icons/
+  icon:
+    logo: 'material/layers'
   favicon: 'img/favicon.ico' 
-## default, assets/images/favicon.png
   feature:
     tabs: false
+
+plugins:
+    - search:
+        lang:
+          - en
+          - fr
        
 ## Les icônes gitlab, twitter, linkedin dans le bandeau du bas.
 #extra:
